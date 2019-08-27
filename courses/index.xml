@@ -159,41 +159,41 @@ version is available at
 &lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34; target=&#34;_blank&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tentative Course Outline:&lt;/strong&gt;
-| Week number | Date    | Milestones                         | Class                           | Lab                    | Due                  |
-|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-|&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-|
-| Week 1      | 27-Aug | Welcomes                           | Walk through                    |                        |
-|             | 29-Aug | Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;    | ESRI UC                         |                        |                      |
-| Week 2      | 3-Sep  |                                    | Coordinate systems, projections | Introduction to ArcMap | Week 1 review        |
-|             | 5-Sep  |                                    | Data Models and structures      |                        |                      |
-| Week 3      | 10-Sep |                                    | GIS Data                        | Datum Shift lab        | Week 2 review        |
-|             | 12-Sep | Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;  | GPS                             |                        |                      |
-| Week 4      | 17-Sep |                                    | Getting Data                    | GPS lab                | Week 3 review        |
-|             | 19-Sep | Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt; | Map Design                      |                        |                      |
-| Week 5      | 24-Sep |                                    | Map Design                      | Building A database    | Week 4 review        |
-|             | 26-Sep |                                    | Map Design                      |                        |                      |
-| Week 6      | 1-Oct  |                                    | Vector Data Analysis            | Overlay lab            | Week 5 review        |
-|             | 3-Oct  |                                    | Overlay analysis                |                        |                      |
-| Week 7      | 8-Oct  |                                    | Midterm Review                  | No Lab                 | Week 6 review        |
-|             | 10-Oct |                                    | Midterm                         |                        | Project proposal due |
-| Week 8      | 15-Oct | Fall Break!                       | No Class                        | Spatial Statistics Lab |                      |
-|             | 17-Oct |                                    | Spatial Statistics              |                        |                      |
-| Week 9      | 22-Oct |                                    | Spatial Statistics              | Interpolation Lab      |                      |
-|             | 24-Oct |                                    | Raster Data Analysis            |                        |                      |
-| Week 10     | 29-Oct |                                    | Network Analysis                | Network Analysis       | Week 8-9 review     |
-|             | 31-Oct |                                    | Guest Lecture                   |                        |                      |
-| Week 11     | 5-Nov  |                                    | Terrain Analysis                | Hydrology Lab          | week 10 review       |
-|             | 7-Nov  |                                    | Terrain Analysis                |                        |                      |
-| Week 13     | 12-Nov |                                    | Guest Lecture                   | Distribution  modeling | weel 11 review       |
-|             | 14-Nov |                                    | Make up day                     |                        |                      |
-| Week 14     | 19-Nov | Las day to withdraw                | Make up day                     | Open Lab               |                      |
-|             | 21-Nov |                                    | Project Help                    |                        |                      |
-| Week 15     | 26-Nov |                                    | Project Help                    | Open Lab               | Introduction due     |
-|             | 28-Nov | ThxGiving Break!                  | No Class                        |                        |                      |
-| Week 16     | 3-Dec  |                                    | Final Project presentations     | No Lab                 |                      |
-|             | 5-Dec  |                                    | Final Project presentations     |                        |                      |
-| Week 17     | 10-Dec | AGU - no class                    | Practical Final on your own     | No Lab                 |                      |
-|             | 12-Dec | AGU - no class                    | Practical Final on your own     |                        |                      |
-| Week 18     | 17-Dec | Final                              | Final at 1:30                   |                        | Final Paper Due      |&lt;/p&gt;
+| &lt;strong&gt;Week number&lt;/strong&gt; | &lt;strong&gt;Date&lt;/strong&gt; | &lt;strong&gt;Milestones&lt;/strong&gt;                     | &lt;strong&gt;Class&lt;/strong&gt;                       | &lt;strong&gt;Lab&lt;/strong&gt;                | &lt;strong&gt;Due&lt;/strong&gt;              |
+|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;:|:&amp;mdash;&amp;mdash;&amp;ndash;:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;:|
+| Week 1          | 27-Aug  | Welcomes                           | Walk through                    |                        |                      |
+|                 | 29-Aug  | Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;    | ESRI UC                         |                        |                      |
+| Week 2          | 3-Sep   |                                    | Coordinate systems, projections | Introduction to ArcMap | Week 1 review        |
+|                 | 5-Sep   |                                    | Data Models and structures      |                        |                      |
+| Week 3          | 10-Sep  |                                    | GIS Data                        | Datum Shift lab        | Week 2 review        |
+|                 | 12-Sep  | Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;  | GPS                             |                        |                      |
+| Week 4          | 17-Sep  |                                    | Getting Data                    | GPS lab                | Week 3 review        |
+|                 | 19-Sep  | Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt; | Map Design                      |                        |                      |
+| Week 5          | 24-Sep  |                                    | Map Design                      | Building A database    | Week 4 review        |
+|                 | 26-Sep  |                                    | Map Design                      |                        |                      |
+| Week 6          | 1-Oct   |                                    | Vector Data Analysis            | Overlay lab            | Week 5 review        |
+|                 | 3-Oct   |                                    | Overlay analysis                |                        |                      |
+| Week 7          | 8-Oct   |                                    | Midterm Review                  | No Lab                 | Week 6 review        |
+|                 | 10-Oct  |                                    | Midterm                         |                        | Project proposal due |
+| Week 8          | 15-Oct  | Fall Break!                       | No Class                        | Spatial Statistics Lab |                      |
+|                 | 17-Oct  |                                    | Spatial Statistics              |                        |                      |
+| Week 9          | 22-Oct  |                                    | Spatial Statistics              | Interpolation Lab      |                      |
+|                 | 24-Oct  |                                    | Raster Data Analysis            |                        |                      |
+| Week 10         | 29-Oct  |                                    | Network Analysis                | Network Analysis       | Week 8-9 review     |
+|                 | 31-Oct  |                                    | Guest Lecture                   |                        |                      |
+| Week 11         | 5-Nov   |                                    | Terrain Analysis                | Hydrology Lab          | week 10 review       |
+|                 | 7-Nov   |                                    | Terrain Analysis                |                        |                      |
+| Week 13         | 12-Nov  |                                    | Guest Lecture                   | Distribution  modeling | weel 11 review       |
+|                 | 14-Nov  |                                    | Make up day                     |                        |                      |
+| Week 14         | 19-Nov  | Las day to withdraw                | Make up day                     | Open Lab               |                      |
+|                 | 21-Nov  |                                    | Project Help                    |                        |                      |
+| Week 15         | 26-Nov  |                                    | Project Help                    | Open Lab               | Introduction due     |
+|                 | 28-Nov  | ThxGiving Break!                  | No Class                        |                        |                      |
+| Week 16         | 3-Dec   |                                    | Final Project presentations     | No Lab                 |                      |
+|                 | 5-Dec   |                                    | Final Project presentations     |                        |                      |
+| Week 17         | 10-Dec  | AGU - no class                    | Practical Final on your own     | No Lab                 |                      |
+|                 | 12-Dec  | AGU - no class                    | Practical Final on your own     |                        |                      |
+| Week 18         | 17-Dec  | Final                              | Final at 1:30                   |                        | Final Paper Due      |&lt;/p&gt;
 
 &lt;p&gt;Other “important” dates:
 &lt;a href=&#34;https://registrar.ku.edu/fall-2019-academic-calendar-date&#34; target=&#34;_blank&#34;&gt;https://registrar.ku.edu/fall-2019-academic-calendar-date&lt;/a&gt;&lt;/p&gt;

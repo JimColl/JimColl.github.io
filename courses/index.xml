@@ -17,11 +17,14 @@
       <link>https://JimColl.github.io/courses/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       <guid>https://JimColl.github.io/courses/example/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/p&gt;
+      <description>&lt;p&gt;#&lt;strong&gt;Welcome to GEOG358: Introduction to GIS&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;This course teaches An introduction to computer based analysis of spatial data. Covers basic
+&lt;p&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This course teaches An introduction to computer based analysis of spatial data.  Topics
+covered include the fundamentals of geospatial thought, basic
 principles of collecting, storing, analyzing, and displaying spatial
-data. Emphasis is on problem solving activities using common spatial
+data, and cursory analysis and decision making. Emphasis is on problem solving activities using common spatial
 analytical techniques (e.g., map overlay). The student will gain
 extensive hands  on experience with state of the art GIS software in the
 lab. This course introduces the concepts and components of a geographic
@@ -33,15 +36,16 @@ QA/QC, metadata development, geodatabase design, spatial query and
 display, spatial analysis and modeling, preliminary GIS application
 development, cartographic mapping and dynamic visualization, and GIS
 implementation basics. Students will also be exposed to Google Earth and
-common open source GIS tools, as well as the basic concepts of remote
+common Free and  Open Source Software (FOSS) tools, as well as the basic concepts of remote
 sensing and Global Positioning System (GPS). GIS technology has broad
 applications in natural and social sciences, humanities, environmental
 studies, engineering, and management. Examples include wildlife habitat
 study, urban and regional planning, contagious disease monitoring,
 agriculture and forestry, environmental quality assessment, emergency
 management, transportation planning, consumer and competitor analysis,
-and many more. This course will introduce a few selected cases of GIS
-application in different disciplines. Satisfies: Lab and Field
+and many more. This course will introduce a few selected use cases of GIS
+application in different disciplines.
+Satisfies: Lab and Field
 Experiences (LFE), N Natural Science (N)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Student Responsibilities:&lt;/strong&gt;&lt;/p&gt;
@@ -84,7 +88,7 @@ guidelines. You should aim for a 64-bit computer (x64), and aside from
 that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard
 drive space (External hard drives are really cheap, and as long as the
 computer has a USB port you are good to go).  A few specific
-recommendations I found with a quick google:&lt;/p&gt;
+recommendations I found last year with a quick google:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Lenovo Miix 510 &amp;amp; Dell Inspiron 15 7000​: Decent budget computers&lt;/p&gt;&lt;/li&gt;
@@ -121,8 +125,6 @@ but all work you turn in should be your own.&lt;/p&gt;
 academic ability should contact me as soon as possible to ensure
 accommodations can be made to allow for full educational benefit.&lt;/p&gt;
 
-&lt;p&gt;​&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;About the Labs:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;This is not a cartography course; however, the final product of the
@@ -156,14 +158,49 @@ Analysis—A comprehensive guide&lt;/em&gt; (4&lt;sup&gt;rd&lt;/sup&gt; edition)
 version is available at
 &lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34; target=&#34;_blank&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Tentative Course Outline:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tentative Course Outline:&lt;/strong&gt;
+| Week number | Date    | Milestones                         | Class                           | Lab                    | Due                  |
+|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-|&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-|
+| Week 1      | 27-Aug | Welcomes                           | Walk through                    |                        |
+|             | 29-Aug | Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;    | ESRI UC                         |                        |                      |
+| Week 2      | 3-Sep  |                                    | Coordinate systems, projections | Introduction to ArcMap | Week 1 review        |
+|             | 5-Sep  |                                    | Data Models and structures      |                        |                      |
+| Week 3      | 10-Sep |                                    | GIS Data                        | Datum Shift lab        | Week 2 review        |
+|             | 12-Sep | Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;  | GPS                             |                        |                      |
+| Week 4      | 17-Sep |                                    | Getting Data                    | GPS lab                | Week 3 review        |
+|             | 19-Sep | Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt; | Map Design                      |                        |                      |
+| Week 5      | 24-Sep |                                    | Map Design                      | Building A database    | Week 4 review        |
+|             | 26-Sep |                                    | Map Design                      |                        |                      |
+| Week 6      | 1-Oct  |                                    | Vector Data Analysis            | Overlay lab            | Week 5 review        |
+|             | 3-Oct  |                                    | Overlay analysis                |                        |                      |
+| Week 7      | 8-Oct  |                                    | Midterm Review                  | No Lab                 | Week 6 review        |
+|             | 10-Oct |                                    | Midterm                         |                        | Project proposal due |
+| Week 8      | 15-Oct | Fall Break!                       | No Class                        | Spatial Statistics Lab |                      |
+|             | 17-Oct |                                    | Spatial Statistics              |                        |                      |
+| Week 9      | 22-Oct |                                    | Spatial Statistics              | Interpolation Lab      |                      |
+|             | 24-Oct |                                    | Raster Data Analysis            |                        |                      |
+| Week 10     | 29-Oct |                                    | Network Analysis                | Network Analysis       | Week 8-9 review     |
+|             | 31-Oct |                                    | Guest Lecture                   |                        |                      |
+| Week 11     | 5-Nov  |                                    | Terrain Analysis                | Hydrology Lab          | week 10 review       |
+|             | 7-Nov  |                                    | Terrain Analysis                |                        |                      |
+| Week 13     | 12-Nov |                                    | Guest Lecture                   | Distribution  modeling | weel 11 review       |
+|             | 14-Nov |                                    | Make up day                     |                        |                      |
+| Week 14     | 19-Nov | Las day to withdraw                | Make up day                     | Open Lab               |                      |
+|             | 21-Nov |                                    | Project Help                    |                        |                      |
+| Week 15     | 26-Nov |                                    | Project Help                    | Open Lab               | Introduction due     |
+|             | 28-Nov | ThxGiving Break!                  | No Class                        |                        |                      |
+| Week 16     | 3-Dec  |                                    | Final Project presentations     | No Lab                 |                      |
+|             | 5-Dec  |                                    | Final Project presentations     |                        |                      |
+| Week 17     | 10-Dec | AGU - no class                    | Practical Final on your own     | No Lab                 |                      |
+|             | 12-Dec | AGU - no class                    | Practical Final on your own     |                        |                      |
+| Week 18     | 17-Dec | Final                              | Final at 1:30                   |                        | Final Paper Due      |&lt;/p&gt;
 
 &lt;p&gt;Other “important” dates:
-&lt;a href=&#34;https://registrar.ku.edu/spring-2018-academic-calendar-date&#34; target=&#34;_blank&#34;&gt;https://registrar.ku.edu/spring-2018-academic-calendar-date&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://registrar.ku.edu/fall-2019-academic-calendar-date&#34; target=&#34;_blank&#34;&gt;https://registrar.ku.edu/fall-2019-academic-calendar-date&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Course Evaluation:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Course grade will be evaluated based on two exams, ten lab exercises,
+&lt;p&gt;Course grade will be evaluated based on two exams, pre-class review questions, ~ten lab exercises,
 and a final project. The exams will include materials from the
 textbooks, lecture slides, handouts, and labs. Mid-term exam will cover
 the materials from the first half of the class, and the final exam will
@@ -172,9 +209,11 @@ since we will be building on concepts throughout the semester, materials
 from the first half of the semester will inevitably be part of the final
 exam. A breakdown of grade weights is as follows:&lt;/p&gt;
 
-&lt;p&gt;Midterm exam 20%&lt;/p&gt;
+&lt;p&gt;Midterm exam 15%&lt;/p&gt;
 
-&lt;p&gt;Final exam 20%&lt;/p&gt;
+&lt;p&gt;Final exam 15%&lt;/p&gt;
+
+&lt;p&gt;Pre-class review 15%&lt;/p&gt;
 
 &lt;p&gt;Labs 40%&lt;/p&gt;
 
@@ -220,7 +259,7 @@ grades will be determined based on the following grading scale:&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;GEOG558 Final Project and Term Paper&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GEOG358 Final Project and Term Paper&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt;&lt;/p&gt;
 
@@ -286,11 +325,11 @@ analytic functions in GIS.&lt;/li&gt;
 
 &lt;p&gt;The following are due throughout the semester:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Proposal&lt;/strong&gt; (1 ~ 3 pages, due on &lt;strong&gt;March 30&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proposal&lt;/strong&gt; (1 ~ 3 pages, due tentatively on &lt;strong&gt;Oct 10&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt; (due &lt;strong&gt;April 9&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt; (due &lt;strong&gt;Nov. 26&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Full Term Paper&lt;/strong&gt; (10 ~ 15 pages, due on &lt;strong&gt;May 5&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full Term Paper&lt;/strong&gt; (6 ~ 15 pages, due on &lt;strong&gt;Dec 17&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 </description>
     </item>
     

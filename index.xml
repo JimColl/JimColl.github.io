@@ -13,12 +13,29 @@
     </image>
     
     <item>
+      <title>Example Page 1</title>
+      <link>https://JimColl.github.io/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://JimColl.github.io/courses/example/example1/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa&#34; target=&#34;_blank&#34;&gt;Slides for class&lt;/a&gt;
+[Link to google sheets for ArcMap Key] (&lt;a href=&#34;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&#34; target=&#34;_blank&#34;&gt;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&lt;/a&gt;
+&lt;a href=&#34;https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE&#34; target=&#34;_blank&#34;&gt;Link to class slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34; target=&#34;_blank&#34;&gt;video for class&lt;/a&gt;
+Watch #2 and #3, maybe #7&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Week 1</title>
       <link>https://JimColl.github.io/courses/example/week1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://JimColl.github.io/courses/example/week1/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34; target=&#34;_blank&#34;&gt;Slides for class&lt;/a&gt;
-&lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34; target=&#34;_blank&#34;&gt;video for class&lt;/a&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa&#34; target=&#34;_blank&#34;&gt;Slides for class&lt;/a&gt;
+[Link to google sheets for ArcMap Key] (&lt;a href=&#34;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&#34; target=&#34;_blank&#34;&gt;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&lt;/a&gt;
+&lt;a href=&#34;https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE&#34; target=&#34;_blank&#34;&gt;Link to class slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34; target=&#34;_blank&#34;&gt;video for class&lt;/a&gt;
 Watch #2 and #3, maybe #7&lt;/p&gt;
 </description>
     </item>

@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://JimColl.github.io/courses/geog358/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://JimColl.github.io/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
@@ -68,6 +73,11 @@
   </url>
   
   <url>
+    <loc>https://JimColl.github.io/courses/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://JimColl.github.io/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
@@ -78,7 +88,7 @@
   </url>
   
   <url>
-    <loc>https://JimColl.github.io/project/external-project/</loc>
+    <loc>https://JimColl.github.io/project/google-earth-engine/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -119,10 +129,6 @@
   
   <url>
     <loc>https://JimColl.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://JimColl.github.io/courses/</loc>
   </url>
   
 </urlset>

@@ -473,314 +473,371 @@ version is available at
 | Week 18      | 17-Dec  | Final                              | Final at 1:30                    |                         | Final Paper Due       |
 +──────────────+─────────+────────────────────────────────────+──────────────────────────────────+─────────────────────────+───────────────────────+&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Week number&lt;/strong&gt; | &lt;strong&gt;Date&lt;/strong&gt; | &lt;strong&gt;Milestones&lt;/strong&gt;                     | &lt;strong&gt;Class&lt;/strong&gt;                       | &lt;strong&gt;Lab&lt;/strong&gt;                | &lt;strong&gt;Due&lt;/strong&gt;              |
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&amp;mdash;&amp;mdash;&amp;ndash;xx|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-:|:&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;:|
+Week 1          | 27-Aug  | Welcomes                           | Walk through                    |                        |                      |
+                | 29-Aug  | Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;    | ESRI UC                         |                        |                      |
+Week 2          | 3-Sep   |                                    | Coordinate systems, projections | Introduction to ArcMap | Week 1 review        |
+                | 5-Sep   |                                    | Data Models and structures      |                        |                      |
+Week 3          | 10-Sep  |                                    | GIS Data                        | Datum Shift lab        | Week 2 review        |
+                | 12-Sep  | Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;  | GPS                             |                        |                      |
+Week 4          | 17-Sep  |                                    | Getting Data                    | GPS lab                | Week 3 review        |
+                | 19-Sep  | Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt; | Map Design                      |                        |                      |
+Week 5          | 24-Sep  |                                    | Map Design                      | Building A database    | Week 4 review        |
+                | 26-Sep  |                                    | Map Design                      |                        |                      |
+Week 6          | 1-Oct   |                                    | Vector Data Analysis            | Overlay lab            | Week 5 review        |
+                | 3-Oct   |                                    | Overlay analysis                |                        |                      |
+Week 7          | 8-Oct   |                                    | Midterm Review                  | No Lab                 | Week 6 review        |
+                | 10-Oct  |                                    | Midterm                         |                        | Project proposal due |
+Week 8          | 15-Oct  | Fall Break!                       | No Class                        | Spatial Statistics Lab |                      |
+                | 17-Oct  |                                    | Spatial Statistics              |                        |                      |
+Week 9          | 22-Oct  |                                    | Spatial Statistics              | Interpolation Lab      |                      |
+                | 24-Oct  |                                    | Raster Data Analysis            |                        |                      |
+Week 10         | 29-Oct  |                                    | Network Analysis                | Network Analysis       | Week 8-9 review     |
+                | 31-Oct  |                                    | Guest Lecture                   |                        |                      |
+Week 11         | 5-Nov   |                                    | Terrain Analysis                | Hydrology Lab          | week 10 review       |
+                | 7-Nov   |                                    | Terrain Analysis                |                        |                      |
+Week 13         | 12-Nov  |                                    | Guest Lecture                   | Distribution  modeling | weel 11 review       |
+                | 14-Nov  |                                    | Make up day                     |                        |                      |
+Week 14         | 19-Nov  | Las day to withdraw                | Make up day                     | Open Lab               |                      |
+                | 21-Nov  |                                    | Project Help                    |                        |                      |
+Week 15         | 26-Nov  |                                    | Project Help                    | Open Lab               | Introduction due     |
+                | 28-Nov  | ThxGiving Break!                  | No Class                        |                        |                      |
+Week 16         | 3-Dec   |                                    | Final Project presentations     | No Lab                 |                      |
+                | 5-Dec   |                                    | Final Project presentations     |                        |                      |
+Week 17         | 10-Dec  | AGU - no class                    | Practical Final on your own     | No Lab                 |                      |
+                | 12-Dec  | AGU - no class                    | Practical Final on your own     |                        |                      |
+Week 18         | 17-Dec  | Final                              | Final at 1:30                   |                        | Final Paper Due      |&lt;/p&gt;
+
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;strong&gt;Week number&lt;/strong&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;strong&gt;Milestones&lt;/strong&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;strong&gt;Class&lt;/strong&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;strong&gt;Lab&lt;/strong&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Week number&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Milestones&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Class&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Lab&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 1&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;27-Aug&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Welcomes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Walk through&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Week 1&lt;/td&gt;
+&lt;td&gt;27-Aug&lt;/td&gt;
+&lt;td&gt;Welcomes&lt;/td&gt;
+&lt;td&gt;Walk through&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;29-Aug&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;ESRI UC&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;29-Aug&lt;/td&gt;
+&lt;td&gt;Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;&lt;/td&gt;
+&lt;td&gt;ESRI UC&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 2&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Coordinate systems, projections&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Introduction to ArcMap&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 1 review&lt;/td&gt;
+&lt;td&gt;Week 2&lt;/td&gt;
+&lt;td&gt;3-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Coordinate systems, projections&lt;/td&gt;
+&lt;td&gt;Introduction to ArcMap&lt;/td&gt;
+&lt;td&gt;Week 1 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;5-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Data Models and structures&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Data Models and structures&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 3&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;GIS Data&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Datum Shift lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 2 review&lt;/td&gt;
+&lt;td&gt;Week 3&lt;/td&gt;
+&lt;td&gt;10-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;GIS Data&lt;/td&gt;
+&lt;td&gt;Datum Shift lab&lt;/td&gt;
+&lt;td&gt;Week 2 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;12-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;GPS&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;12-Sep&lt;/td&gt;
+&lt;td&gt;Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;&lt;/td&gt;
+&lt;td&gt;GPS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 4&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;17-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Getting Data&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;GPS lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 3 review&lt;/td&gt;
+&lt;td&gt;Week 4&lt;/td&gt;
+&lt;td&gt;17-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Getting Data&lt;/td&gt;
+&lt;td&gt;GPS lab&lt;/td&gt;
+&lt;td&gt;Week 3 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;19-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Map Design&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;19-Sep&lt;/td&gt;
+&lt;td&gt;Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt;&lt;/td&gt;
+&lt;td&gt;Map Design&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 5&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;24-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Map Design&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Building A database&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 4 review&lt;/td&gt;
+&lt;td&gt;Week 5&lt;/td&gt;
+&lt;td&gt;24-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Map Design&lt;/td&gt;
+&lt;td&gt;Building A database&lt;/td&gt;
+&lt;td&gt;Week 4 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;26-Sep&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Map Design&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;26-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Map Design&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 6&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Vector Data Analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Overlay lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 5 review&lt;/td&gt;
+&lt;td&gt;Week 6&lt;/td&gt;
+&lt;td&gt;1-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Vector Data Analysis&lt;/td&gt;
+&lt;td&gt;Overlay lab&lt;/td&gt;
+&lt;td&gt;Week 5 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Overlay analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;3-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Overlay analysis&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 7&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;8-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Midterm Review&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;No Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 6 review&lt;/td&gt;
+&lt;td&gt;Week 7&lt;/td&gt;
+&lt;td&gt;8-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Midterm Review&lt;/td&gt;
+&lt;td&gt;No Lab&lt;/td&gt;
+&lt;td&gt;Week 6 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Midterm&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Project proposal due&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;10-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Midterm&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Project proposal due&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 8&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;15-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Fall Break!&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;No Class&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Spatial Statistics Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Week 8&lt;/td&gt;
+&lt;td&gt;15-Oct&lt;/td&gt;
+&lt;td&gt;Fall Break!&lt;/td&gt;
+&lt;td&gt;No Class&lt;/td&gt;
+&lt;td&gt;Spatial Statistics Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;17-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Spatial Statistics&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;17-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial Statistics&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 9&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;22-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Spatial Statistics&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Interpolation Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Week 9&lt;/td&gt;
+&lt;td&gt;22-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial Statistics&lt;/td&gt;
+&lt;td&gt;Interpolation Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;24-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Raster Data Analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;24-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Raster Data Analysis&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 10&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;29-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Network Analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Network Analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Week 8-9 review&lt;/td&gt;
+&lt;td&gt;Week 10&lt;/td&gt;
+&lt;td&gt;29-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Network Analysis&lt;/td&gt;
+&lt;td&gt;Network Analysis&lt;/td&gt;
+&lt;td&gt;Week 8-9 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;31-Oct&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Guest Lecture&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;31-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Guest Lecture&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 11&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;5-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Terrain Analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Hydrology Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;week 10 review&lt;/td&gt;
+&lt;td&gt;Week 11&lt;/td&gt;
+&lt;td&gt;5-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Terrain Analysis&lt;/td&gt;
+&lt;td&gt;Hydrology Lab&lt;/td&gt;
+&lt;td&gt;week 10 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;7-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Terrain Analysis&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;7-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Terrain Analysis&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 13&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;12-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Guest Lecture&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Distribution  modeling&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;weel 11 review&lt;/td&gt;
+&lt;td&gt;Week 13&lt;/td&gt;
+&lt;td&gt;12-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Guest Lecture&lt;/td&gt;
+&lt;td&gt;Distribution  modeling&lt;/td&gt;
+&lt;td&gt;weel 11 review&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;14-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Make up day&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;14-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Make up day&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 14&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;19-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Las day to withdraw&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Make up day&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Open Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Week 14&lt;/td&gt;
+&lt;td&gt;19-Nov&lt;/td&gt;
+&lt;td&gt;Las day to withdraw&lt;/td&gt;
+&lt;td&gt;Make up day&lt;/td&gt;
+&lt;td&gt;Open Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;21-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Project Help&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;21-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Project Help&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 15&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;26-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Project Help&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Open Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Introduction due&lt;/td&gt;
+&lt;td&gt;Week 15&lt;/td&gt;
+&lt;td&gt;26-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Project Help&lt;/td&gt;
+&lt;td&gt;Open Lab&lt;/td&gt;
+&lt;td&gt;Introduction due&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;28-Nov&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;ThxGiving Break!&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;No Class&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;28-Nov&lt;/td&gt;
+&lt;td&gt;ThxGiving Break!&lt;/td&gt;
+&lt;td&gt;No Class&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 16&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3-Dec&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Final Project presentations&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;No Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Week 16&lt;/td&gt;
+&lt;td&gt;3-Dec&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Final Project presentations&lt;/td&gt;
+&lt;td&gt;No Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;5-Dec&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Final Project presentations&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5-Dec&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Final Project presentations&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 17&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10-Dec&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;AGU - no class&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Practical Final on your own&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;No Lab&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Week 17&lt;/td&gt;
+&lt;td&gt;10-Dec&lt;/td&gt;
+&lt;td&gt;AGU - no class&lt;/td&gt;
+&lt;td&gt;Practical Final on your own&lt;/td&gt;
+&lt;td&gt;No Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;12-Dec&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;AGU - no class&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Practical Final on your own&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;12-Dec&lt;/td&gt;
+&lt;td&gt;AGU - no class&lt;/td&gt;
+&lt;td&gt;Practical Final on your own&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;Week 18&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;17-Dec&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Final&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Final at 1:30&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Final Paper Due&lt;/td&gt;
+&lt;td&gt;Week 18&lt;/td&gt;
+&lt;td&gt;17-Dec&lt;/td&gt;
+&lt;td&gt;Final&lt;/td&gt;
+&lt;td&gt;Final at 1:30&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Final Paper Due&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content from cell 1&lt;/td&gt;
+&lt;td&gt;Content from cell 2&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Content in the first column&lt;/td&gt;
+&lt;td&gt;Content in the second column&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

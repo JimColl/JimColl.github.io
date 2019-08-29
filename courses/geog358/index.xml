@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GEOG358 Intro to GIS | Jim Coll</title>
+    <link>https://JimColl.github.io/courses/geog358/</link>
+      <atom:link href="https://JimColl.github.io/courses/geog358/index.xml" rel="self" type="application/rss+xml" />
+    <description>GEOG358 Intro to GIS</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://JimColl.github.io/img/icon-192.png</url>
+      <title>GEOG358 Intro to GIS</title>
+      <link>https://JimColl.github.io/courses/geog358/</link>
+    </image>
+    
+  </channel>
+</rss>

@@ -2,21 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses | Jim Coll</title>
-    <link>https://JimColl.github.io/courses/</link>
-      <atom:link href="https://JimColl.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jimcoll.github.io/courses/</link>
+      <atom:link href="https://jimcoll.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
     <description>Courses</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
-    <image>
-      <url>https://JimColl.github.io/img/icon-192.png</url>
-      <title>Courses</title>
-      <link>https://JimColl.github.io/courses/</link>
-    </image>
-    
     <item>
       <title>GEOG358 Intro to GIS</title>
-      <link>https://JimColl.github.io/courses/geog358/</link>
+      <link>https://jimcoll.github.io/courses/geog358/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://JimColl.github.io/courses/geog358/</guid>
+      <guid>https://jimcoll.github.io/courses/geog358/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-geog358-introduction-to-gis&#34;&gt;&lt;strong&gt;Welcome to GEOG358: Introduction to GIS&lt;/strong&gt;&lt;/h1&gt;
@@ -39,13 +33,13 @@ If you are looking to purchase a computer, I offer these general guidelines. You
 1. Lenovo Miix 510 &amp;amp; Dell Inspiron 15 7000​: Decent budget computers
 1. Acer Aspire V15​ &amp;amp; Dell Inspiron i7: Slightly higher end machines
 In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&amp;rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.
-My “Ideal” build (This is excessive, research grade): &lt;a href=&#34;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&#34; target=&#34;_blank&#34;&gt;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&lt;/a&gt;​&lt;/p&gt;
+My “Ideal” build (This is excessive, research grade): &lt;a href=&#34;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&#34;&gt;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&lt;/a&gt;​&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt;
 The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Academic Integrity:&lt;/strong&gt;
-Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone creadit for their work?  As a graduate student, I became increadably familiar with &lt;a href=&#34;https://www.zotero.org/&#34; target=&#34;_blank&#34;&gt;Zotero&lt;/a&gt; for my citation needs, but &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34; target=&#34;_blank&#34;&gt;Cite This for Me&lt;/a&gt; will work for you in a pinch:&lt;/p&gt;
+Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone creadit for their work?  As a graduate student, I became increadably familiar with &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, but &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will work for you in a pinch:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Disabilities:&lt;/strong&gt;
 Anyone who has a disability that may prevent full demonstration of academic ability should contact me as soon as possible to ensure accommodations can be made to allow for full educational benefit.&lt;/p&gt;
@@ -54,11 +48,11 @@ Anyone who has a disability that may prevent full demonstration of academic abil
 This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cartography primers:&lt;/strong&gt;
-&lt;a href=&#34;http://www.icsm.gov.au/mapping/cartographic.html&#34; target=&#34;_blank&#34;&gt;http://www.icsm.gov.au/mapping/cartographic.html&lt;/a&gt;
-&lt;a href=&#34;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&#34; target=&#34;_blank&#34;&gt;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://www.icsm.gov.au/mapping/cartographic.html&#34;&gt;http://www.icsm.gov.au/mapping/cartographic.html&lt;/a&gt;
+&lt;a href=&#34;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&#34;&gt;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Textbooks:&lt;/strong&gt;
-de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) &lt;em&gt;Geospatial Analysis—A comprehensive guide&lt;/em&gt; (4&lt;sup&gt;rd&lt;/sup&gt; edition), An online version is available at &lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34; target=&#34;_blank&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/p&gt;
+de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) &lt;em&gt;Geospatial Analysis—A comprehensive guide&lt;/em&gt; (4&lt;sup&gt;rd&lt;/sup&gt; edition), An online version is available at &lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tentative Course Outline:&lt;/strong&gt;
 &lt;table&gt;
@@ -689,7 +683,7 @@ de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) &lt;em&gt;Geospatial Anal
 &lt;/table&gt;
 
 &lt;p&gt;Other “important” dates:
-&lt;a href=&#34;https://registrar.ku.edu/fall-2019-academic-calendar-date&#34; target=&#34;_blank&#34;&gt;https://registrar.ku.edu/fall-2019-academic-calendar-date&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://registrar.ku.edu/fall-2019-academic-calendar-date&#34;&gt;https://registrar.ku.edu/fall-2019-academic-calendar-date&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Course Evaluation:&lt;/strong&gt;
 Course grade will be evaluated based on two exams, pre-class review questions, ~ten lab exercises, and a final project. The exams will include materials from the textbooks, lecture slides, handouts, and labs. Mid-term exam will cover the materials from the first half of the class, and the final exam will focus on the second half. The final exam is &lt;strong&gt;not&lt;/strong&gt; comprehensive, but since we will be building on concepts throughout the semester, materials from the first half of the semester will inevitably be part of the final exam. A breakdown of grade weights is as follows:
@@ -791,13 +785,13 @@ analytic functions in GIS.&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Full Term Paper&lt;/strong&gt; (6 ~ 15 pages, due on &lt;strong&gt;Dec 17&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa&#34; target=&#34;_blank&#34;&gt;Slides for class&lt;/a&gt;
-[Link to google sheets for ArcMap Key] (&lt;a href=&#34;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&#34; target=&#34;_blank&#34;&gt;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa&#34;&gt;Slides for class&lt;/a&gt;
+[Link to google sheets for ArcMap Key] (&lt;a href=&#34;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&#34;&gt;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE&#34; target=&#34;_blank&#34;&gt;Link to class slack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE&#34;&gt;Link to class slack&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETEal6qSVrFHpdQIrbtenaYBUW9J0ECsrQ7KIoaKWreGeQ?e=cRoLgz&#34; target=&#34;_blank&#34;&gt;Slides for class&lt;/a&gt;
-&lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34; target=&#34;_blank&#34;&gt;video for class&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETEal6qSVrFHpdQIrbtenaYBUW9J0ECsrQ7KIoaKWreGeQ?e=cRoLgz&#34;&gt;Slides for class&lt;/a&gt;
+&lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34;&gt;video for class&lt;/a&gt;
 Watch #2 and #3, maybe #7&lt;/p&gt;
 </description>
     </item>

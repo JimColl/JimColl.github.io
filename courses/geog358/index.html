@@ -1,354 +1,59 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us"><head>
+  <title>Aafu theme</title>
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.4.0">
-
-  
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="James Matthew Coll">
-
-  
-  
-  
-    
-  
-  <meta name="description" content="An introductory course to using ArcGIS and geospatial thinking">
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://JimColl.github.io/courses/geog358/">
-
-  
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="" />
+<meta name="author" content="Darshan Baral" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.57.2" />        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">        <link rel="manifest" href="site.webmanifest">        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="favicon.ico">        
 
 
-  
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
 
-  
-  
-  
-  <meta name="theme-color" content="#4caf50">
-  
+  <link
+    id="color-CSS"
+    rel="stylesheet"
+    href="/css/aafu_light.css"
+    type="text/css"
+  />
+  <link rel="stylesheet" href="/css/aafu.css" />
 
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
-
-    
-    
-    
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
-    
-
-    
-
-  
-
-  
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
-
-  
-
-  
-  
-  
-
-  
-  <link rel="alternate" href="/courses/geog358/index.xml" type="application/rss+xml" title="Jim Coll">
-  
-
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon-32.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
-
-  <link rel="canonical" href="https://JimColl.github.io/courses/geog358/">
-
-  
-  
-  
-  
-    
-    
-  
-  
-  <meta property="twitter:card" content="summary">
-  
-  <meta property="og:site_name" content="Jim Coll">
-  <meta property="og:url" content="https://JimColl.github.io/courses/geog358/">
-  <meta property="og:title" content="GEOG358 Intro to GIS | Jim Coll">
-  <meta property="og:description" content="An introductory course to using ArcGIS and geospatial thinking"><meta property="og:image" content="https://JimColl.github.io/img/icon-192.png">
-  <meta property="twitter:image" content="https://JimColl.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
-  
-    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00">
-  
-
-  
-
-
-  
-
-
-
-
-
-  <title>GEOG358 Intro to GIS | Jim Coll</title>
-
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = function() {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active")
+        .nextElementSibling;
+      defaultActivePanel.style.maxHeight =
+        defaultActivePanel.scrollHeight + "px";
+    };
+    window.onresize = function() {
+      document.querySelector(".active").nextElementSibling.style.maxHeight =
+        document.querySelector(".active").nextElementSibling.scrollHeight +
+        "px";
+    };
+  </script>
 </head>
-
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
-
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-  
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
-
-    
-      <a class="navbar-brand" href="/">Jim Coll</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
-
-    
-    <div class="collapse navbar-collapse" id="navbar">
-
-      
-      
-      <ul class="navbar-nav mr-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#about"><span>Home</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#projects"><span>Projects</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#publications"><span>Publications</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/files/James%20Coll%20CV.pdf"><span>CV</span></a>
-        </li>
-
-        
-        
-
-      
-      </ul>
-      <ul class="navbar-nav ml-auto">
-      
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
-
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-
-  
+<body class="container" style="max-width: 1400px;">
 
 <div class="container-fluid docs">
   <div class="row flex-xl-nowrap">
@@ -428,13 +133,13 @@ If you are looking to purchase a computer, I offer these general guidelines. You
 1. Lenovo Miix 510 &amp; Dell Inspiron 15 7000​: Decent budget computers
 1. Acer Aspire V15​ &amp; Dell Inspiron i7: Slightly higher end machines
 In general, I tend to stay away from the &ldquo;gaming&rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.
-My “Ideal” build (This is excessive, research grade): <a href="https://pcpartpicker.com/user/JColl/saved/#view=zddq3C" target="_blank">https://pcpartpicker.com/user/JColl/saved/#view=zddq3C</a>​</p>
+My “Ideal” build (This is excessive, research grade): <a href="https://pcpartpicker.com/user/JColl/saved/#view=zddq3C">https://pcpartpicker.com/user/JColl/saved/#view=zddq3C</a>​</p>
 
 <p><strong>Resources:</strong>
 The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.</p>
 
 <p><strong>Academic Integrity:</strong>
-Simply put, cheating and/or plagiarism <strong>is not tolerated</strong>. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&rsquo;s insert year here, how hard is it to give someone creadit for their work?  As a graduate student, I became increadably familiar with <a href="https://www.zotero.org/" target="_blank">Zotero</a> for my citation needs, but <a href="http://www.citethisforme.com/us/citation-generator" target="_blank">Cite This for Me</a> will work for you in a pinch:</p>
+Simply put, cheating and/or plagiarism <strong>is not tolerated</strong>. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&rsquo;s insert year here, how hard is it to give someone creadit for their work?  As a graduate student, I became increadably familiar with <a href="https://www.zotero.org/">Zotero</a> for my citation needs, but <a href="http://www.citethisforme.com/us/citation-generator">Cite This for Me</a> will work for you in a pinch:</p>
 
 <p><strong>Disabilities:</strong>
 Anyone who has a disability that may prevent full demonstration of academic ability should contact me as soon as possible to ensure accommodations can be made to allow for full educational benefit.</p>
@@ -443,11 +148,11 @@ Anyone who has a disability that may prevent full demonstration of academic abil
 This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!</p>
 
 <p><strong>Cartography primers:</strong>
-<a href="http://www.icsm.gov.au/mapping/cartographic.html" target="_blank">http://www.icsm.gov.au/mapping/cartographic.html</a>
-<a href="https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf" target="_blank">https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf</a></p>
+<a href="http://www.icsm.gov.au/mapping/cartographic.html">http://www.icsm.gov.au/mapping/cartographic.html</a>
+<a href="https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf">https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf</a></p>
 
 <p><strong>Textbooks:</strong>
-de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) <em>Geospatial Analysis—A comprehensive guide</em> (4<sup>rd</sup> edition), An online version is available at <a href="http://www.spatialanalysisonline.com/HTML/index.html" target="_blank">http://www.spatialanalysisonline.com/HTML/index.html</a></p>
+de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) <em>Geospatial Analysis—A comprehensive guide</em> (4<sup>rd</sup> edition), An online version is available at <a href="http://www.spatialanalysisonline.com/HTML/index.html">http://www.spatialanalysisonline.com/HTML/index.html</a></p>
 
 <p><strong>Tentative Course Outline:</strong>
 <table>
@@ -1078,7 +783,7 @@ de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) <em>Geospatial Analysis�
 </table>
 
 <p>Other “important” dates:
-<a href="https://registrar.ku.edu/fall-2019-academic-calendar-date" target="_blank">https://registrar.ku.edu/fall-2019-academic-calendar-date</a></p>
+<a href="https://registrar.ku.edu/fall-2019-academic-calendar-date">https://registrar.ku.edu/fall-2019-academic-calendar-date</a></p>
 
 <p><strong>Course Evaluation:</strong>
 Course grade will be evaluated based on two exams, pre-class review questions, ~ten lab exercises, and a final project. The exams will include materials from the textbooks, lecture slides, handouts, and labs. Mid-term exam will cover the materials from the first half of the class, and the final exam will focus on the second half. The final exam is <strong>not</strong> comprehensive, but since we will be building on concepts throughout the semester, materials from the first half of the semester will inevitably be part of the final exam. A breakdown of grade weights is as follows:
@@ -1180,13 +885,13 @@ analytic functions in GIS.</li>
 
 <p><strong>Full Term Paper</strong> (6 ~ 15 pages, due on <strong>Dec 17<sup>th</sup></strong>)</p>
 
-<p><a href="https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa" target="_blank">Slides for class</a>
-[Link to google sheets for ArcMap Key] (<a href="https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]" target="_blank">https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]</a></p>
+<p><a href="https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa">Slides for class</a>
+[Link to google sheets for ArcMap Key] (<a href="https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]">https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]</a></p>
 
-<p><a href="https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE" target="_blank">Link to class slack</a></p>
+<p><a href="https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE">Link to class slack</a></p>
 
-<p><a href="https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETEal6qSVrFHpdQIrbtenaYBUW9J0ECsrQ7KIoaKWreGeQ?e=cRoLgz" target="_blank">Slides for class</a>
-<a href="https://www.esri.com/en-us/about/events/uc/overview" target="_blank">video for class</a>
+<p><a href="https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETEal6qSVrFHpdQIrbtenaYBUW9J0ECsrQ7KIoaKWreGeQ?e=cRoLgz">Slides for class</a>
+<a href="https://www.esri.com/en-us/about/events/uc/overview">video for class</a>
 Watch #2 and #3, maybe #7</p>
 
           </div>
@@ -1238,147 +943,5 @@ Watch #2 and #3, maybe #7</p>
   </div>
 </div>
 
-
-      
-
-    
-    
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
-
-      
-
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
-        
-      
-
-      
-      
-    
-
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
-    
-
-    
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    
-    
-    
-    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
-
-    
-
-
-
-
-
-
-  
-
-  
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>

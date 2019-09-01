@@ -2,33 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Jim Coll</title>
-    <link>https://JimColl.github.io/authors/</link>
-      <atom:link href="https://JimColl.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jimcoll.github.io/authors/</link>
+      <atom:link href="https://jimcoll.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://JimColl.github.io/img/icon-192.png</url>
-      <title>Authors</title>
-      <link>https://JimColl.github.io/authors/</link>
-    </image>
-    
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <item>
       <title></title>
-      <link>https://JimColl.github.io/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://JimColl.github.io/authors/admin/</guid>
+      <link>https://jimcoll.github.io/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/authors/admin/</guid>
       <description>&lt;p&gt;Hi.  My name is Jim Coll, I am a PhD Candidate in Geography at the University of Kansas.&lt;/p&gt;
 
 &lt;p&gt;My skill set revolves broadly around the intersection of GIScience and Hydrology with a flair towards FOSS(Free and Open Source Software).  My masters work was in quantifying and visualizing the global trend in snow cover.  My dissertation seeks to demonstrate how small UAS (Drones) can be used to measure bathymetry and discharge at hyper-resolution scales.  Intense dislikes include temperatures over 70&lt;sup&gt;o&lt;/sup&gt;, seafood, but I love flying drones, dogs, and longboarding (the snowboarding in Kansas is sub-par). Thanks for visiting, and if you have any questions feel free to reach out!&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Robert Ford</title>
-      <link>https://JimColl.github.io/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>https://JimColl.github.io/authors/robert-ford/</guid>
-      <description></description>
     </item>
     
   </channel>

@@ -2,37 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Jim Coll</title>
-    <link>https://JimColl.github.io/tags/</link>
-      <atom:link href="https://JimColl.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jimcoll.github.io/tags/</link>
+      <atom:link href="https://jimcoll.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://JimColl.github.io/img/icon-192.png</url>
-      <title>Tags</title>
-      <link>https://JimColl.github.io/tags/</link>
-    </image>
-    
     <item>
       <title>Source Themes</title>
-      <link>https://JimColl.github.io/tags/source-themes/</link>
+      <link>https://jimcoll.github.io/tags/source-themes/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://JimColl.github.io/tags/source-themes/</guid>
+      <guid>https://jimcoll.github.io/tags/source-themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>https://JimColl.github.io/tags/deep-learning/</link>
+      <link>https://jimcoll.github.io/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://JimColl.github.io/tags/deep-learning/</guid>
+      <guid>https://jimcoll.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>https://JimColl.github.io/tags/demo/</link>
+      <link>https://jimcoll.github.io/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://JimColl.github.io/tags/demo/</guid>
+      <guid>https://jimcoll.github.io/tags/demo/</guid>
       <description></description>
     </item>
     

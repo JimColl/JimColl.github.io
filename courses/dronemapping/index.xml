@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jim Coll</title>
+    <link>https://jimcoll.github.io/courses/dronemapping/</link>
+      <atom:link href="https://jimcoll.github.io/courses/dronemapping/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jim Coll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>https://jimcoll.github.io/img/icon-192.png</url>
+      <title>Jim Coll</title>
+      <link>https://jimcoll.github.io/courses/dronemapping/</link>
+    </image>
+    
+  </channel>
+</rss>

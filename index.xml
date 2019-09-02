@@ -5,144 +5,708 @@
     <link>https://jimcoll.github.io/</link>
       <atom:link href="https://jimcoll.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Jim Coll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 May 2019 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Example Page 1</title>
-      <link>https://jimcoll.github.io/courses/example/example1/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://jimcoll.github.io/courses/example/example1/</guid>
-      <description>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog358/classoutline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/classoutline/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Tentative Course Outline:&lt;/strong&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week number&lt;/td&gt;
+        &lt;td&gt;Date&lt;/td&gt;
+        &lt;td&gt;Milestones&lt;/td&gt;
+        &lt;td&gt;Class&lt;/td&gt;
+        &lt;td&gt;Lab&lt;/td&gt;
+        &lt;td&gt;Due&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 1&lt;/td&gt;
+        &lt;td&gt;27-Aug&lt;/td&gt;
+        &lt;td&gt;Welcomes&lt;/td&gt;
+        &lt;td&gt;Walk through&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;29-Aug&lt;/td&gt;
+        &lt;td&gt;Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;&lt;/td&gt;
+        &lt;td&gt;ESRI UC&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 2&lt;/td&gt;
+        &lt;td&gt;3-Sep&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Coordinate systems, projections&lt;/td&gt;
+        &lt;td&gt;Introduction to ArcMap&lt;/td&gt;
+        &lt;td&gt;Week 1 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;5-Sep&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Data Models and structures&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 3&lt;/td&gt;
+        &lt;td&gt;10-Sep&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;GIS Data&lt;/td&gt;
+        &lt;td&gt;Datum Shift lab&lt;/td&gt;
+        &lt;td&gt;Week 2 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;12-Sep&lt;/td&gt;
+        &lt;td&gt;Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;&lt;/td&gt;
+        &lt;td&gt;GPS&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 4&lt;/td&gt;
+        &lt;td&gt;17-Sep&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Getting Data&lt;/td&gt;
+        &lt;td&gt;GPS lab&lt;/td&gt;
+        &lt;td&gt;Week 3 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;19-Sep&lt;/td&gt;
+        &lt;td&gt;Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt;&lt;/td&gt;
+        &lt;td&gt;Map Design&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 5&lt;/td&gt;
+        &lt;td&gt;24-Sep&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Map Design&lt;/td&gt;
+        &lt;td&gt;Building A database&lt;/td&gt;
+        &lt;td&gt;Week 4 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;26-Sep&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Map Design&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 6&lt;/td&gt;
+        &lt;td&gt;1-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Vector Data Analysis&lt;/td&gt;
+        &lt;td&gt;Overlay lab&lt;/td&gt;
+        &lt;td&gt;Week 5 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;3-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Overlay analysis&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 7&lt;/td&gt;
+        &lt;td&gt;8-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Midterm Review&lt;/td&gt;
+        &lt;td&gt;No Lab&lt;/td&gt;
+        &lt;td&gt;Week 6 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;10-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Midterm&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Project proposal due&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 8&lt;/td&gt;
+        &lt;td&gt;15-Oct&lt;/td&gt;
+        &lt;td&gt;Fall Break!&lt;/td&gt;
+        &lt;td&gt;No Class&lt;/td&gt;
+        &lt;td&gt;Spatial Statistics Lab&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;17-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Spatial Statistics&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 9&lt;/td&gt;
+        &lt;td&gt;22-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Spatial Statistics&lt;/td&gt;
+        &lt;td&gt;Interpolation Lab&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;24-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Raster Data Analysis&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 10&lt;/td&gt;
+        &lt;td&gt;29-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Network Analysis&lt;/td&gt;
+        &lt;td&gt;Network Analysis&lt;/td&gt;
+        &lt;td&gt;Week 8-9 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;31-Oct&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Guest Lecture&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 11&lt;/td&gt;
+        &lt;td&gt;5-Nov&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Terrain Analysis&lt;/td&gt;
+        &lt;td&gt;Hydrology Lab&lt;/td&gt;
+        &lt;td&gt;week 10 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;7-Nov&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Terrain Analysis&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 13&lt;/td&gt;
+        &lt;td&gt;12-Nov&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Guest Lecture&lt;/td&gt;
+        &lt;td&gt;Distribution  modeling&lt;/td&gt;
+        &lt;td&gt;weel 11 review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;14-Nov&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Make up day&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 14&lt;/td&gt;
+        &lt;td&gt;19-Nov&lt;/td&gt;
+        &lt;td&gt;Las day to withdraw&lt;/td&gt;
+        &lt;td&gt;Make up day&lt;/td&gt;
+        &lt;td&gt;Open Lab&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;21-Nov&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Project Help&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 15&lt;/td&gt;
+        &lt;td&gt;26-Nov&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Project Help&lt;/td&gt;
+        &lt;td&gt;Open Lab&lt;/td&gt;
+        &lt;td&gt;Introduction due&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;28-Nov&lt;/td&gt;
+        &lt;td&gt;ThxGiving Break!&lt;/td&gt;
+        &lt;td&gt;No Class&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 16&lt;/td&gt;
+        &lt;td&gt;3-Dec&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Final Project presentations&lt;/td&gt;
+        &lt;td&gt;No Lab&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;5-Dec&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Final Project presentations&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 17&lt;/td&gt;
+        &lt;td&gt;10-Dec&lt;/td&gt;
+        &lt;td&gt;AGU - no class&lt;/td&gt;
+        &lt;td&gt;Practical Final on your own&lt;/td&gt;
+        &lt;td&gt;No Lab&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;12-Dec&lt;/td&gt;
+        &lt;td&gt;AGU - no class&lt;/td&gt;
+        &lt;td&gt;Practical Final on your own&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Week 18&lt;/td&gt;
+        &lt;td&gt;17-Dec&lt;/td&gt;
+        &lt;td&gt;Final&lt;/td&gt;
+        &lt;td&gt;Final at 1:30&lt;/td&gt;
+        &lt;td&gt; &lt;/td&gt;
+        &lt;td&gt;Final Paper Due&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Week number&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Milestones&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Class&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Lab&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Week 1&lt;/td&gt;
+&lt;td&gt;27-Aug&lt;/td&gt;
+&lt;td&gt;Welcomes&lt;/td&gt;
+&lt;td&gt;Walk through&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;29-Aug&lt;/td&gt;
+&lt;td&gt;Last day for a full refund &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;&lt;/td&gt;
+&lt;td&gt;ESRI UC&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Week 2&lt;/td&gt;
+&lt;td&gt;3-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Coordinate systems, projections&lt;/td&gt;
+&lt;td&gt;Introduction to ArcMap&lt;/td&gt;
+&lt;td&gt;Week 1 review&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Data Models and structures&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Week 3&lt;/td&gt;
+&lt;td&gt;10-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;GIS Data&lt;/td&gt;
+&lt;td&gt;Datum Shift lab&lt;/td&gt;
+&lt;td&gt;Week 2 review&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;12-Sep&lt;/td&gt;
+&lt;td&gt;Last day to drop without a w &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;&lt;/td&gt;
+&lt;td&gt;GPS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;tr&gt;
+&lt;td&gt;Week 4&lt;/td&gt;
+&lt;td&gt;17-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Getting Data&lt;/td&gt;
+&lt;td&gt;GPS lab&lt;/td&gt;
+&lt;td&gt;Week 3 review&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;19-Sep&lt;/td&gt;
+&lt;td&gt;Last day to add or swap class &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;23&lt;/sub&gt;&lt;/td&gt;
+&lt;td&gt;Map Design&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Week 5&lt;/td&gt;
+&lt;td&gt;24-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Map Design&lt;/td&gt;
+&lt;td&gt;Building A database&lt;/td&gt;
+&lt;td&gt;Week 4 review&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;26-Sep&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Map Design&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Week 6&lt;/td&gt;
+&lt;td&gt;1-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Vector Data Analysis&lt;/td&gt;
+&lt;td&gt;Overlay lab&lt;/td&gt;
+&lt;td&gt;Week 5 review&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;3-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Overlay analysis&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 7&lt;/td&gt;
+&lt;td&gt;8-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Midterm Review&lt;/td&gt;
+&lt;td&gt;No Lab&lt;/td&gt;
+&lt;td&gt;Week 6 review&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;10-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Midterm&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Project proposal due&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 8&lt;/td&gt;
+&lt;td&gt;15-Oct&lt;/td&gt;
+&lt;td&gt;Fall Break!&lt;/td&gt;
+&lt;td&gt;No Class&lt;/td&gt;
+&lt;td&gt;Spatial Statistics Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;17-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial Statistics&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 9&lt;/td&gt;
+&lt;td&gt;22-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial Statistics&lt;/td&gt;
+&lt;td&gt;Interpolation Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;24-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Raster Data Analysis&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 10&lt;/td&gt;
+&lt;td&gt;29-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Network Analysis&lt;/td&gt;
+&lt;td&gt;Network Analysis&lt;/td&gt;
+&lt;td&gt;Week 8-9 review&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;31-Oct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Guest Lecture&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 11&lt;/td&gt;
+&lt;td&gt;5-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Terrain Analysis&lt;/td&gt;
+&lt;td&gt;Hydrology Lab&lt;/td&gt;
+&lt;td&gt;week 10 review&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;7-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Terrain Analysis&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 13&lt;/td&gt;
+&lt;td&gt;12-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Guest Lecture&lt;/td&gt;
+&lt;td&gt;Distribution  modeling&lt;/td&gt;
+&lt;td&gt;weel 11 review&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;14-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Make up day&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 14&lt;/td&gt;
+&lt;td&gt;19-Nov&lt;/td&gt;
+&lt;td&gt;Las day to withdraw&lt;/td&gt;
+&lt;td&gt;Make up day&lt;/td&gt;
+&lt;td&gt;Open Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;21-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Project Help&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 15&lt;/td&gt;
+&lt;td&gt;26-Nov&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Project Help&lt;/td&gt;
+&lt;td&gt;Open Lab&lt;/td&gt;
+&lt;td&gt;Introduction due&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;28-Nov&lt;/td&gt;
+&lt;td&gt;ThxGiving Break!&lt;/td&gt;
+&lt;td&gt;No Class&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 16&lt;/td&gt;
+&lt;td&gt;3-Dec&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Final Project presentations&lt;/td&gt;
+&lt;td&gt;No Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;5-Dec&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Final Project presentations&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 17&lt;/td&gt;
+&lt;td&gt;10-Dec&lt;/td&gt;
+&lt;td&gt;AGU - no class&lt;/td&gt;
+&lt;td&gt;Practical Final on your own&lt;/td&gt;
+&lt;td&gt;No Lab&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;12-Dec&lt;/td&gt;
+&lt;td&gt;AGU - no class&lt;/td&gt;
+&lt;td&gt;Practical Final on your own&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Week 18&lt;/td&gt;
+&lt;td&gt;17-Dec&lt;/td&gt;
+&lt;td&gt;Final&lt;/td&gt;
+&lt;td&gt;Final at 1:30&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Final Paper Due&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
     <item>
-      <title>Example Page 1</title>
-      <link>https://jimcoll.github.io/courses/geog358/lesson1/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://jimcoll.github.io/courses/geog358/lesson1/</guid>
-      <description>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog358/termpaper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/termpaper/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt;
+Identify a biophysical, human, or environmental problem that requires or would benifit from your newfound knowledge of spatial analysis using GIS. Describe the problem that you are interested in. Provide geographic context to the problem.  Discuss what kind of GIS analysis you want to use and the implementation strategy you have chosen. Present simple diagrams or maps
+that illustrate your approach. Apply your approach to real-world data
+and present the results of your project in oral form. &lt;strong&gt;All students&lt;/strong&gt;
+are also required to write a term paper based on the final project. The
+intermediate deliverables count towards 10% of the final project grade,
+the term paper counts 65% of the final project grade and the
+presentation counts towards the remaining 25%.&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;All students are required to write a proposal for the final project. In the proposal, you will describe the project you are planning to carry out, the GIS datasets needed, and GIS analysis functions may be used in the project. You will review the literature, what methods and GIS analysis functions have been used solving similar problems. Each student should plan on a 15-minutes presentation of your final project to the class.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;The term paper should include the following sections:
+  - Introduction&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  - Define the problem in context. Describe why spatial analysis is
+    needed to solve your problem. Review in literature what methods
+    and spatial analysis have been used solving similar problems. Be
+    sure to include a statement like &amp;quot;The objective of this project
+    is to ...&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Methods&lt;/p&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Describe the strategy you solve the problem using GIS and any
+other necessary methods. Describe the statistic method, computer
+model, GIS analytic functions / operations you use in the
+problem solving process. Diagrams are especial helpful to
+understand your strategy.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Study Area and Analysis&lt;/p&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Describe the study area. What kind of GIS data and data models
+are used in the analysis. Present the results of your analysis.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;li&gt;&lt;p&gt;Results &amp;amp; Conclusions&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Discuss the findings from your problem solving process. Evaluate
+your methodology. Discuss the usefulness and limitation of the
+analytic functions in GIS.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;References&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;The following are due throughout the semester:&lt;/p&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proposal&lt;/strong&gt; (1 ~ 3 pages, due tentatively on &lt;strong&gt;Oct 10&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt; (due &lt;strong&gt;Nov. 26&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Full Term Paper&lt;/strong&gt; (6 ~ 15 pages, due on &lt;strong&gt;Dec 17&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Example Page 1</title>
-      <link>https://jimcoll.github.io/geog358/lesson1/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://jimcoll.github.io/geog358/lesson1/</guid>
-      <description>
+      <title>Class 1</title>
+      <link>https://jimcoll.github.io/courses/geog358/lesson01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lesson01/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ef3b604vl9NPoMQ5QVPfZe0Bo3W8woKXkDnGZ4pzXki9BA?e=hOirXa&#34;&gt;Slides for class&lt;/a&gt;
+[Link to google sheets for ArcMap Key] (&lt;a href=&#34;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&#34;&gt;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing]&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE&#34;&gt;Link to class slack&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Example Page 2</title>
-      <link>https://jimcoll.github.io/courses/example/example2/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://jimcoll.github.io/courses/example/example2/</guid>
+      <title>Class 2</title>
+      <link>https://jimcoll.github.io/courses/geog358/lesson02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lesson02/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETEal6qSVrFHpdQIrbtenaYBUW9J0ECsrQ7KIoaKWreGeQ?e=cRoLgz&#34;&gt;Slides for class&lt;/a&gt;
+&lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34;&gt;video for class&lt;/a&gt;
+Watch #2 and #3, maybe #7&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 1</title>
+      <link>https://jimcoll.github.io/courses/geog358/lab01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lab01/</guid>
       <description>
 
-&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+&lt;h1 id=&#34;welcome-to-geog358-introduction-to-gis&#34;&gt;&lt;strong&gt;Welcome to GEOG358: Introduction to GIS&lt;/strong&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 2</title>
+      <link>https://jimcoll.github.io/courses/geog358/lab02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lab02/</guid>
+      <description>
 
-&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h1 id=&#34;welcome-to-geog3582-ilab-2&#34;&gt;&lt;strong&gt;Welcome to GEOG3582: ILab 2&lt;/strong&gt;&lt;/h1&gt;
 </description>
     </item>
     

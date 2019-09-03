@@ -605,58 +605,50 @@
       <link>https://jimcoll.github.io/courses/geog358/termpaper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/termpaper/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt;
-Identify a biophysical, human, or environmental problem that requires or would benifit from your newfound knowledge of spatial analysis using GIS. Describe the problem that you are interested in. Provide geographic context to the problem.  Discuss what kind of GIS analysis you want to use and the implementation strategy you have chosen. Present simple diagrams or maps
+      <description>
+
+&lt;h1 id=&#34;class-project&#34;&gt;&lt;strong&gt;Class project&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;objective&#34;&gt;&lt;strong&gt;Objective:&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Identify a biophysical, human, or environmental problem that requires or would benifit from your newfound knowledge of spatial analysis using GIS. Describe the problem that you are interested in. Provide geographic context to the problem.  Discuss what kind of GIS analysis you want to use and the implementation strategy you have chosen. Present simple diagrams or maps
 that illustrate your approach. Apply your approach to real-world data
 and present the results of your project in oral form. Students are also required to write a term paper based on the final project. The
 intermediate deliverables count towards 10% of the final project grade,
 the term paper counts 65% of the final project grade and the
 presentation counts towards the remaining 25%.&lt;/p&gt;
 
-&lt;p&gt;All students are required to write a proposal for the final project. In the proposal, you will describe the project you are planning to carry out, the GIS datasets needed, and GIS analysis functions may be used in the project. You will review the literature, what methods and GIS analysis functions have been used solving similar problems. Each student should plan on a 15-minutes presentation of your final project to the class.&lt;/p&gt;
+&lt;p&gt;All students are required to write a proposal for the final project. In the proposal, you will describe the project you are planning to carry out, the GIS datasets needed, and GIS analysis functions may be used in the project. You will review the literature, what methods and GIS analysis functions have been used solving similar problems. Each student should plan on a 15-minutes presentation of your final project to the class (10 for a talk with 5 minutes of questions and transitions between).&lt;/p&gt;
 
-&lt;p&gt;The term paper should include the following sections:
-  - Introduction&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  - Define the problem in context. Describe why spatial analysis is
-    needed to solve your problem. Review in literature what methods
-    and spatial analysis have been used solving similar problems. Be
-    sure to include a statement like &amp;quot;The objective of this project
-    is to ...&amp;quot;.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The term paper should include the following sections:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Methods&lt;/p&gt;
+&lt;li&gt;Introduction
 
 &lt;ul&gt;
-&lt;li&gt;Describe the strategy you solve the problem using GIS and any
-other necessary methods. Describe the statistic method, computer
-model, GIS analytic functions / operations you use in the
-problem solving process. Diagrams are especial helpful to
-understand your strategy.&lt;/li&gt;
+&lt;li&gt;Define the problem in context. Describe why spatial analysis is needed to solve your problem. Review in literature what methods and spatial analysis have been used solving similar problems. Be sure to include a statement like &amp;ldquo;The objective of this project is to &amp;hellip;&amp;rdquo;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Study Area and Analysis&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Describe the study area. What kind of GIS data and data models
-are used in the analysis. Present the results of your analysis.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Results &amp;amp; Conclusions&lt;/p&gt;
+&lt;li&gt;Methods
 
 &lt;ul&gt;
-&lt;li&gt;Discuss the findings from your problem solving process. Evaluate
-your methodology. Discuss the usefulness and limitation of the
-analytic functions in GIS.&lt;/li&gt;
+&lt;li&gt;Describe the strategy you solve the problem using GIS and any other necessary methods. Describe the statistic method, computer model, GIS analytic functions / operations you use in the problem solving process. Diagrams are especial helpful to understand your strategy.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Study Area and Analysis
 
-&lt;li&gt;&lt;p&gt;References&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Describe the study area. What kind of GIS data and data models are used in the analysis. Present the results of your analysis.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Results &amp;amp; Conclusions
+
+&lt;ul&gt;
+&lt;li&gt;Discuss the findings from your problem solving process. Evaluate your methodology. Discuss the usefulness and limitation of the analytic functions in GIS.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;References&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The following are due throughout the semester:&lt;/p&gt;
+&lt;p&gt;The following are due throughout the semester (dates tentative):&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Proposal&lt;/strong&gt; (1 ~ 3 pages, due tentatively on &lt;strong&gt;Oct 10&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proposal&lt;/strong&gt; (1 ~ 3 pages, due &lt;strong&gt;Oct 10&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt; (due &lt;strong&gt;Nov. 26&lt;sup&gt;th&lt;/sup&gt;&lt;/strong&gt;)&lt;/p&gt;
 
@@ -676,7 +668,7 @@ analytic functions in GIS.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;The lab is a huge part of this class, don&amp;rsquo;t blow it off.&lt;/li&gt;
 &lt;li&gt;Using ArcMap at least 2 times a week will greatly increase your learning outcomes&lt;/li&gt;
-&lt;li&gt;This class counts towards the Undergraduate certificate in GIS.  I obviously recommend it&lt;/li&gt;
+&lt;li&gt;This class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;Undergraduate certificate in GIS&lt;/a&gt;.  I obviously recommend it.&lt;/li&gt;
 &lt;li&gt;There will be a final project and presentation, and two exams.  Although not strictly cumulative, this is all foundational&amp;hellip;&lt;/li&gt;
 &lt;li&gt;There will be a practical portion on either/or/both the midterm and final.&lt;/li&gt;
 &lt;/ul&gt;
@@ -706,7 +698,9 @@ Watch #2 and #3, #4, maybe #7&lt;/p&gt;
       <link>https://jimcoll.github.io/courses/geog358/lesson03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lesson03/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;www.google.com&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Notes:
+The
+&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ERsh7QrV9dxMrbheWEo9qFkBX-zxmvx4GGzXb--NhLLo_g?e=KJeE86&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -716,6 +710,9 @@ Watch #2 and #3, #4, maybe #7&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lab01/</guid>
       <description>
+
+&lt;p&gt;A note about labs:
+These labs are largely written for ArcMap 10.6, though operations from AcrMap 10.2 through 10.6 all largely look the same, and the termonology has only changed slightly.  The first handful of labs are designed to be followed as is, but as the semester progresses I expect you to flex those critical thinking skills of yours.  Take a step back, read the learning objectives and ask yourself what steps would be needed to get to that goal.  When in doubt, &lt;a href=&#34;https://lmgtfy.com/&#34;&gt;Google it&lt;/a&gt;!&lt;/p&gt;
 
 &lt;h1 id=&#34;lab-1-introduction-to-arcmap&#34;&gt;&lt;strong&gt;Lab 1: Introduction to ArcMap&lt;/strong&gt;&lt;/h1&gt;
 
@@ -729,9 +726,11 @@ Watch #2 and #3, #4, maybe #7&lt;/p&gt;
 &lt;p&gt;Note: lab design guided by &lt;a href=&#34;https://github.com/leehach&#34;&gt;https://github.com/leehach&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;tutorial&#34;&gt;TUTORIAL&lt;/h1&gt;
+&lt;h1 id=&#34;tutorial&#34;&gt;Tutorial&lt;/h1&gt;
 
-&lt;h2 id=&#34;acquiring-the-data&#34;&gt;Acquiring the Data&lt;/h2&gt;
+&lt;h2 id=&#34;acquiring-the-data&#34;&gt;&lt;strong&gt;Acquiring the Data&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Create a &lt;strong&gt;workspace&lt;/strong&gt;, which is a technical way of referring to a project folder, the folder where you store your data files, including both inputs and outputs. Thus, when you see a reference to &amp;lsquo;your workspace&amp;rsquo; here, you can think of it as &amp;ldquo;your Lab1 data folder&amp;rdquo;. Using the term &amp;ldquo;workspace&amp;rdquo; is more concise, and when you become a more advanced GIS user, setting the workspace becomes an important part of automating complex processes. If you have a flash drive, create a new workspace folder named &amp;lsquo;Lab2&amp;rsquo;. If you do not have a flash drive create a new folder in the Documents folder.&lt;/p&gt;&lt;/li&gt;
@@ -744,141 +743,86 @@ Watch #2 and #3, #4, maybe #7&lt;/p&gt;
 
 &lt;li&gt;&lt;p&gt;In addition to schools, find and download the following: 2016 Philadelphia Streets - Bike Network &amp;amp; 2016 Philadelphia Planning - Neighborhoods&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;(Check step) You should have downloaded and be able to locate 3 files:
-PhillyPlanning_Schools.zip
-PhillyPlanning_Neighborhoods.zip
-PhillyStreets_Bike_Network.zip&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(Check step) You should have downloaded and be able to locate 3 files:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PhillyPlanning_Schools.zip&lt;/li&gt;
+&lt;li&gt;PhillyPlanning_Neighborhoods.zip&lt;/li&gt;
+&lt;li&gt;PhillyStreets_Bike_Network.zip&lt;br /&gt;
+
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Notice all 3 files are .zip files, which is a single file that is composed of one or more individual files that have been compressed to a smaller storage size for convenience. The lab computers will automatically save the zip files to the Downloads folder. Copy or move these files to your Lab1 workspace folder.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Unzip the archive. The lab computers have 7-Zip installed on them.
-In File Explorer, right-click the file and choose &lt;strong&gt;7-Zip → Extract
-to &amp;ldquo;folder_name&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unzip the archive. The lab computers have &lt;a href=&#34;https://www.7-zip.org/&#34;&gt;7-Zip&lt;/a&gt; installed on them. In File Explorer, right-click the file and choose &lt;strong&gt;7-Zip → Extract to &amp;ldquo;folder_name&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Unzip each of the .zip files using the 7-zip application (or another
-appropriate application) and extract the files to your workspace
-folder.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unzip each of the .zip files using the 7-zip application (or another appropriate application) and extract the files to your workspace folder.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;opening-arcmap-and-adding-map-layers&#34;&gt;Opening ArcMap and Adding Map Layers&lt;/h2&gt;
+&lt;h2 id=&#34;opening-arcmap-and-adding-map-layers&#34;&gt;&lt;strong&gt;Opening ArcMap and Adding Map Layers&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Open ArcMap.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;The New Document dialog will appear. Click OK to begin with a blank
-map.&lt;/p&gt;&lt;/li&gt;
+map.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; When you are starting with a new map, it doesn&amp;rsquo;t really matter whether you close this dialog by clicking OK, Cancel, or the &lt;strong&gt;X&lt;/strong&gt; at the upper right.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click the Add Data Button.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the Add Data browser window click the &amp;lsquo;Connect to Folder&amp;rsquo; button, navigate to your workspace folder, and press OK.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Navigate into your workspace folder and add the neighborhoods, schools, and bike network data layers to ArcMap.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;After adding the files, it should look something like this (the colors may be different):
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; When you are starting with a new map, it doesn&amp;rsquo;t really
-matter whether you close this dialog by clicking OK, Cancel, or the
-&lt;strong&gt;X&lt;/strong&gt; at the upper right.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;table-of-contents-toc&#34;&gt;&lt;strong&gt;Table of Contents (TOC)&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Click the Add Data Button.
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image1.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.16700896762904638in&amp;rdquo;
-height=&amp;ldquo;0.16700896762904638in&amp;rdquo;}&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In the Add Data browser window click the &amp;lsquo;Connect to Folder&amp;rsquo; button,
-navigate to your workspace folder, and press OK.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Navigate into your workspace folder and add the neighborhoods,
-schools, and bike network data layers to ArcMap.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;After adding the files, it should look something like this (the
-colors may be different):&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;The left panel of panel in ArcMap is called the &amp;ldquo;Table of Contents&amp;rdquo;. The TOC lists all the map layers found in the map window and shows what the geographic features in each map layer represent (points, lines, polygons, images, tables). The table of contents helps you manage the display order of map layers and symbols used to represent layers, as well as set the display and other properties (e.g. colors, line thickness) for each map layer. It is also the place where you can easily see the drive paths where your files are physically located on the computer (e.g., C:\temp\mygisfiles).&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image2.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.585997375328084in&amp;rdquo;
-height=&amp;ldquo;3.000008748906387in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#39;red&#39;&gt;&lt;strong&gt;It is very important to remember where your files are located when you are working on a GIS project. In a GIS environment you will be doing a lot of data processing which requires the creation of new files, which must be saved. If you don&amp;rsquo;t know where you saved a file, your instructor is not going to know either.&lt;/strong&gt;&lt;/font&gt;&lt;br /&gt;
+* Hint: if you click on geoprocessing &amp;gt; results and expand the top most tool to see where Arcmap last dumped something out*&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&#34;table-of-contents-toc&#34;&gt;Table of Contents (TOC)&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The left panel of panel in ArcMap is called the &amp;ldquo;Table of Contents&amp;rdquo;.
-The TOC lists all the map layers found in the map window and shows
-what the geographic features in each map layer represent (points,
-lines, polygons, images, tables). The table of contents helps you
-manage the display order of map layers and symbols used to represent
-layers, as well as set the display and other properties (e.g. colors,
-line thickness) for each map layer. It is also the place where you can
-easily see the drive paths where your files are physically located on
-the computer (e.g., C:\temp\mygisfiles). &lt;strong&gt;It is very important to
-remember where your files are located when you are working on a GIS
-project. In a GIS environment you will be doing a lot of data
-processing which requires the creation of new files, which must be
-saved. If you don&amp;rsquo;t know where you saved a file, your instructor is
-not going to know either.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;working-in-the-table-of-contents&#34;&gt;Working in the Table of Contents&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;At the top of the TOC is a toolbar that controls how the layers are
-listed, and what you can do to them. You can hover over the buttons to
-see tooltips for their function:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;At the top of the TOC is a toolbar that controls how the layers are listed, and what you can do to them. You can hover over the buttons to see tooltips for their function:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;List By Drawing Order&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;List By Source&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;List By Visibility&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;List By Selection&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Options&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;List By Drawing Order&lt;/li&gt;
+&lt;li&gt;List By Source&lt;/li&gt;
+&lt;li&gt;List By Visibility&lt;/li&gt;
+&lt;li&gt;List By Selection&lt;/li&gt;
+&lt;li&gt;Options&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;In a new map, the List By Drawing Order button should be selected:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image3.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;1.4583628608923884in&amp;rdquo;
-height=&amp;ldquo;0.45834317585301837in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Select the List By Drawing Order button (if it is not already
-selected)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select the List By Drawing Order button (if it is not already selected)&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Try changing the order of the map layers. Click, hold, and drag the
-neighborhoods layer to the top. Notice that now that is &amp;lsquo;on top&amp;rsquo; it
-visually obscures the other layers (schools and bike network) below
-it. Drag and drop the schools and bike network layers to the top
-again.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Try changing the order of the map layers. Click, hold, and drag the neighborhoods layer to the top. Notice that now that is &amp;lsquo;on top&amp;rsquo; it visually obscures the other layers (schools and bike network) below it. Drag and drop the schools and bike network layers to the top again.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Select the List By Source button.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Note the path, i.e. the drive and folder hierarchy, within which
-each layer is stored.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Note the path, i.e. the drive and folder hierarchy, within which each layer is stored.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You can also turn layers on and off (i.e. make them visible or not)
-by simply checking or unchecking the box next to the layer name in
-the Table of Contents.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You can also turn layers on and off (i.e. make them visible or not) by simply checking or unchecking the box next to the layer name in the Table of Contents.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;what-are-arcmap-documents-mxd-files&#34;&gt;What are ArcMap documents? (.mxd files)&lt;/h3&gt;
+&lt;h2 id=&#34;what-are-arcmap-documents-mxd-files&#34;&gt;&lt;strong&gt;What are ArcMap documents? (.mxd files)&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;ArcMap documents (which have the .mxd extension) allow desktop users
-to save and share their GIS project with other desktop users or reopen
-a project at a future time. After an ArcMap document is created and
-its various map properties are defined (map colors, projection), all
-of the properties of the GIS map are saved as part of the map
-document. Remember that the map document file (.mxd) only saves ArcMap
-document properties and the location of the map layers that are being
-used and does not save the geospatial data (that is, the data in the
-shapefiles or other geospatial data format). The ArcMap document will
-only reference the location where the data files are saved. If you
-move your data files to a different drive path or folder and then open
-your project, you will have to locate the files again.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr /&gt;
 
-&lt;h2 id=&#34;saving-a-map-document&#34;&gt;Saving a Map Document&lt;/h2&gt;
+&lt;p&gt;ArcMap documents (which have the .mxd extension) allow desktop users to save and share their GIS project with other desktop users or reopen a project at a future time. After an ArcMap document is created and its various map properties are defined (map colors, projection), all of the properties of the GIS map are saved as part of the map document. Remember that the map document file (.mxd) only saves ArcMap document properties and the location of the map layers that are being used and does not save the geospatial data (that is, the data in the shapefiles or other geospatial data format). The ArcMap document will only reference the location where the data files are saved. If you move your data files to a different drive path or folder and then open your project, you will have to locate the files again.&lt;/p&gt;
+
+&lt;h3 id=&#34;saving-a-map-document&#34;&gt;Saving a Map Document&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Click File, Save.&lt;/p&gt;&lt;/li&gt;
@@ -890,31 +834,24 @@ your project, you will have to locate the files again.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Close the ArcMap software completely.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;opening-your-arcmap-document-mxd-file&#34;&gt;Opening your ArcMap Document (.mxd file)&lt;/h2&gt;
+&lt;h3 id=&#34;opening-your-arcmap-document-mxd-file&#34;&gt;Opening your ArcMap Document (.mxd file)&lt;/h3&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;As with Microsoft Word or other Windows applications, if you have an
-existing map document, you can open it directly from the desktop. You
-do not have to have ArcMap already open.&lt;/p&gt;
+&lt;p&gt;As with Microsoft Word or other Windows applications, if you have an existing map document, you can open it directly from the desktop. You do not have to have ArcMap already open.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;In File Explorer, navigate to your map document file (Lab2.mxd)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In File Explorer, navigate to your map document file (Lab1.mxd)&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Double-click the file to launch ArcMap and open your existing
-&amp;gt; document. Again, as with other Windows applications, you can open
-&amp;gt; an existing map document from the File menu. The File menu will
-&amp;gt; also list recently opened documents.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Double-click the file to launch ArcMap and open your existing document. Again, as with other Windows applications, you can open an existing map document from the File menu. The File menu will also list recently opened documents.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;remove-map-layers-from-map-document&#34;&gt;Remove Map Layers from Map Document&lt;/h2&gt;
+&lt;h3 id=&#34;remove-map-layers-from-map-document&#34;&gt;Remove Map Layers from Map Document&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Right-click Neighborhoods from the popup menu and click Remove.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Close ArcMap completely. Do not save your changes.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Close ArcCatalog completely.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&#34;organizing-gis-data&#34;&gt;Organizing GIS data&lt;/h3&gt;
@@ -943,204 +880,109 @@ recognize them as part of the same spatial layer, for example,
 schools.shp, schools.shx, and schools.dbf.&lt;/p&gt;
 
 &lt;p&gt;The following are common shapefile extensions. The first three (.shp,
-.shx, .dbf) are &lt;strong&gt;required&lt;/strong&gt; by the shapefile standard:&lt;/p&gt;
+.shx, .dbf) are &lt;strong&gt;required&lt;/strong&gt; by the shapefile standard:&lt;br/&gt;
+    - .shp&amp;mdash;The main file that stores the feature geometry; required.&lt;br/&gt;
+    - .shx&amp;mdash;The index file that stores the index of the feature geometry; required.&lt;br/&gt;
+    - .dbf&amp;mdash;The dBASE table that stores the attribute information of features; required.&lt;br/&gt;
+    - .prj&amp;mdash;The file that stores the coordinate system information. &lt;strong&gt;All&lt;/strong&gt; spatial data use &lt;strong&gt;some&lt;/strong&gt; CRS (coordinate reference system), but shapefiles are sometimes distributed without the PRJ file. How to deal with that will be demonstrated in a future exercise.&lt;br/&gt;
+    - .sbn and .sbx&amp;mdash;The files that store the spatial index of the features.&lt;br/&gt;
+    - .xml&amp;mdash;&lt;strong&gt;Metadata&lt;/strong&gt; (&amp;ldquo;data about data&amp;rdquo;) for ArcGIS&amp;mdash;stores information about the shapefile, such as the source of the data, accuracy, publication date, time period, etc.&lt;br/&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;.shp&amp;mdash;The main file that stores the feature geometry; required.&lt;/p&gt;&lt;/li&gt;
+&lt;h2 id=&#34;viewing-shapefiles-between-folders&#34;&gt;&lt;strong&gt;Viewing Shapefiles between Folders&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;li&gt;&lt;p&gt;.shx&amp;mdash;The index file that stores the index of the feature &amp;gt;
-&amp;gt; geometry; required.&lt;/p&gt;&lt;/li&gt;
+&lt;hr /&gt;
 
-&lt;li&gt;&lt;p&gt;.dbf&amp;mdash;The dBASE table that stores the attribute information of
-&amp;gt; features; required.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;.prj&amp;mdash;The file that stores the coordinate system information.
-&amp;gt; &lt;strong&gt;All&lt;/strong&gt; spatial data use &lt;strong&gt;some&lt;/strong&gt; CRS (coordinate reference
-&amp;gt; system), but shapefiles are sometimes distributed without the PRJ
-&amp;gt; file. How to deal with that will be demonstrated in a future
-&amp;gt; exercise.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;.sbn and .sbx&amp;mdash;The files that store the spatial index of the
-&amp;gt; features.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;.xml&amp;mdash;&lt;strong&gt;Metadata&lt;/strong&gt; (&amp;ldquo;data about data&amp;rdquo;) for ArcGIS&amp;mdash;stores
-&amp;gt; information about the shapefile, such as the source of the data,
-&amp;gt; accuracy, publication date, time period, etc.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;viewing-shapefiles-between-folders&#34;&gt;Viewing Shapefiles between Folders&lt;/h2&gt;
-
-&lt;p&gt;This section aims to show you that shapefiles are composed of many files
-that you must transport all together in one group to another location.
-Additionally, it is important to note where all the files are stored for
-each project that you work on.&lt;/p&gt;
+&lt;p&gt;This section aims to show you that shapefiles are composed of many files that you must transport all together in one group to another location. Additionally, it is important to note where all the files are stored for each project that you work on.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Open File Explorer and navigate to your workspace folder and examine
-the schools shapefile. There should be 8 files with the base name
-PhillyPlanning_Schools. These files must be kept together to be
-maintained. &lt;em&gt;THE LOSS OF ANY ONE OF THESE 8 FILES CAN BREAK THE&lt;/em&gt;
-&lt;em&gt;SHAPEFILE.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Open ArcCatalog and navigate to your workspace so you can view the
-schools shapefile. Note that it appears as a single file in
-ArcCatalog, even though it is actually composed of 8 individual
-files.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In ArcCatalog you can rename, copy, and move shapefiles, just as you
-can in File Explorer, and it will automatically maintain the
-integrity of all files that compose the shapefile. It is recommended
-to use ArcCatalog to rename, copy, and move GIS data files (though
-it is still possible to use File Explorer for this purpose).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Close ArcCatalog.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Open File Explorer and navigate to your workspace folder and examine the schools shapefile. There should be 8 files with the base name PhillyPlanning_Schools. These files must be kept together to be maintained. &lt;em&gt;THE LOSS OF ANY ONE OF THESE FILES CAN BREAK THE SHAPEFILE.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open ArcCatalog and navigate to your workspace so you can view the schools shapefile. Note that it appears as a single file in ArcCatalog, even though it is actually composed of 8 individual files.&lt;/li&gt;
+&lt;li&gt;In ArcCatalog you can rename, copy, and move shapefiles, just as you can in File Explorer, and it will automatically maintain the integrity of all files that compose the shapefile. It is recommended to use the ArcCatalog windows to rename, copy, and move GIS data files (though it is still possible to use File Explorer for this purpose).&lt;/li&gt;
+&lt;li&gt;Close ArcCatalog.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;repairing-broken-data-links&#34;&gt;Repairing Broken Data Links&lt;/h2&gt;
+&lt;h3 id=&#34;repairing-broken-data-links&#34;&gt;Repairing Broken Data Links&lt;/h3&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;ArcMap and ArcCatalog should be closed when you begin this section.
-Your Lab2 workspace folder should have a map document named Lab2.mxd
-which is linked to data in that folder. We are going to break that
-link and learn how to repair it.&lt;/p&gt;
-
-&lt;p&gt;We are going to break the link by moving the map document. It could
-also be broken by moving the data to a new folder, or, if the data
-were not in the same folder as the map document, by renaming the data
-folder. If you don&amp;rsquo;t have relative paths set (see next section), it
-can also be broken just by plugging your flash drive into a new
-computer and having it mount on a different drive letter. All of these
-are very common occurrences, so it is very likely that you will
-encounter broken data links when working with GIS.&lt;/p&gt;
+&lt;p&gt;ArcMap and ArcCatalog should be closed when you begin this section. Your Lab1 workspace folder should have a map document named Lab1.mxd which is linked to data in that folder. We are going to break that link and learn how to repair it.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;In File Explorer, move Lab2.mxd to a new location (this can be the
-desktop for ease of use)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Double-click Lab2.mxd to open ArcMap. Notice that the map canvas is
-empty, and all of the layers have a red exclamation mark next to
-them. This indicates that a layer is defined in the map document,
-but the source data is not at the expected location. Any layer
-properties, such as the color of polygon features, are preserved,
-even if ArcMap can&amp;rsquo;t find the polygons to display!&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image4.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.0791951006124236in&amp;rdquo;
-height=&amp;ldquo;1.0000284339457568in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We are going to break the link by moving the map document. It could also be broken by moving the data to a new folder, or, if the data were not in the same folder as the map document, by renaming the data folder. If you don&amp;rsquo;t have relative paths set (see next section), it can also be broken just by plugging your flash drive into a new computer and having it mount on a different drive letter. All of these are very common occurrences, so it is very likely that you will encounter broken data links when working with GIS.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Right-click on any of the layers in the TOC. From the popup menu
-select Data → Repair Data Source.&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In File Explorer, move Lab1.mxd to a new location (this can be the desktop for ease of use)&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Navigate to the correct shapefile for the layer you clicked on.
-Select it and hit the Add button.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Double-click Lab1.mxd to open ArcMap. Notice that the map canvas is empty, and all of the layers have a red exclamation mark next to them. This indicates that a layer is defined in the map document, but the source data is not at the expected location. Any layer properties, such as the color of polygon features, are preserved, even if ArcMap can&amp;rsquo;t find the polygons to display!
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Notice that ArcMap has repaired the link for not just that layer,
-but for all the other layers as well. The Repair Data Source feature
-will check whether other map document layers come from the same data
-source. In this case, since all of the shapefiles are in the same
-folder, all of the data links were repaired.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Right-click on any of the layers in the TOC. From the popup menu select Data → Repair Data Source.&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Navigate to the correct shapefile for the layer you clicked on. Select it and hit the Add button.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Notice that ArcMap has repaired the link for not just that layer, but for all the other layers as well. The Repair Data Source feature will check whether other map document layers come from the same data source. In this case, since all of the shapefiles are in the same folder, all of the data links were repaired.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Close ArcMap &lt;strong&gt;but do not save your changes&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Move Lab2.mxd back into the Lab2 folder.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Move Lab1.mxd back into the Lab1 folder.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;using-relative-paths&#34;&gt;Using Relative Paths&lt;/h2&gt;
+&lt;h3 id=&#34;using-relative-paths&#34;&gt;Using Relative Paths&lt;/h3&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;A file location can be stored using an &lt;strong&gt;absolute&lt;/strong&gt; or a &lt;strong&gt;relative&lt;/strong&gt;
-path. In the real world, an absolute path would be a location
-specified in some address system, like &amp;ldquo;1801 N. Broad Street&amp;rdquo;. A
-relative path would be a location specified in relation to your
-current location, like &amp;ldquo;walk two blocks, turn left, walk three blocks,
-and go into the third building on the right&amp;rdquo;. When you add geographic
-layers and tables to ArcMap and save the project (.mxd), the software
-does NOT store the data. It stores the paths to the data. When you use
-absolute paths, the data must be at the exact same location in the
-filesystem. If you work on a lab computer and store your map document
-and data in C:\temp\mystuff, but go home and copy the data to
-C:\other_folder\mystuff, ArcMap will not find the data, even though
-it is right there. If you work on a flash drive that is mounted as
-drive letter E:\, but then go work on another computer (or even
-return to the same computer) that happens to mount the flash drive as
-drive letter F:\, ArcMap will not find the data. In order to make
-sure that you keep your map document connected to your data, you must:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;A file location can be stored using an &lt;strong&gt;absolute&lt;/strong&gt; or a &lt;strong&gt;relative&lt;/strong&gt; path. In the real world, an absolute path would be a location specified in some address system, like &amp;ldquo;1801 N. Broad Street&amp;rdquo;. A relative path would be a location specified in relation to your current location, like &amp;ldquo;walk two blocks, turn left, walk three blocks, and go into the third building on the right&amp;rdquo;. When you add geographic layers and tables to ArcMap and save the project (.mxd), the software does NOT store the data. It stores the paths to the data. When you use absolute paths, the data must be at the exact same location in the filesystem. If you work on a lab computer and store your map document and data in C:\temp\mystuff, but go home and copy the data to C:\other_folder\mystuff, ArcMap will not find the data, even though it is right there. If you work on a flash drive that is mounted as drive letter E:\, but then go work on another computer (or even return to the same computer) that happens to mount the flash drive as drive letter F:\, ArcMap will not find the data. In order to make sure that you keep your map document connected to your data, you must:&lt;/p&gt;
 
-&lt;p&gt;a.  Use relative paths for the map document.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use relative paths for the map document.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Copy your map document (MXD) and data as a unit. This will be easiest if you keep the data in the same folder as or an immediate subfolder (perhaps named &amp;ldquo;data&amp;rdquo;) of the map document.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;b.  Copy your map document (MXD) and data as a unit. This will be
-    &amp;gt; easiest if you keep the data in the same folder as or an immediate
-    &amp;gt; subfolder (perhaps named &amp;ldquo;data&amp;rdquo;) of the map document.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Relative or absolute paths is a property of the map document, so you
-may choose to have some that use relative paths and some that use
-absolute paths.&lt;/p&gt;
+&lt;p&gt;Relative or absolute paths is a property of the map document, so you may choose to have some that use relative paths and some that use absolute paths.&lt;/p&gt;
 
 &lt;p&gt;Check the path settings as follows:&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Reopen your Lab1.mxd map document.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Click File → Map Document Properties.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Check &amp;ldquo;Store relative pathnames to data sources&amp;rdquo; (if it is not
-checked) and Press OK.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check &amp;ldquo;Store relative pathnames to data sources&amp;rdquo; (if it is not checked) and Press OK.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image5.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.1452416885389325in&amp;rdquo;
-height=&amp;ldquo;3.0000820209973753in&amp;rdquo;}&lt;/p&gt;
-
-&lt;p&gt;Usually, working with relative paths is preferable.&lt;/p&gt;
+&lt;p&gt;Note: Usually, working with relative paths is preferable.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;changing-the-symbology-of-map-layers&#34;&gt;Changing the Symbology of Map Layers&lt;/h2&gt;
+&lt;h2 id=&#34;a-handful-of-basic-operations&#34;&gt;&lt;strong&gt;A handful of basic operations&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;In ArcGIS it is very easy to change the colors and symbols of map
-layers. Let&amp;rsquo;s try changing the color and symbols of the map layers in
-your Lab2 map document&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr /&gt;
 
-&lt;h3 id=&#34;change-color&#34;&gt;Change Color&lt;/h3&gt;
+&lt;h3 id=&#34;changing-the-symbology-of-map-layers&#34;&gt;Changing the Symbology of Map Layers&lt;/h3&gt;
+
+&lt;p&gt;In ArcGIS it is very easy to change the colors and symbols of map layers. Let&amp;rsquo;s try changing the color and symbols of the map layers in your Lab1 map document&lt;/p&gt;
+
+&lt;h4 id=&#34;change-color&#34;&gt;Change Color&lt;/h4&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn off the bike network and schools layers so only neighborhoods
-is showing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Turn off the bike network and schools layers so only neighborhoods is showing.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Double click the neighborhoods layer in the TOC. (You can also
-right-click on the layer and select Properties from the popup menu.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Double click the neighborhoods layer in the TOC. (You can also right-click on the layer and select Properties from the popup menu.)&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Click on the Symbology tab.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Click on the Symbology tab.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image6.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.0434820647419074in&amp;rdquo;
-height=&amp;ldquo;1.0000021872265967in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Click the colored polygon symbol.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Select a new &amp;lsquo;fill&amp;rsquo; color and select a color from the color palette.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Select &amp;lsquo;outline&amp;rsquo; color and select a new color.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Make sure to choose a fill and outline color that makes it easy to
-see the individual neighborhoods.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make sure to choose a fill and outline color that makes it easy to see the individual neighborhoods.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Click OK to see the new color settings.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;change-point-glyph-symbol-and-color&#34;&gt;Change Point Glyph (Symbol) and Color&lt;/h3&gt;
+&lt;h4 id=&#34;change-point-glyph-symbol-and-color&#34;&gt;Change Point Glyph (Symbol) and Color&lt;/h4&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Turn off all the layers except for the schools layer.&lt;/p&gt;&lt;/li&gt;
@@ -1153,45 +995,28 @@ see the individual neighborhoods.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Change the fill color.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Make sure to choose a glyph and fill color that makes it easy to see
-the individual schools.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make sure to choose a glyph and fill color that makes it easy to see the individual schools.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Click OK.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;using-the-tools-toolbar-to-navigate-and-get-information&#34;&gt;Using the Tools Toolbar to Navigate and Get Information&lt;/h2&gt;
+&lt;h3 id=&#34;using-the-tools-toolbar-to-navigate-and-get-information&#34;&gt;Using the Tools Toolbar to Navigate and Get Information&lt;/h3&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image7.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;4.25008530183727in&amp;rdquo;
-height=&amp;ldquo;0.3645909886264217in&amp;rdquo;}&lt;/p&gt;
-
-&lt;p&gt;ArcMap has many toolbars, which can be toggled on and off in the
-Customize menu. A default installation will start with the following
-two toolbars visible:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image7.jpg&#34; alt=&#34;&#34; /&gt;
+ArcMap has many toolbars, which can be toggled on and off in the Customize menu. A default installation will start with the following two toolbars visible:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Standard&lt;/strong&gt;&amp;mdash;This has file management features and actions common
-to almost all Windows software, including opening and saving files,
-cut-copy-paste, and undo-redo. We have already used to add spatial
-data to our map document.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;&amp;mdash;This has a number of tools commonly and specifically
-used for working with geospatial data. We will explore it now.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Standard&lt;/strong&gt;&amp;mdash;This has file management features and actions common to almost all Windows software, including opening and saving files, cut-copy-paste, and undo-redo. We have already used to add spatial data to our map document.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;&amp;mdash;This has a number of tools commonly and specifically used for working with geospatial data. We will explore it now.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Hover the mouse over each of the different buttons to see their name
-and description.&lt;/p&gt;
+&lt;p&gt;Hint: Hover the mouse over each of the different buttons to see their name and description.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;zoom-and-pan&#34;&gt;Zoom and Pan&lt;/h3&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;Using the &amp;lsquo;zoom in&amp;rsquo; or &amp;lsquo;zoom out&amp;rsquo; tool you can navigate to and from
-close-up views. The pan tool shifts the display in any direction
-without changing the scale of the map&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Using the &amp;lsquo;zoom in&amp;rsquo; or &amp;lsquo;zoom out&amp;rsquo; tool you can navigate to and from close-up views. The pan tool shifts the display in any direction without changing the scale of the map&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Try the zoom tools&lt;/p&gt;&lt;/li&gt;
@@ -1201,127 +1026,95 @@ without changing the scale of the map&lt;/p&gt;
 
 &lt;h3 id=&#34;full-extent-previous-extent-and-next-extent&#34;&gt;Full Extent, Previous Extent, and Next Extent&lt;/h3&gt;
 
-&lt;p&gt;The map extent tools allow you to navigate through map extents. A map
-extent defines the geographic boundaries for displaying map layers
-within a data frame. &lt;strong&gt;Try the different map extent tools.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The map extent tools allow you to navigate through map extents. A map extent defines the geographic boundaries for displaying map layers within a data frame. &lt;strong&gt;Try the different map extent tools.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;identify-features&#34;&gt;Identify Features&lt;/h3&gt;
 
-&lt;p&gt;The identify tool allows you to quickly get attribute information about
-a geographic feature. Let&amp;rsquo;s try to get info about the neighborhoods.&lt;/p&gt;
+&lt;p&gt;The identify tool allows you to quickly get attribute information about a geographic feature. Let&amp;rsquo;s try to get info about the neighborhoods.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Turn off all the layers except the neighborhoods.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Select the &amp;lsquo;Identify&amp;rsquo; tool
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image8.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.16700896762904638in&amp;rdquo;
-height=&amp;ldquo;0.16700896762904638in&amp;rdquo;} and click on one of the
-neighborhoods. The Identify window will appear. This shows you the
-attribute values from the attribute table for that neighborhood,
-such as its name.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select the &amp;lsquo;Identify&amp;rsquo; tool and click on one of the neighborhoods. The Identify window will appear. This shows you the attribute values from the attribute table for that neighborhood, such as its name.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;If you are not getting info about the neighborhoods, then you will
-need to change the &amp;ldquo;Identify from&amp;rdquo; layer in the dropdown at the top
-of the window.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you are not getting info about the neighborhoods, then you will need to change the &amp;ldquo;Identify from&amp;rdquo; layer in the dropdown at the top of the window.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Try using this tool on the other map layers.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Note that when features are close together (e.g. a bike network
-nearby a school), the Identify tool may select several nearby
-features. Zoom in until you can select a single feature.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Try using this tool on the other map layers.
+&amp;gt; Note that when features are close together (e.g. a bike network nearby a school), the Identify tool may select several nearby features. Zoom in until you can select a single feature.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&#34;measure-distances-and-areas&#34;&gt;Measure Distances and Areas&lt;/h3&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;How big is Philadelphia?&lt;/p&gt;
+&lt;p&gt;Skill demonstration: Can you tell me how big Philadelphia is?&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Click the Measure tool
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image9.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.16700896762904638in&amp;rdquo;
-height=&amp;ldquo;0.16700896762904638in&amp;rdquo;} on the Tools toolbar to open the
-Measure dialog box.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click the Measure tool on the Tools toolbar to open the Measure dialog box.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;When the measure menu opens, click on the units dropdown menu (its
-down arrow), select distance, and then miles.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When the measure menu opens, click on the units dropdown menu (its down arrow), select distance, and then miles.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Click on the northeastern tip of Philadelphia and then drag the
-ruler drag ruler tool to the southwestern tip and double click to
-take the measurement.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click on the northeastern tip of Philadelphia and then drag the ruler drag ruler tool to the southwestern tip and double click to take the measurement.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Close the Measure tool.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;working-with-attribute-tables&#34;&gt;Working with Attribute Tables&lt;/h2&gt;
+&lt;h2 id=&#34;selecting-things-in-arcmap&#34;&gt;&lt;strong&gt;Selecting things in ArcMap&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;Along with feature classes (points, lines, and polygons) and image
-datasets&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;(referred to more generally as raster datasets), tables represent one
-of the three key dataset types in GIS. Tables are used to store
-descriptive attributes about geographic features (e.g., census data
-for counties or census tracts, disease counts by health district).&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Selecting and subsetting a database is one of the most fundamental operations one can do to data.  In AcrMap there are several ways one can go about accomplishing this feat.  This section will walk you the three most useful ways to select something.&lt;/p&gt;
+
+&lt;h3 id=&#34;working-with-attribute-tables&#34;&gt;Working with Attribute Tables&lt;/h3&gt;
+
+&lt;p&gt;Along with feature classes (points, lines, and polygons) and image datasets (referred to more generally as raster datasets), tables represent one of the three key dataset types in GIS. Tables are used to store descriptive attributes about geographic features (e.g., census data for counties or census tracts, disease counts by health district).&lt;/p&gt;
 
 &lt;h3 id=&#34;opening-the-attribute-table&#34;&gt;Opening the Attribute Table&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Turn off all layers except for schools.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Right-click the schools layer in the TOC and select &amp;lsquo;Open Attribute
-Table&amp;rsquo; from the popup menu.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Right-click the schools layer in the TOC (table of contents) and select &amp;lsquo;Open Attribute Table&amp;rsquo; from the popup menu.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image10.jpg&#34; alt=&#34;&#34; /&gt;
+The table containing the records for schools should open.
+&amp;gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image11.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image10.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.347584208223972in&amp;rdquo;
-height=&amp;ldquo;1.4999879702537182in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The table containing the records for schools should open.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image11.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;4.773745625546806in&amp;rdquo;
-height=&amp;ldquo;2.120536964129484in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;The attribute fields names appear at the top. Scroll across the
-table to view them all. Some important fields are:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;The attribute fields names appear at the top. Scroll across the table to view them all. Some important fields are:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;FACIL_NAME which contains the name of the school&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;FACIL_NAME which contains the name of the school&lt;/li&gt;
+&lt;li&gt;ENROLLMENT which contains the number of students&lt;/li&gt;
+&lt;li&gt;GRADE_LEVE which contains the grade level of the school&lt;/li&gt;
+&lt;li&gt;TYPE_SPECI which indicates whether the school is run by the&amp;hellip;
 
-&lt;li&gt;&lt;p&gt;ENROLLMENT which contains the number of students&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;GRADE_LEVE which contains the grade level of the school&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;TYPE_SPECI which indicates whether the school is run by the
-&amp;gt; District (Philadelphia School District), or is a private,
-&amp;gt; charter, or Archdiocese (Catholic parish) school.&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;District (Philadelphia School District)&lt;/li&gt;
+&lt;li&gt;Private school&lt;/li&gt;
+&lt;li&gt;Charter school&lt;/li&gt;
+&lt;li&gt;Archdiocese (Catholic parish) school&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Scroll down the table to view the records. Note the total number of
-records (rows) in the layer appears at the bottom (550 schools),
-along with a count of how many are currently selected, which at the
-moment should be 0).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scroll down the table to view the records. Note the total number of records (rows) in the layer appears at the bottom (550 schools), along with a count of how many are currently selected, which at the moment should be 0).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Open the attribute table for the bike network layer. Note the
-important fields:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Open the attribute table for the bike network layer. Note the important fields:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;STREETNAME which indicates the name of the street&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;STREETNAME which indicates the name of the street&lt;/li&gt;
+&lt;li&gt;TYPE which indicates the type of bike lane
 
-&lt;li&gt;&lt;p&gt;TYPE which indicates the type of bike lane (buffered,
-&amp;gt; conventional, sharrow, conventional with sharrow).&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;buffered&lt;/li&gt;
+&lt;li&gt;conventional&lt;/li&gt;
+&lt;li&gt;sharrow&lt;/li&gt;
+&lt;li&gt;conventional with sharrow&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Open the attribute table for the neighborhood layer. Note the
-important fields:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Open the attribute table for the neighborhood layer. Note the important fields:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;NAME indicating the name of the neighborhood.&lt;/li&gt;
+&lt;li&gt;NAME indicating the name of the neighborhood&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Close all the attribute tables.&lt;/p&gt;&lt;/li&gt;
@@ -1329,571 +1122,279 @@ important fields:&lt;/p&gt;
 
 &lt;h3 id=&#34;select-by-attribute-attribute-query&#34;&gt;Select by Attribute (Attribute Query)&lt;/h3&gt;
 
+&lt;p&gt;An attribute query helps users select or view certain data on the map based on that data&amp;rsquo;s attributes. It works the same way as a relational database like Microsoft Access.&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;An attribute query helps users select or view certain data on the map
-based on that data&amp;rsquo;s attributes. It works the same way as a relational
-database like Microsoft Access.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Structured Query Language (SQL)&lt;/strong&gt; is a set of defined expressions
-and syntax used to query and manipulate data in relational database
-management systems (RDBMS). The American National Standards Institute
-(ANSI) defines a standard for SQL. Most RDBMSs use that standard and
-have extended it, making SQL syntax across different RDBMSs slightly
-different from one another. Query expressions are used in ArcGIS to
-select a subset of features and table records. Query expressions in
-ArcGIS adhere to standard SQL expressions.&lt;/p&gt;
-
-&lt;p&gt;One way to select geographic features is directly from the attribute
-table. From a table, you can manually select records with the mouse
-pointer, or you could select those records that meet some criteria
-(SQL query). Once you&amp;rsquo;ve selected records in the table, you&amp;rsquo;ll see
-those features selected (highlighted) on your map.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Manual Selection:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Structured Query Language (SQL)&lt;/strong&gt; is a set of defined expressions and syntax used to query and manipulate data in relational database management systems (RDBMS). The American National Standards Institute (ANSI) defines a standard for SQL. Most RDBMSs use that standard and have extended it, making SQL syntax across different RDBMSs slightly different from one another. Query expressions are used in ArcGIS to select a subset of features and table records. Query expressions in ArcGIS adhere to standard SQL expressions.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;One way to select geographic features is directly from the attribute table. From a table, you can manually select records with the mouse pointer, or you could select those records that meet some criteria (SQL query). Once you&amp;rsquo;ve selected records in the table, you&amp;rsquo;ll see those features selected (highlighted) on your map.&lt;/p&gt;
+
+&lt;h3 id=&#34;manual-selection&#34;&gt;Manual Selection&lt;/h3&gt;
+
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Open the schools attribute table. Right click on the FACIL_NAME
-field and select &amp;lsquo;Sort Ascending&amp;rsquo;. This puts the schools in
-alphabetical order by name.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Open the schools attribute table. Right click on the FACIL_NAME field and select &amp;lsquo;Sort Ascending&amp;rsquo;. This puts the schools in alphabetical order by name.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Scroll down the table until you find the Dunbar, Paul Laurence
-school.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scroll down the table until you find the Dunbar, Paul Laurence school.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Click on the row on the far left of the table to manually select
-that row (see circle in the picture below). Note the Dunbar school
-will be highlighted&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click on the row on the far left of the table to manually select that row (see circle in the picture below). Note the Dunbar school will be highlighted to show its selection &amp;ndash; in both the attribute table and in the map (it is adjacent to Temple University Main Campus). Note that at bottom of the table it should indicate 1 out of 550 schools are selected.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clear the selection by clicking the Clear Selection button on the attribute table or in ArcMap.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;to show its selection &amp;ndash; in both the attribute table and in the map
-(it is adjacent to Temple University Main Campus). Note that at bottom
-of the table it should indicate 1 out of 550 schools are selected.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image12.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.060416666666667in&amp;rdquo;
-height=&amp;ldquo;3.0in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;attribute-query&#34;&gt;Attribute Query&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image13.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.1323523622047244in&amp;rdquo;
-height=&amp;ldquo;0.16176509186351706in&amp;rdquo;}Clear the selection by clicking the
-Clear Selection button on the attribute table or in ArcMap.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;In the attribute table go the Table Options button at the top left and choose Select by Attributes.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image14.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Attribute Query:&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;A dialog box will pop up that allows to make a query statement. We will create a query that states which schools will be selected based on some criteria, in this example, the school with the name Dunbar, Paul Laurence.&lt;/p&gt;&lt;/li&gt;
 
-&lt;ol&gt;
-&lt;li&gt;In the attribute table go the Table Options button at the top left
-&amp;gt; and choose Select by Attributes.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;In the Select by Attributes dialog, note that the beginning of a standard SQL query appears above the lower text box: SELECT * FROM PhillyPlanning_Schools WHERE. The WHERE keyword indicates that a criteria is about to specified. The database engine will use this criteria to &lt;strong&gt;filter&lt;/strong&gt; the records, that is, to select only those records which satisfy the criteria.&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image14.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;4.427824803149607in&amp;rdquo;
-height=&amp;ldquo;2.3531244531933506in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;In the top box, double click \&amp;ldquo;FACIL_NAME\&amp;ldquo;. It should appear in the text box below.&lt;/p&gt;&lt;/li&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;A dialog box will pop up that allows to make a query statement. We
-&amp;gt; will create a query that states which schools will be selected
-&amp;gt; based on some criteria, in this example, the school with the name
-&amp;gt; Dunbar, Paul Laurence.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click the equals (=) button, then click the Get Unique Values button.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;In the Select by Attributes dialog, note that the beginning of a
-&amp;gt; standard SQL query appears above the lower text box: SELECT *
-&amp;gt; FROM PhillyPlanning_Schools WHERE. The WHERE keyword indicates
-&amp;gt; that a criteria is about to specified. The database engine will
-&amp;gt; use this criteria to &lt;strong&gt;filter&lt;/strong&gt; the records, that is, to select
-&amp;gt; only those records which satisfy the criteria.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scroll down in the list of school names and double click \&amp;lsquo;Dunbar, Paul Laurence\&amp;lsquo;. Note that the column name appears in double quotes. Text values, such as the school name, appear in single quotes. You should form a query appearing in the text box at the bottom of the dialog box:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image15.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;In the top box, double click \&amp;ldquo;FACIL_NAME\&amp;ldquo;. It should appear in
-&amp;gt; the text box below.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click the equals (=) button, then click the Get Unique Values
-&amp;gt; button.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Scroll down in the list of school names and double click \&amp;lsquo;Dunbar,
-&amp;gt; Paul Laurence\&amp;lsquo;. Note that the column name appears in double
-&amp;gt; quotes. Text values, such as the school name, appear in single
-&amp;gt; quotes. You should form a query appearing in the text box at the
-&amp;gt; bottom of the dialog box:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image15.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.257411417322835in&amp;rdquo;
-height=&amp;ldquo;2.99998031496063in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Click Apply. The same school should be selected in the table and on
-&amp;gt; the map.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click Apply. The same school should be selected in the table and on the map.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Close the Select by Attributes box and clear your selection.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;As another example, let&amp;rsquo;s select schools with enrollments over 500
-&amp;gt; students. Open Select by Attributes and delete the last query
-&amp;gt; statement.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As another example, let&amp;rsquo;s select schools with enrollments over 500 students. Open Select by Attributes and delete the last query statement.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Create a query statement by double clicking the ENROLLMENT field at
-&amp;gt; the top, then the greater than (&amp;gt;) button then type in 500. Note
-&amp;gt; that 500 is a numeric value, and does not appear in quotes. Press
-&amp;gt; Apply.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a query statement by double clicking the ENROLLMENT field at the top, then the greater than (&amp;gt;) button then type in 500. Note that 500 is a numeric value, and does not appear in quotes. Press Apply.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The selection should show that 212 out of 550 schools have
-&amp;gt; enrollments over 500.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The selection should show that 212 out of 550 schools have enrollments over 500.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You can also create a compound query. Build a new query in the
-&amp;gt; Select By Attributes dialog box query window by clicking on the
-&amp;gt; buttons that reads \&amp;ldquo;TYPE_SPECI\&amp;rdquo; = \&amp;lsquo;District\&amp;rsquo; AND
-&amp;gt; \&amp;ldquo;ENROLLMENT\&amp;rdquo; &amp;gt; 600. This will select only schools run by the
-&amp;gt; Philadelphia School District (as opposed to charter, private, or
-&amp;gt; Archdiocese schools) with enrollments greater than 600 students.
-&amp;gt; There should be 77 schools selected.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You can also create a compound query. Build a new query in the Select By Attributes dialog box query window by clicking on the buttons that reads \&amp;ldquo;TYPE_SPECI\&amp;rdquo; = \&amp;lsquo;District\&amp;rsquo; AND \&amp;ldquo;ENROLLMENT\&amp;rdquo; &amp;gt; 600. This will select only schools run by the Philadelphia School District (as opposed to charter, private, or Archdiocese schools) with enrollments greater than 600 students.
+&amp;gt; Check: There should be 77 schools selected.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Close the Select by Attributes box, clear your selection, and close
-&amp;gt; the attribute table.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Close the Select by Attributes box, clear your selection, and close the attribute table.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;getting-statistics-for-selected-records&#34;&gt;Getting Statistics for Selected Records&lt;/h3&gt;
+&lt;h3 id=&#34;graphical-selection&#34;&gt;Graphical Selection&lt;/h3&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;When exploring a table, you can immediately get statistics describing
-the numeric values in the columns. When you use the statistics tool
-you&amp;rsquo;ll see how many values the column has, as well as the sum,
-minimum, mean, maximum, and standard deviation of those values. A
-histogram is also provided showing how the column&amp;rsquo;s values are
-distributed.&lt;/p&gt;
-
-&lt;p&gt;As an example, we will get statistics from the schools attribute
-table:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;You can also select features interactively on the map.  The Tools toolbar in ArcMap contains a tool for graphically selecting features. The &amp;lsquo;Select Features&amp;rsquo; tool works using a single graphic that you interactively digitize (draw) as part of the selection process.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Clear all your selections so no schools are selected. Open the
-schools attribute table.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click the Select Features button, then click &amp;lsquo;Select by Rectangle&amp;rsquo;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image18.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Right-click the heading of the field Enrollment and select
-&amp;ldquo;Statistics...&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using the cursor draw a rectangle around a set of schools, say, the schools in West Philadelphia.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image19.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;On the Statistics dialog box, you&amp;rsquo;ll see information about the
-values in the field whose heading you clicked.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Examine the selected records on the map and in the schools attribute table.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can also perform a graphical selection using a circle or other shapes.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Experiment with different graphical selection options. When you are finished, clear your selection.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image16.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;4.48566491688539in&amp;rdquo;
-height=&amp;ldquo;1.9999781277340332in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;select-by-location-spatial-selection&#34;&gt;Select by Location (Spatial Selection)&lt;/h3&gt;
+
+&lt;p&gt;You can also select features based on their spatial relationship to another feature, such as the distance between features or whether one feature contains another feature. As an example we will select schools located within 500 feet of the bike network.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Note the statistics, e.g. minimum, maximum, mean, etc. The sum is
-the sum of the row values in the Enrollment field for all the
-schools, i.e. the total number of students in all schools &amp;ndash; 231,981
-students.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Turn on the schools and bike network layers (neighborhoods should be off).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Close the statistics box. Using Select by Attributes, select only
-the private schools. There should be 173 schools selected.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From the menu at the top, choose Selection, then Select by Location.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image20.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Reopen the statistics for the Enrollment field. Note the Statistics
-tool operates only on selected rows (if any are selected). You can
-see the sum for enrollment for private schools is 15,860 &amp;ndash; this is
-the total number of students in private schools.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;graphical-selection&#34;&gt;Graphical Selection&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;You can also select features interactively on the map.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The Tools toolbar in ArcMap contains a tool for graphically selecting
-features. The &amp;lsquo;Select Features&amp;rsquo; tool works using a single graphic that
-you interactively digitize (draw) as part of the selection process.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Click the Select Features button
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image17.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.16700896762904638in&amp;rdquo;
-height=&amp;ldquo;0.16700896762904638in&amp;rdquo;}, then click &amp;lsquo;Select by Rectangle&amp;rsquo;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image18.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;1.260919728783902in&amp;rdquo;
-height=&amp;ldquo;1.0000404636920386in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Using the cursor draw a rectangle around a set of schools, say, the
-schools in West Philadelphia.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image19.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.873015091863517in&amp;rdquo;
-height=&amp;ldquo;2.9999693788276467in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Examine the selected records on the map and in the schools attribute
-table. 4. You can also perform a graphical selection using a circle
-or other shapes.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Experiment with different graphical selection options. When you are
-finished, clear your selection.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;select-by-location-spatial-selection&#34;&gt;Select by Location (Spatial Selection)&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;You can also select features based on their spatial relationship to
-another feature, such as the distance between features or whether one
-feature contains another feature. As an example we will select schools
-located within 500 feet of the bike network.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn on the schools and bike network layers (neighborhoods should be
-off).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;From the menu at the top, choose Selection, then Select by Location.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image20.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.2823162729658795in&amp;rdquo;
-height=&amp;ldquo;2.000051399825022in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;In the Select By Location dialog box choose&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Selection method: Select features from&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Check the box next to PhillyPlanning_Schools (since you want to
-&amp;gt; select schools)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Source Layer: PhillyStreets_Bike_Network&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Spatial selection method for target layer feature(s): are within
-&amp;gt; a distance of the source layer feature • Apply a search
-&amp;gt; distance: 250 Feet&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Selection method: Select features from&lt;/li&gt;
+&lt;li&gt;Check the box next to PhillyPlanning_Schools (since you want to select schools)&lt;/li&gt;
+&lt;li&gt;Source Layer: PhillyStreets_Bike_Network&lt;/li&gt;
+&lt;li&gt;Spatial selection method for target layer feature(s): are within a distance of the source layer feature&lt;/li&gt;
+&lt;li&gt;Apply a search distance: 250 Feet
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image21.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image21.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.1649004811898513in&amp;rdquo;
-height=&amp;ldquo;3.000009842519685in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Press OK.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You should see 140 of the 550 schools selected. Open the attribute
-table for the schools layer to see how many schools are selected.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You should see 140 of the 550 schools selected. Open the attribute table for the schools layer to see how many schools are selected.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Clear your selection so no schools are selected.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;using-selected-features-in-another-selection-operation&#34;&gt;Using Selected Features in Another Selection Operation&lt;/h2&gt;
+&lt;h2 id=&#34;getting-statistics-for-selected-records&#34;&gt;&lt;strong&gt;Getting Statistics for Selected Records&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;You can also select features from a set of features which are already
-selected, or alternatively, select a set of features from a set of
-selected source features. We&amp;rsquo;ll use two examples for illustration.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;First, we will select features from a set of features which are
-already selected&lt;/p&gt;
+&lt;p&gt;When exploring a table, you can immediately get statistics describing the numeric values in the columns. When you use the statistics tool you&amp;rsquo;ll see how many values the column has, as well as the sum, minimum, mean, maximum, and standard deviation of those values. A histogram is also provided showing how the column&amp;rsquo;s values are distributed.&lt;/p&gt;
 
-&lt;p&gt;&amp;ndash; charter schools (first selection) and enrollments over 1,000
-students (second selection).&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;As an example, we will get statistics from the schools attribute table:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn on only the schools and neighborhoods layers (turn off the bike
-network layer). Put the neighborhoods layer on the bottom of the
-drawing list so you can see both schools and neighborhoods layers
-clearly.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Clear all your selections so no schools are selected. Open the schools attribute table.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Using Select by Attributes, select only the charter schools. There
-should be 94 selected.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Right-click the heading of the field Enrollment and select &amp;ldquo;Statistics...&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Open the Select by Attribute dialog box again, but this time for
-Method: choose select from current selection. Then, of those
-selected schools, select those with enrollments greater than 1,000.
-There should be 15 schools selected, which are both charter schools
-and with enrollments greater than 1,000 students.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;On the Statistics dialog box, you&amp;rsquo;ll see information about the values in the field whose heading you clicked.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image16.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Note the statistics, e.g. minimum, maximum, mean, etc. The sum is the sum of the row values in the Enrollment field for all the schools, i.e. the total number of students in all schools &amp;ndash; 231,981 students.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Close the statistics box. Using Select by Attributes, select only the private schools. There should be 173 schools selected.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Reopen the statistics for the Enrollment field. Note the Statistics tool operates only on selected rows (if any are selected). You can see the sum for enrollment for private schools is 15,860 &amp;ndash; this is the total number of students in private schools.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image22.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.2470177165354333in&amp;rdquo;
-height=&amp;ldquo;3.0000076552930883in&amp;rdquo;}&lt;/p&gt;
+&lt;h2 id=&#34;using-selected-features-in-another-selection-operation&#34;&gt;&lt;strong&gt;Using Selected Features in Another Selection Operation&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Now, we will select a set of features from a set of selected source
-features &amp;ndash; the neighborhoods that contain the selected schools.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;You can also select features from a set of features which are already selected, or alternatively, select a set of features from a set of selected source features. We&amp;rsquo;ll use two examples for illustration.&lt;/p&gt;
+
+&lt;p&gt;First, we will select features from a set of features &amp;ndash; charter schools (first selection) and enrollments over 1,000 students (second selection).&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Close the schools attribute table, but keep the 15 charter schools
-selected.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Turn on only the schools and neighborhoods layers (turn off the bike network layer). Put the neighborhoods layer on the bottom of the drawing list so you can see both schools and neighborhoods layers clearly.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using Select by Attributes, select only the charter schools. There should be 94 selected.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Open the Select by Attribute dialog box again, but this time for Method: choose select from current selection. Then, of those selected schools, select those with enrollments greater than 1,000. There should be 15 schools selected, which are both charter schools and with enrollments greater than 1,000 students.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image22.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image23.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.197620297462817in&amp;rdquo;
-height=&amp;ldquo;2.99996062992126in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Now, we will select a set of features from a set of selected source features &amp;ndash; the neighborhoods that contain the selected schools.&lt;/p&gt;
 
 &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Close the schools attribute table, but keep the 15 charter schools selected.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image23.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;Open Select By Location.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;For Selection method: choose select features from.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For Target layer(s) check the box for the neighborhoods layer
-&amp;gt; and uncheck all other boxes.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For Source layer: choose the schools layer. Then check the Use
-&amp;gt; selected features box.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Under Spatial selection method for target layer feature(s):
-&amp;gt; choose contain the source layer feature. This spatial
-&amp;gt; relationship operator allows you to select based on spatial
-&amp;gt; containment &amp;ndash; whether on feature contains another feature &amp;ndash;
-&amp;gt; i.e. if a neighborhood contains a currently selected school.
-&amp;gt; (Make sure the Apply a search distance box is NOT checked)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Press OK.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;For Selection method: choose select features from.&lt;/li&gt;
+&lt;li&gt;For Target layer(s) check the box for the neighborhoods layer and uncheck all other boxes.&lt;/li&gt;
+&lt;li&gt;For Source layer: choose the schools layer. Then check the Use selected features box.&lt;/li&gt;
+&lt;li&gt;Under Spatial selection method for target layer feature(s): choose contain the source layer feature.
+&amp;gt; This spatial relationship operator allows you to select based on spatial containment &amp;ndash; whether on feature contains another feature &amp;ndash; i.e. if a neighborhood contains a currently selected school. (Make sure the Apply a search distance box is NOT checked)&lt;/li&gt;
+&lt;li&gt;Press OK.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image24.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;There should be 10 out of 48 neighborhoods selected.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image25.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image24.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.1779265091863516in&amp;rdquo;
-height=&amp;ldquo;2.99998687664042in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&#34;creating-a-new-map-layer-from-a-selection-of-features&#34;&gt;&lt;strong&gt;Creating a New Map Layer from a Selection of Features&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;There should be 10 out of 48 neighborhoods selected.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image25.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.25375in&amp;rdquo;
-height=&amp;ldquo;2.999957349081365in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;creating-a-new-map-layer-from-a-selection-of-features&#34;&gt;Creating a New Map Layer from a Selection of Features&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Frequently, you will want to save your selected subset of features as
-a separate, standalone data file. For instance, you may want to select
-a set of schools based some enrollment criteria, and save this smaller
-number of schools as its own data file, not simply as a selection
-within the original schools data file. Generally, as you proceed
-through a GIS analysis, it is helpful to regularly save your selected
-features in separate data file.&lt;/p&gt;
-
-&lt;p&gt;You will have occasion to create new data files over and over again
-this term, and you must pay attention to where you are storing this
-data &lt;strong&gt;every single time&lt;/strong&gt;. ArcGIS tries very hard to get you to save
-your data:&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;a.  in the &amp;ldquo;Geodatabase&amp;rdquo; format; and&lt;/p&gt;
-
-&lt;p&gt;b.  in a default location on your local hard drive.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Additionally, it usually gives you unhelpful default file names, like
-&amp;ldquo;Export_Output&amp;rdquo;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Therefore, if you don&amp;rsquo;t pay attention when you do this step, you will
-end up with a file name that is unintelligible, in a format that you
-don&amp;rsquo;t want, in a location that you won&amp;rsquo;t be able to find. Do not do
+&lt;p&gt;Frequently, you will want to save your selected subset of features as a separate, standalone data file. For instance, you may want to select a set of schools based some enrollment criteria, and save this smaller number of schools as its own data file, not simply as a selection within the original schools data file. Generally, as you proceed through a GIS analysis, it is helpful to regularly save your selected features in separate data file.  You will have occasion to create new data files over and over again this term, and you must pay attention to where you are storing this data &lt;strong&gt;every single time&lt;/strong&gt;. ArcGIS tries very hard to get you to save your data:
++ in the &amp;ldquo;Geodatabase&amp;rdquo; format; and
++ in a default location on your local hard drive.
++ Additionally, it usually gives you unhelpful default file names, like &amp;ldquo;Export_Output&amp;rdquo;.
+Therefore, if you don&amp;rsquo;t pay attention when you do this step, you will end up with a file name that is unintelligible, in a format that you don&amp;rsquo;t want, in a location that you won&amp;rsquo;t be able to find. Do not do
 this.&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;As an example of how to save a selected set of data to its own file,
-we will export the 10 selected neighborhoods from the last step in the
-tutorial.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;As an example of how to save a selected set of data to its own file, we will export the 10 selected neighborhoods from the last step in the tutorial.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Make sure the neighborhoods layer is on and you have 10
-&amp;gt; neighborhoods selected.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make sure the neighborhoods layer is on and you have 10 neighborhoods selected.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;In the TOC, right-click on the neighborhoods layer, then choose Data
-&amp;gt; → Export Data.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the TOC, right-click on the neighborhoods layer, then choose Data &amp;gt; Export Data.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Under Export: choose Selected features.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Under Output feature class: click on the yellow folder icon and
-&amp;gt; navigate to your Lab1 workspace folder.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Under Output feature class: click on the yellow folder icon and navigate to your Lab1 workspace folder.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Under Save as type: choose Shapefile.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Under Name: enter my_neighborhoods (or, whatever you want to name
-&amp;gt; this file &amp;ndash; whether or not you leave .shp at the end doesn&amp;rsquo;t
-&amp;gt; matter).&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Under Name: enter my_neighborhoods (or, whatever you want to name this file &amp;ndash; whether or not you leave .shp at the end doesn&amp;rsquo;t matter).
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image26.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image26.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.95211176727909in&amp;rdquo;
-height=&amp;ldquo;2.000010936132983in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;Click Save. You&amp;rsquo;re actually not done yet, as this just pushes your settings to the Export Data dialog box. Click OK.&lt;/p&gt;&lt;/li&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Click Save. You&amp;rsquo;re actually not done yet, as this just pushes your
-&amp;gt; settings to the Export Data dialog box. Click OK.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;A dialog box will appear asking whether you want to add your new
-&amp;gt; layer to the current map. Click Yes. The layer will now appear in
-&amp;gt; TOC.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A dialog box will appear asking whether you want to add your new layer to the current map. Click Yes. The layer will now appear in TOC.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Clear your selection so no schools or neighborhoods are selected.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Turn off the neighborhoods layer. You should be able to see the
-&amp;gt; my_neighborhoods layer contains only those 10 formerly selected
-&amp;gt; neighborhoods.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Turn off the neighborhoods layer. You should be able to see the my_neighborhoods layer contains only those 10 formerly selected neighborhoods.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;designing-and-exporting-a-map&#34;&gt;Designing and Exporting a Map&lt;/h2&gt;
+&lt;h2 id=&#34;designing-and-exporting-a-map&#34;&gt;&lt;strong&gt;Designing and Exporting a Map&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;In this section we will see how to create a map layout and export the
-map.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;In this section we will see how to create a map layout and export the map.&lt;/p&gt;
 
 &lt;h3 id=&#34;working-in-layout-view&#34;&gt;Working in Layout View&lt;/h3&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;We have been working in a view called &amp;ldquo;Data View&amp;rdquo;, which is most
-useful for data exploration and analysis. When producing maps for
-export, we need to switch to &amp;ldquo;Layout View&amp;rdquo;. In this view, you will see
-a representation of a page, and the map (or maps) will appear on that
-page. By default, the page will be a standard 8½ by 11 inch page in
-portrait view. In Layout View you can also add other elements, such as
-titles, textboxes, and legends. It is possible to place elements &amp;ldquo;off&amp;rdquo;
-the page (in an area known as the &amp;ldquo;pasteboard&amp;rdquo; in desktop publishing
-lingo). Anything not on the page will not be included on the map when
-you export the image, so it can be a useful place to store items
-during the design process when you are trying out different ideas.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We have been working in a view called &amp;ldquo;Data View&amp;rdquo;, which is most useful for data exploration and analysis. When producing maps for export, we need to switch to &amp;ldquo;Layout View&amp;rdquo;. In this view, you will see a representation of a page, and the map (or maps) will appear on that page. By default, the page will be a standard 8½ by 11 inch page in portrait view. In Layout View you can also add other elements, such as titles, textboxes, and legends. It is possible to place elements &amp;ldquo;off&amp;rdquo; the page (in an area known as the &amp;ldquo;pasteboard&amp;rdquo; in desktop publishing lingo). Anything not on the page will not be included on the map when you export the image, so it can be a useful place to store items during the design process when you are trying out different ideas.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn off the bike network layer and turn on all the other layers.
-Put them in the following drawing order:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Turn off the bike network layer and turn on all the other layers.  Put them in the following drawing order:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Schools (top)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;My_neighborhoods&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Neighborhoods (bottom)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Schools (top)&lt;/li&gt;
+&lt;li&gt;My_neighborhoods&lt;/li&gt;
+&lt;li&gt;Neighborhoods (bottom)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Make sure you are viewing the full extent of your data (press the
-full extent button to be sure). Your canvas should look something
-like this (your colors may be different):&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure you are viewing the full extent of your data (press the full extent button to be sure). Your canvas should look something like this (your colors may be different):
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image27.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image27.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;2.71913167104112in&amp;rdquo;
-height=&amp;ldquo;3.0in&amp;rdquo;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Switch to Layout View in one of the following ways:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Click the Layout View button in the lower-left of the map
-&amp;gt; canvas:&lt;/li&gt;
+&lt;li&gt;Click the Layout View button in the lower-left of the map canvas:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image28.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Select View &amp;gt; Layout View from the menu.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image28.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.9120188101487314in&amp;rdquo;
-height=&amp;ldquo;0.5000109361329834in&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;Note that you can toggle back and forth between the layout and data view windows.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;When you switched views a new toolbar likely appeared: the Layout toolbar.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image29.jpg&#34; alt=&#34;&#34; /&gt;
+Recall that if it did not you can click up in the grey area to add it in manually.  This toolbar has pan and zoom tools, similar to the ones you have used before, but these will zoom into the page (not the map). Notice that each of these icons has a page behind it (e.g. magnifier on a page) to distinguish it from the pan and zoom tools on the Tools toolbar. Experiment with these tools to move around the page. When you are done, hit Zoom Whole Page (the fourth button on the Layout toolbar).
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image30.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The pan and zoom buttons on the Tools toolbar can be used to resize the map image on the page. Use the Zoom In button to make sure that Philadelphia fills most of the data frame. Note that if you zoom in too far, parts of Philadelphia will be &amp;ldquo;outside&amp;rdquo; the data frame, and will not appear on the page.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The standard map elements are standard for a reason.  Although it is possible to break the rules, you should know what you are doing before you snub 200+ years of cartographic theory.  Use the Insert menu to add the following elements:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Select View → Layout View from the menu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Title&amp;mdash;Should default to top center, can be repositioned.&lt;/li&gt;
+&lt;li&gt;Legend&amp;mdash;A dialog will appear offering many options for customizing the legend. Just keep hitting Next until the legend appears on your map.&lt;/li&gt;
+&lt;li&gt;North Arrow.&lt;/li&gt;
+&lt;li&gt;Scale Bar.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Note that you can toggle back and forth between the layout and data
-&amp;gt; view windows.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;Reposition the map elements to fill the white space. Try not to have any elements overlaying the Philadelphia neighborhoods. Your final layout may look something like this, but do &lt;em&gt;~NOT~&lt;/em&gt; try to make it look the same. Just make sure it has all the requested elements:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image32.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image29.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.7501126421697286in&amp;rdquo;
-height=&amp;ldquo;0.5000153105861768in&amp;rdquo;}Notice that the Layout toolbar now
-appears. This toolbar has pan and zoom tools, similar to the ones
-you have used before, but these will zoom into the page (not the
-map). Notice that each of these icons has a page behind it (e.g.
-magnifier on a page) to distinguish it from the pan and zoom tools
-on the Tools toolbar. Experiment with these tools to move around the
-page. When you are done, hit Zoom Whole Page (the fourth button on
-the Layout toolbar).&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once you have completed your map, save your .mxd document.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image30.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.5677832458442694in&amp;rdquo;
-height=&amp;ldquo;0.16693569553805773in&amp;rdquo;}&lt;/p&gt;
+&lt;h3 id=&#34;exporting-a-map-image&#34;&gt;Exporting a Map Image&lt;/h3&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image31.png&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;0.1669892825896763in&amp;rdquo;
-height=&amp;ldquo;0.16693022747156605in&amp;rdquo;}The pan and zoom buttons on the Tools
-toolbar can be used to resize the map image on the page. Use the
-Zoom In button to make sure that Philadelphia fills most of the data
-frame. Note that if you zoom in too far, parts of Philadelphia will
-be &amp;ldquo;outside&amp;rdquo; the data frame, and will not appear on the page.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Use the Insert menu to add the following elements:&lt;/p&gt;
-
-&lt;p&gt;a.  Title&amp;mdash;Should default to top center, can be repositioned.&lt;/p&gt;
-
-&lt;p&gt;b.  Legend&amp;mdash;A dialog will appear offering many options for
-    customizing&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;the legend. Just keep hitting Next until the legend appears on your
-map.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;c.  North Arrow.&lt;/p&gt;
-
-&lt;p&gt;d.  Scale Bar.&lt;/p&gt;
-
-&lt;!-- --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Reposition the map elements to fill the white space. Try not to have
-any elements overlaying the Philadelphia neighborhoods. Your final
-layout may look something like this, but do &lt;em&gt;~NOT~&lt;/em&gt; try to make it
-look the same. Just make sure it has all the requested elements:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image32.jpg&#34; alt=&#34;&#34; /&gt;{width=&amp;ldquo;3.1284853455818022in&amp;rdquo;
-height=&amp;ldquo;3.9999300087489065in&amp;rdquo;}&lt;/p&gt;
-
-&lt;p&gt;Once you have completed your map, save your .mxd document.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;exporting-a-map-image&#34;&gt;Exporting a Map Image&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;A finished map product can be exported into an image file that can be
-inserted into a MS Word document for your lab reports, or into web
-pages or other documents. Here, as an example we will export the map
-using the PNG format.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;A finished map product can be exported into an image file that can be inserted into a MS Word document for your lab reports, or into web pages or other documents. This takes no extra effort compared to a screen shot, and is infinity more professional looking.  &lt;strong&gt;We will not accept screen shots of the ArcMap program, unless the directions specifically request a screen shot.&lt;/strong&gt;  Here, as an example we will export the map using the PNG format.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Go to File → Export Map.&amp;hellip;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Set the Save as type to \&amp;ldquo;PNG (*.png)\&amp;ldquo;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Navigate to your lab1 folder. As always, be clear about where you
-are saving your files.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Navigate to your lab1 folder. As always, be clear about where you are saving your files.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Press Save.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Submit the final image on blackboard.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h1 id=&#34;submission&#34;&gt;Submission&lt;/h1&gt;
+
+&lt;p&gt;All you have to turn into blackboard for this week is the final image you created above.&lt;/p&gt;
 </description>
     </item>
     

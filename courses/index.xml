@@ -35,9 +35,10 @@ Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
 
 &lt;p&gt;The computers in the lab are not cheap to replace. Please do your part to lengthen their lives by not spilling coffee/soda/liquids of any kind on the computer or any of its parts. You do NOT need to go out and purchase a computer for this class, although I do recommend having a personal computer with ArcGIS installed…&lt;/p&gt;
 
-&lt;h2 id=&#34;computer-recommendations&#34;&gt;&lt;strong&gt;Computer recommendations:  &lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Computer recommendations:  &lt;/strong&gt;&lt;br /&gt;
+ArcGIS is a demanding program, and a lower grade computer is not recommended.  If you are at KU, IT offers &lt;a href=&#34;https://kuit.service-now.com/kb_view.do?sysparm_article=KB0011590&#34;&gt;virtualLabs&lt;/a&gt;, a remote desktop program you can use to access ArcMap.&lt;/p&gt;
 
-&lt;p&gt;If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  A few specific recommendations I found last year with a quick google:&lt;/p&gt;
+&lt;p&gt;If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  A few specific recommendations I found last year with a quick Google:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Lenovo Miix 510 &amp;amp; Dell Inspiron 15 7000​: Decent budget computers&lt;/li&gt;
@@ -141,44 +142,7 @@ Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
 
 &lt;h1 id=&#34;drones-for-mapping-and-research&#34;&gt;&lt;strong&gt;Drones for mapping and research&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;
-This course provides an introduction to computer based analysis of spatial data.  Topics covered include the fundamentals of geospatial thought, basic principles of collecting, storing, analyzing, and displaying spatial data, and cursory treatment of analysis and decision making.  Emphasis is on problem solving activities using common spatial analytical techniques using typical applications as examples. The student will gain extensive hands on experience with state of the art GIS software in the lab. This course introduces the concepts and components of a geographic information system (GIS). It also teaches the essential skills of operating a functional GIS through the use of the ArcGIS software suite. By completing this course, students will understand the operational processes of spatial data acquisition, editing in ArcGIS Desktop with QA/QC, metadata development, geodatabase design, spatial query and display, spatial analysis and modeling, preliminary GIS application development, cartographic mapping and dynamic visualization, and GIS implementation basics. Students will also be exposed to Google Earth and common Free and  Open Source Software (FOSS) tools, as well as the basic concepts of remote sensing and Global Positioning System (GPS). GIS technology has broad applications in natural and social sciences, humanities, environmental studies, engineering, and management. Examples include wildlife habitat study, urban and regional planning, contagious disease monitoring, agriculture and forestry, environmental quality assessment, emergency management, transportation planning, consumer and competitor analysis, and many more. This course will introduce a few selected use cases of GIS application in different disciplines.
-Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Student Responsibilities:&lt;/strong&gt;
-It is student’s responsibility to attend the lectures, do the readings, and finish lab assignments. All students should be prepared to participate in class discussion and answer questions when called upon.  All students are expected to complete labs and exams on time. Labs are due at the beginning of the lab period one week after they are assigned, unless otherwise noted. Detailed lab rules will be given by the teaching assistant in the first lab.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Expectations:&lt;/strong&gt;
-Attend every Class/lab and &lt;strong&gt;ask questions!&lt;/strong&gt; At times, the ArcGIS software can be very unforgiving, and GIS can seem like a foreign language. The last thing I want is for you to walk out of this class without understanding the material. I expect and hope that this will be a rewarding experience for everyone. We are available to answer questions and otherwise offer assistance during the office hours indicated above or by appointment.  Additionally, if you have any questions, feel free to drop me an e-mail or use the slack channel (The link will be passed around on the signup sheet at the beginning of the year). I try to be diligent about responding to emails and by using slack you are likely to get a very rapid response&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Computers:&lt;/strong&gt;
-The computers in the lab are not cheap to replace. Please do your part to lengthen their lives by not spilling coffee/soda/liquids of any kind on the computer or any of its parts. You do NOT need to go out and purchase a computer for this class, although I do recommend having a personal computer with ArcGIS installed…&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Computer recommendations:  &lt;/strong&gt;
-If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  A few specific recommendations I found last year with a quick google:
-1. Lenovo Miix 510 &amp;amp; Dell Inspiron 15 7000​: Decent budget computers
-1. Acer Aspire V15​ &amp;amp; Dell Inspiron i7: Slightly higher end machines
-In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&amp;rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.
-My “Ideal” build (This is excessive, research grade): &lt;a href=&#34;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&#34;&gt;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&lt;/a&gt;​&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt;
-The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Academic Integrity:&lt;/strong&gt;
-Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone creadit for their work?  As a graduate student, I became increadably familiar with &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, but &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will work for you in a pinch:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Disabilities:&lt;/strong&gt;
-Anyone who has a disability that may prevent full demonstration of academic ability should contact me as soon as possible to ensure accommodations can be made to allow for full educational benefit.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;About the Labs:&lt;/strong&gt;
-This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cartography primers:&lt;/strong&gt;
-&lt;a href=&#34;http://www.icsm.gov.au/mapping/cartographic.html&#34;&gt;http://www.icsm.gov.au/mapping/cartographic.html&lt;/a&gt;
-&lt;a href=&#34;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&#34;&gt;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Textbooks:&lt;/strong&gt;
-de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) &lt;em&gt;Geospatial Analysis—A comprehensive guide&lt;/em&gt; (4&lt;sup&gt;rd&lt;/sup&gt; edition), An online version is available at &lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One of the reasons I was drawn to the Environmental Sciences was because at the end of the day, if we had a question, we could simply go outside and look at it.  As&lt;/p&gt;
 </description>
     </item>
     

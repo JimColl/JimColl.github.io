@@ -492,9 +492,7 @@ Watch #2 and #3, #4, maybe #7&lt;/p&gt;
       <link>https://jimcoll.github.io/courses/geog358/lesson03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lesson03/</guid>
-      <description>&lt;p&gt;Notes:
-The
-&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ERsh7QrV9dxMrbheWEo9qFkBX-zxmvx4GGzXb--NhLLo_g?e=KJeE86&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ERsh7QrV9dxMrbheWEo9qFkBX-zxmvx4GGzXb--NhLLo_g?e=KJeE86&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -504,6 +502,15 @@ The
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lesson04/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ESsgPlJhGQRPhcmAyQqWfBsBn-hIcpiiRJ4h8iP5FeSqlg?e=ZVFpFn&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Class 5</title>
+      <link>https://jimcoll.github.io/courses/geog358/lesson05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lesson05/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/Ea37d1ZKwW9JrH_WOYLextwBvR9-RQlkG3OT4fB6AMg8Iw?e=lPXYsv&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -880,7 +887,7 @@ ArcMap has many toolbars, which can be toggled on and off in the Customize menu.
 &lt;li&gt;&lt;p&gt;Right-click the schools layer in the TOC (table of contents) and select &amp;lsquo;Open Attribute Table&amp;rsquo; from the popup menu.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image10.jpg&#34; alt=&#34;&#34; /&gt;
 The table containing the records for schools should open.
-&amp;gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image11.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/image11.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;The attribute fields names appear at the top. Scroll across the table to view them all. Some important fields are:&lt;/p&gt;
 
@@ -1208,7 +1215,312 @@ Recall that if it did not you can click up in the grey area to add it in manuall
       <guid>https://jimcoll.github.io/courses/geog358/lab02/</guid>
       <description>
 
-&lt;h1 id=&#34;welcome-to-geog358-lab-2&#34;&gt;&lt;strong&gt;Welcome to GEOG358: Lab 2&lt;/strong&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A note about this lab: Items in &lt;strong&gt;bold&lt;/strong&gt; are to indicate buttons and/or menus you are looking for.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;lab-2-projections-and-coordinate-systems&#34;&gt;&lt;strong&gt;Lab 2: Projections and Coordinate Systems&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;Learning Objective&lt;/h1&gt;
+
+&lt;p&gt;An introduction to how ArcGIS handles geographic and projected coordinate systems.  Users should understand the difference between geographic coordinate systems and projected coordinate systems.  Identify appropriate projections for datasets.  Become familiar with the ArcGIS toolbox&lt;/p&gt;
+
+&lt;h1 id=&#34;tutorial&#34;&gt;Tutorial&lt;/h1&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;&lt;strong&gt;Getting started&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;conusa.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Polygons of the 49 States&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;selecteduscities.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Selected Cities of the United States&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;latlong.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Latitude-Longitude Lines for the United States&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;kscities.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Cities in Kansas&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;SanDiego.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;unknown coordinate system, from San Diego Sector&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;SanDiego.lyr&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;layer file used to display road type symbology&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;ElCentro.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;unknown coordinate system, from El Centro Sector&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;ElCentro.lyr&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;layer file used to display road type symbology&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;StudyArea.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;GCS (NAD83), study area polygon&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;CARDS.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;GCS (NAD83), California roads&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;CARDS.lyr&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;layer file used to display road type symbology&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;USGS100k.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;PCS (UTM NAD27), USGS DLG roads&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;QuestionsSheet.docx&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Handout to turn in&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: This data is in a zipped format.  You are able to tell this because the folder will have a small zipper going down it&amp;rsquo;s side, and if you click into it, the top of the file explorer will have a pink bar with &amp;ldquo;Compressed Folder Tools&amp;rdquo; on the top.  To access it you will need to&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Navigate to the folder with the zipped download&lt;/li&gt;
+&lt;li&gt;Right click on the folder and chose 7-zip &amp;gt; &amp;ldquo;extract to &lt;em&gt;your folder name here&lt;/em&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Lab2Image01.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcMap and close any windows that pop up.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Save&lt;/strong&gt; the empty map document to a personal folder, name it something meaningful like GEOG358_Lab02_YourLastName.mxd&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Add Data&lt;/strong&gt; button, navigate to your downloaded data folder, hold down the Control key and click &lt;em&gt;conusa.shp&lt;/em&gt;, &lt;em&gt;selecteduscities.shp&lt;/em&gt;, and &lt;em&gt;latlong.shp&lt;/em&gt;, and then click &lt;strong&gt;Add&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;measuring-in-arcmap&#34;&gt;&lt;strong&gt;Measuring in ArcMap&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;measure-locations-in-latitude-and-longitude&#34;&gt;Measure Locations in Latitude and Longitude&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Right-click &lt;strong&gt;Layers&lt;/strong&gt; in the Table of Contents and select &lt;strong&gt;Properties&lt;/strong&gt;. Under the &lt;strong&gt;General&lt;/strong&gt; tab, change the &lt;strong&gt;Name&lt;/strong&gt; to U.S. Cities. A little lower in the tab, under the &lt;strong&gt;Units&lt;/strong&gt; heading, make sure Display set to Decimal Degrees. Click OK.&lt;/li&gt;
+&lt;li&gt;A quick-and-dirty way to estimate the latitude and longitude of a point is to hover the &lt;strong&gt;Select Elements&lt;/strong&gt; tool over the point and then look at the numbers in the bottom right part of the window.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Full Extent&lt;/strong&gt; button to put the entire map into focus.&lt;/li&gt;
+&lt;li&gt;Use this technique on Los Angeles, Chicago, and Lawrence. Answer question 1 on the assignment sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint: did you look in the data downloads folder?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now let’s use a more accurate method to determine the latitude and longitude of those cities.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Identify&lt;/strong&gt; button and then click on Lawrence. In the window that pops up, click Lawrence under &lt;em&gt;selectuscities&lt;/em&gt;. About an inch below are the city’s coordinates (listed after Location:). Use this method to answer question #2 on your assignment sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Unless your quick-and-dirty estimations were dead-on, you should see a small discrepancy between the coordinates in question #1 and question #2.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;comparing-distances-in-different-projections&#34;&gt;&lt;strong&gt;Comparing distances in different projections&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open the data frame’s &lt;strong&gt;Properties&lt;/strong&gt; window. Select the &lt;strong&gt;Coordinate System&lt;/strong&gt; tab.&lt;/li&gt;
+&lt;li&gt;In the upper box, navigate to Projected Coordinate Systems &amp;gt; Continental &amp;gt; North America, click USA Contiguous Lambert Conformal Conic, make note of the map in the window, and then click Apply at the bottom of the window.&lt;/li&gt;
+&lt;li&gt;Now the map is no longer (as) distorted!&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Measure&lt;/strong&gt; tool. In the Measure window, make sure &lt;strong&gt;Distance&lt;/strong&gt; is set to &lt;strong&gt;Miles&lt;/strong&gt; and the &lt;strong&gt;Measurement Type&lt;/strong&gt; (the rightmost down arrow) is set to Planar.&lt;/li&gt;
+&lt;li&gt;Hover the Measure tool over Lawrence. The cursor should snap to Lawrence and a circle should appear around the city. (If this doesn’t happen, click the Select Elements button, then click the Measure tool and try again.)&lt;/li&gt;
+&lt;li&gt;Click on Lawrence and then hover over Chicago. As with Lawrence, the cursor should snap to the location and a circle should appear around it. This is your distance measurement.&lt;/li&gt;
+&lt;li&gt;Using this technique, answer question #3 on your assignment sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;changing-the-map-projection&#34;&gt;Changing the map projection&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open the &lt;strong&gt;Properties&lt;/strong&gt; window, select the &lt;strong&gt;Coordinate System&lt;/strong&gt; tab, and navigate to Projected Coordinate Systems &amp;gt; UTM &amp;gt; NAD 1983, click NAD 1983 UTM Zone 15N, and click Apply.&lt;/li&gt;
+&lt;li&gt;As you did before, measure the distance from Lawrence to Chicago and from Lawrence to New York City. (Make sure the Measure tool is set to Miles and the Planar distance.)&lt;/li&gt;
+&lt;li&gt;Answer questions #4 and #5 on your assignment sheet.&lt;/li&gt;
+&lt;li&gt;Save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;defining-the-coordinate-system-for-a-shapefile-using-arctoolbox&#34;&gt;Defining the coordinate system for a shapefile using ArcToolbox&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Click the &lt;strong&gt;ArcToolbox&lt;/strong&gt; button (it looks like a red toolbox with a computer window in the background). Give it a minute to open.&lt;/li&gt;
+&lt;li&gt;Go to Data Management Tools &amp;gt; Projections and Transformations, and then double-click &lt;strong&gt;Define Projection&lt;/strong&gt;. We’re going to use this tool to assign a geographic coordinate system (GCS) to the &lt;em&gt;kscities&lt;/em&gt; shapefile in our data folder.&lt;/li&gt;
+&lt;li&gt;Click the folder icon &lt;strong&gt;—not the down arrow—&lt;/strong&gt; to the right of Input Dataset or Feature Class. Add your &lt;em&gt;kscities.shp&lt;/em&gt; to the map by navigating to your data folder, selecting &lt;em&gt;kscities.shp&lt;/em&gt; and clicking Add. Notice the warning that pops up that indicates that the Coordinate System is Unknown.  This is what we’re going to fix!&lt;/li&gt;
+&lt;li&gt;Click  on the pointing hand icon to right of Coordinate System.  Just like we did in previous steps, select the following: Geographic Coordinate Systems &amp;gt; North America &amp;gt; NAD 1983.  Don’t click OK just yet.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Notice the components of the GCS, such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Name: GCS_North American_1983&lt;/li&gt;
+&lt;li&gt;Angular Units: Degree&lt;/li&gt;
+&lt;li&gt;Prime Meridian: Greenwich&lt;/li&gt;
+&lt;li&gt;Datum: D_North American_1983&lt;/li&gt;
+&lt;li&gt;Semimajor Axis: 6378137&lt;/li&gt;
+&lt;li&gt;Semiminor Axis: 6356752
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now click OK. Click OK again. Notice that kscities has been added to the Table of Contents.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: You can also define the coordinate system for a shapefile in ArcCatalog. Here’s how:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In ArcCatalog, right click on the shapefile and select Properties.&lt;/li&gt;
+&lt;li&gt;Click the XY Coordinate System tab.&lt;/li&gt;
+&lt;li&gt;The rest will be similar as in ArcToolbox.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;project-kscities-shp-into-kansas-state-plane-coordinate-system-pcs&#34;&gt;&lt;strong&gt;Project kscities.shp into Kansas State Plane Coordinate System (PCS)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In &lt;strong&gt;ArcToolbox&lt;/strong&gt; go to Data Management Tools &amp;gt; Projections and Transformations, and then double-click &lt;strong&gt;Project&lt;/strong&gt;. This tool is different than the Define Projection tool we just used; it actually creates a new shapefile that is projected into the desired coordinate system.&lt;/li&gt;
+&lt;li&gt;In the Input Dataset or Feature Class section, click the down-arrow &lt;strong&gt;—not the folder icon—&lt;/strong&gt; and select &lt;em&gt;kscities&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Click the folder icon to the right of Output Dataset or Feature Class. Navigate to your data folder. In the Name field type &lt;em&gt;kscities_stateplane.shp&lt;/em&gt; and then click &lt;strong&gt;Save&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click the pointing hand icon to the right of Output Coordinate System and then select the following coordinate system and make note that you can see its parameters: Projected Coordinate Systems &amp;gt; State Plane &amp;gt; NAD 1983 (Meters) &amp;gt; NAD 1983 StatePlane Kansas North FIPS 1501 (Meters).prj&lt;/li&gt;
+&lt;li&gt;Click OK. Click OK again. The projected shapefile will be added to your Table of Contents automatically.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;make-a-map&#34;&gt;Make a map!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Turn off all layers except &lt;em&gt;conusa&lt;/em&gt; and &lt;em&gt;selecteduscities&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Right-click &lt;em&gt;conusa&lt;/em&gt; and select Zoom to Layer.&lt;/li&gt;
+&lt;li&gt;Right-click &lt;em&gt;selecteduscities&lt;/em&gt;, go to Selection, and select Make This The Only Selectable Layer.&lt;/li&gt;
+&lt;li&gt;Click the Select Features button (it looks like a cursor in front of a tiny map).&lt;/li&gt;
+&lt;li&gt;Draw a box around Lawrence. Now Lawrence is selected.&lt;/li&gt;
+&lt;li&gt;Right-click &lt;em&gt;selecteduscities&lt;/em&gt;, go to Selection, and select Create Layer from Selected Features. Now you have a layer of just Lawrence called &lt;em&gt;selecteduscities&lt;/em&gt; selection.&lt;/li&gt;
+&lt;li&gt;Click once in the middle of the &lt;em&gt;selecteduscities&lt;/em&gt; selection layer name and type Lawrence.&lt;/li&gt;
+&lt;li&gt;Turn off the &lt;em&gt;selecteduscities&lt;/em&gt; layer.&lt;/li&gt;
+&lt;li&gt;Right-click the Lawrence layer and select Properties.&lt;/li&gt;
+&lt;li&gt;In the Symbology tab, you should see a big Symbol button with a dot in the middle of it. Click it.&lt;/li&gt;
+&lt;li&gt;In the Symbol Selector window that pops up, scroll down a bit until you see the symbol
+Star 1. Click that symbol.&lt;/li&gt;
+&lt;li&gt;To the right is a Size box. Type 30 in the box.&lt;/li&gt;
+&lt;li&gt;Click the Color button above it and select a color that you think represents Lawrence.&lt;/li&gt;
+&lt;li&gt;Click OK.&lt;/li&gt;
+&lt;li&gt;Switch to Layout View (accessible via the View menu or a little button in the bottom left corner of the window).&lt;/li&gt;
+&lt;li&gt;Create a map. All you need to include is the mapped area, a title (e.g., “Lawrence, Kansas”), and your name. Spend a couple minutes making it pretty. Since the contiguous
+U.S. is wider than it is tall, a landscape orientation is recommended. Also, make sure to zoom in close enough so that there isn’t an excessive amount of space.&lt;/li&gt;
+&lt;li&gt;Export the map as a .png file called GEOG_358_Lab02_YourLastName.png.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;real-world-application&#34;&gt;&lt;strong&gt;&amp;ldquo;Real World&amp;rdquo; Application&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The United States Border Patrol&amp;rsquo;s jurisdiction is divided into Regions and further subdivided into Sectors. In the Western Region, the San Diego and El Centro Sectors are responsible for patrolling approximately 130 miles of border between the State of California and Mexico. The San Diego Sector, headquartered in Chula Vista, California, has used GIS for several years. The El Centro Sector, east of San Diego, is in the process of implementing a GIS and is working closely with the San Diego Sector. Both Sectors are committed to standardizing GIS data collection, symbology, and analysis. Through data sharing exercises, the Border Patrol staff noticed that two similar sets of street data, one from the El Centro Sector office and another from the San Diego Sector office, were not aligning.  They have asked you to figure out what datum the data is in.&lt;/p&gt;
+
+&lt;h3 id=&#34;getting-started-1&#34;&gt;Getting started&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open up a new ArcMap window.  Click &lt;strong&gt;Cancel&lt;/strong&gt; on the opening screen.&lt;/li&gt;
+&lt;li&gt;Save the map document in your data folder as &lt;em&gt;GEOG358_Lab02_YourLastNameApplication.mxd&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;By default, there is only one data frame in the Table of Contents. For this exercise, though, we want three data frames. Go to &lt;strong&gt;Insert &amp;gt; DataFrame&lt;/strong&gt; and create two more data frames.&lt;/li&gt;
+&lt;li&gt;Rename the data frames as:
+
+&lt;ul&gt;
+&lt;li&gt;Unknown Coordinate Systems&lt;/li&gt;
+&lt;li&gt;GCS NAD83&lt;/li&gt;
+&lt;li&gt;PCS NAD27&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Right click on each shapefile in the ArcCatolog window and determine the datum the shapefile is in&lt;/li&gt;
+&lt;li&gt;Sort the shapefiles to their appropriate data frames. (For example, we will add the shapefiles without coordinate system information to the Unknown Coordinate Systems data frame.) Right-click each data frame, select &lt;strong&gt;Add Data…&lt;/strong&gt;, and add the appropriate shapefile(s).
+&amp;gt; Make sure you are adding shapefiles and not layer files [.lyr])&lt;/li&gt;
+&lt;li&gt;When you are presented with a window that complains about an Unknown Spatial Reference, just press OK; this is the problem we are trying to fix.&lt;/li&gt;
+&lt;li&gt;Right-click the &lt;strong&gt;Unknown Coordinate Systems&lt;/strong&gt; data frame and select &lt;strong&gt;Activate&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Double-click the &lt;strong&gt;Unknown Coordinate Systems&lt;/strong&gt; data frame. Under the &lt;strong&gt;General&lt;/strong&gt; tab, set the map units to &lt;strong&gt;Decimal Degrees&lt;/strong&gt; and the display units to &lt;strong&gt;Meters&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Apply&lt;/strong&gt; and then &lt;strong&gt;OK&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Make sure you’re zoomed in enough by right-clicking the SanDiego layer and selecting &lt;strong&gt;Zoom To Layer&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Look at the map for a couple seconds and try not to develop a migraine. That offset between layers suggests datum problems. The &lt;em&gt;ElCentro&lt;/em&gt; layer is probably in one datum and the &lt;em&gt;SanDiego&lt;/em&gt; layer in another.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;investigate-the-san-diego-and-el-centro-datum-problem&#34;&gt;Investigate the San Diego and El Centro datum problem&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Right-click the &lt;em&gt;ElCentro&lt;/em&gt; layer, select &lt;strong&gt;Copy&lt;/strong&gt;, right-click the &lt;em&gt;GCS NAD83&lt;/em&gt; data frame, and select &lt;strong&gt;Paste&lt;/strong&gt; Layer(s). Do the same for the &lt;em&gt;SanDiego&lt;/em&gt; layer. The &lt;em&gt;GCS NAD83&lt;/em&gt; data frame should have four layers now.&lt;/li&gt;
+&lt;li&gt;Right-click the &lt;em&gt;GCS NAD83&lt;/em&gt; data frame and select &lt;strong&gt;Activate&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Right-click the &lt;em&gt;StudyArea&lt;/em&gt; layer and select &lt;strong&gt;Zoom To Layer&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Turn off the &lt;em&gt;ElCentro&lt;/em&gt;, &lt;em&gt;SanDiego&lt;/em&gt;, and &lt;em&gt;StudyArea&lt;/em&gt; layers by going to the Table of Contents by clicking the checkboxes next to them. The only visible layer should be &lt;em&gt;cards&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Let’s see if either the &lt;em&gt;ElCentro&lt;/em&gt; layer or the &lt;em&gt;SanDiego&lt;/em&gt; layer might have been created using the same datum as the cards layer.&lt;/li&gt;
+&lt;li&gt;Zoom in closer to one of the roads in the middle part of the cards layer. Now turn the &lt;em&gt;ElCentro&lt;/em&gt; and &lt;em&gt;SanDiego&lt;/em&gt; on and off a few times. Does one of them seem to fit the cards layer better? If you don’t see any difference, look closer at the highway interchange in the right part of the screen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;define-the-coordinate-systems-for-san-diego-and-el-centro-street-shapefiles&#34;&gt;Define the coordinate systems for San Diego and El Centro street shapefiles&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We’re going to remove all the &lt;em&gt;SanDiego&lt;/em&gt; and &lt;em&gt;ElCentro&lt;/em&gt; layers from our map document. Right-click each one (there should be four of them total) and select Remove.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;ArcToolbox&lt;/strong&gt; icon and give it a few seconds to open. Go to Data Management Tools &amp;gt; Projections and Transformations and then double-click &lt;strong&gt;Define Projection&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click the folder icon to the right of Input Dataset or Feature Class and select
+&lt;em&gt;SanDiego.shp&lt;/em&gt; from your folder.&lt;/li&gt;
+&lt;li&gt;Click the hand icon to the right of Coordinate System and select Geographic Coordinate Systems &amp;gt; North America &amp;gt; NAD 1983. Click OK. Click OK again.&lt;/li&gt;
+&lt;li&gt;This shapefile will automatically be added to the active data frame (GCS NAD83).
+&amp;gt; note: If you received an error message from stating that projection didn’t work, make sure ArcCatalog is closed and try again.&lt;/li&gt;
+&lt;li&gt;Double-click the &lt;em&gt;SanDiego&lt;/em&gt; layer you just created and then click the &lt;strong&gt;Source&lt;/strong&gt; tab. It should list the Geographic Coordinate System as &lt;em&gt;GCS_North_American_1983&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;General&lt;/strong&gt; tab and rename the layer &lt;em&gt;SanDiego_GCS_NAD83&lt;/em&gt;. Click OK.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;ElCentro&lt;/em&gt; shapefile might be in GCS NAD27.  Using the &lt;strong&gt;Define Projection&lt;/strong&gt; process we just used, select the following coordinate system for ElCentro: Geographic Coordinate Systems &amp;gt; North America &amp;gt; NAD 1927.&lt;/li&gt;
+&lt;li&gt;Rename the layer &lt;em&gt;ElCentro_GCS_NAD27&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;ElCentro&lt;/em&gt; layer certainly fits much better now, but that’s not good enough for purists like us.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;convert-el-centro-street-shapefile-from-nad27-to-nad83&#34;&gt;Convert El Centro street shapefile from NAD27 to NAD83&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In &lt;strong&gt;ArcToolbox&lt;/strong&gt; go to Data Management Tools &amp;gt; Projections and Transformations and then double-click &lt;strong&gt;Project&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click the down-arrow to the right of Input Dataset or Feature Class and select &lt;em&gt;ElCentro_GCS_NAD27&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Click the folder to the right of Output Dataset or Feature Class and save the file in your folder as &lt;em&gt;ElCentro_GCS_NAD83.shp&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Click the hand icon to the right of Output Coordinate System and select Geographic Coordinate Systems &amp;gt; North America &amp;gt; NAD 1983.&lt;/li&gt;
+&lt;li&gt;Make sure the box below the Geographic Transformation (optional) field says &lt;em&gt;NAD_1927_To_NAD_1983_NADCON&lt;/em&gt;.
+&amp;gt; If it doesn’t, click the down-arrow to the right of Geographic Transformation (optional) and select NAD_1927_To_NAD&lt;em&gt;1983&lt;/em&gt; NADCON.&lt;/li&gt;
+&lt;li&gt;Click OK. This layer will be added to the active data frame.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproject-the-usgs100k-shapefile&#34;&gt;Reproject the Usgs100k shapefile&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;Usgs100k&lt;/em&gt; layer in the &lt;em&gt;PCS NAD27&lt;/em&gt; data frame is a 1:100,000 scale digital line graph (DLG) that was downloaded from the USGS EROS website. It is in a projected coordinate system (NAD_1927_UTM_Zone_11N).&lt;/li&gt;
+&lt;li&gt;Reproject this layer the same way you reprojected the &lt;em&gt;ElCentro&lt;/em&gt; layer in the last section. When you’re done, drag the layer over to the &lt;em&gt;GCS NAD83&lt;/em&gt; data frame. How well does it fit the other layers? You may notice that the fit is better in the area’s center compared to its periphery.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;add-some-pre-made-layer&#34;&gt;Add some pre-made layer&lt;/h3&gt;
+
+&lt;p&gt;Esri’s ArcGIS Resource Center defines a layer thusly: “Each layer references a dataset and specifies how that dataset is portrayed using symbols and text labels. When you add a layer to a map, you specify its dataset and set its map symbols and labeling properties.” We’re going to add a few layers that already have their map symbols and labeling properties set but need to be referenced back to their shapefiles.
+* With the GCS NAD83 data frame still active, right-click the data frame and select Turn All Layers Off.
+* Right-click the data frame, select Add Data, and add the following:&lt;br /&gt;
+  * cards.lyr
+  * ElCentro.lyr
+  * SanDiego.lyr
+* Don’t see anything? That’s because the connection to the underlying data was severed. This is the case whenever you see grayed-out check boxes with red exclamation marks next to them. Let’s fix this. For each layer, double-click the layer, click the Source tab, click the  Set Data Source… button, and then add its corresponding shapefile from your Lab04 folder (e.g., cards.shp for cards.lyr). This should make the gray part of the check boxes and the red exclamation marks disappear.
+* Take a screen shot of ArcMap (all of it—including the Table of Contents, menus, etc., using the snip tool is fine in this case) and save it in your data folder as GEOG358_Lab2Application.png.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Paste the image in the word document with the rest of your answers and submit it on blackboard.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

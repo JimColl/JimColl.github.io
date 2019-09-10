@@ -142,7 +142,17 @@ ArcGIS is a demanding program, and a lower grade computer is not recommended.  I
 
 &lt;h1 id=&#34;drones-for-mapping-and-research&#34;&gt;&lt;strong&gt;Drones for mapping and research&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;One of the reasons I was drawn to the Environmental Sciences was because at the end of the day, if we had a question, we could simply go outside and look at it.  As&lt;/p&gt;
+&lt;p&gt;One of the reasons I was drawn to the Environmental Sciences was because at the end of the day, if we had a question, we could simply go outside and look at it.  As my schooling progressed however, the certainty with which I was confedent we could do so quickly dwindled.  Not only were different datasets open to interpretation, but even some of the fundamental emasurments like topography and land cover had significant uncertainties attached to them.&lt;br /&gt;
+&lt;picture of topology&gt;
+When most think of how we represent landforms, there are two basic formats with which they conjour.  You might recall old USGS contour maps, showing the terrain and prominent land cove r features.  If you’re more technically oriented, you might imagine a view of the world thgough google earth engine.
+&lt;image of SRTM&gt;
+These representations are perfect for conveying the basic geographic context of an area, but if you want to go futher than that, we have to turn towards a more advanced means of representing reality.  Enter the world of airborne observations.  Satelite data has provided complete coverage across CONUS (Contiguous untied states) at a [1 meter resolution]().  This used to be the state of the art, and if you needed more detailed information you used to have to resort to expensive airborne flights and terestirla survey techniques to represent these street level nuances.
+&lt;Image of LIDAR&gt;
+Enter the age of LIDAR.  Starting around 2010, states started buying into this technology which promiced accuracies of up to XX and YY.  In YYYY, the USGS ordered the 3DEP program, which aimed to collect LIDAR across CONUS.  Operations are ongoing….
+&lt;Image of 3DEP&gt;
+As is usually the case though, it’s never good enough.  Depending on the location and use case, imagery is hard to come by.&lt;/p&gt;
+
+&lt;p&gt;As a critical part of my dissertation, I am interested in flying areas to determine what factors go into an effective terrestrial mapping effort.  If you have an area you would like flown, particularly if it has interesting and complex geometry or if it’s near a body of water, and you fall outside of an airport, please contact me and we can see what we can work out.&lt;/p&gt;
 </description>
     </item>
     

@@ -1515,7 +1515,7 @@ U.S. is wider than it is tall, a landscape orientation is recommended. Also, mak
 
 &lt;h3 id=&#34;add-some-pre-made-layer&#34;&gt;Add some pre-made layer&lt;/h3&gt;
 
-&lt;p&gt;Esri’s ArcGIS Resource Center defines a layer thusly: “Each layer references a dataset and specifies how that dataset is portrayed using symbols and text labels. When you add a layer to a map, you specify its dataset and set its map symbols and labeling properties.” We’re going to add a few layers that already have their map symbols and labeling properties set but need to be referenced back to their shapefiles.
+&lt;p&gt;Esri’s ArcGIS Resource Center defines a layer thusly: “Each layer references a dataset and specifies how that dataset is portrayed using symbols and text labels. When you add a layer to a map, you specify its dataset and set its map symbols and labeling properties.” We’re going to add a few layers that already have their map symbols and labeling properties set but need to be referenced back to their shapefiles.&lt;br /&gt;
 * With the GCS NAD83 data frame still active, right-click the data frame and select Turn All Layers Off.
 * Right-click the data frame, select Add Data, and add the following:&lt;br /&gt;
   * cards.lyr

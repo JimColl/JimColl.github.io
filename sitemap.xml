@@ -35,11 +35,19 @@
   </url>
   
   <url>
+    <loc>https://jimcoll.github.io/courses/geog358/lesson06/</loc>
+  </url>
+  
+  <url>
     <loc>https://jimcoll.github.io/courses/geog358/lab01/</loc>
   </url>
   
   <url>
     <loc>https://jimcoll.github.io/courses/geog358/lab02/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jimcoll.github.io/courses/geog358/lab03/</loc>
   </url>
   
   <url>
@@ -144,11 +152,6 @@
   
   <url>
     <loc>https://jimcoll.github.io/courses/dronemapping/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jimcoll.github.io/courses/geog358/courseoutline/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

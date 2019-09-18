@@ -525,9 +525,9 @@ Watch #2 and #3, #4, maybe #7&lt;/p&gt;
     
     <item>
       <title>Class 7</title>
-      <link>https://jimcoll.github.io/courses/geog358/lesson07/</link>
+      <link>https://jimcoll.github.io/courses/geog358/lesson05-copy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jimcoll.github.io/courses/geog358/lesson07/</guid>
+      <guid>https://jimcoll.github.io/courses/geog358/lesson05-copy/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdH_deT-ELNNhy0RLUppzzMB1HfdStpjfSFz7MGnYPG5lQ?e=Yv2PFf&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
@@ -1561,7 +1561,7 @@ U.S. is wider than it is tall, a landscape orientation is recommended. Also, mak
 &lt;h1 id=&#34;lab-03-using-gps-for-field-data-collection&#34;&gt;&lt;strong&gt;Lab 03: Using GPS for Field Data Collection&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;p&gt;Introduction
-This exercise provides an introduction to using a Global Positioning System (GPS) receiver to obtain coordinates and create a point shapefile. GPS is a system consisting of a network of satellites that orbit ~11,000 nautical miles from the earth in six different orbital paths. They are continuously monitored by ground stations located worldwide. The satellites transmit signals that can be detected with a GPS receiver. Using the receiver, you can determine your location with great precision through the trilateration (like triangulation) of signals from at least 3 satellites, based on measurements of distance using the travel time of radio signals (which travel at the speed of light) from the satellites.&lt;/p&gt;
+This exercise provides an introduction to using a Global Positioning System (GPS) receiver to obtain coordinates and create a point shapefile. GPS is a system consisting of a network of satellites that orbit ~11,000 nautical miles from the earth in six different orbital paths. They are continuously monitored by ground stations located worldwide. The satellites transmit signals that can be detected with a GPS receiver. Using the receiver, you can determine your location with great precision through the trilateration (not triangulation!) of signals from at least 3 satellites, based on measurements of distance using the travel time of radio signals (which travel at the speed of light) from the satellites.&lt;/p&gt;
 
 &lt;p&gt;Although the system is very sophisticated, and atomic clocks are used by the satellites, there are multiple sources and types of errors involved in finding your location. As the GPS signal passes through the charged particles of the ionosphere and then through the water vapor in the troposphere, this   causes the signal to slow a bit, and this creates the same kind of error as bad clocks. Also, if the satellites that are in your view at a particular moment are close together in the sky, the intersecting circles that define a position will cross at very shallow angles. That increases the error margin around a position. The kind of GPS receivers we will be using provide about 10 meter accuracy (which may be reduced to under 3m if differential corrections like WAAS are used), depending on the number of satellites available and the geometry of those satellites. If you want to learn more about GPS, I would recommend Garmin’s introduction (&lt;a href=&#34;http://www.garmin.com/aboutGPS/manual.html&#34;&gt;http://www.garmin.com/aboutGPS/manual.html&lt;/a&gt;) or Trimble’s tutorial (&lt;a href=&#34;http://www.trimble.com/gps/&#34;&gt;http://www.trimble.com/gps/&lt;/a&gt;).&lt;/p&gt;
 
@@ -1577,16 +1577,19 @@ This exercise provides an introduction to using a Global Positioning System (GPS
 
 &lt;p&gt;You are looking for the Fields Area Measure Free app.  There is a guided tutorial built right into the app, and your intuitive knowledge as digital generation should carry you the rest of the way.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/AppTutorial.png&#34; alt=&#34;&#34; /&gt;
-There are a few caviats to this app.  First, you may have to sit though an add if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.&lt;/p&gt;
+There are a few caviats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.&lt;/p&gt;
 
 &lt;h2 id=&#34;android&#34;&gt;&lt;strong&gt;Android&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forego ads when collectiong data.  The forms to add data are also more robust, allowing you to add more attributes and pictures to the feature.  I also feel the interface is easier to use.&lt;/p&gt;
+&lt;p&gt;If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.&lt;/p&gt;
 
 &lt;h2 id=&#34;handheld-units&#34;&gt;&lt;strong&gt;Handheld units&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;The lab also has some &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf&#34;&gt;users manual&lt;/a&gt;.  For future reference I will include some quickstart instrucions below:
-&amp;gt; Note: Charge the unit with the provided usb cable before going out on your adventure!&lt;/p&gt;
+&lt;p&gt;The lab also has some &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf&#34;&gt;users manual&lt;/a&gt;.  For future reference I will include some quickstart instructions below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: Charge the unit with the provided usb cable before going out on your adventure!&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h3 id=&#34;initial-setup-and-clearing-data&#34;&gt;Initial setup and clearing data&lt;/h3&gt;
 
@@ -1600,29 +1603,43 @@ There are a few caviats to this app.  First, you may have to sit though an add i
 * Find | Waypoints | Menu | Delete… | All Symbols | Yes
 * Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;/p&gt;
 
-&lt;p&gt;###Collecting data&lt;/p&gt;
+&lt;h3 id=&#34;collecting-data&#34;&gt;Collecting data&lt;/h3&gt;
 
-&lt;p&gt;####Collecting a point
-Points:
+&lt;h4 id=&#34;collecting-a-point&#34;&gt;Collecting a point&lt;/h4&gt;
+
+&lt;p&gt;Points:
 * Press the Mark button. Click OK to save.
 * To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.&lt;/p&gt;
 
-&lt;p&gt;####Collecting a line or a polygon
-Lines:
-* Go to Main Menu | Tracks
-* To begin line: Clear | Yes (clear track   log) | Track Log on
-* To end line: Track Log off | Save | Yes (save all tracks)
-* Make sure you clear the track log between tracks! (This keeps each line separate.)&lt;/p&gt;
+&lt;h4 id=&#34;collecting-a-line-or-a-polygon&#34;&gt;Collecting a line or a polygon&lt;/h4&gt;
 
-&lt;p&gt;Polygons:
-* Use the same steps as lines, except you need to make sure that your line ends where it began.
-* Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.&lt;/p&gt;
+&lt;p&gt;Lines:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Main Menu | Tracks&lt;/li&gt;
+&lt;li&gt;To begin line: Clear | Yes (clear track   log) | Track Log on&lt;/li&gt;
+&lt;li&gt;To end line: Track Log off | Save | Yes (save all tracks)&lt;/li&gt;
+&lt;li&gt;Make sure you clear the track log between tracks! (This keeps each line separate.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Polygons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the same steps as lines, except you need to make sure that your line ends where it began.&lt;/li&gt;
+&lt;li&gt;Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&#34;downloading-your-data-and-creating-shapefiles&#34;&gt;Downloading your data and creating shapefiles&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Click the Start/Windows button, click the little down arrow in the bottom left corner, and then click dnrgps (under #-Programs).
-&amp;gt; Note: you can also download from the &lt;a href=&#34;https://www.dnr.state.mn.us/mis/gis/DNRGPS/DNRGPS.html&#34;&gt;Minisota Department of Natural Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Click the Start/Windows button, click the little down arrow in the bottom left corner, and then click dnrgps (under #-Programs).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: you can also download from the &lt;a href=&#34;https://www.dnr.state.mn.us/mis/gis/DNRGPS/DNRGPS.html&#34;&gt;Minisota Department of Natural Resources&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Connect the GPS unit to the computer using the provided USB cable. Turn the unit on, press the Page button until you reach the Satellite screen, press the Menu button and select Use with GPS off (this helps save the battery).&lt;/li&gt;
 &lt;li&gt;If the application doesn’t find your GPS unit automatically, select GPS | Find GPS (or
 Connect to Default GPS).&lt;/li&gt;
@@ -1630,8 +1647,8 @@ Connect to Default GPS).&lt;/li&gt;
 &lt;li&gt;Look at the table of waypoints. If you see any unwanted waypoints in the table, select them and click the red X on the left side of the screen.&lt;/li&gt;
 &lt;li&gt;Let’s project our data before we go any further. Click File | Set Projection. On the Projection tab, set the POSC Code to 26915, the datum to NAD83, and the projection to UTM zone 15N. Click OK.&lt;/li&gt;
 &lt;li&gt;Select all of the waypoints that you want to use and then click Edit | Project Coordinates.&lt;/li&gt;
-&lt;li&gt;Click File | Save To | File…. Save your waypoints as an ESRI Shapefile (2D) with the name Lab05_waypoints. Then save your waypoints as a GPS Exchange Format (*.gpx) with the name Lab05_waypoints&lt;/li&gt;
-&lt;li&gt;Downloading tracks is similar to downloading waypoints, but it can be a bit trickier. Click Track | Download. Select all the records (rows) that correspond to your track—this is where things can get confusing—and then click File | Save To | File…. Save your track as an ESRI Shapefile (2D) with the name Lab05_track. If it asks for a Shape Type, select Line.&lt;/li&gt;
+&lt;li&gt;Click File | Save To | File…. Save your waypoints as an ESRI Shapefile (2D) with the name Lab05_waypoints. Then save your waypoints as a GPS Exchange Format (*.gpx) with a sensible naming convention (like GEOG358_Lab3Waypoints).&lt;/li&gt;
+&lt;li&gt;Downloading tracks is similar to downloading waypoints, but it can be a bit trickier. Click Track | Download. Select all the records (rows) that correspond to your track—this is where things can get confusing—and then click File | Save To | File…. Save your track as an ESRI Shapefile (2D) with a sensible name. If it asks for a Shape Type, select Line.&lt;/li&gt;
 &lt;li&gt;When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1641,20 +1658,29 @@ Connect to Default GPS).&lt;/li&gt;
 &lt;li&gt;Open ArcMap.&lt;/li&gt;
 &lt;li&gt;Add the shapefiles you created.&lt;/li&gt;
 &lt;li&gt;Click the little down arrow next to the Add Data button and select Add Basemap. Choose a basemap that you think would look good with your shapefiles.&lt;/li&gt;
-&lt;li&gt;Spend some time playing around with different basemaps and different ways to symbolize your Jayhawk Blvd. line and bike rack points.&lt;/li&gt;
+&lt;li&gt;Spend some time playing around with different basemaps and different ways to symbolize your new features.&lt;/li&gt;
 &lt;li&gt;Make a map and upload a PNG of it to Blackboard.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;open-your-points-in-google-earth&#34;&gt;&lt;strong&gt;Open your points in Google Earth&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;open-your-features-in-google-earth&#34;&gt;&lt;strong&gt;Open your features in Google Earth&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Let’s look at our point shapefile in Google Earth. Open the ArcToolbox and select
-Conversion Tools &amp;gt; To KML &amp;gt; Layer To KML.&lt;/li&gt;
-&lt;li&gt;Select your waypoints layer in the Layer dropdown menu. Click the folder button next to
-Output File, navigate to your personal lab folder, and save the file as
-GEOG358_Lab03_YourLastName. Change the Layer Output Scale to 1. Click OK.&lt;/li&gt;
-&lt;li&gt;In Windows Explorer, double-click the file you just created. (If you don’t see it, look for KMZ File under the Type column.) Google Earth should open and zoom to the location where your points are. Are your points where they’re supposed to be?&lt;/li&gt;
-&lt;li&gt;Find a cool view angle and zoom level, take a screen shot, and upload it to Blackboard.&lt;/li&gt;
+&lt;li&gt;Let’s look at our point shapefile in Google Earth, which uses a KML file format.  As you may have seen in the apps, this is an export filetype but is behind a paywall.  Fortunately ArcGIS can do the conversion for us.&lt;/li&gt;
+&lt;li&gt;Open the ArcToolbox and select Conversion Tools &amp;gt; To KML &amp;gt; Layer To KML.&lt;/li&gt;
+&lt;li&gt;Select the appropriate layers in the Layer dropdown menu. Click the folder button next to Output File, navigate to your personal lab folder, and save the file as MyFeatureName.kml. Change the Layer Output Scale to 1. Click OK.&lt;/li&gt;
+&lt;li&gt;In Windows Explorer, double-click the file you just created. (If you don’t see it, look for KMZ File under the Type column.)&lt;/li&gt;
+&lt;li&gt;Google Earth should open and zoom to the location where your points are. Are your points where they’re supposed to be?&lt;/li&gt;
+&lt;li&gt;Find a cool view angle and zoom level&lt;/li&gt;
+&lt;li&gt;Google Earth lets you export these as a neat map with the appropriate map elements.  Fill in the pertinent data, save it, and upload it to Blackboard.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthExport.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;common-errors&#34;&gt;&lt;strong&gt;Common errors:&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&amp;ldquo;When I open my KML layer adobe pops up.&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Windows has set the default program to handle KML layers as adobe for some reason.  You can either right click on the file and open with &amp;gt; find program, or open Google Earth and go to File &amp;gt; Open&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

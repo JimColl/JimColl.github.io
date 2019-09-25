@@ -1720,18 +1720,11 @@ Connect to Default GPS).&lt;/li&gt;
       <guid>https://jimcoll.github.io/courses/geog358/lab04/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GPSSplash.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;lab-04-on-screen-digitizing-image-restoration&#34;&gt;&lt;strong&gt;Lab 04: On-Screen Digitizing &amp;amp; Image Restoration&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;Learning Objective&lt;/h1&gt;
 
-&lt;p&gt;This lab covers one of the most common tasks a starting GIS analysis will likely be paid to do, alligning and digitizing data.  In some respects, this is the most and least important part of a GIS project.&lt;/p&gt;
-
-&lt;h2 id=&#34;part-1-on-screen-digitizing&#34;&gt;Part 1: On-Screen Digitizing&lt;/h2&gt;
-
-&lt;p&gt;Introduction
-In this lab you will learn how to digitize features from a scanned USGS topographic map.  Digitizing is the process of converting paper map or image data to vector digital data. In manual vector digitizing, you trace the lines or points from the source media. You control a cursor, usually with a mouse or digitizing puck, and select vertices to define the point, line, or polygonal features you wish to capture. The source media may be hardcopy (e.g., maps on a digitizing table), or softcopy (e.g., a digital image or scanned map). ArcGIS allows us to digitize using either hardcopy or softcopy sources.  This lab will involve digitizing a set of features from a scanned USGS 1:24,000 topographic map.&lt;/p&gt;
+&lt;p&gt;This lab covers one of the most common tasks a starting GIS analysis will likely be paid to do, aligning and digitizing data.&lt;/p&gt;
 
 &lt;h1 id=&#34;tutorial&#34;&gt;Tutorial&lt;/h1&gt;
 
@@ -1739,9 +1732,8 @@ In this lab you will learn how to digitize features from a scanned USGS topograp
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y&#34;&gt;Materials (click to download)&lt;/a&gt;
+&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
@@ -1754,179 +1746,186 @@ In this lab you will learn how to digitize features from a scanned USGS topograp
     &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;lawrencenorth.tif&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A scanned aerial photograph of north Lawrence&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;naip2004sub.img&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Portion of a National Agriculture Imagery Program (NAIP) image (image at ~2 meter resolution project in UTM Zone 15, NAD83)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;usgsLawEast.tif&lt;/td&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;Scanned USGS Lawrence East quad&lt;/td&gt;
   &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;StudyArea.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A polygon shapefile indicating the digitizing area&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Copy files from the network drive to your folder&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Using ArcCatalog or Windows Explorer, copy the data off blackboard to your personal folder.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Preparation&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Open ArcMap. Close any alerts that pop up.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Save the map document in your personal Lab07 folder as GEOG_358_Lab07_Part1_YourLastName.mxd&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click the Add Data button, navigate to this lab’s Part01 folder (in your personal Lab07 folder), and then add usgsLawEast.tif and StudyArea.shp.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Let’s change the symbology of the StudyArea layer so that the polygons are hollow. The easiest way to do this is to click the colored box under the layer name and then select “Hollow” from the list of symbols. While you’re there, change the Outline Width to 5 so we can see it better. Change the color of the outline if you wish.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Right-click the StudyArea layer and select Zoom To Layer. Recognize this area?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click the Pan button (looks like a hand) and then drag the map around until you find the KU campus. (Hint: It’s to the southwest of the study area!)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Create shapefiles for digitizing&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;A few years ago Esri created a way to access ArcCatalog from within ArcMap. All you have to do is click the little ArcCatalog button (three buttons to the right of the scale setting) or click the Windows menu and select Catalog.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In the ArcCatalog window, connect to your personal Lab07 folder.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Right-click your Part01 folder and select New | Shapefile….&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Name the shapefile Buildings and make sure the Feature Type is set to Point.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click the Edit button to add a coordinate system.  Select Projected Coordinate Systems &amp;gt; UTM &amp;gt; NAD 1983 &amp;gt; NAD 1983 UTM Zone 15N.prj&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click OK. Click OK again.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Repeat the last few steps to create two more shapefiles: A polyline shapefile called Streets and a polygon shapefile called Parks. Make sure you set their projections to the same one as the Buildings shapefile.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Digitize point features&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click the Customize menu, go to Toolbars, and select Editor.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In the Editor toolbar, start an edit session by clicking the Editor button and selecting Start Editing. (If a dialog box comes up, click OK.) A Create Features window will appear. Notice that the Construction Tools section near the bottom is empty.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In the Create Features window, click Buildings (not the heading, but the one with the point symbol to its left). Since Buildings is a point shapefile, there are now point-related tools in the Construction Tools section. Make sure that you have the Point tool selected.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Right-click the StudyArea layer and select Zoom To Layer.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Looking at the map, you will see little solid black shapes scattered about. These are buildings, and we are going to digitize them as points. Move your mouse to the center of each building in the study area—zoom in further if you need to—and simply click. These points will be added into the Buildings layer. If you make a mistake, click the Edit Tool (it looks like an arrowhead pointing northwest) on the Editor toolbar, click the point, and then drag it to the correct location or hit Delete.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;After you finish digitizing all the buildings, click the Editor button, and select Save Edits.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Change the symbology of your new Buildings layer if you wish.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Save your map document.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Digitize line features – Point Mode&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In the Create Features window, click Streets. Make sure you have the Line tool selected below.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click the Editor button, select Snapping, and then Snapping Toolbar. Hover your mouse over a random section of the study area boundary. Notice how the cursor “snaps” to the line and says Study Area: Edge. This snapping function will help you connect your street lines properly.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Find a street intersection on the northern edge of the study area. Click on the intersection— close enough to the study area so that the cursor snaps to it—to begin a line. Add more vertices to the line by clicking your mouse along the streets; as you might imagine, curved streets require more vertices. When you want to finish a line, just double-click where you want it to end. Use this method for roughly half of the streets in the study area. (We will finish the rest using a different method.) Don’t get too hung up on making perfect streets. Save your edits periodically by clicking the Editor button and selecting Save Edits.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When you’re finish digitizing, save your edits again.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Change the symbology of your new line layer to something more visible (e.g., make the lines wider, change the color, etc.).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Save your map document.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Digitize line features – Stream Mode
-In the last section we digitized streets using Point Mode, which requires you to select vertices to make lines. This is a precise way to digitize, but in some cases you might want a quicker method that doesn’t involve as much precision. Enter Stream Mode. In Stream Mode, you make one vertex and then simply trace over your feature (sans clicking) until you’re done. After you finish the feature, ArcMap automatically adds vertices at an interval of your choosing. This interval is called the stream tolerance, and you can change it at any time, including when you’re in the middle of digitizing a feature.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;•   In the Editor toolbar, click the Editor button and select Options….
-•   Click the General tab. In the Stream Mode section, change the Stream tolerance to 0.1 map units. Just below that, change the number of points [grouped] together when streaming to 10. Click OK.
-•   Make sure you have the Line tool selected. Right-click anywhere on the map and select
-Streaming.
-•   When you’re ready to digitize, just click, trace your feature, and double-click. Digitize the rest of the study area streets using this method. Save your edits.&lt;/p&gt;
-
-&lt;p&gt;•   End the edit session by clicking Editor and selecting Stop Editing. Save your map document.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Editing the Streets attribute table
-•   In the Table of Contents, right-click your Streets layer and select Open Attribute Table.
-•   Click the Table Options button (upper left corner) and select Add Field.
-•   In the Name field type Name. (That’s not a typo!) Change the Type to Text. Under Field Properties change the Length to 25. Click OK.
-•   Create another field called Suffix. Change its Type to Text and change its Length to 4. Close the attribute table.
-•   Right-click the Streets layer, select Selection and then Make This The Only Selectable Layer.
-•   Start an edit session. Click the Select Features tool (five places to the right of the Full Extent button). Looking at the map, click the street feature that corresponds to Lincoln Street in the map. The street will turn blue-green if selected properly.
-•   Open the Streets attribute table again. The record for the street feature you selected will be highlighted. Click in that record’s Name field and enter Lincoln. Click in the Suffix field and enter St.
-•   Repeat the last couple steps to find and name 5th St.
-•   Click the Clear Selected Features button (to the right of the Select Features button).
-•   In the Streets attribute table, click the leftmost part of the Lincoln St. record. This will select the record in the table and the map. Resize and/or move your attribute table so you can see that the Lincoln St. line was selected.
-•   Close the attribute table and save your edits.
-•   By default, ArcMap will only display one field at a time, and so once we tell it to display the Streets labels, it will just say “Lincoln” and “5th” (i.e., without “St.”). Let’s fix that. In the Table of Contents, double-click the Streets layer and click the Labels tab. Change the Label Field to Name. Click the Expression button. In the Expression box add the character &amp;amp; after [Name], and then double-click Suffix in the Fields box above. The expression in the box should read [Name] &amp;amp; [Suffix]. Click OK.
-•   In the Text Symbol section make the font bold, size 12, and a color that you think will stand out on the map. Click OK.
-•   In the Table of Contents, right-click the Streets layer and select Label Features. Do you see labels on the streets?
-•   You may notice the lack of space between the name and the suffix of streets. If you wish, you can fix this problem by going back the Expression box and changing the text to [Name] &amp;amp; “ ” [Suffix].&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;•   Save your map document.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Digitize polygon features
-•   In the Create Features window, click Parks. Make sure you have the Polygon tool selected.
-•   Looking at the map, you should see two trailer parks. For each one, digitize a single polygon over the whole white-ish area. (The process is similar to creating line features in Point Mode.)
-•   Save your edits and end the edit session.
-•   Open the Parks attribute table. Using the same steps as the Streets layer, add new field called Name, change its Type to Text, and change the Length to 25.
-•   Start an edit session. In the attribute table, enter names for the trailer parks (e.g., Northwest Trailer Park, Southeast Trailer Park).
-•   Save your edits, end the edit session, and save your map document.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Make a map
-•   Make a quick map of the study area:
-o   Include the three layers you created.
-o   Don’t include the map image (usgsLawEast.tif).
-o   Label the Streets and Parks features. If you want to change the look of the labels, play around in the Labels tab in the layer’s Properties.
-o   Change the fill color of the StudyArea from Hollow to 10% gray, and make its outline thinner.
-o   Include a title, author, north arrow, scale, legend, and neatline.
-•   Export a PNG of the map. Call it GEOG_358_Lab07_Part1_YourLastName.png.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Lab 05, Part 2: Image Restoration and Georeferencing&lt;/p&gt;
-
-&lt;p&gt;Objectives
-In this portion of the lab you will:
-1.  Register an image to a projected coordinate system
-2.  Digitize features from digital image sources using the Editor extension in ArcMap&lt;/p&gt;
+&lt;h2 id=&#34;part-1-image-georeferencing&#34;&gt;Part 1: Image Georeferencing&lt;/h2&gt;
 
 &lt;p&gt;Introduction
-Image data are a common source of information and are particularly useful when mapping vegetation, wetlands, or other natural resources. Scanned photos have some geometric distortion,&lt;/p&gt;
-
-&lt;p&gt;but this distortion may not be too great, depending on our error specifications and how the photo was taken (flying height, focal length of camera, etc.).
+Image data are a common source of information and are particularly useful when mapping vegetation, wetlands, or other natural resources. Scanned photos have some geometric distortion, but this distortion may not be too great, depending on our error specifications and how the photo was taken (flying height, focal length of camera, etc.).
 Digital orthophotoquads (DOQs) are scanned photos for which most of these errors have been removed. DOQs are being developed for the entire U.S. by the US Geological Survey (USGS). DOQs are a common data source for resource management agencies.
 The problem is that scanned images will be in some arbitrary scanner or screen coordinate system. If we wish to convert the digitized vector features to a projected coordinate system, we must perform an image registration. An image registration converts the image from a file or scanner coordinate system to a projected map coordinate system.
 There are many forms of image registration, but the simplest is called a first-order or affine transformation. An affine transformation is appropriate when the terrain is flat and the photograph has been taken with a vertically oriented (mapping) camera; otherwise, a projective transformation should be used.
 In this lab exercise you will be taking a scanned DOQ over north Lawrence from 1976 and register it to an image from 2004 that already contains geographic coordinates and a projection. You will then digitize roads in a study area that represent the conditions in 1976 that you can then compare to the current road conditions in the more recent image.&lt;/p&gt;
 
-&lt;p&gt;Materials&lt;/p&gt;
+&lt;h3 id=&#34;1-georeference-a-scanned-aerial-photo&#34;&gt;1. Georeference a scanned aerial photo&lt;/h3&gt;
 
-&lt;p&gt;Data Name   Description
-lawrencenorth.tif   A scanned aerial photograph of north Lawrence
-naip2004sub.img Portion of a National Agriculture Imagery Program (NAIP) image (image at ~2 meter resolution project in UTM Zone 15, NAD83)
-StudyArea.shp   A polygon indicating the digitizing area (projected in UTM Zone 15, NAD83)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new map document in ArcMap. Save it in your OneDrive as
+GEOG358_Lab04_Part1.mxd.&lt;/li&gt;
+&lt;li&gt;Add the naip2004sub.img from the data folder to the data frame. This image has a projected coordinate system (UTM Zone 15 NAD83). We will register the scanned image to this coordinate system, thus making it the “control layer.”&lt;/li&gt;
+&lt;li&gt;Add lawrencenorth.tif image to the data frame.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Preparation/Georeference scanned aerial photo
-•   Create a new map document in ArcMap. Save it in your Lab07 folder as
-GEOG_358_Lab07_Part2_YourLastName.mxd.
-•   Add naip2004sub.img from the part02 folder to the data frame. This image has a projected coordinate system (UTM Zone 15 NAD83). We will register the scanned image to this coordinate system, thus making it the “control layer.”
-•   Add lawrencenorth.tif image to the data frame. (Click OK if you see a warning.) This is the image that we will register to a projected coordinate system, thus making it the “target layer.” Since the image doesn’t have a projection yet, it will not be immediately visible; right-click the layer and select Zoom to Layer.
-•   Examine each image in order to discover what features they have in common (e.g., bridges).&lt;/li&gt;
-&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you see the warning about pyramids, recall what this is asking you about and if you see an &amp;ldquo;unreferenced&amp;rdquo; warning, Click OK, that&amp;rsquo;s what we are here to fix&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;•   Click the Customize menu, select Toolbars, and then Georeferencing. The Georeferencing toolbar will appear in ArcMap.
-•   Make sure Layer is set to lawrencenorth.tif in the Georeferencing toolbar.
-•   Also, make sure that lawrencenorth.tif is on top of naip2004sub.img in the table of contents.
-•   Now we must select a succession of control links between the target layer and the control layer. These will be based on features that the images have in common. Find a road intersection in the lawrencenorth.tif layer. Zoom in close enough so that you can clearly see the width of the road. Click the Add Control Points button on the Georeferencing toolbar and then click once right in the center of the intersection.
-•   Right-click the naip2004sub.img layer and select Zoom to Layer. Find the intersection that you clicked in the other layer. Zoom in and click in the center of the intersection.
-•   Repeat this procedure 11 more times in different parts of the image for a total of 12 control points. The more evenly you spread out your control points, the better. Note that after the second control point the images will overlap, so you will need to turn layers on and off in order to establish the remaining control points. (Fun!)
-•   If you make a mistake, you can delete it by clicking the View Link Table button, select the row of the point, and hit Delete on your keyboard.
-•   With each successive control link, the image should line up a bit better. If all goes well, you should see the image shift slightly to match the control image. Don’t be alarmed if the images become temporarily distorted during this process.
-•   Click the View Link Table button. In the upper right hand corner, next to the word “Forward” is your RMS (root mean square), which is a measure of the accuracy of your registration. If your RMS is higher than 15, bad news: You need to redo your control points, this time with more precision.
-•   Once your RMS is under 15, enlarge your Link Table so that all 12 points are listed and then take a screen shot. Save the image as GEOG_358_Lab07_Part2_1_YourLastName.png.
-•   Now we will register the image to UTM projection. Click the Georeferencing menu and select Rectify. In the Name field type Lawrence_rectified. Change the Output Location to the Part2 folder in your Lab07 folder. (You may need to go up one level and then select the Part2 folder for this to work.) Click Save.
-•   If Lawrence_rectified doesn’t show up in your layers, click the Add Data button and add it.
-•   Delete all your control points in the Link Table so you can see the rectified image clearly.
-•   Take a screen shot of the rectified image overlaying the control layer (i.e., Lawrence_rectified
-on top of naip2004sub.img). Call it GEOG_358_Lab07_Part2_2_YourLastName.png.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the image that we will register to a projected coordinate system, thus making it the “target layer.” Since the image doesn’t have a projection yet, it will not be immediately visible; right-click the layer and select Zoom to Layer.&lt;/li&gt;
+&lt;li&gt;Examine each image in order to discover what features they have in common (e.g., bridges).&lt;/li&gt;
+&lt;li&gt;Click the Customize menu, select Toolbars, and then Georeferencing. The Georeferencing toolbar will appear in ArcMap.&lt;/li&gt;
+&lt;li&gt;Make sure Layer is set to lawrencenorth.tif in the Georeferencing toolbar.&lt;/li&gt;
+&lt;li&gt;Also, make sure that lawrencenorth.tif is on top of naip2004sub.img in the table of contents.&lt;/li&gt;
+&lt;li&gt;Now we must select a succession of control links between the target layer and the control layer. These will be based on features that the images have in common. Find a road intersection in the lawrencenorth.tif layer. Zoom in close enough so that you can clearly see the width of the road. Click the Add Control Points button on the Georeferencing toolbar and then click once right in the center of the intersection.&lt;/li&gt;
+&lt;li&gt;Right-click the naip2004sub.img layer and select Zoom to Layer. Find the intersection that you clicked in the other layer. Zoom in and click in the center of the intersection.&lt;/li&gt;
+&lt;li&gt;Repeat this procedure 11 more times in different parts of the image for a total of 12 control points. The more evenly you spread out your control points, the better. Note that after the second control point the images will overlap, so you will need to turn layers on and off in order to establish the remaining control points. (Fun!)&lt;/li&gt;
+&lt;li&gt;If you make a mistake, you can delete it by clicking the View Link Table button, select the row of the point, and hit Delete on your keyboard.&lt;/li&gt;
+&lt;li&gt;With each successive control link, the image should line up a bit better. If all goes well, you should see the image shift slightly to match the control image. Don’t be alarmed if the images become temporarily distorted during this process.&lt;/li&gt;
+&lt;li&gt;Click the View Link Table button. In the upper right hand corner, next to the word “Forward” is your RMS (root mean square), which is a measure of the accuracy of your registration. If your RMS is higher than 15, bad news: You need to redo your control points, this time with more precision.&lt;/li&gt;
+&lt;li&gt;Once your RMS is under 15, enlarge your Link Table so that all 12 points are listed and then take a screen shot. Save the image as GEOG_358_Lab07_Part1.png.  This should look like so.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Georeference.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;There is one last step in the georeferencing process, to save the reference for future use.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;•   Upload all three of your PNG files (one map and two screen shots) to Blackboard. There is nothing to physically hand in this week.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Before procedding, open up the file explorer to the data folder and make note of the files in there.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On the georeferenceing bar click Update georefernce&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you were sucessful you should now see a new .twf file, and your image is now referenced.  Huzzah!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;part-2-on-screen-digitizing&#34;&gt;Part 2: On-Screen Digitizing&lt;/h2&gt;
+
+&lt;p&gt;Introduction
+In this part of the lab you will learn how to digitize features from a scanned USGS topographic map.  Digitizing is the process of converting paper map or image data to vector digital data. In manual vector digitizing, you trace the lines or points from the source media. You control a cursor, usually with a mouse or digitizing puck, and select vertices to define the point, line, or polygonal features you wish to capture. The source media may be hardcopy (e.g., maps on a digitizing table), or softcopy (e.g., a digital image or scanned map). ArcGIS allows us to digitize using either hardcopy or softcopy sources.  This lab will involve digitizing a set of features from a scanned USGS 1:24,000 topographic map.&lt;/p&gt;
+
+&lt;h3 id=&#34;preparation&#34;&gt;Preparation&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcMap. Close any alerts that pop up.&lt;/li&gt;
+&lt;li&gt;Save the map document in an appropriate place as GEOG358_Lab04_Part2.mxd&lt;/li&gt;
+&lt;li&gt;Click the Add Data button, navigate to this lab’s Part01 folder (in your personal Lab07 folder), and then add usgsLawEast.tif and StudyArea.shp.&lt;/li&gt;
+&lt;li&gt;Let’s change the symbology of the StudyArea layer so that the polygons are hollow. The easiest way to do this is to click the colored box under the layer name and then select “Hollow” from the list of symbols. While you’re there, change the Outline Width to 5 so we can see it better. Change the color of the outline if you wish.&lt;/li&gt;
+&lt;li&gt;Right-click the StudyArea layer and select Zoom To Layer. Recognize this area?&lt;/li&gt;
+&lt;li&gt;Click the Pan button (looks like a hand) and then drag the map around until you find the KU campus. (Hint: It’s to the southwest of the study area!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;create-shapefiles-for-digitizing&#34;&gt;Create shapefiles for digitizing&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the ArcCatalog window, connect to your personal Lab07 folder.&lt;/li&gt;
+&lt;li&gt;Right-click your Part01 folder and select New | Shapefile….&lt;/li&gt;
+&lt;li&gt;Name the shapefile Buildings and make sure the Feature Type is set to Point.&lt;/li&gt;
+&lt;li&gt;Click the Edit button to add a coordinate system.  Select Projected Coordinate Systems &amp;gt; UTM &amp;gt; NAD 1983 &amp;gt; NAD 1983 UTM Zone 15N.prj&lt;/li&gt;
+&lt;li&gt;Click OK. Click OK again.&lt;/li&gt;
+&lt;li&gt;Repeat the last few steps to create two more shapefiles: A polyline shapefile called Streets and a polygon shapefile called Parks. Make sure you set their projections to the same one as the Buildings shapefile.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;digitize-point-features&#34;&gt;Digitize point features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Click the Customize menu, go to Toolbars, and select Editor.&lt;/li&gt;
+&lt;li&gt;In the Editor toolbar, start an edit session by clicking the Editor button and selecting Start Editing. (If a dialog box comes up, click OK.) A Create Features window will appear. Notice that the Construction Tools section near the bottom is empty.&lt;/li&gt;
+&lt;li&gt;In the Create Features window, click Buildings (not the heading, but the one with the point symbol to its left). Since Buildings is a point shapefile, there are now point-related tools in the Construction Tools section. Make sure that you have the Point tool selected.&lt;/li&gt;
+&lt;li&gt;Right-click the StudyArea layer and select Zoom To Layer.&lt;/li&gt;
+&lt;li&gt;Looking at the map, you will see little solid black shapes scattered about. These are buildings, and we are going to digitize them as points. Move your mouse to the center of each building in the study area—zoom in further if you need to—and simply click. These points will be added into the Buildings layer. If you make a mistake, click the Edit Tool (it looks like an arrowhead pointing northwest) on the Editor toolbar, click the point, and then drag it to the correct location or hit Delete.&lt;/li&gt;
+&lt;li&gt;After you finish digitizing all the buildings, click the Editor button, and select Save Edits.&lt;/li&gt;
+&lt;li&gt;Change the symbology of your new Buildings layer if you wish.&lt;/li&gt;
+&lt;li&gt;Save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;digitize-line-features-point-mode&#34;&gt;Digitize line features – Point Mode&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the Create Features window, click Streets. Make sure you have the Line tool selected below.&lt;/li&gt;
+&lt;li&gt;Click the Editor button, select Snapping, and then Snapping Toolbar. Hover your mouse over a random section of the study area boundary. Notice how the cursor “snaps” to the line and says Study Area: Edge. This snapping function will help you connect your street lines properly.&lt;/li&gt;
+&lt;li&gt;Find a street intersection on the northern edge of the study area. Click on the intersection— close enough to the study area so that the cursor snaps to it—to begin a line. Add more vertices to the line by clicking your mouse along the streets; as you might imagine, curved streets require more vertices. When you want to finish a line, just double-click where you want it to end. Use this method for roughly half of the streets in the study area. (We will finish the rest using a different method.) Don’t get too hung up on making perfect streets. Save your edits periodically by clicking the Editor button and selecting Save Edits.&lt;/li&gt;
+&lt;li&gt;When you’re finish digitizing, save your edits again.&lt;/li&gt;
+&lt;li&gt;Change the symbology of your new line layer to something more visible (e.g., make the lines wider, change the color, etc.).&lt;/li&gt;
+&lt;li&gt;Save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;digitize-line-features-stream-mode&#34;&gt;Digitize line features – Stream Mode&lt;/h3&gt;
+
+&lt;p&gt;In the last section we digitized streets using Point Mode, which requires you to select vertices to make lines. This is a precise way to digitize, but in some cases you might want a quicker method that doesn’t involve as much precision. Enter Stream Mode. In Stream Mode, you make one vertex and then simply trace over your feature (sans clicking) until you’re done. After you finish the feature, ArcMap automatically adds vertices at an interval of your choosing. This interval is called the stream tolerance, and you can change it at any time, including when you’re in the middle of digitizing a feature.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the Editor toolbar, click the Editor button and select Options….&lt;/li&gt;
+&lt;li&gt;Click the General tab. In the Stream Mode section, change the Stream tolerance to 0.1 map units. Just below that, change the number of points [grouped] together when streaming to 10. Click OK.&lt;/li&gt;
+&lt;li&gt;Make sure you have the Line tool selected. Right-click anywhere on the map and select
+Streaming.&lt;/li&gt;
+&lt;li&gt;When you’re ready to digitize, just click, trace your feature, and double-click. Digitize the rest of the study area streets using this method. Save your edits.&lt;/li&gt;
+&lt;li&gt;End the edit session by clicking Editor and selecting Stop Editing. Save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;editing-the-streets-attribute-table&#34;&gt;Editing the Streets attribute table&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the Table of Contents, right-click your Streets layer and select Open Attribute Table.&lt;/li&gt;
+&lt;li&gt;Click the Table Options button (upper left corner) and select Add Field.&lt;/li&gt;
+&lt;li&gt;In the Name field type Name. (That’s not a typo!) Change the Type to Text. Under Field Properties change the Length to 25. Click OK.&lt;/li&gt;
+&lt;li&gt;Create another field called Suffix. Change its Type to Text and change its Length to 4. Close the attribute table.&lt;/li&gt;
+&lt;li&gt;Right-click the Streets layer, select Selection and then Make This The Only Selectable Layer.&lt;/li&gt;
+&lt;li&gt;Start an edit session. Click the Select Features tool (five places to the right of the Full Extent button). Looking at the map, click the street feature that corresponds to Lincoln Street in the map. The street will turn blue-green if selected properly.&lt;/li&gt;
+&lt;li&gt;Open the Streets attribute table again. The record for the street feature you selected will be highlighted. Click in that record’s Name field and enter Lincoln. Click in the Suffix field and enter St.&lt;/li&gt;
+&lt;li&gt;Repeat the last couple steps to find and name 5th St.&lt;/li&gt;
+&lt;li&gt;Click the Clear Selected Features button (to the right of the Select Features button).&lt;/li&gt;
+&lt;li&gt;In the Streets attribute table, click the leftmost part of the Lincoln St. record. This will select the record in the table and the map. Resize and/or move your attribute table so you can see that the Lincoln St. line was selected.&lt;/li&gt;
+&lt;li&gt;Close the attribute table and save your edits.&lt;/li&gt;
+&lt;li&gt;By default, ArcMap will only display one field at a time, and so once we tell it to display the Streets labels, it will just say “Lincoln” and “5th” (i.e., without “St.”). Let’s fix that. In the Table of Contents, double-click the Streets layer and click the Labels tab. Change the Label Field to Name. Click the Expression button. In the Expression box add the character &amp;amp; after [Name], and then double-click Suffix in the Fields box above. The expression in the box should read [Name] &amp;amp; [Suffix]. Click OK.&lt;/li&gt;
+&lt;li&gt;In the Text Symbol section make the font bold, size 12, and a color that you think will stand out on the map. Click OK.&lt;/li&gt;
+&lt;li&gt;In the Table of Contents, right-click the Streets layer and select Label Features. Do you see labels on the streets?&lt;/li&gt;
+&lt;li&gt;You may notice the lack of space between the name and the suffix of streets. If you wish, you can fix this problem by going back the Expression box and changing the text to [Name] &amp;amp; “ ” [Suffix].&lt;/li&gt;
+&lt;li&gt;Save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;digitize-polygon-features&#34;&gt;Digitize polygon features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the Create Features window, click Parks. Make sure you have the Polygon tool selected.&lt;/li&gt;
+&lt;li&gt;Looking at the map, you should see two trailer parks. For each one, digitize a single polygon over the whole white-ish area. (The process is similar to creating line features in Point Mode.)&lt;/li&gt;
+&lt;li&gt;Save your edits and end the edit session.&lt;/li&gt;
+&lt;li&gt;Open the Parks attribute table. Using the same steps as the Streets layer, add new field called Name, change its Type to Text, and change the Length to 25.&lt;/li&gt;
+&lt;li&gt;Start an edit session. In the attribute table, enter names for the trailer parks (e.g., Northwest Trailer Park, Southeast Trailer Park).&lt;/li&gt;
+&lt;li&gt;Save your edits, end the edit session, and save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;make-a-map&#34;&gt;Make a map&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make a quick map of the study area:
+
+&lt;ul&gt;
+&lt;li&gt;Include the three layers you created.&lt;/li&gt;
+&lt;li&gt;Don’t include the map image (usgsLawEast.tif).&lt;/li&gt;
+&lt;li&gt;Label the Streets and Parks features. If you want to change the look of the labels, play around in the Labels tab in the layer’s Properties.&lt;/li&gt;
+&lt;li&gt;Change the fill color of the StudyArea from Hollow to 10% gray, and make its outline thinner.&lt;/li&gt;
+&lt;li&gt;Include a title, author, north arrow, scale, legend, and neatline.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Export a PNG of the map. Call it GEOG358_Lab04_Part2.png.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You should have two images, which you will submit on blackboard.&lt;/p&gt;
 </description>
     </item>
     

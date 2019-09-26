@@ -555,6 +555,15 @@ Here&amp;rsquo;s a link to the marker datasheet
     </item>
     
     <item>
+      <title>Class 10</title>
+      <link>https://jimcoll.github.io/courses/geog358/lesson10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lesson10/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdwqwKme63dNl2XGba994XoBVYSzjMYyUl0kAx3YY2HLrg?e=8oRzPc&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://jimcoll.github.io/courses/geog358/lab01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1819,7 +1828,7 @@ In this part of the lab you will learn how to digitize features from a scanned U
 &lt;ul&gt;
 &lt;li&gt;Open ArcMap. Close any alerts that pop up.&lt;/li&gt;
 &lt;li&gt;Save the map document in an appropriate place as GEOG358_Lab04_Part2.mxd&lt;/li&gt;
-&lt;li&gt;Click the Add Data button, navigate to the lab data and \ add usgsLawEast.tif and StudyArea.shp.&lt;/li&gt;
+&lt;li&gt;Click the Add Data button, navigate to the lab data and add usgsLawEast.tif and StudyArea.shp.&lt;/li&gt;
 &lt;li&gt;Let’s change the symbology of the StudyArea layer so that the polygons are hollow. The easiest way to do this is to click the colored box under the layer name and then select “Hollow” from the list of symbols. While you’re there, change the Outline Width to 5 so we can see it better. Change the color of the outline if you wish.&lt;/li&gt;
 &lt;li&gt;Right-click the StudyArea layer and select Zoom To Layer. Recognize this area?&lt;/li&gt;
 &lt;li&gt;Click the Pan button (looks like a hand) and then drag the map around until you find the KU campus. (Hint: It’s to the southwest of the study area!)&lt;/li&gt;
@@ -1828,7 +1837,7 @@ In this part of the lab you will learn how to digitize features from a scanned U
 &lt;h3 id=&#34;create-shapefiles-for-digitizing&#34;&gt;Create shapefiles for digitizing&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;In the ArcCatalog window, connect to lab data folder, Right-click in the folder, and select New | Shapefile….&lt;/li&gt;
+&lt;li&gt;In the ArcCatalog window, connect to the lab data folder, Right-click in the folder, and select New | Shapefile….&lt;/li&gt;
 &lt;li&gt;Name the shapefile Buildings and make sure the Feature Type is set to Point.&lt;/li&gt;
 &lt;li&gt;Click the Edit button to add a coordinate system.  Select Projected Coordinate Systems &amp;gt; UTM &amp;gt; NAD 1983 &amp;gt; NAD 1983 UTM Zone 15N.prj&lt;/li&gt;
 &lt;li&gt;Click OK. Click OK again.&lt;/li&gt;

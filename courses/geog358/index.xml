@@ -565,7 +565,7 @@ Here&amp;rsquo;s a link to the marker datasheet
       <link>https://jimcoll.github.io/courses/geog358/lesson10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lesson10/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EeWI4k5QIzxHquOBLAIdrXMBfNwolWNykmtv_DZ2GWdgtA?e=g3zpCF&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EeWI4k5QIzxHquOBLAIdrXMBfNwolWNykmtv_DZ2GWdgtA?e=hvOqY7&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2126,7 +2126,7 @@ Do not select Douglas County.&lt;/p&gt;
 &lt;h3 id=&#34;2-download-data-from-the-multi-resolution-land-characteristics-mrlc-consortium&#34;&gt;2. Download data from the Multi-Resolution Land Characteristics (MRLC) consortium&lt;/h3&gt;
 
 &lt;p&gt;There are several land cover datasets, but perhaps the most pertinent to the US is the National Land Cover Dataset(NLCD), produced by the MRLC Consortium .  Some time last year they updated their data policies and, in what I can only surmise was an effort to streamline data distribution system, made it almost impossible to get their data in a usable form without diving into tools unsuited to an intro level class.  There are two ways in which you can proceed.  If you trust your PC, you can download the whole &lt;a href=&#34;https://s3-us-west-2.amazonaws.com/mrlc/NLCD_2016_Land_Cover_L48_20190424.zip&#34;&gt;1.4 GB NLCD database&lt;/a&gt; and then clip to your county.  Alternatively, you can download the &lt;a href=&#34;https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/land-cover-data-download?qt-science_center_objects=0#qt-science_center_objects&#34;&gt;GAP/LANDFIRE land cover dataset&lt;/a&gt; by state and clip from there.  Regardless of your final choice, after this step you should have an unzipped geotiff in your folder.
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/TNMView.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/LandCoverData.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;3-add-the-data-to-a-new-data-frame&#34;&gt;3. Add the data to a new data frame&lt;/h3&gt;
 

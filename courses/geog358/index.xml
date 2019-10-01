@@ -565,7 +565,16 @@ Here&amp;rsquo;s a link to the marker datasheet
       <link>https://jimcoll.github.io/courses/geog358/lesson10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lesson10/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdwqwKme63dNl2XGba994XoBVYSzjMYyUl0kAx3YY2HLrg?e=8oRzPc&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EeWI4k5QIzxHquOBLAIdrXMBfNwolWNykmtv_DZ2GWdgtA?e=g3zpCF&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Class 11</title>
+      <link>https://jimcoll.github.io/courses/geog358/lesson11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lesson11/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfByhODvQetDsEhqFmsppeQBGskpL6NJBwh_B6Gp7pP-gg?e=jD1khO&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1932,6 +1941,234 @@ Streaming.&lt;/li&gt;
 &lt;li&gt;Include a title, author, north arrow, scale, legend, and neatline.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Export a PNG of the map. Call it GEOG358_Lab04_Part2.png.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You should have two images, which you will submit on blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 05 - Building a GIS database</title>
+      <link>https://jimcoll.github.io/courses/geog358/lab05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lab05/</guid>
+      <description>
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;Learning Objective&lt;/h1&gt;
+
+&lt;p&gt;This lab will teach you how to build a GIS database for Douglas County, KS using existing digital data from the Internet. First you will download data from Kansas Geospatial Community Commons (provided by Data Access and Support Center, or DASC). Then you will define coordinate systems and project the data to Kansas State Plane Coordinate System NAD83 meters North Zone. You will then make a second map of a county of your choice using the USGS National Map Website as your data source.&lt;/p&gt;
+
+&lt;p&gt;The primary goal of this lab is to learn how to retrieve GIS data. Gathering data is often one of the more difficult challenges for beginning GIS users, but there is a wealth of data available on the Internet for free, it just takes a little Google-foo &amp;amp; massaging to get what you want.&lt;/p&gt;
+
+&lt;h1 id=&#34;tutorial&#34;&gt;Tutorial&lt;/h1&gt;
+
+&lt;h2 id=&#34;part-1-creating-a-gis-database&#34;&gt;Part 1: Creating a GIS Database&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-getting-started-create-the-lab05-folder-structure&#34;&gt;1. Getting started: Create the Lab05 folder structure&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a Lab05 folder.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Within that folder, create Part1 and Part2 folders.&lt;/li&gt;
+&lt;li&gt;Within the Part1 folder, create three new folders called…&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DataIn (this will be the folder you download data into)&lt;/li&gt;
+&lt;li&gt;DataClip (this folder will be for data that has been clipped to the Douglas County boundaries),&lt;/li&gt;
+&lt;li&gt;DataProj (this will be the folder in which you will save data that you have projected and renamed)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Within the Part2 folder, create the same folder structure.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/LabInitalLayout.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-download-data-from-the-kansas-geospatial-community-commons&#34;&gt;2. Download data from the Kansas Geospatial Community Commons&lt;/h3&gt;
+
+&lt;p&gt;As we saw in lab 1, a geoportal is a great place to find GIS data.  For data related to Kansas, the &lt;a href=&#34;www.kansasgis.org&#34;&gt;Kansas Data Access Support Center (DASC)&lt;/a&gt; is the place to be.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href=&#34;www.kansasgis.org&#34;&gt;DASC&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In order to download data, you need to create a username and password. To do this, click on “Register” in the upper right corner of the webpage. Feel free to give the KU Department of Geography’s address and phone number as your information:
+
+&lt;ul&gt;
+&lt;li&gt;1475 Jayhawk Blvd, 213 Lindley Hall, University of Kansas Lawrence, KS 66045-7613&lt;/li&gt;
+&lt;li&gt;(785) 864-5143&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Once your account has been confirmed, click on “Catalog.”&lt;/li&gt;
+&lt;li&gt;We are interested in the following data:
+
+&lt;ul&gt;
+&lt;li&gt;Census blocks&lt;/li&gt;
+&lt;li&gt;County boundaries&lt;/li&gt;
+&lt;li&gt;Hydrography features&lt;/li&gt;
+&lt;li&gt;Roads&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Let’s start with the census blocks.
+
+&lt;ul&gt;
+&lt;li&gt;Click the &lt;em&gt;Administrative Boundaries&lt;/em&gt; category and then click Blocks from the list.&lt;/li&gt;
+&lt;li&gt;Click the File Downloads tab in the top panel of the web page.&lt;/li&gt;
+&lt;li&gt;Right-click the TIGER2012_Blocks.zip (2012- Includes 2010 demographic data) link and select Save Link As… When prompted for a location, browse to your Part1 DataIn folder and save it there.&lt;/li&gt;
+&lt;li&gt;Follow the same procedure to download Counties (TIGER2010_Census_County.zip (2010- Includes demographic data) located under Administrative Boundaries).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Now we want to download hydrographic (streams and lakes) data.  Under the &lt;em&gt;Water Resources&lt;/em&gt; category in the &lt;em&gt;Kansas Water Features&lt;/em&gt; data you will find
+
+&lt;ul&gt;
+&lt;li&gt;NHD Flow Lines (NHD_FLOWLINES_SHP.zip)&lt;/li&gt;
+&lt;li&gt;NHD Water Areas (NHD_AREA_SHP.zip)&lt;/li&gt;
+&lt;li&gt;NHD Water Bodies (NHD_WATERBODIES_SHP.zip)
+which are part of the National Hydrography Dataset (NHD). Download them all to your Part1 DataIn folder. (Note: Make sure you’re downloading shapefiles—the first option listed—rather than file geodatabases.) These are big files, so be patient while they’re downloading.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lastly, download the TIGER Roadways – 2012 shapefile (TIGER2012_Roads_Info.zip under the &lt;em&gt;Transportation&lt;/em&gt; category).  Your final folder layout should look like so:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/DataInLayout.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;3-unzipping-data&#34;&gt;3. Unzipping data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using Windows Explorer, extract all the zipped files you downloaded. (One way to do this is to right-click each folder and select Extract All. Another way is to select all the folders, right-click and select 7-Zip, and then select Extract Here.)&lt;/li&gt;
+&lt;li&gt;Open a new map in ArcMap and add all the data you just examined.&lt;/li&gt;
+&lt;li&gt;Save your ArcMap document as GEOG358Lab05_Part1_YourLastName.mxd in your Lab05 folder.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;4-clipping-data&#34;&gt;4. Clipping data&lt;/h3&gt;
+
+&lt;p&gt;To clip data, we theoretically need two pieces of information, the extent we want to clip to and the features we want to clip.  ArcMap follows this convention, although there are a number of caveats to how it is implemented, and there are several ways to accomplish a clip.  Here we will select a single feature from a layer, and the extent of that selection will dictate the extent of the clip.&lt;/p&gt;
+
+&lt;h4 id=&#34;selecting-an-area-to-clip-to&#34;&gt;Selecting an area to clip to:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The layers in your map cover the entire state of Kansas. Since we are making a map of only Douglas County, we will clip off the rest of the data we don’t need. First, we need to select the boundaries to use in our clip analysis. Open the attribute table of Tiger2010_Census_County (Right-click | Open Attribute Table), click the Table Options button (upper left corner) and select Select By Attributes&amp;hellip;.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the box near the bottom of the window, use the mouse to enter the expression:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;“NAME10” = ‘Douglas’
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;This “code” is a variation of SQL (Structured Query Language, remember this from Lab 2?)  It really cares about syntax, so it’s usually best to have ArcMap build the code for you (by using the mouse).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When that is done click the Verify button. If there are no problems, click Apply; if there are problems, double- check to make sure you typed the expression correctly.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Douglas County should now be selected in your attribute table and map.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Close the attribute table.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;clipping-features&#34;&gt;Clipping features:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToolbox. Under Analysis Tools | Extract, double-click the Clip tool.
+
+&lt;ul&gt;
+&lt;li&gt;From the dropdown menu (click the down arrow) for Input Features, select the Tiger2010_Roadways.&lt;/li&gt;
+&lt;li&gt;From the dropdown menu for Clip Features, select Tiger2010_Census_County.&lt;/li&gt;
+&lt;li&gt;For the Output Feature Class, browse to your Part1 DataClip folder and save the file as Tiger2010_Roadways_Clip.shp.&lt;/li&gt;
+&lt;li&gt;Press OK to execute the tool.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;When the Clip tool has finished, turn off all layers in the table of contents except for Tiger2010_Census_County and Tiger2010_Roadways_Clip. If the roads are only shown in Douglas County, your clip was successful.&lt;/li&gt;
+&lt;li&gt;Run the Clip tool again for the other layers: NHDArea, NHDWaterbody, NHD FlowLines and Tiger2012 _Blocks. (Use those layers as the Input Features; Tiger2010_Census_County will be your Clip Feature in every instance. Make sure all output goes into your Part1 DataClip folder.) These steps will take time, so please be patient!&lt;/li&gt;
+&lt;li&gt;Finally, right-click the Tiger2010_Census_County layer, select Data, and select Export Data…. Make sure the Export drop-down menu is set to “Selected features”. Change the output destination to your DataClip folder, change the Save as type to Shapefile, and save the file as DouglasCounty.shp. (This will create a layer of just Douglas County.)&lt;/li&gt;
+&lt;li&gt;Once all clipping is completed, remove the original (i.e., unclipped) layers from your table of contents.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;5-re-project-the-shapefiles-to-kansas-state-plane&#34;&gt;5. Re-project the shapefiles to Kansas State Plane&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In your ArcMap document, you should now have all the newly clipped shapefiles in your Data Frame.&lt;/li&gt;
+&lt;li&gt;Open ArcToolbox, go to Data Management Tools | Projections and Transformations, and double-click the Project tool.&lt;/li&gt;
+&lt;li&gt;Re-project each of the clipped shapefiles to NAD 1983 StatePlane Kansas North FIPS 1501 (Meters).
+
+&lt;ul&gt;
+&lt;li&gt;Projected Coordinate Systems -&amp;gt; State Plane -&amp;gt; NAD 1983 (Meters) -&amp;gt; NAD1983 StatePlane Kansas North FIPS 1501 (Meters).prj)&lt;/li&gt;
+&lt;li&gt;Note: You can search WKID: 6466&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Make sure you save the new files to your Lab05 DataProj folder.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Remove all un-projected data from your map.&lt;/li&gt;
+&lt;li&gt;Right-click the data frame (Layers) and select Properties…. Click the Coordinate System tab and change the coordinate system to NAD1983 State Plane Kansas North FIPS 1501 (meters).prj (the same as above).&lt;/li&gt;
+&lt;li&gt;Zoom in to Douglas County, take a screenshot of your entire screen, and upload the screenshot to Blackboard.  It should look something like:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/DouglasCountyProjected.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;part-2-creating-your-own-county-map&#34;&gt;Part 2: Creating your own county map&lt;/h2&gt;
+
+&lt;p&gt;The following section involves obtaining spatial data from the United States Geological Survey National Map website.  We will create another map of a different county. For this part, we will use the new National Map website to make a map of a county outside of Kansas. If you are not from here, you can select your home county, or pick one you like. If you lack imagination, use one of the following:
+* Aroostook County, in Northernmost Maine
+* Miami-Dade Counties in Southernmost Florida
+Do not select Douglas County.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-download-data-from-usgs-national-map&#34;&gt;1. Download data from USGS National Map&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href=&#34;https://viewer.nationalmap.gov/basic/?howTo=true&#34;&gt;The National Map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Zoom into your area of interest until you can read city and county names on the map.&lt;/li&gt;
+&lt;li&gt;Make sure the Current Extent button is selected at the top.&lt;/li&gt;
+&lt;li&gt;Toggle on Boundaries and Transportation. Make note of the other types of layers that are available on this site. It is a great resource for your final project.&lt;/li&gt;
+&lt;li&gt;Under the catagories you toggled on, make sure you are getting either shapefiles or GeoTIFF, using the correct extent, and then click Find Products&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you did this right, your window should look like so:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/TNMView.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the results tab that appears under each layer, you can…&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Look at the footprint of each layer&lt;/li&gt;
+&lt;li&gt;Look at the metadata for the later&lt;/li&gt;
+&lt;li&gt;Download it&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Go ahead and download the data into your Part 2 DataIn folder.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This process will create separate files for each of the three datasets.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finally, unzip the data.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-download-data-from-the-multi-resolution-land-characteristics-mrlc-consortium&#34;&gt;2. Download data from the Multi-Resolution Land Characteristics (MRLC) consortium&lt;/h3&gt;
+
+&lt;p&gt;There are several land cover datasets, but perhaps the most pertinent to the US is the National Land Cover Dataset(NLCD), produced by the MRLC Consortium .  Some time last year they updated their data policies and, in what I can only surmise was an effort to streamline data distribution system, made it almost impossible to get their data in a usable form without diving into tools unsuited to an intro level class.  There are two ways in which you can proceed.  If you trust your PC, you can download the whole &lt;a href=&#34;https://s3-us-west-2.amazonaws.com/mrlc/NLCD_2016_Land_Cover_L48_20190424.zip&#34;&gt;1.4 GB NLCD database&lt;/a&gt; and then clip to your county.  Alternatively, you can download the &lt;a href=&#34;https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/land-cover-data-download?qt-science_center_objects=0#qt-science_center_objects&#34;&gt;GAP/LANDFIRE land cover dataset&lt;/a&gt; by state and clip from there.  Regardless of your final choice, after this step you should have an unzipped geotiff in your folder.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/TNMView.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;3-add-the-data-to-a-new-data-frame&#34;&gt;3. Add the data to a new data frame&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Insert &amp;gt; New data frame&lt;/li&gt;
+&lt;li&gt;Rename the new data frame to part 2&lt;/li&gt;
+&lt;li&gt;Add the data to this data frame&lt;/li&gt;
+&lt;li&gt;you should have the one raster (Land Cover) and two shapefiles (Boundaries and transportation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;4-re-project-the-layers-to-the-appropriate-utm-zone-projection&#34;&gt;4. Re-project the Layers to the appropriate UTM zone projection.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To decide which UTM zone is appropriate, remember you have the world at your fingertips (Google it)&lt;/li&gt;
+&lt;li&gt;Check the projection of your raster by inspecting the source tab in its properties window. If it is not in the UTM zone you intend to use, reproject it.
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToolbox and use the Data Management | Projection and Transformations| Raster | Project Raster tool to re-project the rasters to Projected Coordinate systems &amp;gt; UTM &amp;gt; NAD1983 &amp;gt; UTM Zone ??? N.prj&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Project your shapefiles into the same UTM zone. Data Management | Projection and Transformations| Project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;5-clip-the-layers-to-the-area-of-interest&#34;&gt;5. Clip the layers to the area of interest&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;At this point, let’s explore the search function.  If we were to phrase what we want to accomplish using GIS terminology, we want to clip a raster to a shapefile.  We don’t really know if this is possible, but if we search for “clip” we get several variants including…
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/ClipSearchResults.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Lo and behold, the third clip tool (in the Data Management) toolbox seems promising.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Go ahead and click on the correct tool and set up the tool like so.&lt;br /&gt;
+&amp;gt; Notes:
+&amp;gt; Again, include .tif in the filename
+&amp;gt; If your area is irregular and you want to make a tight clip (as opposed to an outer bounding box clip), check the “Use input clipping geometry (optional)” box
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/ClipToolSetup.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;6-make-a-map&#34;&gt;6 Make a map&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Produce a map (keeping in mind our cartographic rules) of the reprojected county data containing the following layers: roads on top of the LAND COVER raster. If you would like, the map can show only a zoomed in portion of your county, rather than the whole thing. For this map, you need to include your name, title, legend, scale bar and north arrow. Be sure to save your map. Now export it as an image named yournameLab5Part2.png. Save the .png in your Lab06 folder and upload it to blackboard.  Spend, at the very minimum, ten minutes on this, a bad looking map is worse at communicating an idea than no map at all.  As a reference, here is what 10 minutes of my time looks like.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/MyMap.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You should have two images, which you will submit on blackboard.&lt;/p&gt;

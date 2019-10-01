@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning Objective This lab will teach you how to build a GIS database for Douglas County, KS using existing digital data from the Internet. First you will download data from Kansas Geospatial Community Commons (provided by Data Access and Support Center, or DASC). Then you will define coordinate systems and project the data to Kansas State Plane Coordinate System NAD83 meters North Zone. You will then make a second map of a county of your choice using the USGS National Map Website as your data source.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab05/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog358/lab05/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab05/">
+  <meta property="og:title" content="Lab 05 - Building a GIS database | Jim Coll">
+  <meta property="og:description" content="Learning Objective This lab will teach you how to build a GIS database for Douglas County, KS using existing digital data from the Internet. First you will download data from Kansas Geospatial Community Commons (provided by Data Access and Support Center, or DASC). Then you will define coordinate systems and project the data to Kansas State Plane Coordinate System NAD83 meters North Zone. You will then make a second map of a county of your choice using the USGS National Map Website as your data source."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 05 - Building a GIS database | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/classoutline/">Class outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/termpaper/">Project</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog358/lab01/">Lab 1</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab02/">Lab 2</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab03/">Lab 3</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab04/">Lab 4</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog358/lab05/">Lab 5</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lesson01/">Lecture</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog358/lesson01/">Class 01</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson02/">Class 02</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson03/">Class 03</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson04/">Class 04</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson05/">Class 05</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson06/">Class 06</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson07/">Class 07</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson08/">Class 08</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson09/">Class 09</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson10/">Class 10</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lesson11/">Class 11</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#learning-objective">Learning Objective</a></li>
+<li><a href="#tutorial">Tutorial</a>
+<ul>
+<li><a href="#part-1-creating-a-gis-database">Part 1: Creating a GIS Database</a>
+<ul>
+<li><a href="#1-getting-started-create-the-lab05-folder-structure">1. Getting started: Create the Lab05 folder structure</a></li>
+<li><a href="#2-download-data-from-the-kansas-geospatial-community-commons">2. Download data from the Kansas Geospatial Community Commons</a></li>
+<li><a href="#3-unzipping-data">3. Unzipping data</a></li>
+<li><a href="#4-clipping-data">4. Clipping data</a>
+<ul>
+<li><a href="#selecting-an-area-to-clip-to">Selecting an area to clip to:</a></li>
+<li><a href="#clipping-features">Clipping features:</a></li>
+</ul></li>
+<li><a href="#5-re-project-the-shapefiles-to-kansas-state-plane">5. Re-project the shapefiles to Kansas State Plane</a></li>
+</ul></li>
+<li><a href="#part-2-creating-your-own-county-map">Part 2: Creating your own county map</a>
+<ul>
+<li><a href="#1-download-data-from-usgs-national-map">1. Download data from USGS National Map</a></li>
+<li><a href="#2-download-data-from-the-multi-resolution-land-characteristics-mrlc-consortium">2. Download data from the Multi-Resolution Land Characteristics (MRLC) consortium</a></li>
+<li><a href="#3-add-the-data-to-a-new-data-frame">3. Add the data to a new data frame</a></li>
+<li><a href="#4-re-project-the-layers-to-the-appropriate-utm-zone-projection">4. Re-project the Layers to the appropriate UTM zone projection.</a></li>
+<li><a href="#5-clip-the-layers-to-the-area-of-interest">5. Clip the layers to the area of interest</a></li>
+<li><a href="#6-make-a-map">6 Make a map</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 05 - Building a GIS database</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="learning-objective">Learning Objective</h1>
+
+<p>This lab will teach you how to build a GIS database for Douglas County, KS using existing digital data from the Internet. First you will download data from Kansas Geospatial Community Commons (provided by Data Access and Support Center, or DASC). Then you will define coordinate systems and project the data to Kansas State Plane Coordinate System NAD83 meters North Zone. You will then make a second map of a county of your choice using the USGS National Map Website as your data source.</p>
+
+<p>The primary goal of this lab is to learn how to retrieve GIS data. Gathering data is often one of the more difficult challenges for beginning GIS users, but there is a wealth of data available on the Internet for free, it just takes a little Google-foo &amp; massaging to get what you want.</p>
+
+<h1 id="tutorial">Tutorial</h1>
+
+<h2 id="part-1-creating-a-gis-database">Part 1: Creating a GIS Database</h2>
+
+<h3 id="1-getting-started-create-the-lab05-folder-structure">1. Getting started: Create the Lab05 folder structure</h3>
+
+<ul>
+<li>Create a Lab05 folder.<br /></li>
+<li>Within that folder, create Part1 and Part2 folders.</li>
+<li>Within the Part1 folder, create three new folders called…<br />
+
+<ul>
+<li>DataIn (this will be the folder you download data into)</li>
+<li>DataClip (this folder will be for data that has been clipped to the Douglas County boundaries),</li>
+<li>DataProj (this will be the folder in which you will save data that you have projected and renamed)</li>
+</ul></li>
+<li>Within the Part2 folder, create the same folder structure.
+<img src="/courses/geog358/media/LabInitalLayout.png" alt="" /></li>
+</ul>
+
+<h3 id="2-download-data-from-the-kansas-geospatial-community-commons">2. Download data from the Kansas Geospatial Community Commons</h3>
+
+<p>As we saw in lab 1, a geoportal is a great place to find GIS data.  For data related to Kansas, the <a href="www.kansasgis.org">Kansas Data Access Support Center (DASC)</a> is the place to be.</p>
+
+<ul>
+<li>Go to <a href="www.kansasgis.org">DASC</a><br /></li>
+<li>In order to download data, you need to create a username and password. To do this, click on “Register” in the upper right corner of the webpage. Feel free to give the KU Department of Geography’s address and phone number as your information:
+
+<ul>
+<li>1475 Jayhawk Blvd, 213 Lindley Hall, University of Kansas Lawrence, KS 66045-7613</li>
+<li>(785) 864-5143</li>
+</ul></li>
+<li>Once your account has been confirmed, click on “Catalog.”</li>
+<li>We are interested in the following data:
+
+<ul>
+<li>Census blocks</li>
+<li>County boundaries</li>
+<li>Hydrography features</li>
+<li>Roads</li>
+</ul></li>
+<li>Let’s start with the census blocks.
+
+<ul>
+<li>Click the <em>Administrative Boundaries</em> category and then click Blocks from the list.</li>
+<li>Click the File Downloads tab in the top panel of the web page.</li>
+<li>Right-click the TIGER2012_Blocks.zip (2012- Includes 2010 demographic data) link and select Save Link As… When prompted for a location, browse to your Part1 DataIn folder and save it there.</li>
+<li>Follow the same procedure to download Counties (TIGER2010_Census_County.zip (2010- Includes demographic data) located under Administrative Boundaries).</li>
+</ul></li>
+<li>Now we want to download hydrographic (streams and lakes) data.  Under the <em>Water Resources</em> category in the <em>Kansas Water Features</em> data you will find
+
+<ul>
+<li>NHD Flow Lines (NHD_FLOWLINES_SHP.zip)</li>
+<li>NHD Water Areas (NHD_AREA_SHP.zip)</li>
+<li>NHD Water Bodies (NHD_WATERBODIES_SHP.zip)
+which are part of the National Hydrography Dataset (NHD). Download them all to your Part1 DataIn folder. (Note: Make sure you’re downloading shapefiles—the first option listed—rather than file geodatabases.) These are big files, so be patient while they’re downloading.</li>
+</ul></li>
+<li>Lastly, download the TIGER Roadways – 2012 shapefile (TIGER2012_Roads_Info.zip under the <em>Transportation</em> category).  Your final folder layout should look like so:
+<img src="/courses/geog358/media/DataInLayout.png" alt="" /></li>
+</ul>
+
+<h3 id="3-unzipping-data">3. Unzipping data</h3>
+
+<ul>
+<li>Using Windows Explorer, extract all the zipped files you downloaded. (One way to do this is to right-click each folder and select Extract All. Another way is to select all the folders, right-click and select 7-Zip, and then select Extract Here.)</li>
+<li>Open a new map in ArcMap and add all the data you just examined.</li>
+<li>Save your ArcMap document as GEOG358Lab05_Part1_YourLastName.mxd in your Lab05 folder.</li>
+</ul>
+
+<h3 id="4-clipping-data">4. Clipping data</h3>
+
+<p>To clip data, we theoretically need two pieces of information, the extent we want to clip to and the features we want to clip.  ArcMap follows this convention, although there are a number of caveats to how it is implemented, and there are several ways to accomplish a clip.  Here we will select a single feature from a layer, and the extent of that selection will dictate the extent of the clip.</p>
+
+<h4 id="selecting-an-area-to-clip-to">Selecting an area to clip to:</h4>
+
+<ul>
+<li>The layers in your map cover the entire state of Kansas. Since we are making a map of only Douglas County, we will clip off the rest of the data we don’t need. First, we need to select the boundaries to use in our clip analysis. Open the attribute table of Tiger2010_Census_County (Right-click | Open Attribute Table), click the Table Options button (upper left corner) and select Select By Attributes&hellip;.</li>
+
+<li><p>In the box near the bottom of the window, use the mouse to enter the expression:</p>
+
+<pre><code class="language-SQL">“NAME10” = ‘Douglas’
+</code></pre></li>
+
+<li><p>This “code” is a variation of SQL (Structured Query Language, remember this from Lab 2?)  It really cares about syntax, so it’s usually best to have ArcMap build the code for you (by using the mouse).</p></li>
+
+<li><p>When that is done click the Verify button. If there are no problems, click Apply; if there are problems, double- check to make sure you typed the expression correctly.</p></li>
+
+<li><p>Douglas County should now be selected in your attribute table and map.</p></li>
+
+<li><p>Close the attribute table.</p></li>
+</ul>
+
+<h4 id="clipping-features">Clipping features:</h4>
+
+<ul>
+<li>Open ArcToolbox. Under Analysis Tools | Extract, double-click the Clip tool.
+
+<ul>
+<li>From the dropdown menu (click the down arrow) for Input Features, select the Tiger2010_Roadways.</li>
+<li>From the dropdown menu for Clip Features, select Tiger2010_Census_County.</li>
+<li>For the Output Feature Class, browse to your Part1 DataClip folder and save the file as Tiger2010_Roadways_Clip.shp.</li>
+<li>Press OK to execute the tool.</li>
+</ul></li>
+<li>When the Clip tool has finished, turn off all layers in the table of contents except for Tiger2010_Census_County and Tiger2010_Roadways_Clip. If the roads are only shown in Douglas County, your clip was successful.</li>
+<li>Run the Clip tool again for the other layers: NHDArea, NHDWaterbody, NHD FlowLines and Tiger2012 _Blocks. (Use those layers as the Input Features; Tiger2010_Census_County will be your Clip Feature in every instance. Make sure all output goes into your Part1 DataClip folder.) These steps will take time, so please be patient!</li>
+<li>Finally, right-click the Tiger2010_Census_County layer, select Data, and select Export Data…. Make sure the Export drop-down menu is set to “Selected features”. Change the output destination to your DataClip folder, change the Save as type to Shapefile, and save the file as DouglasCounty.shp. (This will create a layer of just Douglas County.)</li>
+<li>Once all clipping is completed, remove the original (i.e., unclipped) layers from your table of contents.</li>
+</ul>
+
+<h3 id="5-re-project-the-shapefiles-to-kansas-state-plane">5. Re-project the shapefiles to Kansas State Plane</h3>
+
+<ul>
+<li>In your ArcMap document, you should now have all the newly clipped shapefiles in your Data Frame.</li>
+<li>Open ArcToolbox, go to Data Management Tools | Projections and Transformations, and double-click the Project tool.</li>
+<li>Re-project each of the clipped shapefiles to NAD 1983 StatePlane Kansas North FIPS 1501 (Meters).
+
+<ul>
+<li>Projected Coordinate Systems -&gt; State Plane -&gt; NAD 1983 (Meters) -&gt; NAD1983 StatePlane Kansas North FIPS 1501 (Meters).prj)</li>
+<li>Note: You can search WKID: 6466<br /></li>
+<li>Make sure you save the new files to your Lab05 DataProj folder.</li>
+</ul></li>
+<li>Remove all un-projected data from your map.</li>
+<li>Right-click the data frame (Layers) and select Properties…. Click the Coordinate System tab and change the coordinate system to NAD1983 State Plane Kansas North FIPS 1501 (meters).prj (the same as above).</li>
+<li>Zoom in to Douglas County, take a screenshot of your entire screen, and upload the screenshot to Blackboard.  It should look something like:
+<img src="/courses/geog358/media/DouglasCountyProjected.png" alt="" /></li>
+</ul>
+
+<h2 id="part-2-creating-your-own-county-map">Part 2: Creating your own county map</h2>
+
+<p>The following section involves obtaining spatial data from the United States Geological Survey National Map website.  We will create another map of a different county. For this part, we will use the new National Map website to make a map of a county outside of Kansas. If you are not from here, you can select your home county, or pick one you like. If you lack imagination, use one of the following:
+* Aroostook County, in Northernmost Maine
+* Miami-Dade Counties in Southernmost Florida
+Do not select Douglas County.</p>
+
+<h3 id="1-download-data-from-usgs-national-map">1. Download data from USGS National Map</h3>
+
+<ul>
+<li>Go to <a href="https://viewer.nationalmap.gov/basic/?howTo=true">The National Map</a></li>
+<li>Zoom into your area of interest until you can read city and county names on the map.</li>
+<li>Make sure the Current Extent button is selected at the top.</li>
+<li>Toggle on Boundaries and Transportation. Make note of the other types of layers that are available on this site. It is a great resource for your final project.</li>
+<li>Under the catagories you toggled on, make sure you are getting either shapefiles or GeoTIFF, using the correct extent, and then click Find Products</li>
+
+<li><p>If you did this right, your window should look like so:
+<img src="/courses/geog358/media/TNMView.PNG" alt="" /></p></li>
+
+<li><p>In the results tab that appears under each layer, you can…</p>
+
+<ul>
+<li>Look at the footprint of each layer</li>
+<li>Look at the metadata for the later</li>
+<li>Download it</li>
+</ul></li>
+
+<li><p>Go ahead and download the data into your Part 2 DataIn folder.</p>
+
+<ul>
+<li>This process will create separate files for each of the three datasets.</li>
+</ul></li>
+
+<li><p>Finally, unzip the data.</p></li>
+</ul>
+
+<h3 id="2-download-data-from-the-multi-resolution-land-characteristics-mrlc-consortium">2. Download data from the Multi-Resolution Land Characteristics (MRLC) consortium</h3>
+
+<p>There are several land cover datasets, but perhaps the most pertinent to the US is the National Land Cover Dataset(NLCD), produced by the MRLC Consortium .  Some time last year they updated their data policies and, in what I can only surmise was an effort to streamline data distribution system, made it almost impossible to get their data in a usable form without diving into tools unsuited to an intro level class.  There are two ways in which you can proceed.  If you trust your PC, you can download the whole <a href="https://s3-us-west-2.amazonaws.com/mrlc/NLCD_2016_Land_Cover_L48_20190424.zip">1.4 GB NLCD database</a> and then clip to your county.  Alternatively, you can download the <a href="https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/land-cover-data-download?qt-science_center_objects=0#qt-science_center_objects">GAP/LANDFIRE land cover dataset</a> by state and clip from there.  Regardless of your final choice, after this step you should have an unzipped geotiff in your folder.
+<img src="/courses/geog358/media/TNMView.PNG" alt="" /></p>
+
+<h3 id="3-add-the-data-to-a-new-data-frame">3. Add the data to a new data frame</h3>
+
+<ul>
+<li>Insert &gt; New data frame</li>
+<li>Rename the new data frame to part 2</li>
+<li>Add the data to this data frame</li>
+<li>you should have the one raster (Land Cover) and two shapefiles (Boundaries and transportation)</li>
+</ul>
+
+<h3 id="4-re-project-the-layers-to-the-appropriate-utm-zone-projection">4. Re-project the Layers to the appropriate UTM zone projection.</h3>
+
+<ul>
+<li>To decide which UTM zone is appropriate, remember you have the world at your fingertips (Google it)</li>
+<li>Check the projection of your raster by inspecting the source tab in its properties window. If it is not in the UTM zone you intend to use, reproject it.
+
+<ul>
+<li>Open ArcToolbox and use the Data Management | Projection and Transformations| Raster | Project Raster tool to re-project the rasters to Projected Coordinate systems &gt; UTM &gt; NAD1983 &gt; UTM Zone ??? N.prj</li>
+</ul></li>
+<li>Project your shapefiles into the same UTM zone. Data Management | Projection and Transformations| Project.</li>
+</ul>
+
+<h3 id="5-clip-the-layers-to-the-area-of-interest">5. Clip the layers to the area of interest</h3>
+
+<ul>
+<li><p>At this point, let’s explore the search function.  If we were to phrase what we want to accomplish using GIS terminology, we want to clip a raster to a shapefile.  We don’t really know if this is possible, but if we search for “clip” we get several variants including…
+<img src="/courses/geog358/media/ClipSearchResults.png" alt="" /></p></li>
+
+<li><p>Lo and behold, the third clip tool (in the Data Management) toolbox seems promising.</p></li>
+
+<li><p>Go ahead and click on the correct tool and set up the tool like so.<br />
+&gt; Notes:
+&gt; Again, include .tif in the filename
+&gt; If your area is irregular and you want to make a tight clip (as opposed to an outer bounding box clip), check the “Use input clipping geometry (optional)” box
+<img src="/courses/geog358/media/ClipToolSetup.png" alt="" /></p></li>
+</ul>
+
+<h3 id="6-make-a-map">6 Make a map</h3>
+
+<ul>
+<li>Produce a map (keeping in mind our cartographic rules) of the reprojected county data containing the following layers: roads on top of the LAND COVER raster. If you would like, the map can show only a zoomed in portion of your county, rather than the whole thing. For this map, you need to include your name, title, legend, scale bar and north arrow. Be sure to save your map. Now export it as an image named yournameLab5Part2.png. Save the .png in your Lab06 folder and upload it to blackboard.  Spend, at the very minimum, ten minutes on this, a bad looking map is worse at communicating an idea than no map at all.  As a reference, here is what 10 minutes of my time looks like.
+<img src="/courses/geog358/media/MyMap.png" alt="" /></li>
+</ul>
+
+<p>You should have two images, which you will submit on blackboard.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

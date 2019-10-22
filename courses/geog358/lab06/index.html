@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning Objective As is more often the case than not, the information we need to answer a question are in separate places (read: shapefiles). Therefore, we need to join that data together. However, the concept of joins are communicated, implemented, and executed very differently within a computer/GIS context than they are in everyday language. Database joins are their own class in computer science/engineering, and we won’t cover all of them in this class.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab06/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog358/lab06/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab06/">
+  <meta property="og:title" content="Lab 06 - Selections Queries and Joins | Jim Coll">
+  <meta property="og:description" content="Learning Objective As is more often the case than not, the information we need to answer a question are in separate places (read: shapefiles). Therefore, we need to join that data together. However, the concept of joins are communicated, implemented, and executed very differently within a computer/GIS context than they are in everyday language. Database joins are their own class in computer science/engineering, and we won’t cover all of them in this class."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 06 - Selections Queries and Joins | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/classoutline/">Class Outline and Lecture Notes</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/termpaper/">Project</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog358/lab01/">Lab 1 - Intro to ArcMap</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab02/">Lab 2 - Projections and Coordinate Systems</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab03/">Lab 3 - Using GPS for Field Data Collection</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab04/">Lab 4 - Georeferenceing and Intro to digitization</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab05/">Lab 5 - Building a GIS database</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog358/lab06/">Lab 6 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#learning-objective">Learning Objective</a>
+<ul>
+<li><a href="#part-1-attribute-spatial-queries">Part 1: Attribute &amp; Spatial Queries</a>
+<ul>
+<li><a href="#1-download-the-lab-data">1. Download the lab data</a></li>
+<li><a href="#2-attribute-queries-select-by-attribute">2. Attribute Queries (Select by Attribute)</a></li>
+<li><a href="#2-selection-statistics">2. Selection Statistics</a></li>
+<li><a href="#3-spatial-queries">3. Spatial Queries</a></li>
+</ul></li>
+<li><a href="#part-two-attribute-joins-and-spatial-joins">Part Two: Attribute Joins and Spatial Joins</a>
+<ul>
+<li><a href="#1-join-the-insurance-database-to-the-spatial-data">1. Join the insurance database to the spatial data</a></li>
+<li><a href="#2-determine-the-distance-of-each-home-to-san-andreas-ssz">2.  Determine the distance of each home to San Andreas SSZ</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 06 - Selections Queries and Joins</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="learning-objective">Learning Objective</h1>
+
+<p>As is more often the case than not, the information we need to answer a question are in separate places (read: shapefiles).  Therefore, we need to join that data together.  However, the concept of joins are communicated, implemented, and executed very differently within a computer/GIS context than they are in everyday language.  Database joins are their own class in computer science/engineering, and we won’t cover all of them in this class.  For this lab we will use two, a left join and geographic joins.  You can think about left joins as joining two excel sheets together based on a common (or key) field.  Spatial joins append entries that match the geographic filter (interest, buffer, ect.)</p>
+
+<h2 id="part-1-attribute-spatial-queries">Part 1: Attribute &amp; Spatial Queries</h2>
+
+<p>In this part we will execute queries by attribute, queries by space, and spatial joins. We will also conduct a simple analysis using these functions.</p>
+
+<p><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Ec0rmWqkQeFBo5v4RyuGZZwB6CC-W_4F_77X0OKvzqTicA?e=S2lCWn">Materials (click to download)</a></p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">bookstores.shp</td>
+    <td class="tg-btxf">Bookstores in South Carolina</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">counties.shp</td>
+    <td class="tg-0pky">Counties in South Carolina</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">istates.shp</td>
+    <td class="tg-btxf">Interstates that pass through South Carolina</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">shomes.shp</td>
+    <td class="tg-0pky">Surveyed homeowners in Santa Clara County</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">sszpoly.shp</td>
+    <td class="tg-0pky">San Andreas Fault Special Study Zone (SSZ) near Santa Clara</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">insustatus.dbf</td>
+    <td class="tg-0pky">Insurance status of surveyed homeowners in Santa Clara County 1 = Insured; 2 = Not Insured</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">GEOG358_Lab6AnswerSheet_YourLastName.docx</td>
+    <td class="tg-0pky">Lab handout</td>
+  </tr>
+</table></p>
+
+<h3 id="1-download-the-lab-data">1. Download the lab data</h3>
+
+<ul>
+<li>Open ArcMap.</li>
+<li>Add <em>bookstores.shp</em>, <em>counties.shp</em>, and <em>istates.shp</em> from the Part01 folder to your data frame.</li>
+<li>Go to the data frame (<em>Layers</em>) properties and click on the <strong>General</strong> tab. Make sure the Map Units are set to <strong>Meters</strong> and the Display Units are set to <strong>Miles</strong>. Click <strong>OK</strong>.</li>
+</ul>
+
+<h3 id="2-attribute-queries-select-by-attribute">2. Attribute Queries (Select by Attribute)</h3>
+
+<ul>
+<li>Go to <strong>Selection | Select By Attribute</strong>
+
+<ul>
+<li>Set the Layer to counties.</li>
+</ul></li>
+<li>Make sure the Method option is set to <strong>Create a new selection</strong>.</li>
+<li>The attributes for the counties layer (<em>“FID”, “AREA”, …</em>) are displayed in the upper half of the window. You can double click on the attributes of interest to make it part of the expression in the lower half of the window. In the middle are the various operators that you will use. On the right, you can click the <strong>Get Unique Values</strong> button, which will display all of the unique values for the attribute you selected.
+
+<ul>
+<li>An example of an expression is (“countyname” = ‘Douglas’), where Douglas county would be selected if we had a Kansas county dataset.</li>
+</ul></li>
+<li>Let’s <strong>select the counties where populations in 1990 were greater than 30,000 people</strong>.
+
+<ul>
+<li>In the box with the attributes, scroll down and double-click “POP1990”. Notice that it shows up in the lower box.</li>
+<li>Now click the &gt; button. In the lower box, type 30000 (no commas!) so that your expression reads: &ldquo;POP1990&rdquo; &gt; 30000.</li>
+<li>Note that you can always just type the entire expression yourself instead of double-clicking attribute names, etc.; the advantage of double- clicking attribute names, however, is that it reduces the probability of typos in your expression.</li>
+<li>Check your expression by clicking the Verify button. If everything is correct, the program will tell you that “The expression was successfully verified.”</li>
+<li>Click Apply once the expression is verified and then look at the map. You should see most of the counties selected.</li>
+</ul></li>
+</ul>
+
+<h3 id="2-selection-statistics">2. Selection Statistics</h3>
+
+<ul>
+<li>Go to <strong>Selection | Statistics</strong>. This function calculates statistics based on the attributes of the selected features. If you have five counties selected, for example, you can find out the average area of those counties by selecting Area in the Field menu and then looking at the statistics below it. Changing the attributes in the Field menu won’t change which features you have selected.</li>
+<li>Using the <strong>Select By Attributes and Statistics tools, answer <em>Questions #1 through #5 on the assignment sheet</em></strong>. Note that the Select By Attributes and Statistics windows can be open at the same time.</li>
+<li>Clear the selected counties by going to <strong>Selection | Clear Select Features</strong> or by clicking the <strong>Clear Selected Features</strong> button.</li>
+<li>Close the Select By Attributes and Statistics windows.</li>
+</ul>
+
+<h3 id="3-spatial-queries">3. Spatial Queries</h3>
+
+<ul>
+<li>Open the counties layer properties. Click the Selection tab, click with this color, and select a bright red color. Click Apply and OK.</li>
+<li>Use the same procedure to make the bookstores layer selections green and the istates layer selections yellow.</li>
+<li>Use the <strong>Select By Attributes function</strong> to select <em>Richland County</em>.
+
+<ul>
+<li>Hint: Think about which attribute would contain the names of counties, select it, and then use the Get Unique Values button to get the list of county names.</li>
+</ul></li>
+<li>Now go to <strong>Selection | Select by Location…</strong> with the following parameters:
+
+<ul>
+<li><em>Selection method</em>: select features from</li>
+<li><em>Target layer(s)</em>: bookstores</li>
+<li><em>Source layer</em>: counties</li>
+<li><em>Use selected features</em>: (yes)</li>
+<li><em>Spatial selection method…</em>: are completely within the source layer feature</li>
+</ul></li>
+<li>Click Apply.</li>
+<li>All the bookstores in Richland County should now be green, indicating that they were properly selected.</li>
+<li>Go to <strong>Selection | Statistics</strong> to find how many bookstores are in Richland County.
+
+<ul>
+<li>Hint: Make sure the bookstores layer is selected!</li>
+</ul></li>
+<li><strong><em>Answer Question #6 on the assignment sheet</em></strong>.</li>
+<li>Clear the selected features.</li>
+<li>Use the <strong>Select By Attributes</strong> tool to select Interstate 26 in the <em>istates</em> layer.
+
+<ul>
+<li>Hint: Don’t use the ISTATES_ or ISTATES_ID attributes.</li>
+</ul></li>
+<li>I-26 will be highlighted as yellow.</li>
+<li>Use the <strong>Select by Location</strong> tool with the following parameters:
+
+<ul>
+<li><em>Selection method</em>: select features from</li>
+<li><em>Target layer(s)</em>: counties</li>
+<li><em>Source layer</em>: istates</li>
+<li><em>Use selected features</em>: (yes)</li>
+<li><em>Spatial selection method…</em>: intersect (3d) the source layer feature</li>
+</ul></li>
+<li>Click Apply.</li>
+<li>The counties that I-26 passes through will turn red.</li>
+<li>Use the Statistics tool to find the <em>mean</em> median home income for those counties. (Yes, the mean of the median.)</li>
+<li><strong><em>Answer Question #7 on the assignment sheet</em></strong>.</li>
+<li>Clear the selected features.</li>
+<li>Let’s find bookstores that are within 15 miles of I-26. As before, select I-26 from the <em>istates</em> layer.</li>
+<li>Use the <strong>Select By Location</strong> tool with the following parameters:
+
+<ul>
+<li><em>Selection method</em>: select features from</li>
+<li><em>Target layer(s)</em>: bookstores</li>
+<li><em>Source layer</em>: istates</li>
+<li><em>Use selected features</em>: (yes)</li>
+<li><em>Spatial selection method</em>: are within a distance of the source layer feature</li>
+<li>Apply a search distance (this will be grayed out): 15 miles</li>
+</ul></li>
+<li><strong><em>Answer Question #8 on the assignment sheet</em></strong>.</li>
+<li>Clear selected features.</li>
+<li><strong><em>Answer Question #9 on the assignment sheet</em></strong>.</li>
+<li>Save your map document.</li>
+</ul>
+
+<h2 id="part-two-attribute-joins-and-spatial-joins">Part Two: Attribute Joins and Spatial Joins</h2>
+
+<p>In this part we will execute a spatial join and then conduct a simple analysis.
+The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm Pacific Time. The epicenter was 37° 02&rsquo; 00&rdquo; N and 121° 53&rsquo; 23&rdquo; W. A large number of residential homes were damaged by the earthquake, and many were destroyed. You will be investigating the distribution of damaged homes in relation to active surface faults.</p>
+
+<h3 id="1-join-the-insurance-database-to-the-spatial-data">1. Join the insurance database to the spatial data</h3>
+
+<ul>
+<li>Open a new ArcMap document or add a new data frame.</li>
+<li>Add <em>shomes.shp</em>, <em>sszpoly.shp</em> and <em>insustatus.dbf</em> from the Part02 folder to the workspace. If you get a warning about an Unknown Spatial Reference, just click OK.</li>
+<li>Set the data frame map units to Meters and display units to Miles.</li>
+<li>Open the <strong>attribute table</strong> of the shomes layer. <strong><em>Answer Question #10 on the assignment sheet</em></strong>.</li>
+<li><strong>Right-click</strong> the <em>shomes</em> layer and select <strong>Joins and Relates | Join…</strong>. Use the following parameters:
+
+<ul>
+<li><em>What do you want to join to this layer?</em>: Join attributes from a table</li>
+<li><em>Choose the field in this layer&hellip;</em>: PID</li>
+<li><em>Choose the table to join&hellip;</em>: insustatus</li>
+<li><em>Choose the field in the table&hellip;</em>: ID</li>
+<li><em>Join Options</em>: Keep all records</li>
+</ul></li>
+<li>Click Validate Join. This is similar to the Verify button we saw in the Select By Attributes tool; it makes sure that all the right conditions are in place for the join operation to execute successfully.  When you become more comfertable with the workflow/system, this is something you may be tempted to skip, but unless you are <strong>sure</strong> that the join will work, it&rsquo;s usually best to just check.
+
+<ul>
+<li>If you are asked whether to create an index, click Yes.</li>
+</ul></li>
+<li>Open the <strong>attribute table</strong> of the <em>shomes</em> layer. <strong><em>Answer Question #11 on the assignment sheet</em></strong>.</li>
+<li>Use the rest of this handout to <strong><em>fill in Question #12 on the assignment sheet</em></strong>.</li>
+<li>Right-click on <em>shomes</em> and select <strong>Selection | Select All</strong>. <strong><em>Write down the total number of surveyed homes in the table on the assignment sheet</em></strong>.
+
+<ul>
+<li>Hint: Use the *Statistics** tool or just look at the bottom of the attribute table.</li>
+</ul></li>
+<li>Use <strong>Select By Attributes</strong> to select the homes that were insured before the Loma Prieta earthquake: Using the PRELOMAINS attribute, 1 = Insured and 2 = Not insured. <strong><em>Write this information down in the table</em></strong>.</li>
+<li>Do the same for homes that were insured after the earthquake (POSTLOMAIN).</li>
+<li>Clear the selected features.</li>
+</ul>
+
+<h3 id="2-determine-the-distance-of-each-home-to-san-andreas-ssz">2.  Determine the distance of each home to San Andreas SSZ</h3>
+
+<ul>
+<li>Right-click the <em>shomes</em> layer and select <em>Joins and Relates | Remove Join(s) | insustatus</em>.</li>
+<li>Right-click <em>shomes</em> again and select <em>Joins and Relates | Join…</em> and use the following parameters:
+
+<ul>
+<li><em>What do you want to join to this layer?</em>: Join data from another layer based on spatial location</li>
+<li><em>Choose the layer to join to this layer&hellip;</em>: sszpoly</li>
+<li><em>Each point will be given all the attributes of the polygon that</em>: is closest to it (Don’t press OK yet.)</li>
+</ul></li>
+<li>Click on the <strong>open folder</strong> icon and save the output <em>housepolysj.shp</em> in your Part02 folder.</li>
+<li>Now you can click OK</li>
+<li>Open the <strong>attribute table</strong> of your new layer and notice the Distance attribute that was created. This tells you how many meters that particular point is away from the nearest polygon.</li>
+<li><strong>Select</strong> all features in housepolysj and use <strong>Statistics</strong> to find the average (mean) distance between the homes and San Andreas Special Study Zone (SSZ). <strong><em>Write this down in the assignment sheet table</em></strong>.</li>
+<li>Right-click the <em>housepolysj</em> layer and select <strong>Joins and Relates | Join…</strong>. Use the following parameters:
+
+<ul>
+<li><em>What do you want to join to this layer?</em>: Join attributes from a table</li>
+<li><em>Choose the field in this layer&hellip;</em>: PID</li>
+<li><em>Choose the table to join&hellip;</em>: insustatus</li>
+<li><em>Choose the field in the table&hellip;</em>: ID</li>
+<li><em>Join Options</em>: Keep all records</li>
+</ul></li>
+<li>Use <strong>Select By Attribute</strong> on <em>housepolysj</em> to determine the number of homes that are within 4 miles of San Andreas SSZ (1 mile = 1609.344 meters). <strong><em>Write this down in the table</em></strong>.</li>
+<li>Determine the average distance to the San Andreas SSZ for the homes that are within 4 miles of San Andreas SSZ. <strong><em>Write this down in the table</em></strong>.</li>
+<li>Open the <em>housepolysj</em> attribute table, click the <strong>Table Options</strong> button (upper left corner) and select <strong>Switch Selection</strong>. This will invert your selection to (logically) select everything greater than 4 miles from the SSZ.
+
+<ul>
+<li>Note: There is also a button on the top of the mune that inverts your selection.</li>
+</ul></li>
+<li>Determine the number of homes that are farther than 4 miles of San Andreas SSZ. <strong><em>Write this down in the table</em></strong>.</li>
+<li>Determine the average distance to the San Andreas SSZ for the homes that are farther than 4 miles of San Andreas SSZ. <strong><em>Write this down in the table</em></strong>.</li>
+<li>Using similar steps as before to determine how many homes in the <em>housepolysj</em> layer were insured before and after the earthquake. <strong><em>Write this down in the table and then calculate the percentages for each catagory</em></strong>.</li>
+</ul>
+
+<p>Submit the answer sheet on blackboard.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -305,14 +305,14 @@ tags will be replaced.--&gt;
  &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
   &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 9&lt;/td&gt;
   &lt;td class=xl651823&gt;22-Oct&lt;/td&gt;
-  &lt;td class=xl641823&gt;Spatial Statistics&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EbxzFOPZzItKmEqae6DT0LUBxODaz9p6vufowk_MFimyBg?e=afQcuv&#34;&gt;Advanced Selections&lt;/a&gt;&lt;/td&gt;
   &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
-  &lt;td class=xl641823&gt;Interpolation Lab&lt;/td&gt;
+  &lt;td class=xl641823&gt;Attribute &amp; Spatial Queries&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
   &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
   &lt;td class=xl671823&gt;24-Oct&lt;/td&gt;
-  &lt;td class=xl661823&gt;Raster Data Analysis&lt;/td&gt;
+  &lt;td class=xl661823&gt;Cartography activity&lt;/td&gt;
   &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
   &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
  &lt;/tr&gt;
@@ -516,6 +516,10 @@ Here&amp;rsquo;s a &lt;a href=&#34;https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?
 &lt;h2 id=&#34;joining-data&#34;&gt;Joining data&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETDUAHD43T1FkTffA7TJ5L0BzZwnPVj06kmSfUlHx5fsAQ?e=wEyb53&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-selections&#34;&gt;Advanced Selections&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EbxzFOPZzItKmEqae6DT0LUBxODaz9p6vufowk_MFimyBg?e=afQcuv&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2164,11 +2168,255 @@ Do not select Douglas County.&lt;/p&gt;
 &lt;h3 id=&#34;6-make-a-map&#34;&gt;6 Make a map&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Produce a map (keeping in mind our cartographic rules) of the reprojected county data containing the following layers: roads on top of the LAND COVER raster. If you would like, the map can show only a zoomed in portion of your county, rather than the whole thing. For this map, you need to include your name, title, legend, scale bar and north arrow. Be sure to save your map. Now export it as an image named yournameLab5Part2.png. Save the .png in your Lab06 folder and upload it to blackboard.  Spend, at the very minimum, ten minutes on this, a bad looking map is worse at communicating an idea than no map at all.  As a reference, here is what 10 minutes of my time looks like.
+&lt;li&gt;Produce a map (keeping in mind our cartographic rules) of the reprojected county data containing the following layers: roads on top of the LAND COVER raster. If you would like, the map can show only a zoomed in portion of your county, rather than the whole thing. For this map, you need to include your name, title, legend, scale bar and north arrow. Be sure to save your map. Now export it as an image named yournameLab5Part2.png. Save the .png in your Lab05 folder and upload it to blackboard.  Spend, at the very minimum, ten minutes on this, a bad looking map is worse at communicating an idea than no map at all.  As a reference, here is what 10 minutes of my time looks like.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/MyMap.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You should have two images, which you will submit on blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 06 - Selections Queries and Joins</title>
+      <link>https://jimcoll.github.io/courses/geog358/lab06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog358/lab06/</guid>
+      <description>
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;Learning Objective&lt;/h1&gt;
+
+&lt;p&gt;As is more often the case than not, the information we need to answer a question are in separate places (read: shapefiles).  Therefore, we need to join that data together.  However, the concept of joins are communicated, implemented, and executed very differently within a computer/GIS context than they are in everyday language.  Database joins are their own class in computer science/engineering, and we won’t cover all of them in this class.  For this lab we will use two, a left join and geographic joins.  You can think about left joins as joining two excel sheets together based on a common (or key) field.  Spatial joins append entries that match the geographic filter (interest, buffer, ect.)&lt;/p&gt;
+
+&lt;h2 id=&#34;part-1-attribute-spatial-queries&#34;&gt;Part 1: Attribute &amp;amp; Spatial Queries&lt;/h2&gt;
+
+&lt;p&gt;In this part we will execute queries by attribute, queries by space, and spatial joins. We will also conduct a simple analysis using these functions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Ec0rmWqkQeFBo5v4RyuGZZwB6CC-W_4F_77X0OKvzqTicA?e=S2lCWn&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;bookstores.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Bookstores in South Carolina&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;counties.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Counties in South Carolina&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;istates.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Interstates that pass through South Carolina&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;shomes.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Surveyed homeowners in Santa Clara County&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;sszpoly.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;San Andreas Fault Special Study Zone (SSZ) near Santa Clara&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;insustatus.dbf&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Insurance status of surveyed homeowners in Santa Clara County 1 = Insured; 2 = Not Insured&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;GEOG358_Lab6AnswerSheet_YourLastName.docx&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Lab handout&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-download-the-lab-data&#34;&gt;1. Download the lab data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcMap.&lt;/li&gt;
+&lt;li&gt;Add &lt;em&gt;bookstores.shp&lt;/em&gt;, &lt;em&gt;counties.shp&lt;/em&gt;, and &lt;em&gt;istates.shp&lt;/em&gt; from the Part01 folder to your data frame.&lt;/li&gt;
+&lt;li&gt;Go to the data frame (&lt;em&gt;Layers&lt;/em&gt;) properties and click on the &lt;strong&gt;General&lt;/strong&gt; tab. Make sure the Map Units are set to &lt;strong&gt;Meters&lt;/strong&gt; and the Display Units are set to &lt;strong&gt;Miles&lt;/strong&gt;. Click &lt;strong&gt;OK&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-attribute-queries-select-by-attribute&#34;&gt;2. Attribute Queries (Select by Attribute)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;Selection | Select By Attribute&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set the Layer to counties.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Make sure the Method option is set to &lt;strong&gt;Create a new selection&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The attributes for the counties layer (&lt;em&gt;“FID”, “AREA”, …&lt;/em&gt;) are displayed in the upper half of the window. You can double click on the attributes of interest to make it part of the expression in the lower half of the window. In the middle are the various operators that you will use. On the right, you can click the &lt;strong&gt;Get Unique Values&lt;/strong&gt; button, which will display all of the unique values for the attribute you selected.
+
+&lt;ul&gt;
+&lt;li&gt;An example of an expression is (“countyname” = ‘Douglas’), where Douglas county would be selected if we had a Kansas county dataset.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Let’s &lt;strong&gt;select the counties where populations in 1990 were greater than 30,000 people&lt;/strong&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;In the box with the attributes, scroll down and double-click “POP1990”. Notice that it shows up in the lower box.&lt;/li&gt;
+&lt;li&gt;Now click the &amp;gt; button. In the lower box, type 30000 (no commas!) so that your expression reads: &amp;ldquo;POP1990&amp;rdquo; &amp;gt; 30000.&lt;/li&gt;
+&lt;li&gt;Note that you can always just type the entire expression yourself instead of double-clicking attribute names, etc.; the advantage of double- clicking attribute names, however, is that it reduces the probability of typos in your expression.&lt;/li&gt;
+&lt;li&gt;Check your expression by clicking the Verify button. If everything is correct, the program will tell you that “The expression was successfully verified.”&lt;/li&gt;
+&lt;li&gt;Click Apply once the expression is verified and then look at the map. You should see most of the counties selected.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-selection-statistics&#34;&gt;2. Selection Statistics&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;Selection | Statistics&lt;/strong&gt;. This function calculates statistics based on the attributes of the selected features. If you have five counties selected, for example, you can find out the average area of those counties by selecting Area in the Field menu and then looking at the statistics below it. Changing the attributes in the Field menu won’t change which features you have selected.&lt;/li&gt;
+&lt;li&gt;Using the &lt;strong&gt;Select By Attributes and Statistics tools, answer &lt;em&gt;Questions #1 through #5 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;. Note that the Select By Attributes and Statistics windows can be open at the same time.&lt;/li&gt;
+&lt;li&gt;Clear the selected counties by going to &lt;strong&gt;Selection | Clear Select Features&lt;/strong&gt; or by clicking the &lt;strong&gt;Clear Selected Features&lt;/strong&gt; button.&lt;/li&gt;
+&lt;li&gt;Close the Select By Attributes and Statistics windows.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;3-spatial-queries&#34;&gt;3. Spatial Queries&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open the counties layer properties. Click the Selection tab, click with this color, and select a bright red color. Click Apply and OK.&lt;/li&gt;
+&lt;li&gt;Use the same procedure to make the bookstores layer selections green and the istates layer selections yellow.&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Select By Attributes function&lt;/strong&gt; to select &lt;em&gt;Richland County&lt;/em&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Think about which attribute would contain the names of counties, select it, and then use the Get Unique Values button to get the list of county names.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Now go to &lt;strong&gt;Selection | Select by Location…&lt;/strong&gt; with the following parameters:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Selection method&lt;/em&gt;: select features from&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Target layer(s)&lt;/em&gt;: bookstores&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Source layer&lt;/em&gt;: counties&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Use selected features&lt;/em&gt;: (yes)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Spatial selection method…&lt;/em&gt;: are completely within the source layer feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click Apply.&lt;/li&gt;
+&lt;li&gt;All the bookstores in Richland County should now be green, indicating that they were properly selected.&lt;/li&gt;
+&lt;li&gt;Go to &lt;strong&gt;Selection | Statistics&lt;/strong&gt; to find how many bookstores are in Richland County.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Make sure the bookstores layer is selected!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Answer Question #6 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Clear the selected features.&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Select By Attributes&lt;/strong&gt; tool to select Interstate 26 in the &lt;em&gt;istates&lt;/em&gt; layer.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Don’t use the ISTATES_ or ISTATES_ID attributes.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;I-26 will be highlighted as yellow.&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Select by Location&lt;/strong&gt; tool with the following parameters:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Selection method&lt;/em&gt;: select features from&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Target layer(s)&lt;/em&gt;: counties&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Source layer&lt;/em&gt;: istates&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Use selected features&lt;/em&gt;: (yes)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Spatial selection method…&lt;/em&gt;: intersect (3d) the source layer feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click Apply.&lt;/li&gt;
+&lt;li&gt;The counties that I-26 passes through will turn red.&lt;/li&gt;
+&lt;li&gt;Use the Statistics tool to find the &lt;em&gt;mean&lt;/em&gt; median home income for those counties. (Yes, the mean of the median.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Answer Question #7 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Clear the selected features.&lt;/li&gt;
+&lt;li&gt;Let’s find bookstores that are within 15 miles of I-26. As before, select I-26 from the &lt;em&gt;istates&lt;/em&gt; layer.&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Select By Location&lt;/strong&gt; tool with the following parameters:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Selection method&lt;/em&gt;: select features from&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Target layer(s)&lt;/em&gt;: bookstores&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Source layer&lt;/em&gt;: istates&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Use selected features&lt;/em&gt;: (yes)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Spatial selection method&lt;/em&gt;: are within a distance of the source layer feature&lt;/li&gt;
+&lt;li&gt;Apply a search distance (this will be grayed out): 15 miles&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Answer Question #8 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Clear selected features.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Answer Question #9 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Save your map document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;part-two-attribute-joins-and-spatial-joins&#34;&gt;Part Two: Attribute Joins and Spatial Joins&lt;/h2&gt;
+
+&lt;p&gt;In this part we will execute a spatial join and then conduct a simple analysis.
+The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm Pacific Time. The epicenter was 37° 02&amp;rsquo; 00&amp;rdquo; N and 121° 53&amp;rsquo; 23&amp;rdquo; W. A large number of residential homes were damaged by the earthquake, and many were destroyed. You will be investigating the distribution of damaged homes in relation to active surface faults.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-join-the-insurance-database-to-the-spatial-data&#34;&gt;1. Join the insurance database to the spatial data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open a new ArcMap document or add a new data frame.&lt;/li&gt;
+&lt;li&gt;Add &lt;em&gt;shomes.shp&lt;/em&gt;, &lt;em&gt;sszpoly.shp&lt;/em&gt; and &lt;em&gt;insustatus.dbf&lt;/em&gt; from the Part02 folder to the workspace. If you get a warning about an Unknown Spatial Reference, just click OK.&lt;/li&gt;
+&lt;li&gt;Set the data frame map units to Meters and display units to Miles.&lt;/li&gt;
+&lt;li&gt;Open the &lt;strong&gt;attribute table&lt;/strong&gt; of the shomes layer. &lt;strong&gt;&lt;em&gt;Answer Question #10 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the &lt;em&gt;shomes&lt;/em&gt; layer and select &lt;strong&gt;Joins and Relates | Join…&lt;/strong&gt;. Use the following parameters:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;What do you want to join to this layer?&lt;/em&gt;: Join attributes from a table&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the field in this layer&amp;hellip;&lt;/em&gt;: PID&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the table to join&amp;hellip;&lt;/em&gt;: insustatus&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the field in the table&amp;hellip;&lt;/em&gt;: ID&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Join Options&lt;/em&gt;: Keep all records&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click Validate Join. This is similar to the Verify button we saw in the Select By Attributes tool; it makes sure that all the right conditions are in place for the join operation to execute successfully.  When you become more comfertable with the workflow/system, this is something you may be tempted to skip, but unless you are &lt;strong&gt;sure&lt;/strong&gt; that the join will work, it&amp;rsquo;s usually best to just check.
+
+&lt;ul&gt;
+&lt;li&gt;If you are asked whether to create an index, click Yes.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Open the &lt;strong&gt;attribute table&lt;/strong&gt; of the &lt;em&gt;shomes&lt;/em&gt; layer. &lt;strong&gt;&lt;em&gt;Answer Question #11 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Use the rest of this handout to &lt;strong&gt;&lt;em&gt;fill in Question #12 on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Right-click on &lt;em&gt;shomes&lt;/em&gt; and select &lt;strong&gt;Selection | Select All&lt;/strong&gt;. &lt;strong&gt;&lt;em&gt;Write down the total number of surveyed homes in the table on the assignment sheet&lt;/em&gt;&lt;/strong&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Use the *Statistics** tool or just look at the bottom of the attribute table.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;Select By Attributes&lt;/strong&gt; to select the homes that were insured before the Loma Prieta earthquake: Using the PRELOMAINS attribute, 1 = Insured and 2 = Not insured. &lt;strong&gt;&lt;em&gt;Write this information down in the table&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Do the same for homes that were insured after the earthquake (POSTLOMAIN).&lt;/li&gt;
+&lt;li&gt;Clear the selected features.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-determine-the-distance-of-each-home-to-san-andreas-ssz&#34;&gt;2.  Determine the distance of each home to San Andreas SSZ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Right-click the &lt;em&gt;shomes&lt;/em&gt; layer and select &lt;em&gt;Joins and Relates | Remove Join(s) | insustatus&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Right-click &lt;em&gt;shomes&lt;/em&gt; again and select &lt;em&gt;Joins and Relates | Join…&lt;/em&gt; and use the following parameters:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;What do you want to join to this layer?&lt;/em&gt;: Join data from another layer based on spatial location&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the layer to join to this layer&amp;hellip;&lt;/em&gt;: sszpoly&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Each point will be given all the attributes of the polygon that&lt;/em&gt;: is closest to it (Don’t press OK yet.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click on the &lt;strong&gt;open folder&lt;/strong&gt; icon and save the output &lt;em&gt;housepolysj.shp&lt;/em&gt; in your Part02 folder.&lt;/li&gt;
+&lt;li&gt;Now you can click OK&lt;/li&gt;
+&lt;li&gt;Open the &lt;strong&gt;attribute table&lt;/strong&gt; of your new layer and notice the Distance attribute that was created. This tells you how many meters that particular point is away from the nearest polygon.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Select&lt;/strong&gt; all features in housepolysj and use &lt;strong&gt;Statistics&lt;/strong&gt; to find the average (mean) distance between the homes and San Andreas Special Study Zone (SSZ). &lt;strong&gt;&lt;em&gt;Write this down in the assignment sheet table&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Right-click the &lt;em&gt;housepolysj&lt;/em&gt; layer and select &lt;strong&gt;Joins and Relates | Join…&lt;/strong&gt;. Use the following parameters:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;What do you want to join to this layer?&lt;/em&gt;: Join attributes from a table&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the field in this layer&amp;hellip;&lt;/em&gt;: PID&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the table to join&amp;hellip;&lt;/em&gt;: insustatus&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Choose the field in the table&amp;hellip;&lt;/em&gt;: ID&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Join Options&lt;/em&gt;: Keep all records&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;Select By Attribute&lt;/strong&gt; on &lt;em&gt;housepolysj&lt;/em&gt; to determine the number of homes that are within 4 miles of San Andreas SSZ (1 mile = 1609.344 meters). &lt;strong&gt;&lt;em&gt;Write this down in the table&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Determine the average distance to the San Andreas SSZ for the homes that are within 4 miles of San Andreas SSZ. &lt;strong&gt;&lt;em&gt;Write this down in the table&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Open the &lt;em&gt;housepolysj&lt;/em&gt; attribute table, click the &lt;strong&gt;Table Options&lt;/strong&gt; button (upper left corner) and select &lt;strong&gt;Switch Selection&lt;/strong&gt;. This will invert your selection to (logically) select everything greater than 4 miles from the SSZ.
+
+&lt;ul&gt;
+&lt;li&gt;Note: There is also a button on the top of the mune that inverts your selection.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Determine the number of homes that are farther than 4 miles of San Andreas SSZ. &lt;strong&gt;&lt;em&gt;Write this down in the table&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Determine the average distance to the San Andreas SSZ for the homes that are farther than 4 miles of San Andreas SSZ. &lt;strong&gt;&lt;em&gt;Write this down in the table&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Using similar steps as before to determine how many homes in the &lt;em&gt;housepolysj&lt;/em&gt; layer were insured before and after the earthquake. &lt;strong&gt;&lt;em&gt;Write this down in the table and then calculate the percentages for each catagory&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Submit the answer sheet on blackboard.&lt;/p&gt;
 </description>
     </item>
     

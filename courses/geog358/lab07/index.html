@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning Objective This lab will introduce the idea of overlay analysis in terms of a common application, site suitability. Site sutability takes several forms but in this lab we&rsquo;ll approch these concepts in vector form. Take note that this lab will form the basis for
+Part 1: Attribute &amp; Spatial Queries A logging company has been given a license to develop and to cut down trees in the Oakwood area (see the figure to the right).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab07/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog358/lab07/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab07/">
+  <meta property="og:title" content="Lab 07 - Buffering and Overlay | Jim Coll">
+  <meta property="og:description" content="Learning Objective This lab will introduce the idea of overlay analysis in terms of a common application, site suitability. Site sutability takes several forms but in this lab we&rsquo;ll approch these concepts in vector form. Take note that this lab will form the basis for
+Part 1: Attribute &amp; Spatial Queries A logging company has been given a license to develop and to cut down trees in the Oakwood area (see the figure to the right)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 07 - Buffering and Overlay | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/classoutline/">Class Outline and Lecture Notes</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/termpaper/">Project</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog358/lab01/">Lab 1 - Intro to ArcMap</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab02/">Lab 2 - Projections and Coordinate Systems</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab03/">Lab 3 - Using GPS for Field Data Collection</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab04/">Lab 4 - Georeferenceing and Intro to digitization</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab05/">Lab 5 - Building a GIS database</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab06/">Lab 6 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog358/lab07/">Lab 7 - Buffering and Overlay</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#learning-objective">Learning Objective</a>
+<ul>
+<li><a href="#part-1-attribute-spatial-queries">Part 1: Attribute &amp; Spatial Queries</a>
+<ul>
+<li><a href="#1-read-through-the-part-1-section">1 Read through the Part 1 section</a></li>
+<li><a href="#2-data-organization">2 Data Organization</a></li>
+<li><a href="#3-create-buffers-for-roads-rivers-and-shrine">3 Create Buffers for Roads, Rivers, and Shrine</a></li>
+<li><a href="#4-create-sea-and-lake-buffers">4 Create Sea and Lake Buffers</a></li>
+<li><a href="#5-finding-suitable-logging-sites">5 Finding Suitable Logging Sites</a></li>
+<li><a href="#6-create-a-map-and-export">6 Create a map and export</a></li>
+</ul></li>
+<li><a href="#part-2-attribute-spatial-queries">Part 2: Attribute &amp; Spatial Queries</a>
+<ul>
+<li><a href="#1-create-buffers">1 Create Buffers</a></li>
+<li><a href="#2-finding-the-percentage-of-population-covered-by-sirens">2 Finding the Percentage of Population Covered by Sirens</a></li>
+<li><a href="#3-upload-the-following-to-blackboard">3 Upload the following to Blackboard:</a></li>
+</ul></li>
+<li><a href="#part-3-school-siting-lab">Part 3: School siting lab</a>
+<ul>
+<li><a href="#1-creating-a-toolbox-and-a-model">1 Creating a Toolbox and a Model</a></li>
+<li><a href="#2-setting-up-the-workflow">2 Setting up the Workflow</a></li>
+<li><a href="#3-calculating-a-suitability-raster">3 Calculating a Suitability Raster</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 07 - Buffering and Overlay</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="learning-objective">Learning Objective</h1>
+
+<p>This lab will introduce the idea of overlay analysis in terms of a common application, site suitability.  Site sutability takes several forms but in this lab we&rsquo;ll approch these concepts in vector form.  Take note that this lab will form the basis for</p>
+
+<h2 id="part-1-attribute-spatial-queries">Part 1: Attribute &amp; Spatial Queries</h2>
+
+<p>A logging company has been given a license to develop and to cut down trees in the Oakwood area (see the figure to the right). However, there are restrictions on where the company can cut down trees.</p>
+
+<p>The purpose of this exercise will be to select sites where the company can log. We will use the ArcGIS to select these sites according to the selection rules given below.</p>
+
+<p>License Restrictions:</p>
+
+<ul>
+<li>No trees may be cut down within 10km of the shrine.</li>
+<li>No trees may be cut down within 1km of the sea, the lake, or any river in order to help prevent land erosion.</li>
+<li>The logging sites must be within 5km of existing roads for easy access by heavy logging equipment, since conservation laws will not allow any new roads to be built in this area.</li>
+</ul>
+
+<p><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Ec0rmWqkQeFBo5v4RyuGZZwB6CC-W_4F_77X0OKvzqTicA?e=S2lCWn">Materials (click to download)</a></p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">forest.shp</td>
+    <td class="tg-btxf">Forest stands in the study area</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">rivers.shp</td>
+    <td class="tg-0pky">Rivers in the study area</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">water.shp</td>
+    <td class="tg-btxf">Water bodies in the study area (1 = no water, 10 = water)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">roads.shp</td>
+    <td class="tg-0pky">Roads through the forest stands</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">shrine.shp</td>
+    <td class="tg-0pky">Shrine in the study area</td>
+  </tr>
+</table></p>
+
+<h3 id="1-read-through-the-part-1-section">1 Read through the Part 1 section</h3>
+
+<p>At this point you should be able to discern how to accomplish what you want to accomplish.  We want to show the logging company where they can and cannot log.  As is the case with most things in life, there are a few ways we can do this, and the choice is yours (if you got this, you are my new favorite student).  Below I walk you through one way to accomplish this, but you will gain far more if you design your own way to arrive at the same end goal.
+(picture of celsious</p>
+
+<h3 id="2-data-organization">2 Data Organization</h3>
+
+<ul>
+<li>Start ArcMap, create a new empty map, and save your map document to your personal folder.</li>
+<li>Add forest.shp, rivers.shp, water.shp, roads.shp and shrine.shp, all of which are located in your Part01 folder.</li>
+<li>In the data frame properties, change the display units to kilometers.</li>
+<li>Arrange the layers correctly
+
+<ul>
+<li>Make sure List By Drawing Order (upper left of the Table of Contents) is selected.</li>
+<li>Arrange the layers in this order (bottom to top): water, forest, roads, rivers, and shrine.</li>
+</ul></li>
+
+<li><p>Change the symbology of each layer:</p>
+
+<ul>
+<li>Make the rivers blue.</li>
+<li>Make the roads black.</li>
+<li>Make the shrine red.</li>
+<li>Make the water blue. This requires extra steps:</li>
+<li>In the Symbology tab, click Categories near the upper left part of the window.</li>
+<li>Select Unique Values.</li>
+<li>Select ISWATER as the Value Field.</li>
+<li>Click Add All Values.</li>
+<li>Uncheck the box the left of <all other values></li>
+
+<li><p>Looking at the Value column, recall that water = 10 and everything else = 1, so double-click the color box next to 10 and change it to a blue color, and then click the color box next to 1 and change it to Hollow.</p></li>
+
+<li><p>Remember these steps, they will come in handy when making the final map for this analysis</p></li>
+
+<li><p>Make the forests green. There are two kinds of trees in this layer, so use a different shade of green for each kind. To do so, follow similar steps as were just performed for the water layer.</p></li>
+</ul></li>
+</ul>
+
+<h3 id="3-create-buffers-for-roads-rivers-and-shrine">3 Create Buffers for Roads, Rivers, and Shrine</h3>
+
+<ul>
+<li>In ArcToolbox (the button with the little red box on it) go to Analysis Tools | Proximity | Buffer. Use the following settings:
+
+<ul>
+<li>Input Features: roads</li>
+<li>Output Feature Class: roads_buffer.shp (make sure to save in your Part01 folder) Linear Unit: 5 km</li>
+<li>Dissolve Type: All</li>
+</ul></li>
+<li>Click OK and give it a minute to work. When it’s done it won’t look pretty, but we’ll change that later.</li>
+<li>Follow the same steps to create 1 km buffer around the rivers layer and a 10 km buffer around the shrine layer. Make sure you give the output files descriptive names (e.g., rivers_buffer.shp and shrine_buffer.shp).</li>
+</ul>
+
+<h3 id="4-create-sea-and-lake-buffers">4 Create Sea and Lake Buffers</h3>
+
+<ul>
+<li>We need to select the sea and lake polygons from the water layer. If we were to just do this we would end up buffering both shapes in the layer.  Recall that when tools run, they typically operate within the active data frame, and use the current selection (or the whole shapefile if nothing is selected).  So to accomplish what we want to do, we want only the actual water from the water.</li>
+<li>To do this, go to Select by Attributes… and use the expression &ldquo;ISWATER&rdquo; = 10.</li>
+<li>As you did with the other layers, create a 1 km buffer of the water features. (Note that if features are selected, the buffer tool will only create buffers for those selected features.)</li>
+</ul>
+
+<h3 id="5-finding-suitable-logging-sites">5 Finding Suitable Logging Sites</h3>
+
+<ul>
+<li>Now we will find potential logging areas based on access to roads. In ArcToolbox go to Analysis Tools | Overlay | Intersect. Use the following settings:
+
+<ul>
+<li>Input: forest and roads_buffer (you will have to select each one individually)</li>
+<li>Output Feature Class: Solution_1.shp (make sure to save in your Part01 folder)</li>
+<li>Join Attributes: All</li>
+</ul></li>
+<li>Click OK.</li>
+<li>Now we will merge the rivers_buffers and Solution_1 layers. In ArcToolbox go to Analysis Tools | Overlay | Union. Use the following settings:
+
+<ul>
+<li>Input: Solution_1 and rivers_buffer</li>
+<li>Output Feature Class: Temp_1.shp (make sure to save this in your Part01 folder)</li>
+<li>Join Attributes: All</li>
+</ul></li>
+<li>Click OK.</li>
+<li>To find those areas from Solution_1 that are not within the river exclusion zone (i.e., buffer), go to Select by Attributes…, select the Temp_1 layer, and apply the expression “FID_rivers” = -1</li>
+<li>In the Table of Contents, right-click the Temp_1 layer and select Data | Export Data….  Save the features as a shapefile called Solution_2.shp. Leave the other settings as they are.</li>
+<li>When asked if you want to add the exported data as a layer, click Yes.</li>
+<li>Click the Clear Selected Features button on the main menu.</li>
+<li>In ArcToolbox go to Analysis Tools | Overlay | Union. Use the following settings:
+
+<ul>
+<li>Input: Solution_2 and shrine_buffer</li>
+<li>Output Feature Class: Temp_2.shp (make sure to save this in your Part01 folder)</li>
+<li>Join Attributes: All</li>
+</ul></li>
+<li>Click OK.</li>
+<li>To find those areas from Solution_2 that are not within the shrine exclusion zone (i.e., buffer), go to Select by Attributes…, select the Temp_2 layer, and apply the expression “FID_shrine” = -1</li>
+<li>In the Table of Contents, right-click the Temp_2 layer and select Data | Export Data…. Save the features as a shapefile called Final.shp. Leave the other settings as they are.</li>
+<li>In the Table of Contents, remove all layers that have names that start with Temp or Solution or that end with buffer. The following layers should remain: shrine, rivers, roads, Final, forest, and water.</li>
+</ul>
+
+<h3 id="6-create-a-map-and-export">6 Create a map and export</h3>
+
+<ul>
+<li>Using the map below as a rough guide, create a map that indicates which forest stands the company can legally log. Make sure your symbology is clear and that the crucial components of the map are not covered up by your Final layer. (Hint: Use patterns, and/or go to the Display tab of the layer’s Properties and change the transparency.) Use some creativity— don’t just copy the map below!  Export a PNG of the map to your personal folder.
+<img src="/courses/geog358/media/Lab7Part1.png" alt="" /></li>
+</ul>
+
+<h2 id="part-2-attribute-spatial-queries">Part 2: Attribute &amp; Spatial Queries</h2>
+
+<p>In this part of the lab, we are interested in assessing how much of Douglas County is covered by tornado sirens. In other words, we want to know how many people can actually hear a tornado siren when it goes off. While the sirens for Douglas County were designed to be heard at distances of up to 5,800 feet, there might be areas in which people can’t hear them.</p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">censusblk.shp</td>
+    <td class="tg-btxf">Census blocks for Douglas County, Kansas</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">kansas2000censusblk.dbf</td>
+    <td class="tg-0pky">Database file containing census data, including population per block group</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">roads.shp</td>
+    <td class="tg-btxf">Point shapefile with locations of tornado sirens in Douglas County, KS</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">roads.shp</td>
+    <td class="tg-0pky">Douglas County Roads</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">countybnd.shp</td>
+    <td class="tg-0pky">Douglas County Boundary/td&gt;
+  </tr>
+</table></p>
+
+<h3 id="1-create-buffers">1 Create Buffers</h3>
+
+<ul>
+<li>In ArcMap, create a new empty map, and save your map document to your personal folder.</li>
+<li>Add countybnd.shp, roads.shp, censusblk.shp, and sirens.shp from your Part02 folder.</li>
+<li>Create buffers around the sirens using the following settings:
+
+<ul>
+<li>Input Features: sirens</li>
+<li>Output Features: sirens_buffer.shp (make sure to save in your Part02 folder)</li>
+<li>Linear Unit: 5800 feet</li>
+<li>Dissolve Type: All</li>
+</ul></li>
+<li>Arrange layers so that you can see the siren points and buffers on top.</li>
+</ul>
+
+<h3 id="2-finding-the-percentage-of-population-covered-by-sirens">2 Finding the Percentage of Population Covered by Sirens</h3>
+
+<ul>
+<li>Add kansas2000censusblk.dbf to the data frame.</li>
+<li>Right-click the censusblk layer, select Joins and Relates, and select Join. Join the layer to kansas2000censusblk.dbf using the STFID field.</li>
+<li>Examine the attribute table of censusblk to make sure the join was successful. Do you see all sorts of demographic attributes? If so, the join was successful.</li>
+<li>Right-click the header of the POP2000 attribute and select Statistics. The sum value is the number of people in Douglas County. Record the value somewhere, as you will be entering this into the comments section of your Blackboard submission. Close the window.</li>
+<li>Use Select by Location… to select the census blocks that are within the buffer zone.
+
+<ul>
+<li>Hint: Use the are completely within the source layer feature setting. The result should be 1,590 census blocks selected.</li>
+</ul></li>
+<li>Find the population in these census blocks by opening the censusblk attribute table, right- clicking the POP2000 attribute header, and selecting Statistics. (It will only give you statistics on the selected records.) Record this number.</li>
+<li>Find the population out of the range of sirens by clicking Table Options (upper left corner of the attribute table), selecting Switch Selection, and then using the Statistics tool again. Record this number.</li>
+<li>Switch the selection back (i.e., back to the blocks within range of the sirens) and close the attribute table.</li>
+<li>Take a screenshot of your entire screen and save it to your personal folder.</li>
+</ul>
+
+<h3 id="3-upload-the-following-to-blackboard">3 Upload the following to Blackboard:</h3>
+
+<ul>
+<li>The PNG of your logging map from Part 1</li>
+<li>The screenshot you just created</li>
+<li>The following information, put in the Comments section of the assignment:</li>
+</ul>
+
+<p>Total Douglas County population:
+Number of people who can hear the tornado sirens:
+Number of people who cannot hear the tornado sirens:
+Percentage of the population that can hear the tornado sirens:
+Percentage of total population that cannot hear the tornado sirens:
+*Note: Your math should add up.  If it doesn’t, reevaluate.</p>
+
+<h2 id="part-3-school-siting-lab">Part 3: School siting lab</h2>
+
+<p>You will set up a model to derive slope, distance to recreation sites, and distance to existing schools, then reclassify these derived datasets to a common scale from 1-10. You will then set the model up to weight them according to a percentage influence and combine them to produce a map displaying suitable locations for the new school.</p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">elevation</td>
+    <td class="tg-btxf">Raster dataset of the elevation of the area</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">landuse</td>
+    <td class="tg-0pky">Raster dataset of the landuse types over the area</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">rec_sites</td>
+    <td class="tg-btxf">Feature dataset displaying point locations of recreation sites</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">schools</td>
+    <td class="tg-0pky">Feature dataset displaying point locations of existing schools</td>
+  </tr></p>
+
+<p></table></p>
+
+<h3 id="1-creating-a-toolbox-and-a-model">1 Creating a Toolbox and a Model</h3>
+
+<ul>
+<li>Create a new toolbox (Lab6Tools), and a new model (SchoolSiting) in that toolbox.
+
+<ul>
+<li>R-click on your lab06/Part1 folder and create a new toolbox.</li>
+<li>Name the new toolbox Lab6Tools.tbx.</li>
+<li>R-click on the toolbox and create a new model.</li>
+<li>Rename the new Model (R-click/slow-click | Rename) to SchoolSiting.</li>
+</ul></li>
+<li>Set up the Model Properties by going to Model | Model Properties</li>
+<li>Under the Environments tab, check the boxes for Processing Extent | Extent and for Raster Analysis | Cell Size</li>
+<li>Click the Values… button.</li>
+<li>Click the down arrows for each of the settings and make the Extent the same as the landuse raster in your data folder, and the Cell Size the same as elevation.</li>
+<li>Click OK on the Environment Settings.</li>
+<li>Click OK on the SchoolSiting Properties Window.</li>
+</ul>
+
+<h3 id="2-setting-up-the-workflow">2 Setting up the Workflow</h3>
+
+<p>You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to get the suitable school sites. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.
+* Set up your screen so you can see both ArcToolbox and the model window at the same time.
+* Add the slope tool by finding it under ArcToolbox (Spatial Analyst Tools | Surface) and then dragging it onto the model window.
+* Double click on the slope tool. The slope dialog will open, and it should be roughly similar to the dialog for slope in the spatial analyst.
+* Set the input to the elevation raster (from your data folder), and set the output to slope and make sure it is saved in the output folder in the Lab 06 folder. Leave other parameters to their defaults.
+* Click OK. You will see the diagram objects become colored. You now have a very simple model.
+* Next, add the straight line distance tool (Spatial Analyst Tools | Distance | Euclidean Distance) to create a distance layer from rec_sites.
+* Set the Input to rec_sites (from your data folder), the Output to recDist in your output folder, and the Cell Size to 30. You don’t need a Maximum distance or a direction Raster.
+* Click OK. Notice that an empty diagram object is there for direction raster. Since it is blank, it will be ignored, so we will leave it alone.
+* Add and set up another straight line distance tool to calculate distance from schools (call the output schDist).
+* Save your Model (Model | Save).
+* Click the Run button. Check in ArcCatalog to make sure that these three layers are calculated correctly and saved in your output folder.
+* Add a Reclassify tool (Spatial Analyst Tools | Reclass | Reclassify) to the Model window to reclassify the slope raster.
+* Double click on the Reclassify tool in the Model window. Select slope as the input layer.
+  * This time, select the input layer from the dropdown in this dialog window, which shows the layers that are part of the model (We do this so that it will perform this next step from what we calculated in the previous one. In other words, it maintains a flow within the model).
+* In order to create the new classes for the slope layer, click on the Classify button, select the Equal Interval Method and 10 classes. Click OK.
+* It is preferable that the new school site be located on relatively flat ground. You will reclassify the slope layer, giving a value of 10 to the most suitable slopes (those with the lowest angle of slope) and 1 to the least suitable slopes (those with the steepest angle of slope). Click on the Reverse New Values button so the lowest slopes get a value of ten and the steepest slopes a value of 1.
+* Name the output raster layer as slopeR and click OK.
+* Add a new Reclassify tool and double click on it.
+* Select the RecDist layer as the input raster from the dropdown.
+* Reclassify distance to recreation sites raster (recDist) into 10 classes with new values from 1 to 10 using Equal Interval classification method. The school should be located near recreational facilities. You will reclassify this dataset, giving a value of 10 to areas closest to recreation sites (the most suitable locations), giving a value of 1 to areas far from recreation sites (the least suitable locations), and ranking the values in between.
+* Name the output raster layer as recR and click OK.
+* Add a third Reclassify tool and double click on it.
+* Select the SchDist layer as the input raster from the dropdown.
+* Reclassify distance to schools raster (schD) into 10 classes with new values from 1 to 10 using Equal Interval classification method. It is necessary to locate the new school away from existing schools in order to avoid encroaching on their catchment areas. You will reclassify the distance to schools layer, giving a value of 10 to areas away from existing schools (the most suitable locations), giving a value of 1 to areas near existing schools (least suitable locations), and ranking the values in between.
+* Name the output raster layer as schR and click OK.
+* Save your Model.
+* Add and set up a fourth Reclassify tool in order to reclassify the landuse raster.
+  * Select ‘LANDUSE’ as the ‘Reclass field’ using the dropdown menu.
+  * Use the following table to assign the new values to each of the land use categories:
+Landuse type    Score
+Agriculture 10
+Barren land 6
+Brush/Transitional  5
+Built up    3
+Forest  4
+Water   NoData
+Wetlands    NoData</p>
+
+<ul>
+<li>Call the output landuseR.</li>
+<li>Click OK and Save your Model.</li>
+<li>After all four reclassify tools are correctly established in the model, click Run again and check your output folder to make sure everything was calculated correctly.<br /></li>
+</ul>
+
+<h3 id="3-calculating-a-suitability-raster">3 Calculating a Suitability Raster</h3>
+
+<ul>
+<li>With all of our standardized layers, we are ready to calculate our suitability raster.  Add a Raster Calculator Tool (Spatial Analyst Tools | Map Algebra | Raster Calculator) to the Model window.</li>
+<li>Double click on this tool to set up the parameters.
+
+<ul>
+<li>Create an expression to weight each factor using the table below.
+Layer   Weight
+Reclass of distance to recreation sites (recR)  0.5
+Reclass of distance to schools (schR)   0.25
+Reclass of landuse (landuseR)   0.125
+Reclass of slope (slopeR)   0.125</li>
+</ul></li>
+</ul>
+
+<p>2 Total area of land with suitability 8.5 or greater for new school:             m2</p>
+
+<ul>
+<li>Check your expression against the image below.</li>
+<li>Name your output suitsite and save it in your output folder.</li>
+<li>Click OK.</li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

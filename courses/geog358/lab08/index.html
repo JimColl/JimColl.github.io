@@ -386,7 +386,7 @@ Materials (click to download)
 <ul>
 <li><a href="#part-1-network-analysis">Part 1: Network Analysis</a>
 <ul>
-<li><a href="#1-create-a-new-network-dataset">1 Create a new network dataset</a></li>
+<li><a href="#1-create-a-new-network-dataset">1.  Create a new network dataset</a></li>
 <li><a href="#2-find-the-best-route">2 Find the best route</a></li>
 </ul></li>
 <li><a href="#part-2-3d-in-gis">Part 2: 3D in GIS</a>
@@ -450,25 +450,31 @@ The part of the lab is designed to introduce some basic networking analyses, inc
   </tr>
 </table></p>
 
-<h3 id="1-create-a-new-network-dataset">1 Create a new network dataset</h3>
+<h3 id="1-create-a-new-network-dataset">1.  Create a new network dataset</h3>
 
-<p>There are quite a few steps here where you can make a wrong turn (ba dum tss).  Read and follow them carefully, and take the time to read each window in Arcmap and think about what the different options might produce.
-* Create a new data frame or start a new map document. Click Customize and select Extensions. Make sure the box next to Network Analyst is checked. Click Close.
-* Click Customize, select Toolbars, and click Network Analyst.
-* Click the ArcCatalog button (looks like a little filing cabinet). Locate your Part02 folder in the Catalog Tree of the ArcCatalog window. Expand the folder (i.e., click the plus sign next to it) and expand the SanFranciscoTrans geodatabase. Right-click the Transportation feature dataset, select New, and click Network Dataset.
-  * Name the network dataset Streets_ND and then click Next. Click Next three more times.
-* Under the Field column in the Using Elevation Fields section, click F_ELEV and change it to T_ELEV. Click Next. Click Next again.
-* On the “Specify the attributes for the network dataset” page, click the Add button. Name the attribute RestrictedTurns, change the Usage Type to Restriction, and then click OK.
-* Click the row you just created and then click Evaluators.
-* Under the Type column, change RestrictedTurns to Constant and change the Value column to Use Restriction. Click OK.
-* Click Next through the rest of the prompts and then click Finish.
-* Click Yes on the window that pops up. Give it a minute to run.
-* Click Close on the errors window that pops up.
-* Click Yes to add the network layer to the map
-* The resulting map should look like a chaotic mess of streets, junctions, signposts, etc.—but that’s OK for now.
-<img src="/courses/geog358/media/MessyNetwork.PNG" alt="" />
-* Right-click the RestrictedTurns layer and select Properties. Click the Symbology tab. Click Import. Click the little folder icon, select the file Restricted Turns.lyr in your Part1 folder, and click Add. Click OK. Click OK again.
-* Click the down arrow next to the Add Data button and select Add Basemap. Click Streets and then click Add. Give it a minute to load and say Yes if the program asks about hardware acceleration.</p>
+<p>There are quite a few steps here where you can make a wrong turn (ba dum tss).  Read and follow them carefully, and take the time to read each window in Arcmap and think about what the different options might produce.</p>
+
+<ul>
+<li>Create a new data frame or start a new map document. Click Customize and select Extensions. Make sure the box next to Network Analyst is checked. Click Close.</li>
+<li>Click Customize, select Toolbars, and click Network Analyst.</li>
+<li>Click the ArcCatalog button (looks like a little filing cabinet). Locate your Part1 folder in the Catalog Tree of the ArcCatalog window. Expand the folder (i.e., click the plus sign next to it) and expand the SanFranciscoTrans geodatabase. Right-click the Transportation feature dataset, select New, and click Network Dataset.
+
+<ul>
+<li>Name the network dataset Streets_ND and then click Next. Click Next three more times.</li>
+</ul></li>
+<li>Under the Field column in the Using Elevation Fields section, click F_ELEV and change it to T_ELEV. Click Next. Click Next again.</li>
+<li>On the “Specify the attributes for the network dataset” page, click the Add button. Name the attribute RestrictedTurns, change the Usage Type to Restriction, and then click OK.</li>
+<li>Click the row you just created and then click Evaluators.</li>
+<li>Under the Type column, change RestrictedTurns to Constant and change the Value column to Use Restriction. Click OK.</li>
+<li>Click Next through the rest of the prompts and then click Finish.</li>
+<li>Click Yes on the window that pops up. Give it a minute to run.</li>
+<li>Click Close on the errors window that pops up.</li>
+<li>Click Yes to add the network layer to the map</li>
+<li>The resulting map should look like a chaotic mess of streets, junctions, signposts, etc.—but that’s OK for now.
+<img src="/courses/geog358/media/MessyNetwork.PNG" alt="" /></li>
+<li>Right-click the RestrictedTurns layer and select Properties. Click the Symbology tab. Click Import. Click the little folder icon, select the file Restricted Turns.lyr in your Part1 folder, and click Add. Click OK. Click OK again.</li>
+<li>Click the down arrow next to the Add Data button and select Add Basemap. Click Streets and then click Add. Give it a minute to load and say Yes if the program asks about hardware acceleration.</li>
+</ul>
 
 <h3 id="2-find-the-best-route">2 Find the best route</h3>
 
@@ -560,21 +566,30 @@ This part of the lab will introduce you to the ArcScene environment of the 3D An
 <li>Start a new ArcScene document.  Add dougctyblks.shp from your Part2 folder.</li>
 </ul>
 
-<p>Let’s set the color symbology to reflect population values.
-* Open the Properties of the dougctyblks layer and click the Symbology tab. Click Quantities and select pop2k as your Value field. Increase the number of classes to 10. Click Apply.</p>
+<p>Let’s set the color symbology to reflect population values.</p>
 
-<p>Now we will use extrusion to represent population. (According to Esri, extrusion is “the process of stretching a flat 2D shape vertically to create a 3D object.”)
-* Click the Extrusion tab. Check the box to Extrude features in layer and then click on the adorable little calculator. The expression we wish to use here is simply [pop2k], so just double-click pop2k in the Fields box and then click OK. Click the Apply extrusion by: dropdown menu and select adding it to each feature’s base height. Click OK.
-* You should see the extrusions. Since we’ve used the same variable for color and extrusion height, this means the darker the color, the taller the extrusion.</p>
+<ul>
+<li>Open the Properties of the dougctyblks layer and click the Symbology tab. Click Quantities and select pop2k as your Value field. Increase the number of classes to 10. Click Apply.</li>
+</ul>
 
-<p>Finally, we will make the layer translucent and load it into Google Earth. Open the Properties of the dougctyblks layer and click the Display tab. Set the transparency to 50%. Click OK.
-* Open ArcToolbox and go to Conversion Tools&gt;To KML&gt;Layer to KML. Use the dropdown menu (not the little folder) to select dougctyblks as the input layer. Save the output as dougpop.kmz in your Part2 folder. Set your Layer Output Scale to 1. Click OK. Give the tool a minute to work.
-* Save your 3D ArcScene document to your Part2 folder as dougpop.sxd.
-* Close ArcScene. In Windows Explorer, navigate to your Part2 folder and then double-click your dougpop.kmz file.
-* Open it in Google Earth
-* Pan, zoom, and tilt in order to get a good look at the extruded layer.
-* Settle a cool view. Use save image, add the pieces and save it to your personal folder.
-<img src="/courses/geog358/media/DougPop.jpg" alt="" /></p>
+<p>Now we will use extrusion to represent population. (According to Esri, extrusion is “the process of stretching a flat 2D shape vertically to create a 3D object.”)</p>
+
+<ul>
+<li>Click the Extrusion tab. Check the box to Extrude features in layer and then click on the adorable little calculator. The expression we wish to use here is simply [pop2k], so just double-click pop2k in the Fields box and then click OK. Click the Apply extrusion by: dropdown menu and select adding it to each feature’s base height. Click OK.</li>
+<li>You should see the extrusions. Since we’ve used the same variable for color and extrusion height, this means the darker the color, the taller the extrusion.</li>
+</ul>
+
+<p>Finally, we will make the layer translucent and load it into Google Earth. Open the Properties of the dougctyblks layer and click the Display tab. Set the transparency to 50%. Click OK.</p>
+
+<ul>
+<li>Open ArcToolbox and go to Conversion Tools&gt;To KML&gt;Layer to KML. Use the dropdown menu (not the little folder) to select dougctyblks as the input layer. Save the output as dougpop.kmz in your Part2 folder. Set your Layer Output Scale to 1. Click OK. Give the tool a minute to work.</li>
+<li>Save your 3D ArcScene document to your Part2 folder as dougpop.sxd.</li>
+<li>Close ArcScene. In Windows Explorer, navigate to your Part2 folder and then double-click your dougpop.kmz file.</li>
+<li>Open it in Google Earth</li>
+<li>Pan, zoom, and tilt in order to get a good look at the extruded layer.</li>
+<li>Settle a cool view. Use save image, add the pieces and save it to your personal folder.
+<img src="/courses/geog358/media/DougPop.jpg" alt="" /></li>
+</ul>
 
 <h2 id="part-3-terrain-analysis">Part 3: Terrain Analysis</h2>
 

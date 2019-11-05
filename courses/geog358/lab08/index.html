@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Part 1: Network Analysis Objectives The part of the lab is designed to introduce some basic networking analyses, including how to setup a network dataset, how to find the efficient routes under different rules, and how to calculate the nearest facilities.
+Materials (click to download)
+.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}   Data Name Description   SanFranciscoTran.gdb Various transportation and government data about San Francisco   Restricted Turns.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab08/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog358/lab08/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab08/">
+  <meta property="og:title" content="Lab 08 - Introduction to network analyist and ArcScene | Jim Coll">
+  <meta property="og:description" content="Part 1: Network Analysis Objectives The part of the lab is designed to introduce some basic networking analyses, including how to setup a network dataset, how to find the efficient routes under different rules, and how to calculate the nearest facilities.
+Materials (click to download)
+.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}   Data Name Description   SanFranciscoTran.gdb Various transportation and government data about San Francisco   Restricted Turns."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 08 - Introduction to network analyist and ArcScene | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/classoutline/">Class Outline and Lecture Notes</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/termpaper/">Project</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog358/lab01/">Lab 1 - Intro to ArcMap</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab02/">Lab 2 - Projections and Coordinate Systems</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab03/">Lab 3 - Using GPS for Field Data Collection</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab04/">Lab 4 - Georeferenceing and Intro to digitization</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab05/">Lab 5 - Building a GIS database</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab06/">Lab 6 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab07/">Lab 7 - Overlay &amp; site suitability anaysis</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog358/lab08/">Lab 8 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#part-1-network-analysis">Part 1: Network Analysis</a>
+<ul>
+<li><a href="#1-create-a-new-network-dataset">1 Create a new network dataset</a></li>
+<li><a href="#2-find-the-best-route">2 Find the best route</a></li>
+</ul></li>
+<li><a href="#part-2-3d-in-gis">Part 2: 3D in GIS</a>
+<ul>
+<li><a href="#1-draping-an-image-in-arcscene">1 Draping an Image in ArcScene</a></li>
+<li><a href="#2-displaying-attribute-values-in-3d">2 Displaying attribute values in 3D</a></li>
+</ul></li>
+<li><a href="#part-3-terrain-analysis">Part 3: Terrain Analysis</a>
+<ul>
+<li><a href="#1-generate-contours">1 Generate contours</a></li>
+<li><a href="#2-create-hillshades-and-derive-slope-and-aspect">2 Create hillshades and derive slope and aspect</a></li>
+<li><a href="#3-create-trail-profile">3 Create trail profile</a></li>
+<li><a href="#4-create-a-line-of-sight">4 Create a line-of-sight</a></li>
+<li><a href="#5-create-flattop-viewshed">5 Create flattop viewshed</a></li>
+</ul></li>
+<li><a href="#lab-submission">Lab submission:</a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 08 - Introduction to network analyist and ArcScene</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h2 id="part-1-network-analysis">Part 1: Network Analysis</h2>
+
+<p>Objectives
+The part of the lab is designed to introduce some basic networking analyses, including how to setup a network dataset, how to find the efficient routes under different rules, and how to calculate the nearest facilities.</p>
+
+<p><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EeekJKQUo05In6pweN4Eq04BItLXnRvfd73pA_0XFLF2Lg?e=5rbgEJ">Materials (click to download)</a></p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">SanFranciscoTran.gdb</td>
+    <td class="tg-btxf">Various transportation and government data about San Francisco</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Restricted Turns.lyr</td>
+    <td class="tg-0pky">Pre-defined layer of restricted turns along network</td>
+  </tr>
+</table></p>
+
+<h3 id="1-create-a-new-network-dataset">1 Create a new network dataset</h3>
+
+<p>There are quite a few steps here where you can make a wrong turn (ba dum tss).  Read and follow them carefully, and take the time to read each window in Arcmap and think about what the different options might produce.
+* Create a new data frame or start a new map document. Click Customize and select Extensions. Make sure the box next to Network Analyst is checked. Click Close.
+* Click Customize, select Toolbars, and click Network Analyst.
+* Click the ArcCatalog button (looks like a little filing cabinet). Locate your Part02 folder in the Catalog Tree of the ArcCatalog window. Expand the folder (i.e., click the plus sign next to it) and expand the SanFranciscoTrans geodatabase. Right-click the Transportation feature dataset, select New, and click Network Dataset.
+  * Name the network dataset Streets_ND and then click Next. Click Next three more times.
+* Under the Field column in the Using Elevation Fields section, click F_ELEV and change it to T_ELEV. Click Next. Click Next again.
+* On the “Specify the attributes for the network dataset” page, click the Add button. Name the attribute RestrictedTurns, change the Usage Type to Restriction, and then click OK.
+* Click the row you just created and then click Evaluators.
+* Under the Type column, change RestrictedTurns to Constant and change the Value column to Use Restriction. Click OK.
+* Click Next through the rest of the prompts and then click Finish.
+* Click Yes on the window that pops up. Give it a minute to run.
+* Click Close on the errors window that pops up.
+* Click Yes to add the network layer to the map
+* The resulting map should look like a chaotic mess of streets, junctions, signposts, etc.—but that’s OK for now.
+<img src="/courses/geog358/media/MessyNetwork.PNG" alt="" />
+* Right-click the RestrictedTurns layer and select Properties. Click the Symbology tab. Click Import. Click the little folder icon, select the file Restricted Turns.lyr in your Part1 folder, and click Add. Click OK. Click OK again.
+* Click the down arrow next to the Add Data button and select Add Basemap. Click Streets and then click Add. Give it a minute to load and say Yes if the program asks about hardware acceleration.</p>
+
+<h3 id="2-find-the-best-route">2 Find the best route</h3>
+
+<ul>
+<li>Click the Network Analyst button on the Network Analyst toolbar and select New Route.</li>
+<li>Turn off all layers except Route, Streets_ND, and Basemap. Zoom in close to downtown San Fran (the northeast tip of the peninsula). Notice how the colors indicate varying amounts of traffic.</li>
+<li>Take a screenshot of your entire screen and save it to your personal folder (that should look like this).
+<img src="/courses/geog358/media/FirstZoom.PNG" alt="" /></li>
+<li>We are now going to find the best route for a hypothetical shopping trip. Click the Find button (looks like a pair of binoculars). Click the Locations tab and Enter in the Single Line Input field:
+
+<ul>
+<li>301 Post St., San Francisco, CA 94108</li>
+</ul></li>
+<li>Click Find. Right-click the first result listed and select Add as Network Analysis Object.</li>
+<li>Repeat the last two steps for the following addresses:
+
+<ul>
+<li>1405 Montgomery St., San Francisco, CA 94111</li>
+<li>39 Pier 39 Concourse, San Francisco, CA 94133</li>
+<li>3301 Lyon St., San Francisco, CA 94123</li>
+<li>301 Post St., San Francisco, CA 94108 (…in order to make it a round trip!)</li>
+</ul></li>
+<li>Close the Find window.</li>
+<li>Double-click Route in the Table of Contents and in the Analysis Settings tab. Check the box next to Use Start Time. Change the Time of Day to 09:00 and the Day of Week to Monday. Click OK.</li>
+<li>Click the Solve button (looks like a grid with a line through it) on the Network Analyst toolbar. Click the Directions button (right next to the Solve button). Scroll down to the bottom of the window. It should list the time and distance of the trip. Move the Directions window so that it and the route are both visible.  Take a screenshot of your entire screen and save it to your personal folder (this should look like so).
+<img src="/courses/geog358/media/FinishedNetwork.PNG" alt="" /></li>
+</ul>
+
+<h2 id="part-2-3d-in-gis">Part 2: 3D in GIS</h2>
+
+<p>Objectives
+This part of the lab will introduce you to the ArcScene environment of the 3D Analyst extension. First you will drape an image of Death Valley in ArcScene, and then you will explore the population of Douglas County using three dimensional symbology and Google Earth imagery.</p>
+
+<p>From Esri’s ArcGIS Resource Center: “ArcScene is a 3D viewer that is well suited to generating perspective scenes that allow you to navigate and interact with your 3D feature and raster data. Based on OpenGL, ArcScene supports complex 3D line symbology and texture mapping as well as surface creation and display of TINs. All data is loaded into memory, which allows for relatively fast navigation, pan, and zoom functionality. Vector features are rendered as vectors, and raster data is either downsampled or configured into a fixed number of rows/columns you set.”</p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">DVIM3.tif</td>
+    <td class="tg-btxf">Spaceborne radar imagery over Death Valley</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">dvtin</td>
+    <td class="tg-0pky">Triangulated Irregular Network (TIN) terrain model for portion of Death Valley</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Death Valley Terrain.lyr</td>
+    <td class="tg-0pky">Layer file of Death Valley, for display purpose only</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Dougctyblks.shp</td>
+    <td class="tg-0pky">Douglas county census block layer</td>
+  </tr>
+</table></p>
+
+<h3 id="1-draping-an-image-in-arcscene">1 Draping an Image in ArcScene</h3>
+
+<ul>
+<li>Open <em>ArcScene</em>. Give it a minute to load. Click Cancel on the window that pops up.</li>
+<li>As you would in ArcMap, add the Death Valley Terrain.lyr from your Part2 folder. Also add DVIM3.TIF, The image is drawn on a plane with a base elevation of zero. Turn off the Death Valley Terrain layer.</li>
+<li>Right-click DVIM3.TIF and select Properties. In the Base Heights tab, click the Floating on a custom surface: radio button. Because the dvtin TIN (from which the layer file was created) is the only surface model in the scene, it appears in the dropdown list. Click OK and observe what happens to the image.</li>
+<li>Draping the radar image over the terrain surface allows you to see the relationship between the general shape of the land surface and the texture of the rocks and sediment that make up the surface.</li>
+
+<li><p>Explore the image using the 3D tools</p></li>
+
+<li><p>Right-click Scene layers (similar to ArcMap’s data frame) and select Scene Properties. Under the General tab, change the Vertical Exaggeration to 2. Click OK. Notice that the apparent height of the terrain is now doubled.</p></li>
+
+<li><p>Click the familiar Full Extent button. Click the Set Observer button (it looks like a target with an eye in front of it). This tool allows you to click on a portion of the image to observe the landscape from that point of view. Use this tool to explore the different 3D views. (Beware that clicking on flat spots will point your view to the sky! If that happens, just click the Full Extent button.)</p></li>
+
+<li><p>Select a view that you find particularly interesting. Take a screenshot of your entire screen and save it to your personal folder.</p></li>
+
+<li><p>Save your 3D ArcScene document to your Part2 folder as deathvalley.sxd.
+<img src="/courses/geog358/media/3DView.PNG" alt="" /></p></li>
+</ul>
+
+<h3 id="2-displaying-attribute-values-in-3d">2 Displaying attribute values in 3D</h3>
+
+<ul>
+<li>Start a new ArcScene document.  Add dougctyblks.shp from your Part2 folder.</li>
+</ul>
+
+<p>Let’s set the color symbology to reflect population values.
+* Open the Properties of the dougctyblks layer and click the Symbology tab. Click Quantities and select pop2k as your Value field. Increase the number of classes to 10. Click Apply.</p>
+
+<p>Now we will use extrusion to represent population. (According to Esri, extrusion is “the process of stretching a flat 2D shape vertically to create a 3D object.”)
+* Click the Extrusion tab. Check the box to Extrude features in layer and then click on the adorable little calculator. The expression we wish to use here is simply [pop2k], so just double-click pop2k in the Fields box and then click OK. Click the Apply extrusion by: dropdown menu and select adding it to each feature’s base height. Click OK.
+* You should see the extrusions. Since we’ve used the same variable for color and extrusion height, this means the darker the color, the taller the extrusion.</p>
+
+<p>Finally, we will make the layer translucent and load it into Google Earth. Open the Properties of the dougctyblks layer and click the Display tab. Set the transparency to 50%. Click OK.
+* Open ArcToolbox and go to Conversion Tools&gt;To KML&gt;Layer to KML. Use the dropdown menu (not the little folder) to select dougctyblks as the input layer. Save the output as dougpop.kmz in your Part2 folder. Set your Layer Output Scale to 1. Click OK. Give the tool a minute to work.
+* Save your 3D ArcScene document to your Part2 folder as dougpop.sxd.
+* Close ArcScene. In Windows Explorer, navigate to your Part2 folder and then double-click your dougpop.kmz file.
+* Open it in Google Earth
+* Pan, zoom, and tilt in order to get a good look at the extruded layer.
+* Settle a cool view. Use save image, add the pieces and save it to your personal folder.
+<img src="/courses/geog358/media/DougPop.jpg" alt="" /></p>
+
+<h2 id="part-3-terrain-analysis">Part 3: Terrain Analysis</h2>
+
+<p>Objectives
+This section will introduce you to basic terrain analysis in the raster data model. You will learn how to:
+1 Create contours, profiles, and hillshades
+2 Derive slope and aspect
+3 Generate a viewshed</p>
+
+<p>Materials
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">dem30</td>
+    <td class="tg-btxf">USGS 7.5 minute DEM of Watauga County, North Carolina (cell size 30m)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">flattop.shp</td>
+    <td class="tg-0pky">A vista platform (data collected using Trimble GPS)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">trail.shp</td>
+    <td class="tg-0pky">flattop trail (data collected using Trimble GPS)</td>
+  </tr>
+</table></p>
+
+<h3 id="1-generate-contours">1 Generate contours</h3>
+
+<ul>
+<li>Open ArcMap. Click Customize and select Extensions. Makes sure the Spatial Analyst extension is checked.</li>
+<li>Add DEM30 and TRAIL.shp from your Part3 folder.</li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Contour and use the following settings:
+
+<ul>
+<li>Input raster: DEM30 (select from the dropdown list)</li>
+<li>Output polyline features: (Save as contour in your Part02 folder)</li>
+<li>Counter interval: 20</li>
+<li>Base contour: 400 Click OK.</li>
+</ul></li>
+<li>Right-click the contour layer and select Label Features.</li>
+<li>Drag the TRAIL layer to the top of the Table of Contents. Make the trail line thicker so that it’s easier to see. Right-click the layer and select Zoom To Layer. Look at the trail. Click Fixed Zoom Out a few times and look at the trail again.</li>
+</ul>
+
+<h3 id="2-create-hillshades-and-derive-slope-and-aspect">2 Create hillshades and derive slope and aspect</h3>
+
+<ul>
+<li>Turn off the contour layer and click Full Extent.</li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Hillshade. The input layer should be DEM30. Leave all the settings as their defaults and create an output file named hillshade in your Part3 folder.</li>
+<li>Repeat the last step but set the Z factor to 3 and save it as hillshade3z.</li>
+<li>Turn this new hillshade on and off to see the difference between it and the original.</li>
+<li>Create another hillshade and set Altitude to 60, the Z factor to 3, and save it as hillshade3z60.</li>
+<li>Turn this new hillshade on and off to see the difference between it and the original.</li>
+<li>Turn off all the hillshades.</li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Slope.
+
+<ul>
+<li>Select DEM30 (from the drop-down menu) as the Input raster.</li>
+<li>Save the Output raster as slope. Click OK.</li>
+</ul></li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Aspect. Select DEM30 (from the drop-down menu) as the Input raster. Save the Output raster as aspect. Click OK.</li>
+<li>Spend a moment looking at your slope and aspect rasters.</li>
+<li>Turn off the slope and aspect layers.</li>
+</ul>
+
+<h3 id="3-create-trail-profile">3 Create trail profile</h3>
+
+<ul>
+<li>Click Customize and select Extensions. Make sure 3D Analyst is checked.</li>
+<li>Click Customize, select Toolbars, and select 3D Analyst.</li>
+<li>Right-click TRAIL and select Zoom to Layer.</li>
+<li>On the 3D Analyst toolbar, make sure your Layer is set to DEM30. Click the Interpolate Line button.<br /></li>
+<li>Now you will trace the trail to digitize a line. Simply click once to start and then click again along the path to create vertices. There’s no need to be ultra-precise. Double-click once you have completed the line.</li>
+<li>On the 3D Analyst toolbar, click the Profile Graph tool and select Profile Graph. (The line must be selected for this to work.)</li>
+<li>Right-click on the title bar of the profile graph and select Properties. In the Appearance tab, change the Title to Trail Elevation Profile and the Footer to your name. Click Apply and OK.</li>
+<li>Take a screenshot of the entire screen and save it to your personal folder.</li>
+<li>Close the Profile Graph.
+<img src="/courses/geog358/media/ProfileGraph.png" alt="" /></li>
+</ul>
+
+<h3 id="4-create-a-line-of-sight">4 Create a line-of-sight</h3>
+
+<ul>
+<li>On the 3D Analyst toolbar, click the Create Line of Sight button.</li>
+<li>In the dialog box that appears, type 1.7 as the Observer offset. (This will show what is visible from the perspective of an observer 1.7 meters [5’7”] tall.) Leave the Target offset as it is. Keep the dialog box open.</li>
+<li>Zoom into an area of your choosing. Draw some lines by clicking once at a start point and clicking once at an end point.
+
+<ul>
+<li>The green segments of the line are visible from the observer point,</li>
+<li>The red segments are not</li>
+<li>The blue dot represents the “point of obstruction from the observer to the target.”</li>
+</ul></li>
+<li>Close the line-of-sight dialog box.</li>
+<li>Select the lines-of-sight you created and delete them.</li>
+</ul>
+
+<h3 id="5-create-flattop-viewshed">5 Create flattop viewshed</h3>
+
+<ul>
+<li>Add the FLATTOP.shp from your Part02 folder.</li>
+<li>Open the layer’s attribute table. Add two new fields, OFFSETA and RADIUS2, both with a Type of Float, a Precision of 8, and a scale of 2.
+
+<ul>
+<li>Hint: Start with the Table Options button!</li>
+</ul></li>
+<li>Start an edit session.
+
+<ul>
+<li>Remember this? Hint: Open the Editor toolbar.</li>
+</ul></li>
+<li>In the attribute table of FLATTOP, enter 22.05 in the OFFSETA field and 8045 in the RADIUS2 field. Save your edits and end the edit session.</li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Viewshed. Use DEM30 as the Input raster, FLATTOP as the Input point, and save the output as viewshed in your Part02 folder.</li>
+<li>Click Full Extent to see your viewshed. Look at the Table of Contents to see which color corresponds to the visible sections.</li>
+<li>Take a screenshot of the entire screen and save it to your personal folder.
+<img src="/courses/geog358/media/Viewshed.png" alt="" /></li>
+</ul>
+
+<h2 id="lab-submission">Lab submission:</h2>
+
+<p>You should submit your 5 screenshots to blackboard.  Congratulations, you are finished.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

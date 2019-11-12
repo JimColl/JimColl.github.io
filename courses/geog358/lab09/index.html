@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Lab 10 part 2 Lab 10: Cartographic Modeling/Map Algebra
+Part 1: Temperature Modeling and Interpolation Objectives This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.
+Materials (click to download)
+.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab09/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog358/lab09/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab09/">
+  <meta property="og:title" content="Lab 09 | Jim Coll">
+  <meta property="og:description" content="Lab 10 part 2 Lab 10: Cartographic Modeling/Map Algebra
+Part 1: Temperature Modeling and Interpolation Objectives This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.
+Materials (click to download)
+.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} ."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 09 | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/classoutline/">Class Outline and Lecture Notes</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/termpaper/">Project</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog358/lab01/">Lab 1 - Intro to ArcMap</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab02/">Lab 2 - Projections and Coordinate Systems</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab03/">Lab 3 - Using GPS for Field Data Collection</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab04/">Lab 4 - Georeferenceing and Intro to digitization</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab05/">Lab 5 - Building a GIS database</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab06/">Lab 6 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab07/">Lab 7 - Overlay &amp; site suitability anaysis</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab08/">Lab 8 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog358/lab09/">Lab 9</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#part-1-temperature-modeling-and-interpolation">Part 1: Temperature Modeling and Interpolation</a>
+<ul>
+<li><a href="#1-temperature-estimation-and-comparison">1 Temperature estimation and comparison</a></li>
+<li><a href="#2-using-global-lapse-rate-to-model-temperature">2 Using Global Lapse Rate to Model Temperature</a></li>
+<li><a href="#3-using-inverse-distance-weighting-to-interpolate-temperature">3 Using Inverse Distance Weighting to Interpolate Temperature</a></li>
+</ul></li>
+<li><a href="#part-2-fire-hazard-modeling">Part 2: Fire Hazard Modeling</a>
+<ul>
+<li><a href="#1-building-a-fire-hazard-model">1 Building a fire hazard model</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 09</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<p>Lab 10 part 2
+Lab 10: Cartographic Modeling/Map Algebra</p>
+
+<h2 id="part-1-temperature-modeling-and-interpolation">Part 1: Temperature Modeling and Interpolation</h2>
+
+<p>Objectives
+This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.</p>
+
+<p><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Edmpgz1Od-BCrep6PSQTxRwBk0eauuB1BnQYui-d-fX9zQ?e=83fyJH">Materials (click to download)</a></p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">USDEM10K</td>
+    <td class="tg-btxf">DEM covering the conterminous US. </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">US_TEMP.shp</td>
+    <td class="tg-0pky">Weather stations across conterminous</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">US. STAT48.shp</td>
+    <td class="tg-0pky">48 conterminous states in US.</td>
+  </tr>
+</table></p>
+
+<h3 id="1-temperature-estimation-and-comparison">1 Temperature estimation and comparison</h3>
+
+<ul>
+<li>Open ArcMap. Add US_TEMP.shp, STAT48.shp and USDEM10k grid (all in the Part01 folder) to the data frame. Ignore warnings about spatial information.</li>
+<li>The original DEM is recorded in feet. However, we need to convert it to meters. Open ArcToolbox and go to Spatial Analyst Tools | Map Algebra | Raster Calculator.
+
+<ul>
+<li>If you get an error message about licensing, go to Customize | Extensions… and check the Spatial Analyst box.)</li>
+<li>Double-click the “USDEM10K” layer, and then add * .3048 to the expression. (1 ft = 0.3048 m)</li>
+<li>Save the Output raster in your Part01 folder as DEM_meters.</li>
+</ul></li>
+<li>Your new DEM will appear in your table of contents with values ranging from 0 to ~4,091.</li>
+
+<li><p>Stat48grid will be a raster representation of the polygon state48 shapefile. In ArcToolbox, go to Conversion Tools | To Raster | Feature to Raster. Use the following settings:</p>
+
+<ul>
+<li>Input features: STAT48</li>
+<li>Field: STAT48L</li>
+<li>Output raster: (Save as Stat48grid in your Part01 folder)</li>
+<li>Output cell size: 10000</li>
+</ul></li>
+
+<li><p>Right-click the ArcToolbox node (the top of the ArcToolbox menu—scroll up if you can’t see it) and click Environments….</p></li>
+
+<li><p>Click Workspace and set both the Current Workspace and the Scratch Workspace to your Part01 folder. (You may have to go up one level to get to the full path of your Part01 folder.)</p></li>
+
+<li><p>Scroll down, click Raster Analysis, and set Mask to Stat48grid.</p></li>
+
+<li><p>Click OK.</p></li>
+</ul>
+
+<h3 id="2-using-global-lapse-rate-to-model-temperature">2 Using Global Lapse Rate to Model Temperature</h3>
+
+<ul>
+<li>The airport in Columbia, South Carolina has an observed mean annual temperature of 17oC with an elevation of approximately 65 m.  The global lapse rate tells us that temperature decreases 6.5o C for every 1,000 m increase in elevation.  Let’s calculate the elevation and temperature difference in each raster cell from the Columbia Airport.</li>
+<li>In ArcToolbox go to Spatial Analyst Tools | Map Algebra | Raster Calculator. To calculate the elevation difference from Columbia Airport, use the expression: “DEM_meters” – 65<br /></li>
+<li>Save the output in your Part01 folder as elev_diff.</li>
+<li>Open the Raster Calculator again. To calculate the temperature difference from Columbia Airport based on the global lapse rate, use the expression: “elev_diff” * (6.5 / 1000)<br /></li>
+<li>Save the output in your Part01 folder as temp_diff.</li>
+<li>Finally, using the mean annual temperature at Columbia Airport (17o C) and the difference in temperature at each cell from this location (temp_diff), we will estimate the temperature across the U.S. In the Raster Calculator, use the expression: 17 – “temp_diff”</li>
+<li>Save the output in your Part01 folder as temp_model.</li>
+</ul>
+
+<h3 id="3-using-inverse-distance-weighting-to-interpolate-temperature">3 Using Inverse Distance Weighting to Interpolate Temperature</h3>
+
+<ul>
+<li><p>Now we’re going to interpolate a temperature grid from the US_TEMP shapefile using the Inverse Distance Weighting (IDW) method. In ArcToolbox, go to Spatial Analyst Tools | Interpolation | IDW and use the following settings:</p>
+
+<ul>
+<li>Input point features: US_TEMP</li>
+<li>Z value field: TEMPC</li>
+<li>Output raster: (Save as temp_IDW in your Part01 folder)</li>
+<li>Output cell size: 10000</li>
+<li>Power: 2</li>
+</ul></li>
+
+<li><p>The result is another version of temperature across the nation, but this time it’s based on interpolation between established weather stations.</p></li>
+
+<li><p>Using the Raster Calculator, calculate the temperature difference between estimated (based on global lapse) and interpolated temperature: “temp_model” – “temp_IDW”</p></li>
+
+<li><p>Save the output in your Part01 folder as temp_compare.</p></li>
+
+<li><p>Save your map document as YourLastName_temp_model.mxd.</p></li>
+
+<li><p>Take a screenshot of the entire ArcMap window and save it to your personal folder.</p></li>
+</ul>
+
+<h2 id="part-2-fire-hazard-modeling">Part 2: Fire Hazard Modeling</h2>
+
+<p>Objectives
+In areas of the United States where the population has expanded to rural and forested land covers, the risk of wildland fire is great. The term Wildland/Urban Interface (WUI) is used to describe these areas. Special mitigation and response strategies have been developed to manage risk in these areas. The National Fire Protection Association (NFPA) has developed a set of standards for evaluating risk in developing areas threatened by wildfire.</p>
+
+<p>This part of the lab presents a portion of a very simple wildfire risk model. It shows how to use GIS to model just two of the many factors that influence wildfire risk: slope and fuel. Together these two factors make up one of the criteria specified in the NFPA 299 Standards for Protection of Life and Property from Wildfire. (A more realistic model of wildfire risk would use complex data that would include a very detailed breakdown of the vegetation into fuel classes and would model both slope  and aspect. Additional data on weather history, the locations of structures, fire history, access, the evacuation routes available, and other factors that might affect fire ignition and spread would also   be incorporated in the model.) You will convert digital elevation model (DEM) data and vector files  to raster data and assign a fire risk value and percentage of influence. Then you will create a model that will generate a map showing overall fire hazard risk.</p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">elevation.dem</td>
+    <td class="tg-btxf">Terrain surface (.dem format)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">studyarea</td>
+    <td class="tg-0pky">Extent of the fire risk model</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">vegetation</td>
+    <td class="tg-0pky">Vegetation types in the study area</td>
+  </tr>
+</table></p>
+
+<h3 id="1-building-a-fire-hazard-model">1 Building a fire hazard model</h3>
+
+<ul>
+<li>Start a new ArcMap document (or new data frame) and add the vegetation and studyarea shapefiles from your Part02 folder. Ignore warnings about spatial reference.</li>
+<li>Right-click the ArcToolbox node (the top of the ArcToolbox) and click Environments….</li>
+<li>Click Workspace and set both the Current Workspace and the Scratch Workspace to your Part02 folder.</li>
+<li>Click Processing Extent and change the Extent to Same as layer studyarea.</li>
+<li>Click Raster Analysis and set the Cell Size to Same as layer elevation.dem.</li>
+<li>Click OK.</li>
+<li>In ArcToolbox, go to Conversion Tools | To Raster | Feature to Raster and use the following settings:
+
+<ul>
+<li>Input features: vegetation</li>
+<li>Field: VEGTYPE</li>
+<li>Output raster: (Save as Rveg in your Part02 folder)</li>
+<li>Output cell size: elev_raster (navigate to your Part02 folder)</li>
+</ul></li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Slope and use the following settings:
+
+<ul>
+<li>Input raster: elevation.dem (again, navigate to your Part02 folder)</li>
+<li>Output raster: (Save as slope in your Part02 folder)</li>
+<li>Output measurement: PERCENT_RISE</li>
+<li>Z factor: 1</li>
+</ul></li>
+</ul>
+
+<p>The weighted linear combination (overlay) process combines slope and vegetation data to assess the overall fire hazard. Because these layers do not contain similar data, the values in each layer must be converted to a common value scale. The common scale for this model will assign a value of 1 to areas with the lowest wildfire potential and 3 to areas with the highest wildfire potential.</p>
+
+<ul>
+<li><p>In ArcToolbox, go to Spatial Analyst Tools | Reclass | Reclassify and use the following settings:</p>
+
+<ul>
+<li>Input raster: slope</li>
+<li>Reclass field: VALUE</li>
+<li>Reclassification:</li>
+<li>Click Classify… to bring up the Classification window. Change the Classes to 3. Click OK.</li>
+<li>Change the table to reflect the following:</li>
+<li>Note that you must use spaces in the Old values ranges (e.g., 0 – 30, not 0-30)</li>
+</ul></li>
+
+<li><p>Use this same tool (reclassify) to create a factor layer for vegetation:</p>
+
+<ul>
+<li>Input raster: Rveg</li>
+<li>Reclass field: VEGTYPE</li>
+<li>Reclassification:</li>
+
+<li><p>Change the table to reflect the following:
+Old values      New values
+Lodgepole pine  3
+Engelmann spruce    2
+Krummholz       2
+non-forest      1
+whitebark pine      3
+water           NoData
+NoData      NoData</p></li>
+
+<li><p>Output raster: (Save as vegfactor in your Part02 folder)</p></li>
+</ul></li>
+</ul>
+
+<p>Linear Combination</p>
+
+<p>In the weighted linear combination process, weights are assigned to each factor based on the influence a factor has on the fire hazard assessment. In this model, slope is deemed a more important (0.75) factor than vegetation type (0.25).
+* In ArcToolbox, go to Spatial Analyst Tools | Map Algebra | Raster Calculator and enter the following formula:
+(0.75 * “slopefactor”) + (0.25 * “vegfactor”)
+* Save the output in your Part02 folder as fire_hazard.
+* Right-click the ArcToolbox node (the top of the ArcToolbox) and click Environments….
+* Click Raster Analysis (you may have to scroll down to see it) and set Mask to studyarea. Click OK.
+* In ArcToolbox, go to Spatial Analyst Tools | Surface | Hillshade and use the following settings:
+  * Input raster: elev_raster
+  * Output raster: (Save as hillshade in your Part02 folder)
+  * Isolate the highest fire risk spot in the study area by entering the following into Raster Calculator (Spatial Analyst Tools | Map Algebra | Raster Calculator): “fire_hazard” == 3 (The pixels that meet this qualification will get a value of 1 and all others will get a value of 0).
+  * Save the output in your Part02 folder as high_fire_haz.</p>
+
+<ul>
+<li>In the Table of Contents, move high_fire_haz on top of the hillshade to display the “hot spots” above the terrain surface.</li>
+<li>Go to the Properties of the high_fire_haz layer, click the Display tab, and set the transparency to 50%. Click OK.</li>
+<li>Turn all layers off, except the high_fire_haz and hillshade.</li>
+<li>Take a screenshot of the entire ArcMap window and save it to your personal folder.</li>
+</ul>
+
+<p>Upload both of your screenshots to Blackboard. There is nothing to hand in this week.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

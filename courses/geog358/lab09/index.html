@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Lab 10 part 2 Lab 10: Cartographic Modeling/Map Algebra
-Part 1: Temperature Modeling and Interpolation Objectives This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.
+  <meta name="description" content="Part 1: Temperature Modeling and Interpolation Objectives
+This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.
 Materials (click to download)
-.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .">
+.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}   Data Name Description   USDEM10K DEM covering the conterminous US.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab09/">
@@ -115,11 +115,11 @@ Materials (click to download)
   
   <meta property="og:site_name" content="Jim Coll">
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab09/">
-  <meta property="og:title" content="Lab 09 | Jim Coll">
-  <meta property="og:description" content="Lab 10 part 2 Lab 10: Cartographic Modeling/Map Algebra
-Part 1: Temperature Modeling and Interpolation Objectives This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.
+  <meta property="og:title" content="Lab 09 - Interpolation and Fire Hazard Modeling | Jim Coll">
+  <meta property="og:description" content="Part 1: Temperature Modeling and Interpolation Objectives
+This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.
 Materials (click to download)
-.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} ."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+.tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}   Data Name Description   USDEM10K DEM covering the conterminous US."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -135,7 +135,7 @@ Materials (click to download)
 
 
 
-  <title>Lab 09 | Jim Coll</title>
+  <title>Lab 09 - Interpolation and Fire Hazard Modeling | Jim Coll</title>
 
 </head>
 
@@ -363,11 +363,11 @@ Materials (click to download)
       </li>
       
       <li >
-        <a href="/courses/geog358/lab08/">Lab 8 - Attribute/Spatial Queries and Spatial Joins</a>
+        <a href="/courses/geog358/lab08/">Lab 8 - Introduction to network analyist and ArcScene</a>
       </li>
       
       <li class="active">
-        <a href="/courses/geog358/lab09/">Lab 9</a>
+        <a href="/courses/geog358/lab09/">Lab 9 - Interpolation and Fire Hazard Modeling</a>
       </li>
       
     </ul>
@@ -388,9 +388,9 @@ Materials (click to download)
 
       <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
 <li><a href="#part-1-temperature-modeling-and-interpolation">Part 1: Temperature Modeling and Interpolation</a>
+<ul>
+<li>
 <ul>
 <li><a href="#1-temperature-estimation-and-comparison">1 Temperature estimation and comparison</a></li>
 <li><a href="#2-using-global-lapse-rate-to-model-temperature">2 Using Global Lapse Rate to Model Temperature</a></li>
@@ -399,6 +399,7 @@ Materials (click to download)
 <li><a href="#part-2-fire-hazard-modeling">Part 2: Fire Hazard Modeling</a>
 <ul>
 <li><a href="#1-building-a-fire-hazard-model">1 Building a fire hazard model</a></li>
+<li><a href="#2-linear-combination">2 Linear Combination</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -413,17 +414,14 @@ Materials (click to download)
       <article class="article" itemscope itemtype="http://schema.org/Article">
 
         <div class="docs-article-container">
-          <h1 itemprop="name">Lab 09</h1>
+          <h1 itemprop="name">Lab 09 - Interpolation and Fire Hazard Modeling</h1>
 
           <div class="article-style" itemprop="articleBody">
             
 
-<p>Lab 10 part 2
-Lab 10: Cartographic Modeling/Map Algebra</p>
+<h1 id="part-1-temperature-modeling-and-interpolation">Part 1: Temperature Modeling and Interpolation</h1>
 
-<h2 id="part-1-temperature-modeling-and-interpolation">Part 1: Temperature Modeling and Interpolation</h2>
-
-<p>Objectives
+<p><strong>Objectives</strong><br />
 This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.</p>
 
 <p><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Edmpgz1Od-BCrep6PSQTxRwBk0eauuB1BnQYui-d-fX9zQ?e=83fyJH">Materials (click to download)</a></p>
@@ -500,7 +498,7 @@ This part will introduce you to the basic operations of cartographic modeling (o
 <h3 id="3-using-inverse-distance-weighting-to-interpolate-temperature">3 Using Inverse Distance Weighting to Interpolate Temperature</h3>
 
 <ul>
-<li><p>Now we’re going to interpolate a temperature grid from the US_TEMP shapefile using the Inverse Distance Weighting (IDW) method. In ArcToolbox, go to Spatial Analyst Tools | Interpolation | IDW and use the following settings:</p>
+<li>Now we’re going to interpolate a temperature grid from the US_TEMP shapefile using the Inverse Distance Weighting (IDW) method. In ArcToolbox, go to Spatial Analyst Tools | Interpolation | IDW and use the following settings:
 
 <ul>
 <li>Input point features: US_TEMP</li>
@@ -509,24 +507,19 @@ This part will introduce you to the basic operations of cartographic modeling (o
 <li>Output cell size: 10000</li>
 <li>Power: 2</li>
 </ul></li>
-
-<li><p>The result is another version of temperature across the nation, but this time it’s based on interpolation between established weather stations.</p></li>
-
-<li><p>Using the Raster Calculator, calculate the temperature difference between estimated (based on global lapse) and interpolated temperature: “temp_model” – “temp_IDW”</p></li>
-
-<li><p>Save the output in your Part01 folder as temp_compare.</p></li>
-
-<li><p>Save your map document as YourLastName_temp_model.mxd.</p></li>
-
-<li><p>Take a screenshot of the entire ArcMap window and save it to your personal folder.</p></li>
+<li>The result is another version of temperature across the nation, but this time it’s based on interpolation between established weather stations.</li>
+<li>Using the Raster Calculator, calculate the temperature difference between estimated (based on global lapse) and interpolated temperature: “temp_model” – “temp_IDW”<br /></li>
+<li>Save the output in your Part01 folder as temp_compare.</li>
+<li>Save your map document as YourLastName_temp_model.mxd.</li>
+<li>Take a screenshot of the entire ArcMap window and save it to your personal folder.</li>
 </ul>
 
 <h2 id="part-2-fire-hazard-modeling">Part 2: Fire Hazard Modeling</h2>
 
-<p>Objectives
+<p><strong>Objectives</strong><br />
 In areas of the United States where the population has expanded to rural and forested land covers, the risk of wildland fire is great. The term Wildland/Urban Interface (WUI) is used to describe these areas. Special mitigation and response strategies have been developed to manage risk in these areas. The National Fire Protection Association (NFPA) has developed a set of standards for evaluating risk in developing areas threatened by wildfire.</p>
 
-<p>This part of the lab presents a portion of a very simple wildfire risk model. It shows how to use GIS to model just two of the many factors that influence wildfire risk: slope and fuel. Together these two factors make up one of the criteria specified in the NFPA 299 Standards for Protection of Life and Property from Wildfire. (A more realistic model of wildfire risk would use complex data that would include a very detailed breakdown of the vegetation into fuel classes and would model both slope  and aspect. Additional data on weather history, the locations of structures, fire history, access, the evacuation routes available, and other factors that might affect fire ignition and spread would also   be incorporated in the model.) You will convert digital elevation model (DEM) data and vector files  to raster data and assign a fire risk value and percentage of influence. Then you will create a model that will generate a map showing overall fire hazard risk.</p>
+<p>This part of the lab presents a portion of a very simple wildfire risk model. It shows how to use GIS to model just two of the many factors that influence wildfire risk: slope and fuel. Together these two factors make up one of the criteria specified in the NFPA 299 Standards for Protection of Life and Property from Wildfire. (A more realistic model of wildfire risk would use complex data that would include a very detailed breakdown of the vegetation into fuel classes and would model both slope  and aspect. Additional data on weather history, the locations of structures, fire history, access, the evacuation routes available, and other factors that might affect fire ignition and spread would also be incorporated in the model.) You will convert digital elevation model (DEM) data and vector files  to raster data and assign a fire risk value and percentage of influence. Then you will create a model that will generate a map showing overall fire hazard risk.</p>
 
 <p><style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
@@ -568,7 +561,7 @@ In areas of the United States where the population has expanded to rural and for
 <ul>
 <li>Input features: vegetation</li>
 <li>Field: VEGTYPE</li>
-<li>Output raster: (Save as Rveg in your Part02 folder)</li>
+<li>Output raster: (Save as <strong>Rveg</strong> in your Part02 folder)</li>
 <li>Output cell size: elev_raster (navigate to your Part02 folder)</li>
 </ul></li>
 <li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Slope and use the following settings:
@@ -592,7 +585,32 @@ In areas of the United States where the population has expanded to rural and for
 <li>Reclassification:</li>
 <li>Click Classify… to bring up the Classification window. Change the Classes to 3. Click OK.</li>
 <li>Change the table to reflect the following:</li>
-<li>Note that you must use spaces in the Old values ranges (e.g., 0 – 30, not 0-30)</li>
+<li>Note that you must use spaces in the Old values ranges (e.g., 0 – 30, not 0-30)<br />
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-0pky">Old values</th>
+<th class="tg-0pky">New values</th>
+</tr>
+<tr>
+<td class="tg-btxf">0 - 30</td>
+<td class="tg-btxf">1</td>
+</tr>
+<tr>
+<td class="tg-0pky">30 - 60</td>
+<td class="tg-0pky">2</td>
+</tr>
+<tr>
+<td class="tg-0pky">60 - 300</td>
+<td class="tg-0pky">3</td>
+</tr>
+</table></li>
 </ul></li>
 
 <li><p>Use this same tool (reclassify) to create a factor layer for vegetation:</p>
@@ -603,38 +621,85 @@ In areas of the United States where the population has expanded to rural and for
 <li>Reclassification:</li>
 
 <li><p>Change the table to reflect the following:
-Old values      New values
-Lodgepole pine  3
-Engelmann spruce    2
-Krummholz       2
-non-forest      1
-whitebark pine      3
-water           NoData
-NoData      NoData</p></li>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-0pky">Old values</th>
+<th class="tg-0pky">New values</th>
+</tr>
+<tr>
+<td class="tg-btxf">Lodgepole pine</td>
+<td class="tg-btxf">3</td>
+</tr>
+<tr>
+<td class="tg-0pky">Engelmann spruce</td>
+<td class="tg-0pky">2</td>
+</tr>
+<tr>
+<td class="tg-0pky">Krummholz</td>
+<td class="tg-0pky">2</td>
+</tr>
+<tr>
+<th class="tg-0pky">non-forest</th>
+<th class="tg-0pky">1</th>
+</tr>
+<tr>
+<td class="tg-btxf">whitebark pine</td>
+<td class="tg-btxf">3</td>
+</tr>
+<tr>
+<td class="tg-0pky">water</td>
+<td class="tg-0pky">NoData</td>
+</tr>
+<tr>
+<td class="tg-0pky">NoData</td>
+<td class="tg-0pky">NoData</td>
+</tr>
+</table></p></li>
 
 <li><p>Output raster: (Save as vegfactor in your Part02 folder)</p></li>
 </ul></li>
 </ul>
 
-<p>Linear Combination</p>
+<h3 id="2-linear-combination">2 Linear Combination</h3>
 
-<p>In the weighted linear combination process, weights are assigned to each factor based on the influence a factor has on the fire hazard assessment. In this model, slope is deemed a more important (0.75) factor than vegetation type (0.25).
-* In ArcToolbox, go to Spatial Analyst Tools | Map Algebra | Raster Calculator and enter the following formula:
-(0.75 * “slopefactor”) + (0.25 * “vegfactor”)
-* Save the output in your Part02 folder as fire_hazard.
-* Right-click the ArcToolbox node (the top of the ArcToolbox) and click Environments….
-* Click Raster Analysis (you may have to scroll down to see it) and set Mask to studyarea. Click OK.
-* In ArcToolbox, go to Spatial Analyst Tools | Surface | Hillshade and use the following settings:
-  * Input raster: elev_raster
-  * Output raster: (Save as hillshade in your Part02 folder)
-  * Isolate the highest fire risk spot in the study area by entering the following into Raster Calculator (Spatial Analyst Tools | Map Algebra | Raster Calculator): “fire_hazard” == 3 (The pixels that meet this qualification will get a value of 1 and all others will get a value of 0).
-  * Save the output in your Part02 folder as high_fire_haz.</p>
+<p>In the weighted linear combination process, weights are assigned to each factor based on the influence a factor has on the fire hazard assessment. In this model, slope is deemed a more important (0.75) factor than vegetation type (0.25).</p>
 
 <ul>
-<li>In the Table of Contents, move high_fire_haz on top of the hillshade to display the “hot spots” above the terrain surface.</li>
-<li>Go to the Properties of the high_fire_haz layer, click the Display tab, and set the transparency to 50%. Click OK.</li>
-<li>Turn all layers off, except the high_fire_haz and hillshade.</li>
-<li>Take a screenshot of the entire ArcMap window and save it to your personal folder.</li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Map Algebra | Raster Calculator and enter the following formula:<br /></li>
+</ul>
+
+<blockquote>
+<p>(0.75 * “slopefactor”) + (0.25 * “vegfactor”)</p>
+</blockquote>
+
+<ul>
+<li>Save the output in your Part02 folder as fire_hazard.</li>
+<li>Right-click the ArcToolbox node (the top of the ArcToolbox) and click Environments….</li>
+<li>Click Raster Analysis (you may have to scroll down to see it) and set Mask to studyarea. Click OK.</li>
+<li>In ArcToolbox, go to Spatial Analyst Tools | Surface | Hillshade and use the following settings:
+
+<ul>
+<li>Input raster: elev_raster</li>
+<li>Output raster: (Save as hillshade in your Part02 folder)</li>
+</ul></li>
+<li>Isolate the highest fire risk spot in the study area by entering the following into Raster Calculator (Spatial Analyst Tools | Map Algebra | Raster Calculator): “fire_hazard” == 3 (The pixels that meet this qualification will get a value of 1 and all others will get a value of 0).</li>
+
+<li><p>Save the output in your Part02 folder as high_fire_haz.</p></li>
+
+<li><p>In the Table of Contents, move high_fire_haz on top of the hillshade to display the “hot spots” above the terrain surface.</p></li>
+
+<li><p>Go to the Properties of the high_fire_haz layer, click the Display tab, and set the transparency to 50%. Click OK.</p></li>
+
+<li><p>Turn all layers off, except the high_fire_haz and hillshade.</p></li>
+
+<li><p>Take a screenshot of the entire ArcMap window and save it to your personal folder.</p></li>
 </ul>
 
 <p>Upload both of your screenshots to Blackboard. There is nothing to hand in this week.</p>

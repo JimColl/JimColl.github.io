@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jim Coll</title>
+    <link>https://jimcoll.github.io/courses/random/</link>
+      <atom:link href="https://jimcoll.github.io/courses/random/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jim Coll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>https://jimcoll.github.io/img/icon-192.png</url>
+      <title>Jim Coll</title>
+      <link>https://jimcoll.github.io/courses/random/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/website/</guid>
+      <description>
+
+&lt;h1 id=&#34;creating-a-website&#34;&gt;&lt;strong&gt;Creating a website:&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    There are a lot of links in here, to highlight some key resources I used while I was learning how to do this.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-www&#34;&gt;https://github.com/sourcethemes/academic-www&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;https://github.com/gcushen/hugo-academic&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&amp;rsquo;t cut it here, and OneDrive is a whole different beast).  However, the creation of one is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution to this in the form of the HUGO.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hosting on github page&lt;/a&gt;, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  The following will will walk you through how this website was created.  &lt;strong&gt;I also recommend following the &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34;&gt;Academic theme instructions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A note of caution:
+Your site doesn’t have to look like mine, feel free to pick any off the &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;themes page&lt;/a&gt;.  The theme you choose will do most of the heavy lifting, and hopefully you find one that does everything you want it to.  If not, be prepared to spend a few days figuring out how HUGO and the themes work; there is no shortcut to creating new site behavior and I found it to be a bit unforgiving at times.  In short, unless you REALLY want to sink time into this skillset, pick a theme and be happy with it 😊
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;step-by-step-instructions&#34;&gt;Step by step&amp;rdquo; instructions&lt;/h1&gt;
+
+&lt;h2 id=&#34;create-a-github-account&#34;&gt;&lt;strong&gt;Create a github account:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to see if that’s the case.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-git-for-windows&#34;&gt;&lt;strong&gt;Install git for windows:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Follow download and installation instructions at &lt;a href=&#34;https://gitforwindows.org/&#34;&gt;https://gitforwindows.org/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-the-website-url-repository&#34;&gt;&lt;strong&gt;Create the website url repository:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use another github repository to keep the site files, as you&amp;rsquo;ll see below I just keep them on OneDrive and kept on my local hard drive.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-website-folder&#34;&gt;&lt;strong&gt;Create a website folder:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Next we need to create a folder where our website will live.  This folder ideally shouldn’t be moved after you’ve created it, so place it somewhere useful (read: not the desktop).  I gave into our digital overlords and moved most of my footprint to the cloud (OneDrive), so on my root folder I created a folder called myWebsite.  Then I like to right click on the folder and select the “Always keep it on this device”.&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-hugo&#34;&gt;&lt;strong&gt;Installing HUGO:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Next you need to install HUGO in the website directory.  Download the appropriate windows install from the HUGO releases (&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;).  Unzip the file and place the hugo.exe file into your myWebsite folder.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-the-website&#34;&gt;&lt;strong&gt;Create the website:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is where you need to start thinking for yourself.  This process varies depending on which theme you end up choosing.  Here I’ll just point you to the &lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34;&gt;Academic pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;updating-your-website&#34;&gt;&lt;strong&gt;Updating your website:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type .\hugo server &amp;ndash;disableFastRender.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, any changes made to your site will automagically change.  When you are happy with your changes, you generate your site with the &lt;em&gt;.\hugo&lt;/em&gt; command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&amp;hellip;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Stage Changed files&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;create a commit message&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Commit the changes, and&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Push the changes up to the repository.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/GitPushCommands.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has an academically oriented home page, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and replace it.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the , the config/_default/config.toml file in the academic theme has a theme line, where we specify what theme folder to look in first when creating the site.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first use the Academic theme, and then replace the partials folder from the aafu theme within the academic theme.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/foss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/foss/</guid>
+      <description>
+
+&lt;h2 id=&#34;free-and-open-source-software&#34;&gt;&lt;strong&gt;Free and Open Source Software:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;There are a whole host of questions I still have regarding the intersections of individuals, societies, and technology, and one of the more practically philosophical realizations of this is in FOSS.  Free and Open Source Software has in many ways defined the core of my skillset, and has that special allure of feel good contribution and intrinsic reproducibility to it.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll flesh this section out more at a later date, but two important links I&amp;rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.&lt;br /&gt;
+Some useful links:&lt;br /&gt;
+&lt;a href=&#34;https://ficonsulting.com/filabs/RInno&#34;&gt;https://ficonsulting.com/filabs/RInno&lt;/a&gt;
+&lt;a href=&#34;https://www.r-bloggers.com/deploying-desktop-apps-with-r/&#34;&gt;https://www.r-bloggers.com/deploying-desktop-apps-with-r/&lt;/a&gt;  The foundation/inspiration for this implementation.&lt;br /&gt;
+&lt;a href=&#34;https://www.robvanderwoude.com/vbstech_hta.php&#34;&gt;https://www.robvanderwoude.com/vbstech_hta.php&lt;/a&gt;  A great HTA resource page&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app&#34;&gt;https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app&lt;/a&gt;
+&lt;a href=&#34;https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180&#34;&gt;https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There are some useful tidbits of code, mostly in R, that I&amp;rsquo;ve flagged specifically.  Many are part of FOSSFlood, but that global file is more than 1000 lines of code so it&amp;rsquo;s understandable if you didn&amp;rsquo;t see them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#/////////////////////////////////////
+# -- Grab backup roads and points 
+#/////////////////////////////////////
+# TIGRIS Roads from Census
+# Dev notes: here I grab the counties and use roads package to download roads (from Census)
+# This is redundent with the OSM data I download for buildings defaults.  
+# There is also no handling of zip codes which straddle state lines
+print(&amp;quot;-- Base data collection - This may take upwards of 2 hours to run - Grabbing TIGER road files&amp;quot;)
+CountiesFIPS &amp;lt;- quiet(counties(cb=TRUE))
+CountiesFIPSProj &amp;lt;- sp::spTransform(CountiesFIPS, CRS(&amp;quot;+init=epsg:4326&amp;quot;))
+aoiCounties &amp;lt;- CountiesFIPSProj[aoiZIPCodesProj, ]
+# Error checking: Download roads for AOI that interset more than one state or county
+if(length(unique(aoiCounties$COUNTYFP)) &amp;gt; 1) {
+  myHoldRoads &amp;lt;- quiet(roads(unique(aoiCounties$STATEFP),unique(aoiCounties$COUNTYFP)[1], year = 2014, refresh = TRUE)[NULL,])
+  for(i in unique(aoiCounties$COUNTYFP)) {
+    myRoads &amp;lt;- quiet(roads(unique(aoiCounties$STATEFP),i, year = 2014, refresh = TRUE))
+    myHoldRoads &amp;lt;- rbind(myHoldRoads, myRoads)
+  }
+  myRoads &amp;lt;- myHoldRoads
+} else {
+  myRoads &amp;lt;- quiet(roads(unique(aoiCounties$STATEFP),unique(aoiCounties$COUNTYFP), year = 2014, refresh = TRUE))
+}
+myRoadsProj &amp;lt;- sp::spTransform(myRoads, CRS(&amp;quot;+init=epsg:4326&amp;quot;))
+myRoads_subset &amp;lt;- myRoadsProj[aoiZIPCodesProj, ]
+writeOGR(obj=myRoads_subset, dsn=paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/roads&amp;quot;), layer=&amp;quot;tigerroads&amp;quot;, driver=&amp;quot;ESRI Shapefile&amp;quot;)
+
+# OSM Roads and points
+print(&amp;quot;-- Base data collection - This may take upwards of 2 hours to run - Grabbing OSM data&amp;quot;)
+osmDataURL &amp;lt;- paste0(&amp;quot;https://download.geofabrik.de/north-america/us/&amp;quot;,tolower(gsub(&amp;quot; &amp;quot;, &amp;quot;-&amp;quot;, fips(aoiCounties$STATEFP[1], to = &amp;quot;Name&amp;quot;))),&amp;quot;-latest-free.shp.zip&amp;quot;)
+download.file(osmDataURL, paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/&amp;quot;,tolower(gsub(&amp;quot; &amp;quot;, &amp;quot;-&amp;quot;, fips(aoiCounties$STATEFP[1], to = &amp;quot;Name&amp;quot;))),&amp;quot;-latest-free.shp.zip&amp;quot;))
+unzip(paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/&amp;quot;,tolower(gsub(&amp;quot; &amp;quot;, &amp;quot;-&amp;quot;, fips(aoiCounties$STATEFP[1], to = &amp;quot;Name&amp;quot;))),&amp;quot;-latest-free.shp.zip&amp;quot;), exdir = paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName, &amp;quot;/geo/tmp&amp;quot;))
+osmPoints &amp;lt;- readOGR(paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/gis_osm_pois_free_1.shp&amp;quot;), verbose = FALSE)
+osmPointsProj &amp;lt;- sp::spTransform(osmPoints, CRS(&amp;quot;+init=epsg:4326&amp;quot;))
+writeOGR(obj=osmPointsProj[aoiZIPCodesProj, ], dsn=paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/addresses&amp;quot;), layer=&#39;OSMaddresses&#39;, driver=&amp;quot;ESRI Shapefile&amp;quot;)
+osmRoads &amp;lt;- readOGR(paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/gis_osm_roads_free_1.shp&amp;quot;), verbose = FALSE)
+osmRoadsProj &amp;lt;- sp::spTransform(osmRoads, CRS(&amp;quot;+init=epsg:4326&amp;quot;))
+writeOGR(obj=osmRoadsProj[aoiZIPCodesProj, ], dsn=paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/roads&amp;quot;), layer=&#39;OSMroads&#39;, driver=&amp;quot;ESRI Shapefile&amp;quot;)
+
+# OpenAddresses points
+print(&amp;quot;-- Base data collection - This may take upwards of 2 hours to run - Grabbing OpenAddresses data&amp;quot;)
+if(aoiCounties$STATEFP %in% c(&#39;09&#39;,&#39;23&#39;,&#39;25&#39;,&#39;33&#39;,&#39;44&#39;,&#39;50&#39;,&#39;34&#39;,&#39;36&#39;,&#39;42&#39;)) {
+  oaURL &amp;lt;- &amp;quot;https://data.openaddresses.io/openaddr-collected-us_northeast.zip&amp;quot;
+} else if(aoiCounties$STATEFP %in% c(&#39;18&#39;,&#39;17&#39;,&#39;26&#39;,&#39;39&#39;,&#39;55&#39;,&#39;19&#39;,&#39;20&#39;,&#39;27&#39;,&#39;29&#39;,&#39;31&#39;,&#39;38&#39;,&#39;46&#39;)) {
+  oaURL &amp;lt;- &amp;quot;https://data.openaddresses.io/openaddr-collected-us_midwest.zip&amp;quot;
+} else if(aoiCounties$STATEFP %in% c(&#39;10&#39;,&#39;11&#39;,&#39;12&#39;,&#39;13&#39;,&#39;24&#39;,&#39;37&#39;,&#39;45&#39;,&#39;51&#39;,&#39;54&#39;,&#39;01&#39;,&#39;21&#39;,&#39;28&#39;,&#39;47&#39;,&#39;05&#39;,&#39;22&#39;,&#39;40&#39;,&#39;48&#39;)) {
+  oaURL &amp;lt;- &amp;quot;https://data.openaddresses.io/openaddr-collected-us_south.zip&amp;quot;
+} else if(aoiCounties$STATEFP %in% c(&#39;04&#39;,&#39;08&#39;,&#39;16&#39;,&#39;35&#39;,&#39;30&#39;,&#39;49&#39;,&#39;32&#39;,&#39;56&#39;,&#39;02&#39;,&#39;06&#39;,&#39;15&#39;,&#39;41&#39;,&#39;53&#39;)) {
+  oaURL &amp;lt;- &amp;quot;https://data.openaddresses.io/openaddr-collected-us_west.zip&amp;quot;
+}
+download.file(oaURL, paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/OpenAddresses.zip&amp;quot;))
+unzip(paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/OpenAddresses.zip&amp;quot;), exdir = paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName, &amp;quot;/geo/tmp&amp;quot;))
+FullOpenAddresses &amp;lt;- paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/tmp/us/&amp;quot;,tolower(fips(aoiCounties$STATEFP[1], to = &amp;quot;Abbreviation&amp;quot;)),&amp;quot;/statewide.csv&amp;quot;)
+FullOpenAddressesCSV&amp;lt;- read.csv(FullOpenAddresses, header=TRUE, stringsAsFactors = FALSE)
+coordinates(FullOpenAddressesCSV)&amp;lt;- ~LON+LAT
+proj4string(FullOpenAddressesCSV) &amp;lt;- CRS(&amp;quot;+init=epsg:4326&amp;quot;)
+writeOGR(obj=FullOpenAddressesCSV[aoiZIPCodesProj, ], dsn=paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/addresses&amp;quot;), layer=&#39;OpenAddresses&#39;, driver=&amp;quot;ESRI Shapefile&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

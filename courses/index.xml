@@ -15,121 +15,1541 @@
 
 &lt;h1 id=&#34;welcome-to-geog358-introduction-to-gis&#34;&gt;&lt;strong&gt;Welcome to GEOG358: Introduction to GIS&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
-Note: This is a living document.  Changes will be announced in class.  A pdf version of this page is available for download &lt;a href=&#34;urlhere&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    This is a living document.  Changes will be announced in class.
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&#34;course-description&#34;&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Instructor:&lt;/strong&gt; Jim Coll&lt;br /&gt;
+&lt;strong&gt;Office:&lt;/strong&gt; 404C Lindley Hall&lt;br /&gt;
+&lt;strong&gt;Office Hours:&lt;/strong&gt; Monday and Wednesday 10:00—11:30 or by appointment&lt;br /&gt;
+&lt;strong&gt;Lab TA:&lt;/strong&gt; Yurika Kato&lt;br /&gt;
+&lt;strong&gt;Class Meetings:&lt;/strong&gt; Monday 2:00 —4:30 pm&lt;br /&gt;
+&lt;strong&gt;Class Room:&lt;/strong&gt; Lindley 228&lt;br /&gt;
+&lt;strong&gt;Labs:&lt;/strong&gt; Wednesday or Thursday 11:00—12:50 pm&lt;br /&gt;
+&lt;strong&gt;Lab Room:&lt;/strong&gt; Lindley 310&lt;/p&gt;
 
-&lt;p&gt;This course provides an introduction to computer based analysis of spatial data.  Topics covered include the fundamentals of geospatial thought, basic principles of collecting, storing, analyzing, and displaying spatial data, and cursory treatment of analysis and decision making.  Emphasis is on problem solving activities using common spatial analytical techniques using typical applications as examples. The student will gain extensive hands on experience with state of the art GIS software in the lab. This course introduces the concepts and components of a geographic information system (GIS). It also teaches the essential skills of operating a functional GIS through the use of the ArcGIS software suite. By completing this course, students will understand the operational processes of spatial data acquisition, editing in ArcGIS Desktop with QA/QC, metadata development, geodatabase design, spatial query and display, spatial analysis and modeling, preliminary GIS application development, cartographic mapping and dynamic visualization, and GIS implementation basics. Students will also be exposed to Google Earth and common Free and  Open Source Software (FOSS) tools, as well as the basic concepts of remote sensing and Global Positioning System (GPS). GIS technology has broad applications in natural and social sciences, humanities, environmental studies, engineering, and management. Examples include wildlife habitat study, urban and regional planning, contagious disease monitoring, agriculture and forestry, environmental quality assessment, emergency management, transportation planning, consumer and competitor analysis, and many more. This course will introduce a few selected use cases of GIS application in different disciplines.  Finally, this class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;Undergraduate certificate in GIS&lt;/a&gt;.  I obviously recommend it, particularly if you intend to pursue GIS as a career path/toolset in any capacity .&lt;br/&gt;
-Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
+&lt;h1 id=&#34;course-description&#34;&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;h2 id=&#34;student-responsibilities&#34;&gt;&lt;strong&gt;Student Responsibilities:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This course provides an introduction to computer based analysis of spatial data. Topics covered include the fundamentals of geospatial thought, basic principles of collecting, storing, analyzing, and displaying spatial data, and cursory treatment of analysis and decision making. Emphasis is on problem solving activities using common spatial analytical techniques using typical applications as examples.  I’ve placed it online for the benefit of all and my own selfish desire to streamline my digital footprint.  Feel free to send me typos, mis-formatted pages, suggestions, edits, other resources, and otherwise follow along.  I’ve found GIS to be a profoundly useful tool that helps me add structure, reason, and logic to this otherwise variable world, and my hope is that by the time we&amp;rsquo;ve finished the class you&amp;rsquo;ll have taken away something useful to as well.&lt;/p&gt;
 
-&lt;p&gt;It is student’s responsibility to attend the lectures, do the readings, and finish lab assignments. All students should be prepared to participate in class discussion and answer questions when called upon.  All students are expected to complete labs and exams on time. Labs are due at the beginning of the lab period one week after they are assigned, unless otherwise noted. Detailed lab rules will be given by the teaching assistant in the first lab.&lt;/p&gt;
+&lt;h1 id=&#34;tentative-course-outline&#34;&gt;&lt;strong&gt;Tentative Course Outline:&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;h2 id=&#34;expectations&#34;&gt;&lt;strong&gt;Expectations:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;head&gt;
+&lt;meta http-equiv=Content-Type content=&#34;text/html; charset=windows-1252&#34;&gt;
+&lt;meta name=ProgId content=Excel.Sheet&gt;
+&lt;meta name=Generator content=&#34;Microsoft Excel 15&#34;&gt;
+&lt;link rel=File-List href=&#34;ClassOutline_files/filelist.xml&#34;&gt;
+&lt;style id=&#34;ClassOutline_1823_Styles&#34;&gt;
+&lt;!--table
+    {mso-displayed-decimal-separator:&#34;\.&#34;;
+    mso-displayed-thousand-separator:&#34;\,&#34;;}
+.xl151823
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl631823
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:top;
+    border-top:1.0pt solid #DDDDDD;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    background:#F9F9F9;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl641823
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid #DDDDDD;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl651823
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;d\\-mmm&#34;;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid #DDDDDD;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl661823
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid #DDDDDD;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    background:#F9F9F9;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl671823
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;d\\-mmm&#34;;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid #DDDDDD;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    background:#F9F9F9;
+    mso-pattern:black none;
+    white-space:nowrap;}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;&lt;/p&gt;
 
-&lt;p&gt;Attend every Class/lab and &lt;strong&gt;ask questions!&lt;/strong&gt; At times, the ArcGIS software can be very unforgiving, and GIS can seem like a foreign language. The last thing I want is for you to walk out of this class without understanding the material. I expect and hope that this will be a rewarding experience for everyone. We are available to answer questions and otherwise offer assistance during the office hours indicated above or by appointment.  Additionally, if you have any questions, feel free to drop me an e-mail or use the slack channel (The link will be passed around on the signup sheet at the beginning of the year). I try to be diligent about responding to emails and by using slack you are likely to get a very rapid response&lt;/p&gt;
+&lt;p&gt;&lt;body&gt;
+&lt;!--[if !excel]&gt;&amp;nbsp;&amp;nbsp;&lt;![endif]--&gt;
+&lt;!--The following information was generated by Microsoft Excel&#39;s Publish as Web
+Page wizard.--&gt;
+&lt;!--If the same item is republished from Excel, all information between the DIV
+tags will be replaced.--&gt;
+&lt;!-----------------------------&gt;
+&lt;!--START OF OUTPUT FROM EXCEL PUBLISH AS WEB PAGE WIZARD --&gt;
+&lt;!-----------------------------&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;computers&#34;&gt;&lt;strong&gt;Computers:&lt;/strong&gt;&lt;/h2&gt;
+&lt;div id=&#34;ClassOutline_1823&#34; align=center x:publishsource=&#34;Excel&#34;&gt;
 
-&lt;p&gt;The computers in the lab are not cheap to replace. Please do your part to lengthen their lives by not spilling coffee/soda/liquids of any kind on the computer or any of its parts. You do NOT need to go out and purchase a computer for this class, although I do recommend having a personal computer with ArcGIS installed…&lt;/p&gt;
+&lt;table border=0 cellpadding=0 cellspacing=0 width=697 style=&#39;border-collapse:
+ collapse;table-layout:fixed;width:523pt&#39;&gt;
+ &lt;col width=93 style=&#39;mso-width-source:userset;mso-width-alt:3299;width:70pt&#39;&gt;
+ &lt;col width=50 style=&#39;mso-width-source:userset;mso-width-alt:1792;width:38pt&#39;&gt;
+ &lt;col width=198 style=&#39;mso-width-source:userset;mso-width-alt:7025;width:148pt&#39;&gt;
+ &lt;col width=210 style=&#39;mso-width-source:userset;mso-width-alt:7452;width:157pt&#39;&gt;
+ &lt;col width=146 style=&#39;mso-width-source:userset;mso-width-alt:5205;width:110pt&#39;&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl631823 width=93 style=&#39;height:15.0pt;width:70pt&#39;&gt;Week
+  number&lt;/td&gt;
+  &lt;td class=xl631823 width=50 style=&#39;width:38pt&#39;&gt;Date&lt;/td&gt;
+  &lt;td class=xl631823 width=198 style=&#39;width:148pt&#39;&gt;Class&lt;/td&gt;
+  &lt;td class=xl631823 width=210 style=&#39;width:157pt&#39;&gt;Other Milestones&lt;/td&gt;
+  &lt;td class=xl631823 width=146 style=&#39;width:110pt&#39;&gt;Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 1&lt;/td&gt;
+  &lt;td class=xl651823&gt;27-Aug&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;#syllabus-day&#34;&gt;Syllabus day&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;29-Aug&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;#what-is-gis&#34;&gt;What is GIS&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;Last day for a full refund&amp;nbsp;8&amp;#8260;20&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 2&lt;/td&gt;
+  &lt;td class=xl651823&gt;3-Sep&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EembraRqGBNHlLinFo9egpoBspGF9YPlP0Bc4P7obmuH1A?e=QMcIDI&#34;&gt;Computer basics&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab01/&#34;&gt;Introduction to ArcMap&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;5-Sep&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EembraRqGBNHlLinFo9egpoBspGF9YPlP0Bc4P7obmuH1A?e=QMcIDI&#34;&gt;Digital representations of the world&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 3&lt;/td&gt;
+  &lt;td class=xl651823&gt;10-Sep&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ER_uR4NnSzVAjSexReqIrXYBcomAQ1topO_LosGqWOfdeQ?e=kor37j&#34;&gt;Coordinate systems&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab02/&#34;&gt;Datum Shift lab&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;12-Sep&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfksNHjxbCxNkarqivdh4WQBazTmvyPDPHwIH_gLk7aszQ?e=wej8Mf&#34;&gt;Basics of Field Measurement&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;Last day to drop without a w&amp;nbsp;9&amp;#8260;16&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 4&lt;/td&gt;
+  &lt;td class=xl651823&gt;17-Sep&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETgUtBkVeRVDulHNIoJt3k4BBA-CeFDoCh2SNltSfCFXiA?e=fA3GB7&#34;&gt;Introduction to GPS&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab03/&#34;&gt;GPS lab&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;19-Sep&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;#high-precision-gps&#34;&gt;GPS activity&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;Last day to add or swap class&amp;nbsp;9&amp;#8260;23&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 5&lt;/td&gt;
+  &lt;td class=xl651823&gt;24-Sep&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EbbFjhie1LlAsYxjbF1gJcgBkSjemqo_6zZXNGzdPxqZkg?e=Q7Td5W&#34;&gt;Georeferencing&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab04/&#34;&gt;Georeferencing &amp; Digitizing&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;26-Sep&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdwqwKme63dNl2XGba994XoBVYSzjMYyUl0kAx3YY2HLrg?e=4RKkiK&#34;&gt;Digitizing&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 6&lt;/td&gt;
+  &lt;td class=xl651823&gt;1-Oct&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETz2MLKVHb5BjjSwldRENBYBguYkelMoPJCf7YlgqwBQMw?e=qeLcK4&#34;&gt;Cartography&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab05/&#34;&gt;Building a GIS Database&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;3-Oct&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfByhODvQetDsEhqFmsppeQBGskpL6NJBwh_B6Gp7pP-gg?e=PoQIH9&#34;&gt;Types of Maps&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 7&lt;/td&gt;
+  &lt;td class=xl651823&gt;8-Oct&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfXDMe_I5yxKuBzi5a3PpwMBEiEJ2YuoKUlM9dValE950w?e=Cau250&#34;&gt;Midterm review&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;No Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;10-Oct&lt;/td&gt;
+  &lt;td class=xl661823&gt;Midterm&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 8&lt;/td&gt;
+  &lt;td class=xl651823&gt;15-Oct&lt;/td&gt;
+  &lt;td class=xl641823&gt;No Class&lt;/td&gt;
+  &lt;td class=xl641823&gt;Fall Break!&lt;/td&gt;
+  &lt;td class=xl641823&gt;No Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;17-Oct&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETDUAHD43T1FkTffA7TJ5L0BzZwnPVj06kmSfUlHx5fsAQ?e=wEyb53&#34;&gt;Joining Data&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 9&lt;/td&gt;
+  &lt;td class=xl651823&gt;22-Oct&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EbxzFOPZzItKmEqae6DT0LUBxODaz9p6vufowk_MFimyBg?e=afQcuv&#34;&gt;Advanced Selections&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab06/&#34;&gt;Attribute &amp; Spatial Queries&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;24-Oct&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EYgplGCt8Q1Bvik1jX1ZCVYBJOae7BcUim10PFje4xYF-g?e=5sRAZS&#34;&gt;Overlay analysis&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 10&lt;/td&gt;
+  &lt;td class=xl671823&gt;29-Oct&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EcoGzfRFLrFDmvNTMWNLOvcBpTCg2JU2tgjSa_bMh_uMpg?e=kCuSFY&#34;&gt;Site suitability &amp; Intro to Map algebra&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab07/&#34;&gt;Overlay &amp; site suitability anaysis&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;31-Oct&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EWpv4d8HGfVGlnwwm59VCWABC-3FfrrokJj7h0_8lliUwg?e=O9tZMm&#34;&gt;Terrain analysis&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 11&lt;/td&gt;
+  &lt;td class=xl651823&gt;5-Nov&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdReKS1EmkRNlUkyvYcTzzIBZoa84E-1nwqqvFkPGy7aVA?e=tqP5gl&#34;&gt;Network analysis&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab08/&#34;&gt;Network, ArcScene, and terrain analysis&lt;/td&gt;  
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;7-Nov&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ESGZ92IohNxKhSLd5XWGkCcB7h17sLdO9PZTwXq8rYbccA?e=tbhd3u&#34;&gt;Spatial interpolation&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 13&lt;/td&gt;
+  &lt;td class=xl651823&gt;12-Nov&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ERNVHYgdL0hPrN14ugtL2okBcrbyTgO30kwCzTq1l7szng?e=tihdfm&#34;&gt;Applications: Census mapping&lt;/td&gt;
+  &lt;td class=xl641823&gt;GIS Day is this week (11/13) at the Union!&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab09/&#34;&gt;Spatial interpolation and application labs 2(wks)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;14-Nov&lt;/td&gt;
+  &lt;td class=xl661823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EYtBa9omC-xFnPjcAC5nr3IBwBd9b_bIUV5byLx5ogJIKQ?e=4kvqdi&#34;&gt;Applications: TIN editing&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 14&lt;/td&gt;
+  &lt;td class=xl651823&gt;19-Nov&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfEEZvl3H6hOp3qJNXblB_EBk0gLanz6iZWaC1AvVQs2xQ?e=HWobmL&#34;&gt;Applications: Operational flood mapping&lt;/td&gt;
+  &lt;td class=xl641823&gt;Last day to withdraw&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab09/&#34;&gt;Spatial interpolation and application labs 2(wks)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;21-Nov&lt;/td&gt;
+  &lt;td class=xl661823&gt;Project Help&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 15&lt;/td&gt;
+  &lt;td class=xl651823&gt;26-Nov&lt;/td&gt;
+  &lt;td class=xl641823&gt;No Class&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;Open Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;28-Nov&lt;/td&gt;
+  &lt;td class=xl661823&gt;No Class&lt;/td&gt;
+  &lt;td class=xl661823&gt;ThxGiving Break!&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 16&lt;/td&gt;
+  &lt;td class=xl651823&gt;3-Dec&lt;/td&gt;
+  &lt;td class=xl641823&gt;Final Project presentations&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl641823&gt;No Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;5-Dec&lt;/td&gt;
+  &lt;td class=xl661823&gt;Final Project presentations&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl641823 style=&#39;height:15.0pt&#39;&gt;Week 17&lt;/td&gt;
+  &lt;td class=xl651823&gt;10-Dec&lt;/td&gt;
+  &lt;td class=xl641823&gt;Practical Final on your own&lt;/td&gt;
+  &lt;td class=xl641823&gt;AGU - no class&lt;/td&gt;
+  &lt;td class=xl641823&gt;No Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl661823 style=&#39;height:15.0pt&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl671823&gt;12-Dec&lt;/td&gt;
+  &lt;td class=xl661823&gt;Practical Final on your own&lt;/td&gt;
+  &lt;td class=xl661823&gt;AGU - no class&lt;/td&gt;
+  &lt;td class=xl661823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl641823 style=&#39;height:14.4pt&#39;&gt;Week 18&lt;/td&gt;
+  &lt;td class=xl651823&gt;17-Dec&lt;/td&gt;
+  &lt;td class=xl641823&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ESsRKezFmUdNq8lLn9CAcrsB54x6LSaWiCHdgiHvGNv4kA?e=HbRdb2&#34;&gt;Final at 1:30&lt;/td&gt;
+  &lt;td class=xl641823&gt;Final&lt;/td&gt;
+  &lt;td class=xl641823&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;![if supportMisalignedColumns]&gt;
+ &lt;tr height=0 style=&#39;display:none&#39;&gt;
+  &lt;td width=93 style=&#39;width:70pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=50 style=&#39;width:38pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=198 style=&#39;width:148pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=210 style=&#39;width:157pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=146 style=&#39;width:110pt&#39;&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;![endif]&gt;
+&lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Computer recommendations:  &lt;/strong&gt;&lt;br /&gt;
-ArcGIS is a demanding program, and a lower grade computer is not recommended.  If you are at KU, IT offers &lt;a href=&#34;https://kuit.service-now.com/kb_view.do?sysparm_article=KB0011590&#34;&gt;virtualLabs&lt;/a&gt;, a remote desktop program you can use to access ArcMap.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  A few specific recommendations I found last year with a quick Google:&lt;/p&gt;
+&lt;h1 id=&#34;week-1&#34;&gt;&lt;strong&gt;Week 1&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;syllabus-day&#34;&gt;Syllabus day&lt;/h2&gt;
+
+&lt;p&gt;We cover class expectations and the &lt;a href=&#34;a href=&amp;quot;https://jimcoll.github.io/courses/geog358/classoutline/&amp;quot;&#34;&gt;syllabus page&lt;/a&gt;.  As noted in blackboard, I will run the class off of this website but all submissions will be through blackboard.  High points of syllabus day:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Lenovo Miix 510 &amp;amp; Dell Inspiron 15 7000​: Decent budget computers&lt;/li&gt;
-&lt;li&gt;Acer Aspire V15​ &amp;amp; Dell Inspiron i7: Slightly higher end machines&lt;/li&gt;
+&lt;li&gt;The lab is a huge part of this class, don&amp;rsquo;t blow it off.&lt;/li&gt;
+&lt;li&gt;Using ArcMap at least 2 times a week will greatly increase your learning outcomes.&lt;/li&gt;
+&lt;li&gt;This class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;Undergraduate certificate in GIS&lt;/a&gt;, which in turn counts as 5 of the 30 points necessary for a &lt;a href=&#34;https://www.gisci.org/Home.aspx&#34;&gt;GISP&lt;/a&gt;, (Your degree counts towards another 20).  I obviously recommend it.&lt;/li&gt;
+&lt;li&gt;There will be a final project and presentation, and two exams.  Although not strictly cumulative, this is all foundational&amp;hellip;&lt;/li&gt;
+&lt;li&gt;There will be a practical portion on either/or/both the midterm and final.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&amp;rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.&lt;br/&gt;
-&lt;a href=&#34;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&#34;&gt;My “Ideal” build (This is excessive, visualization grade)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EVX42ph3ba5Pofsn_I7O-0IBC01_tSG7--UzW_wpGRq1Hw?e=WYL2V5&#34;&gt;Slides&lt;/a&gt; | &lt;a href=&#34;https://docs.google.com/spreadsheets/d/19aFGnKQ1vtCFY1P8XvzxzBcqtaPyCC7SSgAXAeaUuwY/edit?usp=sharing&#34;&gt;Link to google sheets for ArcMap Key&lt;/a&gt; | &lt;a href=&#34;https://join.slack.com/t/geog358fall2019/shared_invite/enQtNzM4MTQ1NjY3OTU2LTEwZjNmYzE3NzlhNzc1Y2EyYTEzMGQ5ZjVhYzRhNGY0YmQ5NzY4ODBlN2RjZmY2OWRkZjc1ZjE4ZWI5MWU4NDE&#34;&gt;Link to class slack&lt;/a&gt;]&lt;/p&gt;
 
-&lt;h2 id=&#34;resources&#34;&gt;&lt;strong&gt;Resources:&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-gis&#34;&gt;What is GIS&lt;/h2&gt;
 
-&lt;p&gt;The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EYTgv_FlX9hNl-MFbQVGABABx8IzuRUr52mK9UoqVXjrIA?e=lQU1NT&#34;&gt;Slides&lt;/a&gt; | &lt;a href=&#34;https://www.esri.com/en-us/about/events/uc/overview&#34;&gt;video for class&lt;/a&gt;: Watch #2 through #4 &amp;amp; #7]&lt;/p&gt;
 
-&lt;h2 id=&#34;academic-integrity&#34;&gt;&lt;strong&gt;Academic Integrity:&lt;/strong&gt;&lt;/h2&gt;
+&lt;h1 id=&#34;week-2&#34;&gt;&lt;strong&gt;Week 2&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone credit for their work?  As a graduate student, I became increadably familiar with &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, but &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will also work for you in a pinch:&lt;/p&gt;
+&lt;h2 id=&#34;back-to-the-basics&#34;&gt;Back to the basics&lt;/h2&gt;
 
-&lt;h2 id=&#34;disabilities&#34;&gt;&lt;strong&gt;Disabilities:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EembraRqGBNHlLinFo9egpoBspGF9YPlP0Bc4P7obmuH1A?e=QMcIDI&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Anyone who has a disability that may prevent full demonstration of academic ability should contact me as soon as possible to ensure accommodations can be made to allow for full educational benefit.&lt;/p&gt;
+&lt;h2 id=&#34;digital-representations-of-the-world&#34;&gt;Digital representations of the world&lt;/h2&gt;
 
-&lt;h2 id=&#34;about-the-labs&#34;&gt;&lt;strong&gt;About the Labs:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EV4lSX4f8R5Bg6OLLQ8EDfABa999VngVlfUdXtitKdkJmw?e=jloPHr&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!&lt;/p&gt;
+&lt;h1 id=&#34;week-3&#34;&gt;&lt;strong&gt;Week 3&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;h2 id=&#34;cartography-primers&#34;&gt;&lt;strong&gt;Cartography primers:&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;coordinate-systems&#34;&gt;Coordinate systems&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.icsm.gov.au/mapping/cartographic.html&#34;&gt;http://www.icsm.gov.au/mapping/cartographic.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&#34;&gt;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3&#34;&gt;http://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ER_uR4NnSzVAjSexReqIrXYBcomAQ1topO_LosGqWOfdeQ?e=kor37j&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;basics-of-field-measurement&#34;&gt;Basics of Field Measurement&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfksNHjxbCxNkarqivdh4WQBazTmvyPDPHwIH_gLk7aszQ?e=wej8Mf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-4&#34;&gt;&lt;strong&gt;Week 4&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;introduction-to-gps&#34;&gt;Introduction to GPS&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETgUtBkVeRVDulHNIoJt3k4BBA-CeFDoCh2SNltSfCFXiA?e=fA3GB7&#34;&gt;Slides for class&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;high-precision-gps&#34;&gt;High precision GPS&lt;/h2&gt;
+
+&lt;p&gt;Field trip today!&lt;br /&gt;
+Here&amp;rsquo;s a &lt;a href=&#34;https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=JE1639&#34;&gt;link to the marker datasheet&lt;/a&gt;, and a &lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EVst63g_ttpIjhQ5RbWzsygBD-q7sN9m1nxoAi5TuSqRLw?e=Qegg3S&#34;&gt;link to the data you collected&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-5&#34;&gt;&lt;strong&gt;Week 5&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;georeferencing&#34;&gt;Georeferencing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EbbFjhie1LlAsYxjbF1gJcgBkSjemqo_6zZXNGzdPxqZkg?e=Q7Td5W&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;digitizing&#34;&gt;Digitizing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdwqwKme63dNl2XGba994XoBVYSzjMYyUl0kAx3YY2HLrg?e=4RKkiK&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-6&#34;&gt;&lt;strong&gt;Week 6&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;cartography&#34;&gt;Cartography&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETz2MLKVHb5BjjSwldRENBYBguYkelMoPJCf7YlgqwBQMw?e=qeLcK4&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;types-of-maps&#34;&gt;Types of Maps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfByhODvQetDsEhqFmsppeQBGskpL6NJBwh_B6Gp7pP-gg?e=PoQIH9&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-7&#34;&gt;&lt;strong&gt;Week 7&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;midterm-review&#34;&gt;Midterm review&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfXDMe_I5yxKuBzi5a3PpwMBEiEJ2YuoKUlM9dValE950w?e=Cau250&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;midterm&#34;&gt;Midterm&lt;/h2&gt;
+
+&lt;p&gt;Much fun&lt;/p&gt;
+
+&lt;h1 id=&#34;week-8&#34;&gt;&lt;strong&gt;Week 8&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;joining-data&#34;&gt;Joining data&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ETDUAHD43T1FkTffA7TJ5L0BzZwnPVj06kmSfUlHx5fsAQ?e=wEyb53&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-9&#34;&gt;&lt;strong&gt;Week 9&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;advanced-selections&#34;&gt;Advanced Selections&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EbxzFOPZzItKmEqae6DT0LUBxODaz9p6vufowk_MFimyBg?e=afQcuv&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;overlay-analysis&#34;&gt;Overlay analysis&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EYgplGCt8Q1Bvik1jX1ZCVYBJOae7BcUim10PFje4xYF-g?e=5sRAZS&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-10&#34;&gt;&lt;strong&gt;Week 10&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;site-suitability-intro-to-map-algebra&#34;&gt;Site suitability &amp;amp; Intro to map algebra&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EcoGzfRFLrFDmvNTMWNLOvcBpTCg2JU2tgjSa_bMh_uMpg?e=kCuSFY&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;terrain-analysis&#34;&gt;Terrain analysis&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EWpv4d8HGfVGlnwwm59VCWABC-3FfrrokJj7h0_8lliUwg?e=O9tZMm&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-11&#34;&gt;&lt;strong&gt;Week 11&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;network-analysis&#34;&gt;Network analysis&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EdReKS1EmkRNlUkyvYcTzzIBZoa84E-1nwqqvFkPGy7aVA?e=tqP5gl&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;spatial-interpolation&#34;&gt;Spatial interpolation&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ESGZ92IohNxKhSLd5XWGkCcB7h17sLdO9PZTwXq8rYbccA?e=tbhd3u&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-13&#34;&gt;&lt;strong&gt;Week 13&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;applications-census-mapping&#34;&gt;Applications: Census mapping&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ERNVHYgdL0hPrN14ugtL2okBcrbyTgO30kwCzTq1l7szng?e=tihdfm&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;applications-tin-editing&#34;&gt;Applications: TIN editing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EYtBa9omC-xFnPjcAC5nr3IBwBd9b_bIUV5byLx5ogJIKQ?e=4kvqdi&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;week-14&#34;&gt;&lt;strong&gt;Week 14&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;applications-operational-flood-mapping&#34;&gt;Applications: Operational flood mapping&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/EfEEZvl3H6hOp3qJNXblB_EBk0gLanz6iZWaC1AvVQs2xQ?e=HWobmL&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;final-review&#34;&gt;Final Review&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ESsRKezFmUdNq8lLn9CAcrsB54x6LSaWiCHdgiHvGNv4kA?e=HbRdb2&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/</guid>
+      <description>
+
+&lt;h1 id=&#34;welcome-to-geog558-intermediate-gis&#34;&gt;&lt;strong&gt;Welcome to GEOG558: Intermediate GIS&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    This is a living document.  Changes will be announced in class.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Instructor:&lt;/strong&gt; Dr. Xingong Li&lt;br /&gt;
+&lt;strong&gt;Office:&lt;/strong&gt; 404 Lindley Hall&lt;br /&gt;
+&lt;strong&gt;Office Hours:&lt;/strong&gt; Monday and Wednesday 10:00—11:30 or by appointment&lt;br /&gt;
+&lt;strong&gt;Graduate Assistant:&lt;/strong&gt; Jim Coll (jcoll at ku.edu)&lt;br /&gt;
+&lt;strong&gt;Class Meetings:&lt;/strong&gt; Monday 2:00 —4:30 pm&lt;br /&gt;
+&lt;strong&gt;Class Room:&lt;/strong&gt; Lindley 228&lt;br /&gt;
+&lt;strong&gt;Labs:&lt;/strong&gt; Wednesday or Thursday 11:00—12:50 pm&lt;br /&gt;
+&lt;strong&gt;Lab Room:&lt;/strong&gt; Lindley 310&lt;/p&gt;
 
 &lt;h2 id=&#34;textbooks&#34;&gt;&lt;strong&gt;Textbooks:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;de Smith, M. J., M. F. Goodchild, P. A. Longley (2012) &lt;em&gt;Geospatial Analysis—A comprehensive guide&lt;/em&gt; (4&lt;sup&gt;rd&lt;/sup&gt; edition), An online version is available at &lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;course-evaluation&#34;&gt;&lt;strong&gt;Course Evaluation:&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Course grade will be evaluated based on two exams, pre-class review questions, ~ten lab exercises, and a final project. The exams will include materials from the textbooks, lecture slides, handouts, and labs. A breakdown of grade weights is as follows:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Exams (17.5% * 2)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Pre-class review 5%&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Labs 40%&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Final Project 20%&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;de Smith, M. J., M. F. Goodchild, P. A. Longley (2018) Geospatial Analysis—A
+comprehensive guide (6th edition), An online version is available at
+&lt;a href=&#34;http://www.spatialanalysisonline.com/HTML/index.html&#34;&gt;http://www.spatialanalysisonline.com/HTML/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Final grade will be on a straight scale, not on a curve. If you all do well, you will all get an A. Let’s not find out what the alternative is. Letter grades will be determined based on the standard grading scale. Each student will complete a final project. The project will be presented to the class during the last two weeks of class. Details on the final project can be found in the final project handout. Letter grades will be determined based on the following grading scale:&lt;/p&gt;
+&lt;h2 id=&#34;course-description&#34;&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;A+&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;A&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;A-&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;B+&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;B&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;B-&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;C+&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;C&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;C-&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;D+&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;D&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;D-&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;F&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+&lt;p&gt;Building on the introductory GIS class, this course focuses primarily on teaching advanced
+spatial analysis methods with applications in the mapping of surface water and the analysis of
+water related environmental issues. Major topics covered include map algebra (also called
+cartographic modeling), multi-criteria evaluation, terrain analysis, spatial statistics, and spatial
+interpolation. An additional objective of the course is to have students become familiar with
+various methods and tools through the use of GIS software.&lt;/p&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;100 - 97&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;96 - 93&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;92 - 90&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;89 - 87&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;86 - 83&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;82 - 80&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;79 - 77&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;76 - 73&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;72 - 70&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;69 - 67&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;66 - 63&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;62 - 60&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;lt;60&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+&lt;h2 id=&#34;tentative-course-outline&#34;&gt;&lt;strong&gt;Tentative Course Outline&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;html xmlns:o=&#34;urn:schemas-microsoft-com:office:office&#34;
+xmlns:x=&#34;urn:schemas-microsoft-com:office:excel&#34;
+xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;head&gt;
+&lt;meta http-equiv=Content-Type content=&#34;text/html; charset=windows-1252&#34;&gt;
+&lt;meta name=ProgId content=Excel.Sheet&gt;
+&lt;meta name=Generator content=&#34;Microsoft Excel 15&#34;&gt;
+&lt;link rel=File-List href=&#34;Book1_files/filelist.xml&#34;&gt;
+&lt;style id=&#34;Book1_27905_Styles&#34;&gt;
+&lt;!--table
+    {mso-displayed-decimal-separator:&#34;\.&#34;;
+    mso-displayed-thousand-separator:&#34;\,&#34;;}
+.xl1527905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6527905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:general;
+    vertical-align:bottom;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6627905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6727905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6827905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6927905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:1.0pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7027905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7127905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7227905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl7327905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl7427905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl7527905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7627905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7727905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl7827905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7927905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl8027905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:1.0pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl8127905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl8227905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl8327905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl8427905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl8527905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:1.0pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl8627905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+.xl8727905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl8827905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:none;
+    border-left:1.0pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl8927905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:&#34;\@&#34;;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl9027905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:#0563C1;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl9127905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl9227905
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:none;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;&lt;/p&gt;
+
+&lt;div id=&#34;Book1_27905&#34; align=center x:publishsource=&#34;Excel&#34;&gt;
+
+&lt;table border=0 cellpadding=0 cellspacing=0 width=1042 style=&#39;border-collapse:
+ collapse;table-layout:fixed;width:781pt&#39;&gt;
+ &lt;col class=xl6527905 width=58 style=&#39;mso-width-source:userset;mso-width-alt:
+ 2076;width:44pt&#39;&gt;
+ &lt;col width=354 style=&#39;mso-width-source:userset;mso-width-alt:12572;width:265pt&#39;&gt;
+ &lt;col width=91 style=&#39;mso-width-source:userset;mso-width-alt:3242;width:68pt&#39;&gt;
+ &lt;col width=539 style=&#39;mso-width-source:userset;mso-width-alt:19171;width:404pt&#39;&gt;
+ &lt;tr height=22 style=&#39;height:16.2pt&#39;&gt;
+  &lt;td height=22 class=xl6727905 width=58 style=&#39;height:16.2pt;width:44pt&#39;&gt;Week&lt;/td&gt;
+  &lt;td class=xl6827905 width=354 style=&#39;width:265pt&#39;&gt;Lectures&lt;/td&gt;
+  &lt;td class=xl6827905 width=91 style=&#39;width:68pt&#39;&gt;Readings&lt;/td&gt;
+  &lt;td class=xl6927905 width=539 style=&#39;width:404pt&#39;&gt;Labs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl7927905 style=&#39;height:14.4pt&#39;&gt;1&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7127905&gt;Overview of Spatial Analysis&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7527905&gt;Lecture notes&lt;/td&gt;
+  &lt;td rowspan=2 class=xl8027905&gt;No lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;1/27&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;2&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905 style=&#39;border-top:none&#39;&gt;Mapping and
+  Representations&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7727905 style=&#39;border-top:none&#39;&gt;Lecture notes&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none&#39;&gt;Lab #1&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;2/3&lt;/td&gt;
+  &lt;td class=xl8527905&gt;Survey of data and mapping technologies and building a
+  database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8627905 width=58 style=&#39;height:14.4pt;border-top:none;
+  width:44pt&#39;&gt;3&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7027905 style=&#39;border-top:none&#39;&gt;Map Algebra (Local
+  Operations)&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905 style=&#39;border-top:none&#39;&gt;Handouts&lt;/td&gt;
+  &lt;td class=xl8727905 style=&#39;border-top:none&#39;&gt;Lab #2&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8627905 width=58 style=&#39;height:14.4pt;border-top:none;
+  width:44pt&#39;&gt;2/10&lt;/td&gt;
+  &lt;td class=xl8027905&gt;Making composite image, calculating normalized water
+  index, and Kudzu suitability&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;4&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905 style=&#39;border-top:none&#39;&gt;Map Algebra (Focal
+  Operations)&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7727905 style=&#39;border-top:none&#39;&gt;Handouts&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none&#39;&gt;Lab #3&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;2/17&lt;/td&gt;
+  &lt;td class=xl8527905&gt;Segment waterbody and extract waterbody boundary&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;5&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7027905 style=&#39;border-top:none&#39;&gt;MA— Map Algebra (Zonal
+  Operations)&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905 style=&#39;border-top:none&#39;&gt;Handouts&lt;/td&gt;
+  &lt;td class=xl8727905 style=&#39;border-top:none&#39;&gt;Lab #4&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;2/24&lt;/td&gt;
+  &lt;td class=xl8027905&gt;Estimate water surface elevation and water volume change&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;6&lt;/td&gt;
+  &lt;td class=xl7327905&gt;Review for mid-term&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7727905 style=&#39;border-top:none&#39;&gt;Lecture notes&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none&#39;&gt;Lab #5&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;3/2&lt;/td&gt;
+  &lt;td class=xl7427905 style=&#39;border-left:none&#39;&gt;Geoprocessing in ArcGIS&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl8527905&gt;Analyze long term lake water surface area dynamics
+  (ModelBuilder &amp;amp; Python Scripting)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;7&lt;/td&gt;
+  &lt;td class=xl6627905&gt;Spring Break&lt;span style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905 style=&#39;border-top:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl8727905 style=&#39;border-bottom:.5pt solid black;
+  border-top:none&#39;&gt;No Lab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8827905 style=&#39;height:14.4pt;border-top:none&#39;&gt;3/9&lt;/td&gt;
+  &lt;td class=xl6627905&gt;No class&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt&#39;&gt;8&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905&gt;Midterm exam&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7727905&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none&#39;&gt;Lab #6&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;3/16&lt;/td&gt;
+  &lt;td class=xl8527905&gt;Sea level rise inundation using region group and cost
+  distance&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;9&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7027905 style=&#39;border-top:none&#39;&gt;Fundamental spatial
+  relationships (distance)&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905 style=&#39;border-top:none&#39;&gt;Lecture notes&lt;/td&gt;
+  &lt;td class=xl8727905 style=&#39;border-top:none&#39;&gt;Lab #7&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;3/23&lt;/td&gt;
+  &lt;td class=xl8027905&gt;School siting and fungus dispersion modeling&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;10&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905 style=&#39;border-top:none&#39;&gt;Multi-criteria
+  Evaluation and MA Applications&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7727905 style=&#39;border-top:none&#39;&gt;deSGL 6.1-4&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none&#39;&gt;Lab #8&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;3/30&lt;/td&gt;
+  &lt;td class=xl8527905&gt;Viewshed, hydrological and NEXRAD blockage terrain
+  analysis&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;11&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7027905 style=&#39;border-top:none&#39;&gt;Terrain Analysis&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905 style=&#39;border-top:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl8727905 style=&#39;border-bottom:.5pt solid black;
+  border-top:none&#39;&gt;AAG meeting (No Lab)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;4/6&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;12&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905 style=&#39;border-top:none&#39;&gt;Characterize Spatial
+  Pattern&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7727905 style=&#39;border-top:none&#39;&gt;deSGL 5&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none&#39;&gt;Lab #9&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;4/13&lt;/td&gt;
+  &lt;td class=xl8527905&gt;Tornado point pattern Analysis&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;13&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7027905 style=&#39;border-top:none&#39;&gt;Spatial
+  Interpolation/Prediction&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905 style=&#39;border-top:none&#39;&gt;deSGL 6.5- 6.7&lt;/td&gt;
+  &lt;td class=xl8727905 style=&#39;border-top:none&#39;&gt;Lab #10&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;4/20&lt;/td&gt;
+  &lt;td class=xl8027905&gt;Groundwater interpolation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;14&lt;/td&gt;
+  &lt;td class=xl7327905&gt;Review for final exam&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905 style=&#39;border-top:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none;border-left:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;4/27&lt;/td&gt;
+  &lt;td class=xl7327905&gt;Final project presentation&lt;/td&gt;
+  &lt;td class=xl8527905 style=&#39;border-left:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;15&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7627905&gt;Final project presentation&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7027905 style=&#39;border-top:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl8727905 style=&#39;border-bottom:.5pt solid black;
+  border-top:none&#39;&gt;All Labs due by 5/7 at 5pm&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8127905 style=&#39;height:14.4pt;border-top:none&#39;&gt;5/4&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl8327905 style=&#39;height:14.4pt;border-top:none&#39;&gt;16&lt;/td&gt;
+  &lt;td class=xl7327905&gt;Final Exam 1:30 – 4:00 p.m.&lt;/td&gt;
+  &lt;td rowspan=2 class=xl7227905 style=&#39;border-bottom:1.0pt solid black;
+  border-top:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;td class=xl8427905 style=&#39;border-top:none;border-left:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=20 style=&#39;height:15.0pt&#39;&gt;
+  &lt;td height=20 class=xl8927905 style=&#39;height:15.0pt;border-top:none&#39;&gt;5/14&lt;/td&gt;
+  &lt;td class=xl9027905&gt;&lt;span style=&#39;font-variant-ligatures: normal;font-variant-caps: normal;
+  orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+  text-decoration-style: initial;text-decoration-color: initial&#39;&gt;&lt;a
+  href=&#34;https://registrar.ku.edu/spring-2020-final-exam-schedules&#34;&gt;https://registrar.ku.edu/spring-2020-final-exam-schedules&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl9227905 style=&#39;border-left:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;![if supportMisalignedColumns]&gt;
+ &lt;tr height=0 style=&#39;display:none&#39;&gt;
+  &lt;td width=58 style=&#39;width:44pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=354 style=&#39;width:265pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=91 style=&#39;width:68pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=539 style=&#39;width:404pt&#39;&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;![endif]&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;exams&#34;&gt;&lt;strong&gt;Exams&lt;/strong&gt;&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/</guid>
+      <description>
 
-&lt;p&gt;Mid-term exam will cover the materials from the first half of the class, and the final exam will focus on the second half. The final exam is not comprehensive, but since we will be building on concepts throughout the semester, materials from the first half of the semester will inevitably be part of the final exam.  Either exam may include a practical portion.  This practical portion will consist of instructions to prepare some sort of short analysis or demonstration of practical knowledge related to the use of ArcGIS.  These will be posted either a week before the exam and due on the date of the exam, or posted the day of the exam and due a week after.&lt;/p&gt;
+&lt;h1 id=&#34;welcome-to-the-random-bin&#34;&gt;&lt;strong&gt;Welcome to the random bin&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This is a place for me to dump some of my uncategorized work, links to other great content creators, and other neat resources I’ve found along my way.&lt;/p&gt;
+
+&lt;h1 id=&#34;fun-links&#34;&gt;&lt;strong&gt;Fun links&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;First, a few from John Nelson, a phenomenal cartographer and writer.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://adventuresinmapping.com/&#34;&gt;https://adventuresinmapping.com/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.esri.com/arcgis-blog/author/j_nelson/&#34;&gt;https://www.esri.com/arcgis-blog/author/j_nelson/&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://mikejohnson51.github.io/&#34;&gt;Mike Johnson&lt;/a&gt;: A data wizard and all around great dude.&lt;/p&gt;
+
+&lt;p&gt;A great collection of open courseware of every subject, and a few GIS-centric resources: &lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;https://www.gislounge.com/learn-gis-for-free/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hydroshare.org/&#34;&gt;Hydroshare&lt;/a&gt;: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at &lt;a href=&#34;https://www.cuahsi.org/&#34;&gt;CUAHSI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://opentopo.sdsc.edu/login&#34;&gt;OpenTOPO&lt;/a&gt;: A great clearinghouse and web toolset for topo data.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://live.osgeo.org/en/index.html&#34;&gt;OSGeoLive&lt;/a&gt;: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;UCGIS BoK: &lt;a href=&#34;https://gistbok.ucgis.org/&#34;&gt;https://gistbok.ucgis.org/&lt;/a&gt;
+A great reference&lt;/p&gt;
+
+&lt;p&gt;A misguided attempt at a website for my masters.  Placed here more to remind me to do something with it one of these days: &lt;a href=&#34;https://sites.google.com/site/globalsnowobservatory/&#34;&gt;https://sites.google.com/site/globalsnowobservatory/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ&#34;&gt;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ&lt;/a&gt;
+A post about Mann Kendall and Sens slope in GEE from me.  At some point I&amp;rsquo;ll get around to doing something with this too&lt;/p&gt;
+
+&lt;p&gt;These R enabled books are excellent resources:
+&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;https://mgimond.github.io/Spatial/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;need-data&#34;&gt;&lt;strong&gt;Need data?&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Topo resources: &lt;a href=&#34;http://www.earthpoint.us/TopoMap.aspx&#34;&gt;http://www.earthpoint.us/TopoMap.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Intro to GIS and Spatial Analysis
+&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;https://mgimond.github.io/Spatial/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;random-education-bits&#34;&gt;&lt;strong&gt;Random education bits&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Tutorials:&lt;br /&gt;
+GEE slides:&lt;br /&gt;
+&lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vS6dyB5JjpXAUpQGOj7gzlgpGxGBjAWLqkwizxEbblkzwzNjgPX-xDe69hvSJ_hxAv529ojzyeT1GVD/pub?slide=id.g7a554f672f_1_148&#34;&gt;https://docs.google.com/presentation/d/e/2PACX-1vS6dyB5JjpXAUpQGOj7gzlgpGxGBjAWLqkwizxEbblkzwzNjgPX-xDe69hvSJ_hxAv529ojzyeT1GVD/pub?slide=id.g7a554f672f_1_148&lt;/a&gt;&lt;br /&gt;
+Other useful slide decks:&lt;br /&gt;
+&lt;a href=&#34;https://agu2019.earthoutreach.org/booth&#34;&gt;https://agu2019.earthoutreach.org/booth&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;cluster&#34;&gt;clusteR:&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/ClusteR.PNG&#34; alt=&#34;&#34; /&gt;
+A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit.  The installation of this tool is the same as for FOSSFlood.&lt;/p&gt;
 </description>
     </item>
     
@@ -140,7 +1560,18 @@ ArcGIS is a demanding program, and a lower grade computer is not recommended.  I
       <guid>https://jimcoll.github.io/courses/dronemapping/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/dronemapping/YUN00120.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/dronemapping/YUN00120.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Need help passing your part 107?  I can recommend the following resources:&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6_ucCKFJUCU&amp;amp;t=1s&#34;&gt;https://www.youtube.com/watch?v=6_ucCKFJUCU&amp;amp;t=1s&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://3dr.com/faa/drone-practice-tests/&#34;&gt;https://3dr.com/faa/drone-practice-tests/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jrupprechtlaw.com/part-107-test-study-guide/&#34;&gt;https://jrupprechtlaw.com/part-107-test-study-guide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;drones-for-mapping-and-research&#34;&gt;&lt;strong&gt;Drones for mapping and research&lt;/strong&gt;&lt;/h1&gt;
 
@@ -156,7 +1587,7 @@ ArcGIS is a demanding program, and a lower grade computer is not recommended.  I
 This represents a major leap forward but is not without its drawbacks.  Firstly, although LIDAR collects elevations, it does not collect imagery, which makes viewing the surface much less intuitive than it would otherwise be.  Additionally, although the resulting elevations are accurate, they are still not dense enough or accurate enough to compete with high precision surveys, and depending on the use case, may be out of date by more than 3 years.  In these instances, small Unmanned Aerial Systems, more commonly known as drones, offer a unique solution to some of these shortcomings.  Using commercially available hardware and cutting-edge software, we are able to fly over an area and collect imagery which we use to create our own custom point clouds and 3D models.
 &lt;img src=&#34;https://jimcoll.github.io/courses/dronemapping/OreadOrthoTrimmedSmaller.gif&#34; alt=&#34;&#34; /&gt;
 &lt;img src=&#34;https://jimcoll.github.io/courses/dronemapping/YUN00016.jpg&#34; alt=&#34;&#34; /&gt;
-As a critical part of my dissertation, I am interested in flying areas to determine what factors go into an effective terrestrial mapping effort.  The above images are a small sampling of outputs which I can generate, but can also include 3D point clouds, photorealistic models, updated aerial maps, and standard aerial photography outputs.  If you have an area you would like flown, particularly if it has interesting and complex geometry or if it’s near a body of water, please contact me at jcoll AT ku.edu and we’ll find a way to collaborate.&lt;/p&gt;
+As part of my dissertation, I am interested in flying areas to determine what factors go into an effective terrestrial mapping effort.  The above images are a small sampling of outputs which I can generate, but can also include 3D point clouds, photo-realistic models, updated aerial maps, and standard aerial photography outputs.  If you have an area you would like flown, particularly if it has interesting and complex geometry or if it’s near a body of water, please contact me at jcoll AT ku.edu and we’ll find a way to collaborate.&lt;/p&gt;
 
 &lt;h1 id=&#34;ku-natural-history-museum-s-science-on-tap&#34;&gt;&lt;strong&gt;KU Natural History Museum’s Science on Tap&lt;/strong&gt;&lt;/h1&gt;
 

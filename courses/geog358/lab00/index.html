@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning Objective  This lab is here more for me as we walk through how to open and manipulate the interface, the meaning of icons, and how to navigate the world without getting lost. The questions here are more to remind me to talk about things while we explore. The instructions are not meant to be followed. You should use this page more as an opportunity to learn how the labs will be laid out, how the sections are formatted, and how to navigate the site.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/lab00/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog358/lab00/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/lab00/">
+  <meta property="og:title" content="Lab 0 - Intro to GIS | Jim Coll">
+  <meta property="og:description" content="Learning Objective  This lab is here more for me as we walk through how to open and manipulate the interface, the meaning of icons, and how to navigate the world without getting lost. The questions here are more to remind me to talk about things while we explore. The instructions are not meant to be followed. You should use this page more as an opportunity to learn how the labs will be laid out, how the sections are formatted, and how to navigate the site."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 0 - Intro to GIS | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/">Class Outline and Slides</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/termpaper/">Project</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog358/lab00/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/geog358/lab00/">Lab 0 - Intro to GIS</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab01/">Lab 1 - Intro to ArcMap</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab02/">Lab 2 - Projections and Coordinate Systems</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab03/">Lab 3 - Using GPS for Field Data Collection</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab04/">Lab 4 - Georeferenceing and Intro to digitization</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab05/">Lab 5 - Building a GIS database</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab06/">Lab 6 - Attribute/Spatial Queries and Spatial Joins</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab07/">Lab 7 - Overlay &amp; site suitability anaysis</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab08/">Lab 8 - Introduction to network analyist and ArcScene</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog358/lab09/">Lab 9 - Interpolation and Fire Hazard Modeling</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#materials"><strong>Materials</strong></a></li>
+<li><a href="#part-1-the-esri-suite-of-tools"><strong>Part 1: The ESRI suite of tools</strong></a>
+<ul>
+<li><a href="#1-starting-arccatalog-and-organizing-data"><strong>1) Starting ArcCatalog and Organizing Data</strong></a></li>
+<li><a href="#2-getting-familiar-with-the-layout-of-arccatalog"><strong>2) Getting Familiar with the layout of ArcCatalog</strong></a></li>
+<li><a href="#3-exploring-the-geographic-data-map-documents-and-layers"><strong>3) Exploring the geographic data, map documents and layers</strong></a></li>
+<li><a href="#4-finding-coordinate-system-information"><strong>4) Finding coordinate system information</strong></a></li>
+<li><a href="#5-exploring-and-editing-metadata"><strong>5) Exploring and editing metadata</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 0 - Intro to GIS</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<p><img src="/courses/geog358/media/1blz4my4czl01.png" alt="" /></p>
+
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
+
+<div class="alert alert-warning">
+  <div>
+    This lab is here more for me as we walk through how to open and manipulate the interface, the meaning of icons, and how to navigate the world without getting lost.  The questions here are more to remind me to talk about things while we explore.  The instructions are not meant to be followed.  You should use this page more as an opportunity to learn how the labs will be laid out, how the sections are formatted, and how to navigate the site.  I&rsquo;ll update this to a real lab at a later date.
+  </div>
+</div>
+
+<p>This lab will walk though how to open and manipulate the ESRI suite of tools and applications, common access patters, opening and manipulating windows, site layout, and how to submit things for the class.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<blockquote>
+<p>Hint: Copy and paste the questions below into a word document and submit them on blackboard</p>
+</blockquote>
+
+<p><strong>Lab 0: Answer Sheet</strong><br />
+Name:</p>
+
+<p><strong>Question 1</strong>: What is the function of each of the following buttons? (Use your mouse &amp; the tool tips if you are unsure)</p>
+
+<p><strong>Question 2</strong>: What is the file size for Greenvalley.mxd?  ______ KB</p>
+
+<p><strong>Question 3</strong>: How many features are contained in parks_polygon feature class?</p>
+
+<p><strong>Question 4</strong>: What is the projection used in the coordinate system (PCS) for the Hydrology feature dataset?</p>
+
+<p><strong>Question 5</strong>: What is the datum used in the coordinate system for the Hydrology feature dataset?</p>
+
+<p><strong>Question 6</strong>: What is the linear unit of measure for this feature dataset?</p>
+
+<p><strong>Question 7</strong>: What is the spatial extent (listed under Domain) of this feature dataset?<br />
+Xmin:<br />
+Ymin:<br />
+Xmax:<br />
+Ymax:</p>
+
+<p><strong>Question 8</strong>: Which is the only feature dataset without coordinate system information?</p>
+
+<h1 id="materials"><strong>Materials</strong></h1>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">BaseData</td>
+    <td class="tg-btxf">Data we downloaded as part of lab 1</td>
+  </tr>
+</table></p>
+
+<blockquote>
+<p>Links on these pages are green, and most of the time it should be obvious that something is a link.  So how many of you missed the fact that the materials was a link?</p>
+</blockquote>
+
+<h1 id="part-1-the-esri-suite-of-tools"><strong>Part 1: The ESRI suite of tools</strong></h1>
+
+<p><strong>ArcCatalog</strong> is an application for managing spatial data. The interface is similar to Windows Explorer and is used to copy, move, and delete data. In addition, ArcCatalog is used to obtain information about spatial data such as projection parameters, feature type (point, line, polygon), and attributes.  Never use.</p>
+
+<p><strong>ArcAdministrator</strong> is where you control all the software, including extensions and licensing.  Rarely used.</p>
+
+<p><strong>ArcScene</strong> is a stand alone program for small scale GIS areas, and where you want to more explicitly show off 3D surfaces.  Rarely used.</p>
+
+<p><strong>ArcGlobe</strong> is ESRI&rsquo;s attempt at a Google Earth substitute.  Rarely used.</p>
+
+<p><strong>ArcMap</strong> is the primary means of performing GIS.  Use often.</p>
+
+<p><strong>ArcPro</strong> is the web enabled variant of ArcMap.  Because modern problems require modern solutions.  Use as you see fit.</p>
+
+<p>The creation of metadata is an integral part of a GIS. Metadata is basically “data about data.” Information contained in metadata includes, but is not limited to, the creation and modification date, projection information, extent, source, and reliability. ArcCatalog offers several style sheets for the creation of metadata including the Federal Government Data Committee (FGDC) style. The FGDC coordinates the National Spatial Data Infrastructure (NSDI), which is designed to facilitate the sharing of geographic data. More information about FGDC can be found at <a href="http://www.fgdc.gov/index.html">http://www.fgdc.gov/index.html</a></p>
+
+<h2 id="1-starting-arccatalog-and-organizing-data"><strong>1) Starting ArcCatalog and Organizing Data</strong></h2>
+
+<ul>
+<li>First you need to create a personal folder on the D: drive. This is where you will store your data for the semester. On the desktop, you should see a folder in the upper left-hand corner with your name on it. Open it, and then create a new folder called G358.</li>
+<li>Start ArcCatalog by opening the #-Programs folder on the desktop and then double-clicking ArcCatalog 10.5.</li>
+<li>In ArcCatalog, you will firstly need to connect to a folder. Click on the ‘Connect to Folder’ icon .    And then navigate to the data you downloaded<br /></li>
+<li>Be sure that the G358 folder is highlighted before clicking OK.</li>
+<li>In the Catalog Tree (the leftmost panel of the window), click the plus sign next to the connection you just made. Now right-click on Lab01 and select Copy.</li>
+<li>Click the Connect to Folder icon again and create a connection to your personal lab folder.</li>
+<li>In the Catalog Tree, find the connection to your lab folder, right-click the folder, and then select Paste. Now you have a copy of the lab data in your own folder.</li>
+<li>Click the plus sign next to your Lab00 folder.</li>
+</ul>
+
+<h2 id="2-getting-familiar-with-the-layout-of-arccatalog"><strong>2) Getting Familiar with the layout of ArcCatalog</strong></h2>
+
+<ul>
+<li>In the Catalog Tree, click the plus sign next to Lab01 in your folder (see figure on next page).</li>
+<li>The contents of this folder are listed in the Catalog Display window:<br />
+
+<ul>
+<li>A database file (GreenValleyDB.mdb)¬ – a data format used by ArcGIS based on a relational database that contains geographic information</li>
+<li>A map document (Greenvalley.mxd) – a page layout for spatial data and contains annotations and graphic elements. The map document can either be printed or saved in a graphic format (.jpg, .tif, .eps)</li>
+<li>A layer file (Water Use.lyr) – contains symbology settings for water use in Greenvalley. These settings tell ArcMap how to display the data and can also be a shortcut to the original data stored elsewhere on the hard drive</li>
+</ul></li>
+<li>Review the following page in order to familiarize yourself with the layout of ArcCatalog.</li>
+<li>You will want to refer to this outline throughout the lab if you get confused.</li>
+<li>ArcCatalog is similar in structure to Windows Explorer &ndash; on the left hand side is a view of the Catalog &ldquo;tree&rdquo; showing how the data is organized. The right hand side provides options for exploring the contents of the data shown in the Catalog tree.</li>
+<li>Outside of the areas for exploring the catalog folders and their contents, there are several menus and toolbars associated with ArcCatalog. We will explore a number of these in this lab, however we will not examine all of them. Throughout the lab, it will be helpful if you spend a bit of time exploring these on your own as they become active.</li>
+<li>To find out what a particular button does, hold your mouse cursor over the button for several seconds. A note will appear telling you the function associated with the button.<br /></li>
+</ul>
+
+<h2 id="3-exploring-the-geographic-data-map-documents-and-layers"><strong>3) Exploring the geographic data, map documents and layers</strong></h2>
+
+<ul>
+<li>Change the settings of Details view: The default settings for the Details view in the Catalog Contents window only show the Name and Type of feature. We want to obtain more information about the files we are using before continuing.<br /></li>
+<li>Select Customize | ArcCatalog Options… and navigate to the Contents tab.  Place check marks beside Size and Modified. Also, place a check mark beside # of Features under the metadata list box.<br /></li>
+<li>Click Apply and then click OK.</li>
+<li>Complete questions 1 – 3 on the assignment sheet.</li>
+<li>In order to preview the map document, single-click the Map document     (Greenvalley.mxd) in the Catalog Tree and select the Preview tab to view a thumbnail of page layout. Notice that there is only one option available from the Preview: drop-down menu (Geography). This is because we can only view the spatial information contained within the map document.<br /></li>
+<li>To preview a layer, single-click the layer file   (Water Use.lyr)   in the Catalog Tree to preview this file. The Preview: option defaults to Geography.<br /></li>
+<li>Change this drop-down menu to Table. A table is displayed in the Catalog Display window showing the attributes for the original data associated with the layer.<br /></li>
+<li>Click the Contents tab and click on the geodatabase file named GreenvalleyDB.mdb<br /></li>
+<li>To explore the geodatabase, click the plus sign next to the file GreenvalleyDB.mdb in the Catalog Tree. The contents of this geodatabase are now displayed in the Catalog Tree.<br /></li>
+<li>The Hydrology, Parks, Public Buildings, etc… are called Feature Datasets and are simply a collection of Feature Classes (Points, Lines, Polygons) that share the same spatial reference.<br /></li>
+<li>Explore feature datasets and feature classes.</li>
+<li>Click the plus sign next to Hydrology and note the content is a single Feature Class (in this case, a polygon) called flood_polygon. A thumbnail is displayed in
+the Catalog Display window.</li>
+<li>Answer question 4 on the answer sheet.<br /></li>
+<li>Click the Preview tab to view the geographic information stored in the flood_polygon class. Switch to the Table option to see the attributes.<br /></li>
+<li>Return to the Contents tab.</li>
+<li>In the Catalog Tree, select Public Utility. Notice that this Feature Dataset contains three Feature Classes (a point, line and polygon feature class). Click the plus sign for this Feature Dataset.</li>
+<li>Select the Preview tab and view the Geography and Table for each of these feature classes.<br /></li>
+</ul>
+
+<h2 id="4-finding-coordinate-system-information"><strong>4) Finding coordinate system information</strong></h2>
+
+<ul>
+<li>Information regarding the projection and its parameters (coordinate system, datum, spheroid, etc…) can be obtained for each Feature Dataset.<br /></li>
+<li>Right-click on the Hydrology Feature dataset and select Properties… from the drop-down menu.<br /></li>
+<li>Scroll through this information to become familiar with some of the parameters that are stored within this Feature Dataset.<br /></li>
+<li>Answer 5 – 9 on the assignment sheet.</li>
+<li>Close the Properties window.</li>
+</ul>
+
+<h2 id="5-exploring-and-editing-metadata"><strong>5) Exploring and editing metadata</strong></h2>
+
+<p>•   ArcCatalog can also be used to create and search metadata.  Under the Transportation feature dataset, single-click the streets_arc feature class.
+•   Select the Description tab to view the feature class metadata.
+•   To edit information, click the Edit button under the Description tab.</p>
+
+<p>•   Under each item, information can be added about the features contained within this feature class including tags, summary, description, etc. This can be used to identify the contents of the feature class, to locate the file, to find out who created it, and so on.
+        Under the Tags section, add the following text:
+o   Street, street name
+          Under the Summary section, add the following text:
+o   To store the street center lines of Greenvalley
+•   Click Save once you have made these changes. These changes should now be viewable under the Description tab</p>
+
+<ol>
+<li>Complete Question 10 on the assignment sheet</li>
+<li>Connecting to other sources of data
+Up to this point we’ve been accessing data that is stored on the lab computers. Now we’re going to use the Internet to access data from other sources.</li>
+</ol>
+
+<p>•   First we’re going to connect to the Kansas Data Access and Support Center (KansasGIS.org), a great service run by our friends over at the Kansas Geological Survey. Their data are stored on servers that run on ArcGIS Server. We can access these data in ArcCatalog by using an ArcGIS Server connection.
+•   In the Catalog Tree, about halfway down you’ll see GIS Servers. Click the plus sign next to it.
+•   Double-click Add ArcGIS Server.
+•   Make sure the radio button is set to Use GIS services. Click Next.
+•   In the Server URL field, type: <a href="http://services.kansasgis.org/arcgis/services">http://services.kansasgis.org/arcgis/services</a>
+•   Click Finish.
+•   Click the plus sign next to arcgis on services.kansasgis.org (user).
+•   Click the minus sign next to DASC_Boundaries.
+•   Click the plus sign next to KDOR.
+•   Click the first CountyOrkaStatus.
+•   Click the Full Extent button (the little globe near the top of the screen).
+•   Click the Identify button (the blue circle with an &ldquo;i&rdquo; in it).
+•   Click different counties to see their attributes.
+•   Scroll through the Identify Results window.
+•   Answer question 11 on the assignment sheet.</p>
+
+<p>Now we’re going to connect to a different server at a different organization through a
+different process. (It’s different, see?) This time we’re connecting to the servers at the
+National Oceanic and Atmospheric Administration, a government agency that runs the
+National Weather Service and other related services. Instead of using an ArcGIS Server
+connection, though, we’re going to use WMS (Web Map Service). According to Wikipedia,
+WMS is a “standard protocol for serving georeferenced map images over the Internet that are generated by a map server using data from a GIS database.” Unlike ArcGIS Server, WMS is an open source protocol, which means it’s not connected to any proprietary software.
+•   In the Catalog Tree, double-click Add WMS Server.
+•   In the URL field, type: <a href="http://maps.ngdc.noaa.gov/arcgis/services/hot_springs/MapServer/WMSServer?">http://maps.ngdc.noaa.gov/arcgis/services/hot_springs/MapServer/WMSServer?</a>
+•   Click OK.
+•   Click the plus sign next to hot_springs on maps.ngdc.noaa.gov.
+•   Click the plus sign next to Thermal Springs in the United States.
+•   Click the plus sign next to Layers.
+•   Click Hot Springs.
+•   Click the Full Extent button (the little globe).
+•   Answer question 12 (last question!) on the assignment sheet.
+ 
+Name:</p>
+
+<ol>
+<li>This final step contains detailed instructions for turning your work in. We will do this frequently throughout the semester so be sure to pay attention to the process.
+•   Scroll so that your screen looks like the following (so that it displays the changes you made in metadata).
+•   This also should bring the ArcCatalog to be captured to the foreground on your computer screen or make the ArcCatalog active window.</li>
+</ol>
+
+<p>•   Locate the PrtScrn key (Print Screen) on your keyboard (see sample keyboard for a guide).</p>
+
+<p>•   Press the Alt + PrtScrn key – this key is used to capture (or take a picture of) your screen.
+•   For the process described below, you can use the other image editor rather than Paint as you wish.
+•   Now open Paint by going to Start | All Programs | Accessories | Paint
+•   On the Paint toolbar, click the Paste button under the Home tab – this will paste a picture of your screen into Paint
+•   Now choose Save As…
+•   Navigate to your folder<br />
+•   Under File Name: enter lab01yourname.png (i.e.: lab01Bruce.png)
+•   From the Save as Type drop down box, select PNG
+•   Close Paint and exit from ArcCatalog
+•   To upload the file, simply launch Microsoft Internet Explorer (or Firefox if available) and log into Blackboard.
+•   Click on Assignments | Lab 01 | Submit Lab 01
+•   Fill in any appropriate information, and click Browse… to browse, find, and upload your .PNG file from your personal workspace. Finally, click Submit.
+•   I will now be able to view your .PNG through the Blackboard webpage.</p>
+
+<ol>
+<li><p>What is the 2010 population for Douglas County?</p></li>
+
+<li><p>The dots signify hot springs on American soil. Where in the U.S. do hot springs seem to be concentrated?</p></li>
+</ol>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

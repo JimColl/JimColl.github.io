@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Creating a website:  There are a lot of links in here, to highlight some key resources I used while I was learning how to do this.
+ https://gohugo.io/
+ https://github.com/sourcethemes/academic-www
+ https://github.com/gcushen/hugo-academic
+    The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/random/website/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/random/website/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/random/website/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Creating a website:  There are a lot of links in here, to highlight some key resources I used while I was learning how to do this.
+ https://gohugo.io/
+ https://github.com/sourcethemes/academic-www
+ https://github.com/gcushen/hugo-academic
+    The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/">Links and other useful sites</a>
+
+  </div>
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/courses/random/website/">Website creation</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/foss/">Creating FOSS Tools</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random"></a>
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#creating-a-website"><strong>Creating a website:</strong></a></li>
+<li><a href="#step-by-step-instructions">Step by step&rdquo; instructions</a>
+<ul>
+<li><a href="#create-a-github-account"><strong>Create a github account:</strong></a></li>
+<li><a href="#install-git-for-windows"><strong>Install git for windows:</strong></a></li>
+<li><a href="#create-the-website-url-repository"><strong>Create the website url repository:</strong></a></li>
+<li><a href="#create-a-website-folder"><strong>Create a website folder:</strong></a></li>
+<li><a href="#installing-hugo"><strong>Installing HUGO:</strong></a></li>
+<li><a href="#create-the-website"><strong>Create the website:</strong></a></li>
+<li><a href="#updating-your-website"><strong>Updating your website:</strong></a></li>
+<li><a href="#how-this-site-was-created"><strong>How this site was created:</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="creating-a-website"><strong>Creating a website:</strong></h1>
+
+<div class="alert alert-note">
+  <div>
+    There are a lot of links in here, to highlight some key resources I used while I was learning how to do this.</p>
+
+<ul>
+<li><a href="https://gohugo.io/">https://gohugo.io/</a><br /></li>
+<li><a href="https://github.com/sourcethemes/academic-www">https://github.com/sourcethemes/academic-www</a><br /></li>
+<li><a href="https://github.com/gcushen/hugo-academic">https://github.com/gcushen/hugo-academic</a><br /></li>
+</ul>
+  </div>
+</div>
+
+<p>The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).  However, the creation of one is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution to this in the form of the HUGO.</p>
+
+<p><a href="https://gohugo.io/">HUGO</a>, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">hosting on github page</a>, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  The following will will walk you through how this website was created.  <strong>I also recommend following the <a href="https://sourcethemes.com/academic/docs/install/">Academic theme instructions</a>.</strong></p>
+
+<div class="alert alert-note">
+  <div>
+    A note of caution:
+Your site doesn’t have to look like mine, feel free to pick any off the <a href="https://themes.gohugo.io/">themes page</a>.  The theme you choose will do most of the heavy lifting, and hopefully you find one that does everything you want it to.  If not, be prepared to spend a few days figuring out how HUGO and the themes work; there is no shortcut to creating new site behavior and I found it to be a bit unforgiving at times.  In short, unless you REALLY want to sink time into this skillset, pick a theme and be happy with it 😊
+  </div>
+</div>
+
+<h1 id="step-by-step-instructions">Step by step&rdquo; instructions</h1>
+
+<h2 id="create-a-github-account"><strong>Create a github account:</strong></h2>
+
+<p>Create a <a href="https://github.com/">Github account</a>.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to see if that’s the case.</p>
+
+<h2 id="install-git-for-windows"><strong>Install git for windows:</strong></h2>
+
+<p>Follow download and installation instructions at <a href="https://gitforwindows.org/">https://gitforwindows.org/</a>.</p>
+
+<h2 id="create-the-website-url-repository"><strong>Create the website url repository:</strong></h2>
+
+<p>It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&rsquo;t use github the right way, and I don&rsquo;t really have a reason to use another github repository to keep the site files, as you&rsquo;ll see below I just keep them on OneDrive and kept on my local hard drive.</p>
+
+<h2 id="create-a-website-folder"><strong>Create a website folder:</strong></h2>
+
+<p>Next we need to create a folder where our website will live.  This folder ideally shouldn’t be moved after you’ve created it, so place it somewhere useful (read: not the desktop).  I gave into our digital overlords and moved most of my footprint to the cloud (OneDrive), so on my root folder I created a folder called myWebsite.  Then I like to right click on the folder and select the “Always keep it on this device”.</p>
+
+<h2 id="installing-hugo"><strong>Installing HUGO:</strong></h2>
+
+<p>Next you need to install HUGO in the website directory.  Download the appropriate windows install from the HUGO releases (<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>).  Unzip the file and place the hugo.exe file into your myWebsite folder.</p>
+
+<h2 id="create-the-website"><strong>Create the website:</strong></h2>
+
+<p>This is where you need to start thinking for yourself.  This process varies depending on which theme you end up choosing.  Here I’ll just point you to the <a href="https://sourcethemes.com/academic/docs/front-matter/">Academic pages</a>.</p>
+
+<h2 id="updating-your-website"><strong>Updating your website:</strong></h2>
+
+<p>When you want to <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">&ldquo;manage your content&rdquo;</a>, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type .\hugo server &ndash;disableFastRender.  You can then open a browser and go to <a href="http://localhost:1313/">http://localhost:1313/</a>.  At this point, any changes made to your site will automagically change.  When you are happy with your changes, you generate your site with the <em>.\hugo</em> command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&hellip;</p>
+
+<ol>
+<li>Stage Changed files<br /></li>
+<li>create a commit message<br /></li>
+<li>Commit the changes, and<br /></li>
+<li>Push the changes up to the repository.<br /></li>
+</ol>
+
+<p><img src="/courses/random/media/GitPushCommands.png" alt="" /></p>
+
+<h2 id="how-this-site-was-created"><strong>How this site was created:</strong></h2>
+
+<p>This site is a smashup of the <a href="https://github.com/darshanbaral/aafu">aafu</a> and Academic themes.  Although the Academic theme has an academically oriented home page, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and replace it.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the , the config/_default/config.toml file in the academic theme has a theme line, where we specify what theme folder to look in first when creating the site.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first use the Academic theme, and then replace the partials folder from the aafu theme within the academic theme.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

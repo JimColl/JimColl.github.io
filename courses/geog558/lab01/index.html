@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="These labs are largely written for ArcMap 10.6. However, operations from ArcMap 10.2 through 10.6 and even up to Pro all largely look the same although some of the tools may have shifted or changed names just to keep you on your toes. Although these labs are written so that you can follow them step by step, I expect you to flex those critical thinking skills of yours. Take a step back, read the learning objectives and ask yourself what steps are needed to get to that goal.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab01/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab01/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab01/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="These labs are largely written for ArcMap 10.6. However, operations from ArcMap 10.2 through 10.6 and even up to Pro all largely look the same although some of the tools may have shifted or changed names just to keep you on your toes. Although these labs are written so that you can follow them step by step, I expect you to flex those critical thinking skills of yours. Take a step back, read the learning objectives and ask yourself what steps are needed to get to that goal."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/">Class Outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#lab-1-a-survey-of-data-and-mapping-technologies-and-database-building"><strong>Lab 1: A survey of data and mapping technologies and database building</strong></a></li>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#part-1-70-points-a-survey-of-data-and-mapping-technologies"><strong>Part 1 (70 points): A survey of data and mapping technologies</strong></a></li>
+<li><a href="#part-2-30-points-building-a-database"><strong>Part 2 (30 points): Building a database</strong></a></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<div class="alert alert-note">
+  <div>
+    These labs are largely written for ArcMap 10.6.  However, operations from ArcMap 10.2 through 10.6 and even up to Pro all largely look the same although some of the tools may have shifted or changed names just to keep you on your toes.  Although these labs are written so that you can follow them step by step, I expect you to flex those critical thinking skills of yours.  Take a step back, read the learning objectives and ask yourself what steps are needed to get to that goal.  When in doubt, <a href="https://lmgtfy.com/">Google it</a>!
+  </div>
+</div>
+
+<h1 id="lab-1-a-survey-of-data-and-mapping-technologies-and-database-building"><strong>Lab 1: A survey of data and mapping technologies and database building</strong></h1>
+
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
+
+<p>The first part of this lab requires writing a survey of the data and mapping technologies in the field that you are interested in (wildlife reserve, conservation, urban planning, forest resources, natural hazards, business, etc.), not limited to the data and mapping technologies covered in the lecture. This survey may include both traditional and new emerging datasets and/or mapping technologies that are used in the fields. The second part of the lab will download imagery and create a database that will be used for the next few labs.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<p>Submit the paper outlined in part 1, and the screenshot of the data you downloaded in part 2 to blackboard.</p>
+
+<h1 id="part-1-70-points-a-survey-of-data-and-mapping-technologies"><strong>Part 1 (70 points): A survey of data and mapping technologies</strong></h1>
+
+<p>You will write a survey on the data and mapping technologies in a field that you are interested in. The survey should have 2-4 single spaced pages using a font size of 12 points. Reference style should follow one of the GIS journal reference styles (e.g. Transactions in GIS, Cartography and Geographic Information Science, International Journal of Geographic Information Science, The Geographical Journal, and Computers &amp; Geosciences, etc.). I also point you to several resources for reference management software <a href="https://jimcoll.github.io/courses/geog558/classoutline/#academic-integrity">syllabus</a>.</p>
+
+<p>Grading for the survey is based on:</p>
+
+<ol>
+<li>(80%) Quality of the content: how many potential datasets and mapping methods are included; How you organize your contents. Whether the length of survey is proper, and has a proper level of synthesis and details.<br /></li>
+<li>(20%) Format: follow the requirements described above and check your grammar, spelling and sentence structures before you submit the survey.<br /></li>
+</ol>
+
+<h1 id="part-2-30-points-building-a-database"><strong>Part 2 (30 points): Building a database</strong></h1>
+
+<p>We will use these datasets for the next several labs. While we could download that datasets in each lab, the process can become time consuming so we will create a database in this lab.<br />
+<ol>
+<li>We will use USGS Earth Explorer to download the requisite datasets, including Landsat scenes and elevation data.<br />
+Go to <a href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a> and log in (create an account as necessary).  While we are at this, you will also need an account at <a href="https://urs.earthdata.nasa.gov//">https://urs.earthdata.nasa.gov//</a><br />
+<li>We first need to define our area of interest.  Under the Search Criteria tab change the coordinate box to decimal degrees and copy paste the following…</p>
+
+<ul>
+<li>Latitude: -9.397055203542507<br /></li>
+<li>Longitude: -77.38027425750124<br /></li>
+</ul>
+
+<p><li>Under the Data Sets tab, search for <a href="https://lpdaac.usgs.gov/dataset_discovery/measures/measures_products_table/srtmgl1_v003">NASA SRTM3 SRTMGL-1</a> and check the box next to it.  Click results and then download the standard format.<br />
+<li>Next we need the Landsat scenes.  Our goal is to recreate some of the analysis found in <a href="https://www.frontiersin.org/articles/10.3389/feart.2018.00210/full">Frey et al., 2018</a>, specifically Figure 2.  We will simplify this somewhat by starting at 1995 and looking forward in time every 2 years.  To do this go back to Search Criteria and set the Date Range dates to 06/01/1995 and 08/01/1995 respectively.
+<li>Under the Data Sets tab, navigate to the Landsat &gt; Landsat Collection 1 Level 1 check <a href="https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-archives-landsat-4-5-thematic-mapper-tm-level-1-data?qt-science_center_objects=0#qt-science_center_objects">Landsat 4-5 TM C1 Level-1</a><br />
+<li>Click on Additional Criteria, set the Land Cloud Cover to less than 10%<br />
+<li>Click on Results, when the images load in you can explore them with the “Show Browser Overlay” button, and download the desired tiles (Get the Level-1 GeoTIFF data products.<br />
+<li>Do this for every two years up to 2009 (change the Date Range on the Search Criteria tab).  The images I selected for this analysis were:</p>
+
+<table>
+<thead>
+<tr>
+<th>YEAR</th>
+<th>SCENE NAME</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1995</td>
+<td>LT05_L1TP_008067_19950622_20170109_01_T1</td>
+</tr>
+
+<tr>
+<td>1997</td>
+<td>LT05_L1TP_008066_19970729_20161230_01_T1</td>
+</tr>
+
+<tr>
+<td>1999</td>
+<td>LT05_L1TP_008067_19990601_20161217_01_T1</td>
+</tr>
+
+<tr>
+<td>2001</td>
+<td>LT05_L1TP_008067_20010622_20161210_01_T1</td>
+</tr>
+
+<tr>
+<td>2003</td>
+<td>LT05_L1TP_008066_20030714_20161205_01_T1</td>
+</tr>
+
+<tr>
+<td>2005</td>
+<td>LT05_L1TP_008066_20050703_20161126_01_T1</td>
+</tr>
+
+<tr>
+<td>2007</td>
+<td>LT05_L1TP_008067_20070725_20161112_01_T1</td>
+</tr>
+
+<tr>
+<td>2009</td>
+<td>LT05_L1TP_008066_20090628_20161024_01_T1</td>
+</tr>
+</tbody>
+</table>
+
+<p><li>Some sort of file management system is preferable to nothing.  Time wasted looking for files can be better spent performing the analysis, other research, or discovering new music.  Below I will outline what I use, but if you already have a system that works for you feel free to deviate.  Just as an aside, avoid file names with spaces or leading numbers.
+<li>On OneDrive, create a folder for classes, in that one for this class (GEOG558), and in that folder create one for labs.  In that folder create one for Lab01, and one for base data (BaseData).  In that create folders, one called Elevation and the other called Landsat.  The Landsat tiles can get a little messy so I create extra folders underneath the Landsat folder titled something along the lines of LS05_YYYY.<br />
+<li>Unzip (Right click &gt; 7-Zip &gt; Extract to “FileNameHere”) the SRTMGL folder and move the HGT file (a fancy tif for SRTM data) into the elevation folder.
+<li>The Landsat tiles are downloaded with extensions .tar.gz, they’ve essentially been compressed twice.  Unzip them the first time, open them up and unzip them a second time.  Copy all the files into their respective folders.
+<li>Open up ArcMap and the ArcCatalog window, connect to the lab folder, and expand the BaseData file tree out a bit.  Submit a screenshot of your final files (similar to the one below).  We will use these data in the next couple of labs and I will not wait for you to download them next week so be prepared to have them ready.
+<img src="/courses/geog558/media/Lab1Image2.jpg" alt="" /></p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

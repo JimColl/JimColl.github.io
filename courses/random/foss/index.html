@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Free and Open Source Software: There are a whole host of questions I still have regarding the intersections of individuals, societies, and technology, and one of the more practically philosophical realizations of this is in FOSS. Free and Open Source Software has in many ways defined the core of my skillset, and has that special allure of feel good contribution and intrinsic reproducibility to it.
+I&rsquo;ll flesh this section out more at a later date, but two important links I&rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/random/foss/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/random/foss/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/random/foss/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Free and Open Source Software: There are a whole host of questions I still have regarding the intersections of individuals, societies, and technology, and one of the more practically philosophical realizations of this is in FOSS. Free and Open Source Software has in many ways defined the core of my skillset, and has that special allure of feel good contribution and intrinsic reproducibility to it.
+I&rsquo;ll flesh this section out more at a later date, but two important links I&rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/">Links and other useful sites</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/website/">Website creation</a>
+
+  </div>
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/courses/random/foss/">Creating FOSS Tools</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random"></a>
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#free-and-open-source-software"><strong>Free and Open Source Software:</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h2 id="free-and-open-source-software"><strong>Free and Open Source Software:</strong></h2>
+
+<p>There are a whole host of questions I still have regarding the intersections of individuals, societies, and technology, and one of the more practically philosophical realizations of this is in FOSS.  Free and Open Source Software has in many ways defined the core of my skillset, and has that special allure of feel good contribution and intrinsic reproducibility to it.</p>
+
+<p>I&rsquo;ll flesh this section out more at a later date, but two important links I&rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.<br />
+Some useful links:<br />
+<a href="https://ficonsulting.com/filabs/RInno">https://ficonsulting.com/filabs/RInno</a>
+<a href="https://www.r-bloggers.com/deploying-desktop-apps-with-r/">https://www.r-bloggers.com/deploying-desktop-apps-with-r/</a>  The foundation/inspiration for this implementation.<br />
+<a href="https://www.robvanderwoude.com/vbstech_hta.php">https://www.robvanderwoude.com/vbstech_hta.php</a>  A great HTA resource page</p>
+
+<p><a href="https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app">https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app</a>
+<a href="https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180">https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180</a></p>
+
+<p>There are some useful tidbits of code, mostly in R, that I&rsquo;ve flagged specifically.  Many are part of FOSSFlood, but that global file is more than 1000 lines of code so it&rsquo;s understandable if you didn&rsquo;t see them.</p>
+
+<pre><code>#/////////////////////////////////////
+# -- Grab backup roads and points 
+#/////////////////////////////////////
+# TIGRIS Roads from Census
+# Dev notes: here I grab the counties and use roads package to download roads (from Census)
+# This is redundent with the OSM data I download for buildings defaults.  
+# There is also no handling of zip codes which straddle state lines
+print(&quot;-- Base data collection - This may take upwards of 2 hours to run - Grabbing TIGER road files&quot;)
+CountiesFIPS &lt;- quiet(counties(cb=TRUE))
+CountiesFIPSProj &lt;- sp::spTransform(CountiesFIPS, CRS(&quot;+init=epsg:4326&quot;))
+aoiCounties &lt;- CountiesFIPSProj[aoiZIPCodesProj, ]
+# Error checking: Download roads for AOI that interset more than one state or county
+if(length(unique(aoiCounties$COUNTYFP)) &gt; 1) {
+  myHoldRoads &lt;- quiet(roads(unique(aoiCounties$STATEFP),unique(aoiCounties$COUNTYFP)[1], year = 2014, refresh = TRUE)[NULL,])
+  for(i in unique(aoiCounties$COUNTYFP)) {
+    myRoads &lt;- quiet(roads(unique(aoiCounties$STATEFP),i, year = 2014, refresh = TRUE))
+    myHoldRoads &lt;- rbind(myHoldRoads, myRoads)
+  }
+  myRoads &lt;- myHoldRoads
+} else {
+  myRoads &lt;- quiet(roads(unique(aoiCounties$STATEFP),unique(aoiCounties$COUNTYFP), year = 2014, refresh = TRUE))
+}
+myRoadsProj &lt;- sp::spTransform(myRoads, CRS(&quot;+init=epsg:4326&quot;))
+myRoads_subset &lt;- myRoadsProj[aoiZIPCodesProj, ]
+writeOGR(obj=myRoads_subset, dsn=paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/roads&quot;), layer=&quot;tigerroads&quot;, driver=&quot;ESRI Shapefile&quot;)
+
+# OSM Roads and points
+print(&quot;-- Base data collection - This may take upwards of 2 hours to run - Grabbing OSM data&quot;)
+osmDataURL &lt;- paste0(&quot;https://download.geofabrik.de/north-america/us/&quot;,tolower(gsub(&quot; &quot;, &quot;-&quot;, fips(aoiCounties$STATEFP[1], to = &quot;Name&quot;))),&quot;-latest-free.shp.zip&quot;)
+download.file(osmDataURL, paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/&quot;,tolower(gsub(&quot; &quot;, &quot;-&quot;, fips(aoiCounties$STATEFP[1], to = &quot;Name&quot;))),&quot;-latest-free.shp.zip&quot;))
+unzip(paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/&quot;,tolower(gsub(&quot; &quot;, &quot;-&quot;, fips(aoiCounties$STATEFP[1], to = &quot;Name&quot;))),&quot;-latest-free.shp.zip&quot;), exdir = paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName, &quot;/geo/tmp&quot;))
+osmPoints &lt;- readOGR(paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/gis_osm_pois_free_1.shp&quot;), verbose = FALSE)
+osmPointsProj &lt;- sp::spTransform(osmPoints, CRS(&quot;+init=epsg:4326&quot;))
+writeOGR(obj=osmPointsProj[aoiZIPCodesProj, ], dsn=paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/addresses&quot;), layer='OSMaddresses', driver=&quot;ESRI Shapefile&quot;)
+osmRoads &lt;- readOGR(paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/gis_osm_roads_free_1.shp&quot;), verbose = FALSE)
+osmRoadsProj &lt;- sp::spTransform(osmRoads, CRS(&quot;+init=epsg:4326&quot;))
+writeOGR(obj=osmRoadsProj[aoiZIPCodesProj, ], dsn=paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/roads&quot;), layer='OSMroads', driver=&quot;ESRI Shapefile&quot;)
+
+# OpenAddresses points
+print(&quot;-- Base data collection - This may take upwards of 2 hours to run - Grabbing OpenAddresses data&quot;)
+if(aoiCounties$STATEFP %in% c('09','23','25','33','44','50','34','36','42')) {
+  oaURL &lt;- &quot;https://data.openaddresses.io/openaddr-collected-us_northeast.zip&quot;
+} else if(aoiCounties$STATEFP %in% c('18','17','26','39','55','19','20','27','29','31','38','46')) {
+  oaURL &lt;- &quot;https://data.openaddresses.io/openaddr-collected-us_midwest.zip&quot;
+} else if(aoiCounties$STATEFP %in% c('10','11','12','13','24','37','45','51','54','01','21','28','47','05','22','40','48')) {
+  oaURL &lt;- &quot;https://data.openaddresses.io/openaddr-collected-us_south.zip&quot;
+} else if(aoiCounties$STATEFP %in% c('04','08','16','35','30','49','32','56','02','06','15','41','53')) {
+  oaURL &lt;- &quot;https://data.openaddresses.io/openaddr-collected-us_west.zip&quot;
+}
+download.file(oaURL, paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/OpenAddresses.zip&quot;))
+unzip(paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/OpenAddresses.zip&quot;), exdir = paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName, &quot;/geo/tmp&quot;))
+FullOpenAddresses &lt;- paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/tmp/us/&quot;,tolower(fips(aoiCounties$STATEFP[1], to = &quot;Abbreviation&quot;)),&quot;/statewide.csv&quot;)
+FullOpenAddressesCSV&lt;- read.csv(FullOpenAddresses, header=TRUE, stringsAsFactors = FALSE)
+coordinates(FullOpenAddressesCSV)&lt;- ~LON+LAT
+proj4string(FullOpenAddressesCSV) &lt;- CRS(&quot;+init=epsg:4326&quot;)
+writeOGR(obj=FullOpenAddressesCSV[aoiZIPCodesProj, ], dsn=paste0(basedir,&quot;/AOI/&quot;,UserZipCodeFileName,&quot;/geo/addresses&quot;), layer='OpenAddresses', driver=&quot;ESRI Shapefile&quot;)
+</code></pre>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

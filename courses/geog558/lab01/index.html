@@ -371,6 +371,10 @@
         <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
       </li>
       
+      <li >
+        <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
+      </li>
+      
     </ul>
     
 
@@ -393,7 +397,11 @@
 <li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
 <li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
 <li><a href="#part-1-70-points-a-survey-of-data-and-mapping-technologies"><strong>Part 1 (70 points): A survey of data and mapping technologies</strong></a></li>
-<li><a href="#part-2-30-points-building-a-database"><strong>Part 2 (30 points): Building a database</strong></a></li>
+<li><a href="#part-2-30-points-building-a-database"><strong>Part 2 (30 points): Building a database</strong></a>
+<ul>
+<li><a href="#setting-up-folders-and-accounts"><strong>Setting up folders and accounts</strong></a></li>
+<li><a href="#downloading-data"><strong>Downloading data</strong></a></li>
+</ul></li>
 </ul>
 </nav>
 
@@ -440,20 +448,41 @@
 
 <h1 id="part-2-30-points-building-a-database"><strong>Part 2 (30 points): Building a database</strong></h1>
 
-<p>We will use these datasets for the next several labs. While we could download that datasets in each lab, the process can become time consuming so we will create a database in this lab.<br />
+<p>One of our goals over the the next couple of labs is to recreate part of the analysis found in <a href="https://www.frontiersin.org/articles/10.3389/feart.2018.00210/full">Frey et al., 2018</a>, specifically Figure 2 and a lake volume estimation.  We will use these data in the next couple of labs and I will not wait for you to download them next week so be prepared to have them ready.</p>
+
+<h2 id="setting-up-folders-and-accounts"><strong>Setting up folders and accounts</strong></h2>
+
 <ol>
-<li>We will use USGS Earth Explorer to download the requisite datasets, including Landsat scenes and elevation data.<br />
-Go to <a href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a> and log in (create an account as necessary).  While we are at this, you will also need an account at <a href="https://urs.earthdata.nasa.gov//">https://urs.earthdata.nasa.gov//</a><br />
-<li>We first need to define our area of interest.  Under the Search Criteria tab change the coordinate box to decimal degrees and copy paste the following…</p>
+<li>Some sort of file management system is preferable to nothing.  Time wasted looking for files can be better spent performing the analysis, other research, or discovering new music.  Below I will outline what I use, but if you already have a system that works for you feel free to deviate.  Just as an aside, avoid file names with spaces, leading numbers, or strange characters.
+<li>On OneDrive, create a folder for classes, in that one for this class (GEOG558), and in that folder create one for labs.  In that folder create one for Lab01, and one for base data (BaseData).  In that create folders, one called Elevation and the other called Landsat.  The Landsat tiles can get a little messy so I create extra folders underneath the Landsat folder titled something along the lines of LS05_YYYY.  
+<li>We will use USGS Earth Explorer to download the requisite datasets, including Landsat scenes and elevation data.  Before we start you'll need accounts at both <a href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a> and <a href="https://urs.earthdata.nasa.gov/">https://urs.earthdata.nasa.gov/</a>  
+</ol>
 
-<ul>
-<li>Latitude: -9.397055203542507<br /></li>
-<li>Longitude: -77.38027425750124<br /></li>
-</ul>
+<h2 id="downloading-data"><strong>Downloading data</strong></h2>
 
-<p><li>Under the Data Sets tab, search for <a href="https://lpdaac.usgs.gov/dataset_discovery/measures/measures_products_table/srtmgl1_v003">NASA SRTM3 SRTMGL-1</a> and check the box next to it.  Click results and then download the standard format.<br />
-<li>Next we need the Landsat scenes.  Our goal is to recreate some of the analysis found in <a href="https://www.frontiersin.org/articles/10.3389/feart.2018.00210/full">Frey et al., 2018</a>, specifically Figure 2.  We will simplify this somewhat by starting at 1995 and looking forward in time every 2 years.  To do this go back to Search Criteria and set the Date Range dates to 06/01/1995 and 08/01/1995 respectively.
-<li>Under the Data Sets tab, navigate to the Landsat &gt; Landsat Collection 1 Level 1 check <a href="https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-archives-landsat-4-5-thematic-mapper-tm-level-1-data?qt-science_center_objects=0#qt-science_center_objects">Landsat 4-5 TM C1 Level-1</a><br />
+<ol>
+<li>Open up [Earthexplorer](https://earthexplorer.usgs.gov/)
+<li>We first need to define our area of interest.  Under the Search Criteria tab change the coordinate box to decimal degrees, add a coordinate, and copy paste the following…   
+
+* Latitude: -9.397055203542507  
+* Longitude: -77.38027425750124  
+
+<li>Under the Data Sets tab, search for [SRTM3 SRTMGL-1](https://lpdaac.usgs.gov/products/srtmgl1v003/) and make sure the box next to the dataset is checked.  Click results and then download the standard format (the HGT, not any of the metadata).  
+</ol>
+
+<blockquote>
+<p>There are a few useful buttons on a results screen.  The black footprint shows you the footprint of a tile, and the image icon will draw a jpg over the browser so you can see what the data you&rsquo;re downloading.</p>
+</blockquote>
+
+<ol start="3">
+<li>The elevation data is distributed as a nested zip file.  To use it you'll need to unzip it twice to actually use it in a program.  Unzip (Right click > 7-Zip > Extract to “FileNameHere”) the SRTMGL folder and move the HGT file (a fancy tif for SRTM data) intoyour folder structure.  
+</ol>
+
+<p>Next we want the Landsat scenes.  We&rsquo;ll simplify this somewhat by starting at 1995 and looking forward in time every 2 year.  We&rsquo;ll also use scenes taken in the winter, so that the lake is stable.</p>
+
+<p><ol start="4">
+<li>Under the Data Sets tab, navigate to the Landsat &gt; Landsat Collection 1 Level 1 check <a href="https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-archives-landsat-4-5-thematic-mapper-tm-level-1-data?qt-science_center_objects=0#qt-science_center_objects">Landsat 4-5 TM C1 Level-1</a>.<br />
+<li>Set the Date Range dates to 06/01/1995 and 08/01/1995 respectively.
 <li>Click on Additional Criteria, set the Land Cloud Cover to less than 10%<br />
 <li>Click on Results, when the images load in you can explore them with the “Show Browser Overlay” button, and download the desired tiles (Get the Level-1 GeoTIFF data products.<br />
 <li>Do this for every two years up to 2009 (change the Date Range on the Search Criteria tab).  The images I selected for this analysis were:</p>
@@ -509,11 +538,8 @@ Go to <a href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/<
 </tbody>
 </table>
 
-<p><li>Some sort of file management system is preferable to nothing.  Time wasted looking for files can be better spent performing the analysis, other research, or discovering new music.  Below I will outline what I use, but if you already have a system that works for you feel free to deviate.  Just as an aside, avoid file names with spaces or leading numbers.
-<li>On OneDrive, create a folder for classes, in that one for this class (GEOG558), and in that folder create one for labs.  In that folder create one for Lab01, and one for base data (BaseData).  In that create folders, one called Elevation and the other called Landsat.  The Landsat tiles can get a little messy so I create extra folders underneath the Landsat folder titled something along the lines of LS05_YYYY.<br />
-<li>Unzip (Right click &gt; 7-Zip &gt; Extract to “FileNameHere”) the SRTMGL folder and move the HGT file (a fancy tif for SRTM data) into the elevation folder.
-<li>The Landsat tiles are downloaded with extensions .tar.gz, they’ve essentially been compressed twice.  Unzip them the first time, open them up and unzip them a second time.  Copy all the files into their respective folders.
-<li>Open up ArcMap and the ArcCatalog window, connect to the lab folder, and expand the BaseData file tree out a bit.  Submit a screenshot of your final files (similar to the one below).  We will use these data in the next couple of labs and I will not wait for you to download them next week so be prepared to have them ready.
+<p><li>The Landsat tiles are downloaded with extensions .tar.gz, they’ve also essentially been compressed twice.  Unzip them the first time, open them up and unzip them a second time.  Copy all the files into their respective folders.
+<li>Open up ArcMap and the ArcCatalog window, connect to the lab folder, and expand the BaseData file tree out a bit.  Submit a screenshot of your final files (similar to the one below).<br />
 <img src="/courses/geog558/media/Lab1Image2.jpg" alt="" /></p>
 
           </div>

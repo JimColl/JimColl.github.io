@@ -45,7 +45,7 @@ Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Computer recommendations:  &lt;/strong&gt;&lt;br /&gt;
 ArcGIS is a demanding program, and a lower grade computer is not recommended.  If you are at KU, IT offers &lt;a href=&#34;https://kuit.service-now.com/kb_view.do?sysparm_article=KB0011590&#34;&gt;virtualLabs&lt;/a&gt;, a remote desktop program you can use to access ArcMap.&lt;/p&gt;
 
-&lt;p&gt;If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  For the last few years I&amp;rsquo;ve defered to the pre-built pc choices on &lt;a href=&#34;https://buildmypc.net/&#34;&gt;https://buildmypc.net/&lt;/a&gt; or &lt;a href=&#34;https://pcpartpicker.com/&#34;&gt;https://pcpartpicker.com/&lt;/a&gt;.
+&lt;p&gt;If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  For the last few years I&amp;rsquo;ve deferred to the pre-built pc choices on &lt;a href=&#34;https://buildmypc.net/&#34;&gt;https://buildmypc.net/&lt;/a&gt; or &lt;a href=&#34;https://pcpartpicker.com/&#34;&gt;https://pcpartpicker.com/&lt;/a&gt;.
 In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&amp;rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.&lt;br/&gt;
 &lt;a href=&#34;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&#34;&gt;My “Ideal” build (This is excessive, visualization grade)&lt;/a&gt;&lt;/p&gt;
 
@@ -55,7 +55,7 @@ In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops. �
 
 &lt;h2 id=&#34;academic-integrity&#34;&gt;&lt;strong&gt;Academic Integrity:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone credit for their work?  As a graduate student, I became increadably familiar with &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, but &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will also work for you in a pinch:&lt;/p&gt;
+&lt;p&gt;Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone credit for their work?  I use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, as a KU student you have access to Endnote through &lt;a href=&#34;https://technology.ku.edu/software/microsoft-office&#34;&gt;Office 365&lt;/a&gt;, and in a pinch &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will also work for you in a pinch.&lt;/p&gt;
 
 &lt;h2 id=&#34;disabilities&#34;&gt;&lt;strong&gt;Disabilities:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -1643,8 +1643,7 @@ Connect to Default GPS).&lt;/li&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/Eo2vzLb_OEZEiaNSo8jaZGYB-ofX1VIUNqXERrpBYKfoDQ?e=UgfgiC&#34;&gt;Materials (click to download)&lt;/a&gt;
- or try the &lt;a href=&#34;https://drive.google.com/file/d/10PvmKRzP1SsIBkzN43KRF5zJ6uzOhH6_/view?usp=sharing&#34;&gt;Backup data&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/Eo2vzLb_OEZEiaNSo8jaZGYB-ofX1VIUNqXERrpBYKfoDQ?e=UgfgiC&#34;&gt;Materials&lt;/a&gt;
 &lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
@@ -2083,7 +2082,7 @@ Do not select Douglas County.&lt;/p&gt;
 
 &lt;p&gt;In this part we will execute queries by attribute, queries by space, and spatial joins. We will also conduct a simple analysis using these functions.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Ec0rmWqkQeFBo5v4RyuGZZwB6CC-W_4F_77X0OKvzqTicA?e=S2lCWn&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Ec0rmWqkQeFBo5v4RyuGZZwB6CC-W_4F_77X0OKvzqTicA?e=S2lCWn&#34;&gt;Materials&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
@@ -2313,7 +2312,7 @@ The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm 
     </item>
     
     <item>
-      <title>Lab 07 - Overlay &amp; site suitability anaysis</title>
+      <title>Lab 07 - Overlay &amp; site suitability analysis</title>
       <link>https://jimcoll.github.io/courses/geog358/lab07/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jimcoll.github.io/courses/geog358/lab07/</guid>
@@ -2321,7 +2320,7 @@ The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm 
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;Learning Objective&lt;/h1&gt;
 
-&lt;p&gt;This lab will introduce the idea of overlay analysis in terms of a common application, site suitability.  Site sutability can take a number of forms but in this lab we&amp;rsquo;ll approch these concepts in vector and raster form.  You will also touch breifly on Terrain analysis, something we&amp;rsquo;ll see more of in the next lab.&lt;/p&gt;
+&lt;p&gt;This lab will introduce the idea of overlay analysis in terms of a common application, site suitability.  Site suitability can take a number of forms but in this lab we&amp;rsquo;ll approach these concepts in vector and raster form.  You will also touch briefly on Terrain analysis, something we&amp;rsquo;ll see more of in the next lab.&lt;/p&gt;
 
 &lt;h2 id=&#34;part-1-attribute-spatial-queries&#34;&gt;Part 1: Attribute &amp;amp; Spatial Queries&lt;/h2&gt;
 
@@ -2332,12 +2331,12 @@ The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm 
 &lt;p&gt;License Restrictions:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;No trees may be cut down within 10km of the shrine, in order to preserve the aestetic of the landscape.&lt;/li&gt;
+&lt;li&gt;No trees may be cut down within 10km of the shrine, in order to preserve the aesthetic of the landscape.&lt;/li&gt;
 &lt;li&gt;No trees may be cut down within 1km of the sea, the lake, or any river in order to help prevent land erosion.&lt;/li&gt;
 &lt;li&gt;The logging sites must be within 5km of existing roads for easy access by heavy logging equipment, since conservation laws will not allow any new roads to be built in this area.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EYX8p6lmOfVCiN7aMMqT6EUBGqIsEDkBoutUaqjftO4uqw?e=cMzqs6&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EYX8p6lmOfVCiN7aMMqT6EUBGqIsEDkBoutUaqjftO4uqw?e=cMzqs6&#34;&gt;Materials&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
@@ -2375,7 +2374,7 @@ The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm 
 
 &lt;h3 id=&#34;1-read-through-the-part-1-section&#34;&gt;1 Read through the Part 1 section&lt;/h3&gt;
 
-&lt;p&gt;At this point you should be able to discern how to accomplish what you want to accomplish.  We want to show the logging company where they can and cannot log.  As is the case with most things in life, there are a few ways we can do this, and the choice is yours (if you got this, you are my new favorite student).  Below I walk you through one way to accomplish this, but you will gain far more if you design your own way to arrive at the same end goal.
+&lt;p&gt;At this point you should be able to discern how to accomplish what you want to accomplish.  We want to show the logging company where they can and cannot log.  As is the case with most things in life, &lt;em&gt;there are a few ways we can do this, and the choice is yours&lt;/em&gt; (if you got this, you are my new favorite student).  Below I walk you through one way to accomplish this, but you will gain far more if you design your own way to arrive at the same end goal.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/YourChoice_Socucius_Ergalla.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;2-data-organization&#34;&gt;2 Data Organization&lt;/h3&gt;
@@ -2545,7 +2544,7 @@ The Loma Prieta earthquake (Richter 7.1) occurred on October 17, 1989 at 5:04pm 
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Find the population in these census blocks by opening the censusblk attribute table, right- clicking the POP2000 attribute header, and selecting Statistics. (It will only give you statistics on the selected records.) Record this number.&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Find the population out of the range of sirens by clicking Table Options (upper left corner of the attribute table), selecting Switch Selection, and then using the Statistics tool again. Record this number in yout answer sheet and answer the assosiated questions.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Find the population out of the range of sirens by clicking Table Options (upper left corner of the attribute table), selecting Switch Selection, and then using the Statistics tool again. Record this number in yout answer sheet and answer the associated questions.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Total Douglas County population:
 Number of people who can hear the tornado sirens:
@@ -2597,10 +2596,12 @@ Percentage of total population that cannot hear the tornado sirens:
   &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;1-open-a-new-arcmap-and-setup&#34;&gt;1 Open a new ArcMap and setup&lt;/h3&gt;
+&lt;p&gt;&lt;ol&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;li-open-a-new-arcmap-and-setup&#34;&gt;&lt;li&gt; Open a new ArcMap and setup&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;While I would normally say it is ok to create a new data frame and import the data, in this case we will set a few environmental variables, so for replicabilities sake we will import data into a new map entirely.&lt;/li&gt;
+&lt;li&gt;While I would normally say it is ok to create a new data frame and import the data, in this case we will set a few environmental variables, so for reproducibilities sake we will import data into a new map entirely.&lt;/li&gt;
 &lt;li&gt;Bring in the data
 &amp;gt; Hint: Getting a permissions error when you try to bring in the rasters?  Did you Google it?  &lt;a href=&#34;https://community.esri.com/thread/223412-invalid-raster-dataset-failed-to-create-raster-layer-permission-denied-how-can-i-overcome-this-problem:&#34;&gt;https://community.esri.com/thread/223412-invalid-raster-dataset-failed-to-create-raster-layer-permission-denied-how-can-i-overcome-this-problem:&lt;/a&gt; Think back to the data health page.&lt;/li&gt;
 &lt;li&gt;Click on Geoprocessing &amp;gt; Environments:
@@ -2612,15 +2613,15 @@ Percentage of total population that cannot hear the tornado sirens:
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;2-framing-the-workflow&#34;&gt;2 Framing the workflow&lt;/h3&gt;
+&lt;h3 id=&#34;li-framing-the-work-flow&#34;&gt;&lt;li&gt; Framing the work flow&lt;/h3&gt;
 
-&lt;p&gt;The town has asked you to identify some suitable areas in which to site a new school.  More explicitly, our site suitability analysis will concern itself with 4  factors.  We don&amp;rsquo;t want to spend a lot of money converting a land cover into a developable state.  We also don&amp;rsquo;t want to build on a particulalry steep slope.  Because of the lack of a robust transit system, we want to place this school further away to maximise the accessability of that school to the population.  We also want to place that school close to existing recreational sites.  Finally, we want to prioritize these factors in order of distance to a recreational facility &amp;gt; Distance to a school &amp;gt; Land uce type = Slope.&lt;/p&gt;
+&lt;p&gt;The town has asked you to identify some suitable areas in which to site a new school.  More explicitly, our site suitability analysis will concern itself with 4  factors.  We don&amp;rsquo;t want to spend a lot of money converting a land cover into a developable state.  We also don&amp;rsquo;t want to build on a particularly steep slope.  Because of the lack of a robust transit system, we want to place this school further away to maximize the accessibility of that school to the population.  We also want to place that school close to existing recreational sites.  Finally, we want to prioritize these factors in order of distance to a recreational facility &amp;gt; Distance to a school &amp;gt; Land use type = Slope.&lt;/p&gt;
 
-&lt;p&gt;Given that, we have all the information we need to sucessfully execute this anaylsis, but it will be helpful if we frame what we want to accomplish in a visual sense.  ArcMap has a wonderful tool, Model builder, that provides an easy means of visualizing a GIS workflow.
+&lt;p&gt;Given that, we have all the information we need to successfully execute this analysis, but it will be helpful if we frame what we want to accomplish in a visual sense.  ArcMap has a wonderful tool, Model builder, that provides an easy means of visualizing a GIS work flow.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/ExportGraphic.png&#34; alt=&#34;&#34; /&gt;
-Because these factors have different &amp;ldquo;units&amp;rdquo;, we need to normalize them to some common scale.  Lets pick the easiest one, and make them a simple scale from 1-10, with 10 being the best.  The tool to do that is the reclassify tool.  The next setions will walk you through the analysis.&lt;/p&gt;
+Because these factors have different &amp;ldquo;units&amp;rdquo;, we need to normalize them to some common scale.  Lets pick the easiest one, and make them a simple scale from 1-10, with 10 being the best.  The tool to do that is the reclassify tool.  The next sections will walk you through the analysis.&lt;/p&gt;
 
-&lt;h3 id=&#34;3-land-cover-factor&#34;&gt;3 Land cover factor&lt;/h3&gt;
+&lt;h3 id=&#34;li-land-cover-factor&#34;&gt;&lt;li&gt; Land cover factor&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/LCExportGraphic.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -2630,13 +2631,13 @@ Because these factors have different &amp;ldquo;units&amp;rdquo;, we need to nor
 &lt;ul&gt;
 &lt;li&gt;Set the input to the landuse raster&lt;/li&gt;
 &lt;li&gt;Use the LANDUSE field as the reclass field&lt;/li&gt;
-&lt;li&gt;You can type in the values tabem change the values to those shown below&lt;/li&gt;
+&lt;li&gt;Change the values to those shown below&lt;/li&gt;
 &lt;li&gt;Click on the folder icon next to the dialog box, create a new geodatabase in your part 3 folder, and save all subsequent rasters in there.  Call this Output raster LandC_R
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/LCR.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;4-slope-factor&#34;&gt;4 Slope factor&lt;/h3&gt;
+&lt;h3 id=&#34;li-slope-factor&#34;&gt;&lt;li&gt; Slope factor&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/SpExportGraphic.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -2664,7 +2665,7 @@ Set the reclass field to value&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;5-school-distance-factor&#34;&gt;5 School distance factor&lt;/h3&gt;
+&lt;h3 id=&#34;li-school-distance-factor&#34;&gt;&lt;li&gt; School distance factor&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/SCExportGraphic.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -2682,7 +2683,7 @@ Set the reclass field to value&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Set the input to SchDis&lt;/li&gt;
 &lt;li&gt;Set the reclass field to Value&lt;/li&gt;
-&lt;li&gt;Perform the same normaliaiotn as above (classify button &amp;gt; Equal Interval, intervals to 10)&lt;/li&gt;
+&lt;li&gt;Perform the same normalization as above (classify button &amp;gt; Equal Interval, intervals to 10)&lt;/li&gt;
 &lt;li&gt;Save the output as SchDisR
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/SchDisRDiag.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -2691,7 +2692,7 @@ Set the reclass field to value&lt;/li&gt;
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/SchDisRM.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;56-recerational-site-distance-factor&#34;&gt;56 Recerational site distance factor&lt;/h3&gt;
+&lt;h3 id=&#34;li-recreational-site-distance-factor&#34;&gt;&lt;li&gt; Recreational site distance factor&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/RCExportGraphic.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -2709,7 +2710,7 @@ Set the reclass field to value&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Set the input to recDis&lt;/li&gt;
 &lt;li&gt;Set the reclass field to Value&lt;/li&gt;
-&lt;li&gt;Perform the same normaliaiotn as above (classify button &amp;gt; Equal Interval, intervals to 10)&lt;/li&gt;
+&lt;li&gt;Perform the same normalization as above (classify button &amp;gt; Equal Interval, intervals to 10)&lt;/li&gt;
 &lt;li&gt;Save the output as RecDisR&lt;/li&gt;
 &lt;li&gt;Because we want the area closer to the sites to have a higher value, we need to click the reverse New Values button&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -2766,7 +2767,7 @@ Set the reclass field to value&lt;/li&gt;
 &lt;h3 id=&#34;8-what-to-submit&#34;&gt;8 What to submit&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;First let&amp;rsquo;s chage the symbology of our map.Open the attribute table of the GoodSites raster and record the number of cells which meet our criteria.  Set the GoodSites symbology so that 1 is hollow, and 0 is gray.  Set the transparency of the layer to 50, making a poor mans mask of the interesting areas.  Turn off all layers other than GoodSites and ScSitesTake a screenshoot of the map, and record the number of cells and area rated as good fro school site development.  Submit the answer sheet to blackboard, you&amp;rsquo;re done!
+&lt;li&gt;First let&amp;rsquo;s change the symbology of our map.Open the attribute table of the GoodSites raster and record the number of cells which meet our criteria.  Set the GoodSites symbology so that 1 is hollow, and 0 is gray.  Set the transparency of the layer to 50, making a poor mans mask of the interesting areas.  Turn off all layers other than GoodSites and ScSitesTake a screenshoot of the map, and record the number of cells and area rated as good fro school site development.  Submit the answer sheet to blackboard, you&amp;rsquo;re done!
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoodSiteMap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -2784,7 +2785,7 @@ Set the reclass field to value&lt;/li&gt;
 &lt;p&gt;&lt;strong&gt;Objectives&lt;/strong&gt;
 The part of the lab is designed to introduce some basic networking analyses, including how to setup a network dataset, how to find the efficient routes under different rules, and how to calculate the nearest facilities.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EeekJKQUo05In6pweN4Eq04BItLXnRvfd73pA_0XFLF2Lg?e=5rbgEJ&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EeekJKQUo05In6pweN4Eq04BItLXnRvfd73pA_0XFLF2Lg?e=5rbgEJ&#34;&gt;Materials&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
@@ -3092,7 +3093,7 @@ This section will introduce you to basic terrain analysis in the raster data mod
 &lt;p&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;br /&gt;
 This part will introduce you to the basic operations of cartographic modeling (or map algebra). We will be calculating temperature across the U.S. using a Digital Elevation Model (DEM) and building a simple fire hazard model.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Edmpgz1Od-BCrep6PSQTxRwBk0eauuB1BnQYui-d-fX9zQ?e=83fyJH&#34;&gt;Materials (click to download)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/Edmpgz1Od-BCrep6PSQTxRwBk0eauuB1BnQYui-d-fX9zQ?e=83fyJH&#34;&gt;Materials&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}

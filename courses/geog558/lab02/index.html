@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Note: Labs in the intermediate class are a fair bit more involved than their intro to GIS counterparts. Judicious use of the table of contents to the right to navigate will save your scroll wheel.
+ Lab 2 - Cartographic Modeling Learning Objective This lab will introduce local operations using cartographic modeling (map algebra). Part 1 is intended to show you how you can organize and display raster datasets in a usable format.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab02/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab02/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab02/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Note: Labs in the intermediate class are a fair bit more involved than their intro to GIS counterparts. Judicious use of the table of contents to the right to navigate will save your scroll wheel.
+ Lab 2 - Cartographic Modeling Learning Objective This lab will introduce local operations using cartographic modeling (map algebra). Part 1 is intended to show you how you can organize and display raster datasets in a usable format."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/">Class Outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#lab-2-cartographic-modeling"><strong>Lab 2 - Cartographic Modeling</strong></a></li>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#materials-click-to-download-https-kansas-my-sharepoint-com-u-g-personal-j610c377-home-ku-edu-eqsrjy-pbtpli6plbxrx9ekbgktvjyhfl6fuktoo2nqreq-e-w9un6y"><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y"><strong>Materials (click to download)</strong></a></a></li>
+<li><a href="#part-1-lake-delineation-and-water-classification"><strong>Part 1: Lake delineation and water classification</strong></a>
+<ul>
+<li><a href="#setting-up-the-mxd"><strong>Setting up the MXD</strong></a></li>
+<li><a href="#creating-an-area-of-interest-aoi"><strong>Creating An Area of Interest (AOI)</strong></a></li>
+<li><a href="#calculating-ndwi"><strong>Calculating NDWI</strong></a></li>
+<li><a href="#calculating-mndwi"><strong>Calculating MNDWI</strong></a></li>
+<li><a href="#classifying-and-quantifying-the-change-in-water-surface-area"><strong>Classifying and quantifying the change in water surface area</strong></a></li>
+</ul></li>
+<li><a href="#part-2-landsat-composites"><strong>Part 2: Landsat Composites</strong></a>
+<ul>
+<li><a href="#creating-a-composite-image"><strong>Creating a composite image</strong></a></li>
+</ul></li>
+<li><a href="#part-3-cartographic-modeling"><strong>Part 3: Cartographic Modeling</strong></a>
+<ul>
+<li><a href="#establishing-the-model-parameters"><strong>Establishing the model parameters</strong></a></li>
+<li><a href="#running-the-model"><strong>Running the model</strong></a></li>
+<li><a href="#assessing-the-model"><strong>Assessing the model</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<blockquote>
+<p>Note: Labs in the intermediate class are a fair bit more involved than their intro to GIS counterparts.  Judicious use of the table of contents to the right to navigate will save your scroll wheel.</p>
+</blockquote>
+
+<h1 id="lab-2-cartographic-modeling"><strong>Lab 2 - Cartographic Modeling</strong></h1>
+
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
+
+<p>This lab will introduce local operations using cartographic modeling (map algebra).  Part 1 is intended to show you how you can organize and display raster datasets in a usable format.  Part 2 will walk you through how to calculate NDWI and perform a water area analysis.  Part 3 you will model the geographic distribution of Kudzu in the conterminous United States and then compare your model to the actual geographic distribution, using Map Algebra and attribute table manipulation.  I&rsquo;ve prefaced each lab with the learning objectives of the exercise, what you need to submit to blackboard, a set of materials for the lab as appropriate, and then the instructions for the lab.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<blockquote>
+<p>Hint: Copy and paste the questions below into a word document and submit it to blackboard</p>
+</blockquote>
+
+<p><strong>Lab 2: Answer Sheet</strong><br />
+Name:</p>
+
+<p><strong>Part 1: Lake delineation and water classification</strong><br />
+<strong>Question 1</strong>: Based on the results from 1995, which water delineation metric would you choose to perform this analysis, NDWI or MNDWI.  Why?</p>
+
+<p><strong>Question 2</strong>: What is the area of the lake in 1995?</p>
+
+<p><strong>Question 3</strong>: Calculate the area of the lake for 2003 and 2009.  Finish the table below and create a short graph of the area through time.  Create a short map of the before/after.
+Year  # of Pixels
+1995:   xxx
+1997:   100
+1999:   143
+2001:   184
+2003:   xxx
+2005:   437
+2007:   503
+2009:   xxx</p>
+
+<p><strong>Part 2: Composite images</strong><br />
+<strong>Question 4</strong>: Create another graph as was performed above</p>
+
+<p><strong>Question 5</strong>: What are some potential issues of using gap-filled imagery for scientific analysis?</p>
+
+<p><strong>Part 3: Kudzu Suitability Analysis</strong><br />
+<strong>Question 6</strong>: The minimum annual precipitation for Kudzu to survive is:________<br />
+<strong>Question 7</strong>: The minimum frost free day for Kudzu to survive is:________<br />
+<strong>Question 8</strong>: The total area (in m<sup>2</sup>) suitable for Kudzu to survive (according to your model) is:________  (m<sup>2</sup>)</p>
+
+<p><strong>Question 9</strong>: Complete the following table:
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-lqy6{text-align:right;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky" colspan="2" rowspan="2"></th>
+    <th class="tg-c3ow" colspan="2">Actual Kudzu Distribution</th>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">No Kudzu</td>
+    <td class="tg-baqh">Kudzu</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="2">Your Model</td>
+    <td class="tg-c3ow">No Kudzu</td>
+    <td class="tg-dvpl">(00)</td>
+    <td class="tg-lqy6">(10)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Kudzu</td>
+    <td class="tg-dvpl">(01)</td>
+    <td class="tg-lqy6">(11)</td>
+  </tr>
+</table></p>
+
+<p>Assess the accuracy of your model by filling in the following information.  For more about confusion matrices look at <a href="https://en.wikipedia.org/wiki/Confusion_matrix">wikipedia</a>:</p>
+
+<p>Accuracy - ((A+D)/(A+B+C+D)):<br />
+False Positive Rate - (C/(A+C)):<br />
+False Omission Rate - (B/(A+B)):<br />
+MCC - ((A*D-C<em>D)/sqrt((A+B)</em>(A+C)<em>(D+B)</em>(D+C))):</p>
+
+<p><strong>Question 10</strong>: Discuss some of the reasons for the inaccuracy of your model. In particular, examine why the error may be occurring. Also, looking at your kudzu_model layer, where geographically do you think this error is?  (Hint: Consider the factors that your model did not include that could explain the geography of the model’s error)</p>
+
+<p><br></p>
+
+<h1 id="materials-click-to-download-https-kansas-my-sharepoint-com-u-g-personal-j610c377-home-ku-edu-eqsrjy-pbtpli6plbxrx9ekbgktvjyhfl6fuktoo2nqreq-e-w9un6y"><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y"><strong>Materials (click to download)</strong></a></h1>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Relevant part</th>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1</th>
+    <td class="tg-btxf">BaseData</td>
+    <td class="tg-btxf">Data we downloaded as part of lab 1</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 3</th>
+    <td class="tg-btxf">usanpre25k</td>
+    <td class="tg-btxf">annual precipitation in mm (25000m grid)</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 3</th>
+    <td class="tg-btxf">usfrost25k</td>
+    <td class="tg-btxf">number of frost-free-days in conterminous US (25000m grid)</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 3</th>
+    <td class="tg-btxf">sample1.shp</td>
+    <td class="tg-btxf">point file showing locations of known presence/absence of Kudzu (to be used to make model)</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 3</th>
+    <td class="tg-btxf">sample2.shp</td>
+    <td class="tg-btxf">point file showing locations of known presence/absence of Kudzu (to be used for accuracy assessment)</td>
+  </tr>
+</table></p>
+
+<h1 id="part-1-lake-delineation-and-water-classification"><strong>Part 1: Lake delineation and water classification</strong></h1>
+
+<h2 id="setting-up-the-mxd"><strong>Setting up the MXD</strong></h2>
+
+<ul>
+<li>Open up a new ArcMap document.<br /></li>
+<li>First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.<br /></li>
+<li>From the 1995 year, add in the green, NIR, MIR, and MTL images (Hint: <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a>)<br /></li>
+</ul>
+
+<blockquote>
+<p>A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at <a href="https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/">https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/</a> <br> <img src="/courses/geog558/media/Lab02Picture01.png" alt="" /></p>
+</blockquote>
+
+<ul>
+<li>Select all 4 images using shift-click, and right click &gt; Group to place them in a group.  Slow click and rename this group to LS1995<br />
+<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /><br />
+<br /></li>
+</ul>
+
+<h2 id="creating-an-area-of-interest-aoi"><strong>Creating An Area of Interest (AOI)</strong></h2>
+
+<ul>
+<li>We next need to create a shape representing the area of analysis.  First, right click on your BaseData folder and create a new File Geodatabase.  Rename the database to <em>LakePalcacocha.gdb</em><br /></li>
+<li>Right click on the new geodatabase and go to New &gt; Feature Class<br /></li>
+<li>Name the Feature Class AOI and set the type to polygon.  Click next.<br /></li>
+<li>Scroll to the bottom of the window, expand the Layers folder, and click on the only option (WGS_1984_UTM_Zone_18N | WKID: 32618).  Click through the rest of the setup dialog to finish creating the shapefile.  Assuming you were successful you should now have a new layer called AOI in your TOC<br /></li>
+<li>Start an editing session (Editor toolbar &gt; Editor &gt; Start editing)<br /></li>
+<li>Make sure you are editing the AOI layer/LakePalcacocha.gdb database.<br /></li>
+<li>On the editor toolbar, click create features<br /></li>
+<li>Click on AOI to bring up the construction tools<br /></li>
+<li>Use the Circle tool to create a small circle that encompasses the entirety of the lake.  It is alright for our purposes if we include land area, but do not make it so large that it might include nearby lakes.  This should look something like so:<br />
+<img src="/courses/geog558/media/Lab02Picture03.png" alt="" /></li>
+<li>Click on the editor and stop editing.  Save your edits when it prompts you to.
+<br /></li>
+</ul>
+
+<h2 id="calculating-ndwi"><strong>Calculating NDWI</strong></h2>
+
+<ul>
+<li>The NWDI is defined as the normalized difference of the Green and Near Infrared bands of the Thematic Mapper.  (See the <a href="https://www.tandfonline.com/doi/abs/10.1080/01431169608948714">McFeeters paper in the International Journal Of Remote Sensing</a>)<br />
+$$NDWI = \frac{Green-NIR}{Green+NIR}$$</li>
+<li>We will use the raster calculator tool to accomplish this. At this point we can also use the environmental settings to clip our data so we don’t process the whole scene.</li>
+<li>Go to Geoprocessing &gt; Environments</li>
+<li>Under workspace, point the Current and Scratch workspaces to our LakePalcacocha.gdb</li>
+<li>Under processing extent, set the extent to “Same as Layer AOI”.  Click OK</li>
+<li>Use the search bar to pull up the Raster Calculator and use the prompts to calculate the NDWI.</li>
+<li>Go ahead and try to enter in the expression as entered above.  Save the resulting raster using the folder icon under the Output Raster dialog box, click on the name of one of the other bands (to preserve the LANDSAT naming convention), and change the end of the file to <em>…NDWI.tif</em>.</li>
+<li>You’ll notice that the resulting raster has a value of 0, and is entirely empty.  This is because ArcMap likes to save memory and forces raster calculations to integers.  We therefore need to force the calculations into floats using Float() under the Math section.</li>
+<li>Go to Geoprocessing &gt; Results.</li>
+<li>If you double click on the last tool run, it will open the tool prompt as it was run.</li>
+<li>Change the expression to:<br />
+<em>Float(&ldquo;LT05…B 2.TIF&rdquo; -  &ldquo;LT05…B4.TIF&rdquo;) / Float(&ldquo;LT05…B2.TIF&rdquo; + &ldquo;LT05…B4.TIF&rdquo;)</em></li>
+</ul>
+
+<h2 id="calculating-mndwi"><strong>Calculating MNDWI</strong></h2>
+
+<ul>
+<li>The MNWDI is defined as the normalized difference of the Green and Near Infrared bands of the Thematic Mapper.  (See the <a href="https://www.tandfonline.com/doi/full/10.1080/01431160600589179">Xu paper, also in the International Journal Of Remote Sensing</a>)
+$$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
+<li>Because this process is so similar to the NDWI (we use band 5, not band 4), it is easiest to pull the results up from our last raster calculator and change a few characters.  Change all 4’s to 5’s and change the output file name to MNDWI.</li>
+</ul>
+
+<h2 id="classifying-and-quantifying-the-change-in-water-surface-area"><strong>Classifying and quantifying the change in water surface area</strong></h2>
+
+<ul>
+<li>You’ve probably noticed by now, but the NDWI and MNDWI calculations return an image with valid values from -1 to 1, but this doesn’t tell us what is and is not water.  To do that we need to classify the image into a binary water/not water schema.  There are a variety of ways to do this that range in sophistication/robustness, but for our purposes, a simple threshold will suffice.  This means we want classify all pixels with a NDWI/MNDWI value greater than or less than some value into water.</li>
+<li>Use the identify button and poke around the image to find a good threshold.  I settled on 0.30</li>
+<li>Use the raster calculator to select the cells greater than 0.30, and append the name of the NDWI layer with the threshold value (_…NDWI<em>3.tif</em>).
+<img src="/courses/geog558/media/Lab02Picture04.png" alt="" /></li>
+<li>Examine both outputs.<br /></li>
+</ul>
+
+<p>You now have enough information to answer Questions 1 - 3 above.</p>
+
+<h1 id="part-2-landsat-composites"><strong>Part 2: Landsat Composites</strong></h1>
+
+<h2 id="creating-a-composite-image"><strong>Creating a composite image</strong></h2>
+
+<ul>
+<li>One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.</li>
+<li>Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.</li>
+<li>ArcMap has a tool called Cell Statistics which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &gt; local</li>
+<li>We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
+<img src="/courses/geog558/media/Lab02Picture05.png" alt="" /></li>
+<li>I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the Summer months. .</li>
+<li>Perform the NDWI, thresholding, and counting was performed above.</li>
+<li>Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.<br /></li>
+</ul>
+
+<h1 id="part-3-cartographic-modeling"><strong>Part 3: Cartographic Modeling</strong></h1>
+
+<h2 id="establishing-the-model-parameters"><strong>Establishing the model parameters</strong></h2>
+
+<ul>
+<li>Start ArcMap and add sanpre25k, usfrost25k, and sample1 from your lab02\Part03 folder<br /></li>
+<li>extracting data for building Kudzu distribution model<br /></li>
+<li>Open the attribute table for <em>sample1</em><br /></li>
+<li>The numbers in the “KUDZU” field represent presence or absence of Kudzu at that point (1 for presence, 0 for absence)<br /></li>
+<li>You want to find the minimum annual precipitation (in mm) and the minimum frost-free days at each of these points. This information will be your source of input for modeling potential Kudzu distribution across the U.S.<br /></li>
+<li>Close the attribute table<br /></li>
+<li>ArcToolbox contains an <strong>Extract values to points</strong> tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value</li>
+<li>In the Spatial Analyst Toolbox &gt;Extraction &gt; Extract values to points tool<br /></li>
+</ul>
+
+<blockquote>
+<p>If you get a “Tool Not Licensed” error, check to be sure the Spatial Analyst extension is activated.</p>
+</blockquote>
+
+<ul>
+<li>This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest</li>
+<li>Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file)</li>
+<li>Set your Input raster to usanpre25k</li>
+<li>Set Output point features so that it saves the new file called sample1precip to your lab02\Part03 folder</li>
+<li>Click OK (Be patient. This may take a while.)</li>
+<li>Your new point file will appear in the ArcMap Table of Contents</li>
+<li>Open the attribute table for <em>sample1precip</em></li>
+<li>Notice the new variable called RASTERVALU that contains the annual precipitation amount for that point</li>
+<li><strong>Repeat the above steps</strong> to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it <em>sample1frost</em><br /></li>
+</ul>
+
+<p>By looking at the minimum precipitation and minimum number of frost-free days that Kudzu required for survival in the sample points, we can model (predict) its potential geographic expansion across the U.S. In order to do this, we need to get this information out of the datasets we just created.  To find the minimum annual precipitation and minimum number of frost-free days required for Kudzu to survive:</p>
+
+<ul>
+<li>Open the attribute tables of your samples and perform an attribute query to select only those points with known Kudzu presence (“KUDZU” = 1)</li>
+<li>Show only the selected records using the table toggle button.</li>
+<li>Sort in ascending order the RASTERVALU field (R-Click on column heading)
+Answer #6 and #7 on your answer sheet</li>
+</ul>
+
+<h2 id="running-the-model"><strong>Running the model</strong></h2>
+
+<ul>
+<li>Create new grids based on the usanpre25k and usfrost25k grid using Raster Calculator</li>
+<li>usanpre25k &gt;= minimum value** (**Minimum Value in question 6)</li>
+<li>From the usanpre25k, the new grid cells with an annual precipitation greater than or equal to the minimum annual precipitation will have a value of 1, while cells with an annual precipitation less than the minimum value will have a value of 0</li>
+<li>Save the grid as precipitation in your lab02\part03 folder</li>
+<li>usfrost25k &gt;= minimum value** (**Minimum Value in question 7)</li>
+<li>From the usfrost25k, the new grid cells with a frost-free-days greater than or equal to the minimum frost-free-days will have a value of 1, while cells with a frost-free-days less than the minimum frost-free-days will have a value of 0</li>
+<li>Save the grid as frost in your lab02\part03 folder</li>
+<li>Predict the Kudzu U.S. distribution by multiplying the precipitation and frost grids. Save the output grid as kudzu_model
+Answer #8 on your answer sheet</li>
+</ul>
+
+<h2 id="assessing-the-model"><strong>Assessing the model</strong></h2>
+
+<ul>
+<li>Add sample2 to your ArcMap Table of Contents</li>
+<li>Using the Extract values to points tool you now want to create a new point shapefile called sample2check that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)</li>
+</ul>
+
+<p>After you have created sample2check you can quantify your accuracy in one of many ways.  Here are two suggestions:</p>
+
+<ul>
+<li>Add a new field named check and perform the following calculation (check = [RASTERVALU] * 10 + [KUDZU]) The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)<br /></li>
+<li>Perform attribute query using the AND operator (i.e. KUDZU = 1 AND RASTERVALUE = 1)<br />
+<br /></li>
+</ul>
+
+<p>Complete #9 and #10 on your assignment sheet and TURN IT IN; your grade on this lab will be based entirely on your answers to the questions!</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

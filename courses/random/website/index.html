@@ -484,7 +484,68 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <h2 id="how-this-site-was-created"><strong>How this site was created:</strong></h2>
 
-<p>This site is a smashup of the <a href="https://github.com/darshanbaral/aafu">aafu</a> and Academic themes.  Although the Academic theme has an academically oriented home page, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and replace it.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the , the config/_default/config.toml file in the academic theme has a theme line, where we specify what theme folder to look in first when creating the site.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first use the Academic theme, and then replace the partials folder from the aafu theme within the academic theme.</p>
+<p>This site is a smashup of the <a href="https://github.com/darshanbaral/aafu">aafu</a> and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined <a href="https://gohugo.io/templates/lookup-order/">lookup order</a>.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the config/_default/ folder with the aafu theme markdown files.  Most of these are strightforward, but within the config/_default/config.toml, we neet to set the theme order as follows.</p>
+
+<pre><code class="language-markdown"># Configuration of Academic
+# Documentation: https://sourcethemes.com/academic/
+#
+# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
+# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
+
+# Title of your site
+title = &quot;Jim Coll&quot;
+
+# The URL of your site.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = &quot;https://jimcoll.github.io/&quot;
+
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&amp;copy;`. For current year, type `{year}`.
+copyright = &quot;&quot;
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = &quot;&quot;
+
+############################
+## Advanced options below ##
+############################
+
+# Name of Academic theme folder in `themes/`.
+theme = [&quot;academic&quot;, &quot;aafu&quot;]
+
+defaultContentLanguageInSubdir = false
+removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
+# Get user avatars from Gravatar.com? (true/false)
+gravatar = false
+
+# Align the main menu to the right of the page? (true/false)
+menu_align_right = false
+
+# Show estimated reading time for posts? (true/false)
+reading_time = true
+
+# Display next/previous section pager? (true/false)
+section_pager = false
+docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
+
+# Enable in-built social sharing buttons? (true/false)
+sharing = true
+paginate = 10  # Number of items per page in paginated lists.
+# Taxonomies.
+[taxonomies]
+  tag = &quot;tags&quot;
+  category = &quot;categories&quot;
+  publication_type = &quot;publication_types&quot;
+  author = &quot;authors&quot;
+
+[params]
+    title = &quot;Jim Coll&quot;
+    author = &quot;Darshan Baral&quot;
+    description = &quot;Jim Coll&quot;
+    copyright = &quot;&quot;
+</code></pre>
+
+<p>The rest of that file is the remains of the aafu theme.</p>
 
           </div>
 

@@ -85,7 +85,68 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has an academically oriented home page, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and replace it.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the , the config/_default/config.toml file in the academic theme has a theme line, where we specify what theme folder to look in first when creating the site.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first use the Academic theme, and then replace the partials folder from the aafu theme within the academic theme.&lt;/p&gt;
+&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the config/_default/ folder with the aafu theme markdown files.  Most of these are strightforward, but within the config/_default/config.toml, we neet to set the theme order as follows.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Configuration of Academic
+# Documentation: https://sourcethemes.com/academic/
+#
+# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
+# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
+
+# Title of your site
+title = &amp;quot;Jim Coll&amp;quot;
+
+# The URL of your site.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = &amp;quot;https://jimcoll.github.io/&amp;quot;
+
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&amp;amp;copy;`. For current year, type `{year}`.
+copyright = &amp;quot;&amp;quot;
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = &amp;quot;&amp;quot;
+
+############################
+## Advanced options below ##
+############################
+
+# Name of Academic theme folder in `themes/`.
+theme = [&amp;quot;academic&amp;quot;, &amp;quot;aafu&amp;quot;]
+
+defaultContentLanguageInSubdir = false
+removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
+# Get user avatars from Gravatar.com? (true/false)
+gravatar = false
+
+# Align the main menu to the right of the page? (true/false)
+menu_align_right = false
+
+# Show estimated reading time for posts? (true/false)
+reading_time = true
+
+# Display next/previous section pager? (true/false)
+section_pager = false
+docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
+
+# Enable in-built social sharing buttons? (true/false)
+sharing = true
+paginate = 10  # Number of items per page in paginated lists.
+# Taxonomies.
+[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+  publication_type = &amp;quot;publication_types&amp;quot;
+  author = &amp;quot;authors&amp;quot;
+
+[params]
+    title = &amp;quot;Jim Coll&amp;quot;
+    author = &amp;quot;Darshan Baral&amp;quot;
+    description = &amp;quot;Jim Coll&amp;quot;
+    copyright = &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The rest of that file is the remains of the aafu theme.&lt;/p&gt;
 </description>
     </item>
     
@@ -98,7 +159,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;free-and-open-source-software&#34;&gt;&lt;strong&gt;Free and Open Source Software:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;There are a whole host of questions I still have regarding the intersections of individuals, societies, and technology, and one of the more practically philosophical realizations of this is in FOSS.  Free and Open Source Software has in many ways defined the core of my skillset, and has that special allure of feel good contribution and intrinsic reproducibility to it.&lt;/p&gt;
+&lt;p&gt;There are a whole host of questions I still have regarding the intersections of individuals, societies, economies, and technology.  One of the more practically philosophical realizations of this intersection than FOSS.  Free and Open Source Software has become one of my go to tools in tackling a problem and has that special allure of feel good contribution and intrinsic reproducibility to it.  I&amp;rsquo;ve created a few tools that take a FOSS approach to GIS, and here I&amp;rsquo;d like to demonstrate how to create one.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll flesh this section out more at a later date, but two important links I&amp;rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.&lt;br /&gt;
 Some useful links:&lt;br /&gt;

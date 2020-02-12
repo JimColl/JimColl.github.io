@@ -1525,8 +1525,11 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&#34;&gt;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&lt;/a&gt;&lt;br /&gt;
 A post about Mann Kendall and Sens slope in GEE from me.  At some point I&amp;rsquo;ll get around to doing something with this too&lt;/p&gt;
 
-&lt;p&gt;These R enabled books are excellent resources:&lt;br /&gt;
-* &lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;Intro to GIS and Spatial Analysis by Manuel Gimond&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;These R enabled books are excellent resources:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;Intro to GIS and Spatial Analysis by Manuel Gimond&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;need-data&#34;&gt;&lt;strong&gt;Need data?&lt;/strong&gt;&lt;/h1&gt;
 
@@ -1545,7 +1548,16 @@ Other useful slide decks:&lt;br /&gt;
 &lt;h1 id=&#34;cluster&#34;&gt;clusteR:&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/ClusteR.PNG&#34; alt=&#34;&#34; /&gt;
-A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit.  The installation of this tool is the same as for FOSSFlood.&lt;/p&gt;
+A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit.  The &amp;ldquo;installation&amp;rdquo; of this is the same as FOSSFlood.&lt;br /&gt;
+1) Download and unzip - &lt;a href=&#34;https://github.com/JimColl/clusteR&#34;&gt;https://github.com/JimColl/clusteR&lt;/a&gt;  ​&lt;br /&gt;
+2) Double click RunMe.hta and select a file.&lt;br /&gt;
+2A) If you are using a csv, you need to set the LAT, LON, and Projection epsg.  Replace spaces with .&lt;br /&gt;
+3) Click run&lt;/p&gt;
+
+&lt;p&gt;Known bugs:&lt;br /&gt;
+Selecting fields which are too long or numeric will currently break it.  To fix, close the window and re-run the hta&lt;br /&gt;
+Legends can be too large for the window&lt;br /&gt;
+Editing the table is not fully tested&lt;/p&gt;
 </description>
     </item>
     

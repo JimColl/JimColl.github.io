@@ -39,12 +39,12 @@
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    A note of caution:
+    A cautionary note:&lt;br /&gt;
 Your site doesn’t have to look like mine, feel free to pick any off the &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;themes page&lt;/a&gt;.  The theme you choose will do most of the heavy lifting, and hopefully you find one that does everything you want it to.  If not, be prepared to spend a few days figuring out how HUGO and the themes work; there is no shortcut to creating new site behavior and I found it to be a bit unforgiving at times.  In short, unless you REALLY want to sink time into this skillset, pick a theme and be happy with it 😊
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&#34;step-by-step-instructions&#34;&gt;Step by step&amp;rdquo; instructions&lt;/h1&gt;
+&lt;h1 id=&#34;step-by-step-instructions&#34;&gt;&amp;ldquo;Step by step&amp;rdquo; instructions&lt;/h1&gt;
 
 &lt;h2 id=&#34;create-a-github-account&#34;&gt;&lt;strong&gt;Create a github account:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -85,7 +85,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the config/_default/ folder with the aafu theme markdown files.  Most of these are strightforward, but within the config/_default/config.toml, we neet to set the theme order as follows.&lt;/p&gt;
+&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config/_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config/_default/config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Configuration of Academic
 # Documentation: https://sourcethemes.com/academic/

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Lab 3: Focal Operations – Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection Learning Objectives This lab will use neighborhood operators (i.e. focal operators) to examine an elevation surface, remove errors in a DEM, analyze wind exposure, and delineate the edge of our lake classified in Lab 2. In the first part, you will learn how to bring an ASCII into Arc as a grid and confirm your understanding of focal statistics.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab03/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab03/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab03/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Lab 3: Focal Operations – Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection Learning Objectives This lab will use neighborhood operators (i.e. focal operators) to examine an elevation surface, remove errors in a DEM, analyze wind exposure, and delineate the edge of our lake classified in Lab 2. In the first part, you will learn how to bring an ASCII into Arc as a grid and confirm your understanding of focal statistics."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/">Class Outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog558/lab03/">Lab 3 - Focal Operations</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#lab-3-focal-operations-focal-operations-removing-dem-errors-wind-exposure-and-lake-edge-detection"><strong>Lab 3: Focal Operations – Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection</strong></a></li>
+<li><a href="#learning-objectives"><strong>Learning Objectives</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-epawoaa4plxportob7jo9o0bv8bg5ykti4mdej5bsjtobg-e-ocdxtg"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EpAWoaa4PlxPortOB7jO9o0BV8Bg5ykTI4mdEj5bsjTObg?e=OcDxTg"><strong>Materials</strong></a></a></li>
+<li><a href="#part-1-focal-operation-test"><strong>Part 1: Focal Operation Test</strong></a>
+<ul>
+<li><a href="#converting-the-ascii-file-to-a-grid-and-run-focal-tools"><strong>Converting the ASCII file to a grid and run focal tools</strong></a></li>
+</ul></li>
+<li><a href="#part-2-removing-dem-errors"><strong>Part 2: Removing DEM Errors</strong></a>
+<ul>
+<li><a href="#convert-dem-from-feet-to-meters"><strong>Convert DEM from feet to meters</strong></a></li>
+<li><a href="#locate-artifacts-errors-in-the-dem"><strong>Locate Artifacts (Errors) in the DEM</strong></a></li>
+<li><a href="#removing-dem-errors"><strong>Removing DEM Errors</strong></a></li>
+</ul></li>
+<li><a href="#part-3-wind-exposure-analysis"><strong>Part 3: Wind Exposure Analysis</strong></a>
+<ul>
+<li><a href="#convert-dem-from-feet-to-meters-1"><strong>Convert DEM from feet to meters</strong></a></li>
+<li><a href="#generating-a-hillshade-raster-layer"><strong>Generating a Hillshade raster layer</strong></a></li>
+<li><a href="#obtaining-areas-with-good-elevation"><strong>Obtaining Areas with Good Elevation</strong></a></li>
+<li><a href="#visualizing-with-hillshade"><strong>Visualizing with hillshade</strong></a></li>
+<li><a href="#obtaining-areas-with-good-aspect"><strong>Obtaining Areas with Good Aspect</strong></a></li>
+<li><a href="#obtaining-wind-exposure-values"><strong>Obtaining Wind Exposure Values</strong></a></li>
+<li><a href="#isolate-the-best-sites-and-those-that-meet-all-the-criteria-except-wind-exposure"><strong>Isolate the best sites and those that meet all the criteria except wind exposure</strong></a></li>
+</ul></li>
+<li><a href="#part-4-lake-edge-detection"><strong>Part 4: Lake Edge Detection</strong></a>
+<ul>
+<li><a href="#calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process"><strong>Calculate the boundary of the lake in 1995 using a focal erosion process</strong></a></li>
+<li><a href="#calculate-the-difference-between-the-two-surfaces"><strong>Calculate the difference between the two surfaces</strong></a></li>
+<li><a href="#perform-the-above-steps-for-both-2003-and-2009"><strong>Perform the above steps for both 2003 and 2009</strong></a></li>
+<li><a href="#make-a-small-map-like-so"><strong>Make a small map like so</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="lab-3-focal-operations-focal-operations-removing-dem-errors-wind-exposure-and-lake-edge-detection"><strong>Lab 3: Focal Operations – Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection</strong></h1>
+
+<h1 id="learning-objectives"><strong>Learning Objectives</strong></h1>
+
+<p>This lab will use neighborhood operators (i.e. focal operators) to examine an elevation surface, remove errors in a DEM, analyze wind exposure, and delineate the edge of our lake classified in Lab 2.  In the first part, you will learn how to bring an ASCII into Arc as a grid and confirm your understanding of focal statistics.  In the second, you will use the slope tool and focal statistics to blur out errors in the DEM and examine how changing the window results in a changing image.  In Part 3, you will perform a site suitability analysis for wind turbines using the slope, aspect, hillshade, and focal wedge tools.  Finally, we will use focal erosion to isolate the edge of our lakes classified in Lab 2.  You can do all of these parts within the same or separate mxd’s, but be sure to save often.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<p><strong>Lab 3:  Focal Operations Assignment: Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection</strong><br />
+Name:</p>
+
+<p><strong>Question 1</strong>: Use your test raster layer to run the following three FOCAL operations (with a rectangular neighborhood of 3 by 3, cell size 10) and fill in the respective grids:</p>
+
+<p>Focal Sum: test_sum:<br />
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table></p>
+
+<p>Focal Maximum: test_max:<br />
+<table class="tg">
+  <tr>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table></p>
+
+<p>Focal Mean: test_mean:<br />
+<table class="tg">
+  <tr>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+    <td class="tg-td">&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table></p>
+
+<p><strong>Question 2</strong>: What was the size of the patches used to mosaic the image? (approximately):  _______  Meters</p>
+
+<p><strong>Question 3</strong>: Are the artifacts (errors) still visible in silver3x3 and silver7x7?:  _______ (true/false)</p>
+
+<p><strong>Question 4</strong>: How many cells have an elevation greater than or equal to 1000m?:  _______ Cells</p>
+
+<p><strong>Question 5</strong>: How many cells have an aspect between 225<sup>o</sup> and 315<sup>o</sup> (see your GoodAspect raster layer)?  _______ cells</p>
+
+<p><strong>Question 6</strong>: What is the total area (m<sup>2</sup>) of Good sites and blocked cells using a 10 cell radius (see your GoodSites10 raster layer)?<br />
+Good Sites:  _______ m<sup>2</sup><br />
+Blocked:  _______ m<sup>2</sup></p>
+
+<p><strong>Question 7</strong>: Calculate wind exposure using a wedge radius of 4 cells (120 meters).  Use similar naming conventions (i.e: WindMean04, GoodWindExp04, GoodSites04, &amp; Blocked04).  What is the total area (m<sup>2</sup>) of the good sites and blocked cells?<br />
+Good Sites:  _______ m<sup>2</sup><br />
+Blocked:  _______ m<sup>2</sup></p>
+
+<p><strong>Question 8</strong>: Calculate wind exposure using a wedge radius of 20 cells (600 meters).  Use similar naming conventions (i.e: WindMean20, GoodWindExp20, GoodSites20, &amp; Blocked20).  What is the total area (m<sup>2</sup>) of the good sites and blocked cells?<br />
+Good Sites:  _______ m<sup>2</sup><br />
+Blocked:  _______ m<sup>2</sup></p>
+
+<p><strong>Extra Point</strong>:  Why did increasing the radius value to 20 in question 8 cause the wedge neighborhood computation time to increase so dramatically?  Be specific; only the best answers will get the full point!</p>
+
+<p><strong>Question 9</strong>: Paste your final map here:</p>
+
+<h1 id="materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-epawoaa4plxportob7jo9o0bv8bg5ykti4mdej5bsjtobg-e-ocdxtg"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EpAWoaa4PlxPortOB7jO9o0BV8Bg5ykTI4mdEj5bsjTObg?e=OcDxTg"><strong>Materials</strong></a></h1>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Relevant part</th>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1</th>
+    <td class="tg-btxf">Test.txt</td>
+    <td class="tg-btxf">ASCII Grid with sample values</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 2</th>
+    <td class="tg-btxf">silvrsub_f  </td>
+    <td class="tg-btxf">DEM for Silverton, CO (30m cell size, elevation in feet)</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 3</th>
+    <td class="tg-btxf">wnw</td>
+    <td class="tg-btxf">DEM of NW part of Watauga Cnty (30m cell size, elevation in feet)</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 4</th>
+    <td class="tg-btxf">BaseData</td>
+    <td class="tg-btxf">Data downloaded in the first lab</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 4</th>
+    <td class="tg-btxf">NDWI_3.tif</td>
+    <td class="tg-btxf">NDWI threshold maps you created in Lab 2</td>
+  </tr>
+</table></p>
+
+<h1 id="part-1-focal-operation-test"><strong>Part 1: Focal Operation Test</strong></h1>
+
+<h2 id="converting-the-ascii-file-to-a-grid-and-run-focal-tools"><strong>Converting the ASCII file to a grid and run focal tools</strong></h2>
+
+<ul>
+<li>Open ArcMap and make sure that the Spatial Analyst extension is activated.</li>
+<li>Name the default data frame to ASCII Grid.</li>
+<li>Change the workspace for the Spatial Analyst Tools by going to Geoprocessing &gt; Environments…</li>
+<li>Under Workspace change the Current Workspace to your Lab3 folder.</li>
+<li>Rename the data frame named ASCII Grid.</li>
+<li>Inspect the ASCII Grid file <i>test.txt</i> using a text editor such as notepad. We will use this small raster file to visually verify the results of several focal operations.</li>
+<li>Open ArcToolbox and Select Conversion Tools | To Raster | ASCII to Raster.</li>
+<li>Set test.txt as the input file and save the output raster as test in your lab03\part01 folder.</li>
+<li>Leave the data type to default and Click OK.</li>
+<li>The test raster will be added to the Table of Contents automatically, but ignore any projection warnings you receive when adding these rasters.</li>
+<li>Use the ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics tool to answer Question #1 on your assignment sheet.<br /></li>
+</ul>
+
+<blockquote>
+<p>hint: change your layer symbology to show unique values.</p>
+</blockquote>
+
+<ul>
+<li>Save your map.<br /></li>
+</ul>
+
+<h1 id="part-2-removing-dem-errors"><strong>Part 2: Removing DEM Errors</strong></h1>
+
+<h2 id="convert-dem-from-feet-to-meters"><strong>Convert DEM from feet to meters</strong></h2>
+
+<p>First let’s lay down the foundation.</p>
+
+<ul>
+<li>Insert and rename a data frame to DEM Error Removal.<br /></li>
+<li>Add the <i>silvrsub_f</i> grid to the data frame.<br /></li>
+<li>This surface was created in rectangular patches and then mosaiced together, but the artifacts of mosaicing are not readily visible by simply viewing the DEM.<br /></li>
+<li>Since the height is in feet and the cell sizes are in meters, you should put everything into the same unit using a local operation (i.e., Raster Calculator).<br /></li>
+</ul>
+
+<blockquote>
+<p>Hint: 1 foot = 0.3048 meters.</p>
+</blockquote>
+
+<ul>
+<li>Save the output to your lab03\part02 folder as: <i>silversub_m</i>.<br /></li>
+</ul>
+
+<h2 id="locate-artifacts-errors-in-the-dem"><strong>Locate Artifacts (Errors) in the DEM</strong></h2>
+
+<p>Let’s start by calculating the slope for the raster to more easily identify the artifacts.</p>
+
+<ul>
+<li>Open ArcToopbox | Spatial Analyst Tools | Surface | Slope, which is a focal operation we can use to find the linear artifacts in the <i>silversub_m</i> grid.</li>
+<li>In the slope dialog box, set the input raster as <i>silversub_m</i>.</li>
+<li>Leave the default values for output measurement and z factor.</li>
+<li>Save the output grid silver_slope in your lab03\part02 folder.</li>
+</ul>
+
+<p>You should now be able to visually pick out the linear artifacts left from the mosaicing process.  Using the measurement tool, determine the approximate size of the patches that were used to mosaic the image and answer Question #2 on your assignment sheet.</p>
+
+<h2 id="removing-dem-errors"><strong>Removing DEM Errors</strong></h2>
+
+<p>Now try to eliminate the artifacts by smoothing the surface of <i>silversub_m</i> before deriving the slope.  Go to ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics to compute the mean elevation value in a rectangular neighborhood of 3x3 cells and another of 7x7 cells.</p>
+
+<ul>
+<li>Use silversub_m as the input in both cases, making sure to name the output appropriately, something like <i>silver3x3</i> and <i>silver7x7</i>.</li>
+<li>Derive the slopes of these new surfaces as in step 2, and be sure to name them appropriately, something like <i>slope3x3</i> and <i>slope7x7</i> respectively.</li>
+<li>Answer Question #3 on your assignment sheet.</li>
+</ul>
+
+<h1 id="part-3-wind-exposure-analysis"><strong>Part 3: Wind Exposure Analysis</strong></h1>
+
+<h2 id="convert-dem-from-feet-to-meters-1"><strong>Convert DEM from feet to meters</strong></h2>
+
+<p>First let’s lay down the foundation</p>
+
+<ul>
+<li>Insert a new dataframe and call it Wind Exposure Analysis.<br /></li>
+<li>Add the <i>wnw</i> grid to the DEM Error Removal data frame.<br /></li>
+</ul>
+
+<p>This surface was created in rectangular patches and then mosaiced together, but the artifacts of mosaicing are not readily visible by simply viewing the DEM.  Since the height is in feet and the cell sizes are in meters, you should put everything into the same unit, as was done in Part 2. Save the output to your lab03\part03 folder as: <i>wnm_m</i></p>
+
+<h2 id="generating-a-hillshade-raster-layer"><strong>Generating a Hillshade raster layer</strong></h2>
+
+<ul>
+<li>Using Spatial Analyst, create a hillshade raster from your <i>wnw_m</i> DEM using the ArcToolbox | Spatial Analyst Tools | Surface | Hillshade tool</li>
+<li>Set <i>wnw_m</i> as your input surface, leave the default settings for azimuth and altitude, but set the Z factor to 3</li>
+<li>Save the output grid as <i>hillshade</i> in your lab03\part03 folder</li>
+</ul>
+
+<h2 id="obtaining-areas-with-good-elevation"><strong>Obtaining Areas with Good Elevation</strong></h2>
+
+<ul>
+<li>Select the cells where the elevation in <i>wnw_m</i> is greater than or equal to 1000m by creating the following expression in the Raster Calculator: <mark>“wnw_m” &gt;= 1000</mark></li>
+<li>Make the output raster a permanent layer named <i>GoodElevation</i></li>
+</ul>
+
+<h2 id="visualizing-with-hillshade"><strong>Visualizing with hillshade</strong></h2>
+
+<p>Hiilshades are useful for providing geographic context, but can overwhelm data which kind of defeats the purpose.  One way to fix this is mask out no data values in your output layer, and make it slightly transparent.  We&rsquo;ll do this a few times in this lab so remember this sequence</p>
+
+<ul>
+<li>Display <i>GoodElevation</i> on top of <i>hillshade</i></li>
+<li>Set the color of the bad elevations (0’s) to hollow (no color) by:
+
+<ul>
+<li>R-clicking on <i>GoodElivation</i></li>
+<li>Select symbology tab</li>
+<li>Check box “display background value:”</li>
+<li>Proceed with: 0 symbol and selecting No Color.</li>
+</ul></li>
+<li>Change the Transparency value of <i>GoodElivation</i> to approximately 40%
+
+<ul>
+<li>R-Click -&gt; Properties under the Display tab</li>
+</ul></li>
+</ul>
+
+<p>Answer Question #4 on your assignment sheet</p>
+
+<h2 id="obtaining-areas-with-good-aspect"><strong>Obtaining Areas with Good Aspect</strong></h2>
+
+<ul>
+<li>Calculate the aspect from <i>wnw_m</i> DEM using the ArcToolbox | Spatial Analyst Tools| Surface | Aspect tool</li>
+<li>Save the output grid as aspect in your lab03\part03 folder</li>
+<li>Notice the range of angles assigned to each direction in the table of contents. Aspect values begin at 0 at due north and increase clockwise.</li>
+<li>Using Raster Calculator, select the cells with an aspect between 225<sup>o</sup> and 315<sup>o</sup>. This will give us the westward facing slopes.</li>
+<li>That expression should look like <mark>(225 &lt;= “aspect”) &amp; (“aspect” &lt;= 315)</mark></li>
+<li>Make the output raster a layer named <i>GoodAspect</i></li>
+<li>Display the <i>GoodAspect</i> on top of <i>hillshade</i> (set symbology like you did for <i>GoodElivation</i>) and verify that it is representing the western slopes.</li>
+</ul>
+
+<p>Answer Question #5 on your assignment sheet.</p>
+
+<h2 id="obtaining-wind-exposure-values"><strong>Obtaining Wind Exposure Values</strong></h2>
+
+<p>Create a neighbor mean raster of <i>wnw_m</i> using a FocalMean operation.</p>
+
+<ul>
+<li>ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics) with a wedge neighborhood (start angle 135, end angle 225, and a radius of 10 cells).</li>
+</ul>
+
+<blockquote>
+<p>It is important to note here that the wedge neighborhood is measured differently than the aspect. The aspect measurement begins at 0 degrees due north and increases as we move clockwise. However, when computing a wedge neighborhood, we start at 0 degrees due east and increase as we move counterclockwise. Thus, the degree range here (135-225) represents the same degree range as indicated in the aspect range (225-315). This is simply due to inconsistencies in the way the ArcGIS software handles radial measurements.</p>
+</blockquote>
+
+<ul>
+<li>Save the output as <i>WindMean10</i>
+b.  In Raster Calculator, select the cells whose elevations are higher than their neighbor mean (i.e., WindMean10)</li>
+<li>“wnw_m” &gt; “WindMean10”</li>
+<li>Make the output a permanent raster named <i>GoodWindExp10</i>
+c.  Display GoodWindExp10 on top of <i>hillshade</i></li>
+</ul>
+
+<h2 id="isolate-the-best-sites-and-those-that-meet-all-the-criteria-except-wind-exposure"><strong>Isolate the best sites and those that meet all the criteria except wind exposure</strong></h2>
+
+<ol>
+<li>Using Raster Calculator, select the cells with good elevation (1’s), aspect (1’s), and wind exposure (1’s)
+a.  Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>“GoodElevation” * “GoodAspect” * “GoodWindExp10”
+Or
+(“GoodElevation” == 1) &amp; (“GoodAspect” == 1) &amp; (“GoodWindExp10” == 1)</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>Make the output a permanent raster named GoodSites10</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>Use Raster Calculator, select the cells with good elevation (1’s), good aspect (1’s) and bad wind exposure (0’s)</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>(“GoodElevation” == 1) &amp; (“GoodAspect” == 1) &amp; (“GoodWindExp10” == 0)</li>
+<li>Using raster calculator, subtract the focal min raster from the lake classification raster.</li>
+<li>Make the output a permanent raster named Blocked10</li>
+<li>Notice that these are cells in which the wind is blocked because of hills to the west</li>
+<li>Answer questions #6 - #8 on your assignment sheet (you will repeat step 5 twice more using different radius values)</li>
+</ol>
+
+<h1 id="part-4-lake-edge-detection"><strong>Part 4: Lake Edge Detection</strong></h1>
+
+<ol>
+<li>Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:</li>
+<li>AOI shapefile</li>
+<li>lake boundary classifications (…NDWI_#.TIF) )for 1995, 2003, and 2009.</li>
+<li>The RGB file for each year</li>
+</ol>
+
+<h2 id="calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process"><strong>Calculate the boundary of the lake in 1995 using a focal erosion process</strong></h2>
+
+<ol>
+<li>Using the Focal statistics tool, calculate the focal minimum using a rectangular 3x3 grid</li>
+<li>The input should be the … _NDWI_3.TIF we created in Lab 2</li>
+<li>Save the output in the 1995 BaseData folder and name the output as …_NDWI_FMin.TIF</li>
+</ol>
+
+<h2 id="calculate-the-difference-between-the-two-surfaces"><strong>Calculate the difference between the two surfaces</strong></h2>
+
+<p>a.  Using raster calculator, subtract the focal min raster from the lake classification raster.
+* &ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_3.TIF&rdquo; - &ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_FMin.TIF&rdquo;
+* Save the output of the map as LT05_L1TP_008067_19950622_20170109_01_T1_LakeBoundry.TIF</p>
+
+<h2 id="perform-the-above-steps-for-both-2003-and-2009"><strong>Perform the above steps for both 2003 and 2009</strong></h2>
+
+<h2 id="make-a-small-map-like-so"><strong>Make a small map like so</strong></h2>
+
+<ul>
+<li>Move to layout view</li>
+<li>Set the page dimensions to 11 in x 11</li>
+<li>Use guides to set up 3 inch grids</li>
+<li>Right click on the data frames to copy them</li>
+<li>Paste them in the frame and rename them to the appropriate place</li>
+<li>Text can be rotated in the properties</li>
+<li>To add grid lines, add the drawing toolbar</li>
+<li>Right click on the grey area in the toolbar area and add the Drawing tools as necessary</li>
+<li>Finally, export your map</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab03Picture01.png" alt="" /></p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -27,7 +27,7 @@
 
 &lt;h2 id=&#34;course-description&#34;&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;This course provides an introduction to computer based analysis of spatial data.  Topics covered include the fundamentals of geospatial thought, basic principles of collecting, storing, analyzing, and displaying spatial data, and cursory treatment of analysis and decision making.  Emphasis is on problem solving activities using common spatial analytical techniques using typical applications as examples. The student will gain extensive hands on experience with state of the art GIS software in the lab. This course introduces the concepts and components of a geographic information system (GIS). It also teaches the essential skills of operating a functional GIS through the use of the ArcGIS software suite. By completing this course, students will understand the operational processes of spatial data acquisition, editing in ArcGIS Desktop with QA/QC, metadata development, geodatabase design, spatial query and display, spatial analysis and modeling, preliminary GIS application development, cartographic mapping and dynamic visualization, and GIS implementation basics. Students will also be exposed to Google Earth and common Free and  Open Source Software (FOSS) tools, as well as the basic concepts of remote sensing and Global Positioning System (GPS). GIS technology has broad applications in natural and social sciences, humanities, environmental studies, engineering, and management. Examples include wildlife habitat study, urban and regional planning, contagious disease monitoring, agriculture and forestry, environmental quality assessment, emergency management, transportation planning, consumer and competitor analysis, and many more. This course will introduce a few selected use cases of GIS application in different disciplines.  Finally, this class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;Undergraduate certificate in GIS&lt;/a&gt;.  I obviously recommend it, particularly if you intend to pursue GIS as a career path/toolset in any capacity.&lt;/p&gt;
+&lt;p&gt;Building on the introductory GIS class, this course focuses primarily on teaching advanced spatial analysis methods with applications in the mapping of surface water and the analysis of water related environmental issues. Major topics covered include map algebra (also called cartographic modeling), multi-criteria evaluation, terrain analysis, spatial statistics, and spatial interpolation. An additional objective of the course is to have students become familiar with various methods and tools through the use of GIS software.  Continuing with the industry standard GIS software, this class expands on GIS platforms through the use of the ArcGIS software suite. Finally, this class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;certificate in GIS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;student-responsibilities&#34;&gt;&lt;strong&gt;Student Responsibilities:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -195,12 +195,13 @@ determined based on the following grading scale:&lt;/p&gt;
 &lt;h2 id=&#34;downloading-data&#34;&gt;&lt;strong&gt;Downloading data&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Open up [Earthexplorer](https://earthexplorer.usgs.gov/)
-&lt;li&gt;We first need to define our area of interest.  Under the Search Criteria tab change the coordinate box to decimal degrees, add a coordinate, and copy paste the following…   
-
+&lt;li&gt;Open up [Earthexplorer](https://earthexplorer.usgs.gov/)  
+&lt;li&gt;We first need to define our area of interest.  Under the Search Criteria tab change the coordinate box to decimal degrees, add a coordinate, and copy/paste the following into their respective fields.  
+&lt;/ol&gt;  
 * Latitude: -9.397055203542507  
 * Longitude: -77.38027425750124  
-
+  
+&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;Under the Data Sets tab, search for [SRTM3 SRTMGL-1](https://lpdaac.usgs.gov/products/srtmgl1v003/) and make sure the box next to the dataset is checked.  Click results and then download the standard format (the HGT, not any of the metadata).  
 &lt;/ol&gt;
 
@@ -208,13 +209,13 @@ determined based on the following grading scale:&lt;/p&gt;
 &lt;p&gt;There are a few useful buttons on a results screen.  The black footprint shows you the footprint of a tile, and the image icon will draw a jpg over the browser so you can see what the data you&amp;rsquo;re downloading.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol start=&#34;3&#34;&gt;
+&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;The elevation data is distributed as a nested zip file.  To use it you&#39;ll need to unzip it twice to actually use it in a program.  Unzip (Right click &gt; 7-Zip &gt; Extract to “FileNameHere”) the SRTMGL folder and move the HGT file (a fancy tif for SRTM data) intoyour folder structure.  
 &lt;/ol&gt;
 
 &lt;p&gt;Next we want the Landsat scenes.  We&amp;rsquo;ll simplify this somewhat by starting at 1995 and looking forward in time every 2 year.  We&amp;rsquo;ll also use scenes taken in the winter, so that the lake is stable.&lt;/p&gt;
 
-&lt;p&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;p&gt;&lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;Under the Data Sets tab, navigate to the Landsat &amp;gt; Landsat Collection 1 Level 1 check &lt;a href=&#34;https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-archives-landsat-4-5-thematic-mapper-tm-level-1-data?qt-science_center_objects=0#qt-science_center_objects&#34;&gt;Landsat 4-5 TM C1 Level-1&lt;/a&gt;.&lt;br /&gt;
 &lt;li&gt;Set the Date Range dates to 06/01/1995 and 08/01/1995 respectively.
 &lt;li&gt;Click on Additional Criteria, set the Land Cloud Cover to less than 10%&lt;br /&gt;
@@ -310,15 +311,28 @@ Name:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;: What is the area of the lake in 1995?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Question 3&lt;/strong&gt;: Calculate the area of the lake for 2003 and 2009.  Finish the table below and create a short graph of the area through time.  Create a short map of the before/after.
-Year  # of Pixels
-1995:   xxx
-1997:   100
-1999:   143
-2001:   184
-2003:   xxx
-2005:   437
-2007:   503
-2009:   xxx&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Year  # of Pixels&lt;br /&gt;
+1995:  xxx&lt;br /&gt;
+1997:  100&lt;br /&gt;
+1999:  143&lt;br /&gt;
+2001:  184&lt;br /&gt;
+2003:  xxx&lt;br /&gt;
+2005:  437&lt;br /&gt;
+2007:  503&lt;br /&gt;
+2009:  xxx  &lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab2AnswerSheet1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+  &lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Part 2: Composite images&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;Question 4&lt;/strong&gt;: Create another graph as was performed above&lt;/p&gt;
@@ -368,13 +382,13 @@ Year  # of Pixels
 &lt;p&gt;Accuracy - ((A+D)/(A+B+C+D)):&lt;br /&gt;
 False Positive Rate - (C/(A+C)):&lt;br /&gt;
 False Omission Rate - (B/(A+B)):&lt;br /&gt;
-MCC - ((A*D-C&lt;em&gt;D)/sqrt((A+B)&lt;/em&gt;(A+C)&lt;em&gt;(D+B)&lt;/em&gt;(D+C))):&lt;/p&gt;
+MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Question 10&lt;/strong&gt;: Discuss some of the reasons for the inaccuracy of your model. In particular, examine why the error may be occurring. Also, looking at your kudzu_model layer, where geographically do you think this error is?  (Hint: Consider the factors that your model did not include that could explain the geography of the model’s error)&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;materials-click-to-download-https-kansas-my-sharepoint-com-u-g-personal-j610c377-home-ku-edu-eqsrjy-pbtpli6plbxrx9ekbgktvjyhfl6fuktoo2nqreq-e-w9un6y&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y&#34;&gt;&lt;strong&gt;Materials (click to download)&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc&#34;&gt;&lt;strong&gt;Materials (click to download)&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
@@ -438,6 +452,10 @@ MCC - ((A*D-C&lt;em&gt;D)/sqrt((A+B)&lt;/em&gt;(A+C)&lt;em&gt;(D+B)&lt;/em&gt;(D
 
 &lt;h2 id=&#34;creating-an-area-of-interest-aoi&#34;&gt;&lt;strong&gt;Creating An Area of Interest (AOI)&lt;/strong&gt;&lt;/h2&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;Note: Skill review from &lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab04/#part-2-on-screen-digitizing&#34;&gt;Lab 4&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;ul&gt;
 &lt;li&gt;We next need to create a shape representing the area of analysis.  First, right click on your BaseData folder and create a new File Geodatabase.  Rename the database to &lt;em&gt;LakePalcacocha.gdb&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Right click on the new geodatabase and go to New &amp;gt; Feature Class&lt;br /&gt;&lt;/li&gt;
@@ -468,7 +486,7 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$&lt;/li&gt;
 &lt;li&gt;Go to Geoprocessing &amp;gt; Results.&lt;/li&gt;
 &lt;li&gt;If you double click on the last tool run, it will open the tool prompt as it was run.&lt;/li&gt;
 &lt;li&gt;Change the expression to:&lt;br /&gt;
-&lt;em&gt;Float(&amp;ldquo;LT05…B 2.TIF&amp;rdquo; -  &amp;ldquo;LT05…B4.TIF&amp;rdquo;) / Float(&amp;ldquo;LT05…B2.TIF&amp;rdquo; + &amp;ldquo;LT05…B4.TIF&amp;rdquo;)&lt;/em&gt;&lt;/li&gt;
+&lt;mark&gt;&lt;em&gt;Float(&amp;ldquo;LT05…B 2.TIF&amp;rdquo; -  &amp;ldquo;LT05…B4.TIF&amp;rdquo;) / Float(&amp;ldquo;LT05…B2.TIF&amp;rdquo; + &amp;ldquo;LT05…B4.TIF&amp;rdquo;)&lt;/em&gt;&lt;/mark&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;calculating-mndwi&#34;&gt;&lt;strong&gt;Calculating MNDWI&lt;/strong&gt;&lt;/h2&gt;
@@ -476,7 +494,11 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;The MNWDI is defined as the normalized difference of the Green and Near Infrared bands of the Thematic Mapper.  (See the &lt;a href=&#34;https://www.tandfonline.com/doi/full/10.1080/01431160600589179&#34;&gt;Xu paper, also in the International Journal Of Remote Sensing&lt;/a&gt;)
 $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
-&lt;li&gt;Because this process is so similar to the NDWI (we use band 5, not band 4), it is easiest to pull the results up from our last raster calculator and change a few characters.  Change all 4’s to 5’s and change the output file name to MNDWI.&lt;/li&gt;
+&lt;li&gt;Because this process is so similar to the NDWI (we use band 5, not band 4), it is easiest to pull the results up from our last raster calculator and change a few characters.  Change all 4’s to 5’s and change the output file name to MNDWI.&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;go to geoprocessing &amp;gt; Results and double click on the last tool run.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;classifying-and-quantifying-the-change-in-water-surface-area&#34;&gt;&lt;strong&gt;Classifying and quantifying the change in water surface area&lt;/strong&gt;&lt;/h2&gt;
@@ -491,7 +513,7 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 
 &lt;p&gt;You now have enough information to answer Questions 1 - 3 above.&lt;/p&gt;
 
-&lt;h1 id=&#34;part-2-landsat-composites&#34;&gt;&lt;strong&gt;Part 2: Landsat Composites&lt;/strong&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;part-2-simple-landsat-composites&#34;&gt;&lt;strong&gt;Part 2: Simple Landsat Composites&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;h2 id=&#34;creating-a-composite-image&#34;&gt;&lt;strong&gt;Creating a composite image&lt;/strong&gt;&lt;/h2&gt;
 
@@ -570,12 +592,440 @@ Answer #8 on your answer sheet&lt;/li&gt;
 &lt;p&gt;After you have created sample2check you can quantify your accuracy in one of many ways.  Here are two suggestions:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Add a new field named check and perform the following calculation (check = [RASTERVALU] * 10 + [KUDZU]) The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Perform attribute query using the AND operator (i.e. KUDZU = 1 AND RASTERVALUE = 1)&lt;br /&gt;
+&lt;li&gt;Add a new field named check and perform the following calculation: &lt;mark&gt;&lt;em&gt;check = [RASTERVALU] * 10 + [KUDZU]&lt;/em&gt;&lt;/mark&gt;.  The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Perform attribute query using the AND operator (i.e. &lt;mark&gt;&lt;em&gt;KUDZU = 1 AND RASTERVALUE = 1&lt;/em&gt;&lt;/mark&gt;) 4 times, once for each possible combination.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Complete #9 and #10 on your assignment sheet and TURN IT IN; your grade on this lab will be based entirely on your answers to the questions!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab03/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-3-focal-operations-focal-operations-removing-dem-errors-wind-exposure-and-lake-edge-detection&#34;&gt;&lt;strong&gt;Lab 3: Focal Operations – Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objectives&#34;&gt;&lt;strong&gt;Learning Objectives&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;This lab will use neighborhood operators (i.e. focal operators) to examine an elevation surface, remove errors in a DEM, analyze wind exposure, and delineate the edge of our lake classified in Lab 2.  In the first part, you will learn how to bring an ASCII into Arc as a grid and confirm your understanding of focal statistics.  In the second, you will use the slope tool and focal statistics to blur out errors in the DEM and examine how changing the window results in a changing image.  In Part 3, you will perform a site suitability analysis for wind turbines using the slope, aspect, hillshade, and focal wedge tools.  Finally, we will use focal erosion to isolate the edge of our lakes classified in Lab 2.  You can do all of these parts within the same or separate mxd’s, but be sure to save often.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 3:  Focal Operations Assignment: Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1&lt;/strong&gt;: Use your test raster layer to run the following three FOCAL operations (with a rectangular neighborhood of 3 by 3, cell size 10) and fill in the respective grids:&lt;/p&gt;
+
+&lt;p&gt;Focal Sum: test_sum:&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;Focal Maximum: test_max:&lt;br /&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;Focal Mean: test_mean:&lt;br /&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;th class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+    &lt;td class=&#34;tg-td&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;: What was the size of the patches used to mosaic the image? (approximately):  _______  Meters&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3&lt;/strong&gt;: Are the artifacts (errors) still visible in silver3x3 and silver7x7?:  _______ (true/false)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;: How many cells have an elevation greater than or equal to 1000m?:  _______ Cells&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 5&lt;/strong&gt;: How many cells have an aspect between 225&lt;sup&gt;o&lt;/sup&gt; and 315&lt;sup&gt;o&lt;/sup&gt; (see your GoodAspect raster layer)?  _______ cells&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 6&lt;/strong&gt;: What is the total area (m&lt;sup&gt;2&lt;/sup&gt;) of Good sites and blocked cells using a 10 cell radius (see your GoodSites10 raster layer)?&lt;br /&gt;
+Good Sites:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;br /&gt;
+Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 7&lt;/strong&gt;: Calculate wind exposure using a wedge radius of 4 cells (120 meters).  Use similar naming conventions (i.e: WindMean04, GoodWindExp04, GoodSites04, &amp;amp; Blocked04).  What is the total area (m&lt;sup&gt;2&lt;/sup&gt;) of the good sites and blocked cells?&lt;br /&gt;
+Good Sites:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;br /&gt;
+Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 8&lt;/strong&gt;: Calculate wind exposure using a wedge radius of 20 cells (600 meters).  Use similar naming conventions (i.e: WindMean20, GoodWindExp20, GoodSites20, &amp;amp; Blocked20).  What is the total area (m&lt;sup&gt;2&lt;/sup&gt;) of the good sites and blocked cells?&lt;br /&gt;
+Good Sites:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;br /&gt;
+Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extra Point&lt;/strong&gt;:  Why did increasing the radius value to 20 in question 8 cause the wedge neighborhood computation time to increase so dramatically?  Be specific; only the best answers will get the full point!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 9&lt;/strong&gt;: Paste your final map here:&lt;/p&gt;
+
+&lt;h1 id=&#34;materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-epawoaa4plxportob7jo9o0bv8bg5ykti4mdej5bsjtobg-e-ocdxtg&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EpAWoaa4PlxPortOB7jO9o0BV8Bg5ykTI4mdEj5bsjTObg?e=OcDxTg&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Test.txt&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;ASCII Grid with sample values&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;silvrsub_f  &lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;DEM for Silverton, CO (30m cell size, elevation in feet)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;wnw&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;DEM of NW part of Watauga Cnty (30m cell size, elevation in feet)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 4&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;BaseData&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Data downloaded in the first lab&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 4&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;NDWI_3.tif&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;NDWI threshold maps you created in Lab 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;part-1-focal-operation-test&#34;&gt;&lt;strong&gt;Part 1: Focal Operation Test&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;converting-the-ascii-file-to-a-grid-and-run-focal-tools&#34;&gt;&lt;strong&gt;Converting the ASCII file to a grid and run focal tools&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcMap and make sure that the Spatial Analyst extension is activated.&lt;/li&gt;
+&lt;li&gt;Name the default data frame to ASCII Grid.&lt;/li&gt;
+&lt;li&gt;Change the workspace for the Spatial Analyst Tools by going to Geoprocessing &amp;gt; Environments…&lt;/li&gt;
+&lt;li&gt;Under Workspace change the Current Workspace to your Lab3 folder.&lt;/li&gt;
+&lt;li&gt;Rename the data frame named ASCII Grid.&lt;/li&gt;
+&lt;li&gt;Inspect the ASCII Grid file &lt;i&gt;test.txt&lt;/i&gt; using a text editor such as notepad. We will use this small raster file to visually verify the results of several focal operations.&lt;/li&gt;
+&lt;li&gt;Open ArcToolbox and Select Conversion Tools | To Raster | ASCII to Raster.&lt;/li&gt;
+&lt;li&gt;Set test.txt as the input file and save the output raster as test in your lab03\part01 folder.&lt;/li&gt;
+&lt;li&gt;Leave the data type to default and Click OK.&lt;/li&gt;
+&lt;li&gt;The test raster will be added to the Table of Contents automatically, but ignore any projection warnings you receive when adding these rasters.&lt;/li&gt;
+&lt;li&gt;Use the ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics tool to answer Question #1 on your assignment sheet.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;hint: change your layer symbology to show unique values.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save your map.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;part-2-removing-dem-errors&#34;&gt;&lt;strong&gt;Part 2: Removing DEM Errors&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;convert-dem-from-feet-to-meters&#34;&gt;&lt;strong&gt;Convert DEM from feet to meters&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;First let’s lay down the foundation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Insert and rename a data frame to DEM Error Removal.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Add the &lt;i&gt;silvrsub_f&lt;/i&gt; grid to the data frame.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;This surface was created in rectangular patches and then mosaiced together, but the artifacts of mosaicing are not readily visible by simply viewing the DEM.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Since the height is in feet and the cell sizes are in meters, you should put everything into the same unit using a local operation (i.e., Raster Calculator).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint: 1 foot = 0.3048 meters.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output to your lab03\part02 folder as: &lt;i&gt;silversub_m&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;locate-artifacts-errors-in-the-dem&#34;&gt;&lt;strong&gt;Locate Artifacts (Errors) in the DEM&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Let’s start by calculating the slope for the raster to more easily identify the artifacts.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToopbox | Spatial Analyst Tools | Surface | Slope, which is a focal operation we can use to find the linear artifacts in the &lt;i&gt;silversub_m&lt;/i&gt; grid.&lt;/li&gt;
+&lt;li&gt;In the slope dialog box, set the input raster as &lt;i&gt;silversub_m&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Leave the default values for output measurement and z factor.&lt;/li&gt;
+&lt;li&gt;Save the output grid silver_slope in your lab03\part02 folder.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You should now be able to visually pick out the linear artifacts left from the mosaicing process.  Using the measurement tool, determine the approximate size of the patches that were used to mosaic the image and answer Question #2 on your assignment sheet.&lt;/p&gt;
+
+&lt;h2 id=&#34;removing-dem-errors&#34;&gt;&lt;strong&gt;Removing DEM Errors&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now try to eliminate the artifacts by smoothing the surface of &lt;i&gt;silversub_m&lt;/i&gt; before deriving the slope.  Go to ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics to compute the mean elevation value in a rectangular neighborhood of 3x3 cells and another of 7x7 cells.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use silversub_m as the input in both cases, making sure to name the output appropriately, something like &lt;i&gt;silver3x3&lt;/i&gt; and &lt;i&gt;silver7x7&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Derive the slopes of these new surfaces as in step 2, and be sure to name them appropriately, something like &lt;i&gt;slope3x3&lt;/i&gt; and &lt;i&gt;slope7x7&lt;/i&gt; respectively.&lt;/li&gt;
+&lt;li&gt;Answer Question #3 on your assignment sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;part-3-wind-exposure-analysis&#34;&gt;&lt;strong&gt;Part 3: Wind Exposure Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;convert-dem-from-feet-to-meters-1&#34;&gt;&lt;strong&gt;Convert DEM from feet to meters&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;First let’s lay down the foundation&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Insert a new dataframe and call it Wind Exposure Analysis.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Add the &lt;i&gt;wnw&lt;/i&gt; grid to the DEM Error Removal data frame.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This surface was created in rectangular patches and then mosaiced together, but the artifacts of mosaicing are not readily visible by simply viewing the DEM.  Since the height is in feet and the cell sizes are in meters, you should put everything into the same unit, as was done in Part 2. Save the output to your lab03\part03 folder as: &lt;i&gt;wnm_m&lt;/i&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;generating-a-hillshade-raster-layer&#34;&gt;&lt;strong&gt;Generating a Hillshade raster layer&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using Spatial Analyst, create a hillshade raster from your &lt;i&gt;wnw_m&lt;/i&gt; DEM using the ArcToolbox | Spatial Analyst Tools | Surface | Hillshade tool&lt;/li&gt;
+&lt;li&gt;Set &lt;i&gt;wnw_m&lt;/i&gt; as your input surface, leave the default settings for azimuth and altitude, but set the Z factor to 3&lt;/li&gt;
+&lt;li&gt;Save the output grid as &lt;i&gt;hillshade&lt;/i&gt; in your lab03\part03 folder&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;obtaining-areas-with-good-elevation&#34;&gt;&lt;strong&gt;Obtaining Areas with Good Elevation&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Select the cells where the elevation in &lt;i&gt;wnw_m&lt;/i&gt; is greater than or equal to 1000m by creating the following expression in the Raster Calculator: &lt;mark&gt;“wnw_m” &amp;gt;= 1000&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;Make the output raster a permanent layer named &lt;i&gt;GoodElevation&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;visualizing-with-hillshade&#34;&gt;&lt;strong&gt;Visualizing with hillshade&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Hiilshades are useful for providing geographic context, but can overwhelm data which kind of defeats the purpose.  One way to fix this is mask out no data values in your output layer, and make it slightly transparent.  We&amp;rsquo;ll do this a few times in this lab so remember this sequence&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Display &lt;i&gt;GoodElevation&lt;/i&gt; on top of &lt;i&gt;hillshade&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Set the color of the bad elevations (0’s) to hollow (no color) by:
+
+&lt;ul&gt;
+&lt;li&gt;R-clicking on &lt;i&gt;GoodElivation&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Select symbology tab&lt;/li&gt;
+&lt;li&gt;Check box “display background value:”&lt;/li&gt;
+&lt;li&gt;Proceed with: 0 symbol and selecting No Color.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Change the Transparency value of &lt;i&gt;GoodElivation&lt;/i&gt; to approximately 40%
+
+&lt;ul&gt;
+&lt;li&gt;R-Click -&amp;gt; Properties under the Display tab&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Answer Question #4 on your assignment sheet&lt;/p&gt;
+
+&lt;h2 id=&#34;obtaining-areas-with-good-aspect&#34;&gt;&lt;strong&gt;Obtaining Areas with Good Aspect&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Calculate the aspect from &lt;i&gt;wnw_m&lt;/i&gt; DEM using the ArcToolbox | Spatial Analyst Tools| Surface | Aspect tool&lt;/li&gt;
+&lt;li&gt;Save the output grid as aspect in your lab03\part03 folder&lt;/li&gt;
+&lt;li&gt;Notice the range of angles assigned to each direction in the table of contents. Aspect values begin at 0 at due north and increase clockwise.&lt;/li&gt;
+&lt;li&gt;Using Raster Calculator, select the cells with an aspect between 225&lt;sup&gt;o&lt;/sup&gt; and 315&lt;sup&gt;o&lt;/sup&gt;. This will give us the westward facing slopes.&lt;/li&gt;
+&lt;li&gt;That expression should look like &lt;mark&gt;(225 &amp;lt;= “aspect”) &amp;amp; (“aspect” &amp;lt;= 315)&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;Make the output raster a layer named &lt;i&gt;GoodAspect&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Display the &lt;i&gt;GoodAspect&lt;/i&gt; on top of &lt;i&gt;hillshade&lt;/i&gt; (set symbology like you did for &lt;i&gt;GoodElivation&lt;/i&gt;) and verify that it is representing the western slopes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Answer Question #5 on your assignment sheet.&lt;/p&gt;
+
+&lt;h2 id=&#34;obtaining-wind-exposure-values&#34;&gt;&lt;strong&gt;Obtaining Wind Exposure Values&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Create a neighbor mean raster of &lt;i&gt;wnw_m&lt;/i&gt; using a FocalMean operation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics) with a wedge neighborhood (start angle 135, end angle 225, and a radius of 10 cells).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It is important to note here that the wedge neighborhood is measured differently than the aspect. The aspect measurement begins at 0 degrees due north and increases as we move clockwise. However, when computing a wedge neighborhood, we start at 0 degrees due east and increase as we move counterclockwise. Thus, the degree range here (135-225) represents the same degree range as indicated in the aspect range (225-315). This is simply due to inconsistencies in the way the ArcGIS software handles radial measurements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output as &lt;i&gt;WindMean10&lt;/i&gt;
+b.  In Raster Calculator, select the cells whose elevations are higher than their neighbor mean (i.e., WindMean10)&lt;/li&gt;
+&lt;li&gt;“wnw_m” &amp;gt; “WindMean10”&lt;/li&gt;
+&lt;li&gt;Make the output a permanent raster named &lt;i&gt;GoodWindExp10&lt;/i&gt;
+c.  Display GoodWindExp10 on top of &lt;i&gt;hillshade&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;isolate-the-best-sites-and-those-that-meet-all-the-criteria-except-wind-exposure&#34;&gt;&lt;strong&gt;Isolate the best sites and those that meet all the criteria except wind exposure&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Using Raster Calculator, select the cells with good elevation (1’s), aspect (1’s), and wind exposure (1’s)
+a.  Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;“GoodElevation” * “GoodAspect” * “GoodWindExp10”
+Or
+(“GoodElevation” == 1) &amp;amp; (“GoodAspect” == 1) &amp;amp; (“GoodWindExp10” == 1)&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;Make the output a permanent raster named GoodSites10&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;Use Raster Calculator, select the cells with good elevation (1’s), good aspect (1’s) and bad wind exposure (0’s)&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;(“GoodElevation” == 1) &amp;amp; (“GoodAspect” == 1) &amp;amp; (“GoodWindExp10” == 0)&lt;/li&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
+&lt;li&gt;Make the output a permanent raster named Blocked10&lt;/li&gt;
+&lt;li&gt;Notice that these are cells in which the wind is blocked because of hills to the west&lt;/li&gt;
+&lt;li&gt;Answer questions #6 - #8 on your assignment sheet (you will repeat step 5 twice more using different radius values)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;part-4-lake-edge-detection&#34;&gt;&lt;strong&gt;Part 4: Lake Edge Detection&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:&lt;/li&gt;
+&lt;li&gt;AOI shapefile&lt;/li&gt;
+&lt;li&gt;lake boundary classifications (…NDWI_#.TIF) )for 1995, 2003, and 2009.&lt;/li&gt;
+&lt;li&gt;The RGB file for each year&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process&#34;&gt;&lt;strong&gt;Calculate the boundary of the lake in 1995 using a focal erosion process&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Using the Focal statistics tool, calculate the focal minimum using a rectangular 3x3 grid&lt;/li&gt;
+&lt;li&gt;The input should be the … _NDWI_3.TIF we created in Lab 2&lt;/li&gt;
+&lt;li&gt;Save the output in the 1995 BaseData folder and name the output as …_NDWI_FMin.TIF&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;calculate-the-difference-between-the-two-surfaces&#34;&gt;&lt;strong&gt;Calculate the difference between the two surfaces&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;a.  Using raster calculator, subtract the focal min raster from the lake classification raster.
+* &amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_FMin.TIF&amp;rdquo;
+* Save the output of the map as LT05_L1TP_008067_19950622_20170109_01_T1_LakeBoundry.TIF&lt;/p&gt;
+
+&lt;h2 id=&#34;perform-the-above-steps-for-both-2003-and-2009&#34;&gt;&lt;strong&gt;Perform the above steps for both 2003 and 2009&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;make-a-small-map-like-so&#34;&gt;&lt;strong&gt;Make a small map like so&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Move to layout view&lt;/li&gt;
+&lt;li&gt;Set the page dimensions to 11 in x 11&lt;/li&gt;
+&lt;li&gt;Use guides to set up 3 inch grids&lt;/li&gt;
+&lt;li&gt;Right click on the data frames to copy them&lt;/li&gt;
+&lt;li&gt;Paste them in the frame and rename them to the appropriate place&lt;/li&gt;
+&lt;li&gt;Text can be rotated in the properties&lt;/li&gt;
+&lt;li&gt;To add grid lines, add the drawing toolbar&lt;/li&gt;
+&lt;li&gt;Right click on the grey area in the toolbar area and add the Drawing tools as necessary&lt;/li&gt;
+&lt;li&gt;Finally, export your map&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab03Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

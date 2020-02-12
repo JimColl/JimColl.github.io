@@ -377,6 +377,10 @@
         <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
       </li>
       
+      <li >
+        <a href="/courses/geog558/lab03/">Lab 3 - Focal Operations</a>
+      </li>
+      
     </ul>
     
 
@@ -398,7 +402,7 @@
 <li><a href="#lab-2-cartographic-modeling"><strong>Lab 2 - Cartographic Modeling</strong></a></li>
 <li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
 <li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
-<li><a href="#materials-click-to-download-https-kansas-my-sharepoint-com-u-g-personal-j610c377-home-ku-edu-eqsrjy-pbtpli6plbxrx9ekbgktvjyhfl6fuktoo2nqreq-e-w9un6y"><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y"><strong>Materials (click to download)</strong></a></a></li>
+<li><a href="#materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc"><strong>Materials (click to download)</strong></a></a></li>
 <li><a href="#part-1-lake-delineation-and-water-classification"><strong>Part 1: Lake delineation and water classification</strong></a>
 <ul>
 <li><a href="#setting-up-the-mxd"><strong>Setting up the MXD</strong></a></li>
@@ -407,7 +411,7 @@
 <li><a href="#calculating-mndwi"><strong>Calculating MNDWI</strong></a></li>
 <li><a href="#classifying-and-quantifying-the-change-in-water-surface-area"><strong>Classifying and quantifying the change in water surface area</strong></a></li>
 </ul></li>
-<li><a href="#part-2-landsat-composites"><strong>Part 2: Landsat Composites</strong></a>
+<li><a href="#part-2-simple-landsat-composites"><strong>Part 2: Simple Landsat Composites</strong></a>
 <ul>
 <li><a href="#creating-a-composite-image"><strong>Creating a composite image</strong></a></li>
 </ul></li>
@@ -459,15 +463,28 @@ Name:</p>
 <p><strong>Question 2</strong>: What is the area of the lake in 1995?</p>
 
 <p><strong>Question 3</strong>: Calculate the area of the lake for 2003 and 2009.  Finish the table below and create a short graph of the area through time.  Create a short map of the before/after.
-Year  # of Pixels
-1995:   xxx
-1997:   100
-1999:   143
-2001:   184
-2003:   xxx
-2005:   437
-2007:   503
-2009:   xxx</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Year  # of Pixels<br />
+1995:  xxx<br />
+1997:  100<br />
+1999:  143<br />
+2001:  184<br />
+2003:  xxx<br />
+2005:  437<br />
+2007:  503<br />
+2009:  xxx  </th>
+    <th class="tg-0pky"><img src="/courses/geog558/media/Lab2AnswerSheet1.png" alt="" /><br />
+  </th>
+  </tr>
+</table></p>
 
 <p><strong>Part 2: Composite images</strong><br />
 <strong>Question 4</strong>: Create another graph as was performed above</p>
@@ -517,13 +534,13 @@ Year  # of Pixels
 <p>Accuracy - ((A+D)/(A+B+C+D)):<br />
 False Positive Rate - (C/(A+C)):<br />
 False Omission Rate - (B/(A+B)):<br />
-MCC - ((A*D-C<em>D)/sqrt((A+B)</em>(A+C)<em>(D+B)</em>(D+C))):</p>
+MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 
 <p><strong>Question 10</strong>: Discuss some of the reasons for the inaccuracy of your model. In particular, examine why the error may be occurring. Also, looking at your kudzu_model layer, where geographically do you think this error is?  (Hint: Consider the factors that your model did not include that could explain the geography of the model’s error)</p>
 
 <p><br></p>
 
-<h1 id="materials-click-to-download-https-kansas-my-sharepoint-com-u-g-personal-j610c377-home-ku-edu-eqsrjy-pbtpli6plbxrx9ekbgktvjyhfl6fuktoo2nqreq-e-w9un6y"><a href="https://kansas-my.sharepoint.com/:u:/g/personal/j610c377_home_ku_edu/EQsrjy_PbtpLi6plBxrx9EkBgKtvJYHfL6FuktoO2nQrEQ?e=w9Un6y"><strong>Materials (click to download)</strong></a></h1>
+<h1 id="materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc"><strong>Materials (click to download)</strong></a></h1>
 
 <p><style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
@@ -587,6 +604,10 @@ MCC - ((A*D-C<em>D)/sqrt((A+B)</em>(A+C)<em>(D+B)</em>(D+C))):</p>
 
 <h2 id="creating-an-area-of-interest-aoi"><strong>Creating An Area of Interest (AOI)</strong></h2>
 
+<blockquote>
+<p>Note: Skill review from <a href="https://jimcoll.github.io/courses/geog358/lab04/#part-2-on-screen-digitizing">Lab 4</a></p>
+</blockquote>
+
 <ul>
 <li>We next need to create a shape representing the area of analysis.  First, right click on your BaseData folder and create a new File Geodatabase.  Rename the database to <em>LakePalcacocha.gdb</em><br /></li>
 <li>Right click on the new geodatabase and go to New &gt; Feature Class<br /></li>
@@ -617,7 +638,7 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$</li>
 <li>Go to Geoprocessing &gt; Results.</li>
 <li>If you double click on the last tool run, it will open the tool prompt as it was run.</li>
 <li>Change the expression to:<br />
-<em>Float(&ldquo;LT05…B 2.TIF&rdquo; -  &ldquo;LT05…B4.TIF&rdquo;) / Float(&ldquo;LT05…B2.TIF&rdquo; + &ldquo;LT05…B4.TIF&rdquo;)</em></li>
+<mark><em>Float(&ldquo;LT05…B 2.TIF&rdquo; -  &ldquo;LT05…B4.TIF&rdquo;) / Float(&ldquo;LT05…B2.TIF&rdquo; + &ldquo;LT05…B4.TIF&rdquo;)</em></mark></li>
 </ul>
 
 <h2 id="calculating-mndwi"><strong>Calculating MNDWI</strong></h2>
@@ -625,7 +646,11 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$</li>
 <ul>
 <li>The MNWDI is defined as the normalized difference of the Green and Near Infrared bands of the Thematic Mapper.  (See the <a href="https://www.tandfonline.com/doi/full/10.1080/01431160600589179">Xu paper, also in the International Journal Of Remote Sensing</a>)
 $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
-<li>Because this process is so similar to the NDWI (we use band 5, not band 4), it is easiest to pull the results up from our last raster calculator and change a few characters.  Change all 4’s to 5’s and change the output file name to MNDWI.</li>
+<li>Because this process is so similar to the NDWI (we use band 5, not band 4), it is easiest to pull the results up from our last raster calculator and change a few characters.  Change all 4’s to 5’s and change the output file name to MNDWI.<br />
+
+<ul>
+<li>go to geoprocessing &gt; Results and double click on the last tool run.</li>
+</ul></li>
 </ul>
 
 <h2 id="classifying-and-quantifying-the-change-in-water-surface-area"><strong>Classifying and quantifying the change in water surface area</strong></h2>
@@ -640,7 +665,7 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 
 <p>You now have enough information to answer Questions 1 - 3 above.</p>
 
-<h1 id="part-2-landsat-composites"><strong>Part 2: Landsat Composites</strong></h1>
+<h1 id="part-2-simple-landsat-composites"><strong>Part 2: Simple Landsat Composites</strong></h1>
 
 <h2 id="creating-a-composite-image"><strong>Creating a composite image</strong></h2>
 
@@ -719,8 +744,8 @@ Answer #8 on your answer sheet</li>
 <p>After you have created sample2check you can quantify your accuracy in one of many ways.  Here are two suggestions:</p>
 
 <ul>
-<li>Add a new field named check and perform the following calculation (check = [RASTERVALU] * 10 + [KUDZU]) The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)<br /></li>
-<li>Perform attribute query using the AND operator (i.e. KUDZU = 1 AND RASTERVALUE = 1)<br />
+<li>Add a new field named check and perform the following calculation: <mark><em>check = [RASTERVALU] * 10 + [KUDZU]</em></mark>.  The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)<br /></li>
+<li>Perform attribute query using the AND operator (i.e. <mark><em>KUDZU = 1 AND RASTERVALUE = 1</em></mark>) 4 times, once for each possible combination.<br />
 <br /></li>
 </ul>
 

@@ -169,6 +169,8 @@ determined based on the following grading scale:&lt;/p&gt;
 
 &lt;p&gt;Submit the paper outlined in part 1, and the screenshot of the data you downloaded in part 2 to blackboard.&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h1 id=&#34;part-1-70-points-a-survey-of-data-and-mapping-technologies&#34;&gt;&lt;strong&gt;Part 1 (70 points): A survey of data and mapping technologies&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;p&gt;You will write a survey on the data and mapping technologies in a field that you are interested in. The survey should have 2-4 single spaced pages using a font size of 12 points. Reference style should follow one of the GIS journal reference styles (e.g. Transactions in GIS, Cartography and Geographic Information Science, International Journal of Geographic Information Science, The Geographical Journal, and Computers &amp;amp; Geosciences, etc.). I also point you to several resources for reference management software &lt;a href=&#34;https://jimcoll.github.io/courses/geog558/classoutline/#academic-integrity&#34;&gt;syllabus&lt;/a&gt;.&lt;/p&gt;
@@ -179,6 +181,8 @@ determined based on the following grading scale:&lt;/p&gt;
 &lt;li&gt;(80%) Quality of the content: how many potential datasets and mapping methods are included; How you organize your contents. Whether the length of survey is proper, and has a proper level of synthesis and details.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;(20%) Format: follow the requirements described above and check your grammar, spelling and sentence structures before you submit the survey.&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&#34;part-2-30-points-building-a-database&#34;&gt;&lt;strong&gt;Part 2 (30 points): Building a database&lt;/strong&gt;&lt;/h1&gt;
 
@@ -195,14 +199,19 @@ determined based on the following grading scale:&lt;/p&gt;
 &lt;h2 id=&#34;downloading-data&#34;&gt;&lt;strong&gt;Downloading data&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Open up [Earthexplorer](https://earthexplorer.usgs.gov/)  
+&lt;li&gt;Open up &lt;a href=&#34;https://earthexplorer.usgs.gov/&#34;&gt;Earthexplorer&lt;/a&gt;  
 &lt;li&gt;We first need to define our area of interest.  Under the Search Criteria tab change the coordinate box to decimal degrees, add a coordinate, and copy/paste the following into their respective fields.  
 &lt;/ol&gt;  
-* Latitude: -9.397055203542507  
-* Longitude: -77.38027425750124  
   
+
+&lt;ul&gt;
+&lt;li&gt;Latitude: -9.397055203542507&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Longitude: -77.38027425750124&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Under the Data Sets tab, search for [SRTM3 SRTMGL-1](https://lpdaac.usgs.gov/products/srtmgl1v003/) and make sure the box next to the dataset is checked.  Click results and then download the standard format (the HGT, not any of the metadata).  
+&lt;li&gt;Under the Data Sets tab, search for &lt;a href=&#34;https://lpdaac.usgs.gov/products/srtmgl1v003&#34;&gt;SRTM3 SRTMGL-1&lt;/a&gt; and make sure the box next to the dataset is checked.  Click results and then download the standard format (the HGT, not any of the metadata).  
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
@@ -296,11 +305,13 @@ determined based on the following grading scale:&lt;/p&gt;
 
 &lt;p&gt;This lab will introduce local operations using cartographic modeling (map algebra).  Part 1 is intended to show you how you can organize and display raster datasets in a usable format.  Part 2 will walk you through how to calculate NDWI and perform a water area analysis.  Part 3 you will model the geographic distribution of Kudzu in the conterminous United States and then compare your model to the actual geographic distribution, using Map Algebra and attribute table manipulation.  I&amp;rsquo;ve prefaced each lab with the learning objectives of the exercise, what you need to submit to blackboard, a set of materials for the lab as appropriate, and then the instructions for the lab.&lt;/p&gt;
 
-&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit:&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Hint: Copy and paste the questions below into a word document and submit it to blackboard&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Lab 2: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
 Name:&lt;/p&gt;
@@ -388,6 +399,8 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h1 id=&#34;materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc&#34;&gt;&lt;strong&gt;Materials (click to download)&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
@@ -430,6 +443,12 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
   &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;If you are short on space, you only need the .mpk from part 2, the LANDSAT tiles are there for reproducibilities sake.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
 &lt;h1 id=&#34;part-1-lake-delineation-and-water-classification&#34;&gt;&lt;strong&gt;Part 1: Lake delineation and water classification&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;h2 id=&#34;setting-up-the-mxd&#34;&gt;&lt;strong&gt;Setting up the MXD&lt;/strong&gt;&lt;/h2&gt;
@@ -446,7 +465,8 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Select all 4 images using shift-click, and right click &amp;gt; Group to place them in a group.  Slow click and rename this group to LS1995&lt;br /&gt;
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Finally, let&amp;rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -481,8 +501,19 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$&lt;/li&gt;
 &lt;li&gt;Under workspace, point the Current and Scratch workspaces to our LakePalcacocha.gdb&lt;/li&gt;
 &lt;li&gt;Under processing extent, set the extent to “Same as Layer AOI”.  Click OK&lt;/li&gt;
 &lt;li&gt;Use the search bar to pull up the Raster Calculator and use the prompts to calculate the NDWI.&lt;/li&gt;
-&lt;li&gt;Go ahead and try to enter in the expression as entered above.  Save the resulting raster using the folder icon under the Output Raster dialog box, click on the name of one of the other bands (to preserve the LANDSAT naming convention), and change the end of the file to &lt;em&gt;…NDWI.tif&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;You’ll notice that the resulting raster has a value of 0, and is entirely empty.  This is because ArcMap likes to save memory and forces raster calculations to integers.  We therefore need to force the calculations into floats using Float() under the Math section.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Extension warnings?  Did you take the time to read it?  You need to turn on spatial analysis under Customize &amp;gt; Extensions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go ahead and try to enter in the expression above.  Save the resulting raster using the folder icon under the Output Raster dialog box, click on the name of one of the other bands (to preserve the LANDSAT naming convention), and change the end of the file to &lt;em&gt;…NDWI.tif&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You’ll notice that the resulting raster has a value of 0, and is entirely empty.  This is because ArcMap likes to save memory and forces raster calculations to integers.  Fixing this just means we need to be more verbose and run the calculations as floats using Float() under the Math section.  This conversion to integer occurs in both the numerator and denominator, so the float needs to wrap both of them separately.&lt;/p&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Go to Geoprocessing &amp;gt; Results.&lt;/li&gt;
 &lt;li&gt;If you double click on the last tool run, it will open the tool prompt as it was run.&lt;/li&gt;
 &lt;li&gt;Change the expression to:&lt;br /&gt;
@@ -513,20 +544,22 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 
 &lt;p&gt;You now have enough information to answer Questions 1 - 3 above.&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h1 id=&#34;part-2-simple-landsat-composites&#34;&gt;&lt;strong&gt;Part 2: Simple Landsat Composites&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;h2 id=&#34;creating-a-composite-image&#34;&gt;&lt;strong&gt;Creating a composite image&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.&lt;/li&gt;
-&lt;li&gt;Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.&lt;/li&gt;
-&lt;li&gt;ArcMap has a tool called Cell Statistics which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &amp;gt; local&lt;/li&gt;
-&lt;li&gt;We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture05.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the Summer months. .&lt;/li&gt;
-&lt;li&gt;Perform the NDWI, thresholding, and counting was performed above.&lt;/li&gt;
-&lt;li&gt;Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.
+* Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.
+* ArcMap has a tool called &lt;strong&gt;Cell Statistics&lt;/strong&gt; which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &amp;gt; local
+* We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture05.png&#34; alt=&#34;&#34; /&gt;
+* I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the spring months.&lt;br /&gt;
+* Perform the NDWI calculation, thresholding, and area measurement as was performed above.
+* Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&#34;part-3-cartographic-modeling&#34;&gt;&lt;strong&gt;Part 3: Cartographic Modeling&lt;/strong&gt;&lt;/h1&gt;
 
@@ -540,14 +573,7 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 &lt;li&gt;You want to find the minimum annual precipitation (in mm) and the minimum frost-free days at each of these points. This information will be your source of input for modeling potential Kudzu distribution across the U.S.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Close the attribute table&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;ArcToolbox contains an &lt;strong&gt;Extract values to points&lt;/strong&gt; tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value&lt;/li&gt;
-&lt;li&gt;In the Spatial Analyst Toolbox &amp;gt;Extraction &amp;gt; Extract values to points tool&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you get a “Tool Not Licensed” error, check to be sure the Spatial Analyst extension is activated.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
+&lt;li&gt;In the Spatial Analyst Toolbox &amp;gt;Extraction &amp;gt; &lt;strong&gt;Extract values to points&lt;/strong&gt; tool&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest&lt;/li&gt;
 &lt;li&gt;Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file)&lt;/li&gt;
 &lt;li&gt;Set your Input raster to usanpre25k&lt;/li&gt;
@@ -558,6 +584,10 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 &lt;li&gt;Notice the new variable called RASTERVALU that contains the annual precipitation amount for that point&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Repeat the above steps&lt;/strong&gt; to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it &lt;em&gt;sample1frost&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Alternatively, there is an &lt;strong&gt;Extract multi values to points&lt;/strong&gt; tool, which will do this whole process at once.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;By looking at the minimum precipitation and minimum number of frost-free days that Kudzu required for survival in the sample points, we can model (predict) its potential geographic expansion across the U.S. In order to do this, we need to get this information out of the datasets we just created.  To find the minimum annual precipitation and minimum number of frost-free days required for Kudzu to survive:&lt;/p&gt;
 
@@ -614,7 +644,9 @@ Answer #8 on your answer sheet&lt;/li&gt;
 
 &lt;p&gt;This lab will use neighborhood operators (i.e. focal operators) to examine an elevation surface, remove errors in a DEM, analyze wind exposure, and delineate the edge of our lake classified in Lab 2.  In the first part, you will learn how to bring an ASCII into Arc as a grid and confirm your understanding of focal statistics.  In the second, you will use the slope tool and focal statistics to blur out errors in the DEM and examine how changing the window results in a changing image.  In Part 3, you will perform a site suitability analysis for wind turbines using the slope, aspect, hillshade, and focal wedge tools.  Finally, we will use focal erosion to isolate the edge of our lakes classified in Lab 2.  You can do all of these parts within the same or separate mxd’s, but be sure to save often.&lt;/p&gt;
 
-&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit:&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Lab 3:  Focal Operations Assignment: Focal Operations, Removing DEM Errors, Wind Exposure, and Lake Edge Detection&lt;/strong&gt;&lt;br /&gt;
 Name:&lt;/p&gt;
@@ -766,6 +798,8 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Question 9&lt;/strong&gt;: Paste your final map here:&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h1 id=&#34;materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-epawoaa4plxportob7jo9o0bv8bg5ykti4mdej5bsjtobg-e-ocdxtg&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EpAWoaa4PlxPortOB7jO9o0BV8Bg5ykTI4mdEj5bsjTObg?e=OcDxTg&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
@@ -819,11 +853,11 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;li&gt;Under Workspace change the Current Workspace to your Lab3 folder.&lt;/li&gt;
 &lt;li&gt;Rename the data frame named ASCII Grid.&lt;/li&gt;
 &lt;li&gt;Inspect the ASCII Grid file &lt;i&gt;test.txt&lt;/i&gt; using a text editor such as notepad. We will use this small raster file to visually verify the results of several focal operations.&lt;/li&gt;
-&lt;li&gt;Open ArcToolbox and Select Conversion Tools | To Raster | ASCII to Raster.&lt;/li&gt;
+&lt;li&gt;Open ArcToolbox and Select Conversion Tools | To Raster | &lt;strong&gt;ASCII to Raster&lt;/strong&gt; tool.&lt;/li&gt;
 &lt;li&gt;Set test.txt as the input file and save the output raster as test in your lab03\part01 folder.&lt;/li&gt;
 &lt;li&gt;Leave the data type to default and Click OK.&lt;/li&gt;
-&lt;li&gt;The test raster will be added to the Table of Contents automatically, but ignore any projection warnings you receive when adding these rasters.&lt;/li&gt;
-&lt;li&gt;Use the ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics tool to answer Question #1 on your assignment sheet.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;The test raster will be added to the Table of Contents automatically.  You can ignore any projection warnings you receive when adding these rasters.&lt;/li&gt;
+&lt;li&gt;Use the ArcToolbox | Spatial Analyst Tools | Neighborhood | &lt;strong&gt;Focal Statistics&lt;/strong&gt; tool to answer Question #1 on your assignment sheet.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -833,6 +867,8 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Save your map.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&#34;part-2-removing-dem-errors&#34;&gt;&lt;strong&gt;Part 2: Removing DEM Errors&lt;/strong&gt;&lt;/h1&gt;
 
@@ -860,23 +896,25 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Let’s start by calculating the slope for the raster to more easily identify the artifacts.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Open ArcToopbox | Spatial Analyst Tools | Surface | Slope, which is a focal operation we can use to find the linear artifacts in the &lt;i&gt;silversub_m&lt;/i&gt; grid.&lt;/li&gt;
+&lt;li&gt;Open ArcToopbox | Spatial Analyst Tools | Surface | &lt;strong&gt;Slope&lt;/strong&gt;, which is a focal operation we can use to find the linear artifacts in the &lt;i&gt;silversub_m&lt;/i&gt; grid.&lt;/li&gt;
 &lt;li&gt;In the slope dialog box, set the input raster as &lt;i&gt;silversub_m&lt;/i&gt;.&lt;/li&gt;
 &lt;li&gt;Leave the default values for output measurement and z factor.&lt;/li&gt;
-&lt;li&gt;Save the output grid silver_slope in your lab03\part02 folder.&lt;/li&gt;
+&lt;li&gt;Save the output grid &lt;i&gt;silver_slope&lt;/i&gt; in your lab03\part02 folder.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You should now be able to visually pick out the linear artifacts left from the mosaicing process.  Using the measurement tool, determine the approximate size of the patches that were used to mosaic the image and answer Question #2 on your assignment sheet.&lt;/p&gt;
 
 &lt;h2 id=&#34;removing-dem-errors&#34;&gt;&lt;strong&gt;Removing DEM Errors&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Now try to eliminate the artifacts by smoothing the surface of &lt;i&gt;silversub_m&lt;/i&gt; before deriving the slope.  Go to ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics to compute the mean elevation value in a rectangular neighborhood of 3x3 cells and another of 7x7 cells.&lt;/p&gt;
+&lt;p&gt;Now try to eliminate the artifacts by smoothing the surface of &lt;i&gt;silversub_m&lt;/i&gt; before deriving the slope.  Go to ArcToolbox | Spatial Analyst Tools | Neighborhood | &lt;strong&gt;Focal Statistics&lt;/strong&gt; to compute the mean elevation value in a rectangular neighborhood of 3x3 cells and another of 7x7 cells.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Use silversub_m as the input in both cases, making sure to name the output appropriately, something like &lt;i&gt;silver3x3&lt;/i&gt; and &lt;i&gt;silver7x7&lt;/i&gt;.&lt;/li&gt;
 &lt;li&gt;Derive the slopes of these new surfaces as in step 2, and be sure to name them appropriately, something like &lt;i&gt;slope3x3&lt;/i&gt; and &lt;i&gt;slope7x7&lt;/i&gt; respectively.&lt;/li&gt;
 &lt;li&gt;Answer Question #3 on your assignment sheet.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&#34;part-3-wind-exposure-analysis&#34;&gt;&lt;strong&gt;Part 3: Wind Exposure Analysis&lt;/strong&gt;&lt;/h1&gt;
 
@@ -891,14 +929,6 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;This surface was created in rectangular patches and then mosaiced together, but the artifacts of mosaicing are not readily visible by simply viewing the DEM.  Since the height is in feet and the cell sizes are in meters, you should put everything into the same unit, as was done in Part 2. Save the output to your lab03\part03 folder as: &lt;i&gt;wnm_m&lt;/i&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;generating-a-hillshade-raster-layer&#34;&gt;&lt;strong&gt;Generating a Hillshade raster layer&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Using Spatial Analyst, create a hillshade raster from your &lt;i&gt;wnw_m&lt;/i&gt; DEM using the ArcToolbox | Spatial Analyst Tools | Surface | Hillshade tool&lt;/li&gt;
-&lt;li&gt;Set &lt;i&gt;wnw_m&lt;/i&gt; as your input surface, leave the default settings for azimuth and altitude, but set the Z factor to 3&lt;/li&gt;
-&lt;li&gt;Save the output grid as &lt;i&gt;hillshade&lt;/i&gt; in your lab03\part03 folder&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h2 id=&#34;obtaining-areas-with-good-elevation&#34;&gt;&lt;strong&gt;Obtaining Areas with Good Elevation&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -906,9 +936,17 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;li&gt;Make the output raster a permanent layer named &lt;i&gt;GoodElevation&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&#34;generating-a-hillshade-raster-layer&#34;&gt;&lt;strong&gt;Generating a Hillshade raster layer&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using Spatial Analyst, create a hillshade raster from your &lt;i&gt;wnw_m&lt;/i&gt; DEM using the ArcToolbox | Spatial Analyst Tools | Surface | &lt;strong&gt;Hillshade&lt;/strong&gt; tool&lt;/li&gt;
+&lt;li&gt;Set &lt;i&gt;wnw_m&lt;/i&gt; as your input surface, leave the default settings for azimuth and altitude, but set the Z factor to 3&lt;/li&gt;
+&lt;li&gt;Save the output grid as &lt;i&gt;hillshade&lt;/i&gt; in your lab03\part03 folder&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;visualizing-with-hillshade&#34;&gt;&lt;strong&gt;Visualizing with hillshade&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Hiilshades are useful for providing geographic context, but can overwhelm data which kind of defeats the purpose.  One way to fix this is mask out no data values in your output layer, and make it slightly transparent.  We&amp;rsquo;ll do this a few times in this lab so remember this sequence&lt;/p&gt;
+&lt;p&gt;Hiilshades are useful for providing geographic context, but can overwhelm data which kind of defeats the purpose of making a map.  One way to fix this is mask out no data values in your output layer, and make it slightly transparent.  We&amp;rsquo;ll do this a few times in this lab so remember this sequence&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Display &lt;i&gt;GoodElevation&lt;/i&gt; on top of &lt;i&gt;hillshade&lt;/i&gt;&lt;/li&gt;
@@ -932,13 +970,13 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;h2 id=&#34;obtaining-areas-with-good-aspect&#34;&gt;&lt;strong&gt;Obtaining Areas with Good Aspect&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Calculate the aspect from &lt;i&gt;wnw_m&lt;/i&gt; DEM using the ArcToolbox | Spatial Analyst Tools| Surface | Aspect tool&lt;/li&gt;
+&lt;li&gt;Calculate the aspect from &lt;i&gt;wnw_m&lt;/i&gt; DEM using the ArcToolbox | Spatial Analyst Tools| Surface | &lt;strong&gt;Aspect&lt;/strong&gt; tool&lt;/li&gt;
 &lt;li&gt;Save the output grid as aspect in your lab03\part03 folder&lt;/li&gt;
 &lt;li&gt;Notice the range of angles assigned to each direction in the table of contents. Aspect values begin at 0 at due north and increase clockwise.&lt;/li&gt;
 &lt;li&gt;Using Raster Calculator, select the cells with an aspect between 225&lt;sup&gt;o&lt;/sup&gt; and 315&lt;sup&gt;o&lt;/sup&gt;. This will give us the westward facing slopes.&lt;/li&gt;
 &lt;li&gt;That expression should look like &lt;mark&gt;(225 &amp;lt;= “aspect”) &amp;amp; (“aspect” &amp;lt;= 315)&lt;/mark&gt;&lt;/li&gt;
 &lt;li&gt;Make the output raster a layer named &lt;i&gt;GoodAspect&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Display the &lt;i&gt;GoodAspect&lt;/i&gt; on top of &lt;i&gt;hillshade&lt;/i&gt; (set symbology like you did for &lt;i&gt;GoodElivation&lt;/i&gt;) and verify that it is representing the western slopes.&lt;/li&gt;
+&lt;li&gt;Display the &lt;i&gt;GoodAspect&lt;/i&gt; on top of &lt;i&gt;hillshade&lt;/i&gt; (set symbology like you did for &lt;i&gt;GoodElivation&lt;/i&gt;) and verify that it represents the western slopes.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Answer Question #5 on your assignment sheet.&lt;/p&gt;
@@ -948,7 +986,7 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Create a neighbor mean raster of &lt;i&gt;wnw_m&lt;/i&gt; using a FocalMean operation.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics) with a wedge neighborhood (start angle 135, end angle 225, and a radius of 10 cells).&lt;/li&gt;
+&lt;li&gt;ArcToolbox | Spatial Analyst Tools | Neighborhood | Focal Statistics with a wedge neighborhood (start angle 135, end angle 225, and a radius of 10 cells.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -956,58 +994,49 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Save the output as &lt;i&gt;WindMean10&lt;/i&gt;
-b.  In Raster Calculator, select the cells whose elevations are higher than their neighbor mean (i.e., WindMean10)&lt;/li&gt;
-&lt;li&gt;“wnw_m” &amp;gt; “WindMean10”&lt;/li&gt;
-&lt;li&gt;Make the output a permanent raster named &lt;i&gt;GoodWindExp10&lt;/i&gt;
-c.  Display GoodWindExp10 on top of &lt;i&gt;hillshade&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;WindMean10&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;In Raster Calculator, select the cells whose elevations are higher than their neighbor mean (i.e., &lt;em&gt;WindMean10&lt;/em&gt;)
+
+&lt;ul&gt;
+&lt;li&gt;_wnw&lt;em&gt;m&lt;/em&gt; &amp;gt; &lt;em&gt;WindMean10&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Make the output a permanent raster named &lt;i&gt;GoodWindExp10&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Display &lt;em&gt;GoodWindExp10&lt;/em&gt; on top of &lt;i&gt;hillshade&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;isolate-the-best-sites-and-those-that-meet-all-the-criteria-except-wind-exposure&#34;&gt;&lt;strong&gt;Isolate the best sites and those that meet all the criteria except wind exposure&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Using Raster Calculator, select the cells with good elevation (1’s), aspect (1’s), and wind exposure (1’s)
-a.  Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;“GoodElevation” * “GoodAspect” * “GoodWindExp10”
-Or
-(“GoodElevation” == 1) &amp;amp; (“GoodAspect” == 1) &amp;amp; (“GoodWindExp10” == 1)&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;Make the output a permanent raster named GoodSites10&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;Use Raster Calculator, select the cells with good elevation (1’s), good aspect (1’s) and bad wind exposure (0’s)&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;(“GoodElevation” == 1) &amp;amp; (“GoodAspect” == 1) &amp;amp; (“GoodWindExp10” == 0)&lt;/li&gt;
-&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster.&lt;/li&gt;
-&lt;li&gt;Make the output a permanent raster named Blocked10&lt;/li&gt;
-&lt;li&gt;Notice that these are cells in which the wind is blocked because of hills to the west&lt;/li&gt;
-&lt;li&gt;Answer questions #6 - #8 on your assignment sheet (you will repeat step 5 twice more using different radius values)&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Raster Calculator, select the cells with good elevation (1’s), aspect (1’s), and wind exposure (1’s).  Your expression can look like: &lt;mark&gt;(&lt;em&gt;GoodElevation&lt;/em&gt; == 1) &amp;amp; (&lt;em&gt;GoodAspect&lt;/em&gt; == 1) &amp;amp; (&lt;em&gt;GoodWindExp10&lt;/em&gt; == 1)&lt;/mark&gt;, or more simply &lt;mark&gt;&lt;em&gt;GoodElevation&lt;/em&gt; * &lt;em&gt;GoodAspect&lt;/em&gt; * &lt;em&gt;GoodWindExp10&lt;/em&gt;&lt;/mark&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Make the output a permanent raster named &lt;i&gt;GoodSites10&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Use Raster Calculator, select the cells with good elevation (1’s), good aspect (1’s) and bad wind exposure (0’s) with the following expression: &lt;mark&gt;(&lt;em&gt;GoodElevation&lt;/em&gt; == 1) &amp;amp; (&lt;em&gt;GoodAspect&lt;/em&gt; == 1) &amp;amp; (&lt;em&gt;GoodWindExp10&lt;/em&gt; == 0)&lt;/mark&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Make this a permanent raster named &lt;i&gt;Blocked10&lt;/i&gt;, which indicate cells where the wind is blocked because of hills to the west.&lt;/li&gt;
+&lt;li&gt;Answer questions #6 - #8 on your assignment sheet (you will need to repeat the steps above twice more using different radius values)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&#34;part-4-lake-edge-detection&#34;&gt;&lt;strong&gt;Part 4: Lake Edge Detection&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:&lt;/li&gt;
-&lt;li&gt;AOI shapefile&lt;/li&gt;
-&lt;li&gt;lake boundary classifications (…NDWI_#.TIF) )for 1995, 2003, and 2009.&lt;/li&gt;
-&lt;li&gt;The RGB file for each year&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:&lt;br /&gt;
+* &lt;em&gt;AOI&lt;/em&gt; shapefile
+* lake body classifications (&lt;i&gt;…NDWI_#.TIF&lt;/i&gt;) )for 1995, 2003, and 2009.
+* The RGB file for each year&lt;/p&gt;
 
 &lt;h2 id=&#34;calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process&#34;&gt;&lt;strong&gt;Calculate the boundary of the lake in 1995 using a focal erosion process&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Using the Focal statistics tool, calculate the focal minimum using a rectangular 3x3 grid&lt;/li&gt;
-&lt;li&gt;The input should be the … _NDWI_3.TIF we created in Lab 2&lt;/li&gt;
-&lt;li&gt;Save the output in the 1995 BaseData folder and name the output as …_NDWI_FMin.TIF&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;strong&gt;Focal statistics&lt;/strong&gt; tool, calculate the focal minimum using a rectangular 3x3 grid.&lt;/li&gt;
+&lt;li&gt;The input should be the &lt;i&gt;…_NDWI_3.TIF&lt;/i&gt; created in Lab 2.&lt;/li&gt;
+&lt;li&gt;Save the output in the 1995 BaseData folder and name the output as &lt;i&gt;…_NDWI_FMin.TIF&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;calculate-the-difference-between-the-two-surfaces&#34;&gt;&lt;strong&gt;Calculate the difference between the two surfaces&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;a.  Using raster calculator, subtract the focal min raster from the lake classification raster.
-* &amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_FMin.TIF&amp;rdquo;
-* Save the output of the map as LT05_L1TP_008067_19950622_20170109_01_T1_LakeBoundry.TIF&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using raster calculator, subtract the focal min raster from the lake classification raster using an expression such as: &lt;mark&gt;&amp;ldquo;1995\LT05&lt;em&gt;L1TP&lt;/em&gt;&amp;hellip;_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;em&gt;L1TP&lt;/em&gt;&amp;hellip;_NDWI_FMin.TIF&amp;rdquo;&lt;/mark&gt;.&lt;/li&gt;
+&lt;li&gt;Save the output of the map as &lt;i&gt;LT05_&amp;hellip;_LakeBoundry.TIF&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;perform-the-above-steps-for-both-2003-and-2009&#34;&gt;&lt;strong&gt;Perform the above steps for both 2003 and 2009&lt;/strong&gt;&lt;/h2&gt;
 

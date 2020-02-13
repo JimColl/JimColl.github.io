@@ -401,7 +401,7 @@
 <ul>
 <li><a href="#lab-2-cartographic-modeling"><strong>Lab 2 - Cartographic Modeling</strong></a></li>
 <li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
-<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit:</strong></a></li>
 <li><a href="#materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc"><strong>Materials (click to download)</strong></a></a></li>
 <li><a href="#part-1-lake-delineation-and-water-classification"><strong>Part 1: Lake delineation and water classification</strong></a>
 <ul>
@@ -448,11 +448,13 @@
 
 <p>This lab will introduce local operations using cartographic modeling (map algebra).  Part 1 is intended to show you how you can organize and display raster datasets in a usable format.  Part 2 will walk you through how to calculate NDWI and perform a water area analysis.  Part 3 you will model the geographic distribution of Kudzu in the conterminous United States and then compare your model to the actual geographic distribution, using Map Algebra and attribute table manipulation.  I&rsquo;ve prefaced each lab with the learning objectives of the exercise, what you need to submit to blackboard, a set of materials for the lab as appropriate, and then the instructions for the lab.</p>
 
-<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+<h1 id="what-you-need-to-submit"><strong>What you need to submit:</strong></h1>
 
 <blockquote>
 <p>Hint: Copy and paste the questions below into a word document and submit it to blackboard</p>
 </blockquote>
+
+<hr />
 
 <p><strong>Lab 2: Answer Sheet</strong><br />
 Name:</p>
@@ -540,6 +542,8 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 
 <p><br></p>
 
+<hr />
+
 <h1 id="materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc"><strong>Materials (click to download)</strong></a></h1>
 
 <p><style type="text/css">
@@ -582,6 +586,12 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
   </tr>
 </table></p>
 
+<blockquote>
+<p>If you are short on space, you only need the .mpk from part 2, the LANDSAT tiles are there for reproducibilities sake.</p>
+</blockquote>
+
+<hr />
+
 <h1 id="part-1-lake-delineation-and-water-classification"><strong>Part 1: Lake delineation and water classification</strong></h1>
 
 <h2 id="setting-up-the-mxd"><strong>Setting up the MXD</strong></h2>
@@ -598,7 +608,8 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 
 <ul>
 <li>Select all 4 images using shift-click, and right click &gt; Group to place them in a group.  Slow click and rename this group to LS1995<br />
-<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /><br />
+<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /><br /></li>
+<li>Finally, let&rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742
 <br /></li>
 </ul>
 
@@ -633,8 +644,19 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$</li>
 <li>Under workspace, point the Current and Scratch workspaces to our LakePalcacocha.gdb</li>
 <li>Under processing extent, set the extent to “Same as Layer AOI”.  Click OK</li>
 <li>Use the search bar to pull up the Raster Calculator and use the prompts to calculate the NDWI.</li>
-<li>Go ahead and try to enter in the expression as entered above.  Save the resulting raster using the folder icon under the Output Raster dialog box, click on the name of one of the other bands (to preserve the LANDSAT naming convention), and change the end of the file to <em>…NDWI.tif</em>.</li>
-<li>You’ll notice that the resulting raster has a value of 0, and is entirely empty.  This is because ArcMap likes to save memory and forces raster calculations to integers.  We therefore need to force the calculations into floats using Float() under the Math section.</li>
+</ul>
+
+<blockquote>
+<p>Extension warnings?  Did you take the time to read it?  You need to turn on spatial analysis under Customize &gt; Extensions.</p>
+</blockquote>
+
+<ul>
+<li>Go ahead and try to enter in the expression above.  Save the resulting raster using the folder icon under the Output Raster dialog box, click on the name of one of the other bands (to preserve the LANDSAT naming convention), and change the end of the file to <em>…NDWI.tif</em>.</li>
+</ul>
+
+<p>You’ll notice that the resulting raster has a value of 0, and is entirely empty.  This is because ArcMap likes to save memory and forces raster calculations to integers.  Fixing this just means we need to be more verbose and run the calculations as floats using Float() under the Math section.  This conversion to integer occurs in both the numerator and denominator, so the float needs to wrap both of them separately.</p>
+
+<ul>
 <li>Go to Geoprocessing &gt; Results.</li>
 <li>If you double click on the last tool run, it will open the tool prompt as it was run.</li>
 <li>Change the expression to:<br />
@@ -665,20 +687,22 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 
 <p>You now have enough information to answer Questions 1 - 3 above.</p>
 
+<hr />
+
 <h1 id="part-2-simple-landsat-composites"><strong>Part 2: Simple Landsat Composites</strong></h1>
 
 <h2 id="creating-a-composite-image"><strong>Creating a composite image</strong></h2>
 
-<ul>
-<li>One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.</li>
-<li>Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.</li>
-<li>ArcMap has a tool called Cell Statistics which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &gt; local</li>
-<li>We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
-<img src="/courses/geog558/media/Lab02Picture05.png" alt="" /></li>
-<li>I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the Summer months. .</li>
-<li>Perform the NDWI, thresholding, and counting was performed above.</li>
-<li>Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.<br /></li>
-</ul>
+<p>One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.
+* Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.
+* ArcMap has a tool called <strong>Cell Statistics</strong> which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &gt; local
+* We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
+<img src="/courses/geog558/media/Lab02Picture05.png" alt="" />
+* I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the spring months.<br />
+* Perform the NDWI calculation, thresholding, and area measurement as was performed above.
+* Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.</p>
+
+<hr />
 
 <h1 id="part-3-cartographic-modeling"><strong>Part 3: Cartographic Modeling</strong></h1>
 
@@ -692,14 +716,7 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 <li>You want to find the minimum annual precipitation (in mm) and the minimum frost-free days at each of these points. This information will be your source of input for modeling potential Kudzu distribution across the U.S.<br /></li>
 <li>Close the attribute table<br /></li>
 <li>ArcToolbox contains an <strong>Extract values to points</strong> tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value</li>
-<li>In the Spatial Analyst Toolbox &gt;Extraction &gt; Extract values to points tool<br /></li>
-</ul>
-
-<blockquote>
-<p>If you get a “Tool Not Licensed” error, check to be sure the Spatial Analyst extension is activated.</p>
-</blockquote>
-
-<ul>
+<li>In the Spatial Analyst Toolbox &gt;Extraction &gt; <strong>Extract values to points</strong> tool<br /></li>
 <li>This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest</li>
 <li>Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file)</li>
 <li>Set your Input raster to usanpre25k</li>
@@ -710,6 +727,10 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 <li>Notice the new variable called RASTERVALU that contains the annual precipitation amount for that point</li>
 <li><strong>Repeat the above steps</strong> to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it <em>sample1frost</em><br /></li>
 </ul>
+
+<blockquote>
+<p>Alternatively, there is an <strong>Extract multi values to points</strong> tool, which will do this whole process at once.</p>
+</blockquote>
 
 <p>By looking at the minimum precipitation and minimum number of frost-free days that Kudzu required for survival in the sample points, we can model (predict) its potential geographic expansion across the U.S. In order to do this, we need to get this information out of the datasets we just created.  To find the minimum annual precipitation and minimum number of frost-free days required for Kudzu to survive:</p>
 

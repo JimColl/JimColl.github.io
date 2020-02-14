@@ -381,6 +381,14 @@
         <a href="/courses/geog558/lab03/">Lab 3 - Focal Operations</a>
       </li>
       
+      <li >
+        <a href="/courses/geog558/lab04/">Lab 4 - Zonal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab05/">Lab 5 - Model Builder</a>
+      </li>
+      
     </ul>
     
 
@@ -521,13 +529,13 @@ Name:</p>
   <tr>
     <td class="tg-c3ow" rowspan="2">Your Model</td>
     <td class="tg-c3ow">No Kudzu</td>
-    <td class="tg-dvpl">(00)</td>
+    <td class="tg-dvpl">A:(00)</td>
     <td class="tg-lqy6">(10)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">Kudzu</td>
     <td class="tg-dvpl">(01)</td>
-    <td class="tg-lqy6">(11)</td>
+    <td class="tg-lqy6">D:(11)</td>
   </tr>
 </table></p>
 
@@ -584,11 +592,12 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
     <td class="tg-btxf">sample2.shp</td>
     <td class="tg-btxf">point file showing locations of known presence/absence of Kudzu (to be used for accuracy assessment)</td>
   </tr>
-</table></p>
-
-<blockquote>
-<p>If you are short on space, you only need the .mpk from part 2, the LANDSAT tiles are there for reproducibilities sake.</p>
-</blockquote>
+</table><br />
+<div class="alert alert-warning">
+  <div>
+    If you are short on space, you only need the .mpk from part 2, the LANDSAT tiles are ~20 gigs and are provided for reproducibilities sake.
+  </div>
+</div></p>
 
 <hr />
 
@@ -599,18 +608,16 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 <ul>
 <li>Open up a new ArcMap document.<br /></li>
 <li>First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.<br /></li>
-<li>From the 1995 year, add in the green, NIR, MIR, and MTL images (Hint: <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a>)<br /></li>
-</ul>
 
-<blockquote>
-<p>A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at <a href="https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/">https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/</a> <br> <img src="/courses/geog558/media/Lab02Picture01.png" alt="" /></p>
-</blockquote>
+<li><p>From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a>)<br />
+&gt; Hint: When performing the NDWI calculation, we refer to bands as their wavelength.  However, when distributing data the
+</br>
+&gt; A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at <a href="https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/">https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/</a> <br> <img src="/courses/geog558/media/Lab02Picture01.png" alt="" /></p></li>
 
-<ul>
-<li>Select all 4 images using shift-click, and right click &gt; Group to place them in a group.  Slow click and rename this group to LS1995<br />
-<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /><br /></li>
-<li>Finally, let&rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742
-<br /></li>
+<li><p>Select all 4 images using shift-click, and right click &gt; Group to place them in a group.  Slow click and rename this group to LS1995<br />
+<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /></p></li>
+
+<li><p>Finally, let&rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742</p></li>
 </ul>
 
 <h2 id="creating-an-area-of-interest-aoi"><strong>Creating An Area of Interest (AOI)</strong></h2>
@@ -693,14 +700,17 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 
 <h2 id="creating-a-composite-image"><strong>Creating a composite image</strong></h2>
 
-<p>One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.
-* Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.
-* ArcMap has a tool called <strong>Cell Statistics</strong> which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &gt; local
-* We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
-<img src="/courses/geog558/media/Lab02Picture05.png" alt="" />
-* I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the spring months.<br />
-* Perform the NDWI calculation, thresholding, and area measurement as was performed above.
-* Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.</p>
+<p>One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.</p>
+
+<ul>
+<li>Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.<br /></li>
+<li>ArcMap has a tool called <strong>Cell Statistics</strong> which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &gt; local.<br /></li>
+<li>We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
+<img src="/courses/geog558/media/Lab02Picture05.png" alt="" /></li>
+<li>I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the spring months.<br /></li>
+<li>Perform the NDWI calculation, thresholding, and area measurement as was performed above.</li>
+<li>Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.<br /></li>
+</ul>
 
 <hr />
 
@@ -709,23 +719,23 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 <h2 id="establishing-the-model-parameters"><strong>Establishing the model parameters</strong></h2>
 
 <ul>
-<li>Start ArcMap and add sanpre25k, usfrost25k, and sample1 from your lab02\Part03 folder<br /></li>
-<li>extracting data for building Kudzu distribution model<br /></li>
-<li>Open the attribute table for <em>sample1</em><br /></li>
+<li>Start ArcMap and add <i>sanpre25k</i>, <i>usfrost25k</i>, and <i>sample1</i> from your lab02\Part03 folder.<br /></li>
+<li>extracting data for building Kudzu distribution model.<br /></li>
+<li>Open the attribute table for <em>sample1</em>.<br /></li>
 <li>The numbers in the “KUDZU” field represent presence or absence of Kudzu at that point (1 for presence, 0 for absence)<br /></li>
 <li>You want to find the minimum annual precipitation (in mm) and the minimum frost-free days at each of these points. This information will be your source of input for modeling potential Kudzu distribution across the U.S.<br /></li>
-<li>Close the attribute table<br /></li>
-<li>ArcToolbox contains an <strong>Extract values to points</strong> tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value</li>
-<li>In the Spatial Analyst Toolbox &gt;Extraction &gt; <strong>Extract values to points</strong> tool<br /></li>
-<li>This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest</li>
-<li>Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file)</li>
-<li>Set your Input raster to usanpre25k</li>
-<li>Set Output point features so that it saves the new file called sample1precip to your lab02\Part03 folder</li>
-<li>Click OK (Be patient. This may take a while.)</li>
-<li>Your new point file will appear in the ArcMap Table of Contents</li>
-<li>Open the attribute table for <em>sample1precip</em></li>
+<li>Close the attribute table.<br /></li>
+<li>ArcToolbox contains an <strong>Extract values to points</strong> tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value.</li>
+<li>In the Spatial Analyst Toolbox &gt;Extraction &gt; <strong>Extract values to points</strong> tool.<br /></li>
+<li>This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest.<br /></li>
+<li>Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file).<br /></li>
+<li>Set your Input raster to <em>usanpre25k</em>.</li>
+<li>Set Output point features so that it saves the new file called sample1precip to your lab02\Part03 folder.</li>
+<li>Click OK (Be patient. This may take a while.).</li>
+<li>Your new point file will appear in the ArcMap Table of Contents.<br /></li>
+<li>Open the attribute table for <em>sample1precip</em>.</li>
 <li>Notice the new variable called RASTERVALU that contains the annual precipitation amount for that point</li>
-<li><strong>Repeat the above steps</strong> to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it <em>sample1frost</em><br /></li>
+<li><strong>Repeat the above steps</strong> to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it <em>sample1frost</em>.<br /></li>
 </ul>
 
 <blockquote>
@@ -737,7 +747,7 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 <ul>
 <li>Open the attribute tables of your samples and perform an attribute query to select only those points with known Kudzu presence (“KUDZU” = 1)</li>
 <li>Show only the selected records using the table toggle button.</li>
-<li>Sort in ascending order the RASTERVALU field (R-Click on column heading)
+<li>Sort in ascending order the RASTERVALU field (R-Click on column heading).
 Answer #6 and #7 on your answer sheet</li>
 </ul>
 
@@ -745,24 +755,24 @@ Answer #6 and #7 on your answer sheet</li>
 
 <ul>
 <li>Create new grids based on the usanpre25k and usfrost25k grid using Raster Calculator</li>
-<li>usanpre25k &gt;= minimum value** (**Minimum Value in question 6)</li>
-<li>From the usanpre25k, the new grid cells with an annual precipitation greater than or equal to the minimum annual precipitation will have a value of 1, while cells with an annual precipitation less than the minimum value will have a value of 0</li>
+<li><mark><i>usanpre25k</i> &gt;= minimum value</mark>** (**Minimum Value in question 6)</li>
+<li>From the <i>usanpre25k</i>, the new grid cells with an annual precipitation greater than or equal to the minimum annual precipitation will have a value of 1, while cells with an annual precipitation less than the minimum value will have a value of 0</li>
 <li>Save the grid as precipitation in your lab02\part03 folder</li>
-<li>usfrost25k &gt;= minimum value** (**Minimum Value in question 7)</li>
-<li>From the usfrost25k, the new grid cells with a frost-free-days greater than or equal to the minimum frost-free-days will have a value of 1, while cells with a frost-free-days less than the minimum frost-free-days will have a value of 0</li>
+<li><mark><i>usfrost25k</i> &gt;= minimum value</mark>** (**Minimum Value in question 7)</li>
+<li>From the <i>usfrost25k</i>, the new grid cells with a frost-free-days greater than or equal to the minimum frost-free-days will have a value of 1, while cells with a frost-free-days less than the minimum frost-free-days will have a value of 0</li>
 <li>Save the grid as frost in your lab02\part03 folder</li>
-<li>Predict the Kudzu U.S. distribution by multiplying the precipitation and frost grids. Save the output grid as kudzu_model
+<li>Predict the Kudzu U.S. distribution by multiplying the precipitation and frost grids. Save the output grid as <i>kudzu_model</i>.<br />
 Answer #8 on your answer sheet</li>
 </ul>
 
 <h2 id="assessing-the-model"><strong>Assessing the model</strong></h2>
 
 <ul>
-<li>Add sample2 to your ArcMap Table of Contents</li>
-<li>Using the Extract values to points tool you now want to create a new point shapefile called sample2check that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)</li>
+<li>Add <i>sample2</i> to your ArcMap Table of Contents</li>
+<li>Using the Extract values to points tool you now want to create a new point shapefile called <i>sample2check</i> that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)</li>
 </ul>
 
-<p>After you have created sample2check you can quantify your accuracy in one of many ways.  Here are two suggestions:</p>
+<p>After you have created <i>sample2check</i> you can quantify your accuracy in one of many ways.  Here are two suggestions:</p>
 
 <ul>
 <li>Add a new field named check and perform the following calculation: <mark><em>check = [RASTERVALU] * 10 + [KUDZU]</em></mark>.  The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)<br /></li>

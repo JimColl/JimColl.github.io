@@ -1500,30 +1500,32 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;First, a few from John Nelson, a phenomenal cartographer and writer.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, a few from John Nelson, a phenomenal cartographer and writer.&lt;br /&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://adventuresinmapping.com/&#34;&gt;https://adventuresinmapping.com/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.esri.com/arcgis-blog/author/j_nelson/&#34;&gt;https://www.esri.com/arcgis-blog/author/j_nelson/&lt;/a&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.esri.com/arcgis-blog/author/j_nelson/&#34;&gt;https://www.esri.com/arcgis-blog/author/j_nelson/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mikejohnson51.github.io/&#34;&gt;Mike Johnson&lt;/a&gt;: A data wizard and all around great dude.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://mikejohnson51.github.io/&#34;&gt;Mike Johnson&lt;/a&gt;: A data wizard and all around great dude.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GIS Resources&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;A great collection of open courseware of every subject, and a few GIS-centric resources: &lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;https://www.gislounge.com/learn-gis-for-free/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A nice cross section of links to open courseware of every subject, and a few GIS-centric resources: &lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;https://www.gislounge.com/learn-gis-for-free/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hydroshare.org/&#34;&gt;Hydroshare&lt;/a&gt;: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at &lt;a href=&#34;https://www.cuahsi.org/&#34;&gt;CUAHSI&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://opentopo.sdsc.edu/login&#34;&gt;OpenTOPO&lt;/a&gt;: A great clearinghouse and web toolset for topo data.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://live.osgeo.org/en/index.html&#34;&gt;OSGeoLive&lt;/a&gt;: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://gistbok.ucgis.org/&#34;&gt;UCGIS Body of Knowledge&lt;/a&gt; is a great start for your GIS questions.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.hydroshare.org/&#34;&gt;Hydroshare&lt;/a&gt;: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at &lt;a href=&#34;https://www.cuahsi.org/&#34;&gt;CUAHSI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Thesis leftovers&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://opentopo.sdsc.edu/login&#34;&gt;OpenTOPO&lt;/a&gt;: A great clearinghouse and web toolset for topo data.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://live.osgeo.org/en/index.html&#34;&gt;OSGeoLive&lt;/a&gt;: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://gistbok.ucgis.org/&#34;&gt;UCGIS Body of Knowledge&lt;/a&gt; is a great start for your GIS questions.&lt;/p&gt;
-
-&lt;p&gt;A misguided attempt at a website for my masters.  Placed here more to remind me to do something with it one of these days: &lt;a href=&#34;https://sites.google.com/site/globalsnowobservatory/&#34;&gt;https://sites.google.com/site/globalsnowobservatory/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&#34;&gt;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&lt;/a&gt;&lt;br /&gt;
-A post about Mann Kendall and Sens slope in GEE from me.  At some point I&amp;rsquo;ll get around to doing something with this too&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A misguided attempt at a website for my masters.  Placed here more to remind me to do something with it one of these days: &lt;a href=&#34;https://sites.google.com/site/globalsnowobservatory/&#34;&gt;https://sites.google.com/site/globalsnowobservatory/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&#34;&gt;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&lt;/a&gt; A post about Mann Kendall and Sens slope in GEE from me.  At some point I&amp;rsquo;ll get around to doing something with this too&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;These R enabled books are excellent resources:&lt;/strong&gt;&lt;/p&gt;
 
@@ -1545,7 +1547,7 @@ GEE slides:&lt;br /&gt;
 Other useful slide decks:&lt;br /&gt;
 &lt;a href=&#34;https://agu2019.earthoutreach.org/booth&#34;&gt;https://agu2019.earthoutreach.org/booth&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;cluster&#34;&gt;clusteR:&lt;/h1&gt;
+&lt;h1 id=&#34;cluster&#34;&gt;&lt;strong&gt;clusteR:&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/ClusteR.PNG&#34; alt=&#34;&#34; /&gt;
 A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit.  The &amp;ldquo;installation&amp;rdquo; of this is the same as FOSSFlood.&lt;br /&gt;
@@ -1554,10 +1556,14 @@ A tool to add points to a map from csv or shapefile, and interactively cluster t
 2A) If you are using a csv, you need to set the LAT, LON, and Projection epsg.  Replace spaces with .&lt;br /&gt;
 3) Click run&lt;/p&gt;
 
-&lt;p&gt;Known bugs:&lt;br /&gt;
-Selecting fields which are too long or numeric will currently break it.  To fix, close the window and re-run the hta&lt;br /&gt;
-Legends can be too large for the window&lt;br /&gt;
-Editing the table is not fully tested&lt;/p&gt;
+&lt;p&gt;Known bugs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Selecting fields which are too long or numeric will currently break it.  To fix, close the window and re-run the hta&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Legends can be too large for the window&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Editing the table is not fully tested&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

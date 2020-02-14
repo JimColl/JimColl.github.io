@@ -378,13 +378,13 @@ Name:&lt;/p&gt;
   &lt;tr&gt;
     &lt;td class=&#34;tg-c3ow&#34; rowspan=&#34;2&#34;&gt;Your Model&lt;/td&gt;
     &lt;td class=&#34;tg-c3ow&#34;&gt;No Kudzu&lt;/td&gt;
-    &lt;td class=&#34;tg-dvpl&#34;&gt;(00)&lt;/td&gt;
+    &lt;td class=&#34;tg-dvpl&#34;&gt;A:(00)&lt;/td&gt;
     &lt;td class=&#34;tg-lqy6&#34;&gt;(10)&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td class=&#34;tg-c3ow&#34;&gt;Kudzu&lt;/td&gt;
     &lt;td class=&#34;tg-dvpl&#34;&gt;(01)&lt;/td&gt;
-    &lt;td class=&#34;tg-lqy6&#34;&gt;(11)&lt;/td&gt;
+    &lt;td class=&#34;tg-lqy6&#34;&gt;D:(11)&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
@@ -441,11 +441,12 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;sample2.shp&lt;/td&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;point file showing locations of known presence/absence of Kudzu (to be used for accuracy assessment)&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you are short on space, you only need the .mpk from part 2, the LANDSAT tiles are there for reproducibilities sake.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/table&gt;&lt;br /&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    If you are short on space, you only need the .mpk from part 2, the LANDSAT tiles are ~20 gigs and are provided for reproducibilities sake.
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -456,18 +457,16 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Open up a new ArcMap document.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &amp;gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;From the 1995 year, add in the green, NIR, MIR, and MTL images (Hint: &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&lt;/a&gt;)&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&amp;rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at &lt;a href=&#34;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&#34;&gt;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&lt;/a&gt; &lt;br&gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&lt;/a&gt;)&lt;br /&gt;
+&amp;gt; Hint: When performing the NDWI calculation, we refer to bands as their wavelength.  However, when distributing data the
+&lt;/br&gt;
+&amp;gt; A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&amp;rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at &lt;a href=&#34;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&#34;&gt;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&lt;/a&gt; &lt;br&gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Select all 4 images using shift-click, and right click &amp;gt; Group to place them in a group.  Slow click and rename this group to LS1995&lt;br /&gt;
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Finally, let&amp;rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select all 4 images using shift-click, and right click &amp;gt; Group to place them in a group.  Slow click and rename this group to LS1995&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finally, let&amp;rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;creating-an-area-of-interest-aoi&#34;&gt;&lt;strong&gt;Creating An Area of Interest (AOI)&lt;/strong&gt;&lt;/h2&gt;
@@ -550,14 +549,17 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 
 &lt;h2 id=&#34;creating-a-composite-image&#34;&gt;&lt;strong&gt;Creating a composite image&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.
-* Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.
-* ArcMap has a tool called &lt;strong&gt;Cell Statistics&lt;/strong&gt; which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &amp;gt; local
-* We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture05.png&#34; alt=&#34;&#34; /&gt;
-* I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the spring months.&lt;br /&gt;
-* Perform the NDWI calculation, thresholding, and area measurement as was performed above.
-* Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.&lt;/p&gt;
+&lt;p&gt;One of the downfalls that plague many passive remote sensing platforms is the inability to penetrate cloud cover.  Notice that although we didn’t happen to encounter cloud obfuscation in the first part of this lab, clouds are not uncommon.  Let’s use water year 2005 as an example.  I’ve taken the liberty of downloading and setting up your ArcMap document and data for you.  Just download the Map package and double click to open.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Because land/water has a lower reflectance across all bands as opposed to clouds, one of the simplest and most effective means of filtering out cloud cover is to take the local minimum from a raster stack.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;ArcMap has a tool called &lt;strong&gt;Cell Statistics&lt;/strong&gt; which performs statistics for local operations.  Either use the search tool or find it in Spatial Analyst Tools &amp;gt; local.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;We want to calculate the minimum of each band within the 4 seasons.  Using band 4 for the winter as an example, the inputs should look like so:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture05.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;I have gone ahead and taken the minimum of 3 of the 4 seasons. So you only need to calculate the minimums for the spring months.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Perform the NDWI calculation, thresholding, and area measurement as was performed above.&lt;/li&gt;
+&lt;li&gt;Answer questions 4 and 5 in the handout.  Save and close Arcmap, we’re done looking at the lake for now.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 
@@ -566,23 +568,23 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 &lt;h2 id=&#34;establishing-the-model-parameters&#34;&gt;&lt;strong&gt;Establishing the model parameters&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Start ArcMap and add sanpre25k, usfrost25k, and sample1 from your lab02\Part03 folder&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;extracting data for building Kudzu distribution model&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Open the attribute table for &lt;em&gt;sample1&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Start ArcMap and add &lt;i&gt;sanpre25k&lt;/i&gt;, &lt;i&gt;usfrost25k&lt;/i&gt;, and &lt;i&gt;sample1&lt;/i&gt; from your lab02\Part03 folder.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;extracting data for building Kudzu distribution model.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Open the attribute table for &lt;em&gt;sample1&lt;/em&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;The numbers in the “KUDZU” field represent presence or absence of Kudzu at that point (1 for presence, 0 for absence)&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;You want to find the minimum annual precipitation (in mm) and the minimum frost-free days at each of these points. This information will be your source of input for modeling potential Kudzu distribution across the U.S.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Close the attribute table&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;ArcToolbox contains an &lt;strong&gt;Extract values to points&lt;/strong&gt; tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value&lt;/li&gt;
-&lt;li&gt;In the Spatial Analyst Toolbox &amp;gt;Extraction &amp;gt; &lt;strong&gt;Extract values to points&lt;/strong&gt; tool&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest&lt;/li&gt;
-&lt;li&gt;Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file)&lt;/li&gt;
-&lt;li&gt;Set your Input raster to usanpre25k&lt;/li&gt;
-&lt;li&gt;Set Output point features so that it saves the new file called sample1precip to your lab02\Part03 folder&lt;/li&gt;
-&lt;li&gt;Click OK (Be patient. This may take a while.)&lt;/li&gt;
-&lt;li&gt;Your new point file will appear in the ArcMap Table of Contents&lt;/li&gt;
-&lt;li&gt;Open the attribute table for &lt;em&gt;sample1precip&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Close the attribute table.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;ArcToolbox contains an &lt;strong&gt;Extract values to points&lt;/strong&gt; tool that will add the value of a raster to a set of points. It then creates a new point file with an attribute holding that raster value.&lt;/li&gt;
+&lt;li&gt;In the Spatial Analyst Toolbox &amp;gt;Extraction &amp;gt; &lt;strong&gt;Extract values to points&lt;/strong&gt; tool.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;This tool requires three inputs and has two optional ones. You can find out more information about each of the inputs (this applies to other ArcTools as well) by clicking on the Show Help button and then clicking on the field of interest.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Set your Input point features to sample1 (You can either use the drop-down that shows all the point layers in the ArcMap Table of Contents or the Browse file button to navigate to the file).&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Set your Input raster to &lt;em&gt;usanpre25k&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Set Output point features so that it saves the new file called sample1precip to your lab02\Part03 folder.&lt;/li&gt;
+&lt;li&gt;Click OK (Be patient. This may take a while.).&lt;/li&gt;
+&lt;li&gt;Your new point file will appear in the ArcMap Table of Contents.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Open the attribute table for &lt;em&gt;sample1precip&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Notice the new variable called RASTERVALU that contains the annual precipitation amount for that point&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Repeat the above steps&lt;/strong&gt; to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it &lt;em&gt;sample1frost&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repeat the above steps&lt;/strong&gt; to create a similar point file containing a RASTERVALU attribute for frost-free days at each point. Call it &lt;em&gt;sample1frost&lt;/em&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -594,7 +596,7 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Open the attribute tables of your samples and perform an attribute query to select only those points with known Kudzu presence (“KUDZU” = 1)&lt;/li&gt;
 &lt;li&gt;Show only the selected records using the table toggle button.&lt;/li&gt;
-&lt;li&gt;Sort in ascending order the RASTERVALU field (R-Click on column heading)
+&lt;li&gt;Sort in ascending order the RASTERVALU field (R-Click on column heading).
 Answer #6 and #7 on your answer sheet&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -602,24 +604,24 @@ Answer #6 and #7 on your answer sheet&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Create new grids based on the usanpre25k and usfrost25k grid using Raster Calculator&lt;/li&gt;
-&lt;li&gt;usanpre25k &amp;gt;= minimum value** (**Minimum Value in question 6)&lt;/li&gt;
-&lt;li&gt;From the usanpre25k, the new grid cells with an annual precipitation greater than or equal to the minimum annual precipitation will have a value of 1, while cells with an annual precipitation less than the minimum value will have a value of 0&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;&lt;i&gt;usanpre25k&lt;/i&gt; &amp;gt;= minimum value&lt;/mark&gt;** (**Minimum Value in question 6)&lt;/li&gt;
+&lt;li&gt;From the &lt;i&gt;usanpre25k&lt;/i&gt;, the new grid cells with an annual precipitation greater than or equal to the minimum annual precipitation will have a value of 1, while cells with an annual precipitation less than the minimum value will have a value of 0&lt;/li&gt;
 &lt;li&gt;Save the grid as precipitation in your lab02\part03 folder&lt;/li&gt;
-&lt;li&gt;usfrost25k &amp;gt;= minimum value** (**Minimum Value in question 7)&lt;/li&gt;
-&lt;li&gt;From the usfrost25k, the new grid cells with a frost-free-days greater than or equal to the minimum frost-free-days will have a value of 1, while cells with a frost-free-days less than the minimum frost-free-days will have a value of 0&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;&lt;i&gt;usfrost25k&lt;/i&gt; &amp;gt;= minimum value&lt;/mark&gt;** (**Minimum Value in question 7)&lt;/li&gt;
+&lt;li&gt;From the &lt;i&gt;usfrost25k&lt;/i&gt;, the new grid cells with a frost-free-days greater than or equal to the minimum frost-free-days will have a value of 1, while cells with a frost-free-days less than the minimum frost-free-days will have a value of 0&lt;/li&gt;
 &lt;li&gt;Save the grid as frost in your lab02\part03 folder&lt;/li&gt;
-&lt;li&gt;Predict the Kudzu U.S. distribution by multiplying the precipitation and frost grids. Save the output grid as kudzu_model
+&lt;li&gt;Predict the Kudzu U.S. distribution by multiplying the precipitation and frost grids. Save the output grid as &lt;i&gt;kudzu_model&lt;/i&gt;.&lt;br /&gt;
 Answer #8 on your answer sheet&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;assessing-the-model&#34;&gt;&lt;strong&gt;Assessing the model&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Add sample2 to your ArcMap Table of Contents&lt;/li&gt;
-&lt;li&gt;Using the Extract values to points tool you now want to create a new point shapefile called sample2check that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)&lt;/li&gt;
+&lt;li&gt;Add &lt;i&gt;sample2&lt;/i&gt; to your ArcMap Table of Contents&lt;/li&gt;
+&lt;li&gt;Using the Extract values to points tool you now want to create a new point shapefile called &lt;i&gt;sample2check&lt;/i&gt; that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;After you have created sample2check you can quantify your accuracy in one of many ways.  Here are two suggestions:&lt;/p&gt;
+&lt;p&gt;After you have created &lt;i&gt;sample2check&lt;/i&gt; you can quantify your accuracy in one of many ways.  Here are two suggestions:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Add a new field named check and perform the following calculation: &lt;mark&gt;&lt;em&gt;check = [RASTERVALU] * 10 + [KUDZU]&lt;/em&gt;&lt;/mark&gt;.  The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)&lt;br /&gt;&lt;/li&gt;
@@ -1018,10 +1020,13 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;part-4-lake-edge-detection&#34;&gt;&lt;strong&gt;Part 4: Lake Edge Detection&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:&lt;br /&gt;
-* &lt;em&gt;AOI&lt;/em&gt; shapefile
-* lake body classifications (&lt;i&gt;…NDWI_#.TIF&lt;/i&gt;) )for 1995, 2003, and 2009.
-* The RGB file for each year&lt;/p&gt;
+&lt;p&gt;Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;AOI&lt;/em&gt; shapefile&lt;/li&gt;
+&lt;li&gt;lake body classifications (&lt;i&gt;…NDWI_#.TIF&lt;/i&gt;) )for 1995, 2003, and 2009.&lt;/li&gt;
+&lt;li&gt;The RGB file for each year&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process&#34;&gt;&lt;strong&gt;Calculate the boundary of the lake in 1995 using a focal erosion process&lt;/strong&gt;&lt;/h2&gt;
 
@@ -1055,6 +1060,501 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab03Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab04/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-4-zonal-operations-tornado-siren-coverage-analysis-and-lake-volume-calculations&#34;&gt;&lt;strong&gt;Lab 4: Zonal Operations – Tornado Siren Coverage Analysis and Lake Volume Calculations&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;The first part of this lab requires writing a survey of the data and mapping technologies in the field that you are interested in (wildlife reserve, conservation, urban planning, forest resources, natural hazards, business, etc.), not limited to the data and mapping technologies covered in the lecture. This survey may include both traditional and new emerging datasets and/or mapping technologies that are used in the fields. The second part of the lab will download imagery and create a database that will be used for the next few labs.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 4: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt;&lt;br /&gt;
+Total Douglas County population:&lt;br /&gt;
+Number of people who can hear the tornado sirens:&lt;br /&gt;
+Number of people who cannot hear the tornado sirens:&lt;br /&gt;
+Percentage of the population that can hear the tornado sirens:&lt;br /&gt;
+Percentage of total population that cannot hear the tornado sirens:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: Your math should add up.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 2:&lt;/strong&gt;&lt;br /&gt;
+How much water did the lake gain over the time period:&lt;br /&gt;
+Which period did the volume grow the fastest, 1995-2003 or 2003-2009?&lt;br /&gt;
+Write a short (2-4 healthy paragraph) analysis regarding this process.  Some topics to touch on include how this analysis was performed.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Would you expect a significantly different answer if you tweaked the methods?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;What are the sources of error in this process?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;How can we address those, and the uncertainty they add to our analysis?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-elqtq-woul1krxdpwkmrjgkbs9bi9ywgsfjoavxwacklea-e-f22wwf&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/ElqTq-WOUl1KrxdPWkMRJGkBS9BI9yWgsfjoAvXWacKleA?e=f22wwF&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;censusblk.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;ensus blocks for Douglas County, Kansas&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;kansas2000censusblk.dbf&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Database file containing census data, including population per block group&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;sirens.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Point shapefile with locations of tornado sirens in Douglas County, KS&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;roads.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Douglas County Roads&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;countybnd.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Douglas County Boundary&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;BaseData&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Data downloaded in the first lab&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;…LakeBoundry.tif&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;NDWI threshold maps for 1995, 2003, and 2009&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1-tornado-siren-coverage&#34;&gt;&lt;strong&gt;Part 1: Tornado siren coverage&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;create-buffers&#34;&gt;&lt;strong&gt;Create Buffers&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In ArcMap, create a new empty map, and save your map document to your personal folder.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;i&gt;countybnd.shp&lt;/i&gt;, &lt;i&gt;roads.shp&lt;/i&gt;, &lt;i&gt;censusblk.shp&lt;/i&gt;, and &lt;i&gt;sirens.shp&lt;/i&gt; from your Part1 folder to the empty arcmap.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Create buffers around the sirens using the &lt;strong&gt;buffer&lt;/strong&gt; tool and the following settings:&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Input Features: &lt;em&gt;sirens&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Output Features: &lt;i&gt;sirens_buffer.shp&lt;/i&gt; (make sure to save in your Part1 folder)&lt;/li&gt;
+&lt;li&gt;Linear Unit: 5800 feet&lt;/li&gt;
+&lt;li&gt;Dissolve Type: None&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Arrange layers so that you can see the siren points and buffers on top.&lt;/li&gt;
+&lt;li&gt;Let’s remove the common polygon lines in the buffers. In ArcToolbox go to Data Management Tools | Generalization | &lt;strong&gt;Dissolve&lt;/strong&gt;. Use the following settings:
+
+&lt;ul&gt;
+&lt;li&gt;Input Features: &lt;i&gt;sirens_buffer&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Output Features: &lt;i&gt;sirens_buffer_dissolve.shp&lt;/i&gt; (make sure to save in your Part1 folder)&lt;/li&gt;
+&lt;li&gt;Change the symbology of the layers to the colors and symbols of your choice, and arrange the layers accordingly.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Notice that you could have just used the dissolve type parameter in the buffer tool, but now you know where both are :)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;finding-the-percentage-of-population-covered-by-sirens&#34;&gt;&lt;strong&gt;Finding the Percentage of Population Covered by Sirens&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add &lt;i&gt;kansas2000censusblk.dbf&lt;/i&gt; to the data frame.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Right-click the &lt;i&gt;censusblk&lt;/i&gt; layer, select Joins and Relates, and select Join. Join the layer to &lt;i&gt;kansas2000censusblk.dbf&lt;/i&gt; using the STFID field.&lt;/li&gt;
+&lt;li&gt;Examine the attribute table of &lt;i&gt;censusblk&lt;/i&gt; to make sure the join was successful. Do you see all sorts of demographic attributes? If so, the join was successful.&lt;/li&gt;
+&lt;li&gt;Right-click the header of the &lt;i&gt;POP2000&lt;/i&gt; attribute and select Statistics. The sum value is the number of people in Douglas County. Record the value somewhere, as you will be entering this into the comments section of your Blackboard submission. Close the window.&lt;/li&gt;
+&lt;li&gt;Use Select by Location… to select the census blocks that are within the buffer zone.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Use the are completely within the source layer feature setting. The result should be 1,590 census blocks selected.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Find the population in these census blocks by opening the &lt;i&gt;censusblk&lt;/i&gt; attribute table, right- clicking the &lt;i&gt;POP2000&lt;/i&gt; attribute header, and selecting Statistics. (It will only give you statistics on the selected records.) Record this number.&lt;/li&gt;
+&lt;li&gt;Find the population out of the range of sirens by clicking Table Options (upper left corner of the attribute table), selecting Switch Selection, and then using the &lt;strong&gt;Statistics&lt;/strong&gt; tool again. Record this number.&lt;/li&gt;
+&lt;li&gt;Switch the selection back (i.e., back to the blocks within range of the sirens) and close the attribute table.&lt;/li&gt;
+&lt;li&gt;Answer the part 1 questions.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-2-lake-volume-estimations&#34;&gt;&lt;strong&gt;Part 2: Lake Volume estimations&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Open your Lab 2 Part 1 mxd or create a data frame/document.  This document should have:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AOI shapefile.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;lake boundary classifications &lt;i&gt;(…NDWI_#.TIF)&lt;/i&gt; )for 1995, 2003, and 2009.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;The RGB file for each year&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;The elevation data&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;isolate-the-lake-boundary&#34;&gt;&lt;strong&gt;Isolate the lake boundary&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The more preferable way to do this is to use region groups, a tool you will cover in much more depth later in the semester.  For now, just know that it groups clusters of raster pixels into unique groups.
+
+&lt;ul&gt;
+&lt;li&gt;Use the &lt;i&gt;…LakeBoundary.tif&lt;/i&gt; as the input raster&lt;/li&gt;
+&lt;li&gt;Save the output raster as &lt;i&gt;…groups.tif&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Use Eight connectivity&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the identify tool to pick out the value of the lake edge&lt;/li&gt;
+&lt;li&gt;Use the raster calculator to create a zone of just that value.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: mine looks like &lt;mark&gt;&lt;i&gt;&amp;ldquo;LT05_L1TP_008067_19950622_20170109_01_T1_LakeBoundry_Group.TIF&amp;rdquo; == 10&lt;/i&gt;&lt;/mark&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Overwrite your lake boundary raster&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-height-the-water-rises-to-on-the-terrain&#34;&gt;&lt;strong&gt;Calculate the height the water rises to on the terrain&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;We will use zonal statistics and our newly created zone to calculate the (insert statistic here) value of the elevation data.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the newly created lake boundary as our zonal definition.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;We want the statistics from the elevation data.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Choose a statistic, I chose maximum but feel free to explore other options.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeBoundary_ZonalStat.tif&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This output is the “elevation” of the water, we then need to place this value in a raster that we can subtract from the DEM to calculate a lake depth at each pixel&lt;/p&gt;
+
+&lt;h2 id=&#34;create-the-lake-surface-elevation&#34;&gt;&lt;strong&gt;Create the lake surface elevation&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;We need to use the same process as above to pick out just the lake (i.e. &lt;mark&gt;&lt;i&gt;(&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 10) | (&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 12)&lt;/i&gt;&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeRaster.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We then need to use the reclassify tool to turn the binary lake classification into a lake elevation&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Turn 0’s into NoData.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Turn 1’s into the value of the zonal statistic output calculated in the previous step.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeSurface.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-lake-depth-and-the-lake-volume&#34;&gt;&lt;strong&gt;Calculate the lake depth and the lake volume&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;We now need to subtract our two surfaces&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hint: RasterCalcuator(lakeSurface – Elevation)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeDepth.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;li&gt;Examine the attribute table of the subtraction grid (R-click on &lt;i&gt;LakeDepth&lt;/i&gt; | Open Attribute Table).
+&lt;li&gt;Click the Select by Attribute button and select cells with an elevation difference greater than 0.
+&lt;li&gt;Export selected cells (Table Options | Export…) as a dBASE Table file named &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt;.
+&lt;li&gt;When asked if you want to add the table to your map, select Yes&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you cannot see &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt; in your Table of Contents, you will need to switch to List By Source view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;li&gt;Open &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt; (R-click | Open)
+&lt;li&gt;Add a new field (Table Options | Add Field) and&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set the name to &lt;i&gt;Area&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;type to float&lt;/li&gt;
+&lt;li&gt;precision to 16&lt;/li&gt;
+&lt;li&gt;scale to 1 and then click OK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;li&gt;Calculate the surface area of &lt;i&gt;LakeDepth1995&lt;/i&gt; using the following equation, &lt;mark&gt;&lt;i&gt;area = # of cells (count) * length of cell * width of cell&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint #1: (R-click column to be calculated, choose Field Calculator… if asked about calculating outside an Editing session, click Yes)
+&lt;br&gt;
+Hint #2: the length and width of the cell comes from the cell size of the grid, since the cells are square, the values are the same.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;li&gt;Add a new field and&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set the name to &lt;i&gt;cell_vol&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;type to float&lt;/li&gt;
+&lt;li&gt;precision to 16&lt;/li&gt;
+&lt;li&gt;scale to 1 and then click OK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;li&gt;Calculate the volume per cell of &lt;i&gt;LakeDepth1995&lt;/i&gt; using the following equation: &lt;mark&gt;&lt;i&gt;cell_vol = depth (i.e., Value) * length of cell * width of cell&lt;/i&gt;&lt;/mark&gt;
+&lt;li&gt;Add a new field and&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set the name to &lt;i&gt;total_vol&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;type to float&lt;/li&gt;
+&lt;li&gt;precision to 16&lt;/li&gt;
+&lt;li&gt;scale to 1 and then click OK
+&lt;li&gt;Calculate the total volume of &lt;i&gt;LakeDepth1995&lt;/i&gt; using the following equation: &lt;mark&gt;&lt;i&gt;total_vol = volume per cell (cell_vol) * total number of cells (count)&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You will need to perform this process twice more for 2003 and 2009, answer the part 2 questions, and submit both parts to Blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab05/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-5-model-builder&#34;&gt;&lt;strong&gt;Lab 5 - Model Builder&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to this Google Sheet.&lt;/p&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;BaseData&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Data we downloaded as part of lab 1&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1-performing-our-analysis-for-one-year&#34;&gt;&lt;strong&gt;Part 1: Performing our analysis for one year&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;part-1a&#34;&gt;&lt;strong&gt;Part 1A:&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;getting-set-up&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;First let’s lay down the foundation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcMap and make sure that the Spatial Analyst extension is activated, and overwriting files is enabled.
+
+&lt;ul&gt;
+&lt;li&gt;Customize &amp;gt; Extensions &amp;amp; ArcMap options.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Rename the default data frame to Base Data and add in the AOI, Bands 2 and 4, and the MTL file for each year.&lt;/li&gt;
+&lt;li&gt;To force our model to calculate everything using a consistent grid size, change the Geoprocessing &amp;gt; Environments settings to the following:
+
+&lt;ul&gt;
+&lt;li&gt;Workspace: Set both the Current workspace and Scratch workspaces to your lab05 folder.&lt;/li&gt;
+&lt;li&gt;Processing Extent: Use the folder icon and point it to your AOI shapefile.  Use the folder icon next to snap raster to select the elevation dataset.&lt;/li&gt;
+&lt;li&gt;Raster Analysis: Select As specified below and type in 30.&lt;/li&gt;
+&lt;li&gt;Click OK.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As you discovered in lab 4, the region group tool was useful in creating a raster we could use to select the desired areas.  However, the region values were random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” to classify which of the NDWI zones we want.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-the-lakeseed-shapefile&#34;&gt;&lt;strong&gt;Create the LakeSeed shapefile&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the ArcCatalogue window right click on the Lab 5 folder and create a new feature class.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Call the class LakeSeed and make it a point feature.  Click next.&lt;/li&gt;
+&lt;li&gt;Use the Layers box to select the correct projection.  Click next until you reach the Field Names category.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In the first empty Field Name box, type in VALUE and change the Data Type to Short Integer.  In the field properties you can set the default value to 1.  Click Finish.  The layer should be added to your window.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;On the Editor toolbar, click Editor &amp;gt; Start Editing.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In the Create Features window, click LakeSeed and choose the point tool.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Create a single feature that will “intersect” all lake layers through time, so the center of the smallest lake extent is best.&lt;/li&gt;
+&lt;li&gt;When finished, click editor &amp;gt;  stop editing and save edits.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1b&#34;&gt;&lt;strong&gt;Part 1B&lt;/strong&gt;:&lt;/h1&gt;
+
+&lt;h2 id=&#34;calculate-and-threshold-ndwi-in-one-expression&#34;&gt;&lt;strong&gt;Calculate and threshold NDWI (in one expression)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that what we want to classify as a lake has a 0 vale, and everything else has a value of 1, for reasons that will become apparent further below.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;1995\LT05_&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B4.TIF&amp;rdquo;) / Float(&amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; + &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;_B4.TIF&amp;rdquo;))  &amp;lt;= 0.3&lt;/mark&gt;&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Call the output &lt;i&gt;NDWI_yyyy&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;use-the-lakeseed-to-isolate-just-the-ndwi-zone-we-want&#34;&gt;&lt;strong&gt;Use the LakeSeed to isolate just the NDWI zone we want&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;We will cover cost distance in much more detail after spring break, so here we will just introduce the concept.  Imagine that we have a friction layer as a raster.  A cost distance raster will tell you the minimum “cost” (often distance, but can be in therms of resources) required to reach a particular cell from a “source”.  In our case, the reversal of the comparison above made cells which are water cost 0 to travel over, and everything else received a value of 1.  Therefore, if we use the cost distance raster with a raster calculation expression picking out the cells with values of 0, we’ll have isolated the lake from the other, erroneously classified cells.  Take some time after performing this step to examine the underlying data and outputs to see how this works.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the search bar to find the Cost Distance tool.&lt;/li&gt;
+&lt;li&gt;The source data is the &lt;i&gt;LakeSeedRas&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;The input cost raster is the &lt;i&gt;NDWI_1995&lt;/i&gt; layer.&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;COST_1995&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Set the maximum distance to 0.01(something small), so that we only end up with the lake area that can be reached without crossing a land barrier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process-as-per-lab-3&#34;&gt;&lt;strong&gt;Calculate the boundary of the lake in 1995 using a focal erosion process (as per lab 3)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;strong&gt;Focal statistics&lt;/strong&gt; tool, calculate the focal minimum using a rectangular 3x3 grid&lt;/li&gt;
+&lt;li&gt;The input should be the &lt;i&gt;Lake_1995&lt;/i&gt; layer&lt;/li&gt;
+&lt;li&gt;Save the output &lt;i&gt;Lake_Fmin.TIF&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Set the statistic type to mode&lt;/li&gt;
+&lt;li&gt;Using &lt;strong&gt;raster calculator&lt;/strong&gt;, subtract the focal min raster from the lake classification raster to get just the boundary.&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;&lt;i&gt;&amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_FMin.TIF&amp;rdquo;&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Save the output of the map as &lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-height-the-water-rises-to-on-the-terrain-lab-4&#34;&gt;&lt;strong&gt;Calculate the height the water rises to on the terrain (Lab 4)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;We will use &lt;strong&gt;zonal statistics as table&lt;/strong&gt; and our newly created zone to calculate the (insert statistic here) value of the elevation data.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the lake boundary (&lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;) as our zonal definition&lt;/li&gt;
+&lt;li&gt;We want the statistics from the elevation data, so that goes in the “Input Value Raster” box&lt;/li&gt;
+&lt;li&gt;Choose a statistic, I chose maximum but feel free to explore other options&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeBoundary_ZonalStat&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;create-the-lake-surface-raster-lab-4&#34;&gt;&lt;strong&gt;Create the lake surface raster (Lab 4)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Use the *reclass by table** function (spatial analyst) to reclassify the &lt;i&gt;lake_1995&lt;/i&gt; raster into a lake surface raster.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your input raster is &lt;i&gt;Lake_1995&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Your remap table is the table created from zonal statistics as table (&lt;i&gt;LakeBoundary_ZonalStat&lt;/i&gt;)&lt;/li&gt;
+&lt;li&gt;The From, to, and output value should fill in automatically&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;IntLakeSurface.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;b. Use Raster Calculator We need just the lake elevations so we can mask out the appropriate cells by simply multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set Null function.  The Set Null(,) function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output raster as LakeSurface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-volume-as-per-lab-4&#34;&gt;&lt;strong&gt;Calculate the volume (as per lab 4)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Subtract the Lake Surface from the DEM using the &lt;strong&gt;raster calculator&lt;/strong&gt; tool
+
+&lt;ul&gt;
+&lt;li&gt;Save the output as &lt;i&gt;LakeVolume.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Add field&lt;/strong&gt; tool (data management) to create a new field
+
+&lt;ul&gt;
+&lt;li&gt;Call it volume&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Calculate Field&lt;/strong&gt; tool to calculate the volume of each cell
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Depth(Value) * area (30*30) * Count&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;summery table&lt;/strong&gt; to create a table of volume&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This process was time consuming, and the only thing that changes in this workflow (once we’ve chosen a place to analyses), is the input bands.  This repetitious task is best completed using a function.  In ArcMap, functions can take the form of tools, and the visual programming interface called Model Builder.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-2-creating-the-model&#34;&gt;&lt;strong&gt;PART 2: Creating the model&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;creating-a-toolbox-and-model&#34;&gt;&lt;strong&gt;Creating a toolbox and model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Right click in the table of contents and create a new &amp;gt; toolbox.  Name it &lt;i&gt;LakeVolumeAnalysis.tbx&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Right click on the toolbox and create a new &amp;gt; model.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Right click on the model and&lt;/li&gt;
+&lt;li&gt;In the general tab rename the model &lt;i&gt;LakeVolumeForAYear&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Set up the environments as before&lt;/li&gt;
+&lt;li&gt;Remove all layers from the map&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;starting-a-model&#34;&gt;&lt;strong&gt;Starting a model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the add data button to add in the band 2 and band 4 rasters&lt;/li&gt;
+&lt;li&gt;Right click on the resulting oval and rename it to Band 2 and 4 respectively&lt;/li&gt;
+&lt;li&gt;Right click on it and set it as a model parameter.  Notice that this puts a small P in the upper right hand corner.&lt;/li&gt;
+&lt;li&gt;Insert a new variable with insert &amp;gt; create variable
+
+&lt;ul&gt;
+&lt;li&gt;Select Double&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Double click on it and give it a default value of 0.3&lt;/li&gt;
+&lt;li&gt;Right click on it and make it a parameter&lt;/li&gt;
+&lt;li&gt;Use the search function to drag in the raster calculator tool into the model builder canvas&lt;/li&gt;
+&lt;li&gt;Double click on the raster calculator tool and fill it out using the steps above.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;%1995 B2%&amp;rdquo; - &amp;ldquo;%1995 B4%&amp;rdquo;) / Float(&amp;ldquo;%1995 B2%&amp;rdquo; + &amp;ldquo;%1995 B4%&amp;rdquo;)) &amp;lt;= float(%Double%)&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;NDWI.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;build-the-rest-of-the-workflow&#34;&gt;&lt;strong&gt;Build the rest of the workflow&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools.  Your final model should look like this:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+Use your new model to create a chart of the lake volume change over time like so:
+ &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture04.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+Submit an image of both your analysis and a screenshot of your model to blackboard.&lt;/p&gt;
 </description>
     </item>
     

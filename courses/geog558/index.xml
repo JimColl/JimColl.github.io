@@ -378,13 +378,13 @@ Name:&lt;/p&gt;
   &lt;tr&gt;
     &lt;td class=&#34;tg-c3ow&#34; rowspan=&#34;2&#34;&gt;Your Model&lt;/td&gt;
     &lt;td class=&#34;tg-c3ow&#34;&gt;No Kudzu&lt;/td&gt;
-    &lt;td class=&#34;tg-dvpl&#34;&gt;A:(00)&lt;/td&gt;
-    &lt;td class=&#34;tg-lqy6&#34;&gt;(10)&lt;/td&gt;
+    &lt;td class=&#34;tg-dvpl&#34;&gt;D:(00)&lt;/td&gt;
+    &lt;td class=&#34;tg-lqy6&#34;&gt;B:(10)&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td class=&#34;tg-c3ow&#34;&gt;Kudzu&lt;/td&gt;
-    &lt;td class=&#34;tg-dvpl&#34;&gt;(01)&lt;/td&gt;
-    &lt;td class=&#34;tg-lqy6&#34;&gt;D:(11)&lt;/td&gt;
+    &lt;td class=&#34;tg-dvpl&#34;&gt;C:(01)&lt;/td&gt;
+    &lt;td class=&#34;tg-lqy6&#34;&gt;A:(11)&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
@@ -457,16 +457,21 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Open up a new ArcMap document.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &amp;gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&lt;/a&gt;)&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&lt;/a&gt;)&lt;br /&gt;
-&amp;gt; Hint: When performing the NDWI calculation, we refer to bands as their wavelength.  However, when distributing data the
+&lt;blockquote&gt;
+&lt;p&gt;Hint#1: When performing the NDWI calculation, we refer to bands based their wavelength (e.g. green, NIR).  However, when distributing data the bands are referred to by their number based on sensor properties (so in our case, LANDSAT 5 TM has 7 bands and change).&lt;br /&gt;
 &lt;/br&gt;
-&amp;gt; A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&amp;rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at &lt;a href=&#34;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&#34;&gt;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&lt;/a&gt; &lt;br&gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+Hint#2: A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&amp;rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at &lt;a href=&#34;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&#34;&gt;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&lt;/a&gt; &lt;br&gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;li&gt;&lt;p&gt;Select all 4 images using shift-click, and right click &amp;gt; Group to place them in a group.  Slow click and rename this group to LS1995&lt;br /&gt;
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Finally, let&amp;rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Select all 4 images using shift-click, and right click &amp;gt; Group to place them in a group.  Slow click and rename this group to LS1995&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Finally, let&amp;rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;creating-an-area-of-interest-aoi&#34;&gt;&lt;strong&gt;Creating An Area of Interest (AOI)&lt;/strong&gt;&lt;/h2&gt;
@@ -618,7 +623,7 @@ Answer #8 on your answer sheet&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Add &lt;i&gt;sample2&lt;/i&gt; to your ArcMap Table of Contents&lt;/li&gt;
-&lt;li&gt;Using the Extract values to points tool you now want to create a new point shapefile called &lt;i&gt;sample2check&lt;/i&gt; that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)&lt;/li&gt;
+&lt;li&gt;Using the Extract values to points tool you now want to create a new point shapefile called &lt;i&gt;sample2check&lt;/i&gt; that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using &lt;i&gt;kudzu_model&lt;/i&gt; as raster input)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;After you have created &lt;i&gt;sample2check&lt;/i&gt; you can quantify your accuracy in one of many ways.  Here are two suggestions:&lt;/p&gt;

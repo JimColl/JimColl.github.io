@@ -529,13 +529,13 @@ Name:</p>
   <tr>
     <td class="tg-c3ow" rowspan="2">Your Model</td>
     <td class="tg-c3ow">No Kudzu</td>
-    <td class="tg-dvpl">A:(00)</td>
-    <td class="tg-lqy6">(10)</td>
+    <td class="tg-dvpl">D:(00)</td>
+    <td class="tg-lqy6">B:(10)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">Kudzu</td>
-    <td class="tg-dvpl">(01)</td>
-    <td class="tg-lqy6">D:(11)</td>
+    <td class="tg-dvpl">C:(01)</td>
+    <td class="tg-lqy6">A:(11)</td>
   </tr>
 </table></p>
 
@@ -608,16 +608,21 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 <ul>
 <li>Open up a new ArcMap document.<br /></li>
 <li>First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.<br /></li>
+<li>From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a>)<br />
+<br /></li>
+</ul>
 
-<li><p>From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a>)<br />
-&gt; Hint: When performing the NDWI calculation, we refer to bands as their wavelength.  However, when distributing data the
+<blockquote>
+<p>Hint#1: When performing the NDWI calculation, we refer to bands based their wavelength (e.g. green, NIR).  However, when distributing data the bands are referred to by their number based on sensor properties (so in our case, LANDSAT 5 TM has 7 bands and change).<br />
 </br>
-&gt; A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at <a href="https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/">https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/</a> <br> <img src="/courses/geog558/media/Lab02Picture01.png" alt="" /></p></li>
+Hint#2: A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at <a href="https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/">https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/</a> <br> <img src="/courses/geog558/media/Lab02Picture01.png" alt="" /></p>
+</blockquote>
 
-<li><p>Select all 4 images using shift-click, and right click &gt; Group to place them in a group.  Slow click and rename this group to LS1995<br />
-<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /></p></li>
-
-<li><p>Finally, let&rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742</p></li>
+<ul>
+<li>Select all 4 images using shift-click, and right click &gt; Group to place them in a group.  Slow click and rename this group to LS1995<br />
+<img src="/courses/geog558/media/Lab02Picture02.png" alt="" /><br /></li>
+<li>Finally, let&rsquo;s find our lake using the go to xy tool and copy/pasting the lat/long in: -9.3970552,-77.3802742
+<br /></li>
 </ul>
 
 <h2 id="creating-an-area-of-interest-aoi"><strong>Creating An Area of Interest (AOI)</strong></h2>
@@ -769,7 +774,7 @@ Answer #8 on your answer sheet</li>
 
 <ul>
 <li>Add <i>sample2</i> to your ArcMap Table of Contents</li>
-<li>Using the Extract values to points tool you now want to create a new point shapefile called <i>sample2check</i> that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using kudzu_model as raster input)</li>
+<li>Using the Extract values to points tool you now want to create a new point shapefile called <i>sample2check</i> that will have an attribute of actual presence (KUDZU) and one for predicted presence (RASTERVALU found by using <i>kudzu_model</i> as raster input)</li>
 </ul>
 
 <p>After you have created <i>sample2check</i> you can quantify your accuracy in one of many ways.  Here are two suggestions:</p>

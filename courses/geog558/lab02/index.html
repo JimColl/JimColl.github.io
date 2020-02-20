@@ -693,11 +693,9 @@ $$MNDWI = \frac{Green-MIR}{Green+MIR}$$</li>
 <li>You’ve probably noticed by now, but the NDWI and MNDWI calculations return an image with valid values from -1 to 1, but this doesn’t tell us what is and is not water.  To do that we need to classify the image into a binary water/not water schema.  There are a variety of ways to do this that range in sophistication/robustness, but for our purposes, a simple threshold will suffice.  This means we want classify all pixels with a NDWI/MNDWI value greater than or less than some value into water.</li>
 <li>Use the identify button and poke around the image to find a good threshold.  I settled on 0.30</li>
 <li>Use the raster calculator to select the cells greater than 0.30, and append the name of the NDWI layer with the threshold value (_…NDWI<em>3.tif</em>).
-<img src="/courses/geog558/media/Lab02Picture04.png" alt="" /></li>
-<li>Examine both outputs.<br /></li>
+<img src="/courses/geog558/media/Lab02Picture04.png" alt="" />
+Examine the outputs (right click on the resulting layer and see the attribute table.)  You now have enough information to answer Questions 1 - 3 above.<br /></li>
 </ul>
-
-<p>You now have enough information to answer Questions 1 - 3 above.</p>
 
 <hr />
 
@@ -781,7 +779,7 @@ Answer #8 on your answer sheet</li>
 
 <ul>
 <li>Add a new field named check and perform the following calculation: <mark><em>check = [RASTERVALU] * 10 + [KUDZU]</em></mark>.  The Check field should have the following outputs: 0, 1, 10, and 11 (0 and 1 represent 00 and 01 respectively)<br /></li>
-<li>Perform attribute query using the AND operator (i.e. <mark><em>KUDZU = 1 AND RASTERVALUE = 1</em></mark>) 4 times, once for each possible combination.<br />
+<li>Perform attribute query using the AND operator 4 times, once for each possible combination.  (i.g. <mark><em>KUDZU = 1 AND RASTERVALUE = 0</em></mark>)
 <br /></li>
 </ul>
 

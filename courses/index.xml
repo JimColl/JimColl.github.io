@@ -1500,11 +1500,17 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;
-* First, a few from John Nelson, a phenomenal cartographer and writer.&lt;br /&gt;
-  * &lt;a href=&#34;https://adventuresinmapping.com/&#34;&gt;https://adventuresinmapping.com/&lt;/a&gt;&lt;br /&gt;
-  * &lt;a href=&#34;https://www.esri.com/arcgis-blog/author/j_nelson/&#34;&gt;https://www.esri.com/arcgis-blog/author/j_nelson/&lt;/a&gt;&lt;br /&gt;
-* &lt;a href=&#34;https://mikejohnson51.github.io/&#34;&gt;Mike Johnson&lt;/a&gt;: A data wizard and all around great dude.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First, a few from John Nelson, a phenomenal cartographer and writer.&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://adventuresinmapping.com/&#34;&gt;https://adventuresinmapping.com/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.esri.com/arcgis-blog/author/j_nelson/&#34;&gt;https://www.esri.com/arcgis-blog/author/j_nelson/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mikejohnson51.github.io/&#34;&gt;Mike Johnson&lt;/a&gt;: A data wizard and all around great dude.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;GIS Resources&lt;/strong&gt;&lt;/p&gt;
 
@@ -1560,6 +1566,7 @@ A tool to add points to a map from csv or shapefile, and interactively cluster t
 &lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Legends can be too large for the window&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Editing the table is not fully tested&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Spaces in filenames breaks it too apparently&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

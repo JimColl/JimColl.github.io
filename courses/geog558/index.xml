@@ -508,7 +508,7 @@ $$NDWI = \frac{Green-NIR}{Green+NIR}$$&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Extension warnings?  Did you take the time to read it?  You need to turn on spatial analysis under Customize &amp;gt; Extensions.&lt;/p&gt;
+&lt;p&gt;Extension warnings?  Did you take the time to read it?  Warnings are a chance to learn something and in this case you should learn that you need to turn on spatial analysis under Customize &amp;gt; Extensions.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -881,7 +881,9 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;hint: change your layer symbology to show unique values.&lt;/p&gt;
+&lt;p&gt;hint: change your layer symbology to show unique values.&lt;br /&gt;
+hint#2: Want to flex?  Label the rasters, it&amp;rsquo;s good cartography practice.
+Useful tools: Raster to points extract values to points.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -1067,13 +1069,12 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Move to layout view&lt;/li&gt;
-&lt;li&gt;Set the page dimensions to 11 in x 11&lt;/li&gt;
-&lt;li&gt;Use guides to set up 3 inch grids&lt;/li&gt;
+&lt;li&gt;Set the page dimensions to 11 in x 11 (File, page and print setup)&lt;/li&gt;
+&lt;li&gt;Use guides to set up 3 inch grids (click on the guides)&lt;/li&gt;
 &lt;li&gt;Right click on the data frames to copy them&lt;/li&gt;
 &lt;li&gt;Paste them in the frame and rename them to the appropriate place&lt;/li&gt;
 &lt;li&gt;Text can be rotated in the properties&lt;/li&gt;
-&lt;li&gt;To add grid lines, add the drawing toolbar&lt;/li&gt;
-&lt;li&gt;Right click on the grey area in the toolbar area and add the Drawing tools as necessary&lt;/li&gt;
+&lt;li&gt;To add grid lines, change the frame properties or using lines by adding the drawing toolbar (right click in the grey area as necessary)&lt;/li&gt;
 &lt;li&gt;Finally, export your map&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1347,232 +1348,6 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 &lt;/ul&gt;
 
 &lt;p&gt;You will need to perform this process twice more for 2003 and 2009, answer the part 2 questions, and submit both parts to Blackboard.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jimcoll.github.io/courses/geog558/lab05/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jimcoll.github.io/courses/geog558/lab05/</guid>
-      <description>
-
-&lt;h1 id=&#34;lab-5-model-builder&#34;&gt;&lt;strong&gt;Lab 5 - Model Builder&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.&lt;/p&gt;
-
-&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to this Google Sheet.&lt;/p&gt;
-
-&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
-&lt;/style&gt;
-&lt;table class=&#34;tg&#34;&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;BaseData&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Data we downloaded as part of lab 1&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;part-1-performing-our-analysis-for-one-year&#34;&gt;&lt;strong&gt;Part 1: Performing our analysis for one year&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h1 id=&#34;part-1a&#34;&gt;&lt;strong&gt;Part 1A:&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;getting-set-up&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;First let’s lay down the foundation.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Open ArcMap and make sure that the Spatial Analyst extension is activated, and overwriting files is enabled.
-
-&lt;ul&gt;
-&lt;li&gt;Customize &amp;gt; Extensions &amp;amp; ArcMap options.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Rename the default data frame to Base Data and add in the AOI, Bands 2 and 4, and the MTL file for each year.&lt;/li&gt;
-&lt;li&gt;To force our model to calculate everything using a consistent grid size, change the Geoprocessing &amp;gt; Environments settings to the following:
-
-&lt;ul&gt;
-&lt;li&gt;Workspace: Set both the Current workspace and Scratch workspaces to your lab05 folder.&lt;/li&gt;
-&lt;li&gt;Processing Extent: Use the folder icon and point it to your AOI shapefile.  Use the folder icon next to snap raster to select the elevation dataset.&lt;/li&gt;
-&lt;li&gt;Raster Analysis: Select As specified below and type in 30.&lt;/li&gt;
-&lt;li&gt;Click OK.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As you discovered in lab 4, the region group tool was useful in creating a raster we could use to select the desired areas.  However, the region values were random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” to classify which of the NDWI zones we want.&lt;/p&gt;
-
-&lt;h2 id=&#34;create-the-lakeseed-shapefile&#34;&gt;&lt;strong&gt;Create the LakeSeed shapefile&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In the ArcCatalogue window right click on the Lab 5 folder and create a new feature class.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Call the class LakeSeed and make it a point feature.  Click next.&lt;/li&gt;
-&lt;li&gt;Use the Layers box to select the correct projection.  Click next until you reach the Field Names category.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;In the first empty Field Name box, type in VALUE and change the Data Type to Short Integer.  In the field properties you can set the default value to 1.  Click Finish.  The layer should be added to your window.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;On the Editor toolbar, click Editor &amp;gt; Start Editing.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;In the Create Features window, click LakeSeed and choose the point tool.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Create a single feature that will “intersect” all lake layers through time, so the center of the smallest lake extent is best.&lt;/li&gt;
-&lt;li&gt;When finished, click editor &amp;gt;  stop editing and save edits.&lt;br /&gt;
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;part-1b&#34;&gt;&lt;strong&gt;Part 1B&lt;/strong&gt;:&lt;/h1&gt;
-
-&lt;h2 id=&#34;calculate-and-threshold-ndwi-in-one-expression&#34;&gt;&lt;strong&gt;Calculate and threshold NDWI (in one expression)&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that what we want to classify as a lake has a 0 vale, and everything else has a value of 1, for reasons that will become apparent further below.
-
-&lt;ul&gt;
-&lt;li&gt;Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;1995\LT05_&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B4.TIF&amp;rdquo;) / Float(&amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; + &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;_B4.TIF&amp;rdquo;))  &amp;lt;= 0.3&lt;/mark&gt;&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Call the output &lt;i&gt;NDWI_yyyy&lt;/i&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;use-the-lakeseed-to-isolate-just-the-ndwi-zone-we-want&#34;&gt;&lt;strong&gt;Use the LakeSeed to isolate just the NDWI zone we want&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;We will cover cost distance in much more detail after spring break, so here we will just introduce the concept.  Imagine that we have a friction layer as a raster.  A cost distance raster will tell you the minimum “cost” (often distance, but can be in therms of resources) required to reach a particular cell from a “source”.  In our case, the reversal of the comparison above made cells which are water cost 0 to travel over, and everything else received a value of 1.  Therefore, if we use the cost distance raster with a raster calculation expression picking out the cells with values of 0, we’ll have isolated the lake from the other, erroneously classified cells.  Take some time after performing this step to examine the underlying data and outputs to see how this works.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use the search bar to find the Cost Distance tool.&lt;/li&gt;
-&lt;li&gt;The source data is the &lt;i&gt;LakeSeedRas&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;The input cost raster is the &lt;i&gt;NDWI_1995&lt;/i&gt; layer.&lt;/li&gt;
-&lt;li&gt;Save the output as &lt;i&gt;COST_1995&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;Set the maximum distance to 0.01(something small), so that we only end up with the lake area that can be reached without crossing a land barrier.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process-as-per-lab-3&#34;&gt;&lt;strong&gt;Calculate the boundary of the lake in 1995 using a focal erosion process (as per lab 3)&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Using the &lt;strong&gt;Focal statistics&lt;/strong&gt; tool, calculate the focal minimum using a rectangular 3x3 grid&lt;/li&gt;
-&lt;li&gt;The input should be the &lt;i&gt;Lake_1995&lt;/i&gt; layer&lt;/li&gt;
-&lt;li&gt;Save the output &lt;i&gt;Lake_Fmin.TIF&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Set the statistic type to mode&lt;/li&gt;
-&lt;li&gt;Using &lt;strong&gt;raster calculator&lt;/strong&gt;, subtract the focal min raster from the lake classification raster to get just the boundary.&lt;/li&gt;
-&lt;li&gt;&lt;mark&gt;&lt;i&gt;&amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05_L1TP_008067_19950622_20170109_01_T1_NDWI_FMin.TIF&amp;rdquo;&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Save the output of the map as &lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;calculate-the-height-the-water-rises-to-on-the-terrain-lab-4&#34;&gt;&lt;strong&gt;Calculate the height the water rises to on the terrain (Lab 4)&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;We will use &lt;strong&gt;zonal statistics as table&lt;/strong&gt; and our newly created zone to calculate the (insert statistic here) value of the elevation data.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use the lake boundary (&lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;) as our zonal definition&lt;/li&gt;
-&lt;li&gt;We want the statistics from the elevation data, so that goes in the “Input Value Raster” box&lt;/li&gt;
-&lt;li&gt;Choose a statistic, I chose maximum but feel free to explore other options&lt;/li&gt;
-&lt;li&gt;Save the output as &lt;i&gt;…LakeBoundary_ZonalStat&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;create-the-lake-surface-raster-lab-4&#34;&gt;&lt;strong&gt;Create the lake surface raster (Lab 4)&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Use the *reclass by table** function (spatial analyst) to reclassify the &lt;i&gt;lake_1995&lt;/i&gt; raster into a lake surface raster.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Your input raster is &lt;i&gt;Lake_1995&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;Your remap table is the table created from zonal statistics as table (&lt;i&gt;LakeBoundary_ZonalStat&lt;/i&gt;)&lt;/li&gt;
-&lt;li&gt;The From, to, and output value should fill in automatically&lt;/li&gt;
-&lt;li&gt;Save the output as &lt;i&gt;IntLakeSurface.tif&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;b. Use Raster Calculator We need just the lake elevations so we can mask out the appropriate cells by simply multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set Null function.  The Set Null(,) function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Save the output raster as LakeSurface&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;calculate-the-volume-as-per-lab-4&#34;&gt;&lt;strong&gt;Calculate the volume (as per lab 4)&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Subtract the Lake Surface from the DEM using the &lt;strong&gt;raster calculator&lt;/strong&gt; tool
-
-&lt;ul&gt;
-&lt;li&gt;Save the output as &lt;i&gt;LakeVolume.tif&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Use the &lt;strong&gt;Add field&lt;/strong&gt; tool (data management) to create a new field
-
-&lt;ul&gt;
-&lt;li&gt;Call it volume&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Use the &lt;strong&gt;Calculate Field&lt;/strong&gt; tool to calculate the volume of each cell
-
-&lt;ul&gt;
-&lt;li&gt;Hint: Depth(Value) * area (30*30) * Count&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Use the &lt;strong&gt;summery table&lt;/strong&gt; to create a table of volume&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This process was time consuming, and the only thing that changes in this workflow (once we’ve chosen a place to analyses), is the input bands.  This repetitious task is best completed using a function.  In ArcMap, functions can take the form of tools, and the visual programming interface called Model Builder.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;part-2-creating-the-model&#34;&gt;&lt;strong&gt;PART 2: Creating the model&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;creating-a-toolbox-and-model&#34;&gt;&lt;strong&gt;Creating a toolbox and model&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Right click in the table of contents and create a new &amp;gt; toolbox.  Name it &lt;i&gt;LakeVolumeAnalysis.tbx&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Right click on the toolbox and create a new &amp;gt; model.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Right click on the model and&lt;/li&gt;
-&lt;li&gt;In the general tab rename the model &lt;i&gt;LakeVolumeForAYear&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Set up the environments as before&lt;/li&gt;
-&lt;li&gt;Remove all layers from the map&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;starting-a-model&#34;&gt;&lt;strong&gt;Starting a model&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use the add data button to add in the band 2 and band 4 rasters&lt;/li&gt;
-&lt;li&gt;Right click on the resulting oval and rename it to Band 2 and 4 respectively&lt;/li&gt;
-&lt;li&gt;Right click on it and set it as a model parameter.  Notice that this puts a small P in the upper right hand corner.&lt;/li&gt;
-&lt;li&gt;Insert a new variable with insert &amp;gt; create variable
-
-&lt;ul&gt;
-&lt;li&gt;Select Double&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Double click on it and give it a default value of 0.3&lt;/li&gt;
-&lt;li&gt;Right click on it and make it a parameter&lt;/li&gt;
-&lt;li&gt;Use the search function to drag in the raster calculator tool into the model builder canvas&lt;/li&gt;
-&lt;li&gt;Double click on the raster calculator tool and fill it out using the steps above.
-
-&lt;ul&gt;
-&lt;li&gt;Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;%1995 B2%&amp;rdquo; - &amp;ldquo;%1995 B4%&amp;rdquo;) / Float(&amp;ldquo;%1995 B2%&amp;rdquo; + &amp;ldquo;%1995 B4%&amp;rdquo;)) &amp;lt;= float(%Double%)&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Name the output &lt;i&gt;NDWI.tif&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;build-the-rest-of-the-workflow&#34;&gt;&lt;strong&gt;Build the rest of the workflow&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools.  Your final model should look like this:
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-Use your new model to create a chart of the lake volume change over time like so:
- &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture04.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-Submit an image of both your analysis and a screenshot of your model to blackboard.&lt;/p&gt;
 </description>
     </item>
     

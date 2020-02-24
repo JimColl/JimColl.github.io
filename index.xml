@@ -392,7 +392,11 @@ paginate = 10  # Number of items per page in paginated lists.
     copyright = &amp;quot;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The rest of that file is the remains of the aafu theme.  To get menus to work, my &lt;i&gt;/config/_default/menus.toml&lt;/i&gt; file looks like:&lt;/p&gt;
+&lt;p&gt;The rest of that file is the remains of the aafu theme.&lt;/p&gt;
+
+&lt;h3 id=&#34;adding-classes&#34;&gt;&lt;strong&gt;Adding classes&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;To get menus to work, my &lt;i&gt;/config/_default/menus.toml&lt;/i&gt; file looks like:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -429,32 +433,19 @@ paginate = 10  # Number of items per page in paginated lists.
   url = &amp;quot;/courses/dronemapping&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h3 id=&#34;make-it-your-own&#34;&gt;&lt;strong&gt;Make it your own&lt;/strong&gt;&lt;/h3&gt;
+
 &lt;p&gt;One of the best ways I&amp;rsquo;ve found to help improve my understanding of the sooftware/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the &lt;i&gt;themes\academic\layouts\partials\footer.toml&lt;/i&gt;.  Mine now looks like so:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;lt;footer class=&amp;quot;mb-4&amp;quot;&amp;gt;
-  &amp;lt;a href=&amp;quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&amp;quot;&amp;gt;
-    A &amp;quot;More traditional&amp;quot; resume
+  &amp;lt;a href=&amp;quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&amp;quot;&amp;gt;Download a &amp;quot;more traditional&amp;quot; resume
   &amp;lt;/a&amp;gt;
+  &amp;lt;/br&amp;gt;
+  powered by &amp;lt;a href=&amp;quot;https://gohugo.io/&amp;quot;&amp;gt;hugo&amp;lt;/a&amp;gt; &amp;amp; deployed on &amp;lt;a href=&amp;quot;https://github.com/&amp;quot;&amp;gt;github&amp;lt;/a&amp;gt;
   &amp;amp;middot;
-  &amp;lt;i&amp;gt;
-    &amp;lt;a href=&amp;quot;https://github.com/darshanbaral/aafu&amp;quot;&amp;gt;
-      aafu
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/i&amp;gt;
-  by
-  &amp;lt;a href=&amp;quot;https://www.darshanbaral.com/&amp;quot;&amp;gt;
-    darshan
-  &amp;lt;/a&amp;gt;
+  &amp;lt;i&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/darshanbaral/aafu&amp;quot;&amp;gt;aafu&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt; by &amp;lt;a href=&amp;quot;https://www.darshanbaral.com/&amp;quot;&amp;gt;Darshan&amp;lt;/a&amp;gt;
   &amp;amp; 
-  &amp;lt;i&amp;gt;
-    &amp;lt;a href=&amp;quot;https://github.com/gcushen/hugo-academic&amp;quot;&amp;gt;
-      Academic
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/i&amp;gt;
-  by
-  &amp;lt;a href=&amp;quot;https://georgecushen.com/&amp;quot;&amp;gt;
-    Cushen
-  &amp;lt;/a&amp;gt;
+  &amp;lt;i&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/gcushen/hugo-academic&amp;quot;&amp;gt;Academic&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt; by &amp;lt;a href=&amp;quot;https://georgecushen.com/&amp;quot;&amp;gt;George&amp;lt;/a&amp;gt;
 &amp;lt;/footer&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>

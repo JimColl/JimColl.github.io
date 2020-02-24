@@ -399,7 +399,11 @@
 <li><a href="#installing-hugo"><strong>Installing HUGO:</strong></a></li>
 <li><a href="#create-the-website"><strong>Create the website:</strong></a></li>
 <li><a href="#updating-your-website"><strong>Updating your website:</strong></a></li>
-<li><a href="#how-this-site-was-created"><strong>How this site was created:</strong></a></li>
+<li><a href="#how-this-site-was-created"><strong>How this site was created:</strong></a>
+<ul>
+<li><a href="#adding-classes"><strong>Adding classes</strong></a></li>
+<li><a href="#make-it-your-own"><strong>Make it your own</strong></a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -545,7 +549,11 @@ paginate = 10  # Number of items per page in paginated lists.
     copyright = &quot;&quot;
 </code></pre>
 
-<p>The rest of that file is the remains of the aafu theme.  To get menus to work, my <i>/config/_default/menus.toml</i> file looks like:</p>
+<p>The rest of that file is the remains of the aafu theme.</p>
+
+<h3 id="adding-classes"><strong>Adding classes</strong></h3>
+
+<p>To get menus to work, my <i>/config/_default/menus.toml</i> file looks like:</p>
 
 <pre><code class="language-markdown"># Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -582,32 +590,19 @@ paginate = 10  # Number of items per page in paginated lists.
   url = &quot;/courses/dronemapping&quot;
 </code></pre>
 
+<h3 id="make-it-your-own"><strong>Make it your own</strong></h3>
+
 <p>One of the best ways I&rsquo;ve found to help improve my understanding of the sooftware/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the <i>themes\academic\layouts\partials\footer.toml</i>.  Mine now looks like so:</p>
 
 <pre><code class="language-markdown">&lt;footer class=&quot;mb-4&quot;&gt;
-  &lt;a href=&quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&quot;&gt;
-    A &quot;More traditional&quot; resume
+  &lt;a href=&quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&quot;&gt;Download a &quot;more traditional&quot; resume
   &lt;/a&gt;
+  &lt;/br&gt;
+  powered by &lt;a href=&quot;https://gohugo.io/&quot;&gt;hugo&lt;/a&gt; &amp; deployed on &lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt;
   &amp;middot;
-  &lt;i&gt;
-    &lt;a href=&quot;https://github.com/darshanbaral/aafu&quot;&gt;
-      aafu
-    &lt;/a&gt;
-  &lt;/i&gt;
-  by
-  &lt;a href=&quot;https://www.darshanbaral.com/&quot;&gt;
-    darshan
-  &lt;/a&gt;
+  &lt;i&gt;&lt;a href=&quot;https://github.com/darshanbaral/aafu&quot;&gt;aafu&lt;/a&gt;&lt;/i&gt; by &lt;a href=&quot;https://www.darshanbaral.com/&quot;&gt;Darshan&lt;/a&gt;
   &amp; 
-  &lt;i&gt;
-    &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;
-      Academic
-    &lt;/a&gt;
-  &lt;/i&gt;
-  by
-  &lt;a href=&quot;https://georgecushen.com/&quot;&gt;
-    Cushen
-  &lt;/a&gt;
+  &lt;i&gt;&lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;&lt;/i&gt; by &lt;a href=&quot;https://georgecushen.com/&quot;&gt;George&lt;/a&gt;
 &lt;/footer&gt;
 </code></pre>
 

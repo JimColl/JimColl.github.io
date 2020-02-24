@@ -1562,11 +1562,10 @@ A tool to add points to a map from csv or shapefile, and interactively cluster t
 &lt;p&gt;Known bugs:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Selecting fields which are too long or numeric will currently break it.  To fix, close the window and re-run the hta&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Selecting fields which are too long or numeric will currently kills the crab.  To recover, close the window and re run the HTA&lt;/li&gt;
 &lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Legends can be too large for the window&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Editing the table is not fully tested&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Spaces in filenames breaks it too apparently&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

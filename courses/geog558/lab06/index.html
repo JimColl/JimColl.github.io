@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Lab 6 - More Model Builder Learning Objective This lab is designed to further strengthen your understanding and ability to apply local, focal, and zonal operations to solve problems and comfortability with ModelBuilder, this time in the context of delineating sea level rize. In part 1, you will walk through 2 methods of using the point and click interface to accomplish your analysis. In part 2, you will use ModelBuilder to accomplish this same task, and in part 3 you will see how you can import your own python analysis into ArcMap.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab06/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab06/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab06/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Lab 6 - More Model Builder Learning Objective This lab is designed to further strengthen your understanding and ability to apply local, focal, and zonal operations to solve problems and comfortability with ModelBuilder, this time in the context of delineating sea level rize. In part 1, you will walk through 2 methods of using the point and click interface to accomplish your analysis. In part 2, you will use ModelBuilder to accomplish this same task, and in part 3 you will see how you can import your own python analysis into ArcMap."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/">Class Outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab03/">Lab 3 - Focal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab04/">Lab 4 - Zonal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab05/">Lab 5 - Model Builder</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog558/lab06/">Lab 6 - Cost Distance, Region Groups, more Model Builder &amp; Python</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#lab-6-more-model-builder"><strong>Lab 6 - More Model Builder</strong></a></li>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#materials"><strong>Materials</strong></a></li>
+<li><a href="#part-1-delineating-sea-level-rise-inundation-with-arcmap"><strong>Part 1: Delineating Sea Level Rise Inundation with ArcMap</strong></a></li>
+<li><a href="#part-2-delineating-sea-level-rise-inundation-with-model-builder"><strong>Part 2: Delineating Sea Level Rise Inundation with Model Builder</strong></a>
+<ul>
+<li><a href="#set-up-the-folders-for-the-lab"><strong>Set up the folders for the lab</strong></a></li>
+<li><a href="#creating-a-toolbox-and-a-model"><strong>Creating a Toolbox and a Model</strong></a></li>
+<li><a href="#setting-up-the-workflow-building-the-inundationbyregiongroup-model"><strong>Setting up the Workflow &amp; Building the InundationByRegionGroup Model</strong></a></li>
+<li><a href="#saving-and-testing-your-whole-model"><strong>Saving and testing your whole model</strong></a></li>
+<li><a href="#now-recreate-the-cost-distance-approach"><strong>Now recreate the cost distance approach</strong></a></li>
+</ul></li>
+<li><a href="#part-3-sea-level-rise-inundation-delineation-with-python-scripting"><strong>Part 3: Sea Level Rise Inundation Delineation with Python Scripting</strong></a>
+<ul>
+<li><a href="#creating-a-script-tool"><strong>Creating a script tool</strong></a></li>
+<li><a href="#creating-a-custom-toolbox"><strong>Creating a custom toolbox</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="lab-6-more-model-builder"><strong>Lab 6 - More Model Builder</strong></h1>
+
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
+
+<p>This lab is designed to further strengthen your understanding and ability to apply local, focal, and zonal operations to solve problems and comfortability with ModelBuilder, this time in the context of delineating sea level rize.  In part 1, you will walk through 2 methods of using the point and click interface to accomplish your analysis.  In part 2, you will use ModelBuilder to accomplish this same task, and in part 3 you will see how you can import your own python analysis into ArcMap.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<hr />
+
+<p><strong>Lab 6: Answer Sheet</strong><br />
+Name:<br />
+1 How many pixels are inundated?</p>
+
+<p>2 While you’re building your models with model builder, you create several variables called model parameters that are shown with P letter next to their variables. What happens if you didn’t create those model parameters? What is the benefit of having the model parameters?</p>
+
+<p>3 In part 02 of the lab, list all the output layers after you Run Entire Model in the ‘InundationByRegionGroup’ model builder window.</p>
+
+<p>4 In part 02, how many cells does the final output have the value of ‘1’?</p>
+
+<p>5 Which of the two methods of delineating sea level rise, region group or cost distance, was the more efficient means of performing this analysis?  Why do you think this is?</p>
+
+<p>6 Submit a coherent map of the output.  Use mine below as an example.</p>
+
+<p><img src="/courses/geog558/media/Lab6MyMap.png" alt="" /></p>
+
+<p>7 This time, double click the InundationByRegionGroupPython script tool in part 03. When the model tool dialog box is opened, fill the parameter boxes with the right layer names. Click OK to run the tool. How many output layers do you have? List them.</p>
+
+<p>8 In part 03 how many cells does the final output have the value of ‘1’?</p>
+
+<p>9 If the Sea Level Rise is set to 4, how many cells does the final output have the value of ‘1’?</p>
+
+<hr />
+
+<h1 id="materials"><strong>Materials</strong></h1>
+
+<p><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/Ekw4OGrLcvJNq8K-MJiBYygBbJ-7_2l1RV4WyCTslNCt8w?e=ILAHpW">click to download</a><br />
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Relevant part</th>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1-3</th>
+    <td class="tg-btxf">DEM</td>
+    <td class="tg-btxf">Raster dataset of the elevation of the area</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1-3</th>
+    <th class="tg-0pky">Ocean</th>
+    <th class="tg-0pky">Raster dataset of the land cover types (Land &amp; Ocean) over the area</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 3</th>
+    <th class="tg-0pky">SeaLevelRiseInundation.py</th>
+    <th class="tg-0pky">Sea Level Rise inundation delineation using region group and zonal max</th>
+  </tr>
+</table></p>
+
+<hr />
+
+<h1 id="part-1-delineating-sea-level-rise-inundation-with-arcmap"><strong>Part 1: Delineating Sea Level Rise Inundation with ArcMap</strong></h1>
+
+<p>As you saw in class, it is possible to take two different approaches to map sea level rise in GIS.  We can use cost distance to calculate the rise from an ocean source or we can use region group to get the regions of inundation which include an ocean source.  Here you need to pick one of the methods and walk through it using ArcMap.</p>
+
+<p>Unzip the lab 6 folder into your one drive, in it you will find a baseData folder, and folders already set up for part1, part2, and part3.  Go ahead and pick a means of delineating sea level rise, either cost distance or region groups, and perform a 2-meter sea level rise analysis.</p>
+
+<style id="Book1_4029_Styles">
+<!--table
+    {mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";}
+.font54029
+    {color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;}
+.font64029
+    {color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:italic;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;}
+.xl654029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl664029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl674029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl684029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+.xl694029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+-->
+</style>
+
+<div id="Book1_4029" align=center x:publishsource="Excel">
+
+<table border=0 cellpadding=0 cellspacing=0 width=768 style='border-collapse:
+ collapse;table-layout:fixed;width:576pt'>
+ <col class=xl654029 width=384 span=2 style='mso-width-source:userset;
+ mso-width-alt:13653;width:288pt'>
+ <tr height=22 style='height:16.2pt'>
+  <td height=22 class=xl664029 width=384 style='height:16.2pt;width:288pt'><span
+  style='mso-bidi-font-size:12pt'>Cost Distance</span></td>
+  <td class=xl674029 width=384 style='width:288pt'><span style='mso-bidi-font-size:
+  12pt'>Region Group</span></td>
+ </tr>
+ <tr height=445 style='mso-height-source:userset;height:333.6pt'>
+  <td height=445 class=xl684029 width=384 style='height:333.6pt;width:288pt'>1.
+  Set the oceans to a one value source<br>
+    <span style='mso-spacerun:yes'>   </span>a. <font class="font64029">Use the
+  Set null tool<br>
+    </font><font class="font54029"><span style='mso-spacerun:yes'>   </span>b. </font><font
+  class="font64029">&quot;Value&quot; = 0, call the output “source.tif”</font><font
+  class="font54029"><br>
+    2. Set all elevations in the DEM which are above the sea level rise
+  threshold<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  Set null tool again<br>
+    <span style='mso-spacerun:yes'>   </span>b. &quot;Value&quot; &gt; %Sea
+  Level Rise% (in this case 2)<br>
+    <span style='mso-spacerun:yes'>   </span>c. Set the false raster to 1 (Friction
+  should be the same everywhere otherwise)<br>
+    <span style='mso-spacerun:yes'>   </span>d. Call the output
+  “friction.tif”<br>
+    </font><font class="font54029">3. Create the cost distance surface<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  Cost distance tool…<br>
+    <span style='mso-spacerun:yes'>   </span>b. Cost is “friction” source is
+  “source”<br>
+    <span style='mso-spacerun:yes'>   </span>c. Call the output distance<br>
+    </font><font class="font54029">4. Remove the source cells to create a
+  raster of just inundation<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  Set null<br>
+    <span style='mso-spacerun:yes'>   </span>b. “Value” = 0<span
+  style='mso-spacerun:yes'>  </span><br>
+    <span style='mso-spacerun:yes'>   </span>c. Again, set the value to 1
+  otherwise<br>
+    <span style='mso-spacerun:yes'>   </span>d. Call the output “SLRbyCost.tif”</font></td>
+  <td class=xl694029 width=384 style='width:288pt'>1. Create a raster of all
+  the areas less than the projected sea level rise.<br>
+    <font class="font64029"><span style='mso-spacerun:yes'>   </span>a. Hint:
+  Use the set null tool to replace all values &gt; sea level rise to null.<span
+  style='mso-spacerun:yes'>   </span><br>
+    <span style='mso-spacerun:yes'>   </span>b. Otherwise, set the value to
+  1<br>
+    <span style='mso-spacerun:yes'>   </span>c. Call the output demlteslr<br>
+    </font><font class="font54029">2. Group the resulting regions using region
+  group<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  Use 8 connectivity and group using the within method.<br>
+    <span style='mso-spacerun:yes'>   </span>b. Call the output regions<br>
+    </font><font class="font54029">3. Use zonal statistics to identify the
+  regions which contain an ocean source<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  We want the value of oceans (input value raster) using the regions as the
+  zone data, and the maximum statistics.<br>
+    <span style='mso-spacerun:yes'>   </span>b. Call the output zonemax<br>
+    </font><font class="font54029">4. We then want to remove the oceans from
+  our calculation<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  Hint: raster calculator (%zonemax%&quot; - &quot;%ocean%&quot;).<br>
+    <span style='mso-spacerun:yes'>   </span>b. Call the output diff<br>
+    </font><font class="font54029">5. Finally, sett everything less than or
+  equal to 0 to null so that we have just the inundated pixels<br>
+    </font><font class="font64029"><span style='mso-spacerun:yes'>   </span>a.
+  Hint: Set null tool again<br>
+    <span style='mso-spacerun:yes'>   </span>b. Call the output SLRbyRegion</font></td>
+ </tr>
+</table>
+
+</div>
+
+<p>Answer question 1</p>
+
+<hr />
+
+<h1 id="part-2-delineating-sea-level-rise-inundation-with-model-builder"><strong>Part 2: Delineating Sea Level Rise Inundation with Model Builder</strong></h1>
+
+<p>In ArcGIS we can use ModelBuilder to build a visual model that represents an analysis work flow. A ModelBuilder model typically consists of a set of data connected by a series of GIS operations. In this part we will be using ModelBuilder to create a model to delineate sea level rise inundation. Using a ModelBuilder model is helpful in situations where the model can be applied to numerous datasets, as we saw with the last lab.  Here you will use model builder to create both variants of the SLR workflow, one for Region Groups and one for Cost Distance.</p>
+
+<h2 id="set-up-the-folders-for-the-lab"><strong>Set up the folders for the lab</strong></h2>
+
+<ul>
+<li>In your lab 6 part 2 folder, create a new File Geodatabase.
+
+<ul>
+<li>R-Click &gt; New &gt; File Geodatabase</li>
+<li>This will be your new default workspace</li>
+</ul></li>
+<li>Add in the DEM and Ocean to the ArcMap, and examine them.  When done, remove them so you have a blank map.</li>
+<li>It will also be helpful if you set overwrite to on
+
+<ul>
+<li>Geoprocessing &gt; Geoprocessing Options &gt; Overwrite the outputs…</li>
+</ul></li>
+</ul>
+
+<h2 id="creating-a-toolbox-and-a-model"><strong>Creating a Toolbox and a Model</strong></h2>
+
+<ul>
+<li>R-click on your lab 6 part 2 folder and create a <strong>new toolbox</strong>. Name the new toolbox <em>InundationTools.tbx</em>.</li>
+<li>R-click on the toolbox and create a <strong>new model</strong>.</li>
+<li>Close the Model window.</li>
+<li>Rename the new Model (<strong>R-click | Rename</strong>) to <em>InundationByRegionGroup</em>.</li>
+<li>Re-open the Model by R-clicking and selecting Edit…</li>
+<li>Set up the Model Properties by going to <strong>Model | Model Properties</strong>.</li>
+<li>Under the Environments tab, check the boxes for <strong>Processing Extent | Extent</strong> and for <strong>Raster Analysis | Cell Size</strong>.</li>
+<li>Click the <strong>Values…</strong> button.</li>
+<li>Click the down arrows for each of the settings and make the <strong>Extent</strong> the same as the <em>DEM</em> raster in your data folder, and the <strong>Cell Size</strong> the same as <em>DEM</em> as well (they both have the same extent and cell size, if you check the data’s properties).</li>
+<li>Click OK on the Environment Settings.</li>
+<li>Click OK on the <em>InundationByRegionGroup</em> Properties Window.</li>
+</ul>
+
+<h2 id="setting-up-the-workflow-building-the-inundationbyregiongroup-model"><strong>Setting up the Workflow &amp; Building the InundationByRegionGroup Model</strong></h2>
+
+<p>You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.</p>
+
+<ul>
+<li>Open <strong>ArcToolbox</strong> and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.</li>
+<li>Add the <strong>Set Null</strong> tool by finding it under ArcToolbox (Spatial Analyst Tools | Conditional) and then dragging it onto the model window.<br /></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab6Image1.png" alt="" /></p>
+
+<ul>
+<li>Before you set the options for the Set Null tool, create a <strong>Double variable from the Insert</strong> menu. Rename it as ‘Sea Level Rise’, give the value of ‘2’ to the variable, and set it as a Model Parameter by checking Model Parameter option from its popup menu (right-click). The letter P appears beside the variable, indicating it is a model parameter.</li>
+<li>Double click on the Set Null tool. The Set Null dialog will open, and it should be roughly similar to the dialog for Set Null in the spatial analyst.</li>
+<li>Set the input conditional raster to DEM, and set the output to <em>demlteslr</em> and make sure it is saved in the appropriate place. As for the expression, type in <mark><i>&ldquo;Value&rdquo; &gt; %Sea Level Rise%</mark></i>.</li>
+<li>Right-click the input raster (DEM) and check Model Parameter option.</li>
+<li>To define input false raster or constant value, you need to create model variables for it. Right-click the Set Null. Click Make Variable &gt; From Parameter &gt; Input false layer or constant value. This adds the Input false layer or constant value as a variable in the model. Double-click it to assign ‘1’.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab6Image2.png" alt="" /></p>
+
+<ul>
+<li>You now have a simple model.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab6Image3.png" alt="" /></p>
+
+<ul>
+<li><strong>Right-click</strong> the Set Null and select <strong>Run</strong> to test your model.</li>
+<li>Add, examine, and then remove the created Raster from the ArcMap window</li>
+<li>Add a <strong>Region Group tool</strong> (Spatial Analyst Tools &gt; Generalization) to your model.
+
+<ul>
+<li>Set <em>demlteslr</em> as its input raster</li>
+<li>Set <em>regions</em> as an output.</li>
+<li>The number of neighboring cells to use is eight and use within for zone grouping method.</li>
+<li>Uncheck not to add link field to output and&hellip;</li>
+<li>click OK to finish the Region Group dialog.</li>
+</ul></li>
+<li><strong>Right-click</strong> the Region Group tool and select <strong>Run</strong> to test your model.</li>
+<li>Add examine, and then remove the created Raster from the ArcMap window</li>
+<li>Add a <strong>Zonal Statistics tool</strong> (Spatial Analyst Tools &gt; Zonal) to your model.
+
+<ul>
+<li>Set <em>regions</em> as its input</li>
+<li>Set <em>VALUE</em> as a zone field</li>
+<li>Use <em>zonemax</em> as an output.</li>
+<li>Set <em>Ocean</em> as an input value raster.</li>
+<li>Use maximum for statistics type, then click OK.</li>
+</ul></li>
+<li>Set <em>Ocean</em> as a <strong>model parameter</strong>.</li>
+<li><strong>Right-click</strong> the Zonal Statistics and select <strong>Run</strong> to test your model.</li>
+<li>Add examine, and then remove the created Raster from the ArcMap window</li>
+<li>We now need to use the <strong>Raster Calculator</strong> to calculate the difference between the <em>zonemax</em> and the <em>Ocean</em>.
+
+<ul>
+<li>Hint: <mark><i>(&ldquo;%zonemax%&rdquo; - &ldquo;%Ocean%&rdquo;)</mark></i>.</li>
+<li>Save the output as <em>diff</em>.</li>
+</ul></li>
+<li><strong>Right-click</strong> the Raster Calculator and select <strong>Run</strong> to test your model.</li>
+<li>We are going to add a <strong>Set Null</strong> again to get our final output Inundation. Create another <strong>Double model variable</strong>, to define the input false raster or constant value and give it a value ‘1.’ Set <em>diff</em> as the tool’s input and type in the proper expression to query the values less and equal to zero.</li>
+<li>The final layout should look like so:</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab6Image4.png" alt="" /></p>
+
+<ul>
+<li><strong>Right-click</strong> the Set Null and select <strong>Run</strong> to test your model.<br /></li>
+</ul>
+
+<h2 id="saving-and-testing-your-whole-model"><strong>Saving and testing your whole model</strong></h2>
+
+<ul>
+<li>Click OK and Save your model.</li>
+<li>While you’re building your model, you can check if each tool (so far, we created 5 tools; Set Null, Set Null(2), Region Group, Zonal Statistics, and Raster Calculator for this model) you created works fine by right-clicking and running it (select Run). This time, let’s check if whole your model runs in one go.</li>
+<li>Close the model.</li>
+<li>After all tools are correctly established in the model, delete all of the output files (<em>delteslr, regions, zonemax, diff, inundation</em>) from your output folder.</li>
+<li>Run your model using the appropriate inputs.</li>
+</ul>
+
+<h2 id="now-recreate-the-cost-distance-approach"><strong>Now recreate the cost distance approach</strong></h2>
+
+<p>Create a new model using the cost distance approach to delineating sea level rise.  Your final model should look something like so:</p>
+
+<p><img src="/courses/geog558/media/Lab6Image5.png" alt="" /></p>
+
+<p>Answer question 2-5.</p>
+
+<hr />
+
+<h1 id="part-3-sea-level-rise-inundation-delineation-with-python-scripting"><strong>Part 3: Sea Level Rise Inundation Delineation with Python Scripting</strong></h1>
+
+<p>In this part of the lab we will be using ArcGIS Python Command Window to do the same analysis we did in the first part. The main purpose is to show how such a model/analysis can be implemented by using a python script tool. We, therefore, will practice how to create ArcGIS Python tool using a python script.</p>
+
+<h2 id="creating-a-script-tool"><strong>Creating a script tool</strong></h2>
+
+<ul>
+<li>Within ArcGIS, you can create a script tool inside a toolbox. A script tool is like any other tool - it can be opened and executed from the tool dialog box, used in models and the <strong>Python</strong> window, and called from other scripts and script tools.</li>
+<li>To create a script tool, you need three things; a script, a custom toolbox, and a precise definition of the parameters of your script.</li>
+</ul>
+
+<h2 id="creating-a-custom-toolbox"><strong>Creating a custom toolbox</strong></h2>
+
+<ul>
+<li>You can create your own toolbox called a custom toolbox and add tools and toolsets to it. Script and model tools that you create should be stored in a custom toolbox.</li>
+<li>Open ArcCatalog. In the Catalog Tree, navigate to the folder where you want the toolbox to be created.</li>
+<li>Right-click the folder and click <strong>New &gt; Toolbox</strong>. Give the toolbox a new name <em>InundationToolbox.tbx</em>.</li>
+<li>To create a script tool, right-click your custom toolbox and click <strong>Add &gt; Script</strong>. This opens the <strong>Add Script wizard</strong> that takes you step by step through the process of creating a script tool. Give a new script a name <em>InundationByRegionGroupPython</em> and add a script file by specifying the location of the file <em>InundationByRegionGroupPython.py</em>.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab6Image6.png" alt="" /></p>
+
+<ul>
+<li>On the third step of the <strong>Add Script wizard</strong>, add parameters by typing the name and selecting the data type as described in the table below. As for the property, use the default options unless specifically mentioned in the table below.</li>
+</ul>
+
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Display Name</th>
+    <th class="tg-0pky">Data Type</th>
+    <th class="tg-0pky">Property</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Oceans</th>
+    <td class="tg-btxf">Raster Dataset</td>
+    <td class="tg-btxf"> </td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">DEM</th>
+    <td class="tg-btxf">Raster Dataset</td>
+    <td class="tg-btxf"> </td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Sea Level Rise</th>
+    <th class="tg-0pky">Double</th>
+    <th class="tg-0pky">Default: 2</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Inundation</th>
+    <th class="tg-0pky">Raster Dataset</th>
+    <th class="tg-0pky">Direction: output</th>
+  </tr>
+</table>  
+
+<ul>
+<li>After completing the steps, your toolbox will contain a new script tool. You can always modify properties (such as parameter names and data types) of this script tool by right-clicking the script tool and choosing <strong>Properties</strong>.</li>
+<li>Double click the script file you just added. The <em>InundationByRegionGroupPython</em> tool dialog will appear and it should look like this image below.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab6Image7.png" alt="" /></p>
+
+<ul>
+<li>Input <em>ocean</em> &amp; <em>dem</em> for the first two input layers. Use the default value for Sea Level Rise. Save <em>Inundation</em> in your part02 folder as an output layer. Click OK to run the tool. Answer question 6-9.</li>
+</ul>
+
+<p>When finished, submit your work to blackboard.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -83,6 +83,8 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/GitPushCommands.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config/_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config/_default/config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
@@ -148,6 +150,8 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;p&gt;The rest of that file is the remains of the aafu theme.&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&#34;adding-classes&#34;&gt;&lt;strong&gt;Adding classes&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;To get menus to work, my &lt;i&gt;/config/_default/menus.toml&lt;/i&gt; file looks like:&lt;/p&gt;
@@ -187,6 +191,8 @@ paginate = 10  # Number of items per page in paginated lists.
   url = &amp;quot;/courses/dronemapping&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&#34;make-it-your-own&#34;&gt;&lt;strong&gt;Make it your own&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;One of the best ways I&amp;rsquo;ve found to help improve my understanding of the sooftware/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the &lt;i&gt;themes\academic\layouts\partials\footer.toml&lt;/i&gt;.  Mine now looks like so:&lt;/p&gt;
@@ -202,6 +208,8 @@ paginate = 10  # Number of items per page in paginated lists.
   &amp;lt;i&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/gcushen/hugo-academic&amp;quot;&amp;gt;Academic&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt; by &amp;lt;a href=&amp;quot;https://georgecushen.com/&amp;quot;&amp;gt;George&amp;lt;/a&amp;gt;
 &amp;lt;/footer&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
 </description>
     </item>
     
@@ -216,14 +224,27 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;p&gt;There are a whole host of questions I still have regarding the intersections of individuals, societies, economies, and technology.  One of the more practically philosophical realizations of this intersection than FOSS.  Free and Open Source Software has become one of my go to tools in tackling a problem and has that special allure of feel good contribution and intrinsic reproducibility to it.  I&amp;rsquo;ve created a few tools that take a FOSS approach to GIS, and here I&amp;rsquo;d like to demonstrate how to create one.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ll flesh this section out more at a later date, but two important links I&amp;rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.&lt;br /&gt;
-Some useful links:&lt;br /&gt;
-&lt;a href=&#34;https://ficonsulting.com/filabs/RInno&#34;&gt;https://ficonsulting.com/filabs/RInno&lt;/a&gt;
-&lt;a href=&#34;https://www.r-bloggers.com/deploying-desktop-apps-with-r/&#34;&gt;https://www.r-bloggers.com/deploying-desktop-apps-with-r/&lt;/a&gt;  The foundation/inspiration for this implementation.&lt;br /&gt;
-&lt;a href=&#34;https://www.robvanderwoude.com/vbstech_hta.php&#34;&gt;https://www.robvanderwoude.com/vbstech_hta.php&lt;/a&gt;  A great HTA resource page&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll flesh this section out more at a later date, but two important links I&amp;rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app&#34;&gt;https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app&lt;/a&gt;
-&lt;a href=&#34;https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180&#34;&gt;https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;some-useful-implementation-links&#34;&gt;Some useful implementation links:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ficonsulting.com/filabs/RInno&#34;&gt;https://ficonsulting.com/filabs/RInno&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.r-bloggers.com/deploying-desktop-apps-with-r/:&#34;&gt;https://www.r-bloggers.com/deploying-desktop-apps-with-r/:&lt;/a&gt;  The foundation/inspiration for this implementation.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.robvanderwoude.com/vbstech_hta.php:&#34;&gt;https://www.robvanderwoude.com/vbstech_hta.php:&lt;/a&gt;  A great HTA resource page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;shiny-and-shiny-server-docs&#34;&gt;Shiny and shiny server docs&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app&#34;&gt;https://stackoverflow.com/questions/24789746/portable-browser-issues-when-deploying-r-shiny-app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180&#34;&gt;https://stackoverflow.com/questions/30965410/creating-stand-alone-shiny-app-chrome-error/31272180#31272180&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://englianhu.files.wordpress.com/2018/10/web-application-development-with-r-using-shiny-build-stunning-graphics-and-interactive-data-visualizations-to-deliver-cutting-edge-analytics-3ed.pdf&#34;&gt;https://englianhu.files.wordpress.com/2018/10/web-application-development-with-r-using-shiny-build-stunning-graphics-and-interactive-data-visualizations-to-deliver-cutting-edge-analytics-3ed.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;leaflet-resources&#34;&gt;Leaflet resources&lt;/h2&gt;
+
+&lt;h2 id=&#34;useful-code-bits&#34;&gt;Useful code bits&lt;/h2&gt;
 
 &lt;p&gt;There are some useful tidbits of code, mostly in R, that I&amp;rsquo;ve flagged specifically.  Many are part of FOSSFlood, but that global file is more than 1000 lines of code so it&amp;rsquo;s understandable if you didn&amp;rsquo;t see them.&lt;/p&gt;
 

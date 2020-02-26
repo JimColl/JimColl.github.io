@@ -1492,13 +1492,11 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;welcome-to-the-random-bin&#34;&gt;&lt;strong&gt;Welcome to the random bin&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;hr /&gt;
-
 &lt;p&gt;This is a place for me to dump some of my uncategorized work, links to other great content creators, and other neat resources I’ve found along my way.&lt;/p&gt;
 
-&lt;h1 id=&#34;fun-links&#34;&gt;&lt;strong&gt;Fun links&lt;/strong&gt;&lt;/h1&gt;
-
 &lt;hr /&gt;
+
+&lt;h1 id=&#34;fun-links&#34;&gt;&lt;strong&gt;Fun links&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
 
@@ -1515,32 +1513,40 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;GIS Resources&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;A nice cross section of links to open courseware of every subject, and a few GIS-centric resources: &lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;https://www.gislounge.com/learn-gis-for-free/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A nice cross section of links to open courseware across the academic disciplines, and a few GIS-centric resources: &lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;https://www.gislounge.com/learn-gis-for-free/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hydroshare.org/&#34;&gt;Hydroshare&lt;/a&gt;: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at &lt;a href=&#34;https://www.cuahsi.org/&#34;&gt;CUAHSI&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://opentopo.sdsc.edu/login&#34;&gt;OpenTOPO&lt;/a&gt;: A great clearinghouse and web toolset for topo data.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://live.osgeo.org/en/index.html&#34;&gt;OSGeoLive&lt;/a&gt;: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;a href=&#34;https://gistbok.ucgis.org/&#34;&gt;UCGIS Body of Knowledge&lt;/a&gt; is a great start for your GIS questions.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://gistbok.ucgis.org/&#34;&gt;UCGIS Body of Knowledge&lt;/a&gt; is a great place to start for your broad GIS questions.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Thesis leftovers&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;A misguided attempt at a website for my masters.  Placed here more to remind me to do something with it one of these days: &lt;a href=&#34;https://sites.google.com/site/globalsnowobservatory/&#34;&gt;https://sites.google.com/site/globalsnowobservatory/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&#34;&gt;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&lt;/a&gt; A post about Mann Kendall and Sens slope in GEE from me.  At some point I&amp;rsquo;ll get around to doing something with this too&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&#34;&gt;https://groups.google.com/forum/#!searchin/google-earth-engine-developers/kendall|sort:date/google-earth-engine-developers/Ka3WYE8jTWM/X_gl_UfhBQAJ:&lt;/a&gt; A post about Mann Kendall and Sens slope in GEE from me.  At some point I&amp;rsquo;ll get around to doing something with this too.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;These R enabled books are excellent resources:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;Intro to GIS and Spatial Analysis by Manuel Gimond&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;Geocomputation with R by Robin Lovelace, Jakub Nowosad &amp;amp; Jannes Muenchow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;&lt;strong&gt;Intro to GIS and Spatial Analysis&lt;/strong&gt;&lt;/a&gt; by Manuel Gimond&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;&lt;strong&gt;Geocomputation with R&lt;/strong&gt;&lt;/a&gt; by Robin Lovelace, Jakub Nowosad &amp;amp; Jannes Muenchow&lt;/li&gt;
+&lt;li&gt;An incomplete version of &lt;a href=&#34;https://socviz.co/index.html#preface&#34;&gt;&lt;strong&gt;Data Visualization: A practical introduction&lt;/strong&gt;&lt;/a&gt; by Kieran Healy&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://keen-swartz-3146c4.netlify.com/&#34;&gt;&lt;strong&gt;Spatial Data Science&lt;/strong&gt;&lt;/a&gt; by Edzer Pebesma, Roger Bivand&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cengel.github.io/R-spatial/&#34;&gt;&lt;strong&gt;Using Spatial Data with R&lt;/strong&gt;&lt;/a&gt; by Claudia A Engel&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://r-statistics.co/&#34;&gt;&lt;strong&gt;r-statistics.co&lt;/strong&gt;&lt;/a&gt; by Selva Prabhakaran&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;need-data&#34;&gt;&lt;strong&gt;Need data?&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;hr /&gt;
 
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;need-data&#34;&gt;&lt;strong&gt;Need data?&lt;/strong&gt;&lt;/h1&gt;
+
 &lt;p&gt;Topo resources: &lt;a href=&#34;http://www.earthpoint.us/TopoMap.aspx&#34;&gt;http://www.earthpoint.us/TopoMap.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&#34;random-education-bits&#34;&gt;&lt;strong&gt;Random education bits&lt;/strong&gt;&lt;/h1&gt;
 
@@ -1550,23 +1556,44 @@ GEE slides:&lt;br /&gt;
 Other useful slide decks:&lt;br /&gt;
 &lt;a href=&#34;https://agu2019.earthoutreach.org/booth&#34;&gt;https://agu2019.earthoutreach.org/booth&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;cluster&#34;&gt;&lt;strong&gt;clusteR:&lt;/strong&gt;&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;cluster&#34;&gt;clusteR&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/ClusteR.PNG&#34; alt=&#34;&#34; /&gt;
-A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit.  The &amp;ldquo;installation&amp;rdquo; of this is the same as FOSSFlood.&lt;br /&gt;
-1) Download and unzip - &lt;a href=&#34;https://github.com/JimColl/clusteR&#34;&gt;https://github.com/JimColl/clusteR&lt;/a&gt;  ​&lt;br /&gt;
-2) Double click RunMe.hta and select a file.&lt;br /&gt;
-2A) If you are using a csv, you need to set the LAT, LON, and Projection epsg.  Replace spaces with .&lt;br /&gt;
-3) Click run&lt;/p&gt;
+&lt;strong&gt;Warning: Beta build&lt;/strong&gt;&lt;br /&gt;
+See the github: &lt;a href=&#34;https://github.com/JimColl/clusteR&#34;&gt;https://github.com/JimColl/clusteR&lt;/a&gt;
+Or it&amp;rsquo;s companion on my website: &lt;a href=&#34;https://jimcoll.github.io/courses/random/&#34;&gt;https://jimcoll.github.io/courses/random/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Known bugs:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;About:&lt;/strong&gt;&lt;br /&gt;
+A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit, this GUI driven, geographic database display and clustering application built is built on R.  Is also a &lt;em&gt;nearly&lt;/em&gt; minimal example of how to tie map and database together, how reactive shiny elements work, and how to print dashboards.&lt;/p&gt;
+
+&lt;p&gt;A project that grew out of a request to see a database from a geographic prospective, here is a FOSS implementation of GIS for people who don&amp;rsquo;t know or have the time to learn it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to run:&lt;/strong&gt;&lt;br /&gt;
+The &amp;ldquo;installation&amp;rdquo; of this is program is trivially easy by design and requires no permissions.
+To start the process:&lt;/p&gt;
+
+&lt;p&gt;1) Download and unzip this repository using the green &amp;ldquo;Clone or downlaod&amp;rdquo; button.
+2) Select a csv or a shapefile, enter the LAT LON and EPSG fields as necessary.  Replace spaces with .&lt;br /&gt;
+3) and hit run!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Known bugs:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Selecting fields which are too long or numeric will currently kills the crab.  To recover, close the window and re run the HTA&lt;/li&gt;
-&lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Legends can be too large for the window&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Editing the table is not fully tested&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Selecting fields which are too long or numeric will currently kill the crab.  To recover, close the window and re run the HTA.&lt;/li&gt;
+&lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly.
+
+&lt;ul&gt;
+&lt;li&gt;Fly to (when you click on a row) will sometimes cause the erver to lock up.  To fix, zoom in a bit before attempting to fly.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Legends can be too large for the window.&lt;/li&gt;
+&lt;li&gt;Editing the table is not fully tested.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 </description>
     </item>
     

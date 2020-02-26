@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Lab 4: Zonal Operations – Tornado Siren Coverage Analysis and Lake Volume Calculations Learning Objective The first part of this lab requires writing a survey of the data and mapping technologies in the field that you are interested in (wildlife reserve, conservation, urban planning, forest resources, natural hazards, business, etc.), not limited to the data and mapping technologies covered in the lecture. This survey may include both traditional and new emerging datasets and/or mapping technologies that are used in the fields.">
+  <meta name="description" content="Lab 4: Zonal Operations – Tornado Siren Coverage Analysis and Lake Volume Calculations Learning Objective In this lab, we are interested in assessing how much of Douglas County is covered by tornado sirens. In other words, we want to know how many people can actually hear a tornado siren when it goes off. While the sirens for Douglas County were designed to be heard at distances of up to 5,800 feet, there might be areas in which people can’t hear them.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab04/">
@@ -113,7 +113,7 @@
   <meta property="og:site_name" content="Jim Coll">
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab04/">
   <meta property="og:title" content=" | Jim Coll">
-  <meta property="og:description" content="Lab 4: Zonal Operations – Tornado Siren Coverage Analysis and Lake Volume Calculations Learning Objective The first part of this lab requires writing a survey of the data and mapping technologies in the field that you are interested in (wildlife reserve, conservation, urban planning, forest resources, natural hazards, business, etc.), not limited to the data and mapping technologies covered in the lecture. This survey may include both traditional and new emerging datasets and/or mapping technologies that are used in the fields."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="og:description" content="Lab 4: Zonal Operations – Tornado Siren Coverage Analysis and Lake Volume Calculations Learning Objective In this lab, we are interested in assessing how much of Douglas County is covered by tornado sirens. In other words, we want to know how many people can actually hear a tornado siren when it goes off. While the sirens for Douglas County were designed to be heard at distances of up to 5,800 feet, there might be areas in which people can’t hear them."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -383,6 +383,14 @@
         <a href="/courses/geog558/lab04/">Lab 4 - Zonal Operations</a>
       </li>
       
+      <li >
+        <a href="/courses/geog558/lab05/">Lab 5 - Model Builder</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab06/">Lab 6 - Cost Distance, Region Groups, more Model Builder &amp; Python</a>
+      </li>
+      
     </ul>
     
 
@@ -404,7 +412,7 @@
 <li><a href="#lab-4-zonal-operations-tornado-siren-coverage-analysis-and-lake-volume-calculations"><strong>Lab 4: Zonal Operations – Tornado Siren Coverage Analysis and Lake Volume Calculations</strong></a></li>
 <li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
 <li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
-<li><a href="#materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-elqtq-woul1krxdpwkmrjgkbs9bi9ywgsfjoavxwacklea-e-f22wwf"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/ElqTq-WOUl1KrxdPWkMRJGkBS9BI9yWgsfjoAvXWacKleA?e=f22wwF"><strong>Materials</strong></a></a></li>
+<li><a href="#materials"><strong>Materials</strong></a></li>
 <li><a href="#part-1-tornado-siren-coverage"><strong>Part 1: Tornado siren coverage</strong></a>
 <ul>
 <li><a href="#create-buffers"><strong>Create Buffers</strong></a></li>
@@ -438,7 +446,8 @@
 
 <h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>The first part of this lab requires writing a survey of the data and mapping technologies in the field that you are interested in (wildlife reserve, conservation, urban planning, forest resources, natural hazards, business, etc.), not limited to the data and mapping technologies covered in the lecture. This survey may include both traditional and new emerging datasets and/or mapping technologies that are used in the fields. The second part of the lab will download imagery and create a database that will be used for the next few labs.</p>
+<p>In this lab, we are interested in assessing how much of Douglas County is covered by tornado sirens. In other words, we want to know how many people can actually hear a tornado siren when it goes off. While the sirens for Douglas County were designed to be heard at distances of up to 5,800 feet, there might be areas in which people can’t hear them.
+Finally, we will use the zonal definitions of lake area created in lab 3 to calculate the height of the water from the DEM and turn the height and area into a volume estimation.</p>
 
 <h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
@@ -471,9 +480,10 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 <hr />
 
-<h1 id="materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-elqtq-woul1krxdpwkmrjgkbs9bi9ywgsfjoavxwacklea-e-f22wwf"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/ElqTq-WOUl1KrxdPWkMRJGkBS9BI9yWgsfjoAvXWacKleA?e=f22wwF"><strong>Materials</strong></a></h1>
+<h1 id="materials"><strong>Materials</strong></h1>
 
-<p><style type="text/css">
+<p><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/ElqTq-WOUl1KrxdPWkMRJGkBS9BI9yWgsfjoAvXWacKleA?e=f22wwF">click to download</a><br />
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
@@ -587,7 +597,8 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 <h2 id="isolate-the-lake-boundary"><strong>Isolate the lake boundary</strong></h2>
 
-<p>As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.</p>
+<p>As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.<br />
+<img src="/courses/geog558/media/Lab04image1.png" alt="" /></p>
 
 <ul>
 <li>The more preferable way to do this is to use region groups, a tool you will cover in much more depth later in the semester.  For now, just know that it groups clusters of raster pixels into unique groups.
@@ -602,7 +613,7 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 <ul>
 <li>Hint: mine looks like <mark><i>&ldquo;LT05_L1TP_008067_19950622_20170109_01_T1_LakeBoundry_Group.TIF&rdquo; == 10</i></mark>.<br /></li>
-<li>Overwrite your lake boundary raster<br /></li>
+<li><strong>Overwrite</strong> your lake boundary raster<br /></li>
 </ul></li>
 </ul>
 
@@ -621,9 +632,10 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 <h2 id="create-the-lake-surface-elevation"><strong>Create the lake surface elevation</strong></h2>
 
-<p>We need to use the same process as above to pick out just the lake (i.e. <mark><i>(&ldquo;…LakeBoundry_Group.TIF&rdquo; == 10) | (&ldquo;…LakeBoundry_Group.TIF&rdquo; == 12)</i></mark>.</p>
+<p>We need to use the same process as above to pick out just the lake.</p>
 
 <ul>
+<li><mark><i>(&ldquo;…LakeBoundry_Group.TIF&rdquo; == 10) | (&ldquo;…LakeBoundry_Group.TIF&rdquo; == 12)</i></mark><br /></li>
 <li>Save the output as <i>…LakeRaster.tif</i>.<br /></li>
 </ul>
 
@@ -632,7 +644,8 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 <ul>
 <li>Turn 0’s into NoData.<br /></li>
 <li>Turn 1’s into the value of the zonal statistic output calculated in the previous step.<br /></li>
-<li>Save the output as <i>…LakeSurface.tif</i>.<br /></li>
+<li>Save the output as <i>…LakeSurface.tif</i>.<br />
+<img src="/courses/geog558/media/Lab04image2.png" alt="" /><br /></li>
 </ul>
 
 <h2 id="calculate-the-lake-depth-and-the-lake-volume"><strong>Calculate the lake depth and the lake volume</strong></h2>
@@ -645,17 +658,17 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 <li>Save the output as <i>…LakeDepth.tif</i>.<br /></li>
 </ul>
 
-<p><li>Examine the attribute table of the subtraction grid (R-click on <i>LakeDepth</i> | Open Attribute Table).
-<li>Click the Select by Attribute button and select cells with an elevation difference greater than 0.
-<li>Export selected cells (Table Options | Export…) as a dBASE Table file named <i>LakeDepth1995.dbf</i>.
+<p><li>Examine the attribute table of the subtraction grid (<strong>R-click</strong> on <i>LakeDepth</i> | <strong>Open Attribute Table</strong>).
+<li>Click the <strong>Select by Attribute</strong> button and select cells with an elevation difference greater than 0.
+<li>Export selected cells <strong>(Table Options | Export…)</strong> as a dBASE Table file named <i>LakeDepth1995.dbf</i>.
 <li>When asked if you want to add the table to your map, select Yes</p>
 
-<ul>
-<li>If you cannot see <i>LakeDepth1995.dbf</i> in your Table of Contents, you will need to switch to List By Source view</li>
-</ul>
+<blockquote>
+<p>If there were no errors but you cannot see <i>LakeDepth1995.dbf</i> in your Table of Contents, you  need to switch to List By Source view</p>
+</blockquote>
 
-<p><li>Open <i>LakeDepth1995.dbf</i> (R-click | Open)
-<li>Add a new field (Table Options | Add Field) and&hellip;</p>
+<p><li>Open <i>LakeDepth1995.dbf</i> <strong>(R-click | Open)</strong>
+<li>Add a new field <strong>(Table Options | Add Field)</strong> and&hellip;</p>
 
 <ul>
 <li>set the name to <i>Area</i></li>
@@ -689,7 +702,8 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 <li>type to float</li>
 <li>precision to 16</li>
 <li>scale to 1 and then click OK
-<li>Calculate the total volume of <i>LakeDepth1995</i> using the following equation: <mark><i>total_vol = volume per cell (cell_vol) * total number of cells (count)</mark></i></li>
+<li>Calculate the total volume of <i>LakeDepth1995</i> using the following equation: <mark><i>total_vol = volume per cell (cell_vol) * total number of cells (count)</mark></i><br />
+<br /></li>
 </ul>
 
 <p>You will need to perform this process twice more for 2003 and 2009, answer the part 2 questions, and submit both parts to Blackboard.</p>

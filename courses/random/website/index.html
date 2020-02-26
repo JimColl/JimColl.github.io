@@ -486,6 +486,8 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <p><img src="/courses/random/media/GitPushCommands.png" alt="" /></p>
 
+<hr />
+
 <h2 id="how-this-site-was-created"><strong>How this site was created:</strong></h2>
 
 <p>This site is a smashup of the <a href="https://github.com/darshanbaral/aafu">aafu</a> and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined <a href="https://gohugo.io/templates/lookup-order/">lookup order</a>.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the <i>config/_default/</i> folder with the aafu theme markdown files.  Most of these are straightforward, but within the <i>config/_default/config.toml</i>, we need to set the theme order as follows.</p>
@@ -551,6 +553,8 @@ paginate = 10  # Number of items per page in paginated lists.
 
 <p>The rest of that file is the remains of the aafu theme.</p>
 
+<hr />
+
 <h3 id="adding-classes"><strong>Adding classes</strong></h3>
 
 <p>To get menus to work, my <i>/config/_default/menus.toml</i> file looks like:</p>
@@ -590,6 +594,8 @@ paginate = 10  # Number of items per page in paginated lists.
   url = &quot;/courses/dronemapping&quot;
 </code></pre>
 
+<hr />
+
 <h3 id="make-it-your-own"><strong>Make it your own</strong></h3>
 
 <p>One of the best ways I&rsquo;ve found to help improve my understanding of the sooftware/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the <i>themes\academic\layouts\partials\footer.toml</i>.  Mine now looks like so:</p>
@@ -605,6 +611,8 @@ paginate = 10  # Number of items per page in paginated lists.
   &lt;i&gt;&lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;&lt;/i&gt; by &lt;a href=&quot;https://georgecushen.com/&quot;&gt;George&lt;/a&gt;
 &lt;/footer&gt;
 </code></pre>
+
+<hr />
 
           </div>
 

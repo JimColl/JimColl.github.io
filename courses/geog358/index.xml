@@ -1530,14 +1530,18 @@ There are a few caviats to this app.  First, you may have to sit though an ad if
 &lt;h3 id=&#34;initial-setup-and-clearing-data&#34;&gt;Initial setup and clearing data&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:&lt;/li&gt;
-&lt;li&gt;Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric&lt;/li&gt;
-&lt;li&gt;Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.&lt;/li&gt;
+&lt;li&gt;Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Next, lets clear out the old data.
-* Find | Waypoints | Menu | Delete… | All Symbols | Yes
-* Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;/p&gt;
+&lt;p&gt;Next, lets clear out the old data.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find | Waypoints | Menu | Delete… | All Symbols | Yes&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;collecting-data&#34;&gt;Collecting data&lt;/h3&gt;
 
@@ -1695,6 +1699,14 @@ GEOG358_Lab04_Part1.mxd.&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you see the warning about pyramids, recall what this is asking you about and if you see an &amp;ldquo;unreferenced&amp;rdquo; warning, Click OK, that&amp;rsquo;s what we are here to fix&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    Did you get a few warnings that looked like so?&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/RasterPermissionErrors.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+Did you &lt;a href=&#34;https://community.esri.com/thread/223412-invalid-raster-dataset-failed-to-create-raster-layer-permission-denied-how-can-i-overcome-this-problem&#34;&gt;Google it?&lt;/a&gt;  Spaces in your path name are the most likely culprit.  Keep this in mind, as it likely won&amp;rsquo;t be the last time this comes back to bite us.
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;This is the image that we will register to a projected coordinate system, thus making it the “target layer.” Since the image doesn’t have a projection yet, it will not be immediately visible; right-click the layer and select Zoom to Layer.&lt;/li&gt;

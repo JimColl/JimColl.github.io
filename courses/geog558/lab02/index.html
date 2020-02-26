@@ -385,6 +385,14 @@
         <a href="/courses/geog558/lab04/">Lab 4 - Zonal Operations</a>
       </li>
       
+      <li >
+        <a href="/courses/geog558/lab05/">Lab 5 - Model Builder</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab06/">Lab 6 - Cost Distance, Region Groups, more Model Builder &amp; Python</a>
+      </li>
+      
     </ul>
     
 
@@ -406,7 +414,7 @@
 <li><a href="#lab-2-cartographic-modeling"><strong>Lab 2 - Cartographic Modeling</strong></a></li>
 <li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
 <li><a href="#what-you-need-to-submit"><strong>What you need to submit:</strong></a></li>
-<li><a href="#materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc"><strong>Materials (click to download)</strong></a></a></li>
+<li><a href="#materials"><strong>Materials</strong></a></li>
 <li><a href="#part-1-lake-delineation-and-water-classification"><strong>Part 1: Lake delineation and water classification</strong></a>
 <ul>
 <li><a href="#setting-up-the-mxd"><strong>Setting up the MXD</strong></a></li>
@@ -548,9 +556,10 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 
 <hr />
 
-<h1 id="materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc"><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc"><strong>Materials (click to download)</strong></a></h1>
+<h1 id="materials"><strong>Materials</strong></h1>
 
-<p><style type="text/css">
+<p><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc">click to download</a><br />
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
@@ -604,12 +613,12 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):</p>
 <ul>
 <li>Open up a new ArcMap document.<br /></li>
 <li>First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.<br /></li>
-<li>From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a>)<br />
+<li>From the 1995 year, add in the green, NIR, MIR, and MTL bands/images.<br />
 <br /></li>
 </ul>
 
 <blockquote>
-<p>Hint#1: When performing the NDWI calculation, we refer to bands based their wavelength (e.g. green, NIR).  However, when distributing data the bands are referred to by their number based on sensor properties (so in our case, LANDSAT 5 TM has 7 bands and change).<br />
+<p>Hint#1: When performing the NDWI calculation, we refer to bands based their wavelength (e.g. green, NIR).  However, when distributing data the bands are referred to by their number based on sensor properties (so in our case, LANDSAT 5 TM has 7 bands and change).  GEE provides a nice, concice overview of a remote sensing products bands, see <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1</a><br />
 </br>
 Hint#2: A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at <a href="https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/">https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/</a> <br> <img src="/courses/geog558/media/Lab02Picture01.png" alt="" /></p>
 </blockquote>
@@ -780,6 +789,11 @@ Answer #8 on your answer sheet</li>
 </ul>
 
 <p>Complete #9 and #10 on your assignment sheet and TURN IT IN; your grade on this lab will be based entirely on your answers to the questions!</p>
+
+<blockquote>
+<p>Hint: need help answering question 10?  Make a map like so!  Useful tools: Raster to polygon, symbology as categories.
+<img src="/courses/geog558/media/Lab02CartMap.png" alt="" /></p>
+</blockquote>
 
           </div>
 

@@ -401,9 +401,10 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;materials-click-to-download-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-eupaly9t2yxgrcrud-fcgakbsztfsgwq5kc-iwywu6gnog-e-yznxcc&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc&#34;&gt;&lt;strong&gt;Materials (click to download)&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuPaly9t2yxGrCruD_fcGakBSzTfsGwq5KC-iWYwU6GNog?e=YznxCc&#34;&gt;click to download&lt;/a&gt;&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
@@ -457,12 +458,12 @@ MCC - (A*D-B*C)/sqrt((A+B)*(A+C)*(D+B)*(D+C)):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Open up a new ArcMap document.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;First, a few housekeeping items.  Let’s take the training wheels off ArcMap and make sure we can overwrite data.  Click Geoprocessing &amp;gt; Geoprocessing Options and make sure the top two boxes in this window are selected.  You may also want to increase the time period results are stored to a month or so.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;From the 1995 year, add in the green, NIR, MIR, and MTL bands/images (Hint: &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&lt;/a&gt;)&lt;br /&gt;
+&lt;li&gt;From the 1995 year, add in the green, NIR, MIR, and MTL bands/images.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Hint#1: When performing the NDWI calculation, we refer to bands based their wavelength (e.g. green, NIR).  However, when distributing data the bands are referred to by their number based on sensor properties (so in our case, LANDSAT 5 TM has 7 bands and change).&lt;br /&gt;
+&lt;p&gt;Hint#1: When performing the NDWI calculation, we refer to bands based their wavelength (e.g. green, NIR).  However, when distributing data the bands are referred to by their number based on sensor properties (so in our case, LANDSAT 5 TM has 7 bands and change).  GEE provides a nice, concice overview of a remote sensing products bands, see &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C01_T1&lt;/a&gt;&lt;br /&gt;
 &lt;/br&gt;
 Hint#2: A note about pyramids:  You will want to build pyramids when you add raster images into ArcMap.  You will notice that when this is done, ArcMap will create a file with a .ovr extension (look using the Windows file browser).  We&amp;rsquo;ll talk about pyramids in class more, but as a cursory introduction, think about Google Maps.  When you zoom out to look at the entire planet, there is no physical way to represent 30 meters on the screen.  Instead, we take a generalization of all the pixels underneath the region and display those values in their place.  Because Google sets the standards for mapping, there are generally 21 levels of images that are loaded in, with the top most layer being zoom level 1, and increasing as you zoom in.  See an interactive example of this concept in action at &lt;a href=&#34;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&#34;&gt;https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/&lt;/a&gt; &lt;br&gt; &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -633,6 +634,11 @@ Answer #8 on your answer sheet&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Complete #9 and #10 on your assignment sheet and TURN IT IN; your grade on this lab will be based entirely on your answers to the questions!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint: need help answering question 10?  Make a map like so!  Useful tools: Raster to polygon, symbology as categories.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02CartMap.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -820,9 +826,10 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-epawoaa4plxportob7jo9o0bv8bg5ykti4mdej5bsjtobg-e-ocdxtg&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EpAWoaa4PlxPortOB7jO9o0BV8Bg5ykTI4mdEj5bsjTObg?e=OcDxTg&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EpAWoaa4PlxPortOB7jO9o0BV8Bg5ykTI4mdEj5bsjTObg?e=OcDxTg&#34;&gt;click to download&lt;/a&gt;
+&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
@@ -881,13 +888,14 @@ Blocked:  _______ m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;hint: change your layer symbology to show unique values.&lt;br /&gt;
-hint#2: Want to flex?  Label the rasters, it&amp;rsquo;s good cartography practice.
-Useful tools: Raster to points extract values to points.&lt;/p&gt;
+&lt;p&gt;hint #1: change your layer symbology to show unique values.
+hint#2: Want to flex?  You can label the rasters as shown below, and it&amp;rsquo;s good cartography practice.
+Useful tools: Raster to points/extract values to points, label placement and halos, field representation to round to two decimal places.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab03CartPic1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Save your map.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save your Arcmap document.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -1012,7 +1020,7 @@ Useful tools: Raster to points extract values to points.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;It is important to note here that the wedge neighborhood is measured differently than the aspect. The aspect measurement begins at 0 degrees due north and increases as we move clockwise. However, when computing a wedge neighborhood, we start at 0 degrees due east and increase as we move counterclockwise. Thus, the degree range here (135-225) represents the same degree range as indicated in the aspect range (225-315). This is simply due to inconsistencies in the way the ArcGIS software handles radial measurements.&lt;/p&gt;
+&lt;p&gt;It is important to note here that the wedge neighborhood is measured differently than the aspect. The aspect measurement begins at 0 degrees due north and increases as we move clockwise. However, when computing a wedge neighborhood, we start at 0 degrees due east and increase as we move counterclockwise. Thus, the degree range here (135-225) represents the same degree range as indicated in the aspect range (225-315). This is simply due to inconsistencies in the way the ArcGIS software handles radial measurements.  TODO: Add a nice image of this here.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -1093,7 +1101,8 @@ Useful tools: Raster to points extract values to points.&lt;/p&gt;
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;The first part of this lab requires writing a survey of the data and mapping technologies in the field that you are interested in (wildlife reserve, conservation, urban planning, forest resources, natural hazards, business, etc.), not limited to the data and mapping technologies covered in the lecture. This survey may include both traditional and new emerging datasets and/or mapping technologies that are used in the fields. The second part of the lab will download imagery and create a database that will be used for the next few labs.&lt;/p&gt;
+&lt;p&gt;In this lab, we are interested in assessing how much of Douglas County is covered by tornado sirens. In other words, we want to know how many people can actually hear a tornado siren when it goes off. While the sirens for Douglas County were designed to be heard at distances of up to 5,800 feet, there might be areas in which people can’t hear them.
+Finally, we will use the zonal definitions of lake area created in lab 3 to calculate the height of the water from the DEM and turn the height and area into a volume estimation.&lt;/p&gt;
 
 &lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
 
@@ -1126,9 +1135,10 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;materials-https-kansas-my-sharepoint-com-f-g-personal-j610c377-home-ku-edu-elqtq-woul1krxdpwkmrjgkbs9bi9ywgsfjoavxwacklea-e-f22wwf&#34;&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/ElqTq-WOUl1KrxdPWkMRJGkBS9BI9yWgsfjoAvXWacKleA?e=f22wwF&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/ElqTq-WOUl1KrxdPWkMRJGkBS9BI9yWgsfjoAvXWacKleA?e=f22wwF&#34;&gt;click to download&lt;/a&gt;&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
@@ -1242,7 +1252,8 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 &lt;h2 id=&#34;isolate-the-lake-boundary&#34;&gt;&lt;strong&gt;Isolate the lake boundary&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.&lt;/p&gt;
+&lt;p&gt;As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab04image1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;The more preferable way to do this is to use region groups, a tool you will cover in much more depth later in the semester.  For now, just know that it groups clusters of raster pixels into unique groups.
@@ -1257,7 +1268,7 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 &lt;ul&gt;
 &lt;li&gt;Hint: mine looks like &lt;mark&gt;&lt;i&gt;&amp;ldquo;LT05_L1TP_008067_19950622_20170109_01_T1_LakeBoundry_Group.TIF&amp;rdquo; == 10&lt;/i&gt;&lt;/mark&gt;.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Overwrite your lake boundary raster&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Overwrite&lt;/strong&gt; your lake boundary raster&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1276,9 +1287,10 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 &lt;h2 id=&#34;create-the-lake-surface-elevation&#34;&gt;&lt;strong&gt;Create the lake surface elevation&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;We need to use the same process as above to pick out just the lake (i.e. &lt;mark&gt;&lt;i&gt;(&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 10) | (&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 12)&lt;/i&gt;&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;We need to use the same process as above to pick out just the lake.&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;mark&gt;&lt;i&gt;(&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 10) | (&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 12)&lt;/i&gt;&lt;/mark&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Save the output as &lt;i&gt;…LakeRaster.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1287,7 +1299,8 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 &lt;ul&gt;
 &lt;li&gt;Turn 0’s into NoData.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Turn 1’s into the value of the zonal statistic output calculated in the previous step.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Save the output as &lt;i&gt;…LakeSurface.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeSurface.tif&lt;/i&gt;.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab04image2.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;calculate-the-lake-depth-and-the-lake-volume&#34;&gt;&lt;strong&gt;Calculate the lake depth and the lake volume&lt;/strong&gt;&lt;/h2&gt;
@@ -1300,17 +1313,17 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 &lt;li&gt;Save the output as &lt;i&gt;…LakeDepth.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;li&gt;Examine the attribute table of the subtraction grid (R-click on &lt;i&gt;LakeDepth&lt;/i&gt; | Open Attribute Table).
-&lt;li&gt;Click the Select by Attribute button and select cells with an elevation difference greater than 0.
-&lt;li&gt;Export selected cells (Table Options | Export…) as a dBASE Table file named &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt;.
+&lt;p&gt;&lt;li&gt;Examine the attribute table of the subtraction grid (&lt;strong&gt;R-click&lt;/strong&gt; on &lt;i&gt;LakeDepth&lt;/i&gt; | &lt;strong&gt;Open Attribute Table&lt;/strong&gt;).
+&lt;li&gt;Click the &lt;strong&gt;Select by Attribute&lt;/strong&gt; button and select cells with an elevation difference greater than 0.
+&lt;li&gt;Export selected cells &lt;strong&gt;(Table Options | Export…)&lt;/strong&gt; as a dBASE Table file named &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt;.
 &lt;li&gt;When asked if you want to add the table to your map, select Yes&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;If you cannot see &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt; in your Table of Contents, you will need to switch to List By Source view&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If there were no errors but you cannot see &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt; in your Table of Contents, you  need to switch to List By Source view&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;li&gt;Open &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt; (R-click | Open)
-&lt;li&gt;Add a new field (Table Options | Add Field) and&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;Open &lt;i&gt;LakeDepth1995.dbf&lt;/i&gt; &lt;strong&gt;(R-click | Open)&lt;/strong&gt;
+&lt;li&gt;Add a new field &lt;strong&gt;(Table Options | Add Field)&lt;/strong&gt; and&amp;hellip;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;set the name to &lt;i&gt;Area&lt;/i&gt;&lt;/li&gt;
@@ -1344,10 +1357,735 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 &lt;li&gt;type to float&lt;/li&gt;
 &lt;li&gt;precision to 16&lt;/li&gt;
 &lt;li&gt;scale to 1 and then click OK
-&lt;li&gt;Calculate the total volume of &lt;i&gt;LakeDepth1995&lt;/i&gt; using the following equation: &lt;mark&gt;&lt;i&gt;total_vol = volume per cell (cell_vol) * total number of cells (count)&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Calculate the total volume of &lt;i&gt;LakeDepth1995&lt;/i&gt; using the following equation: &lt;mark&gt;&lt;i&gt;total_vol = volume per cell (cell_vol) * total number of cells (count)&lt;/mark&gt;&lt;/i&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You will need to perform this process twice more for 2003 and 2009, answer the part 2 questions, and submit both parts to Blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab05/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-5-model-builder&#34;&gt;&lt;strong&gt;Lab 5 - Model Builder&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to this Google Sheet.&lt;/p&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;BaseData&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Data we downloaded as part of lab 1&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1-performing-our-analysis-for-one-year&#34;&gt;&lt;strong&gt;Part 1: Performing our analysis for one year&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;part-1a-setting-up-arcmap&#34;&gt;&lt;strong&gt;Part 1A: Setting up Arcmap&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;getting-set-up&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;First let’s lay down the foundation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcMap and make sure that the Spatial Analyst extension is activated, and overwriting files is enabled.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Customize &amp;gt; Extensions&lt;/em&gt; &amp;amp; &lt;em&gt;ArcMap options&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Rename the default data frame to Base Data and add in the AOI, Bands 2 and 4, and the MTL file for each year.&lt;/li&gt;
+&lt;li&gt;To force our model to calculate everything using a consistent grid size, change the Geoprocessing &amp;gt; Environments settings to the following:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workspace&lt;/strong&gt;: Set both the Current workspace and Scratch workspaces to your lab05 folder.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Processing Extent&lt;/strong&gt;: Use the folder icon and point it to your AOI shapefile.  Use the folder icon next to snap raster to select the elevation dataset.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Raster Analysis&lt;/strong&gt;: Select As specified below and type in 30.&lt;/li&gt;
+&lt;li&gt;Click OK.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As you discovered in lab 4, the &lt;strong&gt;region group&lt;/strong&gt; tool was useful in creating a raster we could use to select the desired areas.  However, the region values were random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” and the cost distance tool to classify which of the NDWI zones we want.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-the-lakeseed-shapefile&#34;&gt;&lt;strong&gt;Create the LakeSeed shapefile&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the ArcCatalogue window right click on the Lab 5 folder and create a new feature class.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Call the class LakeSeed and make it a point feature.  Click next.&lt;/li&gt;
+&lt;li&gt;Use the Layers box to select the correct projection.  Click next until you reach the Field Names category.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In the first empty Field Name box, type in VALUE and change the Data Type to Short Integer.  In the field properties you can set the default value to 1.  Click Finish.  The layer should be added to your window.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;On the Editor toolbar, click Editor &amp;gt; Start Editing.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In the Create Features window, click LakeSeed and choose the point tool.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Create a single feature that will “intersect” all lake layers through time, so the center of the smallest lake extent is best.&lt;/li&gt;
+&lt;li&gt;When finished, click editor &amp;gt;  stop editing and save edits.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1b-isolate-the-lake&#34;&gt;&lt;strong&gt;Part 1B: Isolate the lake&lt;/strong&gt;:&lt;/h1&gt;
+
+&lt;h2 id=&#34;calculate-and-threshold-ndwi-in-one-expression&#34;&gt;&lt;strong&gt;Calculate and threshold NDWI (in one expression)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that &lt;strong&gt;we want to classify as a lake has a 0 vale, and everything else has a value of 1&lt;/strong&gt;.  This way we can use the cost distance tool to traverse all connected lake pixels without inuring a cost.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hint: My expression looks like &lt;/br&gt;&lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;1995\LT05_&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B4.TIF&amp;rdquo;) / Float(&amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; + &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;_B4.TIF&amp;rdquo;))  &amp;lt;= 0.3&lt;/mark&gt;&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Call the output &lt;i&gt;NDWI_yyyy&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;use-the-lakeseed-to-isolate-just-the-ndwi-zone-we-want&#34;&gt;&lt;strong&gt;Use the LakeSeed to isolate just the NDWI zone we want&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the search bar to find the &lt;strong&gt;Cost Distance&lt;/strong&gt; tool.&lt;/li&gt;
+&lt;li&gt;The source data is the &lt;i&gt;LakeSeedRas&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;The input cost raster is the &lt;i&gt;NDWI_1995&lt;/i&gt; layer.&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;COST_1995&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;To save ourselves a step, we can set the maximum distance to 0.01(something small), so that we only end up with the lake area that can be reached without crossing a land barrier.&lt;/li&gt;
+&lt;li&gt;We want just the lake, so use raster calculator and get just the areas with 0 cost
+
+&lt;ul&gt;
+&lt;li&gt;Hint: &lt;mark&gt;&lt;i&gt;“Cost_yyyy.tif” ==0&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Save the raster as &lt;i&gt;Lake_yyyy.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1c-lake-volume-calculation&#34;&gt;&lt;strong&gt;Part 1C: Lake volume calculation&lt;/strong&gt;:&lt;/h1&gt;
+
+&lt;h2 id=&#34;calculate-the-boundary-of-the-lake-in-1995-using-a-focal-erosion-process&#34;&gt;&lt;strong&gt;Calculate the boundary of the lake in 1995 using a focal erosion process&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;(as per lab 3)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;strong&gt;Focal statistics&lt;/strong&gt; tool, calculate the focal minimum using a rectangular 3x3 grid&lt;/li&gt;
+&lt;li&gt;The input should be the &lt;i&gt;Lake_1995&lt;/i&gt; layer&lt;/li&gt;
+&lt;li&gt;Save the output &lt;i&gt;Lake_Fmin.TIF&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Using &lt;strong&gt;raster calculator&lt;/strong&gt;, subtract the focal min raster from the lake classification raster to get just the boundary.&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;&lt;i&gt;&amp;ldquo;1995\LT05&lt;em&gt;L1TP&lt;/em&gt;&amp;hellip;_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;em&gt;L1TP&lt;/em&gt;&amp;hellip;_NDWI_FMin.TIF&amp;rdquo;&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Save the output of the map as &lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-height-the-water-rises-to-on-the-terrain&#34;&gt;&lt;strong&gt;Calculate the height the water rises to on the terrain&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;As per lab 4 we will use &lt;strong&gt;zonal statistics as table&lt;/strong&gt; and our newly created zone to calculate the (&lt;em&gt;insert statistic here&lt;/em&gt;) value of the elevation data.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the lake boundary (&lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;) as our zonal definition&lt;/li&gt;
+&lt;li&gt;We want the statistics from the elevation data, so that goes in the “Input Value Raster” box&lt;/li&gt;
+&lt;li&gt;Choose a statistic, I chose maximum but feel free to explore other options&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;…LakeBoundary_ZonalStat&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;create-the-lake-surface-raster&#34;&gt;&lt;strong&gt;Create the lake surface raster&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Also from lab 4 use the &lt;strong&gt;reclass by table&lt;/strong&gt; function (spatial analyst) to reclassify the &lt;i&gt;lake_1995&lt;/i&gt; raster into a lake surface raster.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your input raster is &lt;i&gt;Lake_1995&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Your remap table is the table created from zonal statistics as table (&lt;i&gt;LakeBoundary_ZonalStat&lt;/i&gt;)&lt;/li&gt;
+&lt;li&gt;The From, to, and output value should fill in asutomagically&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;LakeSurface_yyyy.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We need just the lake elevations, and given the tools shown so far we could accomplish that by multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set &lt;strong&gt;Null function&lt;/strong&gt;.  The &lt;strong&gt;Set Null(,)&lt;/strong&gt; function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output raster as LakeSurface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculate-the-volume-as-per-lab-4&#34;&gt;&lt;strong&gt;Calculate the volume (as per lab 4)&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Subtract the Lake Surface from the DEM using the &lt;strong&gt;raster calculator&lt;/strong&gt; tool
+
+&lt;ul&gt;
+&lt;li&gt;Save the output as &lt;i&gt;LakeVolume.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Add field&lt;/strong&gt; tool (data management) to create a new field
+
+&lt;ul&gt;
+&lt;li&gt;Call it volume&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Calculate Field&lt;/strong&gt; tool to calculate the volume of each cell
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Depth(Value) * area (30*30) * Count&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;summery table&lt;/strong&gt; to create a table of volume&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This process was time consuming, and the only thing that changes in this workflow (once we’ve chosen a place to analyses), is the input bands.  This repetitious task is best completed using a function.  In ArcMap, functions can take the form of tools, and the visual programming interface called Model Builder.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-2-creating-the-model&#34;&gt;&lt;strong&gt;PART 2: Creating the model&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;set-up-the-folders-for-the-lab&#34;&gt;&lt;strong&gt;Set up the folders for the lab&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In your lab folder in the ArcCatalog pane, create a new File Geodatabase&lt;/li&gt;
+&lt;li&gt;In that same lab folder, Right click and create a new &amp;gt; toolbox.  Name it &lt;i&gt;LakeVolumeAnalysis.tbx&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right click&lt;/strong&gt; on that toolbox and create a new &amp;gt; model.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;A blank Model window will appear. Take a moment to explore the tools. You can go to ArcGIS Desktop Help to find more information about each of the tools.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05ModelBuilderImage.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Close the Model window.&lt;/li&gt;
+&lt;li&gt;Right click on the model and
+
+&lt;ul&gt;
+&lt;li&gt;In the general tab rename the model &lt;i&gt;LakeVolumeForAYear&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Re-open the Model by R-clicking and selecting Edit…&lt;/li&gt;
+&lt;li&gt;Set up the Model Properties by going to &lt;strong&gt;Model | Model Properties&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Under the Environments tab, check the boxes for &lt;strong&gt;Processing Extent | Extent&lt;/strong&gt; and for &lt;strong&gt;Raster Analysis | Cell Size&lt;/strong&gt;, and for &lt;strong&gt;Workspace&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click the &lt;em&gt;Values…&lt;/em&gt; button, and set the values as in part 1A&lt;/li&gt;
+&lt;li&gt;Remove all layers from the map&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;starting-a-model-setting-up-the-workflow&#34;&gt;&lt;strong&gt;Starting a Model &amp;amp; Setting up the Workflow&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.
+* Open ArcToolbox and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.
+* Use the add data button to add in the band 2 and band 4 rasters
+* Right click on the resulting oval and rename it to Band 2 and 4 respectively
+* Right click on it and make it a parameter by checking &lt;strong&gt;Model Parameter&lt;/strong&gt; option from its popup menu (right-click). The letter &lt;strong&gt;P&lt;/strong&gt; appears beside the variable, indicating it is a model parameter.
+* Insert a new variable with insert &amp;gt; create variable
+  * Select Double
+* Double click on it and give it a default value of 0.3
+* Right click on it and make it a parameter as well.
+* Use the search function to drag in the &lt;strong&gt;raster calculator&lt;/strong&gt; tool from ArcCatalog into the model builder canvas
+* Double click on the raster calculator tool and fill it out as appropriate using the steps above.
+  * Make sure you use the drop downs to populate the raster calculator, pointing at the data is not appropriate here.
+  * Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;%1995 B2%&amp;rdquo; - &amp;ldquo;%1995 B4%&amp;rdquo;) / Float(&amp;ldquo;%1995 B2%&amp;rdquo; + &amp;ldquo;%1995 B4%&amp;rdquo;)) &amp;lt;= float(%Double%)&lt;/mark&gt;&lt;/i&gt;
+  * Name the output &lt;i&gt;NDWI.tif&lt;/i&gt;
+* The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;build-the-rest-of-the-workflow&#34;&gt;&lt;strong&gt;Build the rest of the workflow&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools.  Your final model should look like this:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+Use your new model to create a chart of the lake volume change over time like so:
+ &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture04.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+Submit an image of both your analysis and a screenshot of your model to blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab06/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-6-more-model-builder&#34;&gt;&lt;strong&gt;Lab 6 - More Model Builder&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;This lab is designed to further strengthen your understanding and ability to apply local, focal, and zonal operations to solve problems and comfortability with ModelBuilder, this time in the context of delineating sea level rize.  In part 1, you will walk through 2 methods of using the point and click interface to accomplish your analysis.  In part 2, you will use ModelBuilder to accomplish this same task, and in part 3 you will see how you can import your own python analysis into ArcMap.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 6: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;br /&gt;
+1 How many pixels are inundated?&lt;/p&gt;
+
+&lt;p&gt;2 While you’re building your models with model builder, you create several variables called model parameters that are shown with P letter next to their variables. What happens if you didn’t create those model parameters? What is the benefit of having the model parameters?&lt;/p&gt;
+
+&lt;p&gt;3 In part 02 of the lab, list all the output layers after you Run Entire Model in the ‘InundationByRegionGroup’ model builder window.&lt;/p&gt;
+
+&lt;p&gt;4 In part 02, how many cells does the final output have the value of ‘1’?&lt;/p&gt;
+
+&lt;p&gt;5 Which of the two methods of delineating sea level rise, region group or cost distance, was the more efficient means of performing this analysis?  Why do you think this is?&lt;/p&gt;
+
+&lt;p&gt;6 Submit a coherent map of the output.  Use mine below as an example.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6MyMap.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;7 This time, double click the InundationByRegionGroupPython script tool in part 03. When the model tool dialog box is opened, fill the parameter boxes with the right layer names. Click OK to run the tool. How many output layers do you have? List them.&lt;/p&gt;
+
+&lt;p&gt;8 In part 03 how many cells does the final output have the value of ‘1’?&lt;/p&gt;
+
+&lt;p&gt;9 If the Sea Level Rise is set to 4, how many cells does the final output have the value of ‘1’?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/Ekw4OGrLcvJNq8K-MJiBYygBbJ-7_2l1RV4WyCTslNCt8w?e=ILAHpW&#34;&gt;click to download&lt;/a&gt;&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1-3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;DEM&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster dataset of the elevation of the area&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1-3&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Ocean&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Raster dataset of the land cover types (Land &amp;amp; Ocean) over the area&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;SeaLevelRiseInundation.py&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Sea Level Rise inundation delineation using region group and zonal max&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1-delineating-sea-level-rise-inundation-with-arcmap&#34;&gt;&lt;strong&gt;Part 1: Delineating Sea Level Rise Inundation with ArcMap&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;As you saw in class, it is possible to take two different approaches to map sea level rise in GIS.  We can use cost distance to calculate the rise from an ocean source or we can use region group to get the regions of inundation which include an ocean source.  Here you need to pick one of the methods and walk through it using ArcMap.&lt;/p&gt;
+
+&lt;p&gt;Unzip the lab 6 folder into your one drive, in it you will find a baseData folder, and folders already set up for part1, part2, and part3.  Go ahead and pick a means of delineating sea level rise, either cost distance or region groups, and perform a 2-meter sea level rise analysis.&lt;/p&gt;
+
+&lt;style id=&#34;Book1_4029_Styles&#34;&gt;
+&lt;!--table
+    {mso-displayed-decimal-separator:&#34;\.&#34;;
+    mso-displayed-thousand-separator:&#34;\,&#34;;}
+.font54029
+    {color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;}
+.font64029
+    {color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:italic;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;}
+.xl654029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl664029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl674029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl684029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+.xl694029
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:12.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+--&gt;
+&lt;/style&gt;
+
+&lt;div id=&#34;Book1_4029&#34; align=center x:publishsource=&#34;Excel&#34;&gt;
+
+&lt;table border=0 cellpadding=0 cellspacing=0 width=768 style=&#39;border-collapse:
+ collapse;table-layout:fixed;width:576pt&#39;&gt;
+ &lt;col class=xl654029 width=384 span=2 style=&#39;mso-width-source:userset;
+ mso-width-alt:13653;width:288pt&#39;&gt;
+ &lt;tr height=22 style=&#39;height:16.2pt&#39;&gt;
+  &lt;td height=22 class=xl664029 width=384 style=&#39;height:16.2pt;width:288pt&#39;&gt;&lt;span
+  style=&#39;mso-bidi-font-size:12pt&#39;&gt;Cost Distance&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl674029 width=384 style=&#39;width:288pt&#39;&gt;&lt;span style=&#39;mso-bidi-font-size:
+  12pt&#39;&gt;Region Group&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=445 style=&#39;mso-height-source:userset;height:333.6pt&#39;&gt;
+  &lt;td height=445 class=xl684029 width=384 style=&#39;height:333.6pt;width:288pt&#39;&gt;1.
+  Set the oceans to a one value source&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a. &lt;font class=&#34;font64029&#34;&gt;Use the
+  Set null tool&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. &lt;/font&gt;&lt;font
+  class=&#34;font64029&#34;&gt;&amp;quot;Value&amp;quot; = 0, call the output “source.tif”&lt;/font&gt;&lt;font
+  class=&#34;font54029&#34;&gt;&lt;br&gt;
+    2. Set all elevations in the DEM which are above the sea level rise
+  threshold&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  Set null tool again&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. &amp;quot;Value&amp;quot; &amp;gt; %Sea
+  Level Rise% (in this case 2)&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Set the false raster to 1 (Friction
+  should be the same everywhere otherwise)&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;d. Call the output
+  “friction.tif”&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;3. Create the cost distance surface&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  Cost distance tool…&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Cost is “friction” source is
+  “source”&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Call the output distance&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;4. Remove the source cells to create a
+  raster of just inundation&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  Set null&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. “Value” = 0&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt;  &lt;/span&gt;&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Again, set the value to 1
+  otherwise&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;d. Call the output “SLRbyCost.tif”&lt;/font&gt;&lt;/td&gt;
+  &lt;td class=xl694029 width=384 style=&#39;width:288pt&#39;&gt;1. Create a raster of all
+  the areas less than the projected sea level rise.&lt;br&gt;
+    &lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a. Hint:
+  Use the set null tool to replace all values &amp;gt; sea level rise to null.&lt;span
+  style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Otherwise, set the value to
+  1&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Call the output demlteslr&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;2. Group the resulting regions using region
+  group&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  Use 8 connectivity and group using the within method.&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output regions&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;3. Use zonal statistics to identify the
+  regions which contain an ocean source&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  We want the value of oceans (input value raster) using the regions as the
+  zone data, and the maximum statistics.&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output zonemax&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;4. We then want to remove the oceans from
+  our calculation&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  Hint: raster calculator (%zonemax%&amp;quot; - &amp;quot;%ocean%&amp;quot;).&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output diff&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;5. Finally, sett everything less than or
+  equal to 0 to null so that we have just the inundated pixels&lt;br&gt;
+    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
+  Hint: Set null tool again&lt;br&gt;
+    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output SLRbyRegion&lt;/font&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Answer question 1&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-2-delineating-sea-level-rise-inundation-with-model-builder&#34;&gt;&lt;strong&gt;Part 2: Delineating Sea Level Rise Inundation with Model Builder&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In ArcGIS we can use ModelBuilder to build a visual model that represents an analysis work flow. A ModelBuilder model typically consists of a set of data connected by a series of GIS operations. In this part we will be using ModelBuilder to create a model to delineate sea level rise inundation. Using a ModelBuilder model is helpful in situations where the model can be applied to numerous datasets, as we saw with the last lab.  Here you will use model builder to create both variants of the SLR workflow, one for Region Groups and one for Cost Distance.&lt;/p&gt;
+
+&lt;h2 id=&#34;set-up-the-folders-for-the-lab&#34;&gt;&lt;strong&gt;Set up the folders for the lab&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In your lab 6 part 2 folder, create a new File Geodatabase.
+
+&lt;ul&gt;
+&lt;li&gt;R-Click &amp;gt; New &amp;gt; File Geodatabase&lt;/li&gt;
+&lt;li&gt;This will be your new default workspace&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Add in the DEM and Ocean to the ArcMap, and examine them.  When done, remove them so you have a blank map.&lt;/li&gt;
+&lt;li&gt;It will also be helpful if you set overwrite to on
+
+&lt;ul&gt;
+&lt;li&gt;Geoprocessing &amp;gt; Geoprocessing Options &amp;gt; Overwrite the outputs…&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;creating-a-toolbox-and-a-model&#34;&gt;&lt;strong&gt;Creating a Toolbox and a Model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;R-click on your lab 6 part 2 folder and create a &lt;strong&gt;new toolbox&lt;/strong&gt;. Name the new toolbox &lt;em&gt;InundationTools.tbx&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;R-click on the toolbox and create a &lt;strong&gt;new model&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Close the Model window.&lt;/li&gt;
+&lt;li&gt;Rename the new Model (&lt;strong&gt;R-click | Rename&lt;/strong&gt;) to &lt;em&gt;InundationByRegionGroup&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Re-open the Model by R-clicking and selecting Edit…&lt;/li&gt;
+&lt;li&gt;Set up the Model Properties by going to &lt;strong&gt;Model | Model Properties&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Under the Environments tab, check the boxes for &lt;strong&gt;Processing Extent | Extent&lt;/strong&gt; and for &lt;strong&gt;Raster Analysis | Cell Size&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Values…&lt;/strong&gt; button.&lt;/li&gt;
+&lt;li&gt;Click the down arrows for each of the settings and make the &lt;strong&gt;Extent&lt;/strong&gt; the same as the &lt;em&gt;DEM&lt;/em&gt; raster in your data folder, and the &lt;strong&gt;Cell Size&lt;/strong&gt; the same as &lt;em&gt;DEM&lt;/em&gt; as well (they both have the same extent and cell size, if you check the data’s properties).&lt;/li&gt;
+&lt;li&gt;Click OK on the Environment Settings.&lt;/li&gt;
+&lt;li&gt;Click OK on the &lt;em&gt;InundationByRegionGroup&lt;/em&gt; Properties Window.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;setting-up-the-workflow-building-the-inundationbyregiongroup-model&#34;&gt;&lt;strong&gt;Setting up the Workflow &amp;amp; Building the InundationByRegionGroup Model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open &lt;strong&gt;ArcToolbox&lt;/strong&gt; and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.&lt;/li&gt;
+&lt;li&gt;Add the &lt;strong&gt;Set Null&lt;/strong&gt; tool by finding it under ArcToolbox (Spatial Analyst Tools | Conditional) and then dragging it onto the model window.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Before you set the options for the Set Null tool, create a &lt;strong&gt;Double variable from the Insert&lt;/strong&gt; menu. Rename it as ‘Sea Level Rise’, give the value of ‘2’ to the variable, and set it as a Model Parameter by checking Model Parameter option from its popup menu (right-click). The letter P appears beside the variable, indicating it is a model parameter.&lt;/li&gt;
+&lt;li&gt;Double click on the Set Null tool. The Set Null dialog will open, and it should be roughly similar to the dialog for Set Null in the spatial analyst.&lt;/li&gt;
+&lt;li&gt;Set the input conditional raster to DEM, and set the output to &lt;em&gt;demlteslr&lt;/em&gt; and make sure it is saved in the appropriate place. As for the expression, type in &lt;mark&gt;&lt;i&gt;&amp;ldquo;Value&amp;rdquo; &amp;gt; %Sea Level Rise%&lt;/mark&gt;&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Right-click the input raster (DEM) and check Model Parameter option.&lt;/li&gt;
+&lt;li&gt;To define input false raster or constant value, you need to create model variables for it. Right-click the Set Null. Click Make Variable &amp;gt; From Parameter &amp;gt; Input false layer or constant value. This adds the Input false layer or constant value as a variable in the model. Double-click it to assign ‘1’.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You now have a simple model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the Set Null and select &lt;strong&gt;Run&lt;/strong&gt; to test your model.&lt;/li&gt;
+&lt;li&gt;Add, examine, and then remove the created Raster from the ArcMap window&lt;/li&gt;
+&lt;li&gt;Add a &lt;strong&gt;Region Group tool&lt;/strong&gt; (Spatial Analyst Tools &amp;gt; Generalization) to your model.
+
+&lt;ul&gt;
+&lt;li&gt;Set &lt;em&gt;demlteslr&lt;/em&gt; as its input raster&lt;/li&gt;
+&lt;li&gt;Set &lt;em&gt;regions&lt;/em&gt; as an output.&lt;/li&gt;
+&lt;li&gt;The number of neighboring cells to use is eight and use within for zone grouping method.&lt;/li&gt;
+&lt;li&gt;Uncheck not to add link field to output and&amp;hellip;&lt;/li&gt;
+&lt;li&gt;click OK to finish the Region Group dialog.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the Region Group tool and select &lt;strong&gt;Run&lt;/strong&gt; to test your model.&lt;/li&gt;
+&lt;li&gt;Add examine, and then remove the created Raster from the ArcMap window&lt;/li&gt;
+&lt;li&gt;Add a &lt;strong&gt;Zonal Statistics tool&lt;/strong&gt; (Spatial Analyst Tools &amp;gt; Zonal) to your model.
+
+&lt;ul&gt;
+&lt;li&gt;Set &lt;em&gt;regions&lt;/em&gt; as its input&lt;/li&gt;
+&lt;li&gt;Set &lt;em&gt;VALUE&lt;/em&gt; as a zone field&lt;/li&gt;
+&lt;li&gt;Use &lt;em&gt;zonemax&lt;/em&gt; as an output.&lt;/li&gt;
+&lt;li&gt;Set &lt;em&gt;Ocean&lt;/em&gt; as an input value raster.&lt;/li&gt;
+&lt;li&gt;Use maximum for statistics type, then click OK.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;em&gt;Ocean&lt;/em&gt; as a &lt;strong&gt;model parameter&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the Zonal Statistics and select &lt;strong&gt;Run&lt;/strong&gt; to test your model.&lt;/li&gt;
+&lt;li&gt;Add examine, and then remove the created Raster from the ArcMap window&lt;/li&gt;
+&lt;li&gt;We now need to use the &lt;strong&gt;Raster Calculator&lt;/strong&gt; to calculate the difference between the &lt;em&gt;zonemax&lt;/em&gt; and the &lt;em&gt;Ocean&lt;/em&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: &lt;mark&gt;&lt;i&gt;(&amp;ldquo;%zonemax%&amp;rdquo; - &amp;ldquo;%Ocean%&amp;rdquo;)&lt;/mark&gt;&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;em&gt;diff&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the Raster Calculator and select &lt;strong&gt;Run&lt;/strong&gt; to test your model.&lt;/li&gt;
+&lt;li&gt;We are going to add a &lt;strong&gt;Set Null&lt;/strong&gt; again to get our final output Inundation. Create another &lt;strong&gt;Double model variable&lt;/strong&gt;, to define the input false raster or constant value and give it a value ‘1.’ Set &lt;em&gt;diff&lt;/em&gt; as the tool’s input and type in the proper expression to query the values less and equal to zero.&lt;/li&gt;
+&lt;li&gt;The final layout should look like so:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the Set Null and select &lt;strong&gt;Run&lt;/strong&gt; to test your model.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;saving-and-testing-your-whole-model&#34;&gt;&lt;strong&gt;Saving and testing your whole model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Click OK and Save your model.&lt;/li&gt;
+&lt;li&gt;While you’re building your model, you can check if each tool (so far, we created 5 tools; Set Null, Set Null(2), Region Group, Zonal Statistics, and Raster Calculator for this model) you created works fine by right-clicking and running it (select Run). This time, let’s check if whole your model runs in one go.&lt;/li&gt;
+&lt;li&gt;Close the model.&lt;/li&gt;
+&lt;li&gt;After all tools are correctly established in the model, delete all of the output files (&lt;em&gt;delteslr, regions, zonemax, diff, inundation&lt;/em&gt;) from your output folder.&lt;/li&gt;
+&lt;li&gt;Run your model using the appropriate inputs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;now-recreate-the-cost-distance-approach&#34;&gt;&lt;strong&gt;Now recreate the cost distance approach&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Create a new model using the cost distance approach to delineating sea level rise.  Your final model should look something like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Answer question 2-5.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-3-sea-level-rise-inundation-delineation-with-python-scripting&#34;&gt;&lt;strong&gt;Part 3: Sea Level Rise Inundation Delineation with Python Scripting&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this part of the lab we will be using ArcGIS Python Command Window to do the same analysis we did in the first part. The main purpose is to show how such a model/analysis can be implemented by using a python script tool. We, therefore, will practice how to create ArcGIS Python tool using a python script.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-a-script-tool&#34;&gt;&lt;strong&gt;Creating a script tool&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Within ArcGIS, you can create a script tool inside a toolbox. A script tool is like any other tool - it can be opened and executed from the tool dialog box, used in models and the &lt;strong&gt;Python&lt;/strong&gt; window, and called from other scripts and script tools.&lt;/li&gt;
+&lt;li&gt;To create a script tool, you need three things; a script, a custom toolbox, and a precise definition of the parameters of your script.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;creating-a-custom-toolbox&#34;&gt;&lt;strong&gt;Creating a custom toolbox&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can create your own toolbox called a custom toolbox and add tools and toolsets to it. Script and model tools that you create should be stored in a custom toolbox.&lt;/li&gt;
+&lt;li&gt;Open ArcCatalog. In the Catalog Tree, navigate to the folder where you want the toolbox to be created.&lt;/li&gt;
+&lt;li&gt;Right-click the folder and click &lt;strong&gt;New &amp;gt; Toolbox&lt;/strong&gt;. Give the toolbox a new name &lt;em&gt;InundationToolbox.tbx&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;To create a script tool, right-click your custom toolbox and click &lt;strong&gt;Add &amp;gt; Script&lt;/strong&gt;. This opens the &lt;strong&gt;Add Script wizard&lt;/strong&gt; that takes you step by step through the process of creating a script tool. Give a new script a name &lt;em&gt;InundationByRegionGroupPython&lt;/em&gt; and add a script file by specifying the location of the file &lt;em&gt;InundationByRegionGroupPython.py&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On the third step of the &lt;strong&gt;Add Script wizard&lt;/strong&gt;, add parameters by typing the name and selecting the data type as described in the table below. As for the property, use the default options unless specifically mentioned in the table below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Display Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Type&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Property&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Oceans&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster Dataset&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;DEM&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster Dataset&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Sea Level Rise&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Double&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Default: 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Inundation&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Raster Dataset&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Direction: output&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;  
+
+&lt;ul&gt;
+&lt;li&gt;After completing the steps, your toolbox will contain a new script tool. You can always modify properties (such as parameter names and data types) of this script tool by right-clicking the script tool and choosing &lt;strong&gt;Properties&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Double click the script file you just added. The &lt;em&gt;InundationByRegionGroupPython&lt;/em&gt; tool dialog will appear and it should look like this image below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Input &lt;em&gt;ocean&lt;/em&gt; &amp;amp; &lt;em&gt;dem&lt;/em&gt; for the first two input layers. Use the default value for Sea Level Rise. Save &lt;em&gt;Inundation&lt;/em&gt; in your part02 folder as an output layer. Click OK to run the tool. Answer question 6-9.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When finished, submit your work to blackboard.&lt;/p&gt;
 </description>
     </item>
     

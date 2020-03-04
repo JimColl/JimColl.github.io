@@ -1513,7 +1513,8 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;GIS Resources&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;A nice cross section of links to open courseware across the academic disciplines, and a few GIS-centric resources: &lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;https://www.gislounge.com/learn-gis-for-free/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gislounge.com/learn-gis-for-free/&#34;&gt;GIS lounge&lt;/a&gt; has compiled a nice cross section of links to open courseware across the academic disciplines, and a few GIS-centric resources.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.earthdatascience.org/&#34;&gt;Earth Lab&lt;/a&gt; has a massive amount of R and Python tutorials related to Earth Data Science.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hydroshare.org/&#34;&gt;Hydroshare&lt;/a&gt;: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at &lt;a href=&#34;https://www.cuahsi.org/&#34;&gt;CUAHSI&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://opentopo.sdsc.edu/login&#34;&gt;OpenTOPO&lt;/a&gt;: A great clearinghouse and web toolset for topo data.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://live.osgeo.org/en/index.html&#34;&gt;OSGeoLive&lt;/a&gt;: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;.&lt;/li&gt;
@@ -1533,12 +1534,11 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;&lt;strong&gt;Intro to GIS and Spatial Analysis&lt;/strong&gt;&lt;/a&gt; by Manuel Gimond&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;&lt;strong&gt;Geocomputation with R&lt;/strong&gt;&lt;/a&gt; by Robin Lovelace, Jakub Nowosad &amp;amp; Jannes Muenchow&lt;/li&gt;
 &lt;li&gt;An incomplete version of &lt;a href=&#34;https://socviz.co/index.html#preface&#34;&gt;&lt;strong&gt;Data Visualization: A practical introduction&lt;/strong&gt;&lt;/a&gt; by Kieran Healy&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://keen-swartz-3146c4.netlify.com/&#34;&gt;&lt;strong&gt;Spatial Data Science&lt;/strong&gt;&lt;/a&gt; by Edzer Pebesma, Roger Bivand&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://keen-swartz-3146c4.netlify.com/&#34;&gt;&lt;strong&gt;Spatial Data Science&lt;/strong&gt;&lt;/a&gt; by Edzer Pebesma and Roger Bivand&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cengel.github.io/R-spatial/&#34;&gt;&lt;strong&gt;Using Spatial Data with R&lt;/strong&gt;&lt;/a&gt; by Claudia A Engel&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://r-statistics.co/&#34;&gt;&lt;strong&gt;r-statistics.co&lt;/strong&gt;&lt;/a&gt; by Selva Prabhakaran&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://englianhu.files.wordpress.com/2018/10/web-application-development-with-r-using-shiny-build-stunning-graphics-and-interactive-data-visualizations-to-deliver-cutting-edge-analytics-3ed.pdf&#34;&gt;&lt;strong&gt;Web Application Development with R Using Shiny&lt;/strong&gt;&lt;/a&gt; by Chris Beeley and Shitalkumar R. Sukhdeve&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
 
 &lt;hr /&gt;
 
@@ -1560,37 +1560,55 @@ Other useful slide decks:&lt;br /&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;cluster&#34;&gt;clusteR&lt;/h1&gt;
+&lt;h1 id=&#34;cluster&#34;&gt;&lt;strong&gt;clusteR&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/ClusteR.PNG&#34; alt=&#34;&#34; /&gt;
-&lt;strong&gt;Warning: Beta build&lt;/strong&gt;&lt;br /&gt;
-See the github: &lt;a href=&#34;https://github.com/JimColl/clusteR&#34;&gt;https://github.com/JimColl/clusteR&lt;/a&gt;
-Or it&amp;rsquo;s companion on my website: &lt;a href=&#34;https://jimcoll.github.io/courses/random/&#34;&gt;https://jimcoll.github.io/courses/random/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/ClusteR.PNG&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+See the github: &lt;a href=&#34;https://github.com/JimColl/clusteR&#34;&gt;https://github.com/JimColl/clusteR&lt;/a&gt; or it&amp;rsquo;s companion on my website: &lt;a href=&#34;https://jimcoll.github.io/courses/random/&#34;&gt;https://jimcoll.github.io/courses/random/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;About:&lt;/strong&gt;&lt;br /&gt;
-A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit, this GUI driven, geographic database display and clustering application built is built on R.  Is also a &lt;em&gt;nearly&lt;/em&gt; minimal example of how to tie map and database together, how reactive shiny elements work, and how to print dashboards.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;About:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;A project that grew out of a request to see a database from a geographic prospective, here is a FOSS implementation of GIS for people who don&amp;rsquo;t know or have the time to learn it.&lt;/p&gt;
+&lt;p&gt;A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit, this GUI driven, geographic database display and clustering application built is built on R.  Is also a &lt;em&gt;nearly&lt;/em&gt; minimal example of how to tie map and database together, how reactive shiny elements work, and how to print dashboards.  A project that grew out of a request to see a database from a geographic prospective, here is a FOSS implementation of GIS for people who don&amp;rsquo;t know or have the time to learn it.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;How to run:&lt;/strong&gt;&lt;br /&gt;
-The &amp;ldquo;installation&amp;rdquo; of this is program is trivially easy by design and requires no permissions.
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GUI driven interface to select csv or shapefile database.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Use drop downs how to cluster (&lt;em&gt;currently broken&lt;/em&gt;), color, and label the points.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Edit the table view of the database and optionally save the database back out.&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Click on a table entry to zoom to the location&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fully reactive map and editing&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How to run:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;installation&amp;rdquo; of this is program is trivially easy by design and requires no permissions.
 To start the process:&lt;/p&gt;
 
-&lt;p&gt;1) Download and unzip this repository using the green &amp;ldquo;Clone or downlaod&amp;rdquo; button.
+&lt;p&gt;1) Download and unzip this repository using the green &amp;ldquo;Clone or download&amp;rdquo; button.&lt;br /&gt;
 2) Select a csv or a shapefile, enter the LAT LON and EPSG fields as necessary.  Replace spaces with .&lt;br /&gt;
 3) and hit run!&lt;/p&gt;
+
+&lt;p&gt;To &amp;ldquo;uninstall&amp;rdquo;, just delete the folder&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Known bugs:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Selecting fields which are too long or numeric will currently kill the crab.  To recover, close the window and re run the HTA.&lt;/li&gt;
-&lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly.
+&lt;li&gt;Selecting fields which are too long or numeric will currently (kill the crab)[&lt;a href=&#34;http://i.imgur.com/gMmnR5p.jpg&#34;&gt;http://i.imgur.com/gMmnR5p.jpg&lt;/a&gt;].  To recover, close the window and re run the HTA.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Map and data don&amp;rsquo;t wrap smoothly.&lt;br /&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Fly to (when you click on a row) will sometimes cause the erver to lock up.  To fix, zoom in a bit before attempting to fly.&lt;/li&gt;
+&lt;li&gt;Fly to (when you click on a row) will sometimes cause the server to lock up.  To fix, zoom in a bit before attempting to fly.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Legends can be too large for the window.&lt;/li&gt;
-&lt;li&gt;Editing the table is not fully tested.&lt;/li&gt;
+&lt;li&gt;Legends can be too large for the window.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Editing the table is not fully tested&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shapefile editing broken&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Print button is broken as well&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;

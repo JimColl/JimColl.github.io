@@ -636,7 +636,7 @@ Answer #8 on your answer sheet&lt;/li&gt;
 &lt;p&gt;Complete #9 and #10 on your assignment sheet and TURN IT IN; your grade on this lab will be based entirely on your answers to the questions!&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Hint: need help answering question 10?  Make a map like so!  Useful tools: Raster to polygon, symbology as categories.
+&lt;p&gt;Hint: Need help answering question 10?  Make a map like so!  Useful tools: Raster to polygon, symbology as categories, rectangle as text, insert images.  If performance is an issue, add basemaps last.  Spend some time on the map and I&amp;rsquo;ll count that as a response to the question, so throw on a nice album (one of &lt;a href=&#34;https://open.spotify.com/album/72b7KBNzYH54BtZ5FBSFqi&#34;&gt;my current favorites&lt;/a&gt;) and cartography away!
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab02CartMap.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
@@ -1225,6 +1225,15 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 &lt;li&gt;Add &lt;i&gt;kansas2000censusblk.dbf&lt;/i&gt; to the data frame.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Right-click the &lt;i&gt;censusblk&lt;/i&gt; layer, select Joins and Relates, and select Join. Join the layer to &lt;i&gt;kansas2000censusblk.dbf&lt;/i&gt; using the STFID field.&lt;/li&gt;
 &lt;li&gt;Examine the attribute table of &lt;i&gt;censusblk&lt;/i&gt; to make sure the join was successful. Do you see all sorts of demographic attributes? If so, the join was successful.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab04imageJoin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Need a refresher on joins?  Try &lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab06/&#34;&gt;lab 6 from the intro class&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Right-click the header of the &lt;i&gt;POP2000&lt;/i&gt; attribute and select Statistics. The sum value is the number of people in Douglas County. Record the value somewhere, as you will be entering this into the comments section of your Blackboard submission. Close the window.&lt;/li&gt;
 &lt;li&gt;Use Select by Location… to select the census blocks that are within the buffer zone.
 
@@ -1252,7 +1261,7 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 &lt;h2 id=&#34;isolate-the-lake-boundary&#34;&gt;&lt;strong&gt;Isolate the lake boundary&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.&lt;br /&gt;
+&lt;p&gt;As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.  Note that here, your numbers will differ from mine, region groups applies group numbers in a quasi-random fashion, and you may or may not have the same number of groups that I do.&lt;br /&gt;
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab04image1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1291,6 +1300,13 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 &lt;ul&gt;
 &lt;li&gt;&lt;mark&gt;&lt;i&gt;(&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 10) | (&amp;ldquo;…LakeBoundry_Group.TIF&amp;rdquo; == 12)&lt;/i&gt;&lt;/mark&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: That&amp;rsquo;s an | above, not a /.  The &amp;ldquo;pipe&amp;rdquo; is computer shortcode for &amp;ldquo;OR&amp;rdquo;.  Shift backslash on most keyboards.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Save the output as &lt;i&gt;…LakeRaster.tif&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1573,21 +1589,30 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 
 &lt;h2 id=&#34;starting-a-model-setting-up-the-workflow&#34;&gt;&lt;strong&gt;Starting a Model &amp;amp; Setting up the Workflow&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.
-* Open ArcToolbox and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.
-* Use the add data button to add in the band 2 and band 4 rasters
-* Right click on the resulting oval and rename it to Band 2 and 4 respectively
-* Right click on it and make it a parameter by checking &lt;strong&gt;Model Parameter&lt;/strong&gt; option from its popup menu (right-click). The letter &lt;strong&gt;P&lt;/strong&gt; appears beside the variable, indicating it is a model parameter.
-* Insert a new variable with insert &amp;gt; create variable
-  * Select Double
-* Double click on it and give it a default value of 0.3
-* Right click on it and make it a parameter as well.
-* Use the search function to drag in the &lt;strong&gt;raster calculator&lt;/strong&gt; tool from ArcCatalog into the model builder canvas
-* Double click on the raster calculator tool and fill it out as appropriate using the steps above.
-  * Make sure you use the drop downs to populate the raster calculator, pointing at the data is not appropriate here.
-  * Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;%1995 B2%&amp;rdquo; - &amp;ldquo;%1995 B4%&amp;rdquo;) / Float(&amp;ldquo;%1995 B2%&amp;rdquo; + &amp;ldquo;%1995 B4%&amp;rdquo;)) &amp;lt;= float(%Double%)&lt;/mark&gt;&lt;/i&gt;
-  * Name the output &lt;i&gt;NDWI.tif&lt;/i&gt;
-* The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:&lt;/p&gt;
+&lt;p&gt;You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToolbox and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.&lt;/li&gt;
+&lt;li&gt;Use the add data button to add in the band 2 and band 4 rasters&lt;/li&gt;
+&lt;li&gt;Right click on the resulting oval and rename it to Band 2 and 4 respectively&lt;/li&gt;
+&lt;li&gt;Right click on it and make it a parameter by checking &lt;strong&gt;Model Parameter&lt;/strong&gt; option from its popup menu (right-click). The letter &lt;strong&gt;P&lt;/strong&gt; appears beside the variable, indicating it is a model parameter.&lt;/li&gt;
+&lt;li&gt;Insert a new variable with insert &amp;gt; create variable
+
+&lt;ul&gt;
+&lt;li&gt;Select Double&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Double click on it and give it a default value of 0.3&lt;/li&gt;
+&lt;li&gt;Right click on it and make it a parameter as well.&lt;/li&gt;
+&lt;li&gt;Use the search function to drag in the &lt;strong&gt;raster calculator&lt;/strong&gt; tool from ArcCatalog into the model builder canvas&lt;/li&gt;
+&lt;li&gt;Double click on the raster calculator tool and fill it out as appropriate using the steps above.
+
+&lt;ul&gt;
+&lt;li&gt;Make sure you use the drop downs to populate the raster calculator, pointing at the data is not appropriate here.&lt;/li&gt;
+&lt;li&gt;Hint: My expression looks like &lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;%1995 B2%&amp;rdquo; - &amp;ldquo;%1995 B4%&amp;rdquo;) / Float(&amp;ldquo;%1995 B2%&amp;rdquo; + &amp;ldquo;%1995 B4%&amp;rdquo;)) &amp;lt;= float(%Double%)&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;NDWI.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 

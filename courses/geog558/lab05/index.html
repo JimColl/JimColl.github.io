@@ -655,21 +655,30 @@
 
 <h2 id="starting-a-model-setting-up-the-workflow"><strong>Starting a Model &amp; Setting up the Workflow</strong></h2>
 
-<p>You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.
-* Open ArcToolbox and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.
-* Use the add data button to add in the band 2 and band 4 rasters
-* Right click on the resulting oval and rename it to Band 2 and 4 respectively
-* Right click on it and make it a parameter by checking <strong>Model Parameter</strong> option from its popup menu (right-click). The letter <strong>P</strong> appears beside the variable, indicating it is a model parameter.
-* Insert a new variable with insert &gt; create variable
-  * Select Double
-* Double click on it and give it a default value of 0.3
-* Right click on it and make it a parameter as well.
-* Use the search function to drag in the <strong>raster calculator</strong> tool from ArcCatalog into the model builder canvas
-* Double click on the raster calculator tool and fill it out as appropriate using the steps above.
-  * Make sure you use the drop downs to populate the raster calculator, pointing at the data is not appropriate here.
-  * Hint: My expression looks like <mark><i>(Float(&ldquo;%1995 B2%&rdquo; - &ldquo;%1995 B4%&rdquo;) / Float(&ldquo;%1995 B2%&rdquo; + &ldquo;%1995 B4%&rdquo;)) &lt;= float(%Double%)</mark></i>
-  * Name the output <i>NDWI.tif</i>
-* The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:</p>
+<p>You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to delineate the sea level change. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.</p>
+
+<ul>
+<li>Open ArcToolbox and set up your model window and ArcMap window so that you can see both ArcToolbox and the model window at the same time.</li>
+<li>Use the add data button to add in the band 2 and band 4 rasters</li>
+<li>Right click on the resulting oval and rename it to Band 2 and 4 respectively</li>
+<li>Right click on it and make it a parameter by checking <strong>Model Parameter</strong> option from its popup menu (right-click). The letter <strong>P</strong> appears beside the variable, indicating it is a model parameter.</li>
+<li>Insert a new variable with insert &gt; create variable
+
+<ul>
+<li>Select Double</li>
+</ul></li>
+<li>Double click on it and give it a default value of 0.3</li>
+<li>Right click on it and make it a parameter as well.</li>
+<li>Use the search function to drag in the <strong>raster calculator</strong> tool from ArcCatalog into the model builder canvas</li>
+<li>Double click on the raster calculator tool and fill it out as appropriate using the steps above.
+
+<ul>
+<li>Make sure you use the drop downs to populate the raster calculator, pointing at the data is not appropriate here.</li>
+<li>Hint: My expression looks like <mark><i>(Float(&ldquo;%1995 B2%&rdquo; - &ldquo;%1995 B4%&rdquo;) / Float(&ldquo;%1995 B2%&rdquo; + &ldquo;%1995 B4%&rdquo;)) &lt;= float(%Double%)</mark></i></li>
+<li>Name the output <i>NDWI.tif</i></li>
+</ul></li>
+<li>The bubbles should color themselves in if you entered everything in correctly.  This means that the tools executed successfully, but be careful.  Just because it ran doesn’t mean it is right.  Your model should now look like so:</li>
+</ul>
 
 <p><img src="/courses/geog558/media/Lab05Picture02.png" alt="" /></p>
 

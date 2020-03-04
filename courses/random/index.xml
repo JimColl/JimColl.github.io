@@ -210,6 +210,10 @@ paginate = 10  # Number of items per page in paginated lists.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
+
+&lt;h3 id=&#34;extra-links&#34;&gt;&lt;strong&gt;Extra Links&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Leslie Myint&amp;rsquo;s website has a &lt;a href=&#34;https://lmyint.github.io/post/hugo-academic-tips/&#34;&gt;great post&lt;/a&gt; that effectively covers a large cross section of changes to the Academic theme.&lt;/p&gt;
 </description>
     </item>
     

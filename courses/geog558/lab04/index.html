@@ -570,6 +570,15 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 <li>Add <i>kansas2000censusblk.dbf</i> to the data frame.<br /></li>
 <li>Right-click the <i>censusblk</i> layer, select Joins and Relates, and select Join. Join the layer to <i>kansas2000censusblk.dbf</i> using the STFID field.</li>
 <li>Examine the attribute table of <i>censusblk</i> to make sure the join was successful. Do you see all sorts of demographic attributes? If so, the join was successful.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab04imageJoin.png" alt="" /></p>
+
+<blockquote>
+<p>NOTE: Need a refresher on joins?  Try <a href="https://jimcoll.github.io/courses/geog358/lab06/">lab 6 from the intro class</a>.</p>
+</blockquote>
+
+<ul>
 <li>Right-click the header of the <i>POP2000</i> attribute and select Statistics. The sum value is the number of people in Douglas County. Record the value somewhere, as you will be entering this into the comments section of your Blackboard submission. Close the window.</li>
 <li>Use Select by Location… to select the census blocks that are within the buffer zone.
 
@@ -597,7 +606,7 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 <h2 id="isolate-the-lake-boundary"><strong>Isolate the lake boundary</strong></h2>
 
-<p>As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.<br />
+<p>As you have already noticed, we need to isolate the lake boundary from any errant, misclassified pixels.  We can do that a few different ways you can do this.  For each image, redefine an AOI and use the raster clip to isolate the lake boundary.  This is time consuming unsalable, and poorly reproducible.  Here we will deploy a focal approach.  Note that here, your numbers will differ from mine, region groups applies group numbers in a quasi-random fashion, and you may or may not have the same number of groups that I do.<br />
 <img src="/courses/geog558/media/Lab04image1.png" alt="" /></p>
 
 <ul>
@@ -636,6 +645,13 @@ Write a short (2-4 healthy paragraphs) analysis regarding this process.  Some to
 
 <ul>
 <li><mark><i>(&ldquo;…LakeBoundry_Group.TIF&rdquo; == 10) | (&ldquo;…LakeBoundry_Group.TIF&rdquo; == 12)</i></mark><br /></li>
+</ul>
+
+<blockquote>
+<p>NOTE: That&rsquo;s an | above, not a /.  The &ldquo;pipe&rdquo; is computer shortcode for &ldquo;OR&rdquo;.  Shift backslash on most keyboards.</p>
+</blockquote>
+
+<ul>
 <li>Save the output as <i>…LakeRaster.tif</i>.<br /></li>
 </ul>
 

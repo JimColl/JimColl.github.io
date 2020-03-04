@@ -386,7 +386,7 @@
 <li><a href="#fun-links"><strong>Fun links</strong></a></li>
 <li><a href="#need-data"><strong>Need data?</strong></a></li>
 <li><a href="#random-education-bits"><strong>Random education bits</strong></a></li>
-<li><a href="#cluster">clusteR</a></li>
+<li><a href="#cluster"><strong>clusteR</strong></a></li>
 </ul>
 </nav>
 
@@ -427,7 +427,8 @@
 <p><strong>GIS Resources</strong></p>
 
 <ul>
-<li>A nice cross section of links to open courseware across the academic disciplines, and a few GIS-centric resources: <a href="https://www.gislounge.com/learn-gis-for-free/">https://www.gislounge.com/learn-gis-for-free/</a></li>
+<li><a href="https://www.gislounge.com/learn-gis-for-free/">GIS lounge</a> has compiled a nice cross section of links to open courseware across the academic disciplines, and a few GIS-centric resources.</li>
+<li><a href="https://www.earthdatascience.org/">Earth Lab</a> has a massive amount of R and Python tutorials related to Earth Data Science.</li>
 <li><a href="https://www.hydroshare.org/">Hydroshare</a>: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at <a href="https://www.cuahsi.org/">CUAHSI</a>.</li>
 <li><a href="http://opentopo.sdsc.edu/login">OpenTOPO</a>: A great clearinghouse and web toolset for topo data.</li>
 <li><a href="https://live.osgeo.org/en/index.html">OSGeoLive</a>: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in <a href="https://www.virtualbox.org/">VirtualBox</a>.</li>
@@ -447,12 +448,11 @@
 <li><a href="https://mgimond.github.io/Spatial/index.html"><strong>Intro to GIS and Spatial Analysis</strong></a> by Manuel Gimond</li>
 <li><a href="https://geocompr.robinlovelace.net/"><strong>Geocomputation with R</strong></a> by Robin Lovelace, Jakub Nowosad &amp; Jannes Muenchow</li>
 <li>An incomplete version of <a href="https://socviz.co/index.html#preface"><strong>Data Visualization: A practical introduction</strong></a> by Kieran Healy</li>
-<li><a href="https://keen-swartz-3146c4.netlify.com/"><strong>Spatial Data Science</strong></a> by Edzer Pebesma, Roger Bivand</li>
+<li><a href="https://keen-swartz-3146c4.netlify.com/"><strong>Spatial Data Science</strong></a> by Edzer Pebesma and Roger Bivand</li>
 <li><a href="https://cengel.github.io/R-spatial/"><strong>Using Spatial Data with R</strong></a> by Claudia A Engel</li>
 <li><a href="http://r-statistics.co/"><strong>r-statistics.co</strong></a> by Selva Prabhakaran</li>
+<li><a href="https://englianhu.files.wordpress.com/2018/10/web-application-development-with-r-using-shiny-build-stunning-graphics-and-interactive-data-visualizations-to-deliver-cutting-edge-analytics-3ed.pdf"><strong>Web Application Development with R Using Shiny</strong></a> by Chris Beeley and Shitalkumar R. Sukhdeve</li>
 </ul>
-
-<hr />
 
 <hr />
 
@@ -474,37 +474,55 @@ Other useful slide decks:<br />
 
 <hr />
 
-<h1 id="cluster">clusteR</h1>
+<h1 id="cluster"><strong>clusteR</strong></h1>
 
-<p><img src="/courses/random/media/ClusteR.PNG" alt="" />
-<strong>Warning: Beta build</strong><br />
-See the github: <a href="https://github.com/JimColl/clusteR">https://github.com/JimColl/clusteR</a>
-Or it&rsquo;s companion on my website: <a href="https://jimcoll.github.io/courses/random/">https://jimcoll.github.io/courses/random/</a></p>
+<p><img src="/courses/random/media/ClusteR.PNG" alt="" /><br />
+See the github: <a href="https://github.com/JimColl/clusteR">https://github.com/JimColl/clusteR</a> or it&rsquo;s companion on my website: <a href="https://jimcoll.github.io/courses/random/">https://jimcoll.github.io/courses/random/</a></p>
 
-<p><strong>About:</strong><br />
-A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit, this GUI driven, geographic database display and clustering application built is built on R.  Is also a <em>nearly</em> minimal example of how to tie map and database together, how reactive shiny elements work, and how to print dashboards.</p>
+<p><strong>About:</strong></p>
 
-<p>A project that grew out of a request to see a database from a geographic prospective, here is a FOSS implementation of GIS for people who don&rsquo;t know or have the time to learn it.</p>
+<p>A tool to add points to a map from csv or shapefile, and interactively cluster them as you see fit, this GUI driven, geographic database display and clustering application built is built on R.  Is also a <em>nearly</em> minimal example of how to tie map and database together, how reactive shiny elements work, and how to print dashboards.  A project that grew out of a request to see a database from a geographic prospective, here is a FOSS implementation of GIS for people who don&rsquo;t know or have the time to learn it.</p>
 
-<p><strong>How to run:</strong><br />
-The &ldquo;installation&rdquo; of this is program is trivially easy by design and requires no permissions.
+<p><strong>Features</strong></p>
+
+<ul>
+<li>GUI driven interface to select csv or shapefile database.<br /></li>
+<li>Use drop downs how to cluster (<em>currently broken</em>), color, and label the points.<br /></li>
+<li>Edit the table view of the database and optionally save the database back out.<br />
+
+<ul>
+<li>Click on a table entry to zoom to the location<br /></li>
+</ul></li>
+<li>Fully reactive map and editing<br /></li>
+</ul>
+
+<p><strong>How to run:</strong></p>
+
+<p>The &ldquo;installation&rdquo; of this is program is trivially easy by design and requires no permissions.
 To start the process:</p>
 
-<p>1) Download and unzip this repository using the green &ldquo;Clone or downlaod&rdquo; button.
+<p>1) Download and unzip this repository using the green &ldquo;Clone or download&rdquo; button.<br />
 2) Select a csv or a shapefile, enter the LAT LON and EPSG fields as necessary.  Replace spaces with .<br />
 3) and hit run!</p>
+
+<p>To &ldquo;uninstall&rdquo;, just delete the folder</p>
 
 <p><strong>Known bugs:</strong></p>
 
 <ul>
-<li>Selecting fields which are too long or numeric will currently kill the crab.  To recover, close the window and re run the HTA.</li>
-<li>Map and data don&rsquo;t wrap smoothly.
+<li>Selecting fields which are too long or numeric will currently (kill the crab)[<a href="http://i.imgur.com/gMmnR5p.jpg">http://i.imgur.com/gMmnR5p.jpg</a>].  To recover, close the window and re run the HTA.<br /></li>
+<li>Map and data don&rsquo;t wrap smoothly.<br />
 
 <ul>
-<li>Fly to (when you click on a row) will sometimes cause the erver to lock up.  To fix, zoom in a bit before attempting to fly.</li>
+<li>Fly to (when you click on a row) will sometimes cause the server to lock up.  To fix, zoom in a bit before attempting to fly.<br /></li>
 </ul></li>
-<li>Legends can be too large for the window.</li>
-<li>Editing the table is not fully tested.</li>
+<li>Legends can be too large for the window.<br /></li>
+<li>Editing the table is not fully tested<br />
+
+<ul>
+<li>Shapefile editing broken<br /></li>
+</ul></li>
+<li>Print button is broken as well<br /></li>
 </ul>
 
 <hr />

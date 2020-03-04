@@ -598,7 +598,7 @@
 <p>We need just the lake elevations, and given the tools shown so far we could accomplish that by multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set <strong>Null function</strong>.  The <strong>Set Null(,)</strong> function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.</p>
 
 <blockquote>
-<p>Hint: <mark><i>SetNull(&ldquo;%Lake_1995%&rdquo; ==0, &ldquo;%LakeSurface_ZS.tif%&ldquo;)</mark></i></p>
+<p>Hint: <mark><i>SetNull(&ldquo;Lake_1995&rdquo; ==0, &ldquo;LakeSurface_ZS.tif&rdquo;)</mark></i></p>
 </blockquote>
 
 <ul>
@@ -608,7 +608,7 @@
 <h2 id="calculate-the-volume-as-per-lab-4"><strong>Calculate the volume (as per lab 4)</strong></h2>
 
 <ul>
-<li>Subtract the Lake Surface from the DEM using the <strong>raster calculator</strong> tool
+<li>Subtract the DEM from the Lake Surface using the <strong>raster calculator</strong> tool
 
 <ul>
 <li>Save the output as <i>LakeVolume.tif</i></li>
@@ -684,7 +684,9 @@
 
 <h2 id="build-the-rest-of-the-workflow"><strong>Build the rest of the workflow</strong></h2>
 
-<p>Build the rest of the workflow as defined above by dragging in tools.  Your final model should look like this:
+<p>Build the rest of the workflow as defined above by dragging in tools using the process as outline above.  A few places of minor note.  When you use the <strong>Set Null(,)</strong> function in model builder, we need to point to the variable within modelbuilder, so your inputs should all be bracketed by %.  The new <strong>Set Null(,)</strong> function should therefore look like so: <mark><i>SetNull(&ldquo;%Lake_1995%&rdquo; ==0, &ldquo;%LakeSurface_ZS.tif%&ldquo;)</mark></i></p>
+
+<p>Your final model should look like this:
 <img src="/courses/geog558/media/Lab05Picture03.png" alt="" /><br />
 Use your new model to create a chart of the lake volume change over time like so:
  <img src="/courses/geog558/media/Lab05Picture04.png" alt="" /><br />

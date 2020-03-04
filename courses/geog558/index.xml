@@ -1532,7 +1532,7 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 &lt;p&gt;We need just the lake elevations, and given the tools shown so far we could accomplish that by multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set &lt;strong&gt;Null function&lt;/strong&gt;.  The &lt;strong&gt;Set Null(,)&lt;/strong&gt; function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;Lake_1995&amp;rdquo; ==0, &amp;ldquo;LakeSurface_ZS.tif&amp;rdquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -1542,7 +1542,7 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 &lt;h2 id=&#34;calculate-the-volume-as-per-lab-4&#34;&gt;&lt;strong&gt;Calculate the volume (as per lab 4)&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Subtract the Lake Surface from the DEM using the &lt;strong&gt;raster calculator&lt;/strong&gt; tool
+&lt;li&gt;Subtract the DEM from the Lake Surface using the &lt;strong&gt;raster calculator&lt;/strong&gt; tool
 
 &lt;ul&gt;
 &lt;li&gt;Save the output as &lt;i&gt;LakeVolume.tif&lt;/i&gt;&lt;/li&gt;
@@ -1618,7 +1618,9 @@ Hint #2: the length and width of the cell comes from the cell size of the grid, 
 
 &lt;h2 id=&#34;build-the-rest-of-the-workflow&#34;&gt;&lt;strong&gt;Build the rest of the workflow&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools.  Your final model should look like this:
+&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools using the process as outline above.  A few places of minor note.  When you use the &lt;strong&gt;Set Null(,)&lt;/strong&gt; function in model builder, we need to point to the variable within modelbuilder, so your inputs should all be bracketed by %.  The new &lt;strong&gt;Set Null(,)&lt;/strong&gt; function should therefore look like so: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Your final model should look like this:
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 Use your new model to create a chart of the lake volume change over time like so:
  &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture04.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;

@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Lab 5 - Model Builder Learning Objective As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur. Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python.">
+  <meta name="description" content="Lab 5 - Model Builder Learning Objective As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur. Fortunately, ArcGIS has a mode, ModelBuilder, which enables us to visually create a workflow to connect our data to a series of operations without the need to actually code in python.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab05/">
@@ -113,7 +113,7 @@
   <meta property="og:site_name" content="Jim Coll">
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab05/">
   <meta property="og:title" content=" | Jim Coll">
-  <meta property="og:description" content="Lab 5 - Model Builder Learning Objective As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur. Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="og:description" content="Lab 5 - Model Builder Learning Objective As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur. Fortunately, ArcGIS has a mode, ModelBuilder, which enables us to visually create a workflow to connect our data to a series of operations without the need to actually code in python."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -458,11 +458,11 @@
 
 <h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.</p>
+<p>As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, ModelBuilder, which enables us to visually create a workflow to connect our data to a series of operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.</p>
 
 <h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
-<p>Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to this Google Sheet.</p>
+<p>Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to the Google Spreadsheet.</p>
 
 <h1 id="materials"><strong>Materials</strong></h1>
 
@@ -501,7 +501,7 @@
 <li><em>Customize &gt; Extensions</em> &amp; <em>ArcMap options</em>.</li>
 </ul></li>
 <li>Rename the default data frame to Base Data and add in the AOI, Bands 2 and 4, and the MTL file for each year.</li>
-<li>To force our model to calculate everything using a consistent grid size, change the Geoprocessing &gt; Environments settings to the following:
+<li>To force our model to calculate everything using a consistent grid size, change the geoprocessing &gt; Environments settings to the following:
 
 <ul>
 <li><strong>Workspace</strong>: Set both the Current workspace and Scratch workspaces to your lab05 folder.</li>
@@ -511,12 +511,12 @@
 </ul></li>
 </ul>
 
-<p>As you discovered in lab 4, the <strong>region group</strong> tool was useful in creating a raster we could use to select the desired areas.  However, the region values were random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” and the cost distance tool to classify which of the NDWI zones we want.</p>
+<p>As you discovered in lab 4, the <strong>region group</strong> tool was useful in creating a raster we could use to select the desired areas.  However, the region values were quasi-random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” and the cost distance tool to classify which of the NDWI zones we want.</p>
 
 <h2 id="create-the-lakeseed-shapefile"><strong>Create the LakeSeed shapefile</strong></h2>
 
 <ul>
-<li>In the ArcCatalogue window right click on the Lab 5 folder and create a new feature class.<br /></li>
+<li>In the ArcCatalogue window right click on your basedata geodatabase and create a new feature class.<br /></li>
 <li>Call the class LakeSeed and make it a point feature.  Click next.</li>
 <li>Use the Layers box to select the correct projection.  Click next until you reach the Field Names category.<br /></li>
 <li>In the first empty Field Name box, type in VALUE and change the Data Type to Short Integer.  In the field properties you can set the default value to 1.  Click Finish.  The layer should be added to your window.<br /></li>
@@ -533,21 +533,20 @@
 
 <h2 id="calculate-and-threshold-ndwi-in-one-expression"><strong>Calculate and threshold NDWI (in one expression)</strong></h2>
 
-<p>Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that <strong>we want to classify as a lake has a 0 vale, and everything else has a value of 1</strong>.  This way we can use the cost distance tool to traverse all connected lake pixels without inuring a cost.</p>
+<p>Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that <strong>we want to classify as a lake has a 0 value, and everything else has a value of 1</strong>.  This way we can use the cost distance tool to traverse all connected lake pixels without inuring a cost.</p>
 
 <ul>
 <li>Hint: My expression looks like </br><mark><i>(Float(&ldquo;1995\LT05_&hellip;<em>B2.TIF&rdquo; - &ldquo;1995\LT05</em>&hellip;<em>B4.TIF&rdquo;) / Float(&ldquo;1995\LT05</em>&hellip;<em>B2.TIF&rdquo; + &ldquo;1995\LT05</em>&hellip;_B4.TIF&rdquo;))  &lt;= 0.3</mark></i><br /></li>
-<li>Call the output <i>NDWI_yyyy</i>.</li>
+<li>Call the output <i>NDWI_yyyy.tif</i>.</li>
 </ul>
 
 <h2 id="use-the-lakeseed-to-isolate-just-the-ndwi-zone-we-want"><strong>Use the LakeSeed to isolate just the NDWI zone we want</strong></h2>
 
 <ul>
 <li>Use the search bar to find the <strong>Cost Distance</strong> tool.</li>
-<li>The source data is the <i>LakeSeedRas</i>.</li>
-<li>The input cost raster is the <i>NDWI_1995</i> layer.</li>
-<li>Save the output as <i>COST_1995</i>.</li>
-<li>To save ourselves a step, we can set the maximum distance to 0.01(something small), so that we only end up with the lake area that can be reached without crossing a land barrier.</li>
+<li>The source data is the <i>LakeSeed</i>.</li>
+<li>The input cost raster is the <i>NDWI_yyyy.tif</i> layer.</li>
+<li>Save the output as <i>Cost_yyyy.tif</i>.</li>
 <li>We want just the lake, so use raster calculator and get just the areas with 0 cost
 
 <ul>
@@ -566,11 +565,11 @@
 
 <ul>
 <li>Using the <strong>Focal statistics</strong> tool, calculate the focal minimum using a rectangular 3x3 grid</li>
-<li>The input should be the <i>Lake_1995</i> layer</li>
-<li>Save the output <i>Lake_Fmin.TIF</i></li>
+<li>The input should be the <i>Lake_yyyy.tif</i> layer</li>
+<li>Save the output <i>Lake_yyyy_Fmin.tif</i></li>
 <li>Using <strong>raster calculator</strong>, subtract the focal min raster from the lake classification raster to get just the boundary.</li>
-<li><mark><i>&ldquo;1995\LT05<em>L1TP</em>&hellip;_NDWI_3.TIF&rdquo; - &ldquo;1995\LT05<em>L1TP</em>&hellip;_NDWI_FMin.TIF&rdquo;</mark></i></li>
-<li>Save the output of the map as <i>lakeEdge_1995.tif</i></li>
+<li><mark><i>&ldquo;1995\Lake_yyyy.tif&rdquo; - &ldquo;1995\Lake_yyyy_Fmin.tif&rdquo;</mark></i></li>
+<li>Save the output of the map as <i>lakeEdge_yyyy.tif</i></li>
 </ul>
 
 <h2 id="calculate-the-height-the-water-rises-to-on-the-terrain"><strong>Calculate the height the water rises to on the terrain</strong></h2>
@@ -591,14 +590,19 @@
 <ul>
 <li>Your input raster is <i>Lake_1995</i>.</li>
 <li>Your remap table is the table created from zonal statistics as table (<i>LakeBoundary_ZonalStat</i>)</li>
-<li>The From, to, and output value should fill in asutomagically</li>
+<li>The From, to, and output value should fill in automagically, but in case they don&rsquo;t think about what you are trying to accomplish.
+
+<ul>
+<li>The from and to value need to match, you are essentially joining tables together here, so both need to be VALUE</li>
+<li>The Output field is the value that you are reclassifying to, so this should be MAX</li>
 <li>Save the output as <i>LakeSurface_yyyy.tif</i></li>
+</ul></li>
 </ul>
 
 <p>We need just the lake elevations, and given the tools shown so far we could accomplish that by multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set <strong>Null function</strong>.  The <strong>Set Null(,)</strong> function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.</p>
 
 <blockquote>
-<p>Hint: <mark><i>SetNull(&ldquo;Lake_1995&rdquo; ==0, &ldquo;LakeSurface_ZS.tif&rdquo;)</mark></i></p>
+<p>Hint: <mark><i>SetNull(&ldquo;Lake_yyyy&rdquo; ==0, &ldquo;LakeSurface_yyyy.tif&rdquo;)</mark></i></p>
 </blockquote>
 
 <ul>
@@ -623,7 +627,7 @@
 <ul>
 <li>Hint: Depth(Value) * area (30*30) * Count</li>
 </ul></li>
-<li>Use the <strong>summery table</strong> to create a table of volume</li>
+<li>Use the <strong>summery table</strong> to create a table of volume (an optional step, otherwise just know that you&rsquo;ll need to sum the field yourself each time.</li>
 </ul>
 
 <p>This process was time consuming, and the only thing that changes in this workflow (once we’ve chosen a place to analyses), is the input bands.  This repetitious task is best completed using a function.  In ArcMap, functions can take the form of tools, and the visual programming interface called Model Builder.</p>
@@ -684,13 +688,13 @@
 
 <h2 id="build-the-rest-of-the-workflow"><strong>Build the rest of the workflow</strong></h2>
 
-<p>Build the rest of the workflow as defined above by dragging in tools using the same process.  A few places of minor note.  When you use functions in modelbuilder, you will most often want to use the layers which have a recycle symbol next to them.  These are model variables, and in tool prompts they are bracketed by % signs.  So for example when you add the <strong>Set Null(,)</strong> function, it should be parameterized as follows:<mark><i>SetNull(&ldquo;%Lake_1995%&rdquo; ==0, &ldquo;%LakeSurface_ZS.tif%&ldquo;)</mark></i></p>
+<p>Build the rest of the workflow as defined above by dragging in tools using the same process.  A few places of minor note.  When you use functions in modelbuilder, you will most often want to use the layers which have a recycle symbol next to them.  These are model variables, and in tool prompts they are bracketed by % signs.  So for example when you add the <strong>Set Null(,)</strong> function, it should be parameterized as follows:<mark><i>SetNull(&ldquo;%Lake_1995%&rdquo; ==0, &ldquo;%LakeSurface_yyyy.tif%&ldquo;)</mark></i></p>
 
 <p>Your final model should look like this:
 <img src="/courses/geog558/media/Lab05Picture03.png" alt="" /><br />
 Use your new model to create a chart of the lake volume change over time like so:
  <img src="/courses/geog558/media/Lab05Picture04.png" alt="" /><br />
-Submit an image of both your analysis and a screenshot of your model to blackboard.</p>
+Submit an image of both your analysis and your model to blackboard.  You&rsquo;ll also share your map in the Google Spreadsheet (linked on bb) so we can critique them after spring break.</p>
 
           </div>
 

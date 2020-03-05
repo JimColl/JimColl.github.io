@@ -3753,11 +3753,11 @@ Do not select Douglas County.&lt;/p&gt;
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, Model Builder, which enables us to visually create a workflow to connect our data to a series of Operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.&lt;/p&gt;
+&lt;p&gt;As you have likely noticed, the process of delineating a lake follows a predictable workflow that could easily be automated, and because time is money, it would behoove us to create a script one could run which would create the needed outputs for us without all the tedious clicking and typing that would otherwise have to occur.  Fortunately, ArcGIS has a mode, ModelBuilder, which enables us to visually create a workflow to connect our data to a series of operations without the need to actually code in python.  To do this effectively, we need to modify our process somewhat, so the first part of this lab will walk us through the steps needed to perform this analysis on a single year, and part 2 will introduce the model builder interface and how this process can be automated and applied to each year we downloaded in lab 1.  By the end of this lab you should have a firm grasp on the local, focal and zonal operations we need to use to create the lake, and how model builder can be used in numerous applications to speed up your workflows.&lt;/p&gt;
 
 &lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to this Google Sheet.&lt;/p&gt;
+&lt;p&gt;Submit an image of both your analysis and a screenshot of your model to blackboard.  Then submit your screenshot to the Google Spreadsheet.&lt;/p&gt;
 
 &lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
 
@@ -3796,7 +3796,7 @@ Do not select Douglas County.&lt;/p&gt;
 &lt;li&gt;&lt;em&gt;Customize &amp;gt; Extensions&lt;/em&gt; &amp;amp; &lt;em&gt;ArcMap options&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Rename the default data frame to Base Data and add in the AOI, Bands 2 and 4, and the MTL file for each year.&lt;/li&gt;
-&lt;li&gt;To force our model to calculate everything using a consistent grid size, change the Geoprocessing &amp;gt; Environments settings to the following:
+&lt;li&gt;To force our model to calculate everything using a consistent grid size, change the geoprocessing &amp;gt; Environments settings to the following:
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Workspace&lt;/strong&gt;: Set both the Current workspace and Scratch workspaces to your lab05 folder.&lt;/li&gt;
@@ -3806,12 +3806,12 @@ Do not select Douglas County.&lt;/p&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As you discovered in lab 4, the &lt;strong&gt;region group&lt;/strong&gt; tool was useful in creating a raster we could use to select the desired areas.  However, the region values were random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” and the cost distance tool to classify which of the NDWI zones we want.&lt;/p&gt;
+&lt;p&gt;As you discovered in lab 4, the &lt;strong&gt;region group&lt;/strong&gt; tool was useful in creating a raster we could use to select the desired areas.  However, the region values were quasi-random.  Although we could in theory make a program and so this will not work if we are attempting to create a programmatic workflow.  We will instead use a “seed” and the cost distance tool to classify which of the NDWI zones we want.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-the-lakeseed-shapefile&#34;&gt;&lt;strong&gt;Create the LakeSeed shapefile&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;In the ArcCatalogue window right click on the Lab 5 folder and create a new feature class.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In the ArcCatalogue window right click on your basedata geodatabase and create a new feature class.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Call the class LakeSeed and make it a point feature.  Click next.&lt;/li&gt;
 &lt;li&gt;Use the Layers box to select the correct projection.  Click next until you reach the Field Names category.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;In the first empty Field Name box, type in VALUE and change the Data Type to Short Integer.  In the field properties you can set the default value to 1.  Click Finish.  The layer should be added to your window.&lt;br /&gt;&lt;/li&gt;
@@ -3828,21 +3828,20 @@ Do not select Douglas County.&lt;/p&gt;
 
 &lt;h2 id=&#34;calculate-and-threshold-ndwi-in-one-expression&#34;&gt;&lt;strong&gt;Calculate and threshold NDWI (in one expression)&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that &lt;strong&gt;we want to classify as a lake has a 0 vale, and everything else has a value of 1&lt;/strong&gt;.  This way we can use the cost distance tool to traverse all connected lake pixels without inuring a cost.&lt;/p&gt;
+&lt;p&gt;Recall from lab 2 that this expression needs appropriate parenthesis and the Float() attribute.  However, we want to reverse the expression here so that &lt;strong&gt;we want to classify as a lake has a 0 value, and everything else has a value of 1&lt;/strong&gt;.  This way we can use the cost distance tool to traverse all connected lake pixels without inuring a cost.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Hint: My expression looks like &lt;/br&gt;&lt;mark&gt;&lt;i&gt;(Float(&amp;ldquo;1995\LT05_&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B4.TIF&amp;rdquo;) / Float(&amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;&lt;em&gt;B2.TIF&amp;rdquo; + &amp;ldquo;1995\LT05&lt;/em&gt;&amp;hellip;_B4.TIF&amp;rdquo;))  &amp;lt;= 0.3&lt;/mark&gt;&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Call the output &lt;i&gt;NDWI_yyyy&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Call the output &lt;i&gt;NDWI_yyyy.tif&lt;/i&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;use-the-lakeseed-to-isolate-just-the-ndwi-zone-we-want&#34;&gt;&lt;strong&gt;Use the LakeSeed to isolate just the NDWI zone we want&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Use the search bar to find the &lt;strong&gt;Cost Distance&lt;/strong&gt; tool.&lt;/li&gt;
-&lt;li&gt;The source data is the &lt;i&gt;LakeSeedRas&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;The input cost raster is the &lt;i&gt;NDWI_1995&lt;/i&gt; layer.&lt;/li&gt;
-&lt;li&gt;Save the output as &lt;i&gt;COST_1995&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;To save ourselves a step, we can set the maximum distance to 0.01(something small), so that we only end up with the lake area that can be reached without crossing a land barrier.&lt;/li&gt;
+&lt;li&gt;The source data is the &lt;i&gt;LakeSeed&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;The input cost raster is the &lt;i&gt;NDWI_yyyy.tif&lt;/i&gt; layer.&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;Cost_yyyy.tif&lt;/i&gt;.&lt;/li&gt;
 &lt;li&gt;We want just the lake, so use raster calculator and get just the areas with 0 cost
 
 &lt;ul&gt;
@@ -3861,11 +3860,11 @@ Do not select Douglas County.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Using the &lt;strong&gt;Focal statistics&lt;/strong&gt; tool, calculate the focal minimum using a rectangular 3x3 grid&lt;/li&gt;
-&lt;li&gt;The input should be the &lt;i&gt;Lake_1995&lt;/i&gt; layer&lt;/li&gt;
-&lt;li&gt;Save the output &lt;i&gt;Lake_Fmin.TIF&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;The input should be the &lt;i&gt;Lake_yyyy.tif&lt;/i&gt; layer&lt;/li&gt;
+&lt;li&gt;Save the output &lt;i&gt;Lake_yyyy_Fmin.tif&lt;/i&gt;&lt;/li&gt;
 &lt;li&gt;Using &lt;strong&gt;raster calculator&lt;/strong&gt;, subtract the focal min raster from the lake classification raster to get just the boundary.&lt;/li&gt;
-&lt;li&gt;&lt;mark&gt;&lt;i&gt;&amp;ldquo;1995\LT05&lt;em&gt;L1TP&lt;/em&gt;&amp;hellip;_NDWI_3.TIF&amp;rdquo; - &amp;ldquo;1995\LT05&lt;em&gt;L1TP&lt;/em&gt;&amp;hellip;_NDWI_FMin.TIF&amp;rdquo;&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;Save the output of the map as &lt;i&gt;lakeEdge_1995.tif&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;&lt;i&gt;&amp;ldquo;1995\Lake_yyyy.tif&amp;rdquo; - &amp;ldquo;1995\Lake_yyyy_Fmin.tif&amp;rdquo;&lt;/mark&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Save the output of the map as &lt;i&gt;lakeEdge_yyyy.tif&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;calculate-the-height-the-water-rises-to-on-the-terrain&#34;&gt;&lt;strong&gt;Calculate the height the water rises to on the terrain&lt;/strong&gt;&lt;/h2&gt;
@@ -3886,14 +3885,19 @@ Do not select Douglas County.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Your input raster is &lt;i&gt;Lake_1995&lt;/i&gt;.&lt;/li&gt;
 &lt;li&gt;Your remap table is the table created from zonal statistics as table (&lt;i&gt;LakeBoundary_ZonalStat&lt;/i&gt;)&lt;/li&gt;
-&lt;li&gt;The From, to, and output value should fill in asutomagically&lt;/li&gt;
+&lt;li&gt;The From, to, and output value should fill in automagically, but in case they don&amp;rsquo;t think about what you are trying to accomplish.
+
+&lt;ul&gt;
+&lt;li&gt;The from and to value need to match, you are essentially joining tables together here, so both need to be VALUE&lt;/li&gt;
+&lt;li&gt;The Output field is the value that you are reclassifying to, so this should be MAX&lt;/li&gt;
 &lt;li&gt;Save the output as &lt;i&gt;LakeSurface_yyyy.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;We need just the lake elevations, and given the tools shown so far we could accomplish that by multiplying them with the Lake_1995 raster using raster calculator (to set the values we no longer want to 0), and then setting the 0 values to NoData.  We can do this in 1 step through raster calculator using the  Set &lt;strong&gt;Null function&lt;/strong&gt;.  The &lt;strong&gt;Set Null(,)&lt;/strong&gt; function takes two arguments, a mask which sets the values to null and a raster with the values to set otherwise.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;Lake_1995&amp;rdquo; ==0, &amp;ldquo;LakeSurface_ZS.tif&amp;rdquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Hint: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;Lake_yyyy&amp;rdquo; ==0, &amp;ldquo;LakeSurface_yyyy.tif&amp;rdquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -3918,7 +3922,7 @@ Do not select Douglas County.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Hint: Depth(Value) * area (30*30) * Count&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Use the &lt;strong&gt;summery table&lt;/strong&gt; to create a table of volume&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;summery table&lt;/strong&gt; to create a table of volume (an optional step, otherwise just know that you&amp;rsquo;ll need to sum the field yourself each time.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This process was time consuming, and the only thing that changes in this workflow (once we’ve chosen a place to analyses), is the input bands.  This repetitious task is best completed using a function.  In ArcMap, functions can take the form of tools, and the visual programming interface called Model Builder.&lt;/p&gt;
@@ -3979,13 +3983,13 @@ Do not select Douglas County.&lt;/p&gt;
 
 &lt;h2 id=&#34;build-the-rest-of-the-workflow&#34;&gt;&lt;strong&gt;Build the rest of the workflow&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools using the same process.  A few places of minor note.  When you use functions in modelbuilder, you will most often want to use the layers which have a recycle symbol next to them.  These are model variables, and in tool prompts they are bracketed by % signs.  So for example when you add the &lt;strong&gt;Set Null(,)&lt;/strong&gt; function, it should be parameterized as follows:&lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools using the same process.  A few places of minor note.  When you use functions in modelbuilder, you will most often want to use the layers which have a recycle symbol next to them.  These are model variables, and in tool prompts they are bracketed by % signs.  So for example when you add the &lt;strong&gt;Set Null(,)&lt;/strong&gt; function, it should be parameterized as follows:&lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_yyyy.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
 
 &lt;p&gt;Your final model should look like this:
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 Use your new model to create a chart of the lake volume change over time like so:
  &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture04.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-Submit an image of both your analysis and a screenshot of your model to blackboard.&lt;/p&gt;
+Submit an image of both your analysis and your model to blackboard.  You&amp;rsquo;ll also share your map in the Google Spreadsheet (linked on bb) so we can critique them after spring break.&lt;/p&gt;
 </description>
     </item>
     

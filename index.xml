@@ -3979,7 +3979,7 @@ Do not select Douglas County.&lt;/p&gt;
 
 &lt;h2 id=&#34;build-the-rest-of-the-workflow&#34;&gt;&lt;strong&gt;Build the rest of the workflow&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools using the process as outline above.  A few places of minor note.  When you use the &lt;strong&gt;Set Null(,)&lt;/strong&gt; function in model builder, we need to point to the variable within modelbuilder, so your inputs should all be bracketed by %.  The new &lt;strong&gt;Set Null(,)&lt;/strong&gt; function should therefore look like so: &lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Build the rest of the workflow as defined above by dragging in tools using the same process.  A few places of minor note.  When you use functions in modelbuilder, you will most often want to use the layers which have a recycle symbol next to them.  These are model variables, and in tool prompts they are bracketed by % signs.  So for example when you add the &lt;strong&gt;Set Null(,)&lt;/strong&gt; function, it should be parameterized as follows:&lt;mark&gt;&lt;i&gt;SetNull(&amp;ldquo;%Lake_1995%&amp;rdquo; ==0, &amp;ldquo;%LakeSurface_ZS.tif%&amp;ldquo;)&lt;/mark&gt;&lt;/i&gt;&lt;/p&gt;
 
 &lt;p&gt;Your final model should look like this:
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab05Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;

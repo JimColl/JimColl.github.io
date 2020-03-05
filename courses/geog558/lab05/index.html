@@ -684,7 +684,7 @@
 
 <h2 id="build-the-rest-of-the-workflow"><strong>Build the rest of the workflow</strong></h2>
 
-<p>Build the rest of the workflow as defined above by dragging in tools using the process as outline above.  A few places of minor note.  When you use the <strong>Set Null(,)</strong> function in model builder, we need to point to the variable within modelbuilder, so your inputs should all be bracketed by %.  The new <strong>Set Null(,)</strong> function should therefore look like so: <mark><i>SetNull(&ldquo;%Lake_1995%&rdquo; ==0, &ldquo;%LakeSurface_ZS.tif%&ldquo;)</mark></i></p>
+<p>Build the rest of the workflow as defined above by dragging in tools using the same process.  A few places of minor note.  When you use functions in modelbuilder, you will most often want to use the layers which have a recycle symbol next to them.  These are model variables, and in tool prompts they are bracketed by % signs.  So for example when you add the <strong>Set Null(,)</strong> function, it should be parameterized as follows:<mark><i>SetNull(&ldquo;%Lake_1995%&rdquo; ==0, &ldquo;%LakeSurface_ZS.tif%&ldquo;)</mark></i></p>
 
 <p>Your final model should look like this:
 <img src="/courses/geog558/media/Lab05Picture03.png" alt="" /><br />

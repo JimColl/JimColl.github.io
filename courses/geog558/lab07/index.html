@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling Learning Objective In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same lab from intro class you astute student you).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab07/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab07/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab07/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling Learning Objective In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same lab from intro class you astute student you)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/">Class Outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab03/">Lab 3 - Focal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab04/">Lab 4 - Zonal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab05/">Lab 5 - Model Builder</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab06/">Lab 6 - Cost Distance, Region Groups, more Model Builder &amp; Python</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog558/lab07/">Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab08/">Lab 8 - Advanced Terrain Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#lab-7-siting-a-new-school-with-model-builder-and-fungus-dispersion-modeling"><strong>Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling</strong></a></li>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#materials"><strong>Materials</strong></a></li>
+<li><a href="#part-1-school-sighting-site-suitability-analysis"><strong>Part 1: School Sighting (Site Suitability Analysis)</strong></a>
+<ul>
+<li><a href="#creating-a-toolbox-and-a-model">Creating a Toolbox and a Model</a></li>
+<li><a href="#setting-up-the-workflow">Setting up the Workflow</a></li>
+<li><a href="#calculating-a-suitability-raster">Calculating a Suitability Raster</a></li>
+</ul></li>
+<li><a href="#part-2-fungus-diffusion-modeling-cost-distance"><strong>Part 2: Fungus Diffusion Modeling (Cost Distance)</strong></a>
+<ul>
+<li><a href="#add-all-data-to-your-data-frame">Add all data to your data frame</a></li>
+<li><a href="#the-diffusion-process">The Diffusion Process</a></li>
+<li><a href="#modeling-the-diffusion-process">Modeling the diffusion process</a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="lab-7-siting-a-new-school-with-model-builder-and-fungus-dispersion-modeling"><strong>Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling</strong></h1>
+
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
+
+<p>In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same <a href="https://jimcoll.github.io/courses/geog358/lab07/#part-3-school-siting">lab from intro class</a> you astute student you). In essence, we will be setting up a diagram in Model Builder that will calculate the suitability raster with one click. Using Model Builder is helpful in situations where similar operations need to be applied in a programatic way.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<hr />
+
+<p><strong>Lab 7: Answer Sheet</strong><br />
+Name:</p>
+
+<p><strong>Part 1: Siting a New School with Model Builder</strong>:<br />
+<strong>Question 1</strong>: In your model window, go to <strong>Model | Export | To Graphic…</strong>.  Export the model as a png file and call it yournameLab7_1.png (i.e. rooseveltLab7_1.png). Double-check the image file to make sure all the objects are readable and paste it below.</p>
+
+<p><strong>Question 2</strong>: Total area of land with suitability 8.5 or greater for new school:  m<sup>2</sup></p>
+
+<p><strong>Part 2: Fungal Dispersion</strong><br />
+<strong>Question 3</strong>: Using your model, complete the table below. For each city, put an “X” in the box that corresponds to the first month the fungus “invaded” the city.</p>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-lboi">CITY</th>
+    <th class="tg-0pky">Jan</th>
+    <th class="tg-0pky">Feb</th>
+    <th class="tg-0pky">Mar</th>
+    <th class="tg-0pky">April</th>
+    <th class="tg-0pky">May</th>
+    <th class="tg-0pky">June</th>
+    <th class="tg-0pky">July</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Selma, AL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Montgomery, AL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Pensacola, FL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Clarksdale, MS</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Enterprise, AL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Lawrenceburg, TN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Albany, GA</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Starkville, MS</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Greenwood, SC</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">St. Augustine, FL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Natchez, MS</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Wright, FL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Eufaula, AL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Mobile, AL</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+</table></p>
+
+<p><strong>Question 4</strong>: You must do one of the two following (do the other for extra credit!)</p>
+
+<ul>
+<li>Work on the Layout View to create a composite map showing the area invaded by the fungus by the end of each month. In other words, the legend should have 6 possible values, one for each month (including the origin). Make the colors contrasting enough so that you can see the difference between them. Be sure to add your name, a title and a legend. (See the sample map for a guide).</li>
+</ul>
+
+<p>-or-</p>
+
+<ul>
+<li>Submit an image of an equivalent model needed to reproduce the output of the second part of the lab
+Save your map as a .PNG file using the Export map option of the File menu. Save it in your local lab07/Part2 folder and call it fungus_yourname.png</li>
+</ul>
+
+<p>Upload your maps/images (be sure you are uploading the .PNG NOT the .MXD!) to board. This map is worth roughly <sup>1</sup>&frasl;<sub>4</sub> of your lab grade so don’t forget to do this!</p>
+
+<hr />
+
+<h1 id="materials"><strong>Materials</strong></h1>
+
+<p><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EtrIaT4JsONMkDnvxoewkSMBIaY8siBM7xuEAeyJ8hhZeA?e=wNLd6L">click to download</a>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Relevant part</th>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1</th>
+    <td class="tg-btxf">elevation </td>
+    <td class="tg-btxf">Raster dataset of the elevation of the area</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1</th>
+    <th class="tg-0pky">landuse</th>
+    <th class="tg-0pky">Raster dataset of the landuse types over the area</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1</th>
+    <td class="tg-btxf">rec_sites</td>
+    <td class="tg-btxf">Feature dataset displaying point locations of recreation sites</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 1</th>
+    <td class="tg-btxf">schools </td>
+    <td class="tg-btxf">Feature dataset displaying point locations of existing schools</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 2</th>
+    <th class="tg-0pky">pre_01, pre_02, etc.</th>
+    <th class="tg-0pky">Monthly Precipitation (mm) for January through July</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 2</th>
+    <td class="tg-btxf">us48mask</td>
+    <td class="tg-btxf">Grid of 1s for states and no data for other cells</td>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 2</th>
+    <th class="tg-0pky">fungus_origin</th>
+    <th class="tg-0pky">Origin of Fungus in Panama City, FL</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">Part 2</th>
+    <td class="tg-btxf">us48cities</td>
+    <td class="tg-btxf">Location of Major Cities in U.S. (Vector Data Model)</td>
+  </tr>
+</table></p>
+
+<blockquote>
+<p>NOTE: Each raster is in the Albers equal area map projection with a 10,000m x 10,000m cell size.</p>
+</blockquote>
+
+<h1 id="part-1-school-sighting-site-suitability-analysis"><strong>Part 1: School Sighting (Site Suitability Analysis)</strong></h1>
+
+<h2 id="creating-a-toolbox-and-a-model">Creating a Toolbox and a Model</h2>
+
+<ul>
+<li>Create a new toolbox (Lab7Tools), and a new model (SchoolSiting) in that toolbox.
+
+<ul>
+<li>R-click on your lab07/Part1 folder and create a new toolbox.</li>
+<li>Name the new toolbox Lab7Tools.tbx.</li>
+<li>R-click on the toolbox and create a new model.</li>
+<li>Rename the new Model (R-click/slow-click | Rename) to SchoolSiting.</li>
+</ul></li>
+<li>Set up the Model Properties by going to Model | Model Properties</li>
+<li>Under the Environments tab, check the boxes for Processing Extent | Extent and for Raster Analysis | Cell Size</li>
+<li>Click the Values… button.</li>
+<li>Click the down arrows for each of the settings and make the Extent the same as the landuse raster in your data folder, and the Cell Size the same as elevation.</li>
+<li>Click OK on the Environment Settings.</li>
+<li>Click OK on the SchoolSiting Properties Window.</li>
+</ul>
+
+<h2 id="setting-up-the-workflow">Setting up the Workflow</h2>
+
+<p>You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to get the suitable school sites. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.</p>
+
+<ul>
+<li>Set up your screen so you can see both ArcToolbox and the model window at the same time.</li>
+<li>Add the slope tool by finding it under ArcToolbox (Spatial Analyst Tools | Surface) and then dragging it onto the model window.</li>
+<li>Double click on the slope tool. The slope dialog will open, and it should be roughly similar to the dialog for slope in the spatial analyst.</li>
+<li>Set the input to the elevation raster (from your data folder), and set the output to slope and make sure it is saved in the output folder in the Lab 7 folder. Leave other parameters to their defaults.</li>
+<li>Click OK. You will see the diagram objects become colored. You now have a very simple model.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab07Picture01.png" alt="" /></p>
+
+<ul>
+<li>Next, add the straight line distance tool (Spatial Analyst Tools | Distance | Euclidean Distance) to create a distance layer from rec_sites.</li>
+<li>Set the Input to rec_sites (from your data folder), the Output to recDist in your output folder, and the Cell Size to 30. You don’t need a Maximum distance or a direction Raster.</li>
+<li>Click OK. Notice that an empty diagram object is there for direction raster. Since it is blank, it will be ignored, so we will leave it alone.</li>
+<li>Add and set up another straight line distance tool to calculate distance from schools (call the output schDist).</li>
+<li>Save your Model (Model | Save).</li>
+<li>Click the Run button. Check in ArcCatalog to make sure that these three layers are calculated correctly and saved in your output folder.</li>
+<li>Add a Reclassify tool (Spatial Analyst Tools | Reclass | Reclassify) to the Model window to reclassify the slope raster.</li>
+<li>Double click on the Reclassify tool in the Model window. Select slope as the input layer.
+
+<ul>
+<li>This time, select the input layer from the dropdown in this dialog window, which shows the layers that are part of the model (We do this so that it will perform this next step from what we calculated in the previous one. In other words, it maintains a flow within the model).</li>
+</ul></li>
+<li>In order to create the new classes for the slope layer, click on the Classify button, select the Equal Interval Method and 10 classes. Click OK.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab07Picture02.png" alt="" /></p>
+
+<ul>
+<li>It is preferable that the new school site be located on relatively flat ground. You will reclassify the slope layer, giving a value of 10 to the most suitable slopes (those with the lowest angle of slope) and 1 to the least suitable slopes (those with the steepest angle of slope). Click on the Reverse New Values button so the lowest slopes get a value of ten and the steepest slopes a value of 1.</li>
+<li>Name the output raster layer as slopeR and click OK.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab07Picture03.png" alt="" /></p>
+
+<ul>
+<li>Add a new Reclassify tool and double click on it.</li>
+<li>Select the RecDist layer as the input raster from the dropdown.</li>
+<li>Reclassify distance to recreation sites raster (recDist) into 10 classes with new values from 1 to 10 using Equal Interval classification method. The school should be located near recreational facilities. You will reclassify this dataset, giving a value of 10 to areas closest to recreation sites (the most suitable locations), giving a value of 1 to areas far from recreation sites (the least suitable locations), and ranking the values in between.</li>
+<li>Name the output raster layer as recR and click OK.</li>
+<li>Add a third Reclassify tool and double click on it.</li>
+<li>Select the SchDist layer as the input raster from the dropdown.</li>
+<li>Reclassify distance to schools raster (schD) into 10 classes with new values from 1 to 10 using Equal Interval classification method. It is necessary to locate the new school away from existing schools in order to avoid encroaching on their catchment areas. You will reclassify the distance to schools layer, giving a value of 10 to areas away from existing schools (the most suitable locations), giving a value of 1 to areas near existing schools (least suitable locations), and ranking the values in between.</li>
+<li>Name the output raster layer as schR and click OK.</li>
+<li>Save your Model.</li>
+<li>Add and set up a fourth Reclassify tool in order to reclassify the landuse raster.
+
+<ul>
+<li>Select ‘LANDUSE’ as the ‘Reclass field’ using the dropdown menu.</li>
+<li>Use the following table to assign the new values to each of the land use categories:</li>
+</ul></li>
+</ul>
+
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-lboi">Landuse type</th>
+    <th class="tg-0pky">Score</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Agriculture</td>
+    <td class="tg-0pky">10</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Barren land</td>
+    <td class="tg-0pky">6</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Brush/Transitional</td>
+    <td class="tg-0pky">5</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Built up</td>
+    <td class="tg-0pky">3</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Forest</td>
+    <td class="tg-0pky">4</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Water</td>
+    <td class="tg-0pky">NoData</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Wetlands</td>
+    <td class="tg-0pky">NoData</td>
+  </tr>
+</table></p>
+
+<ul>
+<li>Call the output landuseR.</li>
+<li>Click OK and Save your Model.</li>
+<li>After all four reclassify tools are correctly established in the model, click Run again and check your output folder to make sure everything was calculated correctly.<br />
+<img src="/courses/geog558/media/Lab07Picture04.png" alt="" /></li>
+</ul>
+
+<h2 id="calculating-a-suitability-raster">Calculating a Suitability Raster</h2>
+
+<ul>
+<li>With all of our standardized layers, we are ready to calculate our suitability raster.  Add a Raster Calculator Tool (Spatial Analyst Tools | Map Algebra | Raster Calculator) to the Model window.</li>
+<li>Double click on this tool to set up the parameters.
+
+<ul>
+<li>Create an expression to weight each factor using the table below.<br />
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-lboi">Layer</th>
+<th class="tg-0pky">Weight</th>
+</tr>
+<tr>
+<td class="tg-0pky">Reclass of distance to recreation sites (recR)</td>
+<td class="tg-0pky">0.5</td>
+</tr>
+<tr>
+<td class="tg-0pky">Reclass of distance to schools (schR)</td>
+<td class="tg-0pky">0.25</td>
+</tr>
+<tr>
+<td class="tg-0pky">Reclass of landuse (landuseR)</td>
+<td class="tg-0pky">0.125</td>
+</tr>
+<tr>
+<td class="tg-0pky">Reclass of slope (slopeR)</td>
+<td class="tg-0pky">0.125</td>
+</tr>
+</table><br /></li>
+<li>Check your expression against the image below.</li>
+<li>Name your output suitsite and save it in your output folder.</li>
+<li>Click OK.
+<img src="/courses/geog558/media/Lab07Picture05.png" alt="" /></li>
+</ul></li>
+<li>Your model is now complete. Save it by going to Model | Save</li>
+<li>Close the model.</li>
+<li>In ArcCatalog, delete all of the files you have created (slope, RecDist, SchDist, slopeR, RecR, SchR, landuseR) from your output folder.</li>
+<li>Re-open the Model by R-clicking and selecting Edit…</li>
+<li>Go to Model | Run Entire Model.</li>
+<li>All of the layers, including your suitsite, will be in your output folder.</li>
+<li>Open ArcMap.</li>
+<li>Add suitsite.</li>
+<li>Answer questions #1 and #2 on the answer sheet.</li>
+</ul>
+
+<h1 id="part-2-fungus-diffusion-modeling-cost-distance"><strong>Part 2: Fungus Diffusion Modeling (Cost Distance)</strong></h1>
+
+<p><strong>Learning Objectives:</strong><br />
+This lab will introduce you to the concept of modeling a diffusion process using friction surfaces that change in space and time. Your goal is to model the diffusion of a fungus from its introduction at a seaport in Panama City, FL on January 1, 1989 throughout seven months of the calendar year (i.e., January through July).</p>
+
+<h2 id="add-all-data-to-your-data-frame">Add all data to your data frame</h2>
+
+<ul>
+<li>Add all 7 precipitation grids, fungus_origin, us48mask, and us48cities.</li>
+<li>Go to Geoprocessing | Environments… and under Raster Analysis set mask to us48mask.</li>
+<li>Under Processing Extent set the Extent to Same as layer us48mask.</li>
+<li>Set the current workspace and scratch workspace to your lab07/Part2 folder.</li>
+<li>Rearrange (if necessary) the precipitation raster layers in chronological order.</li>
+<li>Save your project as lab7lastname.mxd (e.g.: lab7washington.mxd).</li>
+</ul>
+
+<h2 id="the-diffusion-process">The Diffusion Process</h2>
+
+<ul>
+<li>Assume the fungus can move at the following rates:
+<table class="tg">
+<tr>
+<th class="tg-lboi">Precipitation Amount</th>
+<th class="tg-0pky">Rate of Movement</th>
+</tr>
+<tr>
+<td class="tg-0pky">&lt; 100 mm/month</td>
+<td class="tg-0pky">0m/day</td>
+</tr>
+<tr>
+<td class="tg-0pky">100 - 200mm/month</td>
+<td class="tg-0pky">4000m/day</td>
+</tr>
+<tr>
+<td class="tg-0pky">200mm/month and greater</td>
+<td class="tg-0pky">7000m/day</td>
+</tr>
+</table><br /></li>
+<li>Examine the values of all the precipitation grids in order to determine an appropriate maximum value
+
+<ul>
+<li>Hint: Look at the high and low values in the Table of Contents, what is the highest value?</li>
+</ul></li>
+<li>Reclassify ( ArcToolbox | Spatial Analyst Tools | Reclass | Reclassify) the precipitation in January (i.e., pre_01 theme) to make a friction rate according to the above assumptions.</li>
+<li>Click “Save…” and save the reclassification look-up table as a table named diff_rate.</li>
+<li>Name the new grid velocity_jan.
+<img src="/courses/geog558/media/Lab07Picture06.png" alt="" /></li>
+</ul>
+
+<blockquote>
+<p><strong>Note:</strong> If you wish, you can create all of your velocity layers at this time (ie: velocity_apr, velocity_may, velocity_jun, &amp; velocity_jul).</p>
+</blockquote>
+
+<h2 id="modeling-the-diffusion-process">Modeling the diffusion process</h2>
+
+<p>You will now model a diffusion process across a changing velocity surface. You will implement the time steps sequentially. The procedure for modeling diffusion across a dynamically changing environment involves the following steps:</p>
+
+<p><ol>
+<li>Establish the origin (for the first run, it will be fungus_origin).
+<li>Reclassify the Nth month of precipitation to a Velocity Grid (e.g., meters per day) based on velocity for each precipitation range (you should already have a velocity grid created for January, February, and March from the previous section – so you only need to do April, May, June, &amp; July).
+<li>Create a Time per Unit Distance Grid (days per meter).</p>
+
+<ul>
+<li>Using the Raster Calculator, create the following expression: <strong><mark>1 / Float(“velocity_xxx”)</mark></strong><br /></li>
+<li>Name the output <i>friction_xxx.tif</i>
+
+<ul>
+<li>for example:  1 / Float(“velocity_mar”) should be called <i>friction_mar.tif</i></li>
+</ul></li>
+</ul>
+
+<p><li>Model the diffusion possible diffusion range for the nth month by using the Cost Distance (ArcToolbox | Spatial Analyst Tools | Distance | Cost Distance) operation.  Name the output <i>diffuse_xxx.tif</i></p>
+
+<ul>
+<li>For example: <strong>this will change as you go</strong>
+
+<ul>
+<li>Input Raster: <i>fungus_origin</i><br /></li>
+<li>Input Cost raster: <i>friction_mar</i></li>
+<li>Output Distance Raster: <i>diffuse_mar.tif</i></li>
+</ul></li>
+</ul>
+
+<p><li>Create a new origin raster by reclassifying the travel time raster (diffuse_xxx) from the previous step based on the number of days in the month using Reclassify. Your goal is to set all values less than or equal to the number of days in a particular month to a value of 1, and all other values (make sure you set proper maximum value for each month based on the number of days) to NoData.  Name the output raster as <i>fungus_xxx.tif</i> (e.g., fungus_mar.tif).
+<table class="tg">
+  <tr>
+    <th class="tg-lboi">Month</th>
+    <th class="tg-0pky">Days</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Jan</td>
+    <td class="tg-0pky">31</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Feb</td>
+    <td class="tg-0pky">28</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Mar</td>
+    <td class="tg-0pky">31</td>
+  </tr>
+  <tr>
+    <th class="tg-lboi">Apr</th>
+    <th class="tg-0pky">30</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">May</td>
+    <td class="tg-0pky">31</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Jun</td>
+    <td class="tg-0pky">30</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Jly</td>
+    <td class="tg-0pky">31</td>
+  </tr>
+</table>
+<li>Redo these processes for the next month (using the new fungus distribution (e.g., fungus_mar) as your new origin) and repeat the procedure until you have modeled fungus diffusion through July.
+</ol>
+<img src="/courses/geog558/media/Lab07Picture07.png" alt="" /></p>
+
+<ul>
+<li>Save your map as Lab7yourname.mxd</li>
+<li>Complete questions #3 – #4 on the assignment sheet.
+<img src="/courses/geog558/media/Lab07Picture09.png" alt="" /></li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

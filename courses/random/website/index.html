@@ -32,7 +32,8 @@
  https://gohugo.io/
  https://github.com/sourcethemes/academic-www
  https://github.com/gcushen/hugo-academic
-    The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).">
+  There are also several other tutorial linked at the end of this page that may be of use.
+  The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/random/website/">
@@ -121,7 +122,8 @@
  https://gohugo.io/
  https://github.com/sourcethemes/academic-www
  https://github.com/gcushen/hugo-academic
-    The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  There are also several other tutorial linked at the end of this page that may be of use.
+  The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -403,6 +405,10 @@
 <ul>
 <li><a href="#adding-classes"><strong>Adding classes</strong></a></li>
 <li><a href="#make-it-your-own"><strong>Make it your own</strong></a></li>
+<li><a href="#adding-tabbed-content"><strong>Adding tabbed content</strong></a>
+<ul>
+<li><a href="#this-is-content-in-markdown">This is content in markdown</a></li>
+</ul></li>
 <li><a href="#extra-links"><strong>Extra Links</strong></a></li>
 </ul></li>
 </ul></li>
@@ -427,17 +433,20 @@
 
 <div class="alert alert-note">
   <div>
-    There are a lot of links in here, to highlight some key resources I used while I was learning how to do this.</p>
+    <p>There are a lot of links in here, to highlight some key resources I used while I was learning how to do this.</p>
 
 <ul>
 <li><a href="https://gohugo.io/">https://gohugo.io/</a><br /></li>
 <li><a href="https://github.com/sourcethemes/academic-www">https://github.com/sourcethemes/academic-www</a><br /></li>
 <li><a href="https://github.com/gcushen/hugo-academic">https://github.com/gcushen/hugo-academic</a><br /></li>
 </ul>
+
+<p>There are also several other tutorial linked at the end of this page that may be of use.</p>
+
   </div>
 </div>
 
-<p>The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).  However, the creation of one is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution to this in the form of the HUGO.</p>
+<p>The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.</p>
 
 <p><a href="https://gohugo.io/">HUGO</a>, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">hosting on github page</a>, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  The following will will walk you through how this website was created.  <strong>I also recommend following the <a href="https://sourcethemes.com/academic/docs/install/">Academic theme instructions</a>.</strong></p>
 
@@ -472,11 +481,11 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <h2 id="create-the-website"><strong>Create the website:</strong></h2>
 
-<p>This is where you need to start thinking for yourself.  This process varies depending on which theme you end up choosing.  Here I’ll just point you to the <a href="https://sourcethemes.com/academic/docs/front-matter/">Academic pages</a>.  The <a href="https://github.com/sourcethemes/academic-www/tree/master/content/en/docs">raw doc files</a> are also useful for formatting guidance.</p>
+<p>This is where you need to start thinking for yourself.  This process varies depending on which theme you end up choosing.  Here I’ll just point you to the <a href="https://sourcethemes.com/academic/docs/front-matter/">Academic doc pages</a>.  The <a href="https://github.com/sourcethemes/academic-www/tree/master/content/en/docs">raw doc files</a> are also useful for formatting guidance.</p>
 
 <h2 id="updating-your-website"><strong>Updating your website:</strong></h2>
 
-<p>When you want to <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">&ldquo;manage your content&rdquo;</a>, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type <code>.\hugo server --disableFastRender</code>.  You can then open a browser and go to <a href="http://localhost:1313/">http://localhost:1313/</a>.  At this point, any changes made to your site will automagically change.  When you are happy with your changes, you generate your site with the <code>.\hugo</code> command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&hellip;</p>
+<p>When you want to <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">&ldquo;manage your content&rdquo;</a>, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type <code>.\hugo server --disableFastRender</code>.  You can then open a browser and go to <a href="http://localhost:1313/">http://localhost:1313/</a>.  At this point, any changes made to your site will automagically change.  When you are happy with your changes, you generate your site from within PowerShell with the <code>.\hugo</code> command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&hellip;</p>
 
 <ol>
 <li>Stage Changed files<br /></li>
@@ -599,7 +608,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 <h3 id="make-it-your-own"><strong>Make it your own</strong></h3>
 
-<p>One of the best ways I&rsquo;ve found to help improve my understanding of the sooftware/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the <i>themes\academic\layouts\partials\footer.toml</i>.  Mine now looks like so:</p>
+<p>One of the best ways I&rsquo;ve found to help improve my understanding of the software/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the <i>themes\academic\layouts\partials\footer.toml</i>.  Mine now looks like so:</p>
 
 <pre><code class="language-markdown">&lt;footer class=&quot;mb-4&quot;&gt;
   &lt;a href=&quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&quot;&gt;Download a &quot;more traditional&quot; resume
@@ -615,9 +624,75 @@ paginate = 10  # Number of items per page in paginated lists.
 
 <hr />
 
+<h3 id="adding-tabbed-content"><strong>Adding tabbed content</strong></h3>
+
+<p>Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&ldquo;1&rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and does not break formatting on Chrome (other browsers untested).  The <code>&amp;nbsp;</code> in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes does break the page table of contents that appears on the right and so should be avoided if possible.</p>
+
+<pre><code>&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#home&quot;&gt;&amp;nbsp;&amp;nbsp;Home&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#menu1&quot;&gt;&amp;nbsp;&amp;nbsp;Menu 1&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#menu2&quot;&gt;&amp;nbsp;&amp;nbsp;Menu 2&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;DIV class=&quot;tab-content&quot; markdown=&quot;1&quot;&gt;
+&lt;DIV id=&quot;home&quot; class=&quot;tab-pane fade show active&quot; markdown=&quot;1&quot;&gt;
+&lt;h3&gt;HOME tab is shown by default&lt;/h3&gt;
+&lt;p&gt;Some content.&lt;/p&gt;
+&lt;/DIV&gt;
+&lt;DIV id=&quot;menu1&quot; class=&quot;tab-pane fade&quot; markdown=&quot;1&quot;&gt;
+#### This is content in markdown
+Neat  
+
+* List
+* More list
+&lt;/DIV&gt;
+&lt;DIV id=&quot;menu2&quot; class=&quot;tab-pane fade&quot; markdown=&quot;1&quot;&gt;
+&lt;h3&gt;Menu 2&lt;/h3&gt;
+&lt;p&gt;Some more content in menu 2.&lt;/p&gt;
+&lt;/DIV&gt;
+&lt;/DIV&gt;
+</code></pre>
+
+<p>How this renders in site:</p>
+
+<p><ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#home">&nbsp;&nbsp;Home&nbsp;&nbsp;</a></li>
+<li><a data-toggle="tab" href="#menu1">&nbsp;&nbsp;Menu 1&nbsp;&nbsp;</a></li>
+<li><a data-toggle="tab" href="#menu2">&nbsp;&nbsp;Menu 2&nbsp;&nbsp;</a></li>
+</ul>
+<DIV class="tab-content" markdown="1">
+<DIV id="home" class="tab-pane fade show active" markdown="1">
+<h3>HOME tab is shown by default</h3>
+<p>Some content.</p>
+</DIV>
+<DIV id="menu1" class="tab-pane fade" markdown="1"></p>
+
+<h4 id="this-is-content-in-markdown">This is content in markdown</h4>
+
+<p>Neat</p>
+
+<ul>
+<li>List</li>
+<li>More list
+</DIV>
+<DIV id="menu2" class="tab-pane fade" markdown="1">
+<h3>Menu 2</h3>
+<p>Some more content in menu 2.</p>
+</DIV>
+</DIV></li>
+</ul>
+
+<hr />
+
 <h3 id="extra-links"><strong>Extra Links</strong></h3>
 
-<p>Leslie Myint&rsquo;s website has a <a href="https://lmyint.github.io/post/hugo-academic-tips/">great post</a> that effectively covers a large cross section of changes to the Academic theme.</p>
+<ul>
+<li>George Cushen, in addition to <a href="https://sourcethemes.com/academic/docs/install/">the academic docs</a>, has likewise created <a href="https://georgecushen.com/create-your-website-with-hugo/">a tutorial</a> on his personal site detailing this workflow.<br /></li>
+<li>Leslie Myint&rsquo;s website has a <a href="https://lmyint.github.io/post/hugo-academic-tips/">great post</a> that effectively covers a large cross section of changes to the Academic theme.</li>
+</ul>
+
+<p>Some links to style formatting, more for me than anything
+* <a href="https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952">https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952</a>
+* <a href="https://github.com/gcushen/hugo-academic/issues/84">https://github.com/gcushen/hugo-academic/issues/84</a></p>
 
           </div>
 

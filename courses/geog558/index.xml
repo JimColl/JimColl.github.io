@@ -54,7 +54,7 @@ In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops. �
 
 &lt;h2 id=&#34;academic-integrity&#34;&gt;&lt;strong&gt;Academic Integrity:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s insert year here, how hard is it to give someone credit for their work?  I use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, as a KU student you have access to Endnote through &lt;a href=&#34;https://technology.ku.edu/software/microsoft-office&#34;&gt;Office 365&lt;/a&gt;, and in a pinch &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will also work for you in a pinch.&lt;/p&gt;
+&lt;p&gt;Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s &lt;em&gt;insert year here&lt;/em&gt;, how hard is it to give someone credit for their work?  I use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, as a KU student you have access to Endnote through &lt;a href=&#34;https://technology.ku.edu/software/microsoft-office&#34;&gt;Office 365&lt;/a&gt;, and in a pinch &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will also push you across the finish line but you really should try to be more efficient with your time.&lt;/p&gt;
 
 &lt;h2 id=&#34;disabilities&#34;&gt;&lt;strong&gt;Disabilities:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -1642,7 +1642,7 @@ Finally, submit an image of both your analysis and your model to blackboard.  Cr
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;This lab is designed to further strengthen your understanding and ability to apply local, focal, and zonal operations to solve problems and comfortability with ModelBuilder, this time in the context of delineating sea level rize.  In part 1, you will walk through 2 methods of using the point and click interface to accomplish your analysis.  In part 2, you will use ModelBuilder to accomplish this same task, and in part 3 you will see how you can import your own python analysis into ArcMap.&lt;/p&gt;
+&lt;p&gt;This lab is designed to further strengthen your understanding and ability to apply local, focal, and zonal operations to solve problems and comfortability with ModelBuilder, this time in the context of delineating sea level rise.  In part 1, you will walk through 2 methods of using the point and click interface to accomplish your analysis.  In part 2, you will use ModelBuilder to accomplish this same task, and in part 3 you will see how you can import your own python analysis into ArcMap as tools.&lt;/p&gt;
 
 &lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
 
@@ -2320,7 +2320,7 @@ Name:&lt;/p&gt;
 Save your map as a .PNG file using the Export map option of the File menu. Save it in your local lab07/Part2 folder and call it fungus_yourname.png&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Upload your maps/images (be sure you are uploading the .PNG NOT the .MXD!) to board. This map is worth roughly &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; of your lab grade so don’t forget to do this!&lt;/p&gt;
+&lt;p&gt;Upload your maps/images (be sure you are uploading the .PNG NOT the .MXD!) to blackboard. This map is worth roughly &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; of your lab grade so don’t forget to do this!&lt;/p&gt;
 
 &lt;hr /&gt;
 

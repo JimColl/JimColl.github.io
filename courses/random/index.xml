@@ -216,7 +216,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;h3 id=&#34;adding-tabbed-content&#34;&gt;&lt;strong&gt;Adding tabbed content&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&amp;ldquo;1&amp;rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and does not break formatting on Chrome (other browsers untested).  The &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes does break the page table of contents that appears on the right and so should be avoided if possible.&lt;/p&gt;
+&lt;p&gt;Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&amp;ldquo;1&amp;rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&amp;rsquo;t break formatting on Chrome (other browsers untested).  The &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page table of contents on the right hand side and so should be avoided if possible.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;ul class=&amp;quot;nav nav-tabs&amp;quot;&amp;gt;
 &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;&amp;lt;a data-toggle=&amp;quot;tab&amp;quot; href=&amp;quot;#home&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;Home&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
@@ -280,9 +280,12 @@ Neat
 &lt;li&gt;Leslie Myint&amp;rsquo;s website has a &lt;a href=&#34;https://lmyint.github.io/post/hugo-academic-tips/&#34;&gt;great post&lt;/a&gt; that effectively covers a large cross section of changes to the Academic theme.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Some links to style formatting, more for me than anything
-* &lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues/84&#34;&gt;https://github.com/gcushen/hugo-academic/issues/84&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some links to style formatting, more for me than anything&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues/84&#34;&gt;https://github.com/gcushen/hugo-academic/issues/84&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -297,7 +300,7 @@ Neat
 
 &lt;p&gt;There are a whole host of questions I still have regarding the intersections of individuals, societies, economies, and technology.  One of the more practically philosophical realizations of this intersection than FOSS.  Free and Open Source Software has become one of my go to tools in tackling a problem and has that special allure of feel good contribution and intrinsic reproducibility to it.  I&amp;rsquo;ve created a few tools that take a FOSS approach to GIS, and here I&amp;rsquo;d like to demonstrate how to create one.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ll flesh this section out more at a later date, but two important links I&amp;rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll flesh this section out more at a later date, but some links I&amp;rsquo;ve leaned heavily on in the creation of FOSSFlood and ClusteR.&lt;/p&gt;
 
 &lt;h2 id=&#34;some-useful-implementation-links&#34;&gt;Some useful implementation links:&lt;/h2&gt;
 
@@ -378,6 +381,48 @@ coordinates(FullOpenAddressesCSV)&amp;lt;- ~LON+LAT
 proj4string(FullOpenAddressesCSV) &amp;lt;- CRS(&amp;quot;+init=epsg:4326&amp;quot;)
 writeOGR(obj=FullOpenAddressesCSV[aoiZIPCodesProj, ], dsn=paste0(basedir,&amp;quot;/AOI/&amp;quot;,UserZipCodeFileName,&amp;quot;/geo/addresses&amp;quot;), layer=&#39;OpenAddresses&#39;, driver=&amp;quot;ESRI Shapefile&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/dronemapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/dronemapping/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/YUN00120.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Need help passing your part 107?  I can recommend the following resources:&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6_ucCKFJUCU&amp;amp;t=1s&#34;&gt;https://www.youtube.com/watch?v=6_ucCKFJUCU&amp;amp;t=1s&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://3dr.com/faa/drone-practice-tests/&#34;&gt;https://3dr.com/faa/drone-practice-tests/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jrupprechtlaw.com/part-107-test-study-guide/&#34;&gt;https://jrupprechtlaw.com/part-107-test-study-guide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;drones-for-mapping-and-research&#34;&gt;&lt;strong&gt;Drones for mapping and research&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;One of the most exciting aspects of working in the Environmental Sciences is in exploring how the application of new tools and technologies has allowed us to reimagine and streamline how we observe, process, understand, and communicate the state of the world.  Take for instance, the humble terrain surface.  Although I’m not quite old enough to recall walking to school uphill both ways in a snowstorm, there was once a time when the USGS topo maps were the gold standard in terms of how closely we could replicate the undulations of landforms, and can recall many a boy scout meeting where we used these maps to plan our next adventure.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/KS_Lawrence West.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In early 2000, we brought these representations to the digital domain with the flight of the &lt;a href=&#34;https://www2.jpl.nasa.gov/srtm/mission.htm&#34;&gt;Shuttle Radar Topography Mission.&lt;/a&gt;  This gave us a digital representation of the world at a ~25-meter resolution across much of the globe.  Fantastic for most large-scale representations, this is still entirely too large to be relevant at a building scale.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/GISData.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next major milestone wouldn’t be seen until early 2016 with the USGS announcement of the &lt;a href=&#34;https://www.usgs.gov/core-science-systems/ngp/3dep&#34;&gt;3D Elevation Program (3DEP)&lt;/a&gt;.  This program set standards for the collection and curation of Airborne LIDAR (Light Detection and Ranging).  These data are high resolution point representations of elevation, with an average spacing of &amp;gt;4 points per square meter with less than 6 cm of variation across a flat surface.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/FY19_Partnerships_territories_08212019.jpg&#34; alt=&#34;&#34; /&gt;
+This represents a major leap forward but is not without its drawbacks.  Firstly, although LIDAR collects elevations, it does not collect imagery, which makes viewing the surface much less intuitive than it would otherwise be.  Additionally, although the resulting elevations are accurate, they are still not dense enough or accurate enough to compete with high precision surveys, and depending on the use case, may be out of date by more than 3 years.  In these instances, small Unmanned Aerial Systems, more commonly known as drones, offer a unique solution to some of these shortcomings.  Using commercially available hardware and cutting-edge software, we are able to fly over an area and collect imagery which we use to create our own custom point clouds and 3D models.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/OreadOrthoTrimmedSmaller.gif&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/YUN00016.jpg&#34; alt=&#34;&#34; /&gt;
+As part of my dissertation, I am interested in flying areas to determine what factors go into an effective terrestrial mapping effort.  The above images are a small sampling of outputs which I can generate, but can also include 3D point clouds, photo-realistic models, updated aerial maps, and standard aerial photography outputs.  If you have an area you would like flown, particularly if it has interesting and complex geometry or if it’s near a body of water, please contact me at jcoll AT ku.edu and we’ll find a way to collaborate.&lt;/p&gt;
+
+&lt;h1 id=&#34;ku-natural-history-museum-s-science-on-tap&#34;&gt;&lt;strong&gt;KU Natural History Museum’s Science on Tap&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ET7tcX0YvdpHh7MolB5K9VsBZ9kGxGMvF83Vjvh3VoB_bg?e=k1nIWc&#34;&gt;A small presentation for KU Natural History Museum’s Science on Tap | Free State Brewing CO.&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

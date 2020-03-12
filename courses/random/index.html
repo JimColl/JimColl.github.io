@@ -269,28 +269,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/courses/dronemapping/"><span>Drone Mapping</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
           <a class="nav-link  active" href="/courses/random/"><span>Random</span></a>
         </li>
 
@@ -365,6 +343,11 @@
   </div>
   
   <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/dronemapping/">Drone Mapping</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
     <a class="docs-toc-link" href="/courses/random"></a>
 
   </div>
@@ -383,7 +366,7 @@
       <nav id="TableOfContents">
 <ul>
 <li><a href="#welcome-to-the-random-bin"><strong>Welcome to the random bin</strong></a></li>
-<li><a href="#fun-links"><strong>Fun links</strong></a></li>
+<li><a href="#educational-ish-links"><strong>Educational-ish links</strong></a></li>
 <li><a href="#need-data"><strong>Need data?</strong></a></li>
 <li><a href="#random-education-bits"><strong>Random education bits</strong></a></li>
 <li><a href="#cluster"><strong>clusteR</strong></a></li>
@@ -410,7 +393,7 @@
 
 <hr />
 
-<h1 id="fun-links"><strong>Fun links</strong></h1>
+<h1 id="educational-ish-links"><strong>Educational-ish links</strong></h1>
 
 <p><strong>Links</strong></p>
 
@@ -420,6 +403,7 @@
 <ul>
 <li><a href="https://adventuresinmapping.com/">https://adventuresinmapping.com/</a><br /></li>
 <li><a href="https://www.esri.com/arcgis-blog/author/j_nelson/">https://www.esri.com/arcgis-blog/author/j_nelson/</a><br /></li>
+<li><a href="https://www.youtube.com/channel/UCpdwmy5JTFNUkKknxHH9Dsg">https://www.youtube.com/channel/UCpdwmy5JTFNUkKknxHH9Dsg</a></li>
 </ul></li>
 <li><a href="https://mikejohnson51.github.io/">Mike Johnson</a>: A data wizard and all around great dude.</li>
 </ul>
@@ -427,12 +411,24 @@
 <p><strong>GIS Resources</strong></p>
 
 <ul>
-<li><a href="https://www.gislounge.com/learn-gis-for-free/">GIS lounge</a> has compiled a nice cross section of links to open courseware across the academic disciplines, and a few GIS-centric resources.</li>
+<li><a href="https://www.gislounge.com/learn-gis-for-free/">GIS lounge</a> has compiled a nice cross section of links to open course-ware across the academic disciplines, and a few GIS-centric resources.</li>
 <li><a href="https://www.earthdatascience.org/">Earth Lab</a> has a massive amount of R and Python tutorials related to Earth Data Science.</li>
 <li><a href="https://www.hydroshare.org/">Hydroshare</a>: “github for water” is a sad understatement of the capabilities of the platform, developed by the amazing folks at <a href="https://www.cuahsi.org/">CUAHSI</a>.</li>
 <li><a href="http://opentopo.sdsc.edu/login">OpenTOPO</a>: A great clearinghouse and web toolset for topo data.</li>
 <li><a href="https://live.osgeo.org/en/index.html">OSGeoLive</a>: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in <a href="https://www.virtualbox.org/">VirtualBox</a>.</li>
 <li>The <a href="https://gistbok.ucgis.org/">UCGIS Body of Knowledge</a> is a great place to start for your broad GIS questions.</li>
+</ul>
+
+<p><strong>Neat youtubes</strong></p>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw">3Blue1Brown</a> is absolutely amazing.  I wish this was available when I was sitting through math, and consider this mandatory viewing.</li>
+<li><a href="https://www.youtube.com/channel/UCE5lsesyZCKKdhOznjb3n9g">The Surface Dynamics Modeling Lab</a> out of the University of Alabama has an excellent archive of invited speaker talks and tutorials.</li>
+<li><a href="https://www.youtube.com/channel/UC7_gcs09iThXybpVgjHZ_7g">PBS Space Time</a> puts together physics-centric videos that revolve around, well, space and time.</li>
+<li><a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A">Numberphile</a> covers interesting or otherwise unique aspects of math in a casual but informative way.</li>
+<li>My inner film major loves the overly analyzed aspects film covered in <a href="https://www.youtube.com/channel/UCjFqcJQXGZ6T6sxyFB-5i6A">Every Frame a Painting</a>.</li>
+<li>If you can get past the fact that the man spray paints his face and preaches skepticism, <a href="https://www.youtube.com/channel/UCEOXxzW2vU0P-0THehuIIeg">Capitan Disillusion</a> does a phenomenal job demonstrating just how far CGI can be pushed.</li>
+<li>Finally, <a href="https://www.youtube.com/channel/UCHnK83dqyPvFo6GX0rCwn8A">Apetor</a> can teach us all a little something about the wonder of life.</li>
 </ul>
 
 <p><strong>Thesis leftovers</strong></p>
@@ -493,7 +489,8 @@ See the github: <a href="https://github.com/JimColl/clusteR">https://github.com/
 <ul>
 <li>Click on a table entry to zoom to the location<br /></li>
 </ul></li>
-<li>Fully reactive map and editing<br /></li>
+<li>Fully reactive map and editing<br />
+<img src="/courses/random/media/clusterView.png" alt="" /></li>
 </ul>
 
 <p><strong>How to run:</strong></p>
@@ -505,7 +502,7 @@ To start the process:</p>
 2) Select a csv or a shapefile, enter the LAT LON and EPSG fields as necessary.  Replace spaces with .<br />
 3) and hit run!</p>
 
-<p>To &ldquo;uninstall&rdquo;, just delete the folder</p>
+<p>A test dataset is included in the data folder.  To &ldquo;uninstall&rdquo;, just delete the folder.  Pandoc and PhantomJS are also installed, and may be removed through the <em>add or remove programs</em> system dialog and the user/AppData/Roaming folder respectively.</p>
 
 <p><strong>Known bugs:</strong></p>
 
@@ -517,12 +514,17 @@ To start the process:</p>
 <li>Fly to (when you click on a row) will sometimes cause the server to lock up.  To fix, zoom in a bit before attempting to fly.<br /></li>
 </ul></li>
 <li>Legends can be too large for the window.<br /></li>
-<li>Editing the table is not fully tested<br />
+<li>Print button works but output is gross.
 
 <ul>
-<li>Shapefile editing broken<br /></li>
+<li>Map legends are also not printed.</li>
+<li>Pandoc needs to restart after being installed, so attempting to print after the installation will break the server.  This will only happen when you first run clusteR.  To recover, close the window and re run the HTA.<br /></li>
 </ul></li>
-<li>Print button is broken as well<br /></li>
+<li>Editing the table is not fully tested.<br />
+
+<ul>
+<li>Shapefile editing broken.<br /></li>
+</ul></li>
 </ul>
 
 <hr />

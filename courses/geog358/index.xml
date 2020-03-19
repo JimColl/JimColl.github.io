@@ -240,6 +240,12 @@ One of the things that helps me approach papers like this is to find a similar p
 
 &lt;p&gt;As outlined in the &lt;a href=&#34;https://jimcoll.github.io/courses/geog358/classoutline/#computers&#34;&gt;syllabus&lt;/a&gt;, GIS can be a demanding program, the ArcGIS system requirements can be found &lt;a href=&#34;https://desktop.arcgis.com/en/system-requirements/latest/arcgis-desktop-system-requirements.htm&#34;&gt;here&lt;/a&gt;.  I also recommend &lt;em&gt;at least&lt;/em&gt; 64 gigs of free hard drive space at minimum.  In addition to the hardware requirements, ArcGIS also requires the Windows operating system.  Below find installation instructions for different platforms.&lt;/p&gt;
 
+&lt;div class=&#34;alert alert-&#34;&gt;
+  &lt;div&gt;
+    The Virtual option is by far the easiest option if you are a recently virtualized member of the KU community.  The QGIS virtual option is what I use when I&amp;rsquo;m not wed to ArcMap.
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;p&gt;&lt;ul class=&#34;nav nav-tabs&#34;&gt;
 &lt;li class=&#34;active&#34;&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#home&#34;&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Windows&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu1&#34;&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Mac &amp;amp; Linux&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
@@ -339,7 +345,15 @@ If you are a student at KU,  IT offers &lt;a href=&#34;https://technology.ku.edu
 &lt;li&gt;Follow the installation instructions, including restarting your computer.
 &lt;li&gt;and finally, re-log into &lt;a href=&#34;https://virtuallab.ku.edu/vpn/index.html&#34;&gt;https://virtuallab.ku.edu/vpn/index.html&lt;/a&gt;.  You should see the storefront, where you can select ArcMap, which will launch through your browser.
 &lt;/ol&gt;
-&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/citrix.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/citrix.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Finally, in order to transfer data you need to &amp;ldquo;Permit all access&amp;rdquo;.
+&lt;/ol&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/virtual2.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;At no point did I have to log in via the actual citrix app.  Feel free to close the prompt that looks like so: &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Virtual3.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;If you need more detailed instructions, you can find those &lt;a href=&#34;https://kuit.service-now.com/kb_home.do?jvar_view_topic=KU+Virtual+Lab&amp;amp;sysparm_refer=kb_home.do&#34;&gt;here&lt;/a&gt;.  Finally, as per the instructions&amp;hellip;&lt;/p&gt;
 
@@ -374,7 +388,7 @@ See the &lt;a href=&#34;https://live.osgeo.org/en/quickstart/virtualization_quic
 
 &lt;p&gt;&lt;strong&gt;B. Installing OSGeoLive&lt;/strong&gt;&lt;br /&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Download and unzip the latest version of &lt;a href=&#34;https://sourceforge.net/projects/osgeo-live/files/&#34;&gt;OSGeoLive&lt;/a&gt;, you want the .amd64.vmdk.7z version.
+&lt;li&gt;Download and unzip the latest version of &lt;a href=&#34;https://sourceforge.net/projects/osgeo-live/files/&#34;&gt;OSGeoLive&lt;/a&gt;, you want the .amd64.vmdk.7z version.  Save that unzipped folder in your VirtualBox VMs folder.
 &lt;li&gt;In Oracle VM, Click on Tools, New.
 &lt;li&gt;Name your new machine (I call mine FOSSGIS).
 &lt;li&gt;You can leave the Machine Folder dialog on VirtualBox VMs.
@@ -384,14 +398,17 @@ See the &lt;a href=&#34;https://live.osgeo.org/en/quickstart/virtualization_quic
 &lt;/ol&gt;
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/FOSSGIS.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;C. Connecting your hard drive&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;C. Setting up&lt;/strong&gt;
 &lt;ol start=&#34;10&#34;&gt;
 &lt;li&gt;Finally, lets set share a folder.  Right click on the newly added machine and go to settings.&lt;br /&gt;
 &lt;li&gt;Under Shared Folders, create a new folder (the icon with a plus)&lt;br /&gt;
-&lt;li&gt;Point to a shared folder on your host machine (mine is called &amp;ldquo;hold&amp;rdquo; here)
+&lt;li&gt;Point to a shared folder on your host machine (mine is called &amp;ldquo;FOSSFlood-master&amp;rdquo; here)
 &lt;li&gt;Select the Auto-mount option
 &lt;li&gt;The shared folder is now connected!
+&lt;li&gt;If you&amp;rsquo;re on a smaller keyboard you likely don&amp;rsquo;t have a right-ctrl key, change the host bind key to something else (I use right alt.  File&amp;gt;Preferences&amp;gt;Input
 &lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/FOSSGIS2.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/DIV&gt;
 &lt;/DIV&gt;&lt;/p&gt;

@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="ArcMap/ArcPro As outlined in the syllabus, GIS can be a demanding program, the ArcGIS system requirements can be found here. I also recommend at least 64 gigs of free hard drive space at minimum. In addition to the hardware requirements, ArcGIS also requires the Windows operating system. Below find installation instructions for different platforms.
-&nbsp;&nbsp;Windows&nbsp;&nbsp; &nbsp;&nbsp;Mac &amp; Linux&nbsp;&nbsp; &nbsp;&nbsp;Virtual options&nbsp;&nbsp;  A. Before you install ArcGIS for Desktop  To install ArcMap on windows, check the system requirements to make sure your computer has the hardware and software required.">
+ The Virtual option is by far the easiest option if you are a recently virtualized member of the KU community.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog358/installgis/">
@@ -115,7 +115,7 @@
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog358/installgis/">
   <meta property="og:title" content="Installing GIS | Jim Coll">
   <meta property="og:description" content="ArcMap/ArcPro As outlined in the syllabus, GIS can be a demanding program, the ArcGIS system requirements can be found here. I also recommend at least 64 gigs of free hard drive space at minimum. In addition to the hardware requirements, ArcGIS also requires the Windows operating system. Below find installation instructions for different platforms.
-&nbsp;&nbsp;Windows&nbsp;&nbsp; &nbsp;&nbsp;Mac &amp; Linux&nbsp;&nbsp; &nbsp;&nbsp;Virtual options&nbsp;&nbsp;  A. Before you install ArcGIS for Desktop  To install ArcMap on windows, check the system requirements to make sure your computer has the hardware and software required."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+ The Virtual option is by far the easiest option if you are a recently virtualized member of the KU community."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -437,6 +437,12 @@
 
 <p>As outlined in the <a href="https://jimcoll.github.io/courses/geog358/classoutline/#computers">syllabus</a>, GIS can be a demanding program, the ArcGIS system requirements can be found <a href="https://desktop.arcgis.com/en/system-requirements/latest/arcgis-desktop-system-requirements.htm">here</a>.  I also recommend <em>at least</em> 64 gigs of free hard drive space at minimum.  In addition to the hardware requirements, ArcGIS also requires the Windows operating system.  Below find installation instructions for different platforms.</p>
 
+<div class="alert alert-">
+  <div>
+    The Virtual option is by far the easiest option if you are a recently virtualized member of the KU community.  The QGIS virtual option is what I use when I&rsquo;m not wed to ArcMap.
+  </div>
+</div>
+
 <p><ul class="nav nav-tabs">
 <li class="active"><a data-toggle="tab" href="#home">&nbsp;&nbsp;<b>Windows</b>&nbsp;&nbsp;</a></li>
 <li><a data-toggle="tab" href="#menu1">&nbsp;&nbsp;<b>Mac &amp; Linux</b>&nbsp;&nbsp;</a></li>
@@ -536,7 +542,15 @@ If you are a student at KU,  IT offers <a href="https://technology.ku.edu/servic
 <li>Follow the installation instructions, including restarting your computer.
 <li>and finally, re-log into <a href="https://virtuallab.ku.edu/vpn/index.html">https://virtuallab.ku.edu/vpn/index.html</a>.  You should see the storefront, where you can select ArcMap, which will launch through your browser.
 </ol>
-<img src="/courses/geog358/media/citrix.PNG" alt="" /></p>
+<img src="/courses/geog358/media/citrix.PNG" alt="" />
+<ol start="5">
+<li>Finally, in order to transfer data you need to &ldquo;Permit all access&rdquo;.
+</ol>
+<img src="/courses/geog358/media/virtual2.PNG" alt="" /></p>
+
+<blockquote>
+<p>At no point did I have to log in via the actual citrix app.  Feel free to close the prompt that looks like so: <img src="/courses/geog358/media/Virtual3.PNG" alt="" /></p>
+</blockquote>
 
 <p>If you need more detailed instructions, you can find those <a href="https://kuit.service-now.com/kb_home.do?jvar_view_topic=KU+Virtual+Lab&amp;sysparm_refer=kb_home.do">here</a>.  Finally, as per the instructions&hellip;</p>
 
@@ -571,7 +585,7 @@ See the <a href="https://live.osgeo.org/en/quickstart/virtualization_quickstart.
 
 <p><strong>B. Installing OSGeoLive</strong><br />
 <ol start="3">
-<li>Download and unzip the latest version of <a href="https://sourceforge.net/projects/osgeo-live/files/">OSGeoLive</a>, you want the .amd64.vmdk.7z version.
+<li>Download and unzip the latest version of <a href="https://sourceforge.net/projects/osgeo-live/files/">OSGeoLive</a>, you want the .amd64.vmdk.7z version.  Save that unzipped folder in your VirtualBox VMs folder.
 <li>In Oracle VM, Click on Tools, New.
 <li>Name your new machine (I call mine FOSSGIS).
 <li>You can leave the Machine Folder dialog on VirtualBox VMs.
@@ -581,14 +595,17 @@ See the <a href="https://live.osgeo.org/en/quickstart/virtualization_quickstart.
 </ol>
 <img src="/courses/geog358/media/FOSSGIS.PNG" alt="" /></p>
 
-<p><strong>C. Connecting your hard drive</strong>
+<p><strong>C. Setting up</strong>
 <ol start="10">
 <li>Finally, lets set share a folder.  Right click on the newly added machine and go to settings.<br />
 <li>Under Shared Folders, create a new folder (the icon with a plus)<br />
-<li>Point to a shared folder on your host machine (mine is called &ldquo;hold&rdquo; here)
+<li>Point to a shared folder on your host machine (mine is called &ldquo;FOSSFlood-master&rdquo; here)
 <li>Select the Auto-mount option
 <li>The shared folder is now connected!
+<li>If you&rsquo;re on a smaller keyboard you likely don&rsquo;t have a right-ctrl key, change the host bind key to something else (I use right alt.  File&gt;Preferences&gt;Input
 </ol></p>
+
+<p><img src="/courses/geog358/media/FOSSGIS2.PNG" alt="" /></p>
 
 <p></DIV>
 </DIV></p>

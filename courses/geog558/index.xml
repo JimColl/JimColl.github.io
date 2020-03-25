@@ -1714,27 +1714,11 @@ Name:&lt;br /&gt;
 
 &lt;p&gt;Unzip the lab 6 folder into your one drive, in it you will find a baseData folder, and folders already set up for part1, part2, and part3.  Go ahead and pick a means of delineating sea level rise, either cost distance or region groups, and perform a 2-meter sea level rise analysis.&lt;/p&gt;
 
-&lt;style id=&#34;Book1_4029_Styles&#34;&gt;
+&lt;style id=&#34;Book1_24456_Styles&#34;&gt;
 &lt;!--table
     {mso-displayed-decimal-separator:&#34;\.&#34;;
     mso-displayed-thousand-separator:&#34;\,&#34;;}
-.font54029
-    {color:black;
-    font-size:12.0pt;
-    font-weight:400;
-    font-style:normal;
-    text-decoration:none;
-    font-family:Garamond, serif;
-    mso-font-charset:0;}
-.font64029
-    {color:black;
-    font-size:12.0pt;
-    font-weight:400;
-    font-style:italic;
-    text-decoration:none;
-    font-family:Garamond, serif;
-    mso-font-charset:0;}
-.xl654029
+.xl1524456
     {padding-top:1px;
     padding-right:1px;
     padding-left:1px;
@@ -1744,7 +1728,7 @@ Name:&lt;br /&gt;
     font-weight:400;
     font-style:normal;
     text-decoration:none;
-    font-family:Garamond, serif;
+    font-family:Calibri, sans-serif;
     mso-font-charset:0;
     mso-number-format:General;
     text-align:general;
@@ -1752,77 +1736,13 @@ Name:&lt;br /&gt;
     mso-background-source:auto;
     mso-pattern:auto;
     white-space:nowrap;}
-.xl664029
+.xl6324456
     {padding-top:1px;
     padding-right:1px;
     padding-left:1px;
     mso-ignore:padding;
     color:black;
-    font-size:12.0pt;
-    font-weight:700;
-    font-style:normal;
-    text-decoration:underline;
-    text-underline-style:single;
-    font-family:Garamond, serif;
-    mso-font-charset:0;
-    mso-number-format:General;
-    text-align:center;
-    vertical-align:middle;
-    border-top:.5pt solid windowtext;
-    border-right:none;
-    border-bottom:1.0pt solid windowtext;
-    border-left:none;
-    mso-background-source:auto;
-    mso-pattern:auto;
-    white-space:nowrap;}
-.xl674029
-    {padding-top:1px;
-    padding-right:1px;
-    padding-left:1px;
-    mso-ignore:padding;
-    color:black;
-    font-size:12.0pt;
-    font-weight:700;
-    font-style:normal;
-    text-decoration:underline;
-    text-underline-style:single;
-    font-family:Garamond, serif;
-    mso-font-charset:0;
-    mso-number-format:General;
-    text-align:center;
-    vertical-align:middle;
-    border-top:.5pt solid windowtext;
-    border-right:none;
-    border-bottom:1.0pt solid windowtext;
-    border-left:.5pt solid windowtext;
-    mso-background-source:auto;
-    mso-pattern:auto;
-    white-space:nowrap;}
-.xl684029
-    {padding-top:1px;
-    padding-right:1px;
-    padding-left:1px;
-    mso-ignore:padding;
-    color:black;
-    font-size:12.0pt;
-    font-weight:400;
-    font-style:normal;
-    text-decoration:none;
-    font-family:Garamond, serif;
-    mso-font-charset:0;
-    mso-number-format:General;
-    text-align:left;
-    vertical-align:top;
-    mso-background-source:auto;
-    mso-pattern:auto;
-    white-space:normal;}
-.xl694029
-    {padding-top:1px;
-    padding-right:1px;
-    padding-left:1px;
-    mso-ignore:padding;
-    color:black;
-    font-size:12.0pt;
+    font-size:10.0pt;
     font-weight:400;
     font-style:normal;
     text-decoration:none;
@@ -1838,84 +1758,387 @@ Name:&lt;br /&gt;
     mso-background-source:auto;
     mso-pattern:auto;
     white-space:normal;}
+.xl6424456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:italic;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+.xl6524456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:italic;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6624456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6724456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:11.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Calibri, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6824456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:none;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl6924456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:italic;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:none;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:nowrap;}
+.xl7024456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:italic;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:none;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+.xl7124456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:none;
+    border-left:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    white-space:normal;}
+.xl7224456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:none;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
+.xl7324456
+    {padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:black;
+    font-size:10.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Garamond, serif;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:center;
+    vertical-align:middle;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#F2F2F2;
+    mso-pattern:black none;
+    white-space:nowrap;}
 --&gt;
 &lt;/style&gt;
 
-&lt;div id=&#34;Book1_4029&#34; align=center x:publishsource=&#34;Excel&#34;&gt;
+&lt;div id=&#34;Book1_24456&#34; align=left x:publishsource=&#34;Excel&#34;&gt;&lt;span
+style=&#39;font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+widows: 2;-webkit-text-stroke-width: 0px&#39;&gt;
 
-&lt;table border=0 cellpadding=0 cellspacing=0 width=768 style=&#39;border-collapse:
- collapse;table-layout:fixed;width:576pt&#39;&gt;
- &lt;col class=xl654029 width=384 span=2 style=&#39;mso-width-source:userset;
- mso-width-alt:13653;width:288pt&#39;&gt;
- &lt;tr height=22 style=&#39;height:16.2pt&#39;&gt;
-  &lt;td height=22 class=xl664029 width=384 style=&#39;height:16.2pt;width:288pt&#39;&gt;&lt;span
-  style=&#39;mso-bidi-font-size:12pt&#39;&gt;Cost Distance&lt;/span&gt;&lt;/td&gt;
-  &lt;td class=xl674029 width=384 style=&#39;width:288pt&#39;&gt;&lt;span style=&#39;mso-bidi-font-size:
-  12pt&#39;&gt;Region Group&lt;/span&gt;&lt;/td&gt;
+&lt;table border=0 cellpadding=0 cellspacing=0 width=624 style=&#39;border-collapse:
+ collapse;table-layout:fixed;width:468pt&#39;&gt;
+ &lt;col width=312 span=2 style=&#39;mso-width-source:userset;mso-width-alt:11093;
+ width:234pt&#39;&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl7224456 width=312 style=&#39;height:14.4pt;width:234pt&#39;&gt;Cost
+  Distance&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl7324456 width=312 style=&#39;border-left:none;width:234pt&#39;&gt;&lt;span
+  style=&#39;font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+  widows: 2;-webkit-text-stroke-width: 0px&#39;&gt;Region Group&lt;/span&gt;&lt;/td&gt;
  &lt;/tr&gt;
- &lt;tr height=445 style=&#39;mso-height-source:userset;height:333.6pt&#39;&gt;
-  &lt;td height=445 class=xl684029 width=384 style=&#39;height:333.6pt;width:288pt&#39;&gt;1.
-  Set the oceans to a one value source&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a. &lt;font class=&#34;font64029&#34;&gt;Use the
-  Set null tool&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. &lt;/font&gt;&lt;font
-  class=&#34;font64029&#34;&gt;&amp;quot;Value&amp;quot; = 0, call the output “source.tif”&lt;/font&gt;&lt;font
-  class=&#34;font54029&#34;&gt;&lt;br&gt;
-    2. Set all elevations in the DEM which are above the sea level rise
-  threshold&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  Set null tool again&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. &amp;quot;Value&amp;quot; &amp;gt; %Sea
-  Level Rise% (in this case 2)&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Set the false raster to 1 (Friction
-  should be the same everywhere otherwise)&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;d. Call the output
-  “friction.tif”&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;3. Create the cost distance surface&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  Cost distance tool…&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Cost is “friction” source is
-  “source”&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Call the output distance&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;4. Remove the source cells to create a
-  raster of just inundation&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  Set null&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. “Value” = 0&lt;span
-  style=&#39;mso-spacerun:yes&#39;&gt;  &lt;/span&gt;&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Again, set the value to 1
-  otherwise&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;d. Call the output “SLRbyCost.tif”&lt;/font&gt;&lt;/td&gt;
-  &lt;td class=xl694029 width=384 style=&#39;width:288pt&#39;&gt;1. Create a raster of all
-  the areas less than the projected sea level rise.&lt;br&gt;
-    &lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a. Hint:
-  Use the set null tool to replace all values &amp;gt; sea level rise to null.&lt;span
-  style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Otherwise, set the value to
-  1&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;c. Call the output demlteslr&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;2. Group the resulting regions using region
-  group&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  Use 8 connectivity and group using the within method.&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output regions&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;3. Use zonal statistics to identify the
-  regions which contain an ocean source&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  We want the value of oceans (input value raster) using the regions as the
-  zone data, and the maximum statistics.&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output zonemax&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;4. We then want to remove the oceans from
-  our calculation&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  Hint: raster calculator (%zonemax%&amp;quot; - &amp;quot;%ocean%&amp;quot;).&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output diff&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font54029&#34;&gt;5. Finally, sett everything less than or
-  equal to 0 to null so that we have just the inundated pixels&lt;br&gt;
-    &lt;/font&gt;&lt;font class=&#34;font64029&#34;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;a.
-  Hint: Set null tool again&lt;br&gt;
-    &lt;span style=&#39;mso-spacerun:yes&#39;&gt;   &lt;/span&gt;b. Call the output SLRbyRegion&lt;/font&gt;&lt;/td&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6824456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;font-variant-ligatures: normal;
+  font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
+  text-decoration-style: initial;text-decoration-color: initial&#39;&gt;1. Set the
+  oceans to a one value source&lt;/span&gt;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl6324456 width=312 style=&#39;width:234pt&#39;&gt;&lt;span
+  style=&#39;font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+  widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;
+  text-decoration-color: initial&#39;&gt;1. Create a raster of all the areas less than
+  the projected sea level rise.&lt;/span&gt;&lt;/td&gt;
  &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box;
+  font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+  widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;
+  text-decoration-color: initial&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a.&amp;nbsp;Use the Set null
+  tool on the ocean raster&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.&amp;nbsp;&amp;quot;Value&amp;quot;
+  = 0&lt;/td&gt;
+  &lt;td rowspan=2 class=xl6424456 width=312 style=&#39;width:234pt&#39;&gt;&lt;span
+  style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a. Hint: Use the set null
+  tool to replace all values &amp;gt; sea level rise to null.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td rowspan=2 height=38 class=xl7024456 width=312 style=&#39;height:28.8pt;
+  width:234pt&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;c.&amp;nbsp;Your false or constant raster can be
+  either the ocean raster or a value of 1&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6524456 style=&#39;height:14.4pt;border-left:none&#39;&gt;&lt;span
+  style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b. Otherwise, set the value
+  to 1&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;d.&amp;nbsp;call
+  the output “source.tif”&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;c.
+  Call the output demlteslr&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td rowspan=2 height=38 class=xl7124456 width=312 style=&#39;height:28.8pt;
+  width:234pt&#39;&gt;2. Set all elevations in the DEM which are above the sea level
+  rise threshold&lt;/td&gt;
+  &lt;td class=xl6624456 style=&#39;border-left:none&#39;&gt;2. Group the resulting regions
+  using region group&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6524456 style=&#39;height:14.4pt;border-left:none&#39;&gt;&lt;span
+  style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a. Use 8 connectivity and
+  group using the within method.&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a.
+  Set null tool again, this time on elevation&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  Call the output regions&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  &amp;quot;Value&amp;quot; &amp;gt; %Sea Level Rise% (in the manual case, 2)&lt;/span&gt;&lt;/td&gt;
+  &lt;td rowspan=2 class=xl6324456 width=312 style=&#39;width:234pt&#39;&gt;3. Use zonal
+  statistics to identify the regions which contain an ocean source&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td rowspan=2 height=38 class=xl7024456 width=312 style=&#39;height:28.8pt;
+  width:234pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;c. Set
+  the false raster to 1 (Friction should be the same everywhere otherwise)&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td rowspan=2 height=38 class=xl6424456 width=312 style=&#39;height:28.8pt;
+  width:234pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a. We
+  want the value of oceans (input value raster) using the regions as the zone
+  data, and the maximum statistics.&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;d.
+  Call the output “friction.tif”&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6824456 style=&#39;height:14.4pt&#39;&gt;3. Create the cost
+  distance surface&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  Call the output zonemax&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a.
+  Cost distance tool…&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6624456 style=&#39;border-left:none&#39;&gt;4. We then want to remove the
+  oceans from our calculation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  Cost is “friction” source is “source”&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a.
+  Hint: raster calculator (%zonemax%&amp;quot; - &amp;quot;%ocean%&amp;quot;).&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;c.
+  Call the output &amp;quot;distance.tif&amp;quot;&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  Call the output diff&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td rowspan=2 height=38 class=xl7124456 width=312 style=&#39;height:28.8pt;
+  width:234pt&#39;&gt;4. Remove the source cells to create a raster of just inundation&lt;/td&gt;
+  &lt;td rowspan=2 class=xl6324456 width=312 style=&#39;width:234pt&#39;&gt;5. Finally, set
+  everything less than or equal to 0 to null so that we have just the inundated
+  pixels&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a.
+  Set null&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;a.
+  Hint: Set null tool again&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  “Value” = 0&amp;nbsp;&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6524456 style=&#39;border-left:none&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;b.
+  Call the output SLRbyRegion&lt;/span&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;c.
+  Again, set the value to 1 otherwise&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6724456 style=&#39;border-left:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=19 style=&#39;height:14.4pt&#39;&gt;
+  &lt;td height=19 class=xl6924456 style=&#39;height:14.4pt&#39;&gt;&lt;span style=&#39;box-sizing: border-box&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;d.
+  Call the output “SLRbyCost.tif”&lt;/span&gt;&lt;/td&gt;
+  &lt;td class=xl6724456 style=&#39;border-left:none&#39;&gt;&amp;nbsp;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;![if supportMisalignedColumns]&gt;
+ &lt;tr height=0 style=&#39;display:none&#39;&gt;
+  &lt;td width=312 style=&#39;width:234pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=312 style=&#39;width:234pt&#39;&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;![endif]&gt;
 &lt;/table&gt;
 
 &lt;/div&gt;
@@ -2068,7 +2291,9 @@ Name:&lt;br /&gt;
 &lt;li&gt;You can create your own toolbox called a custom toolbox and add tools and toolsets to it. Script and model tools that you create should be stored in a custom toolbox.&lt;/li&gt;
 &lt;li&gt;Open ArcCatalog. In the Catalog Tree, navigate to the folder where you want the toolbox to be created.&lt;/li&gt;
 &lt;li&gt;Right-click the folder and click &lt;strong&gt;New &amp;gt; Toolbox&lt;/strong&gt;. Give the toolbox a new name &lt;em&gt;InundationToolbox.tbx&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;To create a script tool, right-click your custom toolbox and click &lt;strong&gt;Add &amp;gt; Script&lt;/strong&gt;. This opens the &lt;strong&gt;Add Script wizard&lt;/strong&gt; that takes you step by step through the process of creating a script tool. Give a new script a name &lt;em&gt;InundationByRegionGroupPython&lt;/em&gt; and add a script file by specifying the location of the file &lt;em&gt;InundationByRegionGroupPython.py&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;To create a script tool, right-click your custom toolbox and click &lt;strong&gt;Add &amp;gt; Script&lt;/strong&gt;. This opens the &lt;strong&gt;Add Script wizard&lt;/strong&gt; that takes you step by step through the process of creating a script tool.&lt;/li&gt;
+&lt;li&gt;Give a new script a name &lt;em&gt;InundationByRegionGroupPython&lt;/em&gt;, and click next.&lt;/li&gt;
+&lt;li&gt;Add a script file by specifying the location of the file &lt;em&gt;InundationByRegionGroupPython.py&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;

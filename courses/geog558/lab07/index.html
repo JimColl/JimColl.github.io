@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling Learning Objective In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same lab from intro class you astute student you).">
+  <meta name="description" content="Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling Learning Objective In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same lab from intro class, we&rsquo;re going to create the model this time).">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab07/">
@@ -113,7 +113,7 @@
   <meta property="og:site_name" content="Jim Coll">
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab07/">
   <meta property="og:title" content=" | Jim Coll">
-  <meta property="og:description" content="Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling Learning Objective In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same lab from intro class you astute student you)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="og:description" content="Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling Learning Objective In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same lab from intro class, we&rsquo;re going to create the model this time)."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -374,7 +374,7 @@
       </li>
       
       <li >
-        <a href="/courses/geog558/lab08/">Lab 8 - Advanced Terrain Analysis</a>
+        <a href="/courses/geog558/oldfiles/lab08/">Lab 8 - Advanced Terrain Analysis</a>
       </li>
       
     </ul>
@@ -401,15 +401,14 @@
 <li><a href="#materials"><strong>Materials</strong></a></li>
 <li><a href="#part-1-school-sighting-site-suitability-analysis"><strong>Part 1: School Sighting (Site Suitability Analysis)</strong></a>
 <ul>
-<li><a href="#creating-a-toolbox-and-a-model">Creating a Toolbox and a Model</a></li>
-<li><a href="#setting-up-the-workflow">Setting up the Workflow</a></li>
-<li><a href="#calculating-a-suitability-raster">Calculating a Suitability Raster</a></li>
+<li><a href="#creating-a-toolbox-and-a-model"><strong>Creating a Toolbox and a Model</strong></a></li>
+<li><a href="#setting-up-the-workflow"><strong>Setting up the Workflow</strong></a></li>
+<li><a href="#calculating-a-suitability-raster"><strong>Calculating a Suitability Raster</strong></a></li>
 </ul></li>
 <li><a href="#part-2-fungus-diffusion-modeling-cost-distance"><strong>Part 2: Fungus Diffusion Modeling (Cost Distance)</strong></a>
 <ul>
-<li><a href="#add-all-data-to-your-data-frame">Add all data to your data frame</a></li>
-<li><a href="#the-diffusion-process">The Diffusion Process</a></li>
-<li><a href="#modeling-the-diffusion-process">Modeling the diffusion process</a></li>
+<li><a href="#getting-started"><strong>Getting started</strong></a></li>
+<li><a href="#modeling-the-diffusion-process"><strong>Modeling the diffusion process</strong></a></li>
 </ul></li>
 </ul>
 </nav>
@@ -432,7 +431,7 @@
 
 <h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same <a href="https://jimcoll.github.io/courses/geog358/lab07/#part-3-school-siting">lab from intro class</a> you astute student you). In essence, we will be setting up a diagram in Model Builder that will calculate the suitability raster with one click. Using Model Builder is helpful in situations where similar operations need to be applied in a programatic way.</p>
+<p>In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same <a href="https://jimcoll.github.io/courses/geog358/lab07/#part-3-school-siting">lab from intro class</a>, we&rsquo;re going to create the model this time). In essence, we will be setting up a diagram in Model Builder that will calculate the suitability raster with one click. Using Model Builder is helpful in situations where similar operations need to be applied in a programmatic way.</p>
 
 <h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
@@ -622,7 +621,7 @@ Name:</p>
 Save your map as a .PNG file using the Export map option of the File menu. Save it in your local lab07/Part2 folder and call it fungus_yourname.png</li>
 </ul>
 
-<p>Upload your maps/images (be sure you are uploading the .PNG NOT the .MXD!) to blackboard. This map is worth roughly <sup>1</sup>&frasl;<sub>4</sub> of your lab grade so don’t forget to do this!</p>
+<p>Upload the answers to the questions above along with your images to blackboard.  The images are worth roughtly <sup>1</sup>&frasl;<sub>2</sub> of this labs grade so don&rsquo;t forget to include them!</p>
 
 <hr />
 
@@ -690,33 +689,33 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 
 <h1 id="part-1-school-sighting-site-suitability-analysis"><strong>Part 1: School Sighting (Site Suitability Analysis)</strong></h1>
 
-<h2 id="creating-a-toolbox-and-a-model">Creating a Toolbox and a Model</h2>
+<h2 id="creating-a-toolbox-and-a-model"><strong>Creating a Toolbox and a Model</strong></h2>
 
 <ul>
-<li>Create a new toolbox (Lab7Tools), and a new model (SchoolSiting) in that toolbox.
+<li>Create a new toolbox (<em>Lab7Tools</em>), and a new model (<em>SchoolSiting</em>) in that toolbox.
 
 <ul>
 <li>R-click on your lab07/Part1 folder and create a new toolbox.</li>
-<li>Name the new toolbox Lab7Tools.tbx.</li>
+<li>Name the new toolbox <em>Lab7Tools.tbx</em>.</li>
 <li>R-click on the toolbox and create a new model.</li>
-<li>Rename the new Model (R-click/slow-click | Rename) to SchoolSiting.</li>
+<li>Rename the new Model (R-click/slow-click | Rename) to <em>SchoolSiting</em>.</li>
 </ul></li>
-<li>Set up the Model Properties by going to Model | Model Properties</li>
-<li>Under the Environments tab, check the boxes for Processing Extent | Extent and for Raster Analysis | Cell Size</li>
-<li>Click the Values… button.</li>
-<li>Click the down arrows for each of the settings and make the Extent the same as the landuse raster in your data folder, and the Cell Size the same as elevation.</li>
+<li>Set up the Model Properties by going to <strong>Model | Model Properties</strong></li>
+<li>Under the <strong>Environments tab</strong>, check the boxes for <strong>Processing Extent | Extent</strong> and for <strong>Raster Analysis | Cell Size</strong></li>
+<li>Click the <strong>Values…</strong> button.</li>
+<li>Click the down arrows for each of the settings and make the <strong>Extent</strong> the same as the <em>landuse</em> raster in your data folder, and the <strong>Cell Size</strong> the same as elevation.</li>
 <li>Click OK on the Environment Settings.</li>
 <li>Click OK on the SchoolSiting Properties Window.</li>
 </ul>
 
-<h2 id="setting-up-the-workflow">Setting up the Workflow</h2>
+<h2 id="setting-up-the-workflow"><strong>Setting up the Workflow</strong></h2>
 
 <p>You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to get the suitable school sites. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.</p>
 
 <ul>
 <li>Set up your screen so you can see both ArcToolbox and the model window at the same time.</li>
-<li>Add the slope tool by finding it under ArcToolbox (Spatial Analyst Tools | Surface) and then dragging it onto the model window.</li>
-<li>Double click on the slope tool. The slope dialog will open, and it should be roughly similar to the dialog for slope in the spatial analyst.</li>
+<li>Add the slope tool by finding it under ArcToolbox (<strong>Spatial Analyst Tools | Surface</strong>) and then dragging it onto the model window.</li>
+<li>Double click on the slope tool. The slope dialog will open, and will look familiar.</li>
 <li>Set the input to the elevation raster (from your data folder), and set the output to slope and make sure it is saved in the output folder in the Lab 7 folder. Leave other parameters to their defaults.</li>
 <li>Click OK. You will see the diagram objects become colored. You now have a very simple model.</li>
 </ul>
@@ -724,41 +723,41 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 <p><img src="/courses/geog558/media/Lab07Picture01.png" alt="" /></p>
 
 <ul>
-<li>Next, add the straight line distance tool (Spatial Analyst Tools | Distance | Euclidean Distance) to create a distance layer from rec_sites.</li>
-<li>Set the Input to rec_sites (from your data folder), the Output to recDist in your output folder, and the Cell Size to 30. You don’t need a Maximum distance or a direction Raster.</li>
+<li>Next, add the Euclidean (straight line) distance tool (<strong>Spatial Analyst Tools | Distance | Euclidean Distance</strong>) to create a distance layer from <i>rec_sites</i>.</li>
+<li>Set the Input to <i>rec_sites</i> (from your data folder), the Output to <em>recDist</em> in your output folder, and the Cell Size to 30. You don’t need a Maximum distance or a direction Raster.</li>
 <li>Click OK. Notice that an empty diagram object is there for direction raster. Since it is blank, it will be ignored, so we will leave it alone.</li>
 <li>Add and set up another straight line distance tool to calculate distance from schools (call the output schDist).</li>
-<li>Save your Model (Model | Save).</li>
-<li>Click the Run button. Check in ArcCatalog to make sure that these three layers are calculated correctly and saved in your output folder.</li>
-<li>Add a Reclassify tool (Spatial Analyst Tools | Reclass | Reclassify) to the Model window to reclassify the slope raster.</li>
-<li>Double click on the Reclassify tool in the Model window. Select slope as the input layer.
+<li>Save your Model (<strong>Model | Save</strong>).</li>
+<li>Click the <strong>Run</strong> button. Check in ArcCatalog to make sure that these three layers are calculated correctly and saved in your output folder.</li>
+<li>Add a Reclassify tool (<strong>Spatial Analyst Tools | Reclass | Reclassify</strong>) to the Model window to reclassify the slope raster.</li>
+<li>Double click on the <strong>Reclassify tool</strong> in the Model window. Select <em>slope</em> as the input layer.
 
 <ul>
 <li>This time, select the input layer from the dropdown in this dialog window, which shows the layers that are part of the model (We do this so that it will perform this next step from what we calculated in the previous one. In other words, it maintains a flow within the model).</li>
 </ul></li>
-<li>In order to create the new classes for the slope layer, click on the Classify button, select the Equal Interval Method and 10 classes. Click OK.</li>
+<li>In order to create the new classes for the slope layer, click on the <strong>Classify button</strong>, select the Equal Interval Method and 10 classes. Click OK.</li>
 </ul>
 
 <p><img src="/courses/geog558/media/Lab07Picture02.png" alt="" /></p>
 
 <ul>
-<li>It is preferable that the new school site be located on relatively flat ground. You will reclassify the slope layer, giving a value of 10 to the most suitable slopes (those with the lowest angle of slope) and 1 to the least suitable slopes (those with the steepest angle of slope). Click on the Reverse New Values button so the lowest slopes get a value of ten and the steepest slopes a value of 1.</li>
-<li>Name the output raster layer as slopeR and click OK.</li>
+<li>It is preferable that the new school site be located on relatively flat ground. You will reclassify the slope layer, giving a value of 10 to the most suitable slopes (those with the lowest angle of slope) and 1 to the least suitable slopes (those with the steepest angle of slope). Click on the <strong>Reverse New Values</strong> button so the lowest slopes get a value of ten and the steepest slopes a value of 1.</li>
+<li>Name the output raster layer as <em>slopeR</em> and click OK.</li>
 </ul>
 
 <p><img src="/courses/geog558/media/Lab07Picture03.png" alt="" /></p>
 
 <ul>
-<li>Add a new Reclassify tool and double click on it.</li>
-<li>Select the RecDist layer as the input raster from the dropdown.</li>
-<li>Reclassify distance to recreation sites raster (recDist) into 10 classes with new values from 1 to 10 using Equal Interval classification method. The school should be located near recreational facilities. You will reclassify this dataset, giving a value of 10 to areas closest to recreation sites (the most suitable locations), giving a value of 1 to areas far from recreation sites (the least suitable locations), and ranking the values in between.</li>
-<li>Name the output raster layer as recR and click OK.</li>
-<li>Add a third Reclassify tool and double click on it.</li>
-<li>Select the SchDist layer as the input raster from the dropdown.</li>
-<li>Reclassify distance to schools raster (schD) into 10 classes with new values from 1 to 10 using Equal Interval classification method. It is necessary to locate the new school away from existing schools in order to avoid encroaching on their catchment areas. You will reclassify the distance to schools layer, giving a value of 10 to areas away from existing schools (the most suitable locations), giving a value of 1 to areas near existing schools (least suitable locations), and ranking the values in between.</li>
-<li>Name the output raster layer as schR and click OK.</li>
+<li>Add a new <strong>Reclassify tool</strong> and double click on it.</li>
+<li>Select the <em>RecDist</em> layer as the input raster from the dropdown.</li>
+<li>Reclassify distance to recreation sites raster (<em>recDist</em>) into 10 classes with new values from 1 to 10 using Equal Interval classification method. The school should be located near recreational facilities. You will reclassify this dataset, giving a value of 10 to areas closest to recreation sites (the most suitable locations), giving a value of 1 to areas far from recreation sites (the least suitable locations), and ranking the values in between.</li>
+<li>Name the output raster layer as <em>recR</em> and click OK.</li>
+<li>Add a third <strong>Reclassify tool</strong> and double click on it.</li>
+<li>Select the <em>SchDist</em> layer as the input raster from the dropdown.</li>
+<li>Reclassify distance to schools raster (<em>schD</em>) into 10 classes with new values from 1 to 10 using Equal Interval classification method. It is necessary to locate the new school away from existing schools in order to avoid encroaching on their catchment areas. You will reclassify the distance to schools layer, giving a value of 10 to areas away from existing schools (the most suitable locations), giving a value of 1 to areas near existing schools (least suitable locations), and ranking the values in between.</li>
+<li>Name the output raster layer <em>schR</em> and click OK.</li>
 <li>Save your Model.</li>
-<li>Add and set up a fourth Reclassify tool in order to reclassify the landuse raster.
+<li>Add and set up a fourth <strong>Reclassify tool</strong> in order to reclassify the <em>landuse</em> raster.
 
 <ul>
 <li>Select ‘LANDUSE’ as the ‘Reclass field’ using the dropdown menu.</li>
@@ -775,8 +774,8 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-lboi">Landuse type</th>
-    <th class="tg-0pky">Score</th>
+    <th class="tg-lboi"><b>Landuse type</b></th>
+    <th class="tg-0pky"><b>Score</b></th>
   </tr>
   <tr>
     <td class="tg-0pky">Agriculture</td>
@@ -809,16 +808,16 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 </table></p>
 
 <ul>
-<li>Call the output landuseR.</li>
+<li>Call the output <em>landuseR</em>.</li>
 <li>Click OK and Save your Model.</li>
-<li>After all four reclassify tools are correctly established in the model, click Run again and check your output folder to make sure everything was calculated correctly.<br />
+<li>After all four reclassify tools are correctly established in the model, click <strong>Run</strong> again and check your output folder to make sure everything was calculated correctly.<br />
 <img src="/courses/geog558/media/Lab07Picture04.png" alt="" /></li>
 </ul>
 
-<h2 id="calculating-a-suitability-raster">Calculating a Suitability Raster</h2>
+<h2 id="calculating-a-suitability-raster"><strong>Calculating a Suitability Raster</strong></h2>
 
 <ul>
-<li>With all of our standardized layers, we are ready to calculate our suitability raster.  Add a Raster Calculator Tool (Spatial Analyst Tools | Map Algebra | Raster Calculator) to the Model window.</li>
+<li>With all of our standardized layers, we are ready to calculate our suitability raster.  Add a <strong>Raster Calculator</strong> Tool (Spatial Analyst Tools | Map Algebra | Raster Calculator) to the Model window.</li>
 <li>Double click on this tool to set up the parameters.
 
 <ul>
@@ -832,8 +831,8 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 </style>
 <table class="tg">
 <tr>
-<th class="tg-lboi">Layer</th>
-<th class="tg-0pky">Weight</th>
+<th class="tg-lboi"><b>Layer</b></th>
+<th class="tg-0pky"><b>Weight</b></th>
 </tr>
 <tr>
 <td class="tg-0pky">Reclass of distance to recreation sites (recR)</td>
@@ -853,18 +852,18 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 </tr>
 </table><br /></li>
 <li>Check your expression against the image below.</li>
-<li>Name your output suitsite and save it in your output folder.</li>
+<li>Name your output <em>suitsite</em> and save it in your output folder.</li>
 <li>Click OK.
 <img src="/courses/geog558/media/Lab07Picture05.png" alt="" /></li>
 </ul></li>
-<li>Your model is now complete. Save it by going to Model | Save</li>
+<li>Your model is now complete. Save it by going to <strong>Model | Save</strong></li>
 <li>Close the model.</li>
-<li>In ArcCatalog, delete all of the files you have created (slope, RecDist, SchDist, slopeR, RecR, SchR, landuseR) from your output folder.</li>
+<li>In ArcCatalog, delete all of the files you have created (<em>slope</em>, <em>RecDist</em>, <em>SchDist</em>, <em>slopeR</em>, <em>RecR</em>, <em>SchR</em>, <em>landuseR</em>) from your output folder.</li>
 <li>Re-open the Model by R-clicking and selecting Edit…</li>
-<li>Go to Model | Run Entire Model.</li>
-<li>All of the layers, including your suitsite, will be in your output folder.</li>
+<li>Go to <strong>Model | Run Entire Model</strong>.</li>
+<li>All of the layers, including your <em>suitsite</em>, will be in your output folder.</li>
 <li>Open ArcMap.</li>
-<li>Add suitsite.</li>
+<li>Add <em>suitsite</em>.</li>
 <li>Answer questions #1 and #2 on the answer sheet.</li>
 </ul>
 
@@ -873,25 +872,36 @@ Save your map as a .PNG file using the Export map option of the File menu. Save 
 <p><strong>Learning Objectives:</strong><br />
 This lab will introduce you to the concept of modeling a diffusion process using friction surfaces that change in space and time. Your goal is to model the diffusion of a fungus from its introduction at a seaport in Panama City, FL on January 1, 1989 throughout seven months of the calendar year (i.e., January through July).</p>
 
-<h2 id="add-all-data-to-your-data-frame">Add all data to your data frame</h2>
+<h2 id="getting-started"><strong>Getting started</strong></h2>
 
 <ul>
-<li>Add all 7 precipitation grids, fungus_origin, us48mask, and us48cities.</li>
-<li>Go to Geoprocessing | Environments… and under Raster Analysis set mask to us48mask.</li>
-<li>Under Processing Extent set the Extent to Same as layer us48mask.</li>
-<li>Set the current workspace and scratch workspace to your lab07/Part2 folder.</li>
+<li>Add all 7 precipitation grids, <i>fungus_origin</i>, <em>us48mask</em>, and <em>us48cities</em>.</li>
+<li>Go to <strong>Geoprocessing | Environments…</strong> and under <strong>Raster Analysis</strong> set <strong>mask</strong> to <em>us48mask</em>.</li>
+<li>Under <strong>Processing Extent</strong> set the <strong>Extent</strong> to Same as layer <em>us48mask</em>.</li>
+<li>Set the <strong>current workspace and scratch workspace</strong> to your <em>lab07/Part2</em> folder.</li>
 <li>Rearrange (if necessary) the precipitation raster layers in chronological order.</li>
-<li>Save your project as lab7lastname.mxd (e.g.: lab7washington.mxd).</li>
+<li>Save your project as <em>lab7lastname.mxd</em> (e.g.: <em>lab7washington.mxd</em>).</li>
 </ul>
 
-<h2 id="the-diffusion-process">The Diffusion Process</h2>
+<h2 id="modeling-the-diffusion-process"><strong>Modeling the diffusion process</strong></h2>
+
+<p>You will now model a diffusion process across a changing velocity surface. You will implement the time steps sequentially. The procedure for modeling diffusion across a dynamically changing environment involves the following steps:</p>
+
+<p><ol>
+<li>Establish the origin (for the first run, it will be <i>fungus_origin</i>).
+<li><strong>Reclassify</strong> the N<sup>th</sup> month of precipitation to a velocity grid (units of meters per day) based on velocity for each precipitation range.</p>
 
 <ul>
-<li>Assume the fungus can move at the following rates:
+<li>Identify the maximum value of precipitation for that month.
+
+<ul>
+<li>Hint: The table of contents shows the range at a glance.</li>
+</ul></li>
+<li>Use the <strong>Reclassify</strong> tool ( ArcToolbox | Spatial Analyst Tools | Reclass | Reclassify) to reclassify the precipitation for that month (e.g: <i>pre_01</i> for January)into a friction rate according to the following assumption about the disruption speeds.
 <table class="tg">
 <tr>
-<th class="tg-lboi">Precipitation Amount</th>
-<th class="tg-0pky">Rate of Movement</th>
+<th class="tg-lboi"><b>Precipitation Amount</b></th>
+<th class="tg-0pky"><b>Rate of Movement</b></th>
 </tr>
 <tr>
 <td class="tg-0pky">&lt; 100 mm/month</td>
@@ -906,52 +916,36 @@ This lab will introduce you to the concept of modeling a diffusion process using
 <td class="tg-0pky">7000m/day</td>
 </tr>
 </table><br /></li>
-<li>Examine the values of all the precipitation grids in order to determine an appropriate maximum value
+<li>Name the output <i>velocity_nn</i>.
 
 <ul>
-<li>Hint: Look at the high and low values in the Table of Contents, what is the highest value?</li>
-</ul></li>
-<li>Reclassify ( ArcToolbox | Spatial Analyst Tools | Reclass | Reclassify) the precipitation in January (i.e., pre_01 theme) to make a friction rate according to the above assumptions.</li>
-<li>Click “Save…” and save the reclassification look-up table as a table named diff_rate.</li>
-<li>Name the new grid velocity_jan.
-<img src="/courses/geog558/media/Lab07Picture06.png" alt="" /></li>
-</ul>
-
-<blockquote>
-<p><strong>Note:</strong> If you wish, you can create all of your velocity layers at this time (ie: velocity_apr, velocity_may, velocity_jun, &amp; velocity_jul).</p>
-</blockquote>
-
-<h2 id="modeling-the-diffusion-process">Modeling the diffusion process</h2>
-
-<p>You will now model a diffusion process across a changing velocity surface. You will implement the time steps sequentially. The procedure for modeling diffusion across a dynamically changing environment involves the following steps:</p>
-
-<p><ol>
-<li>Establish the origin (for the first run, it will be fungus_origin).
-<li>Reclassify the Nth month of precipitation to a Velocity Grid (e.g., meters per day) based on velocity for each precipitation range (you should already have a velocity grid created for January, February, and March from the previous section – so you only need to do April, May, June, &amp; July).
-<li>Create a Time per Unit Distance Grid (days per meter).</p>
-
-<ul>
-<li>Using the Raster Calculator, create the following expression: <strong><mark>1 / Float(“velocity_xxx”)</mark></strong><br /></li>
-<li>Name the output <i>friction_xxx.tif</i>
-
-<ul>
-<li>for example:  1 / Float(“velocity_mar”) should be called <i>friction_mar.tif</i></li>
+<li>If writing out the table each time is too tedious for you, you can click “Save…” and save the reclassification look-up table as a table named <i>diff_rate</i> which you can reuse.<br />
+<br /></li>
 </ul></li>
 </ul>
 
-<p><li>Model the diffusion possible diffusion range for the nth month by using the Cost Distance (ArcToolbox | Spatial Analyst Tools | Distance | Cost Distance) operation.  Name the output <i>diffuse_xxx.tif</i></p>
+<p><img src="/courses/geog558/media/Lab07Picture06.png" alt="" /></p>
+
+<p><li>Create a Time per Unit Distance grid (days per meter).</p>
+
+<ul>
+<li>Using the Raster Calculator, create the following expression: <strong><mark>1 / Float(“velocity_nn”)</mark></strong><br /></li>
+<li>Name the output <i>friction_nn.tif</i><br /></li>
+</ul>
+
+<p><li>Model the diffusion possible diffusion range for the N<sup>th</sup> month by using the <strong>Cost Distance</strong> (ArcToolbox | Spatial Analyst Tools | Distance | Cost Distance) operation.  Name the output <i>diffuse_nn.tif</i></p>
 
 <ul>
 <li>For example: <strong>this will change as you go</strong>
 
 <ul>
 <li>Input Raster: <i>fungus_origin</i><br /></li>
-<li>Input Cost raster: <i>friction_mar</i></li>
-<li>Output Distance Raster: <i>diffuse_mar.tif</i></li>
+<li>Input Cost raster: <i>friction_01</i></li>
+<li>Output Distance Raster: <i>diffuse_01.tif</i></li>
 </ul></li>
 </ul>
 
-<p><li>Create a new origin raster by reclassifying the travel time raster (diffuse_xxx) from the previous step based on the number of days in the month using Reclassify. Your goal is to set all values less than or equal to the number of days in a particular month to a value of 1, and all other values (make sure you set proper maximum value for each month based on the number of days) to NoData.  Name the output raster as <i>fungus_xxx.tif</i> (e.g., fungus_mar.tif).
+<p><li>Create a new origin raster by reclassifying the travel time raster (<i>diffuse_nn</i>) from the previous step based on the number of days in the month, again using the <strong>Reclassify</strong> tool. Your goal is to set all values less than or equal to the number of days in a particular month to a value of 1, and all other values to no data (make sure you set proper maximum value for each month based on the number of days).  Name the output raster as <i>fungus_nn.tif</i> (e.g., fungus_01.tif).
 <table class="tg">
   <tr>
     <th class="tg-lboi">Month</th>
@@ -986,7 +980,7 @@ This lab will introduce you to the concept of modeling a diffusion process using
     <td class="tg-0pky">31</td>
   </tr>
 </table>
-<li>Redo these processes for the next month (using the new fungus distribution (e.g., fungus_mar) as your new origin) and repeat the procedure until you have modeled fungus diffusion through July.
+<li>Redo these processes for each successive month using the new fungus distribution (e.g., fungus_01) as your new origin, and repeat this until you have modeled fungus diffusion through July (07).
 </ol>
 <img src="/courses/geog558/media/Lab07Picture07.png" alt="" /></p>
 

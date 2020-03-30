@@ -369,6 +369,14 @@
         <a href="/courses/geog558/lab06/">Lab 6 - Cost Distance, Region Groups, more Model Builder &amp; Python</a>
       </li>
       
+      <li >
+        <a href="/courses/geog558/lab07/">Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/oldfiles/lab08/">Lab 8 - Advanced Terrain Analysis</a>
+      </li>
+      
     </ul>
     
 
@@ -980,15 +988,15 @@ widows: 2;-webkit-text-stroke-width: 0px'>
 
 <ul>
 <li>Before you set the options for the Set Null tool, create a <strong>Double variable from the Insert</strong> menu. Rename it as ‘Sea Level Rise’, give the value of ‘2’ to the variable, and set it as a Model Parameter by checking Model Parameter option from its popup menu (right-click). The letter P appears beside the variable, indicating it is a model parameter.</li>
-<li>Double click on the Set Null tool. The Set Null dialog will open, and it should be roughly similar to the dialog for Set Null in the spatial analyst.</li>
-<li>Set the input conditional raster to DEM, and set the output to <em>demlteslr</em> and make sure it is saved in the appropriate place. As for the expression, type in <mark><i>&ldquo;Value&rdquo; &gt; %Sea Level Rise%</mark></i>.</li>
-<li>Right-click the input raster (DEM) and check Model Parameter option.</li>
-<li>To define input false raster or constant value, you need to create model variables for it. Right-click the Set Null. Click Make Variable &gt; From Parameter &gt; Input false layer or constant value. This adds the Input false layer or constant value as a variable in the model. Double-click it to assign ‘1’.</li>
+<li>Double click on the Set Null tool. The Set Null dialog will open, and it should be familiar.</li>
+<li>We can reuse the false raster we used in the first set null.</li>
+<li>Set the input conditional raster to DEM, and set the output to <em>demlteslr</em> and make sure it is saved in the appropriate place. As for the expression, type in <mark><i>&ldquo;Value&rdquo; &gt; %Sea Level Rise%</mark></i>.  Click OK.</li>
 </ul>
 
 <p><img src="/courses/geog558/media/Lab6Image2.png" alt="" /></p>
 
 <ul>
+<li>Finally, right-click the input raster (DEM) and check Model Parameter option.</li>
 <li>You now have a simple model.</li>
 </ul>
 
@@ -1031,7 +1039,7 @@ widows: 2;-webkit-text-stroke-width: 0px'>
 <li>The final layout should look like so:</li>
 </ul>
 
-<p><img src="/courses/geog558/media/Lab6Image4.png" alt="" /></p>
+<p><img src="/courses/geog558/media/Lab6Image4New.PNG" alt="" /></p>
 
 <ul>
 <li><strong>Right-click</strong> the Set Null and select <strong>Run</strong> to test your model.<br /></li>

@@ -2197,15 +2197,15 @@ widows: 2;-webkit-text-stroke-width: 0px&#39;&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Before you set the options for the Set Null tool, create a &lt;strong&gt;Double variable from the Insert&lt;/strong&gt; menu. Rename it as ‘Sea Level Rise’, give the value of ‘2’ to the variable, and set it as a Model Parameter by checking Model Parameter option from its popup menu (right-click). The letter P appears beside the variable, indicating it is a model parameter.&lt;/li&gt;
-&lt;li&gt;Double click on the Set Null tool. The Set Null dialog will open, and it should be roughly similar to the dialog for Set Null in the spatial analyst.&lt;/li&gt;
-&lt;li&gt;Set the input conditional raster to DEM, and set the output to &lt;em&gt;demlteslr&lt;/em&gt; and make sure it is saved in the appropriate place. As for the expression, type in &lt;mark&gt;&lt;i&gt;&amp;ldquo;Value&amp;rdquo; &amp;gt; %Sea Level Rise%&lt;/mark&gt;&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;Right-click the input raster (DEM) and check Model Parameter option.&lt;/li&gt;
-&lt;li&gt;To define input false raster or constant value, you need to create model variables for it. Right-click the Set Null. Click Make Variable &amp;gt; From Parameter &amp;gt; Input false layer or constant value. This adds the Input false layer or constant value as a variable in the model. Double-click it to assign ‘1’.&lt;/li&gt;
+&lt;li&gt;Double click on the Set Null tool. The Set Null dialog will open, and it should be familiar.&lt;/li&gt;
+&lt;li&gt;We can reuse the false raster we used in the first set null.&lt;/li&gt;
+&lt;li&gt;Set the input conditional raster to DEM, and set the output to &lt;em&gt;demlteslr&lt;/em&gt; and make sure it is saved in the appropriate place. As for the expression, type in &lt;mark&gt;&lt;i&gt;&amp;ldquo;Value&amp;rdquo; &amp;gt; %Sea Level Rise%&lt;/mark&gt;&lt;/i&gt;.  Click OK.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;Finally, right-click the input raster (DEM) and check Model Parameter option.&lt;/li&gt;
 &lt;li&gt;You now have a simple model.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2248,7 +2248,7 @@ widows: 2;-webkit-text-stroke-width: 0px&#39;&gt;
 &lt;li&gt;The final layout should look like so:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab6Image4New.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Right-click&lt;/strong&gt; the Set Null and select &lt;strong&gt;Run&lt;/strong&gt; to test your model.&lt;br /&gt;&lt;/li&gt;
@@ -2342,6 +2342,1071 @@ widows: 2;-webkit-text-stroke-width: 0px&#39;&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;When finished, submit your work to blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab07/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-7-siting-a-new-school-with-model-builder-and-fungus-dispersion-modeling&#34;&gt;&lt;strong&gt;Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In ArcGIS, we can build a model, based on a flow of data through a series of GIS operations, to arrive at a desired end. We will be using Model Builder to create a suitability layer for school siting in Stowe, Vermont in an automated way (yes, this was the same &lt;a href=&#34;https://jimcoll.github.io/courses/geog358/lab07/#part-3-school-siting&#34;&gt;lab from intro class&lt;/a&gt;, we&amp;rsquo;re going to create the model this time). In essence, we will be setting up a diagram in Model Builder that will calculate the suitability raster with one click. Using Model Builder is helpful in situations where similar operations need to be applied in a programmatic way.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 7: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1: Siting a New School with Model Builder&lt;/strong&gt;:&lt;br /&gt;
+&lt;strong&gt;Question 1&lt;/strong&gt;: In your model window, go to &lt;strong&gt;Model | Export | To Graphic…&lt;/strong&gt;.  Export the model as a png file and call it yournameLab7_1.png (i.e. rooseveltLab7_1.png). Double-check the image file to make sure all the objects are readable and paste it below.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;: Total area of land with suitability 8.5 or greater for new school:  m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 2: Fungal Dispersion&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Question 3&lt;/strong&gt;: Using your model, complete the table below. For each city, put an “X” in the box that corresponds to the first month the fungus “invaded” the city.&lt;/p&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-lboi&#34;&gt;CITY&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Jan&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Feb&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Mar&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;April&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;May&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;June&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;July&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Selma, AL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Montgomery, AL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Pensacola, FL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Clarksdale, MS&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Enterprise, AL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Lawrenceburg, TN&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Albany, GA&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Starkville, MS&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Greenwood, SC&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;St. Augustine, FL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Natchez, MS&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Wright, FL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Eufaula, AL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Mobile, AL&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;: You must do one of the two following (do the other for extra credit!)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Work on the Layout View to create a composite map showing the area invaded by the fungus by the end of each month. In other words, the legend should have 6 possible values, one for each month (including the origin). Make the colors contrasting enough so that you can see the difference between them. Be sure to add your name, a title and a legend. (See the sample map for a guide).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-or-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Submit an image of an equivalent model needed to reproduce the output of the second part of the lab
+Save your map as a .PNG file using the Export map option of the File menu. Save it in your local lab07/Part2 folder and call it fungus_yourname.png&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Upload the answers to the questions above along with your images to blackboard.  The images are worth roughtly &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; of this labs grade so don&amp;rsquo;t forget to include them!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EtrIaT4JsONMkDnvxoewkSMBIaY8siBM7xuEAeyJ8hhZeA?e=wNLd6L&#34;&gt;click to download&lt;/a&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;elevation &lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster dataset of the elevation of the area&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;landuse&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Raster dataset of the landuse types over the area&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;rec_sites&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Feature dataset displaying point locations of recreation sites&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;schools &lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Feature dataset displaying point locations of existing schools&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;pre_01, pre_02, etc.&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Monthly Precipitation (mm) for January through July&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;us48mask&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Grid of 1s for states and no data for other cells&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;fungus_origin&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Origin of Fungus in Panama City, FL&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;us48cities&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Location of Major Cities in U.S. (Vector Data Model)&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Each raster is in the Albers equal area map projection with a 10,000m x 10,000m cell size.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;part-1-school-sighting-site-suitability-analysis&#34;&gt;&lt;strong&gt;Part 1: School Sighting (Site Suitability Analysis)&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;creating-a-toolbox-and-a-model&#34;&gt;&lt;strong&gt;Creating a Toolbox and a Model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a new toolbox (&lt;em&gt;Lab7Tools&lt;/em&gt;), and a new model (&lt;em&gt;SchoolSiting&lt;/em&gt;) in that toolbox.
+
+&lt;ul&gt;
+&lt;li&gt;R-click on your lab07/Part1 folder and create a new toolbox.&lt;/li&gt;
+&lt;li&gt;Name the new toolbox &lt;em&gt;Lab7Tools.tbx&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;R-click on the toolbox and create a new model.&lt;/li&gt;
+&lt;li&gt;Rename the new Model (R-click/slow-click | Rename) to &lt;em&gt;SchoolSiting&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Set up the Model Properties by going to &lt;strong&gt;Model | Model Properties&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Under the &lt;strong&gt;Environments tab&lt;/strong&gt;, check the boxes for &lt;strong&gt;Processing Extent | Extent&lt;/strong&gt; and for &lt;strong&gt;Raster Analysis | Cell Size&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Values…&lt;/strong&gt; button.&lt;/li&gt;
+&lt;li&gt;Click the down arrows for each of the settings and make the &lt;strong&gt;Extent&lt;/strong&gt; the same as the &lt;em&gt;landuse&lt;/em&gt; raster in your data folder, and the &lt;strong&gt;Cell Size&lt;/strong&gt; the same as elevation.&lt;/li&gt;
+&lt;li&gt;Click OK on the Environment Settings.&lt;/li&gt;
+&lt;li&gt;Click OK on the SchoolSiting Properties Window.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;setting-up-the-workflow&#34;&gt;&lt;strong&gt;Setting up the Workflow&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;You will create a workflow diagram in the Model window that will show all the steps and operations/tools needed to get the suitable school sites. We start the process by dragging tools from ArcToolbox into the Model window to perform a specific operation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set up your screen so you can see both ArcToolbox and the model window at the same time.&lt;/li&gt;
+&lt;li&gt;Add the slope tool by finding it under ArcToolbox (&lt;strong&gt;Spatial Analyst Tools | Surface&lt;/strong&gt;) and then dragging it onto the model window.&lt;/li&gt;
+&lt;li&gt;Double click on the slope tool. The slope dialog will open, and will look familiar.&lt;/li&gt;
+&lt;li&gt;Set the input to the elevation raster (from your data folder), and set the output to slope and make sure it is saved in the output folder in the Lab 7 folder. Leave other parameters to their defaults.&lt;/li&gt;
+&lt;li&gt;Click OK. You will see the diagram objects become colored. You now have a very simple model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next, add the Euclidean (straight line) distance tool (&lt;strong&gt;Spatial Analyst Tools | Distance | Euclidean Distance&lt;/strong&gt;) to create a distance layer from &lt;i&gt;rec_sites&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Set the Input to &lt;i&gt;rec_sites&lt;/i&gt; (from your data folder), the Output to &lt;em&gt;recDist&lt;/em&gt; in your output folder, and the Cell Size to 30. You don’t need a Maximum distance or a direction Raster.&lt;/li&gt;
+&lt;li&gt;Click OK. Notice that an empty diagram object is there for direction raster. Since it is blank, it will be ignored, so we will leave it alone.&lt;/li&gt;
+&lt;li&gt;Add and set up another straight line distance tool to calculate distance from schools (call the output schDist).&lt;/li&gt;
+&lt;li&gt;Save your Model (&lt;strong&gt;Model | Save&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Run&lt;/strong&gt; button. Check in ArcCatalog to make sure that these three layers are calculated correctly and saved in your output folder.&lt;/li&gt;
+&lt;li&gt;Add a Reclassify tool (&lt;strong&gt;Spatial Analyst Tools | Reclass | Reclassify&lt;/strong&gt;) to the Model window to reclassify the slope raster.&lt;/li&gt;
+&lt;li&gt;Double click on the &lt;strong&gt;Reclassify tool&lt;/strong&gt; in the Model window. Select &lt;em&gt;slope&lt;/em&gt; as the input layer.
+
+&lt;ul&gt;
+&lt;li&gt;This time, select the input layer from the dropdown in this dialog window, which shows the layers that are part of the model (We do this so that it will perform this next step from what we calculated in the previous one. In other words, it maintains a flow within the model).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;In order to create the new classes for the slope layer, click on the &lt;strong&gt;Classify button&lt;/strong&gt;, select the Equal Interval Method and 10 classes. Click OK.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It is preferable that the new school site be located on relatively flat ground. You will reclassify the slope layer, giving a value of 10 to the most suitable slopes (those with the lowest angle of slope) and 1 to the least suitable slopes (those with the steepest angle of slope). Click on the &lt;strong&gt;Reverse New Values&lt;/strong&gt; button so the lowest slopes get a value of ten and the steepest slopes a value of 1.&lt;/li&gt;
+&lt;li&gt;Name the output raster layer as &lt;em&gt;slopeR&lt;/em&gt; and click OK.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add a new &lt;strong&gt;Reclassify tool&lt;/strong&gt; and double click on it.&lt;/li&gt;
+&lt;li&gt;Select the &lt;em&gt;RecDist&lt;/em&gt; layer as the input raster from the dropdown.&lt;/li&gt;
+&lt;li&gt;Reclassify distance to recreation sites raster (&lt;em&gt;recDist&lt;/em&gt;) into 10 classes with new values from 1 to 10 using Equal Interval classification method. The school should be located near recreational facilities. You will reclassify this dataset, giving a value of 10 to areas closest to recreation sites (the most suitable locations), giving a value of 1 to areas far from recreation sites (the least suitable locations), and ranking the values in between.&lt;/li&gt;
+&lt;li&gt;Name the output raster layer as &lt;em&gt;recR&lt;/em&gt; and click OK.&lt;/li&gt;
+&lt;li&gt;Add a third &lt;strong&gt;Reclassify tool&lt;/strong&gt; and double click on it.&lt;/li&gt;
+&lt;li&gt;Select the &lt;em&gt;SchDist&lt;/em&gt; layer as the input raster from the dropdown.&lt;/li&gt;
+&lt;li&gt;Reclassify distance to schools raster (&lt;em&gt;schD&lt;/em&gt;) into 10 classes with new values from 1 to 10 using Equal Interval classification method. It is necessary to locate the new school away from existing schools in order to avoid encroaching on their catchment areas. You will reclassify the distance to schools layer, giving a value of 10 to areas away from existing schools (the most suitable locations), giving a value of 1 to areas near existing schools (least suitable locations), and ranking the values in between.&lt;/li&gt;
+&lt;li&gt;Name the output raster layer &lt;em&gt;schR&lt;/em&gt; and click OK.&lt;/li&gt;
+&lt;li&gt;Save your Model.&lt;/li&gt;
+&lt;li&gt;Add and set up a fourth &lt;strong&gt;Reclassify tool&lt;/strong&gt; in order to reclassify the &lt;em&gt;landuse&lt;/em&gt; raster.
+
+&lt;ul&gt;
+&lt;li&gt;Select ‘LANDUSE’ as the ‘Reclass field’ using the dropdown menu.&lt;/li&gt;
+&lt;li&gt;Use the following table to assign the new values to each of the land use categories:&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-lboi&#34;&gt;&lt;b&gt;Landuse type&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;&lt;b&gt;Score&lt;/b&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Agriculture&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Barren land&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;6&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Brush/Transitional&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;5&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Built up&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Forest&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Water&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;NoData&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Wetlands&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;NoData&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Call the output &lt;em&gt;landuseR&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Click OK and Save your Model.&lt;/li&gt;
+&lt;li&gt;After all four reclassify tools are correctly established in the model, click &lt;strong&gt;Run&lt;/strong&gt; again and check your output folder to make sure everything was calculated correctly.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture04.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;calculating-a-suitability-raster&#34;&gt;&lt;strong&gt;Calculating a Suitability Raster&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;With all of our standardized layers, we are ready to calculate our suitability raster.  Add a &lt;strong&gt;Raster Calculator&lt;/strong&gt; Tool (Spatial Analyst Tools | Map Algebra | Raster Calculator) to the Model window.&lt;/li&gt;
+&lt;li&gt;Double click on this tool to set up the parameters.
+
+&lt;ul&gt;
+&lt;li&gt;Create an expression to weight each factor using the table below.&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+&lt;tr&gt;
+&lt;th class=&#34;tg-lboi&#34;&gt;&lt;b&gt;Layer&lt;/b&gt;&lt;/th&gt;
+&lt;th class=&#34;tg-0pky&#34;&gt;&lt;b&gt;Weight&lt;/b&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;Reclass of distance to recreation sites (recR)&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;0.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;Reclass of distance to schools (schR)&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;0.25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;Reclass of landuse (landuseR)&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;0.125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;Reclass of slope (slopeR)&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;0.125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Check your expression against the image below.&lt;/li&gt;
+&lt;li&gt;Name your output &lt;em&gt;suitsite&lt;/em&gt; and save it in your output folder.&lt;/li&gt;
+&lt;li&gt;Click OK.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture05.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Your model is now complete. Save it by going to &lt;strong&gt;Model | Save&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Close the model.&lt;/li&gt;
+&lt;li&gt;In ArcCatalog, delete all of the files you have created (&lt;em&gt;slope&lt;/em&gt;, &lt;em&gt;RecDist&lt;/em&gt;, &lt;em&gt;SchDist&lt;/em&gt;, &lt;em&gt;slopeR&lt;/em&gt;, &lt;em&gt;RecR&lt;/em&gt;, &lt;em&gt;SchR&lt;/em&gt;, &lt;em&gt;landuseR&lt;/em&gt;) from your output folder.&lt;/li&gt;
+&lt;li&gt;Re-open the Model by R-clicking and selecting Edit…&lt;/li&gt;
+&lt;li&gt;Go to &lt;strong&gt;Model | Run Entire Model&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;All of the layers, including your &lt;em&gt;suitsite&lt;/em&gt;, will be in your output folder.&lt;/li&gt;
+&lt;li&gt;Open ArcMap.&lt;/li&gt;
+&lt;li&gt;Add &lt;em&gt;suitsite&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Answer questions #1 and #2 on the answer sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;part-2-fungus-diffusion-modeling-cost-distance&#34;&gt;&lt;strong&gt;Part 2: Fungus Diffusion Modeling (Cost Distance)&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Learning Objectives:&lt;/strong&gt;&lt;br /&gt;
+This lab will introduce you to the concept of modeling a diffusion process using friction surfaces that change in space and time. Your goal is to model the diffusion of a fungus from its introduction at a seaport in Panama City, FL on January 1, 1989 throughout seven months of the calendar year (i.e., January through July).&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;&lt;strong&gt;Getting started&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add all 7 precipitation grids, &lt;i&gt;fungus_origin&lt;/i&gt;, &lt;em&gt;us48mask&lt;/em&gt;, and &lt;em&gt;us48cities&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Go to &lt;strong&gt;Geoprocessing | Environments…&lt;/strong&gt; and under &lt;strong&gt;Raster Analysis&lt;/strong&gt; set &lt;strong&gt;mask&lt;/strong&gt; to &lt;em&gt;us48mask&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Processing Extent&lt;/strong&gt; set the &lt;strong&gt;Extent&lt;/strong&gt; to Same as layer &lt;em&gt;us48mask&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Set the &lt;strong&gt;current workspace and scratch workspace&lt;/strong&gt; to your &lt;em&gt;lab07/Part2&lt;/em&gt; folder.&lt;/li&gt;
+&lt;li&gt;Rearrange (if necessary) the precipitation raster layers in chronological order.&lt;/li&gt;
+&lt;li&gt;Save your project as &lt;em&gt;lab7lastname.mxd&lt;/em&gt; (e.g.: &lt;em&gt;lab7washington.mxd&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;modeling-the-diffusion-process&#34;&gt;&lt;strong&gt;Modeling the diffusion process&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;You will now model a diffusion process across a changing velocity surface. You will implement the time steps sequentially. The procedure for modeling diffusion across a dynamically changing environment involves the following steps:&lt;/p&gt;
+
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;Establish the origin (for the first run, it will be &lt;i&gt;fungus_origin&lt;/i&gt;).
+&lt;li&gt;&lt;strong&gt;Reclassify&lt;/strong&gt; the N&lt;sup&gt;th&lt;/sup&gt; month of precipitation to a velocity grid (units of meters per day) based on velocity for each precipitation range.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identify the maximum value of precipitation for that month.
+
+&lt;ul&gt;
+&lt;li&gt;Hint: The table of contents shows the range at a glance.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Reclassify&lt;/strong&gt; tool ( ArcToolbox | Spatial Analyst Tools | Reclass | Reclassify) to reclassify the precipitation for that month (e.g: &lt;i&gt;pre_01&lt;/i&gt; for January)into a friction rate according to the following assumption about the disruption speeds.
+&lt;table class=&#34;tg&#34;&gt;
+&lt;tr&gt;
+&lt;th class=&#34;tg-lboi&#34;&gt;&lt;b&gt;Precipitation Amount&lt;/b&gt;&lt;/th&gt;
+&lt;th class=&#34;tg-0pky&#34;&gt;&lt;b&gt;Rate of Movement&lt;/b&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;&amp;lt; 100 mm/month&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;0m/day&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;100 - 200mm/month&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;4000m/day&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;200mm/month and greater&lt;/td&gt;
+&lt;td class=&#34;tg-0pky&#34;&gt;7000m/day&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;velocity_nn&lt;/i&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;If writing out the table each time is too tedious for you, you can click “Save…” and save the reclassification look-up table as a table named &lt;i&gt;diff_rate&lt;/i&gt; which you can reuse.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt;Create a Time per Unit Distance grid (days per meter).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using the Raster Calculator, create the following expression: &lt;strong&gt;&lt;mark&gt;1 / Float(“velocity_nn”)&lt;/mark&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;friction_nn.tif&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;li&gt;Model the diffusion possible diffusion range for the N&lt;sup&gt;th&lt;/sup&gt; month by using the &lt;strong&gt;Cost Distance&lt;/strong&gt; (ArcToolbox | Spatial Analyst Tools | Distance | Cost Distance) operation.  Name the output &lt;i&gt;diffuse_nn.tif&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For example: &lt;strong&gt;this will change as you go&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Input Raster: &lt;i&gt;fungus_origin&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Input Cost raster: &lt;i&gt;friction_01&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Output Distance Raster: &lt;i&gt;diffuse_01.tif&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;li&gt;Create a new origin raster by reclassifying the travel time raster (&lt;i&gt;diffuse_nn&lt;/i&gt;) from the previous step based on the number of days in the month, again using the &lt;strong&gt;Reclassify&lt;/strong&gt; tool. Your goal is to set all values less than or equal to the number of days in a particular month to a value of 1, and all other values to no data (make sure you set proper maximum value for each month based on the number of days).  Name the output raster as &lt;i&gt;fungus_nn.tif&lt;/i&gt; (e.g., fungus_01.tif).
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-lboi&#34;&gt;Month&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Days&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Jan&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;31&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Feb&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;28&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Mar&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;31&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-lboi&#34;&gt;Apr&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;30&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;May&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;31&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Jun&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Jly&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;31&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;li&gt;Redo these processes for each successive month using the new fungus distribution (e.g., fungus_01) as your new origin, and repeat this until you have modeled fungus diffusion through July (07).
+&lt;/ol&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save your map as Lab7yourname.mxd&lt;/li&gt;
+&lt;li&gt;Complete questions #3 – #4 on the assignment sheet.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture09.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/oldfiles/lab08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/oldfiles/lab08/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-8-advanced-terrain-analysis&#34;&gt;&lt;strong&gt;Lab 8: Advanced Terrain Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this lab we&amp;rsquo;ll cover a variety of terrain analysis techniques including shelter analysis, the hydrology toolbox, and how to use radar data and terrain to identify blocked locations.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 8: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Question 1&lt;/strong&gt;:&lt;br /&gt;
+What is the value of the majority of the cells on the focalcells raster layer?&lt;/p&gt;
+
+&lt;p&gt;Where are the cells with smaller values located?&lt;/p&gt;
+
+&lt;p&gt;and why do they have smaller values?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;:&lt;br /&gt;
+What is the value range in the shelter analysis raster layer?
+________ to ________&lt;/p&gt;
+
+&lt;p&gt;A large positive value means:&lt;/p&gt;
+
+&lt;p&gt;A value close to zero means:&lt;/p&gt;
+
+&lt;p&gt;A small negative value means:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 2&lt;/strong&gt;
+&lt;strong&gt;Question 3&lt;/strong&gt;: How many sink cells exist in the Bethel DEM? ________&lt;br /&gt;
+(Hint: Open the Attribute Table, you will need to use Statistics)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;: The maximum sink depth in the bethel DEM is ________ m&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 5&lt;/strong&gt;: Number of sinks in the filled DEM:________&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 6&lt;/strong&gt;: What is the total watershed area for the b_gauge station?
+________ Cells = ________ km&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 7&lt;/strong&gt;: How many different stream segments inside the watershed? ________&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 8&lt;/strong&gt;: What’s the highest Strahler stream order in the watershed? ________&lt;/p&gt;
+
+&lt;p&gt;Paste your watershed map here:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 9&lt;/strong&gt;: How far is the whiteoak_gauge from the farthest divide? ________ m&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Questions 10-12&lt;/strong&gt;:&lt;br /&gt;
+In this part of the assignment, you will run through some of the same operations used in part 02 of the lab exercise using a different data set. The purpose of doing this is to ensure that you understand the processes involved and that you are not simply clicking through the steps without thought.   You will use the Rio Fajardo River dataset (riofajardo DEM &amp;amp; r_gauges.shp) to complete your lab assignment. Remember to set up your Spatial Analyst environment appropriately – all raster manipulations should use the same extent and cell size as the original riofajardo.  Also remember to reset the Spatial Analyst Options after running the watershed analysis.&lt;/p&gt;
+
+&lt;p&gt;Begin by adding a new data frame (named Rio Fajardo) to your ArcMap project and adding the Rio Fajardo files (riofajardo DEM &amp;amp; r_gauge.shp). Notice that r_gauge.shp actually contains 5 gauging stations (as opposed to the 1 station in b_gauge.shp). This will be important later in the assignment.  I HIGHLY suggest that you use the same naming conventions which were used in the Bethel example. For example, your filled Rio Fajardo DEM should be named r_filled. This will make the process much easier, especially when figuring out what should be put into Raster Calculator computations.  Start the process by setting Spatial Analyst’s extent, mask and cell size to the original DEM (riofajardo), then fill the Rio Farjardo DEM (see Step 3 in the lab exercise).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 10&lt;/strong&gt;: What is the maximum depth of the sinks in the Rio Farjardo DEM?  ________ m&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 11&lt;/strong&gt;: How many sinks in the filled DEM? ________&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 12&lt;/strong&gt;: Delineate the Rio Fajardo watershed (Steps 4 &amp;amp; 5 in lab exercise).  What is the area of the entire Rio Fajardo watershed?
+________ Cells = ________ km&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Questions 13&amp;amp;14&lt;/strong&gt;:&lt;br /&gt;
+Now you will focus on a particular gauge in the r_gauge shapefile – the Rio Fajardo near Fajardo gauge. First, create a new data frame named Near Fajardo Gauge. Copy riofajardo, r_gauge, r_flowdir, and r_filled layers from your Rio Fajardo dataframe to your Near Fajardo Gauge dataframe. Double check your Environments to make sure the extent and cell size are still set to riofajardo.&lt;/p&gt;
+
+&lt;p&gt;Calculate the watershed for the Rio Fajardo near Fajardo station only. In order to do this, you should export the near Fajardo station into its own shapefile You can &lt;i&gt;Select the gage &amp;gt; R-click on the layer &amp;gt; Selection &amp;gt; Create Layer from Selected Features &amp;gt; Rename it to nearfaj_gage.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 13&lt;/strong&gt;: What is the area of the Rio Fajardo near Fajardo watershed?
+________ Cells = ________ km&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;You will need to clip the r_filled &amp;amp; r_flowdir to the Rio Fajardo near Fajardo (like you did to get b_gdem &amp;amp; b_gdir).&lt;/p&gt;
+
+&lt;p&gt;Extract the stream network of the Rio Fajardo near Fajardo watershed (Steps 6 and 7 in the lab exercise). Use 200 cells as the flow accumulation threshold.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 14&lt;/strong&gt;: What is the highest Strahler stream order # at the Rio Fajardo near Fajardo station? ________&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 3&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Question 15&lt;/strong&gt;: How many sample points are in the blocked beam region? ________&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 16&lt;/strong&gt;: Export the scene in 2D as a PNG file and call it part3yourname.png. Make sure you’re saving to your Lab08 folder! Leave the rest of the options to the defaults. Upload your PNG files from part 1 and 2 to the lab 8 assignments section on Blackboard. Make sure you put your name in the filename names.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 17&lt;/strong&gt;: Let’s say that the KPUX radar’s elevation angle has been increased from 0.5 degrees to 0.8 degrees. Open notepad and edit the kpux.txt file, changing the elevangle parameter to 0.8.  Repeat steps 2 through 6 using this new kpux.txt file. Be sure to use naming convention (change 005 suffixes to 008). How many sample points are blocked in the beam region now?  ________&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuXcVmpEfGZCnaEhU39f4woB4-h-1ZxBX-NHUJcVEsMonA?e=iKEEID&#34;&gt;click to download&lt;/a&gt;&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;chase_dem&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;DEM for Chase County, KS (30m cell size, elevation in feet)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;bethel&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for the Bethel Valley Quad 1:24,000 topographic map sheet from USGS (30m x 30m cell size; height in meters)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;b_gauge.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Hypothetical gage location on White Oak Creek in the Bethel DEM watershed&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;riofajardo&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for part of the Fajardo municipio in Puerto Rico (30m x 30m cell size; height in meters)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;r_gauge.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Locations of gaging stations &amp;amp; the Rio Fajardo River outlet&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;dem200&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for the area surrounding Pueblo, Colorado (200m x 200m cell size; elevation in meters)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;nexrad_kpux.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Pueblo, CO NEXRAD radar location&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;kpux.txt&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Text file containing the KPUX radar properties&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-1-terrain-exposure-analysis&#34;&gt;&lt;strong&gt;Part 1: Terrain Exposure Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this part of the lab, we will perform a terrain exposure analysis, referred to as shelter analysis.  The outputs of this workflow are quite popular in archeology studies and inform us as to how protected a given location is.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-set-up&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Start Arcmap and rename the data frame to Terrain Exposure Analysis.  Because we are working at a relatively small geographic scale, we should first reproject our raster from it&amp;rsquo;s native projection (GSC_North_America_1983) to a more appropriate one for this analysis (NAD_1983_StatePlane_Colorado_South_FIPS_0503 WKID: 26955).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToolbox and navigate to &lt;strong&gt;Data Management Tools | Projections and Transformations | Raster | Project Raster&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;For your Input raster select you &lt;i&gt;chase_dem&lt;/i&gt; from your lab08\part01 folder using the browse button.
+
+&lt;ul&gt;
+&lt;li&gt;Here we use the browse button to avoid data locks on the elevation data and avoid inadvertently assigning a projection to the dataframe prematurely.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Call the Output raster &lt;i&gt;proj_dem&lt;/i&gt; saved in your lab08\part01 folder&lt;/li&gt;
+&lt;li&gt;To select an Output coordinate system, click on the Spatial Reference Properties Button (the hand with the card)&lt;/li&gt;
+&lt;li&gt;Define the coordinate system as:
+
+&lt;ul&gt;
+&lt;li&gt;Projected Coordinate Systems &amp;gt; State Plane &amp;gt; NAD 1983 (meters) &amp;gt; NAD 1983 StatePlane Colorado South FIPS 0503 (meters).prj&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click OK&lt;/li&gt;
+&lt;li&gt;Make sure that the Resampling technique is set to BILINEAR, and the cell size to 30m&lt;/li&gt;
+&lt;li&gt;Make sure your window looks like the one below (you may need to scroll down or resize the window)&lt;/li&gt;
+&lt;li&gt;Click OK
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image1.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, let&amp;rsquo;s convert the elevation from feet to meters.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Raster calculator: &lt;em&gt;1 foot = 0.3048 meters&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;chase_m&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;terrain-exposure-analysis-procedure&#34;&gt;&lt;strong&gt;Terrain Exposure Analysis Procedure&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use Raster Calculator to create a constant raster layer on which all of the cells have a value of 1 &lt;i&gt;(“chase_m” / “chase_m”)&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Make the output raster a permanent raster named constant&lt;/li&gt;
+&lt;li&gt;Calculate the FOCALSUM on the constant raster layer using a circular neighborhood with a radius of 2 cell size&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as focalcells in your part01 folder&lt;/li&gt;
+&lt;li&gt;Answer question #1 on your assignment sheet&lt;/li&gt;
+&lt;li&gt;Calculate the earth volume within the circular neighborhood (do a FOCALSUM operation using chase_m with a neighborhood radius of 2)&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as earthv1 in your part03 folder&lt;/li&gt;
+&lt;li&gt;Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus (“chase_m” * “focalcells”)&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as earthv2 in your lab03\part03 folder&lt;/li&gt;
+&lt;li&gt;Calculate the shelter raster layer by  subtracting earthv2 from earthv1 (“earthv1” – “earthv2”)&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as shelter in your part03 folder&lt;/li&gt;
+&lt;li&gt;Answer question #2 on your assignment sheet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-2-watershed-and-stream-delineation&#34;&gt;&lt;strong&gt;Part 2: Watershed and Stream Delineation&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Hydrology and GIS are closely linked, as spatial developments in the hydrologic sciences were some of the first to be ported into GISystems when ESRI became a company.  In this lab we will use some of the most common hydrology tools to perform some common analyses including how the fundamental hydrology tools (flow accumulation, flow direction) are used in hydrologic modeling, how to group contiguous sets of cells, how raster calculator is used in this hydrologic context, and how to delineate streams, watersheds, and drainage characteristics.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-set-up-1&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Either start a new session of ArcMap or insert a new dataframe and rename it to Bethel Valley&lt;/li&gt;
+&lt;li&gt;Add bethel and b_gauge.shp to the Bethel Valley data frame&lt;/li&gt;
+&lt;li&gt;Go to Geoprocessing | Environments… and…
+
+&lt;ul&gt;
+&lt;li&gt;Set the Current Workspace and Scratch Workspace to your lab08\Part02 folder&lt;/li&gt;
+&lt;li&gt;Set Processing Extent and cell size (under Raster Analysis) to “Same as layer bethel”
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;identify-sinks&#34;&gt;&lt;strong&gt;Identify sinks&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToolbox and select Spatial Analyst Tools | Hydrology&lt;/li&gt;
+&lt;li&gt;Calculate flow directions without filling the sinks by going to Hydrology | Flow Direction
+
+&lt;ul&gt;
+&lt;li&gt;Make sure bethel is the input surface, leave others to the defaults, and name your output b_flow&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the hydrological modeling to identify the sinks in the bethel DEM by navigating to Hydrology | Sink in ArcToolbox
+
+&lt;ul&gt;
+&lt;li&gt;Set the flow direction raster (b_flow) as the input, name the output file b_sinkid&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Answer Question 3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;fill-original-dem-and-identify-sinks&#34;&gt;&lt;strong&gt;Fill original DEM and identify sinks&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fill sinks in the bethel DEM by going to Hydrology | Fill
+
+&lt;ul&gt;
+&lt;li&gt;Set the bethel DEM as the input surface and name the output b_filled&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Find the depth of the filled sinks by using Raster Calculator
+
+&lt;ul&gt;
+&lt;li&gt;Think about what we just did: We filled in all the pits, so how would you get the depth?&lt;/li&gt;
+&lt;li&gt;This was also the first step to getting lake volume, we just need to subtract the top from the bottom: &lt;i&gt;filled DEM (b_filled/Top) minus original DEM (bethel/Bottom)&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;b_sink_depth&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Answer Question 4.&lt;/li&gt;
+&lt;li&gt;Reclassify (Spatial Analyst) the depth raster (b_sink_depth) so that sink cells (Old value &amp;gt; 0) have a value of 1 and non-sink cells (Old Value &amp;lt;= 0) have a value of NODATA.
+
+&lt;ul&gt;
+&lt;li&gt;Name the output b_sinks
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image2.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the Region Group tool (Spatial Analysis Tools | Generalization | Region Group) to assign a connected set of sink cells a unique number
+
+&lt;ul&gt;
+&lt;li&gt;Set the input raster to b_sinks, the output raster to b_sink_reg, and the number of neighbors to use to Eight. Leave all other fields to default.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Answer Question 5.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;compute-a-new-flow-direction&#34;&gt;&lt;strong&gt;Compute a new flow direction&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compute flow direction from the filled Bethel DEM (b_filled) raster by going to Hydrology | Flow Direction.
+
+&lt;ul&gt;
+&lt;li&gt;Set the filled Bethel DEM (b_filled) as the input surface and name the output grid b_flowdir&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;identify-and-clip-to-the-white-oak-watershed&#34;&gt;&lt;strong&gt;Identify and clip to the White Oak watershed&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identify the upstream drainage area (watershed) for the White Oak gauge (b_gauge.shp)
+
+&lt;ul&gt;
+&lt;li&gt;Convert the gauge shapefile into a raster layer and name it b_ras_gauge  (Conversion Tools | To Raster | Point to Raster).&lt;/li&gt;
+&lt;li&gt;Select b_gauge as the Input Feature, ID as the Value field and 30 as the cell size.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image3.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the Watershed function:
+
+&lt;ul&gt;
+&lt;li&gt;Input rasters: b_flowdir for flow direction, b_ras_gauge for pour point data.&lt;/li&gt;
+&lt;li&gt;Use Value for pour point field and name the output b_watershed.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You may ask yourself “Why did we perform that last step if the pour point can also be a feature?”  You are correct, that was a superfluous transformation.  But now you know how to do that for future reference; because knowing is half the battle, and knowledge is power!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Answer Question 6.&lt;/li&gt;
+&lt;li&gt;In Geoprocessing | Environments, set the extent, cell size, and mask to b_watershed. Also check the working directory (Note: After you use the Watershed function, it may reset the environment. This is a bug in the extension which was introduced in 10.3, and may still crop up in 10.6)&lt;/li&gt;
+&lt;li&gt;In Raster Calculator, use b_watershed to clip the filled DEM (b_filled) and flow direction raster to the White Oak watershed. Because you set the analysis mask to b_watershed in the previous step, your expression will simply be the name of the raster with no other operations; simply enter “b_filled” as the entire expression. Name the output b_gdem&lt;/li&gt;
+&lt;li&gt;Repeat the above step for b_flowdir and name the output b_gdir
+
+&lt;ul&gt;
+&lt;li&gt;Stop and think about how else might you might accomplish this operation?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;compute-flow-accumulation&#34;&gt;&lt;strong&gt;Compute flow accumulation&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compute flow accumulation from the flow direction raster for the gage by going to Hydrology | Flow Accumulation.&lt;/li&gt;
+&lt;li&gt;Set the flow direction raster as b_gdir and name the output b_gaccum.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;extract-stream-network&#34;&gt;&lt;strong&gt;Extract stream network&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the Raster Calculator to extract all cells that are “channels”, i.e., flow accumulation greater than 200 (this defines a stream channel as those cells with an upstream drainage area &amp;gt; 200 cells)
+
+&lt;ul&gt;
+&lt;li&gt;Name the output b_gstreams&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the Hydrology | Stream Link tool to assign each stream segment a unique ID:
+
+&lt;ul&gt;
+&lt;li&gt;Set the b_gstreams raster as the Input stream raster and the b_gdir as the input flow direction raster.&lt;/li&gt;
+&lt;li&gt;Name this grid b_gstrmseg&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Answer Question 7.&lt;/li&gt;
+&lt;li&gt;Use the Hydrology | Stream Order to assign each stream segment a numeric order (Strahler or Shreve)
+
+&lt;ul&gt;
+&lt;li&gt;Set the input stream raster to b_gstreams, the input flow direction raster to b_gdir and select Strahler method for stream ordering.&lt;/li&gt;
+&lt;li&gt;Name the output b_gstrahler&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Examine the stream orders and answer Question 8.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;extract-sub-basins-for-each-stream-segment&#34;&gt;&lt;strong&gt;Extract sub basins for each stream segment&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the Hydrology | Watershed tool to extract the watershed for each stream segment:
+
+&lt;ul&gt;
+&lt;li&gt;Set the input flow direction raster to b_gdir, and the b_gstrmseg as the input raster pour point data. Use value for pour point field.&lt;/li&gt;
+&lt;li&gt;Name the output as b_gsbasins&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use unique color to display all the sub basins in the White Oak watershed
+
+&lt;ul&gt;
+&lt;li&gt;Create a map of the White Oak watershed (include a title &amp;amp; your name) and save it in your Lab08 folder as a png. Call it part2yourname.png and paste it into the questions.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;compute-water-surface-flow-distance&#34;&gt;&lt;strong&gt;Compute water surface flow distance&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the Hydrology | Flow Length to calculate upstream flow distance:
+
+&lt;ul&gt;
+&lt;li&gt;Set the b_gdir as the input flow direction raster and select the ‘Upstream’ option for the Direction of measurement.&lt;/li&gt;
+&lt;li&gt;Name the output b_gdist&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Answer Questions 9-14&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;part-3-examining-nexrad-radar-beam-terrain-blockage&#34;&gt;&lt;strong&gt;Part 3: Examining NEXRAD radar beam terrain blockage&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this part, we will be determining where terrain is blocking NEXRAD radar signals. We will be looking at the NEXRAD radar near Pueblo, Colorado with the designation KPUX.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-set-up-2&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Either start a new session of ArcMap or insert a new dataframe and rename it to NEXRAD&lt;/li&gt;
+&lt;li&gt;Add dem200 and nexrad_kpux to your data frame.&lt;/li&gt;
+&lt;li&gt;Change the symbology for nexrad_kpux so it’s easily visible against the DEM.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;create-nexrad-radar-beam-shapefile&#34;&gt;&lt;strong&gt;Create NEXRAD radar beam shapefile&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In your Part03 folder, there is an application called nex2shpv8c.exe. Use Windows Explorer to browse to this file and run it by double-clicking on it.&lt;/li&gt;
+&lt;li&gt;We will use this application to create a point shapefile that gives us 360 radials sampling the paths of the radar beams in all directions. In the upper-right window, click on the kpux.txt file (this is a file that contains the specifications for the KPUX radar), then click the Header button. You should see something like the following:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image4.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Make sure Point Shapefile is selected, check the box to include Lon &amp;amp; Lat info in the attribute table, and click Decode. When you get the message “Finished converting file”, close the utility.&lt;/li&gt;
+&lt;li&gt;Add the new shapefile to your data frame in ArcMap. You’ll notice that this file has no spatial reference, so we need to define it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;define-the-spatial-reference-for-the-radar-beam-shapefile&#34;&gt;&lt;strong&gt;Define the spatial reference for the radar beam shapefile&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In ArcToolbox, go to Data Management Tools  Projections and Transformations  Define Projection. Select the kpux005pt from the dropdown and define the projection as Geographic Coordinate Systems  North America  NAD 1983 (North American Datum 1983).&lt;/li&gt;
+&lt;li&gt;Now that the dataset has the proper spatial reference, it should be drawn on the screen.&lt;/li&gt;
+&lt;li&gt;Next we need to reproject it to the DEM’s projected coordinate system.&lt;/li&gt;
+&lt;li&gt;In ArcToolbox, go to Data Management Tools  Projections and Transformations  Project
+
+&lt;ul&gt;
+&lt;li&gt;Make the input dataset kpux005pt and name the output kpux_rad005 and make sure it is saved in your Part03 folder.&lt;/li&gt;
+&lt;li&gt;Click the hand icon for the output coordinate system and then choose the projection of dem200 and then click OK (See the figure below).
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image5.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;The reprojected dataset will appear in your table of contents. Since we will be working with this layer from now on, remove the kpux005pt layer from the data frame.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Open the attribute table for kpux_rad005 and look at the fields. The DBZ field indicates the sampling point in the radial starting from the radar. The ZRAD field is an estimation of the height of the centroid of the radar beam at that location. You’ll notice that the first record has a DBZ of 0; this is the radar itself. Unfortunately, the individual radials are not indexed in any way, so we will have to do this manually.&lt;/p&gt;
+
+&lt;h2 id=&#34;establish-indices-for-radar-beam-radials&#34;&gt;&lt;strong&gt;Establish indices for radar beam radials&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a new field called RadialID. Make it a Short Integer.  Then, use the field calculator to enter the following expression:
+Int ( ( [OBJECTID] - 2) / 230 ) + 1&lt;/li&gt;
+&lt;li&gt;The above expression will assign a radial ID number to each point. The actual radar instrument is assigned a zero, and the rest of the points are assigned radial IDs between 1 and 360. Beam 1 points approximately north, beam 2 is one degree clockwise from beam 1, and so on all the way around to 360, which is one degree counterclockwise from beam 1. Each beam contains 230 points.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image6.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;determine-where-radar-beam-intersects-terrain&#34;&gt;&lt;strong&gt;Determine where radar beam intersects terrain&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Determine the elevation at each of the points using the DEM. Go to ArcToolbox  Spatial Analyst Tools  Extraction  Extract Values to Points
+
+&lt;ul&gt;
+&lt;li&gt;Set the input point features to kpux_rad005, and the input raster to dem200.&lt;/li&gt;
+&lt;li&gt;Make the output file kpux_rex005 and be sure it is saved in your Part03 folder.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;From here on, we will be working with this new output layer, so remove the kpux_rad005 layer from your data frame.&lt;/li&gt;
+&lt;li&gt;Select the points in the radar beam that are lower than the terrain. Go to Selection  Select by Attributes, make the layer the kpux_rex005 layer you created in the previous step and enter: &amp;ldquo;RASTERVALU&amp;rdquo; &amp;gt;= &amp;ldquo;ZRAD&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Click Apply.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;determine-locations-where-the-radar-beam-is-blocked-by-terrain&#34;&gt;&lt;strong&gt;Determine locations where the radar beam is blocked by terrain&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open the attribute table for kpux_rex005.&lt;/li&gt;
+&lt;li&gt;Right-click on the header for the RadialID field and click Summarize. Check the Minimum box in the DBZ field, set the output file to min_blk005.dbf.
+
+&lt;ul&gt;
+&lt;li&gt;Make sure you change the file type&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Make sure it’s being saved in your Part03 folder, and that Summarize on the selected records only is checked. Click OK.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image7.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;When asked about adding the table to the map, click yes.&lt;/li&gt;
+&lt;li&gt;Join the new table to the kpux_rex005 layer based on the RadialID field. Before clicking OK, check Keep only matching records and click OK. If asked about indexing, click yes.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image8.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Select all the points where the radar beam is blocked. Select by attributes (in the kpux_rex005 layer) and enter the following: &amp;ldquo;kpux_rex005.DBZ&amp;rdquo; &amp;gt; &amp;ldquo;min_blk005.Min_DBZ&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We now have a selection subset where the radar beam is blocked by the terrain. Answer Question #15 on your answer sheet.  Now, what we really want to see is where the beam is not blocked.&lt;/p&gt;
+
+&lt;h2 id=&#34;invert-the-selection-and-create-a-radar-beam-raster&#34;&gt;&lt;strong&gt;Invert the selection and create a radar beam raster&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Remove the join in the kpux_rex005 layer and open the attribute table.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Under options or in the attribute table for kpux_005, click Switch Selection.
+
+&lt;ul&gt;
+&lt;li&gt;If you did this correctly you should have 75,666 points selected and your map should look like so.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image9.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Convert Features to Raster based on the ZRAD field, and make the cell size 2000.&lt;/li&gt;
+&lt;li&gt;Call the output file rvis005 and make sure it is being saved in your Part03 folder. Save your map as kpux.mxd in your Part03 folder.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image10.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;visualize-the-results-in-3-d&#34;&gt;&lt;strong&gt;Visualize the results in 3-D&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open &lt;strong&gt;ArcScene&lt;/strong&gt;, and add the dem200 and rvis005 layers.&lt;/li&gt;
+&lt;li&gt;For each layer, go to Properties and click on the Base Heights tab. Click Floating on a custom surface:, and make sure the indicated layer is the same as the one you clicked on (it should be by default). Leave everything else to the defaults.&lt;/li&gt;
+&lt;li&gt;Change the color ramp symbology for the rvis005 layer (Properties  Symbology) to something a little more colorful.&lt;/li&gt;
+&lt;li&gt;Finally, adjust the Z value of the display. Right-click on Scene Layers (the data frame in ArcMap) and go to Scene Properties.  Make the vertical exaggeration 10 on General tab and click OK.&lt;/li&gt;
+&lt;li&gt;Add nexrad_kpux to the scene.&lt;/li&gt;
+&lt;li&gt;R-Click on nexrad_kpux and go to Properties  Extrusion&lt;/li&gt;
+&lt;li&gt;Check Extrude features in layer. Make the extrusion value 2000.&lt;/li&gt;
+&lt;li&gt;Change the symbology to something that shows up well. Save your scene in your Part02 folder as kpux.sxd.&lt;/li&gt;
+&lt;li&gt;Zoom in and navigate around the 3D image. Choose an angle that shows the radar beam origin and the beam being blocked by the terrain. Answer Questions #16 and #17 on the answer sheet.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image11.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Congratulations, you are done!  Submit your answer sheet to blackboard.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     

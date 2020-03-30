@@ -362,10 +362,20 @@ If you are a student at KU,  IT offers &lt;a href=&#34;https://technology.ku.edu
 &lt;p&gt;If you need more detailed instructions, you can find those &lt;a href=&#34;https://kuit.service-now.com/kb_home.do?jvar_view_topic=KU+Virtual+Lab&amp;amp;sysparm_refer=kb_home.do&#34;&gt;here&lt;/a&gt;.  Finally, as per the instructions&amp;hellip;&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;When working in Virtual Lab, you must save files to your computer or mobile device. Virtual Lab does not provide storage space. Files edited with Virtual Lab applications are not backed up by KU and cannot be restored by KU if something happens to them. &lt;br&gt;&lt;br&gt; NOTE: After one hour of idle time, Virtual Lab will disconnect and any unsaved work will be lost. It is important to save files to your personal device before you disconnect from Virtual Lab.
+&lt;p&gt;When working in Virtual Lab, you must save files to your computer or mobile device. Virtual Lab does not provide storage space. Files edited with Virtual Lab applications are not backed up by KU and cannot be restored by KU if something happens to them. &lt;br&gt;&lt;br&gt; NOTE: After one hour of idle time, Virtual Lab will disconnect and any unsaved work will be lost. It is important to save files to your personal device before you disconnect from Virtual Lab.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finally, a few tips picked up along the way:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;File pathing is especially important when using this service.  I would consider it best practice to make sure that you are saving all outputs to your local computer.  These paths should always start with \client...  This is your local pc, so use your folder structure.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;ve found connecting to OneDrive to work some of the time, but be aware that you are going through three different api&amp;rsquo;s just to load a file.  When in doubt, one of the first things I cross off my troubleshooting list is to place the files on my local disk.&lt;/li&gt;
+&lt;li&gt;You will have to be exceptionally patient, this is by far one of the slowest ways I&amp;rsquo;ve ever used GIS.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/sharefilesvl.PNG&#34; alt=&#34;&#34; /&gt;
 &lt;/DIV&gt;
 &lt;/DIV&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;hr /&gt;
 

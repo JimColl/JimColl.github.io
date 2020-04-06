@@ -431,7 +431,7 @@
 
 <p>The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.</p>
 
-<p><a href="https://gohugo.io/">HUGO</a>, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">hosting on github page</a>, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  The following will will walk you through how this website was created.  <strong>I also recommend following the <a href="https://sourcethemes.com/academic/docs/install/">Academic theme instructions</a>.</strong></p>
+<p><a href="https://gohugo.io/">HUGO</a>, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">hosting on github page</a>, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  <strong>I also recommend following the <a href="https://sourcethemes.com/academic/docs/install/">Academic theme instructions</a>.</strong></p>
 
 <div class="alert alert-note">
   <div>
@@ -444,7 +444,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <h2 id="create-a-github-account"><strong>Create a github account:</strong></h2>
 
-<p>Create a <a href="https://github.com/">Github account</a>.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to see if that’s the case.</p>
+<p>Create a <a href="https://github.com/">Github account</a>.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to test that limit.</p>
 
 <h2 id="install-git-for-windows"><strong>Install git for windows:</strong></h2>
 
@@ -483,7 +483,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <h2 id="how-this-site-was-created"><strong>How this site was created:</strong></h2>
 
-<p>This site is a smashup of the <a href="https://github.com/darshanbaral/aafu">aafu</a> and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined <a href="https://gohugo.io/templates/lookup-order/">lookup order</a>.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the <i>config/_default/</i> folder with the aafu theme markdown files.  Most of these are straightforward, but within the <i>config/_default/config.toml</i>, we need to set the theme order as follows.</p>
+<p>This site is a smashup of the <a href="https://github.com/darshanbaral/aafu">aafu</a> and Academic themes.  Although the Academic theme has just about every feature you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined <a href="https://gohugo.io/templates/lookup-order/">lookup order</a>.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the <i>config/_default/</i> folder with the aafu theme markdown files.  Most of these are straightforward, but within the <i>config/_default/config.toml</i>, we need to set the theme order as follows.</p>
 
 <pre><code class="language-markdown"># Configuration of Academic
 # Documentation: https://sourcethemes.com/academic/

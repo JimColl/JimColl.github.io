@@ -28,12 +28,14 @@
   
     
   
-  <meta name="description" content="Lab 8: Advanced Terrain Analysis Learning Objective In this lab we&rsquo;ll cover a variety of terrain analysis techniques including shelter analysis, the hydrology toolbox, and how to use radar data and terrain to identify blocked locations.
+  <meta name="description" content="Lab 8: Advanced Terrain Analysis Learning Objective In this lab we&rsquo;ll cover a variety of terrain analysis techniques including shelter analysis and a suite of tools within the hydrology toolbox.
 What you need to submit Lab 8: Answer Sheet
 Name:
-Part 1 Question 1:
+Part 1
+Question 1:
 What is the value of the majority of the cells on the focalcells raster layer?
-Where are the cells with smaller values located?">
+Where are the cells with smaller values located?
+and why do they have smaller values?">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab08/">
@@ -118,12 +120,14 @@ Where are the cells with smaller values located?">
   <meta property="og:site_name" content="Jim Coll">
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab08/">
   <meta property="og:title" content=" | Jim Coll">
-  <meta property="og:description" content="Lab 8: Advanced Terrain Analysis Learning Objective In this lab we&rsquo;ll cover a variety of terrain analysis techniques including shelter analysis, the hydrology toolbox, and how to use radar data and terrain to identify blocked locations.
+  <meta property="og:description" content="Lab 8: Advanced Terrain Analysis Learning Objective In this lab we&rsquo;ll cover a variety of terrain analysis techniques including shelter analysis and a suite of tools within the hydrology toolbox.
 What you need to submit Lab 8: Answer Sheet
 Name:
-Part 1 Question 1:
+Part 1
+Question 1:
 What is the value of the majority of the cells on the focalcells raster layer?
-Where are the cells with smaller values located?"><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+Where are the cells with smaller values located?
+and why do they have smaller values?"><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -414,28 +418,31 @@ Where are the cells with smaller values located?"><meta property="og:image" cont
 <li><a href="#getting-set-up"><strong>Getting set up</strong></a></li>
 <li><a href="#terrain-exposure-analysis-procedure"><strong>Terrain Exposure Analysis Procedure</strong></a></li>
 </ul></li>
-<li><a href="#part-2-watershed-and-stream-delineation"><strong>Part 2: Watershed and Stream Delineation</strong></a>
+<li><a href="#part-2-creating-a-unit-hydrograph"><strong>Part 2: Creating a Unit Hydrograph</strong></a>
 <ul>
-<li><a href="#getting-set-up-1"><strong>Getting set up</strong></a></li>
-<li><a href="#identify-sinks"><strong>Identify sinks</strong></a></li>
-<li><a href="#fill-original-dem-and-identify-sinks"><strong>Fill original DEM and identify sinks</strong></a></li>
-<li><a href="#compute-a-new-flow-direction"><strong>Compute a new flow direction</strong></a></li>
-<li><a href="#identify-and-clip-to-the-white-oak-watershed"><strong>Identify and clip to the White Oak watershed</strong></a></li>
-<li><a href="#compute-flow-accumulation"><strong>Compute flow accumulation</strong></a></li>
-<li><a href="#extract-stream-network"><strong>Extract stream network</strong></a></li>
-<li><a href="#extract-sub-basins-for-each-stream-segment"><strong>Extract sub basins for each stream segment</strong></a></li>
-<li><a href="#compute-water-surface-flow-distance"><strong>Compute water surface flow distance</strong></a></li>
+<li><a href="#precondition-the-elevation-model"><strong>Precondition the elevation model</strong></a>
+<ul>
+<li><a href="#identify-and-fill-sinks"><strong>Identify and Fill Sinks</strong></a></li>
 </ul></li>
-<li><a href="#part-3-examining-nexrad-radar-beam-terrain-blockage"><strong>Part 3: Examining NEXRAD radar beam terrain blockage</strong></a>
+<li><a href="#delineate-the-watershed"><strong>Delineate the Watershed</strong></a>
 <ul>
-<li><a href="#getting-set-up-2"><strong>Getting set up</strong></a></li>
-<li><a href="#create-nexrad-radar-beam-shapefile"><strong>Create NEXRAD radar beam shapefile</strong></a></li>
-<li><a href="#define-the-spatial-reference-for-the-radar-beam-shapefile"><strong>Define the spatial reference for the radar beam shapefile</strong></a></li>
-<li><a href="#establish-indices-for-radar-beam-radials"><strong>Establish indices for radar beam radials</strong></a></li>
-<li><a href="#determine-where-radar-beam-intersects-terrain"><strong>Determine where radar beam intersects terrain</strong></a></li>
-<li><a href="#determine-locations-where-the-radar-beam-is-blocked-by-terrain"><strong>Determine locations where the radar beam is blocked by terrain</strong></a></li>
-<li><a href="#invert-the-selection-and-create-a-radar-beam-raster"><strong>Invert the selection and create a radar beam raster</strong></a></li>
-<li><a href="#visualize-the-results-in-3-d"><strong>Visualize the results in 3-D</strong></a></li>
+<li><a href="#assess-flow-directions"><strong>Assess flow directions</strong></a></li>
+<li><a href="#snap-outlet-to-stream"><strong>Snap outlet to stream</strong></a></li>
+<li><a href="#delineate-watershed-upstream-of-outlet"><strong>Delineate watershed upstream of outlet</strong></a></li>
+</ul></li>
+<li><a href="#create-a-velocity-field"><strong>Create a velocity field</strong></a>
+<ul>
+<li><a href="#create-the-slope-raster"><strong>Create the slope raster</strong></a></li>
+<li><a href="#calculate-the-slope-area-term"><strong>Calculate the slope-area term</strong></a></li>
+<li><a href="#calculate-the-velocity-field"><strong>Calculate the velocity field</strong></a></li>
+<li><a href="#limit-the-velocities"><strong>Limit the velocities</strong></a></li>
+</ul></li>
+<li><a href="#create-an-isochrone-map"><strong>Create an isochrone map</strong></a>
+<ul>
+<li><a href="#create-a-weight-grid"><strong>Create a weight grid</strong></a></li>
+<li><a href="#assess-flow-time-to-outlet-pour-point"><strong>Assess flow time to outlet pour point</strong></a></li>
+</ul></li>
+<li><a href="#create-a-unit-hydrograph"><strong>Create a unit hydrograph</strong></a></li>
 </ul></li>
 </ul>
 </nav>
@@ -458,7 +465,7 @@ Where are the cells with smaller values located?"><meta property="og:image" cont
 
 <h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>In this lab we&rsquo;ll cover a variety of terrain analysis techniques including shelter analysis, the hydrology toolbox, and how to use radar data and terrain to identify blocked locations.</p>
+<p>In this lab we&rsquo;ll cover a variety of terrain analysis techniques including shelter analysis and a suite of tools within the  hydrology toolbox.</p>
 
 <h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
@@ -467,7 +474,7 @@ Where are the cells with smaller values located?"><meta property="og:image" cont
 <p><strong>Lab 8: Answer Sheet</strong><br />
 Name:</p>
 
-<p><strong>Part 1</strong>
+<p><strong>Part 1</strong><br />
 <strong>Question 1</strong>:<br />
 What is the value of the majority of the cells on the focalcells raster layer?</p>
 
@@ -484,56 +491,6 @@ ________ to ________</p>
 <p>A value close to zero means:</p>
 
 <p>A small negative value means:</p>
-
-<p><strong>Part 2</strong>
-<strong>Question 3</strong>: How many sink cells exist in the Bethel DEM? ________<br />
-(Hint: Open the Attribute Table, you will need to use Statistics)</p>
-
-<p><strong>Question 4</strong>: The maximum sink depth in the bethel DEM is ________ m</p>
-
-<p><strong>Question 5</strong>: Number of sinks in the filled DEM:________</p>
-
-<p><strong>Question 6</strong>: What is the total watershed area for the b_gauge station?
-________ Cells = ________ km<sup>2</sup></p>
-
-<p><strong>Question 7</strong>: How many different stream segments inside the watershed? ________</p>
-
-<p><strong>Question 8</strong>: What’s the highest Strahler stream order in the watershed? ________</p>
-
-<p>Paste your watershed map here:</p>
-
-<p><strong>Question 9</strong>: How far is the whiteoak_gauge from the farthest divide? ________ m</p>
-
-<p>In this part of the assignment, you will run through some of the same operations used in part 02 of the lab exercise using a different data set. The purpose of doing this is to ensure that you understand the processes involved and that you are not simply clicking through the steps without thought.   You will use the Rio Fajardo River dataset (riofajardo DEM &amp; r_gauges.shp) to complete your lab assignment. Remember to set up your Spatial Analyst environment appropriately – all raster manipulations should use the same extent and cell size as the original riofajardo.  Also remember to reset the Spatial Analyst Options after running the watershed analysis.</p>
-
-<p>Begin by adding a new data frame (named Rio Fajardo) to your ArcMap project and adding the Rio Fajardo files (riofajardo DEM &amp; r_gauge.shp). Notice that r_gauge.shp actually contains 5 gauging stations (as opposed to the 1 station in b_gauge.shp). This will be important later in the assignment.  I HIGHLY suggest that you use the same naming conventions which were used in the Bethel example. For example, your filled Rio Fajardo DEM should be named r_filled. This will make the process much easier, especially when figuring out what should be put into Raster Calculator computations.  Start the process by setting Spatial Analyst’s extent, mask and cell size to the original DEM (riofajardo), then fill the Rio Farjardo DEM (see Step 3 in the lab exercise).</p>
-
-<p><strong>Question 10</strong>: What is the maximum depth of the sinks in the Rio Farjardo DEM?  ________ m</p>
-
-<p><strong>Question 11</strong>: How many sinks in the filled DEM? ________</p>
-
-<p><strong>Question 12</strong>: Delineate the Rio Fajardo watershed (Steps 4 &amp; 5 in lab exercise).  What is the area of the entire Rio Fajardo watershed?
-________ Cells = ________ km<sup>2</sup></p>
-
-<p>Now you will focus on a particular gauge in the r_gauge shapefile – the Rio Fajardo near Fajardo gauge. First, create a new data frame named Near Fajardo Gauge. Copy riofajardo, r_gauge, r_flowdir, and r_filled layers from your Rio Fajardo dataframe to your Near Fajardo Gauge dataframe. Double check your Environments to make sure the extent and cell size are still set to riofajardo.</p>
-
-<p>Calculate the watershed for the Rio Fajardo near Fajardo station only. In order to do this, you should export the near Fajardo station into its own shapefile You can <i>Select the gage &gt; R-click on the layer &gt; Selection &gt; Create Layer from Selected Features &gt; Rename it to nearfaj_gage.</i></p>
-
-<p><strong>Question 13</strong>: What is the area of the Rio Fajardo near Fajardo watershed?
-________ Cells = ________ km<sup>2</sup></p>
-
-<p>You will need to clip the r_filled &amp; r_flowdir to the Rio Fajardo near Fajardo (like you did to get b_gdem &amp; b_gdir).</p>
-
-<p>Extract the stream network of the Rio Fajardo near Fajardo watershed (Steps 6 and 7 in the lab exercise). Use 200 cells as the flow accumulation threshold.</p>
-
-<p><strong>Question 14</strong>: What is the highest Strahler stream order # at the Rio Fajardo near Fajardo station? ________</p>
-
-<p><strong>Part 3</strong>
-<strong>Question 15</strong>: How many sample points are in the blocked beam region? ________</p>
-
-<p><strong>Question 16</strong>: Export the scene in 2D as a PNG file and call it part3yourname.png. Make sure you’re saving to your Lab08 folder! Leave the rest of the options to the defaults. Upload your PNG files from part 1 and 2 to the lab 8 assignments section on Blackboard. Make sure you put your name in the filename names.</p>
-
-<p><strong>Question 17</strong>: Let’s say that the KPUX radar’s elevation angle has been increased from 0.5 degrees to 0.8 degrees. Open notepad and edit the kpux.txt file, changing the elevangle parameter to 0.8.  Repeat steps 2 through 6 using this new kpux.txt file. Be sure to use naming convention (change 005 suffixes to 008). How many sample points are blocked in the beam region now?  ________</p>
 
 <hr />
 
@@ -597,344 +554,354 @@ ________ Cells = ________ km<sup>2</sup></p>
 
 <hr />
 
+<div class="alert alert-note">
+  <div>
+    This lab, and part 2 in particular, can take a while when CPU is a limiting concern.  I can offer a few suggestions, and an alternative.</p>
+
+<ul>
+<li>Pick a smaller area to process.<br /></li>
+<li>You can skip step if you are careful, as outlined in the instructions.</li>
+<li>If you pause drawing that may speed up UI interactions <img src="/courses/geog558/media/PauseIcon.PNG" alt="" /></li>
+<li>When not actively manipulation the tools you can multi-task.  Take the time to understand the workflow, fire off a process, and move onto something else.  Try not to have anything super intensive running in conjunction, but light Microsoft office work shouldn&rsquo;t break you.<br /></li>
+<li>As a stopgap if it&rsquo;s taking too long, I have provided a copy of my part 2 for you to look over.  Use this only if needed.</li>
+<li><a href="https://open.spotify.com/album/1Un2hgy3OUsbmmFNop3Pj2?si=oYzFtULARyqAQVSG66_pdw">A great album to jam to while working</a>.</li>
+</ul>
+  </div>
+</div>
+
 <h1 id="part-1-terrain-exposure-analysis"><strong>Part 1: Terrain Exposure Analysis</strong></h1>
 
 <p>In this part of the lab, we will perform a terrain exposure analysis, referred to as shelter analysis.  The outputs of this workflow are quite popular in archeology studies and inform us as to how protected a given location is.</p>
 
 <h2 id="getting-set-up"><strong>Getting set up</strong></h2>
 
-<p>Start Arcmap and rename the data frame to Terrain Exposure Analysis.  Because we are working at a relatively small geographic scale, we should first reproject our raster from it&rsquo;s native projection () to a more appropriate one for this analysis (Kansas State Plane Coordinate System (South Zone)).</p>
+<p>Start Arcmap and rename the data frame to Terrain Exposure Analysis.  Because we are working at a relatively small geographic scale, we should first reproject our raster from it&rsquo;s native projection (GSC_North_America_1983) to a more appropriate one for this analysis (NAD_1983_StatePlane_Colorado_South_FIPS_0503 WKID: 26955).</p>
 
 <ul>
-<li>Open ArcToolbox and navigate to Data Management Tools | Projections and Transformations | Raster | Project Raster</li>
-<li>For your Input raster select you chase_dem from your lab08\part01 folder using the browse button.
+<li>Open ArcToolbox and navigate to <strong>Data Management Tools | Projections and Transformations | Raster | Project Raster</strong></li>
+<li>For your Input raster select you <i>chase_dem</i> from your lab08\part01 folder using the browse button.
 
 <ul>
 <li>Here we use the browse button to avoid data locks on the elevation data and avoid inadvertently assigning a projection to the dataframe prematurely.</li>
 </ul></li>
-<li>Make the Output raster proj_dem saved in your lab08\part01 folder</li>
+<li>Call the Output raster <i>proj_dem</i> saved in your lab08\part01 folder</li>
 <li>To select an Output coordinate system, click on the Spatial Reference Properties Button (the hand with the card)</li>
 <li>Define the coordinate system as:
 
 <ul>
-<li>Projected Coordinate Systems &gt; State Plane &gt; NAD 1983 (meters) &gt; NAD 1983 StatePlane Kansas South FIPS 1502 (meters).prj</li>
+<li>Projected Coordinate Systems &gt; State Plane &gt; NAD 1983 (meters) &gt; NAD 1983 StatePlane Colorado South FIPS 0503 (meters).prj</li>
 </ul></li>
 <li>Click OK</li>
-<li>Make sure that the Resampling technique is set to NEAREST, and the cell size to 30m</li>
+<li>Make sure that the Resampling technique is set to BILINEAR, and the cell size to 30m</li>
 <li>Make sure your window looks like the one below (you may need to scroll down or resize the window)</li>
-<li>Click OK
-<img src="/courses/geog558/media/Lab8Image1.png" alt="" /></li>
+<li>Click OK</li>
 </ul>
+
+<p><img src="/courses/geog558/media/Lab8Image1.png" alt="" /></p>
 
 <p>Finally, let&rsquo;s convert the elevation from feet to meters.</p>
 
 <ul>
-<li><em>1 foot = 0.3048 meters</em><br /></li>
+<li>Raster calculator: <i>1 foot = 0.3048 meters</i><br /></li>
 <li>Name the output <i>chase_m</i><br /></li>
 </ul>
 
 <h2 id="terrain-exposure-analysis-procedure"><strong>Terrain Exposure Analysis Procedure</strong></h2>
 
 <ul>
-<li>Use Raster Calculator to create a constant raster layer on which all of the cells have a value of 1 <i>(“chase_m” / “chase_m”)</i>.</li>
-<li>Make the output raster a permanent raster named constant</li>
-<li>Calculate the FOCALSUM on the constant raster layer using a circular neighborhood with a radius of 2 cell size</li>
-<li>Save the output raster layer as focalcells in your part01 folder</li>
+<li>Use <strong>Raster Calculator</strong> to create a constant raster layer on which all of the cells have a value of 1 <i>(“chase_m” / “chase_m”)</i>.</li>
+<li>Make the output raster a permanent raster named <i>constant</i></li>
+<li>Calculate the FOCALSUM on the <i>constant</i> raster layer using a circular neighborhood with a radius of 2 cell size</li>
+<li>Save the output raster layer as <i>focalcells</i> in your part01 folder</li>
 <li>Answer question #1 on your assignment sheet</li>
-<li>Calculate the earth volume within the circular neighborhood (do a FOCALSUM operation using chase_m with a neighborhood radius of 2)</li>
-<li>Save the output raster layer as earthv1 in your part03 folder</li>
-<li>Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus (“chase_m” * “focalcells”)</li>
-<li>Save the output raster layer as earthv2 in your lab03\part03 folder</li>
-<li>Calculate the shelter raster layer by  subtracting earthv2 from earthv1 (“earthv1” – “earthv2”)</li>
-<li>Save the output raster layer as shelter in your part03 folder</li>
+<li>Calculate the earth volume within the circular neighborhood (do a FOCALSUM operation using <i>chase_m</i> with a neighborhood radius of 2)</li>
+<li>Save the output raster layer as <i>earthv1</i></li>
+<li>Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus <b>(“chase_m” * “focalcells”)</b></li>
+<li>Save the output raster layer as <i>earthv2</i></li>
+<li>Calculate the shelter raster layer by subtracting <i>earthv2</i> from <i>earthv1</i>: <b>(“earthv1” – “earthv2”)</b></li>
+<li>Save the output raster layer as <i>shelter</i></li>
 <li>Answer question #2 on your assignment sheet</li>
 </ul>
 
-<hr />
-
-<h1 id="part-2-watershed-and-stream-delineation"><strong>Part 2: Watershed and Stream Delineation</strong></h1>
-
-<p>Hydrology and GIS are closely linked, as spatial developments in the hydrologic sciences were some of the first to be ported into GISystems when ESRI became a company.  In this lab we will use some of the most common hydrology tools to perform some common analyses including how the fundamental hydrology tools (flow accumulation, flow direction) are used in hydrologic modeling, how to group contiguous sets of cells, how raster calculator is used in this hydrologic context, and how to delineate streams, watersheds, and drainage characteristics.</p>
-
-<h2 id="getting-set-up-1"><strong>Getting set up</strong></h2>
-
-<ul>
-<li>Either start a new session of ArcMap or insert a new dataframe and rename it to Bethel Valley</li>
-<li>Add bethel and b_gauge.shp to the Bethel Valley data frame</li>
-<li>Go to Geoprocessing | Environments… and…
-
-<ul>
-<li>Set the Current Workspace and Scratch Workspace to your lab08\Part02 folder</li>
-<li>Set Processing Extent and cell size (under Raster Analysis) to “Same as layer bethel”
-<br /></li>
-</ul></li>
-</ul>
-
-<h2 id="identify-sinks"><strong>Identify sinks</strong></h2>
-
-<ul>
-<li>Open ArcToolbox and select Spatial Analyst Tools | Hydrology</li>
-<li>Calculate flow directions without filling the sinks by going to Hydrology | Flow Direction
-
-<ul>
-<li>Make sure bethel is the input surface, leave others to the defaults, and name your output b_flow</li>
-</ul></li>
-<li>Use the hydrological modeling to identify the sinks in the bethel DEM by navigating to Hydrology | Sink in ArcToolbox
-
-<ul>
-<li>Set the flow direction raster (b_flow) as the input, name the output file b_sinkid</li>
-</ul></li>
-<li>Answer Question 3.</li>
-</ul>
-
-<h2 id="fill-original-dem-and-identify-sinks"><strong>Fill original DEM and identify sinks</strong></h2>
-
-<ul>
-<li>Fill sinks in the bethel DEM by going to Hydrology | Fill
-
-<ul>
-<li>Set the bethel DEM as the input surface and name the output b_filled</li>
-</ul></li>
-<li>Find the depth of the filled sinks by using Raster Calculator
-
-<ul>
-<li>Think about what we just did: We filled in all the pits, so how would you get the depth?</li>
-<li>This was also the first step to getting lake volume, we just need to subtract the top from the bottom: <i>filled DEM (b_filled/Top) minus original DEM (bethel/Bottom)</i></li>
-<li>Name the output <i>b_sink_depth</i></li>
-</ul></li>
-<li>Answer Question 4.</li>
-<li>Reclassify (Spatial Analyst) the depth raster (b_sink_depth) so that sink cells (Old value &gt; 0) have a value of 1 and non-sink cells (Old Value &lt;= 0) have a value of NODATA.
-
-<ul>
-<li>Name the output b_sinks
-<img src="/courses/geog558/media/Lab8Image2.png" alt="" /></li>
-</ul></li>
-<li>Use the Region Group tool (Spatial Analysis Tools | Generalization | Region Group) to assign a connected set of sink cells a unique number
-
-<ul>
-<li>Set the input raster to b_sinks, the output raster to b_sink_reg, and the number of neighbors to use to Eight. Leave all other fields to default.</li>
-</ul></li>
-<li>Answer Question 5.</li>
-</ul>
-
-<h2 id="compute-a-new-flow-direction"><strong>Compute a new flow direction</strong></h2>
-
-<ul>
-<li>Compute flow direction from the filled Bethel DEM (b_filled) raster by going to Hydrology | Flow Direction.
-
-<ul>
-<li>Set the filled Bethel DEM (b_filled) as the input surface and name the output grid b_flowdir</li>
-</ul></li>
-</ul>
-
-<h2 id="identify-and-clip-to-the-white-oak-watershed"><strong>Identify and clip to the White Oak watershed</strong></h2>
-
-<ul>
-<li>Identify the upstream drainage area (watershed) for the White Oak gauge (b_gauge.shp)
-
-<ul>
-<li>Convert the gauge shapefile into a raster layer and name it b_ras_gauge  (Conversion Tools | To Raster | Point to Raster).</li>
-<li>Select b_gauge as the Input Feature, ID as the Value field and 30 as the cell size.
-<img src="/courses/geog558/media/Lab8Image3.png" alt="" /></li>
-</ul></li>
-<li>Use the Watershed function:
-
-<ul>
-<li>Input rasters: b_flowdir for flow direction, b_ras_gauge for pour point data.</li>
-<li>Use Value for pour point field and name the output b_watershed.</li>
-</ul></li>
-</ul>
+<h1 id="part-2-creating-a-unit-hydrograph"><strong>Part 2: Creating a Unit Hydrograph</strong></h1>
 
 <blockquote>
-<p>You may ask yourself “Why did we perform that last step if the pour point can also be a feature?”  You are correct, that was a superfluous transformation.  But now you know how to do that for future reference; because knowing is half the battle, and knowledge is power!</p>
+<p>The instructions herein are guided by material gratefully pilfered from <a href="https://learn.arcgis.com/en/projects/predict-floods-with-unit-hydrographs/">https://learn.arcgis.com/en/projects/predict-floods-with-unit-hydrographs/</a></p>
 </blockquote>
 
-<ul>
-<li>Answer Question 6.</li>
-<li>In Geoprocessing | Environments, set the extent, cell size, and mask to b_watershed. Also check the working directory (Note: After you use the Watershed function, it may reset the environment. This is a bug in the extension which was introduced in 10.3, and may still crop up in 10.6)</li>
-<li>In Raster Calculator, use b_watershed to clip the filled DEM (b_filled) and flow direction raster to the White Oak watershed. Because you set the analysis mask to b_watershed in the previous step, your expression will simply be the name of the raster with no other operations; simply enter “b_filled” as the entire expression. Name the output b_gdem</li>
-<li>Repeat the above step for b_flowdir and name the output b_gdir
+<p>As is the case with many locations across the globe, when disaster strikes planners and residents realize they have data gaps that they can not readily fill.  Exampled here, the town of Stowe in Vermont suffered considerably when the remnants of Hurricane Irene stuck the Green Mountain region in August 2011. The Little River overflowed and washed out roads, bridges, and culverts. In an effort to learn more about the event, officials tried to recreate the event using a number of techniques.  One way to do this is to construct a hydrograph, which are line graphs determining how much water a stream will discharge during a rainstorm. In this lesson, you&rsquo;ll create those hydrographs using data provided.  If you&rsquo;re interested in trying this for yourself I encourage you to download and run an area meaningful to you.  Refer back to lab 1 if you need a refresher on how to acquire elevation data.  The model builder is shown below:</p>
+
+<p><img src="/courses/geog558/media/Lab8part2_ModelBuilder_Arcmap.PNG" alt="" /></p>
+
+<h2 id="precondition-the-elevation-model"><strong>Precondition the elevation model</strong></h2>
+
+<p>Either import the Stowe_DEM and Pour_point or download and select your own pour point for this analysis.</p>
+
+<h3 id="identify-and-fill-sinks"><strong>Identify and Fill Sinks</strong></h3>
+
+<p><strong>1)</strong> First, you&rsquo;ll identify sinks in your DEM. Although your DEM was derived from reliable data provided by the USGS, sinks may still be present. In order to identify them we need to know which way the water flows over the surface.  The first tool in the workflow is the <strong>Flow Direction</strong> tool.</p>
 
 <ul>
-<li>Stop and think about how else might you might accomplish this operation?</li>
-</ul></li>
+<li>For Input surface raster, choose <i>Stowe_DEM</i>.<br /></li>
+<li>save the output as <i>Stowe_flow_direction</i> in the geodatabase.<br /></li>
 </ul>
 
-<h2 id="compute-flow-accumulation"><strong>Compute flow accumulation</strong></h2>
+<p><img src="/courses/geog558/media/Lab8part2image1arcmap.PNG" alt="" /></p>
+
+<p>The symbology of the resulting layer corresponds to the direction water is likely to flow. The layer&rsquo;s appearance isn&rsquo;t important to this analysis, we just need this layer to run the next step&hellip;</p>
+
+<p><strong>2)</strong> Open the <strong>sinks tool</strong>, the next step in the analysis.</p>
 
 <ul>
-<li>Compute flow accumulation from the flow direction raster for the gage by going to Hydrology | Flow Accumulation.</li>
-<li>Set the flow direction raster as b_gdir and name the output b_gaccum.</li>
+<li>For Input D8 flow direction raster, choose <i>Stowe_flow_direction</i>.</li>
+<li>Save the output as <i>Stowe_sinks</i>.</li>
 </ul>
 
-<h2 id="extract-stream-network"><strong>Extract stream network</strong></h2>
+<p><img src="/courses/geog558/media/Lab8part2image2arcmap.PNG" alt="" /></p>
+
+<p><strong>3)</strong> The final step in the current task uses the <strong>Fill tool</strong> to remove sinks from a DEM.</p>
 
 <ul>
-<li>Use the Raster Calculator to extract all cells that are “channels”, i.e., flow accumulation greater than 200 (this defines a stream channel as those cells with an upstream drainage area &gt; 200 cells)
-
-<ul>
-<li>Name the output b_gstreams</li>
-</ul></li>
-<li>Use the Hydrology | Stream Link tool to assign each stream segment a unique ID:
-
-<ul>
-<li>Set the b_gstreams raster as the Input stream raster and the b_gdir as the input flow direction raster.</li>
-<li>Name this grid b_gstrmseg</li>
-</ul></li>
-<li>Answer Question 7.</li>
-<li>Use the Hydrology | Stream Order to assign each stream segment a numeric order (Strahler or Shreve)
-
-<ul>
-<li>Set the input stream raster to b_gstreams, the input flow direction raster to b_gdir and select Strahler method for stream ordering.</li>
-<li>Name the output b_gstrahler</li>
-</ul></li>
-<li>Examine the stream orders and answer Question 8.</li>
+<li>For Input surface raster, choose Stowe_DEM</li>
+<li>Name the output <i>Stowe_fill</i>.</li>
 </ul>
 
-<h2 id="extract-sub-basins-for-each-stream-segment"><strong>Extract sub basins for each stream segment</strong></h2>
+<p><img src="/courses/geog558/media/Lab8part2image3arcmap.PNG" alt="" /></p>
+
+<h2 id="delineate-the-watershed"><strong>Delineate the Watershed</strong></h2>
+
+<p>Having now removed sinks from the DEM, it is considered &ldquo;hydrologically conditioned&rdquo; and is ready for hydrological analysis. We&rsquo;ll use this DEM to determine the watershed area for the outlet point south of Stowe (or wherever you want to drop your point!). A watershed area is the area in which all flowing water will flow toward a certain point—in this case, your outlet. With the watershed area, you&rsquo;ll be able to limit your subsequent analysis results to the relevant area for your outlet. Determining a watershed requires two components: a flow direction raster layer and an accurate outlet point. One of the most common reasons for a watershed analysis to fail is when the pour point is not adequately aligned to the flow grids.  For that reason the <strong>Snap Pour Point</strong> tool is often included in a workflow.  This step can be skipped if you are deliberate with your placement of the point, but I&rsquo;ll walk through the workflow using it here. First, you&rsquo;ll determine the stream&rsquo;s exact location by calculating the areas where water accumulates the most. Then, you&rsquo;ll snap the outlet point&rsquo;s location to match the stream and verify it.</p>
+
+<h3 id="assess-flow-directions"><strong>Assess flow directions</strong></h3>
+
+<p>The first step to delineate a watershed is to determine the direction that water will flow in your DEM. That way, you can determine the areas where water will flow to the outlet. To do so, you&rsquo;ll&hellip;</p>
+
+<p><strong>1)</strong> Create another <strong>flow direction</strong> raster layer, this time for your DEM with filled sinks.</p>
 
 <ul>
-<li>Use the Hydrology | Watershed tool to extract the watershed for each stream segment:
-
-<ul>
-<li>Set the input flow direction raster to b_gdir, and the b_gstrmseg as the input raster pour point data. Use value for pour point field.</li>
-<li>Name the output as b_gsbasins</li>
-</ul></li>
-<li>Use unique color to display all the sub basins in the White Oak watershed
-
-<ul>
-<li>Create a map of the White Oak watershed (include a title &amp; your name) and save it in your Lab08 folder as a png. Call it part2yourname.png and paste it into the questions.
-<br /></li>
-</ul></li>
+<li>For Input surface raster, choose <i>Stowe_fill</i>.</li>
+<li>Name your output <i>Stowe_fill_flow_direction</i>.</li>
 </ul>
 
-<h2 id="compute-water-surface-flow-distance"><strong>Compute water surface flow distance</strong></h2>
+<p><img src="/courses/geog558/media/Lab8part2image_FlowDirFill_arcmap.PNG" alt="" /></p>
+
+<h3 id="snap-outlet-to-stream"><strong>Snap outlet to stream</strong></h3>
+
+<p><strong>2)</strong> Open the <strong>Flow Accumulation tool</strong>. This tool creates a raster layer that indicates where water is most likely to accumulate. The flow accumulation for each cell is expressed as a numeric value based on the number of cells that flow into that cell. Cells with high values of accumulation often coincide with the locations of flowing water bodies. With your flow accumulation raster, you&rsquo;ll identify the Little River that flows through Stowe.</p>
 
 <ul>
-<li>Use the Hydrology | Flow Length to calculate upstream flow distance:
-
-<ul>
-<li>Set the b_gdir as the input flow direction raster and select the ‘Upstream’ option for the Direction of measurement.</li>
-<li>Name the output b_gdist</li>
-</ul></li>
-<li>Answer Questions 9-14</li>
+<li>For your Input flow direction raster, choose <i>Stowe_fill_flow_direction</i>.</li>
+<li>Name your Output accumulation raster <i>Stowe_flow_accumulation</i>.</li>
+<li>You&rsquo;ll leave the remaining parameters unchanged. The first of these parameters applies a weight to each cell, which is useful when you expect water to be distributed in ways that aren&rsquo;t uniform (for instance, in larger study areas where precipitation levels may vary significantly). The second parameter determines whether accumulation will be measured with integers or floating points. Floating point, the default value, allows for the inclusion of decimal places, making it more accurate in most situations. The third parameter determines the input flow direction.</li>
 </ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_FillFlowAccumulation_Arcmap.PNG" alt="" /></p>
+
+<p>The next step of the task opens the Measure Distance tool (which is a tool on the ribbon, not a geoprocessing tool). You&rsquo;ll use this tool to measure the distance between the current outlet point and the Little River&rsquo;s location as represented in the flow accumulation raster. You can use this distance to then snap the outlet point to the correct cell so that it precisely lines up with the stream. Be sure you&rsquo;re as precise as feasible by zooming in closer to the outlet point.  click the outlet point. Then double-click the approximate center of the nearest cell with a high flow accumulation value.  The Measure Distance tool&rsquo;s window updates to include the length of the measurement. I measurement approximately 50 meters so I&rsquo;ll round to a distance of 60 meters when I snap the outlet point to the stream. A snapping distance that is slightly higher than the measured distance will help avoid ambiguity in the tool. When deciding on a snapping distance, be sure it doesn&rsquo;t exceed the measured distance by too much, or the point may snap to an area further downstream.</p>
+
+<p><img src="/courses/geog558/media/Lab8part2image_Measure_Arcmap.PNG" alt="" /></p>
+
+<p><strong>3)</strong> Open up the <strong>Snap Pour Point</strong> tool.</p>
+
+<ul>
+<li>For Input raster or feature pour point data, choose <i>Pour_point</i>.</li>
+<li>For Input accumulation raster, choose <i>Stowe_flow_accumulation</i>.<br /></li>
+<li>Name the output raster <i>Stowe_snapped_outlet</i>.<br /></li>
+<li>For Snap distance, type 60.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_SnapRas_Arcmap.PNG" alt="" /></p>
+
+<p>The tool runs and the snapped outlet raster layer is added to the map. The raster displays a single cell that represents the outlet&rsquo;s new location. In the example image, the snapped outlet is represented as a yellow cell.</p>
+
+<p><img src="/courses/geog558/media/Lab8part2image_SnapRasOutput_Arcmap.PNG" alt="" /></p>
+
+<h3 id="delineate-watershed-upstream-of-outlet"><strong>Delineate watershed upstream of outlet</strong></h3>
+
+<p>Now that you have both a flow direction layer and an accurate outlet layer, you can determine the watershed area upstream of the outlet.<br />
+<strong>4)</strong> The final step of the task opens the <strong>Watershed tool</strong>.</p>
+
+<ul>
+<li>For Input D8 flow direction raster, choose <i>Stowe_fill_flow_direction</i>.</li>
+<li>For Input raster or feature pour point data, choose <i>Stowe_snapped_outlet</i>.<br /></li>
+<li>For Output raster, set the name to <i>Stowe_watershed</i>.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_Watershed_Arcmap.PNG" alt="" /></p>
+
+<h2 id="create-a-velocity-field"><strong>Create a velocity field</strong></h2>
+
+<p>Next, you&rsquo;ll start determining how long it takes water to reach the outlet, allowing the town to better predict when flooding will occur during a hypothetical rainfall event. To determine the time it takes water to flow somewhere, you first need to determine how fast water flows. You&rsquo;ll calculate the speed of flowing water with a velocity field, another type of raster layer. There are many types of velocity fields, and they can be calculated with a wide variety of mathematical equations. You&rsquo;ll create a velocity field that is spatially variant, but time and discharge invariant. This means that your velocity field makes the following assumptions:</p>
+
+<ul>
+<li>Velocity is affected by spatial components such as slope and flow accumulation (spatially variant).</li>
+<li>Velocity at a given location does not change over time (time invariant).</li>
+<li>Velocity at a given location does not depend on the location&rsquo;s rate of water flow (discharge invariant).</li>
+</ul>
+
+<p>In reality, velocity could be time variant and would definitely be discharge variant. However, incorporating these variants would require additional datasets that might not be available and use modeling techniques that might not be replicable in a GIS environment. The spatially variant, time- and discharge-invariant velocity field will provide a generally accurate result, although it&rsquo;s important to remember that any method will be only an approximation of observed phenomena. You&rsquo;ll use a method for creating velocity fields first proposed by Maidment et al. (1996).<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> In this method, each cell in the velocity field is assigned a velocity based on the local slope and the upstream contributing area (the number of cells that flow into that cell, or flow accumulation). They use the following equation:</p>
+
+<blockquote>
+<p>V = V<sub>m</sub> * (s<sup>b</sup>A<sup>c</sup>) / (s<sup>b</sup>A<sup>c</sup><sub>m</sub>)</p>
+</blockquote>
+
+<p>Where:</p>
+
+<ul>
+<li>V is the velocity of a single cell with a local slope of s and an upstream contributing area of A.</li>
+<li>Coefficients b and c can be determined by calibration.  In this scenario, you&rsquo;ll use the method&rsquo;s recommended value of b = c = 0.5.</li>
+<li>V<sub>m</sub> is the average velocity of all cells in the watershed. You&rsquo;ll assume an average velocity of V<sub>m</sub> = 0.1 m/s.</li>
+<li>s<sup>b</sup>A<sup>c</sup><sub>m</sub> is the average slope-area term throughout the watershed. To avoid results that are unrealistically fast or slow, you&rsquo;ll set limits for minimum and maximum velocities. The lower limit will be 0.02 meters per second, while the upper limit will be 2 meters per second.</li>
+</ul>
+
+<p>This equation is only one of many ways that a velocity field can be calculated, and it comes with several assumptions and limitations of its own.</p>
+
+<h3 id="create-the-slope-raster"><strong>Create the slope raster</strong></h3>
+
+<p>The primary variables in the equation you&rsquo;ll use for your velocity field are slope and upstream contributing area. You already have a raster layer for upstream contributing area: the flow accumulation layer you created above, but we don&rsquo;t yet have a slope layer, so that&rsquo;s the next one we&rsquo;ll create.<br />
+<strong>1)</strong> Open the <strong>Slope tool</strong>.</p>
+
+<ul>
+<li>For the Input raster, choose <i>Stowe_DEM</i></li>
+<li>Name your Output raster <i>Stowe_slope</i></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_Slope_Arcmap.PNG" alt="" /></p>
+
+<h3 id="calculate-the-slope-area-term"><strong>Calculate the slope-area term</strong></h3>
+
+<p>Now that we have a raster layer for both slope and flow accumulation area, we&rsquo;ll calculate a new raster layer that combines them. This layer will show the slope-area term (the value s<sup>b</sup>A<sup>c</sup><sub>m</sub> from the Maidment et al. equation).</p>
+
+<p><strong>2)</strong> The next step can be accomplished using the <strong>Raster Calculator tool</strong>.</p>
+
+<ul>
+<li>Use the fields to create the expression: Float((&ldquo;Stowe_slope&rdquo; ^ 0.5) * (&ldquo;Stowe_flow_accumulation&rdquo; ^ 0.5))</li>
+<li>Name your output raster <i>Stowe_slope_area_term</i>.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_SlopeArea_Arcmap.PNG" alt="" /></p>
+
+<ul>
+<li>Finally, lets use the environments of this tool to clip to our watershed at the same time:
+In the tool parameters, click <strong>Environments</strong>. Under <strong>Raster Analysis</strong> for <strong>Mask</strong>, choose <strong>Stowe_watershed</strong>.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_SlopeArea_ArcmapEnvironments.PNG" alt="" /></p>
+
+<p>Your output should look like so:</p>
+
+<p><img src="/courses/geog558/media/Lab8part2image_SlopeAreaOutput_Arcmap.PNG" alt="" /></p>
+
+<h3 id="calculate-the-velocity-field"><strong>Calculate the velocity field</strong></h3>
+
+<p><strong>3)</strong> Now that you have the slope-area term, you can calculate a velocity field using the following equation:</p>
+
+<blockquote>
+<p>V = V<sub>m</sub> * (s<sup>b</sup>A<sup>c</sup>) / (s<sup>b</sup>A<sup>c</sup><sub>m</sub>)</p>
+</blockquote>
+
+<p>As mentioned previously,</p>
+
+<ul>
+<li>V<sub>m</sub> is the average velocity of all cells in the watershed. You&rsquo;ll use an assumed average value of V<sub>m</sub> = 0.1, which is recommended by Maidment et al.</li>
+<li>Similarly, s<sup>b</sup>A<sup>c</sup><sub>m</sub> is the average slope-area term across the watershed. Because you&rsquo;ve calculated slope-area term for the watershed, we can simply pull the median out of our raster.  To find it you need to&hellip;</li>
+</ul>
+
+<p><strong>3A)</strong> right-click <strong>Stowe_slope_area_term</strong> and choose <strong>Properties</strong>, and under the <strong>Source</strong> tab and expand the <strong>Statistics</strong> heading.</p>
+
+<p><img src="/courses/geog558/media/Lab8part2image_LayerStats_Arcmap.PNG" alt="" /></p>
+
+<p><strong>3B)</strong> and then open a <strong>raster calculator</strong> and enter the expression, Where <strong>[Mean slope-area term]</strong> is the value that you copied from the <strong>Layer Properties</strong> window.:</p>
+
+<ul>
+<li>0.1 * (&ldquo;Stowe_slope_area_term&rdquo; / [Mean slope-area term])</li>
+<li>Call that output Stowe_velocity_unlimited</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_VeloUnlimitTool_Arcmap.PNG" alt="" /></p>
+
+<h3 id="limit-the-velocities"><strong>Limit the velocities</strong></h3>
+
+<p>The raster layer you created is a velocity field, but it has unrealistically high and low velocities. For instance, some values in the field have a velocity of 0 meters per second, which is unlikely during an extreme rainfall event. Likewise, the maximum value of approximately 7.5 meters per second is unrealistic even during a major flood. You&rsquo;ll limit the velocity values with a lower limit of 0.02 meters per second and an upper limit of 2 meters per second.  Bearing in mind that there are a number of ways to end up with the desired output, the most direct in my opinion is a <a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm">complex raster calculator con expression</a>.  Other alternatives include reclassifying, multiple con tools, or a clamp tool to name a few.
+<strong>4)</strong> Open up a <strong>Raster Calculator</strong> and enter your expression.</p>
+
+<ul>
+<li>My expression looks like so: Con(&ldquo;Stowe_velocity_unlimited&rdquo; &lt; 0.02,0.02,Con(&ldquo;Stowe_velocity_unlimited&rdquo; &gt; 2,2,&ldquo;Stowe_velocity_unlimited&rdquo;))
+
+<ul>
+<li>Read it from right to left: &ldquo;If &ldquo;Raster&rdquo; is less than x, put y, otherwise; if &ldquo;Raster&rdquo; is greater than than w, put z, otherwise put &ldquo;Raster&rdquo;&rdquo;</li>
+</ul></li>
+<li>Save your output as <i>Stowe_velocity</i>.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_VelocityClampExpression_Arcmap.PNG" alt="" /></p>
+
+<h2 id="create-an-isochrone-map"><strong>Create an isochrone map</strong></h2>
+
+<p>Having now created a velocity field that predicts how fast water will flow throughout Stowe, we still need to know the time it takes to get to the pour point.  In this step we&rsquo;ll create an isochrone map, which maps the time it takes to reach a specified location from anywhere else in an area. To create the isochrone map, you&rsquo;ll first create a weight grid. Then, you&rsquo;ll assess the time it takes for water to reach the outlet.</p>
+
+<h3 id="create-a-weight-grid"><strong>Create a weight grid</strong></h3>
+
+<p>Flow time is calculated with a relatively simple equation: The length that water must flow divided by the speed at which it flows. While you know how fast water flows due to your velocity field, you don&rsquo;t know flow length. To determine flow length, you need two variables: flow direction (which you know) and weight (which you don&rsquo;t). Weight, in regard to flow, represents impedance. For instance, water flowing through forested land takes longer than water flowing over smooth rock because it&rsquo;s impeded by terrain. While calculating weight may seem difficult without detailed terrain data, we can simplify our model by assuming that this weight is the inverse of the velocity we calculated.  This is more formally notated as</p>
+
+<blockquote>
+<p>Weight [L<sup>-1</sup>T] = 1 / Velocity [LT<sup>-1</sup>]</p>
+</blockquote>
+
+<p><strong>1)</strong> Thus, it is a simple matter to create our weights grid with a <strong>raster calculator</strong>.</p>
+
+<ul>
+<li>The raster calculator expression is 1 / &ldquo;Stowe_velocity&rdquo;.<br /></li>
+<li>Save the output as Stowe_weight</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_WeightsTool_Arcmap.PNG" alt="" /></p>
+
+<h3 id="assess-flow-time-to-outlet-pour-point"><strong>Assess flow time to outlet pour point</strong></h3>
+
+<p><strong>2)</strong> The next step of the task uses the <strong>Flow Length</strong> tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.
+* For Input flow direction raster, choose <i>Stowe_watershed_flow_direction</i>.
+* For Output raster, name it <i>Stowe_time</i>.
+* For Direction of measurement, confirm that <i>Downstream</i> is chosen.
+* For Input weight raster, choose <i>Stowe_weight</i>.
+* Finally, use the <strong>environments</strong> of the tool to clip to our watershed at the same time again.</p>
+
+<p><img src="/courses/geog558/media/Lab8part2image_TimeToolAndEnviro_Arcmap.PNG" alt="" /></p>
+
+<ul>
+<li>Your output should look like so, and has units of seconds.</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_TimeToolOutput_Arcmap.PNG" alt="" /></p>
+
+<h2 id="create-a-unit-hydrograph"><strong>Create a unit hydrograph</strong></h2>
+
+<p>The last step is to derive the graph of area/distance.  In essence, we want the histogram of the output layer.  Although conceptually simple, this can be quite difficult, as outlined in the source tutorial.  Fortunately, a simpler solution exists.  We will first&hellip;
+<strong>1)</strong> Cast the raster to an int</p>
+
+<ul>
+<li>The input raster is <i>Stowe_time</i></li>
+<li>Save the output as <i>Stowe_time_int</i></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part2image_TimeInt_Arcmap.PNG" alt="" /></p>
+
+<p><strong>2)</strong> Export our results.  We can export the raster as a table and use another software package to make a graph, or we can use ArcMap&rsquo;s built in graph maker to create a simple graph.<br />
+<strong>2A)</strong> Open the attribute table and create a graph,
+<strong>2B)</strong> Set the axis value to value and the number of bins to something sane (I started with 35).  Click next and click finish
+<strong>2C)</strong> Right click on the graph and change advanced properties, or export the image
+<strong>2D)</strong> A final graph.</p>
+
+<p><img src="/courses/geog558/media/Lab8part2_UnitHydrography_Arc.PNG" alt="" /></p>
+<div class="footnotes">
 
 <hr />
 
-<h1 id="part-3-examining-nexrad-radar-beam-terrain-blockage"><strong>Part 3: Examining NEXRAD radar beam terrain blockage</strong></h1>
-
-<p>In this part, we will be determining where terrain is blocking NEXRAD radar signals. We will be looking at the NEXRAD radar near Pueblo, Colorado with the designation KPUX.</p>
-
-<h2 id="getting-set-up-2"><strong>Getting set up</strong></h2>
-
-<ul>
-<li>Either start a new session of ArcMap or insert a new dataframe and rename it to NEXRAD</li>
-<li>Add dem200 and nexrad_kpux to your data frame.</li>
-<li>Change the symbology for nexrad_kpux so it’s easily visible against the DEM.</li>
-</ul>
-
-<h2 id="create-nexrad-radar-beam-shapefile"><strong>Create NEXRAD radar beam shapefile</strong></h2>
-
-<ul>
-<li>In your Part03 folder, there is an application called nex2shpv8c.exe. Use Windows Explorer to browse to this file and run it by double-clicking on it.</li>
-<li>We will use this application to create a point shapefile that gives us 360 radials sampling the paths of the radar beams in all directions. In the upper-right window, click on the kpux.txt file (this is a file that contains the specifications for the KPUX radar), then click the Header button. You should see something like the following:
-<img src="/courses/geog558/media/Lab8Image4.png" alt="" /></li>
-<li>Make sure Point Shapefile is selected, check the box to include Lon &amp; Lat info in the attribute table, and click Decode. When you get the message “Finished converting file”, close the utility.</li>
-<li>Add the new shapefile to your data frame in ArcMap. You’ll notice that this file has no spatial reference, so we need to define it.</li>
-</ul>
-
-<h2 id="define-the-spatial-reference-for-the-radar-beam-shapefile"><strong>Define the spatial reference for the radar beam shapefile</strong></h2>
-
-<ul>
-<li>In ArcToolbox, go to Data Management Tools  Projections and Transformations  Define Projection. Select the kpux005pt from the dropdown and define the projection as Geographic Coordinate Systems  North America  NAD 1983 (North American Datum 1983).</li>
-<li>Now that the dataset has the proper spatial reference, it should be drawn on the screen.</li>
-<li>Next we need to reproject it to the DEM’s projected coordinate system.</li>
-<li>In ArcToolbox, go to Data Management Tools  Projections and Transformations  Project
-
-<ul>
-<li>Make the input dataset kpux005pt and name the output kpux_rad005 and make sure it is saved in your Part03 folder.</li>
-<li>Click the hand icon for the output coordinate system and then choose the projection of dem200 and then click OK (See the figure below).
-<img src="/courses/geog558/media/Lab8Image5.png" alt="" /></li>
-<li>The reprojected dataset will appear in your table of contents. Since we will be working with this layer from now on, remove the kpux005pt layer from the data frame.</li>
-</ul></li>
-</ul>
-
-<p>Open the attribute table for kpux_rad005 and look at the fields. The DBZ field indicates the sampling point in the radial starting from the radar. The ZRAD field is an estimation of the height of the centroid of the radar beam at that location. You’ll notice that the first record has a DBZ of 0; this is the radar itself. Unfortunately, the individual radials are not indexed in any way, so we will have to do this manually.</p>
-
-<h2 id="establish-indices-for-radar-beam-radials"><strong>Establish indices for radar beam radials</strong></h2>
-
-<ul>
-<li>Create a new field called RadialID. Make it a Short Integer.  Then, use the field calculator to enter the following expression:
-Int ( ( [OBJECTID] - 2) / 230 ) + 1</li>
-<li>The above expression will assign a radial ID number to each point. The actual radar instrument is assigned a zero, and the rest of the points are assigned radial IDs between 1 and 360. Beam 1 points approximately north, beam 2 is one degree clockwise from beam 1, and so on all the way around to 360, which is one degree counterclockwise from beam 1. Each beam contains 230 points.
-<img src="/courses/geog558/media/Lab8Image6.png" alt="" /></li>
-</ul>
-
-<h2 id="determine-where-radar-beam-intersects-terrain"><strong>Determine where radar beam intersects terrain</strong></h2>
-
-<ul>
-<li>Determine the elevation at each of the points using the DEM. Go to ArcToolbox  Spatial Analyst Tools  Extraction  Extract Values to Points
-
-<ul>
-<li>Set the input point features to kpux_rad005, and the input raster to dem200.</li>
-<li>Make the output file kpux_rex005 and be sure it is saved in your Part03 folder.</li>
-</ul></li>
-<li>From here on, we will be working with this new output layer, so remove the kpux_rad005 layer from your data frame.</li>
-<li>Select the points in the radar beam that are lower than the terrain. Go to Selection  Select by Attributes, make the layer the kpux_rex005 layer you created in the previous step and enter: &ldquo;RASTERVALU&rdquo; &gt;= &ldquo;ZRAD&rdquo;</li>
-<li>Click Apply.</li>
-</ul>
-
-<h2 id="determine-locations-where-the-radar-beam-is-blocked-by-terrain"><strong>Determine locations where the radar beam is blocked by terrain</strong></h2>
-
-<ul>
-<li>Open the attribute table for kpux_rex005.</li>
-<li>Right-click on the header for the RadialID field and click Summarize. Check the Minimum box in the DBZ field, set the output file to min_blk005.dbf.
-
-<ul>
-<li>Make sure you change the file type</li>
-</ul></li>
-<li>Make sure it’s being saved in your Part03 folder, and that Summarize on the selected records only is checked. Click OK.
-<img src="/courses/geog558/media/Lab8Image7.png" alt="" /></li>
-<li>When asked about adding the table to the map, click yes.</li>
-<li>Join the new table to the kpux_rex005 layer based on the RadialID field. Before clicking OK, check Keep only matching records and click OK. If asked about indexing, click yes.
-<img src="/courses/geog558/media/Lab8Image8.png" alt="" /></li>
-<li>Select all the points where the radar beam is blocked. Select by attributes (in the kpux_rex005 layer) and enter the following: &ldquo;kpux_rex005.DBZ&rdquo; &gt; &ldquo;min_blk005.Min_DBZ&rdquo;</li>
-</ul>
-
-<p>We now have a selection subset where the radar beam is blocked by the terrain. Answer Question #15 on your answer sheet.  Now, what we really want to see is where the beam is not blocked.</p>
-
-<h2 id="invert-the-selection-and-create-a-radar-beam-raster"><strong>Invert the selection and create a radar beam raster</strong></h2>
-
-<ul>
-<li>Remove the join in the kpux_rex005 layer and open the attribute table.<br /></li>
-<li>Under options or in the attribute table for kpux_005, click Switch Selection.
-
-<ul>
-<li>If you did this correctly you should have 75,666 points selected and your map should look like so.
-<img src="/courses/geog558/media/Lab8Image9.png" alt="" /></li>
-</ul></li>
-<li>Convert Features to Raster based on the ZRAD field, and make the cell size 2000.</li>
-<li>Call the output file rvis005 and make sure it is being saved in your Part03 folder. Save your map as kpux.mxd in your Part03 folder.
-<img src="/courses/geog558/media/Lab8Image10.png" alt="" /></li>
-</ul>
-
-<h2 id="visualize-the-results-in-3-d"><strong>Visualize the results in 3-D</strong></h2>
-
-<ul>
-<li>Open <strong>ArcScene</strong>, and add the dem200 and rvis005 layers.</li>
-<li>For each layer, go to Properties and click on the Base Heights tab. Click Floating on a custom surface:, and make sure the indicated layer is the same as the one you clicked on (it should be by default). Leave everything else to the defaults.</li>
-<li>Change the color ramp symbology for the rvis005 layer (Properties  Symbology) to something a little more colorful.</li>
-<li>Finally, adjust the Z value of the display. Right-click on Scene Layers (the data frame in ArcMap) and go to Scene Properties.  Make the vertical exaggeration 10 on General tab and click OK.</li>
-<li>Add nexrad_kpux to the scene.</li>
-<li>R-Click on nexrad_kpux and go to Properties  Extrusion</li>
-<li>Check Extrude features in layer. Make the extrusion value 2000.</li>
-<li>Change the symbology to something that shows up well. Save your scene in your Part02 folder as kpux.sxd.</li>
-<li>Zoom in and navigate around the 3D image. Choose an angle that shows the radar beam origin and the beam being blocked by the terrain. Answer Questions #16 and #17 on the answer sheet.
-<img src="/courses/geog558/media/Lab8Image11.png" alt="" /></li>
-</ul>
-
-<p><strong>Congratulations, you are done!  Submit your answer sheet to blackboard.</strong></p>
+<ol>
+<li id="fn:1">MAIDMENT, D.R., OLIVERA, F., CALVER, A., EATHERALL, A. and FRACZEK, W. (1996), UNIT HYDROGRAPH DERIVED FROM A SPATIALLY DISTRIBUTED VELOCITY FIELD. Hydrol. Process., 10: 831-844. doi:10.1002/(SICI)1099-1085(199606)10:6<a href="831::AID-HYP374">831::AID-HYP374</a>3.0.CO;2-N
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
           </div>
 

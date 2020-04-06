@@ -282,7 +282,7 @@ determined based on the following grading scale:&lt;/p&gt;
 
 &lt;p&gt;The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&amp;rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hosting on github page&lt;/a&gt;, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  The following will will walk you through how this website was created.  &lt;strong&gt;I also recommend following the &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34;&gt;Academic theme instructions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hosting on github page&lt;/a&gt;, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  &lt;strong&gt;I also recommend following the &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34;&gt;Academic theme instructions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -295,7 +295,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;create-a-github-account&#34;&gt;&lt;strong&gt;Create a github account:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to see if that’s the case.&lt;/p&gt;
+&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to test that limit.&lt;/p&gt;
 
 &lt;h2 id=&#34;install-git-for-windows&#34;&gt;&lt;strong&gt;Install git for windows:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -334,7 +334,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every field you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config/_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config/_default/config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
+&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every feature you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config/_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config/_default/config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Configuration of Academic
 # Documentation: https://sourcethemes.com/academic/
@@ -6292,6 +6292,457 @@ This lab will introduce you to the concept of modeling a diffusion process using
 &lt;li&gt;Complete questions #3 – #4 on the assignment sheet.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab07Picture09.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab08/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-8-advanced-terrain-analysis&#34;&gt;&lt;strong&gt;Lab 8: Advanced Terrain Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this lab we&amp;rsquo;ll cover a variety of terrain analysis techniques including shelter analysis and a suite of tools within the  hydrology toolbox.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 8: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Question 1&lt;/strong&gt;:&lt;br /&gt;
+What is the value of the majority of the cells on the focalcells raster layer?&lt;/p&gt;
+
+&lt;p&gt;Where are the cells with smaller values located?&lt;/p&gt;
+
+&lt;p&gt;and why do they have smaller values?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;:&lt;br /&gt;
+What is the value range in the shelter analysis raster layer?
+________ to ________&lt;/p&gt;
+
+&lt;p&gt;A large positive value means:&lt;/p&gt;
+
+&lt;p&gt;A value close to zero means:&lt;/p&gt;
+
+&lt;p&gt;A small negative value means:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EuXcVmpEfGZCnaEhU39f4woB4-h-1ZxBX-NHUJcVEsMonA?e=iKEEID&#34;&gt;click to download&lt;/a&gt;&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Relevant part&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;chase_dem&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;DEM for Chase County, KS (30m cell size, elevation in feet)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;bethel&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for the Bethel Valley Quad 1:24,000 topographic map sheet from USGS (30m x 30m cell size; height in meters)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;b_gauge.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Hypothetical gage location on White Oak Creek in the Bethel DEM watershed&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;riofajardo&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for part of the Fajardo municipio in Puerto Rico (30m x 30m cell size; height in meters)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;r_gauge.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Locations of gaging stations &amp;amp; the Rio Fajardo River outlet&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;dem200&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for the area surrounding Pueblo, Colorado (200m x 200m cell size; elevation in meters)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;nexrad_kpux.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Pueblo, CO NEXRAD radar location&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;kpux.txt&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Text file containing the KPUX radar properties&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    This lab, and part 2 in particular, can take a while when CPU is a limiting concern.  I can offer a few suggestions, and an alternative.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pick a smaller area to process.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;You can skip step if you are careful, as outlined in the instructions.&lt;/li&gt;
+&lt;li&gt;If you pause drawing that may speed up UI interactions &lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/PauseIcon.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;When not actively manipulation the tools you can multi-task.  Take the time to understand the workflow, fire off a process, and move onto something else.  Try not to have anything super intensive running in conjunction, but light Microsoft office work shouldn&amp;rsquo;t break you.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;As a stopgap if it&amp;rsquo;s taking too long, I have provided a copy of my part 2 for you to look over.  Use this only if needed.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://open.spotify.com/album/1Un2hgy3OUsbmmFNop3Pj2?si=oYzFtULARyqAQVSG66_pdw&#34;&gt;A great album to jam to while working&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;part-1-terrain-exposure-analysis&#34;&gt;&lt;strong&gt;Part 1: Terrain Exposure Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this part of the lab, we will perform a terrain exposure analysis, referred to as shelter analysis.  The outputs of this workflow are quite popular in archeology studies and inform us as to how protected a given location is.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-set-up&#34;&gt;&lt;strong&gt;Getting set up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Start Arcmap and rename the data frame to Terrain Exposure Analysis.  Because we are working at a relatively small geographic scale, we should first reproject our raster from it&amp;rsquo;s native projection (GSC_North_America_1983) to a more appropriate one for this analysis (NAD_1983_StatePlane_Colorado_South_FIPS_0503 WKID: 26955).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open ArcToolbox and navigate to &lt;strong&gt;Data Management Tools | Projections and Transformations | Raster | Project Raster&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;For your Input raster select you &lt;i&gt;chase_dem&lt;/i&gt; from your lab08\part01 folder using the browse button.
+
+&lt;ul&gt;
+&lt;li&gt;Here we use the browse button to avoid data locks on the elevation data and avoid inadvertently assigning a projection to the dataframe prematurely.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Call the Output raster &lt;i&gt;proj_dem&lt;/i&gt; saved in your lab08\part01 folder&lt;/li&gt;
+&lt;li&gt;To select an Output coordinate system, click on the Spatial Reference Properties Button (the hand with the card)&lt;/li&gt;
+&lt;li&gt;Define the coordinate system as:
+
+&lt;ul&gt;
+&lt;li&gt;Projected Coordinate Systems &amp;gt; State Plane &amp;gt; NAD 1983 (meters) &amp;gt; NAD 1983 StatePlane Colorado South FIPS 0503 (meters).prj&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click OK&lt;/li&gt;
+&lt;li&gt;Make sure that the Resampling technique is set to BILINEAR, and the cell size to 30m&lt;/li&gt;
+&lt;li&gt;Make sure your window looks like the one below (you may need to scroll down or resize the window)&lt;/li&gt;
+&lt;li&gt;Click OK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8Image1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, let&amp;rsquo;s convert the elevation from feet to meters.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Raster calculator: &lt;i&gt;1 foot = 0.3048 meters&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;chase_m&lt;/i&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;terrain-exposure-analysis-procedure&#34;&gt;&lt;strong&gt;Terrain Exposure Analysis Procedure&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Raster Calculator&lt;/strong&gt; to create a constant raster layer on which all of the cells have a value of 1 &lt;i&gt;(“chase_m” / “chase_m”)&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Make the output raster a permanent raster named &lt;i&gt;constant&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Calculate the FOCALSUM on the &lt;i&gt;constant&lt;/i&gt; raster layer using a circular neighborhood with a radius of 2 cell size&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;focalcells&lt;/i&gt; in your part01 folder&lt;/li&gt;
+&lt;li&gt;Answer question #1 on your assignment sheet&lt;/li&gt;
+&lt;li&gt;Calculate the earth volume within the circular neighborhood (do a FOCALSUM operation using &lt;i&gt;chase_m&lt;/i&gt; with a neighborhood radius of 2)&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;earthv1&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus &lt;b&gt;(“chase_m” * “focalcells”)&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;earthv2&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Calculate the shelter raster layer by subtracting &lt;i&gt;earthv2&lt;/i&gt; from &lt;i&gt;earthv1&lt;/i&gt;: &lt;b&gt;(“earthv1” – “earthv2”)&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;shelter&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Answer question #2 on your assignment sheet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;part-2-creating-a-unit-hydrograph&#34;&gt;&lt;strong&gt;Part 2: Creating a Unit Hydrograph&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The instructions herein are guided by material gratefully pilfered from &lt;a href=&#34;https://learn.arcgis.com/en/projects/predict-floods-with-unit-hydrographs/&#34;&gt;https://learn.arcgis.com/en/projects/predict-floods-with-unit-hydrographs/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As is the case with many locations across the globe, when disaster strikes planners and residents realize they have data gaps that they can not readily fill.  Exampled here, the town of Stowe in Vermont suffered considerably when the remnants of Hurricane Irene stuck the Green Mountain region in August 2011. The Little River overflowed and washed out roads, bridges, and culverts. In an effort to learn more about the event, officials tried to recreate the event using a number of techniques.  One way to do this is to construct a hydrograph, which are line graphs determining how much water a stream will discharge during a rainstorm. In this lesson, you&amp;rsquo;ll create those hydrographs using data provided.  If you&amp;rsquo;re interested in trying this for yourself I encourage you to download and run an area meaningful to you.  Refer back to lab 1 if you need a refresher on how to acquire elevation data.  The model builder is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_ModelBuilder_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;precondition-the-elevation-model&#34;&gt;&lt;strong&gt;Precondition the elevation model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Either import the Stowe_DEM and Pour_point or download and select your own pour point for this analysis.&lt;/p&gt;
+
+&lt;h3 id=&#34;identify-and-fill-sinks&#34;&gt;&lt;strong&gt;Identify and Fill Sinks&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; First, you&amp;rsquo;ll identify sinks in your DEM. Although your DEM was derived from reliable data provided by the USGS, sinks may still be present. In order to identify them we need to know which way the water flows over the surface.  The first tool in the workflow is the &lt;strong&gt;Flow Direction&lt;/strong&gt; tool.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input surface raster, choose &lt;i&gt;Stowe_DEM&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;save the output as &lt;i&gt;Stowe_flow_direction&lt;/i&gt; in the geodatabase.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image1arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The symbology of the resulting layer corresponds to the direction water is likely to flow. The layer&amp;rsquo;s appearance isn&amp;rsquo;t important to this analysis, we just need this layer to run the next step&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Open the &lt;strong&gt;sinks tool&lt;/strong&gt;, the next step in the analysis.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input D8 flow direction raster, choose &lt;i&gt;Stowe_flow_direction&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;Stowe_sinks&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image2arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; The final step in the current task uses the &lt;strong&gt;Fill tool&lt;/strong&gt; to remove sinks from a DEM.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input surface raster, choose Stowe_DEM&lt;/li&gt;
+&lt;li&gt;Name the output &lt;i&gt;Stowe_fill&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image3arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;delineate-the-watershed&#34;&gt;&lt;strong&gt;Delineate the Watershed&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Having now removed sinks from the DEM, it is considered &amp;ldquo;hydrologically conditioned&amp;rdquo; and is ready for hydrological analysis. We&amp;rsquo;ll use this DEM to determine the watershed area for the outlet point south of Stowe (or wherever you want to drop your point!). A watershed area is the area in which all flowing water will flow toward a certain point—in this case, your outlet. With the watershed area, you&amp;rsquo;ll be able to limit your subsequent analysis results to the relevant area for your outlet. Determining a watershed requires two components: a flow direction raster layer and an accurate outlet point. One of the most common reasons for a watershed analysis to fail is when the pour point is not adequately aligned to the flow grids.  For that reason the &lt;strong&gt;Snap Pour Point&lt;/strong&gt; tool is often included in a workflow.  This step can be skipped if you are deliberate with your placement of the point, but I&amp;rsquo;ll walk through the workflow using it here. First, you&amp;rsquo;ll determine the stream&amp;rsquo;s exact location by calculating the areas where water accumulates the most. Then, you&amp;rsquo;ll snap the outlet point&amp;rsquo;s location to match the stream and verify it.&lt;/p&gt;
+
+&lt;h3 id=&#34;assess-flow-directions&#34;&gt;&lt;strong&gt;Assess flow directions&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The first step to delineate a watershed is to determine the direction that water will flow in your DEM. That way, you can determine the areas where water will flow to the outlet. To do so, you&amp;rsquo;ll&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Create another &lt;strong&gt;flow direction&lt;/strong&gt; raster layer, this time for your DEM with filled sinks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input surface raster, choose &lt;i&gt;Stowe_fill&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Name your output &lt;i&gt;Stowe_fill_flow_direction&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_FlowDirFill_arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;snap-outlet-to-stream&#34;&gt;&lt;strong&gt;Snap outlet to stream&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Open the &lt;strong&gt;Flow Accumulation tool&lt;/strong&gt;. This tool creates a raster layer that indicates where water is most likely to accumulate. The flow accumulation for each cell is expressed as a numeric value based on the number of cells that flow into that cell. Cells with high values of accumulation often coincide with the locations of flowing water bodies. With your flow accumulation raster, you&amp;rsquo;ll identify the Little River that flows through Stowe.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For your Input flow direction raster, choose &lt;i&gt;Stowe_fill_flow_direction&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Name your Output accumulation raster &lt;i&gt;Stowe_flow_accumulation&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;ll leave the remaining parameters unchanged. The first of these parameters applies a weight to each cell, which is useful when you expect water to be distributed in ways that aren&amp;rsquo;t uniform (for instance, in larger study areas where precipitation levels may vary significantly). The second parameter determines whether accumulation will be measured with integers or floating points. Floating point, the default value, allows for the inclusion of decimal places, making it more accurate in most situations. The third parameter determines the input flow direction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_FillFlowAccumulation_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next step of the task opens the Measure Distance tool (which is a tool on the ribbon, not a geoprocessing tool). You&amp;rsquo;ll use this tool to measure the distance between the current outlet point and the Little River&amp;rsquo;s location as represented in the flow accumulation raster. You can use this distance to then snap the outlet point to the correct cell so that it precisely lines up with the stream. Be sure you&amp;rsquo;re as precise as feasible by zooming in closer to the outlet point.  click the outlet point. Then double-click the approximate center of the nearest cell with a high flow accumulation value.  The Measure Distance tool&amp;rsquo;s window updates to include the length of the measurement. I measurement approximately 50 meters so I&amp;rsquo;ll round to a distance of 60 meters when I snap the outlet point to the stream. A snapping distance that is slightly higher than the measured distance will help avoid ambiguity in the tool. When deciding on a snapping distance, be sure it doesn&amp;rsquo;t exceed the measured distance by too much, or the point may snap to an area further downstream.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_Measure_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Open up the &lt;strong&gt;Snap Pour Point&lt;/strong&gt; tool.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input raster or feature pour point data, choose &lt;i&gt;Pour_point&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;For Input accumulation raster, choose &lt;i&gt;Stowe_flow_accumulation&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Name the output raster &lt;i&gt;Stowe_snapped_outlet&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;For Snap distance, type 60.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SnapRas_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The tool runs and the snapped outlet raster layer is added to the map. The raster displays a single cell that represents the outlet&amp;rsquo;s new location. In the example image, the snapped outlet is represented as a yellow cell.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SnapRasOutput_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;delineate-watershed-upstream-of-outlet&#34;&gt;&lt;strong&gt;Delineate watershed upstream of outlet&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Now that you have both a flow direction layer and an accurate outlet layer, you can determine the watershed area upstream of the outlet.&lt;br /&gt;
+&lt;strong&gt;4)&lt;/strong&gt; The final step of the task opens the &lt;strong&gt;Watershed tool&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input D8 flow direction raster, choose &lt;i&gt;Stowe_fill_flow_direction&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;For Input raster or feature pour point data, choose &lt;i&gt;Stowe_snapped_outlet&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;For Output raster, set the name to &lt;i&gt;Stowe_watershed&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_Watershed_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-velocity-field&#34;&gt;&lt;strong&gt;Create a velocity field&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Next, you&amp;rsquo;ll start determining how long it takes water to reach the outlet, allowing the town to better predict when flooding will occur during a hypothetical rainfall event. To determine the time it takes water to flow somewhere, you first need to determine how fast water flows. You&amp;rsquo;ll calculate the speed of flowing water with a velocity field, another type of raster layer. There are many types of velocity fields, and they can be calculated with a wide variety of mathematical equations. You&amp;rsquo;ll create a velocity field that is spatially variant, but time and discharge invariant. This means that your velocity field makes the following assumptions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Velocity is affected by spatial components such as slope and flow accumulation (spatially variant).&lt;/li&gt;
+&lt;li&gt;Velocity at a given location does not change over time (time invariant).&lt;/li&gt;
+&lt;li&gt;Velocity at a given location does not depend on the location&amp;rsquo;s rate of water flow (discharge invariant).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In reality, velocity could be time variant and would definitely be discharge variant. However, incorporating these variants would require additional datasets that might not be available and use modeling techniques that might not be replicable in a GIS environment. The spatially variant, time- and discharge-invariant velocity field will provide a generally accurate result, although it&amp;rsquo;s important to remember that any method will be only an approximation of observed phenomena. You&amp;rsquo;ll use a method for creating velocity fields first proposed by Maidment et al. (1996).&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; In this method, each cell in the velocity field is assigned a velocity based on the local slope and the upstream contributing area (the number of cells that flow into that cell, or flow accumulation). They use the following equation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;V = V&lt;sub&gt;m&lt;/sub&gt; * (s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;) / (s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;&lt;sub&gt;m&lt;/sub&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;V is the velocity of a single cell with a local slope of s and an upstream contributing area of A.&lt;/li&gt;
+&lt;li&gt;Coefficients b and c can be determined by calibration.  In this scenario, you&amp;rsquo;ll use the method&amp;rsquo;s recommended value of b = c = 0.5.&lt;/li&gt;
+&lt;li&gt;V&lt;sub&gt;m&lt;/sub&gt; is the average velocity of all cells in the watershed. You&amp;rsquo;ll assume an average velocity of V&lt;sub&gt;m&lt;/sub&gt; = 0.1 m/s.&lt;/li&gt;
+&lt;li&gt;s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;&lt;sub&gt;m&lt;/sub&gt; is the average slope-area term throughout the watershed. To avoid results that are unrealistically fast or slow, you&amp;rsquo;ll set limits for minimum and maximum velocities. The lower limit will be 0.02 meters per second, while the upper limit will be 2 meters per second.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This equation is only one of many ways that a velocity field can be calculated, and it comes with several assumptions and limitations of its own.&lt;/p&gt;
+
+&lt;h3 id=&#34;create-the-slope-raster&#34;&gt;&lt;strong&gt;Create the slope raster&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The primary variables in the equation you&amp;rsquo;ll use for your velocity field are slope and upstream contributing area. You already have a raster layer for upstream contributing area: the flow accumulation layer you created above, but we don&amp;rsquo;t yet have a slope layer, so that&amp;rsquo;s the next one we&amp;rsquo;ll create.&lt;br /&gt;
+&lt;strong&gt;1)&lt;/strong&gt; Open the &lt;strong&gt;Slope tool&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For the Input raster, choose &lt;i&gt;Stowe_DEM&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Name your Output raster &lt;i&gt;Stowe_slope&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_Slope_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;calculate-the-slope-area-term&#34;&gt;&lt;strong&gt;Calculate the slope-area term&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Now that we have a raster layer for both slope and flow accumulation area, we&amp;rsquo;ll calculate a new raster layer that combines them. This layer will show the slope-area term (the value s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;&lt;sub&gt;m&lt;/sub&gt; from the Maidment et al. equation).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step can be accomplished using the &lt;strong&gt;Raster Calculator tool&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the fields to create the expression: Float((&amp;ldquo;Stowe_slope&amp;rdquo; ^ 0.5) * (&amp;ldquo;Stowe_flow_accumulation&amp;rdquo; ^ 0.5))&lt;/li&gt;
+&lt;li&gt;Name your output raster &lt;i&gt;Stowe_slope_area_term&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SlopeArea_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finally, lets use the environments of this tool to clip to our watershed at the same time:
+In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &lt;strong&gt;Raster Analysis&lt;/strong&gt; for &lt;strong&gt;Mask&lt;/strong&gt;, choose &lt;strong&gt;Stowe_watershed&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SlopeArea_ArcmapEnvironments.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Your output should look like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SlopeAreaOutput_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;calculate-the-velocity-field&#34;&gt;&lt;strong&gt;Calculate the velocity field&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Now that you have the slope-area term, you can calculate a velocity field using the following equation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;V = V&lt;sub&gt;m&lt;/sub&gt; * (s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;) / (s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;&lt;sub&gt;m&lt;/sub&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As mentioned previously,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;V&lt;sub&gt;m&lt;/sub&gt; is the average velocity of all cells in the watershed. You&amp;rsquo;ll use an assumed average value of V&lt;sub&gt;m&lt;/sub&gt; = 0.1, which is recommended by Maidment et al.&lt;/li&gt;
+&lt;li&gt;Similarly, s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;&lt;sub&gt;m&lt;/sub&gt; is the average slope-area term across the watershed. Because you&amp;rsquo;ve calculated slope-area term for the watershed, we can simply pull the median out of our raster.  To find it you need to&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3A)&lt;/strong&gt; right-click &lt;strong&gt;Stowe_slope_area_term&lt;/strong&gt; and choose &lt;strong&gt;Properties&lt;/strong&gt;, and under the &lt;strong&gt;Source&lt;/strong&gt; tab and expand the &lt;strong&gt;Statistics&lt;/strong&gt; heading.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_LayerStats_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3B)&lt;/strong&gt; and then open a &lt;strong&gt;raster calculator&lt;/strong&gt; and enter the expression, Where &lt;strong&gt;[Mean slope-area term]&lt;/strong&gt; is the value that you copied from the &lt;strong&gt;Layer Properties&lt;/strong&gt; window.:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.1 * (&amp;ldquo;Stowe_slope_area_term&amp;rdquo; / [Mean slope-area term])&lt;/li&gt;
+&lt;li&gt;Call that output Stowe_velocity_unlimited&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_VeloUnlimitTool_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;limit-the-velocities&#34;&gt;&lt;strong&gt;Limit the velocities&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The raster layer you created is a velocity field, but it has unrealistically high and low velocities. For instance, some values in the field have a velocity of 0 meters per second, which is unlikely during an extreme rainfall event. Likewise, the maximum value of approximately 7.5 meters per second is unrealistic even during a major flood. You&amp;rsquo;ll limit the velocity values with a lower limit of 0.02 meters per second and an upper limit of 2 meters per second.  Bearing in mind that there are a number of ways to end up with the desired output, the most direct in my opinion is a &lt;a href=&#34;https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm&#34;&gt;complex raster calculator con expression&lt;/a&gt;.  Other alternatives include reclassifying, multiple con tools, or a clamp tool to name a few.
+&lt;strong&gt;4)&lt;/strong&gt; Open up a &lt;strong&gt;Raster Calculator&lt;/strong&gt; and enter your expression.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;My expression looks like so: Con(&amp;ldquo;Stowe_velocity_unlimited&amp;rdquo; &amp;lt; 0.02,0.02,Con(&amp;ldquo;Stowe_velocity_unlimited&amp;rdquo; &amp;gt; 2,2,&amp;ldquo;Stowe_velocity_unlimited&amp;rdquo;))
+
+&lt;ul&gt;
+&lt;li&gt;Read it from right to left: &amp;ldquo;If &amp;ldquo;Raster&amp;rdquo; is less than x, put y, otherwise; if &amp;ldquo;Raster&amp;rdquo; is greater than than w, put z, otherwise put &amp;ldquo;Raster&amp;rdquo;&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Save your output as &lt;i&gt;Stowe_velocity&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_VelocityClampExpression_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;create-an-isochrone-map&#34;&gt;&lt;strong&gt;Create an isochrone map&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Having now created a velocity field that predicts how fast water will flow throughout Stowe, we still need to know the time it takes to get to the pour point.  In this step we&amp;rsquo;ll create an isochrone map, which maps the time it takes to reach a specified location from anywhere else in an area. To create the isochrone map, you&amp;rsquo;ll first create a weight grid. Then, you&amp;rsquo;ll assess the time it takes for water to reach the outlet.&lt;/p&gt;
+
+&lt;h3 id=&#34;create-a-weight-grid&#34;&gt;&lt;strong&gt;Create a weight grid&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Flow time is calculated with a relatively simple equation: The length that water must flow divided by the speed at which it flows. While you know how fast water flows due to your velocity field, you don&amp;rsquo;t know flow length. To determine flow length, you need two variables: flow direction (which you know) and weight (which you don&amp;rsquo;t). Weight, in regard to flow, represents impedance. For instance, water flowing through forested land takes longer than water flowing over smooth rock because it&amp;rsquo;s impeded by terrain. While calculating weight may seem difficult without detailed terrain data, we can simplify our model by assuming that this weight is the inverse of the velocity we calculated.  This is more formally notated as&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Weight [L&lt;sup&gt;-1&lt;/sup&gt;T] = 1 / Velocity [LT&lt;sup&gt;-1&lt;/sup&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Thus, it is a simple matter to create our weights grid with a &lt;strong&gt;raster calculator&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The raster calculator expression is 1 / &amp;ldquo;Stowe_velocity&amp;rdquo;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as Stowe_weight&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_WeightsTool_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;assess-flow-time-to-outlet-pour-point&#34;&gt;&lt;strong&gt;Assess flow time to outlet pour point&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step of the task uses the &lt;strong&gt;Flow Length&lt;/strong&gt; tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.
+* For Input flow direction raster, choose &lt;i&gt;Stowe_watershed_flow_direction&lt;/i&gt;.
+* For Output raster, name it &lt;i&gt;Stowe_time&lt;/i&gt;.
+* For Direction of measurement, confirm that &lt;i&gt;Downstream&lt;/i&gt; is chosen.
+* For Input weight raster, choose &lt;i&gt;Stowe_weight&lt;/i&gt;.
+* Finally, use the &lt;strong&gt;environments&lt;/strong&gt; of the tool to clip to our watershed at the same time again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_TimeToolAndEnviro_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your output should look like so, and has units of seconds.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_TimeToolOutput_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-unit-hydrograph&#34;&gt;&lt;strong&gt;Create a unit hydrograph&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The last step is to derive the graph of area/distance.  In essence, we want the histogram of the output layer.  Although conceptually simple, this can be quite difficult, as outlined in the source tutorial.  Fortunately, a simpler solution exists.  We will first&amp;hellip;
+&lt;strong&gt;1)&lt;/strong&gt; Cast the raster to an int&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The input raster is &lt;i&gt;Stowe_time&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;Stowe_time_int&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_TimeInt_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Export our results.  We can export the raster as a table and use another software package to make a graph, or we can use ArcMap&amp;rsquo;s built in graph maker to create a simple graph.&lt;br /&gt;
+&lt;strong&gt;2A)&lt;/strong&gt; Open the attribute table and create a graph,
+&lt;strong&gt;2B)&lt;/strong&gt; Set the axis value to value and the number of bins to something sane (I started with 35).  Click next and click finish
+&lt;strong&gt;2C)&lt;/strong&gt; Right click on the graph and change advanced properties, or export the image
+&lt;strong&gt;2D)&lt;/strong&gt; A final graph.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_UnitHydrography_Arc.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;MAIDMENT, D.R., OLIVERA, F., CALVER, A., EATHERALL, A. and FRACZEK, W. (1996), UNIT HYDROGRAPH DERIVED FROM A SPATIALLY DISTRIBUTED VELOCITY FIELD. Hydrol. Process., 10: 831-844. doi:10.1002/(SICI)1099-1085(199606)10:6&lt;a href=&#34;831::AID-HYP374&#34;&gt;831::AID-HYP374&lt;/a&gt;3.0.CO;2-N
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     

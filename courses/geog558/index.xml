@@ -2955,6 +2955,12 @@ ________ to ________&lt;/p&gt;
 
 &lt;p&gt;A small negative value means:&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Question 3&lt;/strong&gt;:&lt;br /&gt;
+What is the interpretation of the sinks output?  What would the correct symbology of this layer look like?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;:
+Paste your final unit hydrograph here.&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
@@ -2974,44 +2980,29 @@ ________ to ________&lt;/p&gt;
     &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 1&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part01&lt;/th&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;chase_dem&lt;/td&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;DEM for Chase County, KS (30m cell size, elevation in feet)&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;bethel&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for the Bethel Valley Quad 1:24,000 topographic map sheet from USGS (30m x 30m cell size; height in meters)&lt;/td&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part02&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Pour_point&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A point feature layer that depicts the outlet downstream of the Little River where you&amp;rsquo;ll create a unit hydrograph.&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;b_gauge.shp&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Hypothetical gage location on White Oak Creek in the Bethel DEM watershed&lt;/td&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part02&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Stowe_boundary&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A polygon feature layer that depicts the boundaries of Stowe, Vermont. This layer was derived from data available from &lt;a href=&#34;https://vcgi.vermont.gov/&#34;&gt;Vermont Center for Geographic Information (VCGI)&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;riofajardo&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for part of the Fajardo municipio in Puerto Rico (30m x 30m cell size; height in meters)&lt;/td&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part02&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Stowe_DEM&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A raster layer that depicts elevation within the study area. It also has a resolution of 30 meters. It was derived from data made available by the &lt;a href=&#34;https://www.usgs.gov/&#34;&gt;United States Geological Survey (USGS)&lt;/a&gt;.&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 2&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;r_gauge.shp&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Locations of gaging stations &amp;amp; the Rio Fajardo River outlet&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;dem200&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Raster representing a DEM for the area surrounding Pueblo, Colorado (200m x 200m cell size; elevation in meters)&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;nexrad_kpux.shp&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Pueblo, CO NEXRAD radar location&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;tg-0pky&#34;&gt;Part 3&lt;/th&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;kpux.txt&lt;/td&gt;
-    &lt;td class=&#34;tg-btxf&#34;&gt;Text file containing the KPUX radar properties&lt;/td&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Part02_worked&lt;/th&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Stowe hydrology folder&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A worked version of part 2 in consideration of processing power&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
@@ -3238,7 +3229,7 @@ ________ to ________&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step can be accomplished using the &lt;strong&gt;Raster Calculator tool&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Use the fields to create the expression: Float((&amp;ldquo;Stowe_slope&amp;rdquo; ^ 0.5) * (&amp;ldquo;Stowe_flow_accumulation&amp;rdquo; ^ 0.5))&lt;/li&gt;
+&lt;li&gt;Use the fields to create the expression: &lt;br&gt;&lt;code&gt;Float((&amp;quot;Stowe_slope&amp;quot; ^ 0.5) * (&amp;quot;Stowe_flow_accumulation&amp;quot; ^ 0.5))&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Name your output raster &lt;i&gt;Stowe_slope_area_term&lt;/i&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -3277,7 +3268,7 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 &lt;p&gt;&lt;strong&gt;3B)&lt;/strong&gt; and then open a &lt;strong&gt;raster calculator&lt;/strong&gt; and enter the expression, Where &lt;strong&gt;[Mean slope-area term]&lt;/strong&gt; is the value that you copied from the &lt;strong&gt;Layer Properties&lt;/strong&gt; window.:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;0.1 * (&amp;ldquo;Stowe_slope_area_term&amp;rdquo; / [Mean slope-area term])&lt;/li&gt;
+&lt;li&gt;You expression should look like:&lt;br&gt;&lt;code&gt;0.1 * (&amp;quot;Stowe_slope_area_term&amp;quot; / [Mean slope-area term])&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Call that output Stowe_velocity_unlimited&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -3289,7 +3280,7 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 &lt;strong&gt;4)&lt;/strong&gt; Open up a &lt;strong&gt;Raster Calculator&lt;/strong&gt; and enter your expression.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;My expression looks like so: Con(&amp;ldquo;Stowe_velocity_unlimited&amp;rdquo; &amp;lt; 0.02,0.02,Con(&amp;ldquo;Stowe_velocity_unlimited&amp;rdquo; &amp;gt; 2,2,&amp;ldquo;Stowe_velocity_unlimited&amp;rdquo;))
+&lt;li&gt;My expression looks like so: &lt;br&gt;&lt;code&gt;Con(&amp;quot;Stowe_velocity_unlimited&amp;quot; &amp;lt; 0.02,0.02,Con(&amp;quot;Stowe_velocity_unlimited&amp;quot; &amp;gt; 2,2,&amp;quot;Stowe_velocity_unlimited&amp;quot;))&lt;/code&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Read it from right to left: &amp;ldquo;If &amp;ldquo;Raster&amp;rdquo; is less than x, put y, otherwise; if &amp;ldquo;Raster&amp;rdquo; is greater than than w, put z, otherwise put &amp;ldquo;Raster&amp;rdquo;&amp;rdquo;&lt;/li&gt;
@@ -3314,20 +3305,23 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 &lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Thus, it is a simple matter to create our weights grid with a &lt;strong&gt;raster calculator&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The raster calculator expression is 1 / &amp;ldquo;Stowe_velocity&amp;rdquo;.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Save the output as Stowe_weight&lt;/li&gt;
+&lt;li&gt;The raster calculator expression is:&lt;br&gt;&lt;code&gt;1 / &amp;quot;Stowe_velocity&amp;quot;&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Save the output as &lt;i&gt;Stowe_weight&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_WeightsTool_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;assess-flow-time-to-outlet-pour-point&#34;&gt;&lt;strong&gt;Assess flow time to outlet pour point&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step of the task uses the &lt;strong&gt;Flow Length&lt;/strong&gt; tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.
-* For Input flow direction raster, choose &lt;i&gt;Stowe_watershed_flow_direction&lt;/i&gt;.
-* For Output raster, name it &lt;i&gt;Stowe_time&lt;/i&gt;.
-* For Direction of measurement, confirm that &lt;i&gt;Downstream&lt;/i&gt; is chosen.
-* For Input weight raster, choose &lt;i&gt;Stowe_weight&lt;/i&gt;.
-* Finally, use the &lt;strong&gt;environments&lt;/strong&gt; of the tool to clip to our watershed at the same time again.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step of the task uses the &lt;strong&gt;Flow Length&lt;/strong&gt; tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For Input flow direction raster, choose &lt;i&gt;Stowe_watershed_flow_direction&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;For Output raster, name it &lt;i&gt;Stowe_time&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;For Direction of measurement, confirm that &lt;i&gt;Downstream&lt;/i&gt; is chosen.&lt;/li&gt;
+&lt;li&gt;For Input weight raster, choose &lt;i&gt;Stowe_weight&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Finally, use the &lt;strong&gt;environments&lt;/strong&gt; of the tool to clip to our watershed at the same time again.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_TimeToolAndEnviro_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -3350,12 +3344,14 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_TimeInt_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Export our results.  We can export the raster as a table and use another software package to make a graph, or we can use ArcMap&amp;rsquo;s built in graph maker to create a simple graph.&lt;br /&gt;
-&lt;strong&gt;2A)&lt;/strong&gt; Open the attribute table and create a graph,
-&lt;strong&gt;2B)&lt;/strong&gt; Set the axis value to value and the number of bins to something sane (I started with 35).  Click next and click finish
-&lt;strong&gt;2C)&lt;/strong&gt; Right click on the graph and change advanced properties, or export the image
+&lt;strong&gt;2A)&lt;/strong&gt; Open the attribute table and create a graph,&lt;br /&gt;
+&lt;strong&gt;2B)&lt;/strong&gt; Set the axis value to value and the number of bins to something sane (I started with 35).  Click next and click finish.&lt;br /&gt;
+&lt;strong&gt;2C)&lt;/strong&gt; Right click on the graph and change advanced properties, or export the image&lt;br /&gt;
 &lt;strong&gt;2D)&lt;/strong&gt; A final graph.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_UnitHydrography_Arc.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Answer questions 3 and 4 related to this part of the lab.  Submit your final answer sheet to blackboard.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 
 &lt;hr /&gt;

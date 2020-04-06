@@ -622,7 +622,7 @@ Paste your final unit hydrograph here.</p>
 
 <p>As is the case with many locations across the globe, when disaster strikes planners and residents realize they have data gaps that they can not readily fill.  Exampled here, the town of Stowe in Vermont suffered considerably when the remnants of Hurricane Irene stuck the Green Mountain region in August 2011. The Little River overflowed and washed out roads, bridges, and culverts. In an effort to learn more about the event, officials tried to recreate the event using a number of techniques.  One way to do this is to construct a hydrograph, which are line graphs determining how much water a stream will discharge during a rainstorm. In this lesson, you&rsquo;ll create those hydrographs using data provided.  If you&rsquo;re interested in trying this for yourself I encourage you to download and run an area meaningful to you.  Refer back to lab 1 if you need a refresher on how to acquire elevation data.  The model builder is shown below:</p>
 
-<p><img src="/courses/geog558/media/Lab8part2_ModelBuilder_Arcmap.PNG" alt="" /></p>
+<p><img src="/courses/geog558/media/Lab8part2_ModelBuilder_Arcmap.png" alt="" /></p>
 
 <h2 id="precondition-the-elevation-model"><strong>Precondition the elevation model</strong></h2>
 
@@ -730,7 +730,7 @@ Paste your final unit hydrograph here.</p>
 <li>Velocity at a given location does not depend on the location&rsquo;s rate of water flow (discharge invariant).</li>
 </ul>
 
-<p>In reality, velocity could be time variant and would definitely be discharge variant. However, incorporating these variants would require additional datasets that might not be available and use modeling techniques that might not be replicable in a GIS environment. The spatially variant, time- and discharge-invariant velocity field will provide a generally accurate result, although it&rsquo;s important to remember that any method will be only an approximation of observed phenomena. You&rsquo;ll use a method for creating velocity fields first proposed by Maidment et al. (1996).<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> In this method, each cell in the velocity field is assigned a velocity based on the local slope and the upstream contributing area (the number of cells that flow into that cell, or flow accumulation). They use the following equation:</p>
+<p>In reality, velocity could be time variant and would definitely be discharge variant. However, incorporating these variants would require additional datasets that might not be available and use modeling techniques that might not be replicable in a GIS environment. The spatially variant, time- and discharge-invariant velocity field will provide a generally accurate result, although it&rsquo;s important to remember that any method will be only an approximation of observed phenomena. You&rsquo;ll use a method for creating velocity fields first proposed by Maidment et al. (1996)<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>. In this method, each cell in the velocity field is assigned a velocity based on the local slope and the upstream contributing area (the number of cells that flow into that cell, or flow accumulation). They use the following equation:</p>
 
 <blockquote>
 <p>V = V<sub>m</sub> * (s<sup>b</sup>A<sup>c</sup>) / (s<sup>b</sup>A<sup>c</sup><sub>m</sub>)</p>
@@ -853,7 +853,7 @@ In the tool parameters, click <strong>Environments</strong>. Under <strong>Raste
 <p><strong>2)</strong> The next step of the task uses the <strong>Flow Length</strong> tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.</p>
 
 <ul>
-<li>For Input flow direction raster, choose <i>Stowe_watershed_flow_direction</i>.</li>
+<li>For Input flow direction raster, choose <i>Stowe_fill_flow_direction</i>.</li>
 <li>For Output raster, name it <i>Stowe_time</i>.</li>
 <li>For Direction of measurement, confirm that <i>Downstream</i> is chosen.</li>
 <li>For Input weight raster, choose <i>Stowe_weight</i>.</li>

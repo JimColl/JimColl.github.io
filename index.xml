@@ -6463,7 +6463,7 @@ Paste your final unit hydrograph here.&lt;/p&gt;
 
 &lt;p&gt;As is the case with many locations across the globe, when disaster strikes planners and residents realize they have data gaps that they can not readily fill.  Exampled here, the town of Stowe in Vermont suffered considerably when the remnants of Hurricane Irene stuck the Green Mountain region in August 2011. The Little River overflowed and washed out roads, bridges, and culverts. In an effort to learn more about the event, officials tried to recreate the event using a number of techniques.  One way to do this is to construct a hydrograph, which are line graphs determining how much water a stream will discharge during a rainstorm. In this lesson, you&amp;rsquo;ll create those hydrographs using data provided.  If you&amp;rsquo;re interested in trying this for yourself I encourage you to download and run an area meaningful to you.  Refer back to lab 1 if you need a refresher on how to acquire elevation data.  The model builder is shown below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_ModelBuilder_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_ModelBuilder_Arcmap.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;precondition-the-elevation-model&#34;&gt;&lt;strong&gt;Precondition the elevation model&lt;/strong&gt;&lt;/h2&gt;
 
@@ -6571,7 +6571,7 @@ Paste your final unit hydrograph here.&lt;/p&gt;
 &lt;li&gt;Velocity at a given location does not depend on the location&amp;rsquo;s rate of water flow (discharge invariant).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In reality, velocity could be time variant and would definitely be discharge variant. However, incorporating these variants would require additional datasets that might not be available and use modeling techniques that might not be replicable in a GIS environment. The spatially variant, time- and discharge-invariant velocity field will provide a generally accurate result, although it&amp;rsquo;s important to remember that any method will be only an approximation of observed phenomena. You&amp;rsquo;ll use a method for creating velocity fields first proposed by Maidment et al. (1996).&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; In this method, each cell in the velocity field is assigned a velocity based on the local slope and the upstream contributing area (the number of cells that flow into that cell, or flow accumulation). They use the following equation:&lt;/p&gt;
+&lt;p&gt;In reality, velocity could be time variant and would definitely be discharge variant. However, incorporating these variants would require additional datasets that might not be available and use modeling techniques that might not be replicable in a GIS environment. The spatially variant, time- and discharge-invariant velocity field will provide a generally accurate result, although it&amp;rsquo;s important to remember that any method will be only an approximation of observed phenomena. You&amp;rsquo;ll use a method for creating velocity fields first proposed by Maidment et al. (1996)&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. In this method, each cell in the velocity field is assigned a velocity based on the local slope and the upstream contributing area (the number of cells that flow into that cell, or flow accumulation). They use the following equation:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;V = V&lt;sub&gt;m&lt;/sub&gt; * (s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;) / (s&lt;sup&gt;b&lt;/sup&gt;A&lt;sup&gt;c&lt;/sup&gt;&lt;sub&gt;m&lt;/sub&gt;)&lt;/p&gt;
@@ -6694,7 +6694,7 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step of the task uses the &lt;strong&gt;Flow Length&lt;/strong&gt; tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;For Input flow direction raster, choose &lt;i&gt;Stowe_watershed_flow_direction&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;For Input flow direction raster, choose &lt;i&gt;Stowe_fill_flow_direction&lt;/i&gt;.&lt;/li&gt;
 &lt;li&gt;For Output raster, name it &lt;i&gt;Stowe_time&lt;/i&gt;.&lt;/li&gt;
 &lt;li&gt;For Direction of measurement, confirm that &lt;i&gt;Downstream&lt;/i&gt; is chosen.&lt;/li&gt;
 &lt;li&gt;For Input weight raster, choose &lt;i&gt;Stowe_weight&lt;/i&gt;.&lt;/li&gt;

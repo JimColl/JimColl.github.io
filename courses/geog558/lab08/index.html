@@ -415,8 +415,13 @@ and why do they have smaller values?"><meta property="og:image" content="https:/
 <li><a href="#materials"><strong>Materials</strong></a></li>
 <li><a href="#part-1-terrain-exposure-analysis"><strong>Part 1: Terrain Exposure Analysis</strong></a>
 <ul>
-<li><a href="#getting-set-up"><strong>Getting set up</strong></a></li>
-<li><a href="#terrain-exposure-analysis-procedure"><strong>Terrain Exposure Analysis Procedure</strong></a></li>
+<li><a href="#terrain-exposure-analysis-procedure"><strong>Terrain Exposure Analysis Procedure</strong></a>
+<ul>
+<li><a href="#project-and-normalize-raster"><strong>Project and normalize raster</strong></a></li>
+<li><a href="#calculate-the-volume-of-earth-around-a-window"><strong>Calculate the volume of earth around a window</strong></a></li>
+<li><a href="#calculate-the-earth-volume-of-a-cylinder-of-earth-around-a-window"><strong>Calculate the earth volume of a cylinder of earth around a window</strong></a></li>
+<li><a href="#calculate-the-shelter-layer"><strong>Calculate the shelter layer</strong></a></li>
+</ul></li>
 </ul></li>
 <li><a href="#part-2-creating-a-unit-hydrograph"><strong>Part 2: Creating a Unit Hydrograph</strong></a>
 <ul>
@@ -562,11 +567,14 @@ Paste your final unit hydrograph here.</p>
 
 <h1 id="part-1-terrain-exposure-analysis"><strong>Part 1: Terrain Exposure Analysis</strong></h1>
 
-<p>In this part of the lab, we will perform a terrain exposure analysis, referred to as shelter analysis.  The outputs of this workflow are quite popular in archeology studies and inform us as to how protected a given location is.</p>
+<p>In this part of the lab, we will perform a terrain exposure analysis, referred to as shelter analysis.  The outputs of this workflow are quite popular in archeology studies and inform us as to how protected a given location is.
+<img src="/courses/geog558/media/Lab8part1_ModelBuilder_Arcmap.png" alt="" /></p>
 
-<h2 id="getting-set-up"><strong>Getting set up</strong></h2>
+<h2 id="terrain-exposure-analysis-procedure"><strong>Terrain Exposure Analysis Procedure</strong></h2>
 
-<p>Start Arcmap and rename the data frame to Terrain Exposure Analysis.  Because we are working at a relatively small geographic scale, we should first reproject our raster from it&rsquo;s native projection (GSC_North_America_1983) to a more appropriate one for this analysis (NAD_1983_StatePlane_Colorado_South_FIPS_0503 WKID: 26955).</p>
+<h3 id="project-and-normalize-raster"><strong>Project and normalize raster</strong></h3>
+
+<p><strong>1)</strong>Start Arcmap and rename the data frame to Terrain Exposure Analysis.  Because we are working at a relatively small geographic scale, we should first reproject our raster from it&rsquo;s native projection (GSC_North_America_1983) to a more appropriate one for this analysis (NAD_1983_StatePlane_Colorado_South_FIPS_0503 WKID: 26955).</p>
 
 <ul>
 <li>Open ArcToolbox and navigate to <strong>Data Management Tools | Projections and Transformations | Raster | Project Raster</strong></li>
@@ -581,36 +589,60 @@ Paste your final unit hydrograph here.</p>
 
 <ul>
 <li>Projected Coordinate Systems &gt; State Plane &gt; NAD 1983 (meters) &gt; NAD 1983 StatePlane Colorado South FIPS 0503 (meters).prj</li>
+<li>You can also use the search tool to find it, 26955</li>
+<li>Click OK</li>
 </ul></li>
-<li>Click OK</li>
-<li>Make sure that the Resampling technique is set to BILINEAR, and the cell size to 30m</li>
-<li>Make sure your window looks like the one below (you may need to scroll down or resize the window)</li>
-<li>Click OK</li>
+<li>Set the Resampling technique to BILINEAR and click OK</li>
 </ul>
 
-<p><img src="/courses/geog558/media/Lab8Image1.png" alt="" /></p>
+<p><img src="/courses/geog558/media/Lab8part1_proj_arcmap.PNG" alt="" /></p>
 
-<p>Finally, let&rsquo;s convert the elevation from feet to meters.</p>
+<p><strong>2)</strong>Finally, convert the elevation from feet to meters.</p>
 
 <ul>
-<li>Raster calculator: <i>1 foot = 0.3048 meters</i><br /></li>
+<li>Raster calculator expression: <i>proj_dem * 0.3048</i><br /></li>
 <li>Name the output <i>chase_m</i><br /></li>
 </ul>
 
-<h2 id="terrain-exposure-analysis-procedure"><strong>Terrain Exposure Analysis Procedure</strong></h2>
+<h3 id="calculate-the-volume-of-earth-around-a-window"><strong>Calculate the volume of earth around a window</strong></h3>
+
+<p><strong>1)</strong>First let&rsquo;s calculate the volume of earth per cell.</p>
 
 <ul>
-<li>Use <strong>Raster Calculator</strong> to create a constant raster layer on which all of the cells have a value of 1 <i>(“chase_m” / “chase_m”)</i>.</li>
-<li>Make the output raster a permanent raster named <i>constant</i></li>
-<li>Calculate the FOCALSUM on the <i>constant</i> raster layer using a circular neighborhood with a radius of 2 cell size</li>
-<li>Save the output raster layer as <i>focalcells</i> in your part01 folder</li>
-<li>Answer question #1 on your assignment sheet</li>
-<li>Calculate the earth volume within the circular neighborhood (do a FOCALSUM operation using <i>chase_m</i> with a neighborhood radius of 2)</li>
-<li>Save the output raster layer as <i>earthv1</i></li>
-<li>Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus <b>(“chase_m” * “focalcells”)</b></li>
-<li>Save the output raster layer as <i>earthv2</i></li>
-<li>Calculate the shelter raster layer by subtracting <i>earthv2</i> from <i>earthv1</i>: <b>(“earthv1” – “earthv2”)</b></li>
+<li>Raster calculator expression, we can round here:
+
+<ul>
+<li><i>DEM * 30 * 30</i></li>
+</ul></li>
+<li>Call your output <i>volpercell</i></li>
+</ul>
+
+<p><strong>2)</strong>Finally, use Focal Statistics to calculate the focal sum of this raster layer using a circular neighborhood with a radius of 2 cell size.
+* Save the output raster layer as <i>earthvol</i></p>
+
+<h3 id="calculate-the-earth-volume-of-a-cylinder-of-earth-around-a-window"><strong>Calculate the earth volume of a cylinder of earth around a window</strong></h3>
+
+<p><strong>1)</strong>Create a flat surface using <strong>Raster Calculator</strong> to create a constant raster layer on which all of the cells have a value of 1
+  * <i>(“chase_m” / “chase_m”)</i> will do the trick.
+* Make the output raster a permanent raster named <i>constant</i></p>
+
+<p><strong>2)</strong>Use Focal Statistics to calculate the focal sum on the <i>constant</i> raster layer using a circular neighborhood with a radius of 2 cell size.
+* Save the output raster layer as <i>focalcells</i></p>
+
+<p><strong>3)</strong>Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus <b>(“volpercell” * “focalcells”)</b>
+* Save the output raster layer as <i>flatearthvol</i>
+* Answer question #1 on your assignment sheet</p>
+
+<h3 id="calculate-the-shelter-layer"><strong>Calculate the shelter layer</strong></h3>
+
+<ul>
+<li>Calculate the shelter raster layer by subtracting <i>flatearthvol</i> from <i>earthvol</i></li>
 <li>Save the output raster layer as <i>shelter</i></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab8part1_shelter.PNG" alt="" /></p>
+
+<ul>
 <li>Answer question #2 on your assignment sheet</li>
 </ul>
 

@@ -1520,6 +1520,7 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://opentopo.sdsc.edu/login&#34;&gt;OpenTOPO&lt;/a&gt;: A great clearinghouse and web toolset for topo data.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://live.osgeo.org/en/index.html&#34;&gt;OSGeoLive&lt;/a&gt;: Want to run free?  This VM has every open tool you’ll need to do GIScience.  For use in &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;The &lt;a href=&#34;https://gistbok.ucgis.org/&#34;&gt;UCGIS Body of Knowledge&lt;/a&gt; is a great place to start for your broad GIS questions.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geoscripting-wur.github.io/&#34;&gt;&lt;strong&gt;https://geoscripting-wur.github.io/&lt;/strong&gt;&lt;/a&gt;, A very neat implementation of a class.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Neat youtubes&lt;/strong&gt;&lt;/p&gt;
@@ -1551,6 +1552,7 @@ xmlns=&#34;http://www.w3.org/TR/REC-html40&#34;&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://cengel.github.io/R-spatial/&#34;&gt;&lt;strong&gt;Using Spatial Data with R&lt;/strong&gt;&lt;/a&gt; by Claudia A Engel&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://r-statistics.co/&#34;&gt;&lt;strong&gt;r-statistics.co&lt;/strong&gt;&lt;/a&gt; by Selva Prabhakaran&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://englianhu.files.wordpress.com/2018/10/web-application-development-with-r-using-shiny-build-stunning-graphics-and-interactive-data-visualizations-to-deliver-cutting-edge-analytics-3ed.pdf&#34;&gt;&lt;strong&gt;Web Application Development with R Using Shiny&lt;/strong&gt;&lt;/a&gt; by Chris Beeley and Shitalkumar R. Sukhdeve&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;&lt;strong&gt;R for Data Science&lt;/strong&gt;&lt;/a&gt; by Garrett Grolemund&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;

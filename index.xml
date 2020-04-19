@@ -442,7 +442,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;h3 id=&#34;make-it-your-own&#34;&gt;&lt;strong&gt;Make it your own&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;One of the best ways I&amp;rsquo;ve found to help improve my understanding of the software/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the &lt;i&gt;themes\academic\layouts\partials\footer.toml&lt;/i&gt;.  Mine now looks like so:&lt;/p&gt;
+&lt;p&gt;One of the best ways I&amp;rsquo;ve found to help improve my understanding of the software/deployment was to change some of the layouts.  To add your resume to your image card as a link, and not as an icon as I have, you need to tweak the footer of the aafu theme, which should be in the &lt;i&gt;themes\academic\layouts\partials\footer.html&lt;/i&gt;.  Mine now looks like so:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;lt;footer class=&amp;quot;mb-4&amp;quot;&amp;gt;
   &amp;lt;a href=&amp;quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&amp;quot;&amp;gt;Download a &amp;quot;more traditional&amp;quot; resume
@@ -6336,7 +6336,7 @@ ________ to ________&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Question 3&lt;/strong&gt;:&lt;br /&gt;
 What is the interpretation of the sinks output?  What would the correct symbology of this layer look like?&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;:
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;:&lt;br /&gt;
 Paste your final unit hydrograph here.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -6448,26 +6448,38 @@ Paste your final unit hydrograph here.&lt;/p&gt;
 &lt;li&gt;Raster calculator expression, we can round here:
 
 &lt;ul&gt;
-&lt;li&gt;&lt;i&gt;DEM * 30 * 30&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;chase_m * 30 * 30&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Call your output &lt;i&gt;volpercell&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt;Finally, use Focal Statistics to calculate the focal sum of this raster layer using a circular neighborhood with a radius of 2 cell size.
-* Save the output raster layer as &lt;i&gt;earthvol&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt;Finally, use Focal Statistics to calculate the focal sum of this raster layer using a circular neighborhood with a radius of 2 cell size.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;earthvol&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;calculate-the-earth-volume-of-a-cylinder-of-earth-around-a-window&#34;&gt;&lt;strong&gt;Calculate the earth volume of a cylinder of earth around a window&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt;Create a flat surface using &lt;strong&gt;Raster Calculator&lt;/strong&gt; to create a constant raster layer on which all of the cells have a value of 1
-  * &lt;i&gt;(“chase_m” / “chase_m”)&lt;/i&gt; will do the trick.
-* Make the output raster a permanent raster named &lt;i&gt;constant&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt;Create a flat surface using &lt;strong&gt;Raster Calculator&lt;/strong&gt; to create a constant raster layer on which all of the cells have a value of 1.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt;Use Focal Statistics to calculate the focal sum on the &lt;i&gt;constant&lt;/i&gt; raster layer using a circular neighborhood with a radius of 2 cell size.
-* Save the output raster layer as &lt;i&gt;focalcells&lt;/i&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i&gt;(“chase_m” / “chase_m”)&lt;/i&gt; will do the trick.&lt;/li&gt;
+&lt;li&gt;Make the output raster a permanent raster named &lt;i&gt;constant&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt;Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus &lt;b&gt;(“volpercell” * “focalcells”)&lt;/b&gt;
-* Save the output raster layer as &lt;i&gt;flatearthvol&lt;/i&gt;
-* Answer question #1 on your assignment sheet&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt;Use &lt;strong&gt;Focal Statistics&lt;/strong&gt; to calculate the focal sum on the &lt;i&gt;constant&lt;/i&gt; raster layer using a circular neighborhood with a radius of 2 cell size.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;focalcells&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt;Calculate the earth volume within the circular neighborhood assuming all the cells inside the neighborhood have the same Z value as the focus &lt;b&gt;(“volpercell” * “focalcells”)&lt;/b&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save the output raster layer as &lt;i&gt;flatearthvol&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Answer question #1 on your assignment sheet&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;calculate-the-shelter-layer&#34;&gt;&lt;strong&gt;Calculate the shelter layer&lt;/strong&gt;&lt;/h3&gt;
 
@@ -6476,7 +6488,9 @@ Paste your final unit hydrograph here.&lt;/p&gt;
 &lt;li&gt;Save the output raster layer as &lt;i&gt;shelter&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part1_shelter.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;After some stylization, you might end up with a map that looks like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part1_shelterNew.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Answer question #2 on your assignment sheet&lt;/li&gt;
@@ -6634,11 +6648,11 @@ Paste your final unit hydrograph here.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step can be accomplished using the &lt;strong&gt;Raster Calculator tool&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Use the fields to create the expression: &lt;br&gt;&lt;code&gt;Float((&amp;quot;Stowe_slope&amp;quot; ^ 0.5) * (&amp;quot;Stowe_flow_accumulation&amp;quot; ^ 0.5))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use the fields to create the expression: &lt;br&gt;&lt;code&gt;Power(&amp;quot;Stowe_flow_accumulation&amp;quot;,0.5) * Power(&amp;quot;Stowe_slope&amp;quot;,0.5)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Name your output raster &lt;i&gt;Stowe_slope_area_term&lt;/i&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SlopeArea_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_SlopeAreaEq_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Finally, lets use the environments of this tool to clip to our watershed at the same time:
@@ -6670,7 +6684,7 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_LayerStats_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3B)&lt;/strong&gt; and then open a &lt;strong&gt;raster calculator&lt;/strong&gt; and enter the expression, Where &lt;strong&gt;[Mean slope-area term]&lt;/strong&gt; is the value that you copied from the &lt;strong&gt;Layer Properties&lt;/strong&gt; window.:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3B)&lt;/strong&gt; and then open a &lt;strong&gt;raster calculator&lt;/strong&gt; and enter the expression, Where &lt;strong&gt;[Mean slope-area term]&lt;/strong&gt; is the value that you copied from the &lt;strong&gt;Layer Properties&lt;/strong&gt; window:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;You expression should look like:&lt;br&gt;&lt;code&gt;0.1 * (&amp;quot;Stowe_slope_area_term&amp;quot; / [Mean slope-area term])&lt;/code&gt;&lt;/li&gt;
@@ -6681,7 +6695,7 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 
 &lt;h3 id=&#34;limit-the-velocities&#34;&gt;&lt;strong&gt;Limit the velocities&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;The raster layer you created is a velocity field, but it has unrealistically high and low velocities. For instance, some values in the field have a velocity of 0 meters per second, which is unlikely during an extreme rainfall event. Likewise, the maximum value of approximately 7.5 meters per second is unrealistic even during a major flood. You&amp;rsquo;ll limit the velocity values with a lower limit of 0.02 meters per second and an upper limit of 2 meters per second.  Bearing in mind that there are a number of ways to end up with the desired output, the most direct in my opinion is a &lt;a href=&#34;https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm&#34;&gt;complex raster calculator con expression&lt;/a&gt;.  Other alternatives include reclassifying, multiple con tools, or a clamp tool to name a few.
+&lt;p&gt;The raster layer you created is a velocity field, but it has unrealistically high and low velocities. For instance, some values in the field have a velocity of 0 meters per second, which is unlikely during an extreme rainfall event. Likewise, the maximum value of approximately 7.5 meters per second is unrealistic even during a major flood. You&amp;rsquo;ll limit the velocity values with a lower limit of 0.02 meters per second and an upper limit of 2 meters per second.  Bearing in mind that there are a number of ways to end up with the desired output, the most direct in my opinion is a &lt;a href=&#34;https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm&#34;&gt;complex raster calculator con expression&lt;/a&gt;.  Other alternatives include reclassifying, multiple con tools, or a clamp tool to name a few.&lt;br /&gt;
 &lt;strong&gt;4)&lt;/strong&gt; Open up a &lt;strong&gt;Raster Calculator&lt;/strong&gt; and enter your expression.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -6716,6 +6730,13 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_WeightsTool_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;Your output should look like so:
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_WeightsTool_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;Lab8part2image_WeightsToolVis_Arcmap.PNG&lt;/p&gt;
+
 &lt;h3 id=&#34;assess-flow-time-to-outlet-pour-point&#34;&gt;&lt;strong&gt;Assess flow time to outlet pour point&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; The next step of the task uses the &lt;strong&gt;Flow Length&lt;/strong&gt; tool. While this tool, as its name suggests, normally calculates flow length, it has an optional parameter to include a weight raster. When a weight raster is included, the tool calculates flow time instead.&lt;/p&gt;
@@ -6738,8 +6759,12 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 
 &lt;h2 id=&#34;create-a-unit-hydrograph&#34;&gt;&lt;strong&gt;Create a unit hydrograph&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;The last step is to derive the graph of area/distance.  In essence, we want the histogram of the output layer.  Although conceptually simple, this can be quite difficult, as outlined in the source tutorial.  Fortunately, a simpler solution exists.  We will first&amp;hellip;
-&lt;strong&gt;1)&lt;/strong&gt; Cast the raster to an int&lt;/p&gt;
+&lt;p&gt;The last step we want to accomplish is to create a unit hydrograph.  In essence, this unit hydrograph is the area that falls within the specific we want the histogram of the output layer.  Although conceptually simple, this can be quite difficult, as outlined in the source tutorial.  Fortunately, simpler solutions exists, and the exact method will vary depending on your desired output.  Here I will show how to create a &amp;ldquo;raw&amp;rdquo; unit hydrograph and manipulate it within Arcmap and Microsoft Excel.&lt;/p&gt;
+
+&lt;h3 id=&#34;approach-1-visualize-a-raw-unit-hydrograph-histogram-and-then-extract-to-create-the-desired-output&#34;&gt;&lt;strong&gt;Approach 1) Visualize a &amp;ldquo;raw&amp;rdquo; unit hydrograph histogram and then Extract to create the desired output&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;We will first&amp;hellip;&lt;br /&gt;
+&lt;strong&gt;1)&lt;/strong&gt; Cast the raster to an int.  Because our unit is seconds, truncating our numbers is a reasonable tradeoff, and has the added benefit of creating a workable attribute table for us to export.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;The input raster is &lt;i&gt;Stowe_time&lt;/i&gt;&lt;/li&gt;
@@ -6755,6 +6780,87 @@ In the tool parameters, click &lt;strong&gt;Environments&lt;/strong&gt;. Under &
 &lt;strong&gt;2D)&lt;/strong&gt; A final graph.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_UnitHydrography_Arc.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Lets now export this database and manipulate it within Excel to create a unit hydrohraph.  Here I&amp;rsquo;ll walk you through how to take the exported database into Excel and then transform it into a PivotTable for formatting and visualization.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To export the database, click on the table options and export it to a dbase table on your hard drive (not in a geodatabase)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;From there you can open the table in Excel using File &amp;gt; Open.&lt;/li&gt;
+&lt;li&gt;We need to first create a column for area, click in cell D2 and enter the formula &lt;code&gt;=C2*30*30&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click the little black box at the lower right hand corner of the cell to fill the formula down.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_Excel1.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Inset &amp;gt; pivot table and choose the whole table.  Dump the pivot table out in the same worksheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_Excel2.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add &lt;i&gt;Value&lt;/i&gt; and &lt;i&gt;Sum of Area&lt;/i&gt; to &lt;i&gt;Rows&lt;/i&gt; and &lt;i&gt;Values&lt;/i&gt; respectively.&lt;/li&gt;
+&lt;li&gt;Click in the first column of Value in the pivot table, and click Group Field up in the PivotTable Analyze ribbon&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_Excel3.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Group the field into chunks of 1800&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_Excel4.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy the table, and calculate the unit hydrograph using a time field and the area divided by the timestep.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_Excel5.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;approach-2-bin-the-raster-into-isochrones-within-arcmap-before-extracting-the-graph&#34;&gt;&lt;strong&gt;Approach 2) Bin the raster into Isochrones within Arcmap before extracting the graph&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; We can &lt;strong&gt;Reclassify&lt;/strong&gt; our time raster into N isochrones (contours of time) and generate a graph from that.  Here I&amp;rsquo;ll demonstrate a 30 minute timestep (1800 seconds).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Click the classify button after adding the &lt;i&gt;Stowe_time&lt;/i&gt; raster to the input, and set the interval size to 1800 (30 minutes in seconds)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_IsochroneReclassView_arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Name the output &lt;i&gt;Stowe_1800_isochrone&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2_IsochroneReclassTool_arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Now we&amp;rsquo;ll use these as the zones to &lt;strong&gt;calculate the ordinate of the unit hydrograph&lt;/strong&gt;.  These &amp;ldquo;ordinates&amp;rdquo; are the sum of the area within that time step divided by the timestep.  In essence, this is the area within the isochrone divided by range of the isochrone.  We will first add a new field to the &lt;i&gt;Stowe_1800_isochrone&lt;/i&gt; and calculate the area within each isochrone.  We will then normalize that area to the time range of our isochrone.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the &lt;strong&gt;Add field&lt;/strong&gt; button in the table options of the &lt;i&gt;Stowe_1800_isochrone&lt;/i&gt; raster
+
+&lt;ul&gt;
+&lt;li&gt;Name the field &lt;i&gt;time&lt;/i&gt; and set the type to &lt;i&gt;double&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;Right click on the newly created field and calculate the area (simply the &lt;i&gt;[Value] * 1800&lt;/i&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Create a new field called &lt;i&gt;area&lt;/i&gt; of type &lt;i&gt;double&lt;/i&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;Right click on the newly created field and calculate the area (simply the &lt;i&gt;[Count] * 30 * 30&lt;/i&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;To finish, create a last field called &lt;i&gt;UH_Ord&lt;/i&gt; of type &lt;i&gt;float&lt;/i&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your expression here is the area divided by the range of the isochrone (&lt;i&gt;[Area]/1800&lt;/i&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Finally, create the graph.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Explore the graphing options as before.  Here I demonstrate how you may add two series to the same graph (here the raw histogram and the aggregated and normalized unit hydrograph.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab8part2image_UHGraphComposit_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Answer questions 3 and 4 related to this part of the lab.  Submit your final answer sheet to blackboard.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;

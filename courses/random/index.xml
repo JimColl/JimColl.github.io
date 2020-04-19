@@ -198,7 +198,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;h3 id=&#34;make-it-your-own&#34;&gt;&lt;strong&gt;Make it your own&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;One of the best ways I&amp;rsquo;ve found to help improve my understanding of the software/deployment was to change some of the layouts.  To add your resume to your image card as I have, you need to tweak the footer of the aafu theme, which should be in the &lt;i&gt;themes\academic\layouts\partials\footer.toml&lt;/i&gt;.  Mine now looks like so:&lt;/p&gt;
+&lt;p&gt;One of the best ways I&amp;rsquo;ve found to help improve my understanding of the software/deployment was to change some of the layouts.  To add your resume to your image card as a link, and not as an icon as I have, you need to tweak the footer of the aafu theme, which should be in the &lt;i&gt;themes\academic\layouts\partials\footer.html&lt;/i&gt;.  Mine now looks like so:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;lt;footer class=&amp;quot;mb-4&amp;quot;&amp;gt;
   &amp;lt;a href=&amp;quot;https://jimcoll.github.io/courses/random/media/JamesCollSharedWebResume.docx&amp;quot;&amp;gt;Download a &amp;quot;more traditional&amp;quot; resume

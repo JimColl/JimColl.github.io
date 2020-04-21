@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="This is a living document. Changes will be announced in class. The main course page syllabus supersedes this one in all cases.   Course Description: Building on the introductory GIS class, this course focuses primarily on teaching advanced spatial analysis methods with applications in the mapping of surface water and the analysis of water related environmental issues. Major topics covered include map algebra (also called cartographic modeling), multi-criteria evaluation, terrain analysis, spatial statistics, and spatial interpolation.">
+  <meta name="description" content="Lab 10: Spatial Interpolation Learning Objective When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze. Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/classoutline/">
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab10/">
 
   
 
@@ -98,7 +98,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/classoutline/">
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab10/">
 
   
   
@@ -111,9 +111,9 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Jim Coll">
-  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/classoutline/">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab10/">
   <meta property="og:title" content=" | Jim Coll">
-  <meta property="og:description" content="This is a living document. Changes will be announced in class. The main course page syllabus supersedes this one in all cases.   Course Description: Building on the introductory GIS class, this course focuses primarily on teaching advanced spatial analysis methods with applications in the mapping of surface water and the analysis of water related environmental issues. Major topics covered include map algebra (also called cartographic modeling), multi-criteria evaluation, terrain analysis, spatial statistics, and spatial interpolation."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="og:description" content="Lab 10: Spatial Interpolation Learning Objective When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze. Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -331,7 +331,7 @@
 
   </div>
   
-  <div class="docs-toc-item active">
+  <div class="docs-toc-item">
     <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
 
   </div>
@@ -381,7 +381,7 @@
         <a href="/courses/geog558/lab09/">Lab 9 - Descriptive Spatial Statistics and Point Pattern Analysis</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/courses/geog558/lab10/">Lab 10 - Spatial Interpolation</a>
       </li>
       
@@ -403,22 +403,10 @@
 
       <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li><a href="#course-description"><strong>Course Description:</strong></a></li>
-<li><a href="#student-responsibilities"><strong>Student Responsibilities:</strong></a></li>
-<li><a href="#expectations"><strong>Expectations:</strong></a></li>
-<li><a href="#computers"><strong>Computers:</strong></a></li>
-<li><a href="#resources"><strong>Resources:</strong></a></li>
-<li><a href="#resources-1"><strong>Resources:</strong></a></li>
-<li><a href="#academic-integrity"><strong>Academic Integrity:</strong></a></li>
-<li><a href="#disabilities"><strong>Disabilities:</strong></a></li>
-<li><a href="#about-the-labs"><strong>About the Labs:</strong></a></li>
-<li><a href="#cartography-primers"><strong>Cartography primers:</strong></a></li>
-<li><a href="#textbooks"><strong>Textbooks:</strong></a></li>
-<li><a href="#course-evaluation"><strong>Course Evaluation:</strong></a></li>
-<li><a href="#exams"><strong>Exams</strong></a></li>
-</ul></li>
+<li><a href="#lab-10-spatial-interpolation"><strong>Lab 10: Spatial Interpolation</strong></a></li>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a></li>
+<li><a href="#materials"><strong>Materials</strong></a></li>
 </ul>
 </nav>
 
@@ -436,131 +424,158 @@
           <div class="article-style" itemprop="articleBody">
             
 
-<div class="alert alert-note">
-  <div>
-    This is a living document.  Changes will be announced in class.  The main course page syllabus supersedes this one in all cases.
-  </div>
-</div>
+<h1 id="lab-10-spatial-interpolation"><strong>Lab 10: Spatial Interpolation</strong></h1>
 
-<h2 id="course-description"><strong>Course Description:</strong></h2>
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>Building on the introductory GIS class, this course focuses primarily on teaching advanced spatial analysis methods with applications in the mapping of surface water and the analysis of water related environmental issues. Major topics covered include map algebra (also called cartographic modeling), multi-criteria evaluation, terrain analysis, spatial statistics, and spatial interpolation. An additional objective of the course is to have students become familiar with various methods and tools through the use of GIS software.  Continuing with the industry standard GIS software, this class expands on GIS platforms through the use of the ArcGIS software suite. Finally, this class counts towards the <a href="https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/">certificate in GIS</a>.</p>
+<p>When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze.  Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.</p>
 
-<h2 id="student-responsibilities"><strong>Student Responsibilities:</strong></h2>
+<p>Scenario:
+You have been hired by KGS to perform an analysis of water level in the High Plains Aquafer in Kansas.  They have provided you with 2 shapefiles containing min, mean, and max water level depths from the surface for 1997 and 2017.  Your job is to perform a volume comparison.  You will need to interpolate a surface representing the water table elevation for each time period and determine the volume gained or lost over the 20-year period, create a map describing the status and change of the water table in Kansas, and a short report of your findings.</p>
 
-<p>It is student’s responsibility to attend the lectures, do the readings, and finish lab assignments. All students should be prepared to participate in class discussion and answer questions when called upon.  All students are expected to complete labs and exams on time. Labs are due at the beginning of the lab period one week after they are assigned, unless otherwise noted. Detailed lab rules will be given by the teaching assistant in the first lab.</p>
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
-<h2 id="expectations"><strong>Expectations:</strong></h2>
+<hr />
 
-<p>Attend every Class/lab and <strong>ask questions!</strong> At times, the ArcGIS software can be very unforgiving, and GIS can seem like a foreign language. The last thing I want is for you to walk out of this class without understanding the material. I expect and hope that this will be a rewarding experience for everyone. We are available to answer questions and otherwise offer assistance during the office hours indicated above or by appointment.  Additionally, if you have any questions, feel free to drop me an e-mail or use the slack channel (The link will be passed around on the sign up sheet at the beginning of the year). I try to be diligent about responding to emails and by using slack you are likely to get a very rapid response</p>
+<p><strong>Lab 10: Answer Sheet</strong><br />
+Question 1:<br />
+What was your regression function?</p>
 
-<h2 id="computers"><strong>Computers:</strong></h2>
+<p>Question 2:<br />
+What is the interpretation of your regression function?</p>
 
-<p>The computers in the lab are not cheap to replace. Please do your part to lengthen their lives by not spilling coffee/soda/liquids of any kind on the computer or any of its parts. You do NOT need to go out and purchase a computer for this class, although I do recommend having a personal computer with ArcGIS installed.</p>
+<p>Question 3:<br />
+What was your highest prediction standard error (hint: right click on the GA layer and “Change output to predictied Standard Error”)?  How does this error compare with the distribution of the well heads?</p>
 
-<p><strong>Computer recommendations:</strong><br />
-ArcGIS is a demanding program, and a lower grade computer is not recommended.  If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp; RAM &gt; video &amp; hard drive speed &gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  For the last few years I&rsquo;ve deferred to the pre-built pc choices on <a href="https://buildmypc.net/">https://buildmypc.net/</a> or <a href="https://pcpartpicker.com/">https://pcpartpicker.com/</a>.  In general, I tend to stay away from the &ldquo;gaming&rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.<br/>
-<a href="https://pcpartpicker.com/user/JColl/saved/#view=zddq3C">My “Ideal” build (This is excessive, visualization grade)</a></p>
+<p>Question 4:<br />
+Subtract the two 1997 surfaces.  What is the difference in volume between the two interpolations.  Given that we extract <a href="https://www.usgs.gov/news/how-much-water-does-kansas-use">~3,655,000 acre-feet of water a year</a>, how important is the interpolation method in determining the change in volume?</p>
 
-<h2 id="resources"><strong>Resources:</strong></h2>
-
-<p>The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.</p>
-
-<h2 id="resources-1"><strong>Resources:</strong></h2>
-
-<p>The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.</p>
-
-<h2 id="academic-integrity"><strong>Academic Integrity:</strong></h2>
-
-<p>Simply put, cheating and/or plagiarism <strong>is not tolerated</strong>. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&rsquo;s <em>insert year here</em>, how hard is it to give someone credit for their work?  I use <a href="https://www.zotero.org/">Zotero</a> for my citation needs, as a KU student you have access to Endnote through <a href="https://technology.ku.edu/software/microsoft-office">Office 365</a>, and in a pinch <a href="https://www.citethisforme.com/">Cite This for Me</a> will also push you across the finish line but you really should try to be more efficient with your time.</p>
-
-<h2 id="disabilities"><strong>Disabilities:</strong></h2>
-
-<p>Anyone who has a disability that may prevent full demonstration of academic ability should contact me as soon as possible to ensure accommodations can be made to allow for full educational benefit.</p>
-
-<h2 id="about-the-labs"><strong>About the Labs:</strong></h2>
-
-<p>This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!</p>
-
-<h2 id="cartography-primers"><strong>Cartography primers:</strong></h2>
+<p>Question 5:<br />
+Pick one of the interpolations and submit your report below.  This might include some or all of the following elements.</p>
 
 <ul>
-<li><a href="http://www.icsm.gov.au/mapping/cartographic.html">http://www.icsm.gov.au/mapping/cartographic.html</a></li>
-<li><a href="https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf">https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf</a></li>
-<li><a href="http://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">http://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3</a></li>
+<li>A “Current” depth to water level map (example from Brownie Wilson of KGS below)</li>
+<li>A difference map describing the change in water level over the time period</li>
+<li>A short (1-2 paragraph) interpretation of the outcomes.  This should address common questions an employer might ask including an interpretation of the data, how the map was created, a statement of accuracy, and potential sources of error.</li>
 </ul>
 
-<h2 id="textbooks"><strong>Textbooks:</strong></h2>
+<p>An example of how I might approach this question:</p>
+
+<p><img src="/courses/geog558/media/Lab10_ExampleReport.png" alt="" /></p>
+
+<hr />
+
+<h1 id="materials"><strong>Materials</strong></h1>
+
+<p><a href="https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EnLKxFKQZbJBr20OAX2PdR8BYMRoDi35sSV9Sk4Ctdx9xg?e=fYD8n6">click to download</a><br />
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Data Name</th>
+    <th class="tg-0pky">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-btxf">HPWells_1997.shp</td>
+    <td class="tg-btxf">Well depths for Kansas within the High Plains Aquifer from 1997</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">HPWells_2017.shp</td>
+    <td class="tg-btxf">Well depths for Kansas within the High Planes Aquifer from 2017</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">SelectedStates.shp</td>
+    <td class="tg-btxf">Boundaries for Kansas, Nebraska, Colorado</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">KSCounties.shp</td>
+    <td class="tg-btxf">Kansas counties from the 2010 TIGER database</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">KSPLSSSections.shp</td>
+    <td class="tg-btxf">Kansas PLSS Section shapefile</td>
+  </tr>
+  <tr>
+    <td class="tg-btxf">HPBounds_2010.shp</td>
+    <td class="tg-btxf">Outer boundary for the High Plains Aquifer</td>
+  </tr>
+</table></p>
+
+<hr />
+
+<p><strong>1)</strong> Getting started</p>
 
 <ul>
-<li>de Smith, M. J., M. F. Goodchild, P. A. Longley (2018) Geospatial Analysis—A
-comprehensive guide (6th edition), An online version is available at
-<a href="http://www.spatialanalysisonline.com/HTML/index.html">http://www.spatialanalysisonline.com/HTML/index.html</a></li>
+<li>Unzip the folder into your OneDrive</li>
+<li>Open the packaged map and zoom to the Kansas Layers</li>
+<li>We will use the Geostatistical Analyst feature in ArcMap. There are many, many features of this tool that we will not explore here. You can use the ArcMap help system or Google “Using ArcGIS Geostatistical Analyst” online to explore this tool beyond what we will do here.</li>
+<li>If necessary, activate the Geostatistical Analyst (Customize | Extensions)</li>
+<li>Add the Geostatistical Analyst toolbar (Customize | Toolbars | Geostatistical Analyst)<br /></li>
 </ul>
 
-<h2 id="course-evaluation"><strong>Course Evaluation:</strong></h2>
-
-<p>Course grade will be evaluated based on two exams, ten lab exercises, and a final project.
-The exams will include materials from the textbooks, lecture slides, handouts, and labs. Mid-term
-exam will cover the materials from the first half of the class, and the final exam will focus on the
-second half. The final exam is not comprehensive, but since we will be building on concepts
-throughout the semester, materials from the first half of the semester will inevitably be part of the
-final exam. A breakdown of grade weights is as follows:</p>
+<p><strong>2)</strong> Interpolating a surface using <strong>IDW</strong></p>
 
 <ul>
-<li>Midterm exam 20%</li>
-<li>Final exam 20%</li>
-<li>Labs 40%</li>
-<li>Final Project 20%<br /></li>
+<li>Go to Geostatistical Analyst | Geostatistical Wizard</li>
+<li>Highlight Inverse Distance Weighting</li>
+<li>Select your Source Data (A well shapefile)</li>
+<li>We want to model a water surface, so make your Data Field (I use avg depth)</li>
+<li>Click Next</li>
+<li>If a &ldquo;Handing Coincidental Samples&rdquo; prompt pops up, decide how you would like to handle this occurrence.  Since I prefer “worst case” scenarios, I choose &ldquo;Use Maximum&rdquo;.</li>
+<li>This next window shows you how water levels will be modeled, but in a graphic form.  Take a look at the help file for the statistical wizard to determine how the various inputs affect the statistic performed.  ArcMap is nice enough to include a power optimization button under general properties.  Go ahead and click that button.  I also want to include more samples in my interpolation so change maximum neighbors to 25 and minimum neighbors to 7.</li>
+<li>The next page shows you the cross validation of your surface.  This means that they take a point out of the prediction and compare it to the surface it would otherwise have been created without using it.  Publications generally eschew printing verbatim the nuances of how they ran an interpolation tool in favor of the regression function.  Answer questions 1 and 2 below.  When you are done click finish.</li>
+<li>The grid that the geostatistical wizard spits out is a format specific to the interpolation maps. Export it as a raster by R-clicking on the layer and going to Data | Export to Raster…</li>
+<li>Change the cell size to 500 and set the output raster to save it as IDWYYYY in your lab10 folder</li>
+<li>After your new raster is displayed, you may remove the IDW layer.</li>
 </ul>
 
-<p>Final grade will be on a straight scale, not on a curve. If you all do well, you will all get
-an A. Letter grades will be determined based on the standard grading scale. Each student will
-complete a final project. The project will be presented to the class during the last two weeks of
-class. Details on the final project can be found in the final project handout. Letter grades will be
-determined based on the following grading scale:</p>
+<p><strong>3)</strong> Interpolating a surface via <strong>Kriging</strong></p>
 
-<table>
-<thead>
-<tr>
-<th align="center">A+</th>
-<th align="center">A</th>
-<th align="center">A-</th>
-<th align="center">B+</th>
-<th align="center">B</th>
-<th align="center">B-</th>
-<th align="center">C+</th>
-<th align="center">C</th>
-<th align="center">C-</th>
-<th align="center">D+</th>
-<th align="center">D</th>
-<th align="center">D-</th>
-<th align="center">F</th>
-</tr>
-</thead>
+<blockquote>
+<p>Quick Kriging refresher here: <a href="https://gisgeography.com/kriging-interpolation-prediction/">https://gisgeography.com/kriging-interpolation-prediction/</a></p>
+</blockquote>
 
-<tbody>
-<tr>
-<td align="center">100 - 97</td>
-<td align="center">96 - 93</td>
-<td align="center">92 - 90</td>
-<td align="center">89 - 87</td>
-<td align="center">86 - 83</td>
-<td align="center">82 - 80</td>
-<td align="center">79 - 77</td>
-<td align="center">76 - 73</td>
-<td align="center">72 - 70</td>
-<td align="center">69 - 67</td>
-<td align="center">66 - 63</td>
-<td align="center">62 - 60</td>
-<td align="center">&lt;60</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Go to Geostatistical Analyst | Geostatistical Wizard and choose Kriging / CoKriging</li>
+<li>Make sure your type of Kriging is set to Simple Kriging and Normal Score, and make sure the Output Type is Prediction</li>
+<li>Click Next</li>
+<li>This next window is unique to Normal scores, walking you through the normalization parameters.  ArcMap does all the heavy lifting for you so take note of the parameters, look at the QQ plot, and then click Next</li>
+<li>Again, the modeling window includes an “Optimize model” button, click that and then click Next</li>
+<li>This visualization in the next window again shows the graphical representation of the interpolated surface in a graphic form. Click on the inset map to move the cross hairs to different portions of the aquafer. The circle around the cross hairs shows which area the model will take into account for that location. Leave all on this window to the set defaults and click Next</li>
+<li>This next window shows you the model and the Prediction Errors. You can save this validation result to a .dbf file (or a table in a shape file) that you can open in Excel, which may have a helpful feature, depending on your purposes.</li>
+<li>Click Finish</li>
+<li>Click OK on the Output Layer Information window and export the layer to a rater as above, using a name similar to KGYYYY</li>
+<li>Answer questions 3 below.<br /></li>
+</ul>
 
-<h2 id="exams"><strong>Exams</strong></h2>
+<p><strong>4)</strong> <strong>Clip</strong> the rasters to the extent of the Aquifer</p>
 
-<p>Mid-term exam will cover the materials from the first half of the class, and the final exam will focus on the second half. The final exam is not comprehensive, but since we will be building on concepts throughout the semester, materials from the first half of the semester will inevitably be part of the final exam.  <del>Either exam may include a practical portion.  This practical portion will consist of instructions to prepare some sort of short analysis or demonstration of practical knowledge related to the use of ArcGIS.  These will be posted either a week before the exam and due on the date of the exam, or posted the day of the exam and due a week after.</del></p>
+<ul>
+<li>Hint: clip tool… make sure you use the check box</li>
+</ul>
+
+<p><strong>5)</strong> <strong>Calculate</strong> Water volume difference between the two interpolation methods</p>
+
+<ul>
+<li>Hint: raster calculator…</li>
+<li>If you don’t have an attribute table, you will need to do the following:</li>
+<li>Use Raster Calculator to turn the raster into an integer
+
+<ul>
+<li>Hint: Int(&ldquo;KI1997Diff.tif&rdquo; * 1000)</li>
+</ul></li>
+<li>Use the <strong>Build Raster Attribute table</strong> tool to generate the attribute table</li>
+<li>Create a new field called Volume, make it a float</li>
+<li>Calculate volume using <code>((Value/1000)/3.28084)*Count*500*500</code></li>
+<li>Answer question 4</li>
+</ul>
+
+<p><strong>6)</strong> Pick an interpolation method and interpolate 2017 data using the same methods and parameters as above.  Repeat steps 4 and 5 and answer question 5</p>
 
           </div>
 

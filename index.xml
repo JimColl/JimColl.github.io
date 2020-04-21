@@ -7184,6 +7184,509 @@ This section will introduce you to basic terrain analysis in the raster data mod
     </item>
     
     <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab09/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-9-descriptive-spatial-statistics-and-point-pattern-analysis&#34;&gt;&lt;strong&gt;Lab 9: Descriptive Spatial Statistics and Point Pattern Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions.  Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.  Next, we&amp;rsquo;ll quantify the distribution of ad-hoc subsets of the data using point pattern analysis.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 9: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1&lt;/strong&gt;:&lt;br /&gt;
+Repeat steps 4 – 7 using the monthly_SDellipse layer to create the temporal layer. Export the animation as yournamemonthly_ttmov and be sure it runs properly. Upload the .avi file (just the monthly ellipses) on your Blackboard.&lt;/p&gt;
+
+&lt;p&gt;What does this animation tell you about seasonal changes in tornado touchdown locations? Is there any obvious trend?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;:&lt;br /&gt;
+Fill in the details on the following table (based on point extent):  In the C/R/D column, indicate whether there is significant Clustering (z-value less than -1.96), significant Dispersion (z-value greater than 1.96) or neither (R for random) using an alpha of .05.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Place &amp;amp; Time&lt;/th&gt;
+&lt;th&gt;NNR&lt;/th&gt;
+&lt;th&gt;Z-Score&lt;/th&gt;
+&lt;th&gt;C/R/D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Kansas 2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Washington 2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Alabama 2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;USA May 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;USA Nov 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3&lt;/strong&gt;:&lt;br /&gt;
+Describe the differences in the point patterns in Kansas, Washington, and Alabama in 2005. Which (if any) of the patterns was found to be significantly different from the random distribution? Assume alpha level = .05 (the z-value associated with 95% confidence interval is +/- 1.96).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;:&lt;br /&gt;
+What is the total area of the conterminous US in square meters?: _____ m&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 5&lt;/strong&gt;:&lt;br /&gt;
+Fill in the details on the following table (based on the total area of the three states and the conterminous 48 states). Refer to question #2 for how to fill in the C/R/D column.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Place &amp;amp; Time&lt;/th&gt;
+&lt;th&gt;NNR&lt;/th&gt;
+&lt;th&gt;Z-Score&lt;/th&gt;
+&lt;th&gt;C/R/D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Kansas 2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Washington 2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Alabama 2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;USA May 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;USA Nov 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 6&lt;/strong&gt;:&lt;br /&gt;
+What is different about your values in the top table (the extent of the points) and the bottom table (including the area)? Examine the point patterns and speculate on what causes these differences. Read the help file on the Average Nearest Neighbor Distance tool for help in answering this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 7&lt;/strong&gt;:&lt;br /&gt;
+Calculate the NNI for these two states in 2007 using both the point extent (do not indicate an area) and the area of each state. Fill in the tables below&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Based on point extent (no area indicated):&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Place &amp;amp; Time&lt;/th&gt;
+&lt;th&gt;NNR&lt;/th&gt;
+&lt;th&gt;Z-Score&lt;/th&gt;
+&lt;th&gt;C/R/D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Michigan 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;South Dakota 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Based on area:&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Place &amp;amp; Time&lt;/th&gt;
+&lt;th&gt;NNR&lt;/th&gt;
+&lt;th&gt;Z-Score&lt;/th&gt;
+&lt;th&gt;C/R/D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Michigan 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;South Dakota 2007&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;getting-set-up&#34;&gt;Getting set up&lt;/h2&gt;
+
+&lt;h3 id=&#34;gathering-and-formatting-data&#34;&gt;Gathering and formatting data&lt;/h3&gt;
+
+&lt;p&gt;We&amp;rsquo;ll start by downloading data from the &lt;a href=&#34;https://www.spc.noaa.gov/gis/svrgis/&#34;&gt;NOAA Storm Prediction Center Severe GIS page&lt;/a&gt;.  There are a number of datasets here, but what we&amp;rsquo;re after here is the original csv data, &lt;a href=&#34;https://www.spc.noaa.gov/wcm/#data&#34;&gt;here&lt;/a&gt;, under the Severe Weather Database Files (1950-2017) heading.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Download (at minimum) the 2005-2007_torn.csv file, and place them in their own lab 9 folder.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Files are listed at &lt;a href=&#34;https://www.spc.noaa.gov/wcm/#data&#34;&gt;https://www.spc.noaa.gov/wcm/#data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Be sure to &lt;a href=&#34;https://www.spc.noaa.gov/wcm/data/SPC_severe_database_description.pdf&#34;&gt;read the user guide&lt;/a&gt; so that you understand what it is you&amp;rsquo;ve actually downloaded.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;ArcMap spatial statistics, while not particularly more computationally demanding than the average gis process, can be slow to run in performance limiting environments.  Feel free to tailor this lab to your own situation by downloading as much or as little of the database as you want.  Of course using the full database will provide you with a clearer picture and richer outputs, but all questions can be answered with the 2005-2007 data.  Because the database is provided as separate csv files, we need to merge them.  As is the case with most things in life, &lt;em&gt;there are a few ways we can do this, and the choice is yours.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Starting with an empty folder with the csv&amp;rsquo;s, you can&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy and paste them together into a single file using notepad or excel (least grace, brute force)&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can use Windows PowerShell natively to accomplish this (preferred in most cases)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Shift right-click &amp;gt; &amp;ldquo;Open PowerShell window here&amp;rdquo;, and copy-paste the following into the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;$getFirstLine = $true
+
+get-childItem *.csv | foreach {
+    $filePath = $_
+    
+    $lines = Get-Content $filePath  
+    $linesToWrite = switch($getFirstLine) {
+        $true  {$lines}
+        $false {$lines | Select -Skip 1}
+    
+    }
+    
+    $getFirstLine = $false
+    Add-Content &amp;quot;combinedcsvs.csv&amp;quot; $linesToWrite
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can merge them using R or Python (also perfectly viable)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;In R this would look something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;setwd(&amp;quot;/tmp&amp;quot;)
+filenames &amp;lt;- list.files(pattern =  &amp;quot;*.csv&amp;quot;, full.names=TRUE)
+csvdata &amp;lt;- lapply(filenames,function(i){
+    read.csv(i, header=TRUE)
+})
+df &amp;lt;- do.call(rbind.data.frame, csvdata)
+write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can merge them in ArcMap.  The &lt;strong&gt;Merge&lt;/strong&gt; tool takes shapefiles as an input, so you&amp;rsquo;ll need to convert them all first (instructions below) and then merge them (inelegant and counterproductive).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Obviously if you wanted the full database you could have just used the &lt;a href=&#34;https://www.spc.noaa.gov/wcm/data/1950-2018_all_tornadoes.csv&#34;&gt;1950-2018_all_tornadoes.csv&lt;/a&gt; or the &lt;a href=&#34;https://www.spc.noaa.gov/gis/svrgis/zipped/1950-2018-torn-initpoint.zip&#34;&gt;shapefile on the landing page&lt;/a&gt;, but now you know.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Set up and import the data&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Before we import anything, lets set the projection of the dataframe to an equal area projection so that we can accurately visualize these within the context of dispersion.
+
+&lt;ul&gt;
+&lt;li&gt;Right click in the white area and go to properties &amp;gt; Coordinate Systems and search for WKID: 102003&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9New_DataFrameProj_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;importing-the-tornado-data&#34;&gt;Importing the tornado data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Let&amp;rsquo;s next bring in the csv.  Drag the csv file from the ArcCatalog panel into the dataframe.&lt;/li&gt;
+&lt;li&gt;Right click on the csv and &amp;ldquo;Display XY Data&amp;rdquo;.
+
+&lt;ul&gt;
+&lt;li&gt;Set X Field to slon&lt;/li&gt;
+&lt;li&gt;Set Y Field to slat, and then edit the coordinate system.&lt;/li&gt;
+&lt;li&gt;Set the spatial reference of the data to WKID: 4326&lt;/li&gt;
+&lt;li&gt;OK your way through the tool.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9New_ImportTornadoData_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finally, as you might have noticed with the warnings, this layer has restricted functionality.  To resolve this, we just need to export the data by right clicking on it and going to Data &amp;gt; Export
+
+&lt;ul&gt;
+&lt;li&gt;Save All records&lt;/li&gt;
+&lt;li&gt;Save the reference system as the data frame&lt;/li&gt;
+&lt;li&gt;Save the output as a shapefile called &lt;i&gt;Torn_yyyy_yyyy.shp&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Click yes to add the results to the window.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Finally, remove everything from your dataframe with the exception of &lt;i&gt;Torn_yyyy_yyyy.shp&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;adding-ancillary-data&#34;&gt;Adding ancillary data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next add a state boundaries shapefile from your provider of choice.
+
+&lt;ul&gt;
+&lt;li&gt;The quickest way to acquire this is to use the arrow dropdown next to add data and &amp;ldquo;Add Data from ArcGIS Online&amp;hellip;&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Select the lower 48 states from the layer that loads in, and then re-export the layer as &lt;i&gt;lower48.shp&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9New_ImportStateData_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;visualizing-the-distributions&#34;&gt;Visualizing the distributions&lt;/h2&gt;
+
+&lt;h3 id=&#34;calculating-and-visualizing-descriptive-spatial-statistics&#34;&gt;&lt;strong&gt;Calculating and Visualizing Descriptive Spatial Statistics&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Open the &lt;strong&gt;Mean Center&lt;/strong&gt; tool.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the Mean Center dialog box, select &lt;i&gt;Torn_yyyy_yyyy.shp&lt;/i&gt; as your input feature class.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;name the output feature class &lt;i&gt;Torn_yyyy_yyyy_mcy.shp&lt;/i&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;set the case field to yr.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9part1image_MeanCenterTool1_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Open the attribute table for Torn_yyyy_yyyy_mcy. Notice that you have n records, one for each year of data you imported. In order to use tracking analysis, the extension ArcMap uses to create videos, we need to &lt;strong&gt;create a new field&lt;/strong&gt;, and populate it using &lt;strong&gt;Field Calculator&lt;/strong&gt; to create a readable by the tool.  We&amp;rsquo;ll assign a single day, for example, “7/1/1950” to represent 1950&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the table options, &lt;strong&gt;Add Field&lt;/strong&gt; to create a new field named &lt;i&gt;TA_YEAR&lt;/i&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set the type to Text&lt;/li&gt;
+&lt;li&gt;Set the length to 32 byte&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Right-click on the newly created field and use the &lt;strong&gt;Field Calculator&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Enter the following expression: &lt;code&gt;&amp;quot;7/1/&amp;quot; &amp;amp; [yr]&lt;/code&gt; using VB Script.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Calculate monthly standard deviation ellipses using the &lt;strong&gt;Directional Distribution (Standard Deviational Ellipse)&lt;/strong&gt; tool in the Spatial Statistics Tools -&amp;gt; Measuring Geographic Distributions toolbox.  Afterwards, add the appropriated field for tracking analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9part1image_SDTool1_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Select &lt;i&gt;Torn_yyyy_yyyy.shp&lt;/i&gt; as your input feature class.&lt;/li&gt;
+&lt;li&gt;Name the output feature class &lt;i&gt;Torn_yyyy_yyyy_sdm.shp&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;leave the ellipse size to the default&lt;/li&gt;
+&lt;li&gt;set the Case Field to mo&lt;/li&gt;
+&lt;li&gt;Click OK.&lt;/li&gt;
+&lt;li&gt;Add a new field named &lt;i&gt;TA_MONTH&lt;/i&gt; (Text type, 32 byte length)&lt;/li&gt;
+&lt;li&gt;assign the date (use the expression: &lt;code&gt;[mo] &amp;amp; “/1/04”&lt;/code&gt; for VB Script)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; Create a temporal layer from the Torn_yyyy_yyyy_mcy points&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Activate the Tracking Analyst Extension and add it&amp;rsquo;s toolbar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It might have been a while, where do you turn on extensions &amp;amp; add toolbars?  (Hint: Customize &amp;gt; extensions &amp;amp; right click on the gray area in the &amp;gt; toolbar area)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Leave the &lt;i&gt;lower48&lt;/i&gt; layer on and remove all the other layers&lt;/li&gt;
+&lt;li&gt;Click on the &lt;strong&gt;Add Temporal Data wizard&lt;/strong&gt; button&lt;/li&gt;
+&lt;li&gt;You want to add a feature class or shapefile containing temporal data (first radio button) and click on the browse button to select &lt;i&gt;Torn_yyyy_yyyy_mcy.shp&lt;/i&gt; as the input&lt;/li&gt;
+&lt;li&gt;Select the appropriate date/time field (i.e. &lt;i&gt;TA_YEAR&lt;/i&gt;) and click Next&lt;/li&gt;
+&lt;li&gt;Specify the date &amp;amp; time format (M/d/yyyy) and click Next then Finish.  A new “&lt;i&gt;Temporal Layer&lt;/i&gt;” will be added to the data frame’s table of contents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; Modify the symbology of the temporal layer&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Right-click on the &lt;i&gt;Temporal Layer&lt;/i&gt; and go to Properties&lt;/li&gt;
+&lt;li&gt;notice the properties tabs are slightly different from those of a typical shapefile&lt;/li&gt;
+&lt;li&gt;In the Symbology tab check the Time Window box in the Show: box under Events&lt;/li&gt;
+&lt;li&gt;The number of periods is the number of intervals in the series, set as appropriate.
+
+&lt;ul&gt;
+&lt;li&gt;For &lt;i&gt;Torn_2005_2007_mcy.shp&lt;/i&gt;, the number of periods is 3 and the units are Years&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click OK. You have set the temporal symbology (i.e., what symbols will display over time)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9part1image_LayerSymbol_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; Visualize the temporal data&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Click on the Playback Manager button on the Tracking Analyst toolbar
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Hover over tools to see their name, remember?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Click on Options and set the temporal extent to the temporal layer (Torn_yyyy_yyyy_mcy)&lt;/li&gt;
+&lt;li&gt;Change the playback rate to 1.00 years per second&lt;/li&gt;
+&lt;li&gt;Click play and watch the animation&lt;/li&gt;
+&lt;li&gt;Write a film analysis detailing the evolution of the main character (Torn_yyyy_yyyy_mcy), with respect to the changing of the seasons.
+
+&lt;ul&gt;
+&lt;li&gt;I kid&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9part1image_Playback1_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7)&lt;/strong&gt; Export the animation to a movie&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On the Tracking Analyst toolbar, go to Tracking Analyst -&amp;gt; Animation Tool&lt;/li&gt;
+&lt;li&gt;Change the frame size width to 320 and be sure Maintain Aspect Ratio is selected. Set the output file to &lt;i&gt;yourname_yearly_ttmov&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Click Generate.&lt;/li&gt;
+&lt;li&gt;Go to Windows Explorer and launch your movie to make sure the animation was generated correctly.&lt;/li&gt;
+&lt;li&gt;Answer question #1 on your answer sheet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;part-two-nearest-neighbor-analysis&#34;&gt;Part Two: Nearest Neighbor Analysis&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Select tornado touchdowns within Kansas in 2005.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Starting with &lt;i&gt;lower48&lt;/i&gt; and the &lt;i&gt;Torn_yyyy_yyyy.shp&lt;/i&gt;, &lt;strong&gt;export&lt;/strong&gt; the tornado touchdown data for 2004
+
+&lt;ul&gt;
+&lt;li&gt;select by attributes, input layer &lt;i&gt;Torn_yyyy_yyyy.shp&lt;/i&gt;, &amp;ldquo;YEAR&amp;rdquo; = &amp;lsquo;2005&amp;rsquo;, R-Click layer, Export Data…) and call it &lt;i&gt;tt_KS_2005.shp&lt;/i&gt;, add it to the map&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Turn off the &lt;i&gt;Torn_yyyy_yyyy&lt;/i&gt; and &lt;i&gt;tt_KS_2005&lt;/i&gt; layers temporarily and use the select tool to select Kansas (alternatively you can use the Select by attributes tool)&lt;/li&gt;
+&lt;li&gt;Go to Selection &amp;gt; Select by Location, select features from &lt;i&gt;tt_KS_2005&lt;/i&gt; that intersect the features in &lt;i&gt;lower48&lt;/i&gt;, and check Use selected features. It should inform you that there is one feature (Kansas State) selected.&lt;/li&gt;
+&lt;li&gt;Click OK&lt;/li&gt;
+&lt;li&gt;Turn the &lt;i&gt;tt_KS_2005&lt;/i&gt; layer back on to verify that only touchdown points for the year 2005 in Kansas are highlighted&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Using the &lt;strong&gt;Average Nearest Neighbor&lt;/strong&gt; tool in the Spatial Statistics Tools | Analyzing Patterns, calculate the Nearest Neighbor Index for Kansas in 2005.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Input feature class: &lt;i&gt;tt_KS_2004&lt;/i&gt;, use Euclidean distance and check Generate Report&lt;/li&gt;
+&lt;li&gt;To see the report, open the ‘NearestNeighbor_Result.html’ in the Results window&lt;/li&gt;
+&lt;li&gt;Click OK and fill in the appropriate information in the table (question #2 on the answer sheet)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Calculate Nearest Indices for Washington State and Alabama in 2005&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Repeat parts of step 1 and step 2 above for both Washington and Alabama&lt;/li&gt;
+&lt;li&gt;Fill in the table in question #2 and answer question #3 on the answer sheet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; Calculating Nearest Neighbor Indices for two months (May and November) across the US in 2007&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Select the touchdown points that occurred in May of 2007 (select by attributes) and export data, naming the output &lt;i&gt;tt_May07&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Do the same for November and name the exported dataset appropriately&lt;/li&gt;
+&lt;li&gt;Repeat step 2 to calculate the NNI for the two months&lt;/li&gt;
+&lt;li&gt;Fill in the table in question #2 on the answer sheet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; Calculate the total area of the 48 conterminous states and DC&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open the attribute table for the &lt;i&gt;lower48&lt;/i&gt; shapefile&lt;/li&gt;
+&lt;li&gt;Add a new field named &lt;i&gt;AreaSQM&lt;/i&gt;. Make it type Float&lt;/li&gt;
+&lt;li&gt;Right-click on the &lt;i&gt;AreaSQM&lt;/i&gt; field and click on Calculate Geometry&lt;/li&gt;
+&lt;li&gt;Make the property Area and use coordinate system of the data source.  Keep the units as square meters and click OK&lt;/li&gt;
+&lt;li&gt;R-Click on the &lt;i&gt;AreaSQM&lt;/i&gt; field, click on Statistics, and note the Sum. Answer question #4 on your answer sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; Use the total area to calculate NNI of the tornado touchdowns in May and November of 2007&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Repeat step 2 but include the total area figure in the area box.&lt;/li&gt;
+&lt;li&gt;To make this easier, select the value from the statistics window and hit CTRL-C to copy the text to the clipboard. Then click on the Area field in the Nearest Neighbor window and use CTRL-V to paste the number).&lt;/li&gt;
+&lt;li&gt;Fill in the results in the table in question #5 on your answer sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;7)&lt;/strong&gt; Calculate the Nearest Neighbor Indices for Kansas, Washington, and Alabama using each state’s respective area&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Repeat the above steps for Nearest neighbor analysis.&lt;/li&gt;
+&lt;li&gt;You can copy the value from the attribute table and paste it into the dialog box).&lt;/li&gt;
+&lt;li&gt;Fill in the rest of the table in question #5 and answer questions 6 &amp;amp; 7 on your answer sheet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Submit your final answer sheet to blackboard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Lab 09 - Interpolation and Fire Hazard Modeling</title>
       <link>https://jimcoll.github.io/courses/geog358/lab09/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -7474,6 +7977,168 @@ In areas of the United States where the population has expanded to rural and for
 &lt;/ul&gt;
 
 &lt;p&gt;Upload both of your screenshots to Blackboard. There is nothing to hand in this week.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog558/lab10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog558/lab10/</guid>
+      <description>
+
+&lt;h1 id=&#34;lab-10-spatial-interpolation&#34;&gt;&lt;strong&gt;Lab 10: Spatial Interpolation&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze.  Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.&lt;/p&gt;
+
+&lt;p&gt;Scenario:
+You have been hired by KGS to perform an analysis of water level in the High Plains Aquafer in Kansas.  They have provided you with 2 shapefiles containing min, mean, and max water level depths from the surface for 1997 and 2017.  Your job is to perform a volume comparison.  You will need to interpolate a surface representing the water table elevation for each time period and determine the volume gained or lost over the 20-year period, create a map describing the status and change of the water table in Kansas, and a short report of your findings.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 10: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Question 1:&lt;br /&gt;
+What was your regression function?&lt;/p&gt;
+
+&lt;p&gt;Question 2:&lt;br /&gt;
+What is the interpretation of your regression function?&lt;/p&gt;
+
+&lt;p&gt;Question 3:&lt;br /&gt;
+What was your highest prediction standard error (hint: right click on the GA layer and “Change output to predictied Standard Error”)?  How does this error compare with the distribution of the well heads?&lt;/p&gt;
+
+&lt;p&gt;Question 4:&lt;br /&gt;
+Subtract the two 1997 surfaces.  What is the difference in volume between the two interpolations.  Given that we extract &lt;a href=&#34;https://www.usgs.gov/news/how-much-water-does-kansas-use&#34;&gt;~3,655,000 acre-feet of water a year&lt;/a&gt;, how important is the interpolation method in determining the change in volume?&lt;/p&gt;
+
+&lt;p&gt;Question 5:&lt;br /&gt;
+Pick one of the interpolations and submit your report below.  This might include some or all of the following elements.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A “Current” depth to water level map (example from Brownie Wilson of KGS below)&lt;/li&gt;
+&lt;li&gt;A difference map describing the change in water level over the time period&lt;/li&gt;
+&lt;li&gt;A short (1-2 paragraph) interpretation of the outcomes.  This should address common questions an employer might ask including an interpretation of the data, how the map was created, a statement of accuracy, and potential sources of error.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An example of how I might approach this question:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab10_ExampleReport.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EnLKxFKQZbJBr20OAX2PdR8BYMRoDi35sSV9Sk4Ctdx9xg?e=fYD8n6&#34;&gt;click to download&lt;/a&gt;&lt;br /&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;HPWells_1997.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Well depths for Kansas within the High Plains Aquifer from 1997&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;HPWells_2017.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Well depths for Kansas within the High Planes Aquifer from 2017&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;SelectedStates.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Boundaries for Kansas, Nebraska, Colorado&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;KSCounties.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Kansas counties from the 2010 TIGER database&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;KSPLSSSections.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Kansas PLSS Section shapefile&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;HPBounds_2010.shp&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Outer boundary for the High Plains Aquifer&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Getting started&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unzip the folder into your OneDrive&lt;/li&gt;
+&lt;li&gt;Open the packaged map and zoom to the Kansas Layers&lt;/li&gt;
+&lt;li&gt;We will use the Geostatistical Analyst feature in ArcMap. There are many, many features of this tool that we will not explore here. You can use the ArcMap help system or Google “Using ArcGIS Geostatistical Analyst” online to explore this tool beyond what we will do here.&lt;/li&gt;
+&lt;li&gt;If necessary, activate the Geostatistical Analyst (Customize | Extensions)&lt;/li&gt;
+&lt;li&gt;Add the Geostatistical Analyst toolbar (Customize | Toolbars | Geostatistical Analyst)&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Interpolating a surface using &lt;strong&gt;IDW&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Geostatistical Analyst | Geostatistical Wizard&lt;/li&gt;
+&lt;li&gt;Highlight Inverse Distance Weighting&lt;/li&gt;
+&lt;li&gt;Select your Source Data (A well shapefile)&lt;/li&gt;
+&lt;li&gt;We want to model a water surface, so make your Data Field (I use avg depth)&lt;/li&gt;
+&lt;li&gt;Click Next&lt;/li&gt;
+&lt;li&gt;If a &amp;ldquo;Handing Coincidental Samples&amp;rdquo; prompt pops up, decide how you would like to handle this occurrence.  Since I prefer “worst case” scenarios, I choose &amp;ldquo;Use Maximum&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;This next window shows you how water levels will be modeled, but in a graphic form.  Take a look at the help file for the statistical wizard to determine how the various inputs affect the statistic performed.  ArcMap is nice enough to include a power optimization button under general properties.  Go ahead and click that button.  I also want to include more samples in my interpolation so change maximum neighbors to 25 and minimum neighbors to 7.&lt;/li&gt;
+&lt;li&gt;The next page shows you the cross validation of your surface.  This means that they take a point out of the prediction and compare it to the surface it would otherwise have been created without using it.  Publications generally eschew printing verbatim the nuances of how they ran an interpolation tool in favor of the regression function.  Answer questions 1 and 2 below.  When you are done click finish.&lt;/li&gt;
+&lt;li&gt;The grid that the geostatistical wizard spits out is a format specific to the interpolation maps. Export it as a raster by R-clicking on the layer and going to Data | Export to Raster…&lt;/li&gt;
+&lt;li&gt;Change the cell size to 500 and set the output raster to save it as IDWYYYY in your lab10 folder&lt;/li&gt;
+&lt;li&gt;After your new raster is displayed, you may remove the IDW layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Interpolating a surface via &lt;strong&gt;Kriging&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quick Kriging refresher here: &lt;a href=&#34;https://gisgeography.com/kriging-interpolation-prediction/&#34;&gt;https://gisgeography.com/kriging-interpolation-prediction/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Geostatistical Analyst | Geostatistical Wizard and choose Kriging / CoKriging&lt;/li&gt;
+&lt;li&gt;Make sure your type of Kriging is set to Simple Kriging and Normal Score, and make sure the Output Type is Prediction&lt;/li&gt;
+&lt;li&gt;Click Next&lt;/li&gt;
+&lt;li&gt;This next window is unique to Normal scores, walking you through the normalization parameters.  ArcMap does all the heavy lifting for you so take note of the parameters, look at the QQ plot, and then click Next&lt;/li&gt;
+&lt;li&gt;Again, the modeling window includes an “Optimize model” button, click that and then click Next&lt;/li&gt;
+&lt;li&gt;This visualization in the next window again shows the graphical representation of the interpolated surface in a graphic form. Click on the inset map to move the cross hairs to different portions of the aquafer. The circle around the cross hairs shows which area the model will take into account for that location. Leave all on this window to the set defaults and click Next&lt;/li&gt;
+&lt;li&gt;This next window shows you the model and the Prediction Errors. You can save this validation result to a .dbf file (or a table in a shape file) that you can open in Excel, which may have a helpful feature, depending on your purposes.&lt;/li&gt;
+&lt;li&gt;Click Finish&lt;/li&gt;
+&lt;li&gt;Click OK on the Output Layer Information window and export the layer to a rater as above, using a name similar to KGYYYY&lt;/li&gt;
+&lt;li&gt;Answer questions 3 below.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; &lt;strong&gt;Clip&lt;/strong&gt; the rasters to the extent of the Aquifer&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hint: clip tool… make sure you use the check box&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; &lt;strong&gt;Calculate&lt;/strong&gt; Water volume difference between the two interpolation methods&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hint: raster calculator…&lt;/li&gt;
+&lt;li&gt;If you don’t have an attribute table, you will need to do the following:&lt;/li&gt;
+&lt;li&gt;Use Raster Calculator to turn the raster into an integer
+
+&lt;ul&gt;
+&lt;li&gt;Hint: Int(&amp;ldquo;KI1997Diff.tif&amp;rdquo; * 1000)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;Build Raster Attribute table&lt;/strong&gt; tool to generate the attribute table&lt;/li&gt;
+&lt;li&gt;Create a new field called Volume, make it a float&lt;/li&gt;
+&lt;li&gt;Calculate volume using &lt;code&gt;((Value/1000)/3.28084)*Count*500*500&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Answer question 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; Pick an interpolation method and interpolate 2017 data using the same methods and parameters as above.  Repeat steps 4 and 5 and answer question 5&lt;/p&gt;
 </description>
     </item>
     

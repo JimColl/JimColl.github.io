@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Lab 9: Descriptive Spatial Statistics and Point Pattern Analysis Learning Objective In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions. Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab09/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/geog558/lab09/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab09/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Lab 9: Descriptive Spatial Statistics and Point Pattern Analysis Learning Objective In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions. Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/">Class Outline</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/classoutline/">Introduction and Syllabus</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558"></a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/geog558/lab01/">Labs</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/geog558/lab01/">Lab 1 - Data survey and database building</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab02/">Lab 2 - Cartographic Modeling</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab03/">Lab 3 - Focal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab04/">Lab 4 - Zonal Operations</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab05/">Lab 5 - Model Builder</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab06/">Lab 6 - Cost Distance, Region Groups, more Model Builder &amp; Python</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab07/">Lab 7 - Siting a New School with Model Builder and Fungus Dispersion Modeling</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab08/">Lab 8 - Advanced Terrain Analysis</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/geog558/lab09/">Lab 9 - Descriptive Spatial Statistics and Point Pattern Analysis</a>
+      </li>
+      
+      <li >
+        <a href="/courses/geog558/lab10/">Lab 10 - Spatial Interpolation</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#lab-9-descriptive-spatial-statistics-and-point-pattern-analysis"><strong>Lab 9: Descriptive Spatial Statistics and Point Pattern Analysis</strong></a></li>
+<li><a href="#learning-objective"><strong>Learning Objective</strong></a></li>
+<li><a href="#what-you-need-to-submit"><strong>What you need to submit</strong></a>
+<ul>
+<li><a href="#getting-set-up">Getting set up</a>
+<ul>
+<li><a href="#gathering-and-formatting-data">Gathering and formatting data</a></li>
+<li><a href="#importing-the-tornado-data">Importing the tornado data</a></li>
+<li><a href="#adding-ancillary-data">Adding ancillary data</a></li>
+</ul></li>
+<li><a href="#visualizing-the-distributions">Visualizing the distributions</a>
+<ul>
+<li><a href="#calculating-and-visualizing-descriptive-spatial-statistics"><strong>Calculating and Visualizing Descriptive Spatial Statistics</strong></a></li>
+</ul></li>
+</ul></li>
+<li><a href="#part-two-nearest-neighbor-analysis">Part Two: Nearest Neighbor Analysis</a></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="lab-9-descriptive-spatial-statistics-and-point-pattern-analysis"><strong>Lab 9: Descriptive Spatial Statistics and Point Pattern Analysis</strong></h1>
+
+<h1 id="learning-objective"><strong>Learning Objective</strong></h1>
+
+<p>In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions.  Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.  Next, we&rsquo;ll quantify the distribution of ad-hoc subsets of the data using point pattern analysis.</p>
+
+<h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
+
+<hr />
+
+<p><strong>Lab 9: Answer Sheet</strong><br />
+Name:</p>
+
+<p><strong>Question 1</strong>:<br />
+Repeat steps 4 – 7 using the monthly_SDellipse layer to create the temporal layer. Export the animation as yournamemonthly_ttmov and be sure it runs properly. Upload the .avi file (just the monthly ellipses) on your Blackboard.</p>
+
+<p>What does this animation tell you about seasonal changes in tornado touchdown locations? Is there any obvious trend?</p>
+
+<p><strong>Question 2</strong>:<br />
+Fill in the details on the following table (based on point extent):  In the C/R/D column, indicate whether there is significant Clustering (z-value less than -1.96), significant Dispersion (z-value greater than 1.96) or neither (R for random) using an alpha of .05.</p>
+
+<table>
+<thead>
+<tr>
+<th>Place &amp; Time</th>
+<th>NNR</th>
+<th>Z-Score</th>
+<th>C/R/D</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Kansas 2005</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Washington 2005</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Alabama 2005</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>USA May 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>USA Nov 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Question 3</strong>:<br />
+Describe the differences in the point patterns in Kansas, Washington, and Alabama in 2005. Which (if any) of the patterns was found to be significantly different from the random distribution? Assume alpha level = .05 (the z-value associated with 95% confidence interval is +/- 1.96).</p>
+
+<p><strong>Question 4</strong>:<br />
+What is the total area of the conterminous US in square meters?: _____ m<sup>2</sup>.</p>
+
+<p><strong>Question 5</strong>:<br />
+Fill in the details on the following table (based on the total area of the three states and the conterminous 48 states). Refer to question #2 for how to fill in the C/R/D column.</p>
+
+<table>
+<thead>
+<tr>
+<th>Place &amp; Time</th>
+<th>NNR</th>
+<th>Z-Score</th>
+<th>C/R/D</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Kansas 2005</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Washington 2005</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Alabama 2005</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>USA May 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>USA Nov 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Question 6</strong>:<br />
+What is different about your values in the top table (the extent of the points) and the bottom table (including the area)? Examine the point patterns and speculate on what causes these differences. Read the help file on the Average Nearest Neighbor Distance tool for help in answering this.</p>
+
+<p><strong>Question 7</strong>:<br />
+Calculate the NNI for these two states in 2007 using both the point extent (do not indicate an area) and the area of each state. Fill in the tables below&hellip;</p>
+
+<ul>
+<li>Based on point extent (no area indicated):<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Place &amp; Time</th>
+<th>NNR</th>
+<th>Z-Score</th>
+<th>C/R/D</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Michigan 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>South Dakota 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Based on area:<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Place &amp; Time</th>
+<th>NNR</th>
+<th>Z-Score</th>
+<th>C/R/D</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Michigan 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>South Dakota 2007</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="getting-set-up">Getting set up</h2>
+
+<h3 id="gathering-and-formatting-data">Gathering and formatting data</h3>
+
+<p>We&rsquo;ll start by downloading data from the <a href="https://www.spc.noaa.gov/gis/svrgis/">NOAA Storm Prediction Center Severe GIS page</a>.  There are a number of datasets here, but what we&rsquo;re after here is the original csv data, <a href="https://www.spc.noaa.gov/wcm/#data">here</a>, under the Severe Weather Database Files (1950-2017) heading.</p>
+
+<p><strong>1)</strong> Download (at minimum) the 2005-2007_torn.csv file, and place them in their own lab 9 folder.</p>
+
+<ul>
+<li>Files are listed at <a href="https://www.spc.noaa.gov/wcm/#data">https://www.spc.noaa.gov/wcm/#data</a></li>
+<li>Be sure to <a href="https://www.spc.noaa.gov/wcm/data/SPC_severe_database_description.pdf">read the user guide</a> so that you understand what it is you&rsquo;ve actually downloaded.<br />
+<br /></li>
+</ul>
+
+<div class="alert alert-note">
+  <div>
+    <p>ArcMap spatial statistics, while not particularly more computationally demanding than the average gis process, can be slow to run in performance limiting environments.  Feel free to tailor this lab to your own situation by downloading as much or as little of the database as you want.  Of course using the full database will provide you with a clearer picture and richer outputs, but all questions can be answered with the 2005-2007 data.  Because the database is provided as separate csv files, we need to merge them.  As is the case with most things in life, <em>there are a few ways we can do this, and the choice is yours.</em></p>
+
+<p>Starting with an empty folder with the csv&rsquo;s, you can&hellip;</p>
+
+<ul>
+<li>Copy and paste them together into a single file using notepad or excel (least grace, brute force)</li>
+
+<li><p>You can use Windows PowerShell natively to accomplish this (preferred in most cases)</p>
+
+<ul>
+<li><p>Shift right-click &gt; &ldquo;Open PowerShell window here&rdquo;, and copy-paste the following into the terminal:</p>
+
+<pre><code class="language-R">$getFirstLine = $true
+
+get-childItem *.csv | foreach {
+    $filePath = $_
+    
+    $lines = Get-Content $filePath  
+    $linesToWrite = switch($getFirstLine) {
+        $true  {$lines}
+        $false {$lines | Select -Skip 1}
+    
+    }
+    
+    $getFirstLine = $false
+    Add-Content &quot;combinedcsvs.csv&quot; $linesToWrite
+    }
+</code></pre></li>
+</ul></li>
+
+<li><p>You can merge them using R or Python (also perfectly viable)</p>
+
+<ul>
+<li><p>In R this would look something like:</p>
+
+<pre><code class="language-R">setwd(&quot;/tmp&quot;)
+filenames &lt;- list.files(pattern =  &quot;*.csv&quot;, full.names=TRUE)
+csvdata &lt;- lapply(filenames,function(i){
+    read.csv(i, header=TRUE)
+})
+df &lt;- do.call(rbind.data.frame, csvdata)
+write.csv(df,&quot;combinedcsvs.csv&quot;, row.names=FALSE)
+</code></pre></li>
+</ul></li>
+
+<li><p>You can merge them in ArcMap.  The <strong>Merge</strong> tool takes shapefiles as an input, so you&rsquo;ll need to convert them all first (instructions below) and then merge them (inelegant and counterproductive).</p></li>
+
+<li><p>Obviously if you wanted the full database you could have just used the <a href="https://www.spc.noaa.gov/wcm/data/1950-2018_all_tornadoes.csv">1950-2018_all_tornadoes.csv</a> or the <a href="https://www.spc.noaa.gov/gis/svrgis/zipped/1950-2018-torn-initpoint.zip">shapefile on the landing page</a>, but now you know.</p></li>
+</ul>
+
+  </div>
+</div>
+
+<p><strong>2)</strong> Set up and import the data</p>
+
+<ul>
+<li>Before we import anything, lets set the projection of the dataframe to an equal area projection so that we can accurately visualize these within the context of dispersion.
+
+<ul>
+<li>Right click in the white area and go to properties &gt; Coordinate Systems and search for WKID: 102003</li>
+</ul></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab9New_DataFrameProj_Arcmap.PNG" alt="" /></p>
+
+<h3 id="importing-the-tornado-data">Importing the tornado data</h3>
+
+<ul>
+<li>Let&rsquo;s next bring in the csv.  Drag the csv file from the ArcCatalog panel into the dataframe.</li>
+<li>Right click on the csv and &ldquo;Display XY Data&rdquo;.
+
+<ul>
+<li>Set X Field to slon</li>
+<li>Set Y Field to slat, and then edit the coordinate system.</li>
+<li>Set the spatial reference of the data to WKID: 4326</li>
+<li>OK your way through the tool.</li>
+</ul></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab9New_ImportTornadoData_Arcmap.PNG" alt="" /></p>
+
+<ul>
+<li>Finally, as you might have noticed with the warnings, this layer has restricted functionality.  To resolve this, we just need to export the data by right clicking on it and going to Data &gt; Export
+
+<ul>
+<li>Save All records</li>
+<li>Save the reference system as the data frame</li>
+<li>Save the output as a shapefile called <i>Torn_yyyy_yyyy.shp</i></li>
+<li>Click yes to add the results to the window.</li>
+</ul></li>
+<li>Finally, remove everything from your dataframe with the exception of <i>Torn_yyyy_yyyy.shp</i></li>
+</ul>
+
+<h3 id="adding-ancillary-data">Adding ancillary data</h3>
+
+<ul>
+<li>Next add a state boundaries shapefile from your provider of choice.
+
+<ul>
+<li>The quickest way to acquire this is to use the arrow dropdown next to add data and &ldquo;Add Data from ArcGIS Online&hellip;&rdquo;</li>
+<li>Select the lower 48 states from the layer that loads in, and then re-export the layer as <i>lower48.shp</i>.</li>
+</ul></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab9New_ImportStateData_Arcmap.PNG" alt="" /></p>
+
+<h2 id="visualizing-the-distributions">Visualizing the distributions</h2>
+
+<h3 id="calculating-and-visualizing-descriptive-spatial-statistics"><strong>Calculating and Visualizing Descriptive Spatial Statistics</strong></h3>
+
+<p><strong>1)</strong> Open the <strong>Mean Center</strong> tool.</p>
+
+<ul>
+<li>In the Mean Center dialog box, select <i>Torn_yyyy_yyyy.shp</i> as your input feature class.<br /></li>
+<li>name the output feature class <i>Torn_yyyy_yyyy_mcy.shp</i>.<br /></li>
+<li>set the case field to yr.<br /></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab9part1image_MeanCenterTool1_Arcmap.PNG" alt="" /></p>
+
+<p><strong>2)</strong> Open the attribute table for Torn_yyyy_yyyy_mcy. Notice that you have n records, one for each year of data you imported. In order to use tracking analysis, the extension ArcMap uses to create videos, we need to <strong>create a new field</strong>, and populate it using <strong>Field Calculator</strong> to create a readable by the tool.  We&rsquo;ll assign a single day, for example, “7/1/1950” to represent 1950</p>
+
+<ul>
+<li>In the table options, <strong>Add Field</strong> to create a new field named <i>TA_YEAR</i>
+
+<ul>
+<li>Set the type to Text</li>
+<li>Set the length to 32 byte</li>
+</ul></li>
+<li>Right-click on the newly created field and use the <strong>Field Calculator</strong>
+
+<ul>
+<li>Enter the following expression: <code>&quot;7/1/&quot; &amp; [yr]</code> using VB Script.</li>
+</ul></li>
+</ul>
+
+<p><strong>3)</strong> Calculate monthly standard deviation ellipses using the <strong>Directional Distribution (Standard Deviational Ellipse)</strong> tool in the Spatial Statistics Tools -&gt; Measuring Geographic Distributions toolbox.  Afterwards, add the appropriated field for tracking analysis.</p>
+
+<p><img src="/courses/geog558/media/Lab9part1image_SDTool1_Arcmap.PNG" alt="" /></p>
+
+<ul>
+<li>Select <i>Torn_yyyy_yyyy.shp</i> as your input feature class.</li>
+<li>Name the output feature class <i>Torn_yyyy_yyyy_sdm.shp</i></li>
+<li>leave the ellipse size to the default</li>
+<li>set the Case Field to mo</li>
+<li>Click OK.</li>
+<li>Add a new field named <i>TA_MONTH</i> (Text type, 32 byte length)</li>
+<li>assign the date (use the expression: <code>[mo] &amp; “/1/04”</code> for VB Script)</li>
+</ul>
+
+<p><strong>4)</strong> Create a temporal layer from the Torn_yyyy_yyyy_mcy points</p>
+
+<ul>
+<li>Activate the Tracking Analyst Extension and add it&rsquo;s toolbar.</li>
+</ul>
+
+<blockquote>
+<p>It might have been a while, where do you turn on extensions &amp; add toolbars?  (Hint: Customize &gt; extensions &amp; right click on the gray area in the &gt; toolbar area)</p>
+</blockquote>
+
+<ul>
+<li>Leave the <i>lower48</i> layer on and remove all the other layers</li>
+<li>Click on the <strong>Add Temporal Data wizard</strong> button</li>
+<li>You want to add a feature class or shapefile containing temporal data (first radio button) and click on the browse button to select <i>Torn_yyyy_yyyy_mcy.shp</i> as the input</li>
+<li>Select the appropriate date/time field (i.e. <i>TA_YEAR</i>) and click Next</li>
+<li>Specify the date &amp; time format (M/d/yyyy) and click Next then Finish.  A new “<i>Temporal Layer</i>” will be added to the data frame’s table of contents</li>
+</ul>
+
+<p><strong>5)</strong> Modify the symbology of the temporal layer</p>
+
+<ul>
+<li>Right-click on the <i>Temporal Layer</i> and go to Properties</li>
+<li>notice the properties tabs are slightly different from those of a typical shapefile</li>
+<li>In the Symbology tab check the Time Window box in the Show: box under Events</li>
+<li>The number of periods is the number of intervals in the series, set as appropriate.
+
+<ul>
+<li>For <i>Torn_2005_2007_mcy.shp</i>, the number of periods is 3 and the units are Years</li>
+</ul></li>
+<li>Click OK. You have set the temporal symbology (i.e., what symbols will display over time)</li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab9part1image_LayerSymbol_Arcmap.PNG" alt="" /></p>
+
+<p><strong>6)</strong> Visualize the temporal data</p>
+
+<ul>
+<li>Click on the Playback Manager button on the Tracking Analyst toolbar
+
+<ul>
+<li>Hint: Hover over tools to see their name, remember?</li>
+</ul></li>
+<li>Click on Options and set the temporal extent to the temporal layer (Torn_yyyy_yyyy_mcy)</li>
+<li>Change the playback rate to 1.00 years per second</li>
+<li>Click play and watch the animation</li>
+<li>Write a film analysis detailing the evolution of the main character (Torn_yyyy_yyyy_mcy), with respect to the changing of the seasons.
+
+<ul>
+<li>I kid&hellip;</li>
+</ul></li>
+</ul>
+
+<p><img src="/courses/geog558/media/Lab9part1image_Playback1_Arcmap.PNG" alt="" /></p>
+
+<p><strong>7)</strong> Export the animation to a movie</p>
+
+<ul>
+<li>On the Tracking Analyst toolbar, go to Tracking Analyst -&gt; Animation Tool</li>
+<li>Change the frame size width to 320 and be sure Maintain Aspect Ratio is selected. Set the output file to <i>yourname_yearly_ttmov</i></li>
+<li>Click Generate.</li>
+<li>Go to Windows Explorer and launch your movie to make sure the animation was generated correctly.</li>
+<li>Answer question #1 on your answer sheet</li>
+</ul>
+
+<h1 id="part-two-nearest-neighbor-analysis">Part Two: Nearest Neighbor Analysis</h1>
+
+<p><strong>1)</strong> Select tornado touchdowns within Kansas in 2005.</p>
+
+<ul>
+<li>Starting with <i>lower48</i> and the <i>Torn_yyyy_yyyy.shp</i>, <strong>export</strong> the tornado touchdown data for 2004
+
+<ul>
+<li>select by attributes, input layer <i>Torn_yyyy_yyyy.shp</i>, &ldquo;YEAR&rdquo; = &lsquo;2005&rsquo;, R-Click layer, Export Data…) and call it <i>tt_KS_2005.shp</i>, add it to the map</li>
+</ul></li>
+<li>Turn off the <i>Torn_yyyy_yyyy</i> and <i>tt_KS_2005</i> layers temporarily and use the select tool to select Kansas (alternatively you can use the Select by attributes tool)</li>
+<li>Go to Selection &gt; Select by Location, select features from <i>tt_KS_2005</i> that intersect the features in <i>lower48</i>, and check Use selected features. It should inform you that there is one feature (Kansas State) selected.</li>
+<li>Click OK</li>
+<li>Turn the <i>tt_KS_2005</i> layer back on to verify that only touchdown points for the year 2005 in Kansas are highlighted</li>
+</ul>
+
+<p><strong>2)</strong> Using the <strong>Average Nearest Neighbor</strong> tool in the Spatial Statistics Tools | Analyzing Patterns, calculate the Nearest Neighbor Index for Kansas in 2005.</p>
+
+<ul>
+<li>Input feature class: <i>tt_KS_2004</i>, use Euclidean distance and check Generate Report</li>
+<li>To see the report, open the ‘NearestNeighbor_Result.html’ in the Results window</li>
+<li>Click OK and fill in the appropriate information in the table (question #2 on the answer sheet)</li>
+</ul>
+
+<p><strong>3)</strong> Calculate Nearest Indices for Washington State and Alabama in 2005</p>
+
+<ul>
+<li>Repeat parts of step 1 and step 2 above for both Washington and Alabama</li>
+<li>Fill in the table in question #2 and answer question #3 on the answer sheet</li>
+</ul>
+
+<p><strong>4)</strong> Calculating Nearest Neighbor Indices for two months (May and November) across the US in 2007</p>
+
+<ul>
+<li>Select the touchdown points that occurred in May of 2007 (select by attributes) and export data, naming the output <i>tt_May07</i></li>
+<li>Do the same for November and name the exported dataset appropriately</li>
+<li>Repeat step 2 to calculate the NNI for the two months</li>
+<li>Fill in the table in question #2 on the answer sheet</li>
+</ul>
+
+<p><strong>5)</strong> Calculate the total area of the 48 conterminous states and DC</p>
+
+<ul>
+<li>Open the attribute table for the <i>lower48</i> shapefile</li>
+<li>Add a new field named <i>AreaSQM</i>. Make it type Float</li>
+<li>Right-click on the <i>AreaSQM</i> field and click on Calculate Geometry</li>
+<li>Make the property Area and use coordinate system of the data source.  Keep the units as square meters and click OK</li>
+<li>R-Click on the <i>AreaSQM</i> field, click on Statistics, and note the Sum. Answer question #4 on your answer sheet.</li>
+</ul>
+
+<p><strong>6)</strong> Use the total area to calculate NNI of the tornado touchdowns in May and November of 2007</p>
+
+<ul>
+<li>Repeat step 2 but include the total area figure in the area box.</li>
+<li>To make this easier, select the value from the statistics window and hit CTRL-C to copy the text to the clipboard. Then click on the Area field in the Nearest Neighbor window and use CTRL-V to paste the number).</li>
+<li>Fill in the results in the table in question #5 on your answer sheet.</li>
+</ul>
+
+<p><strong>7)</strong> Calculate the Nearest Neighbor Indices for Kansas, Washington, and Alabama using each state’s respective area</p>
+
+<ul>
+<li>Repeat the above steps for Nearest neighbor analysis.</li>
+<li>You can copy the value from the attribute table and paste it into the dialog box).</li>
+<li>Fill in the rest of the table in question #5 and answer questions 6 &amp; 7 on your answer sheet.</li>
+</ul>
+
+<p>Submit your final answer sheet to blackboard.</p>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

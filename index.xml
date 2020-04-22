@@ -8067,9 +8067,19 @@ Pick one of the interpolations and submit your report below.  This might include
     &lt;td class=&#34;tg-btxf&#34;&gt;HPBounds_2010.shp&lt;/td&gt;
     &lt;td class=&#34;tg-btxf&#34;&gt;Outer boundary for the High Plains Aquifer&lt;/td&gt;
   &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;smalldata.zip&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;A subset of the data for Kansas Groundwater Management District 4&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Interpolating surfaces can be one of the more processing intensive operations.  As an alternative if you are in a processing limited environment feel free to perform the lab using the &amp;ldquo;smalldata&amp;rdquo; folder in place of the full database.  I have subset the original assignment to the 6 counties that comprise the Kansas groundwater managment district 4.
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Getting started&lt;/p&gt;
 

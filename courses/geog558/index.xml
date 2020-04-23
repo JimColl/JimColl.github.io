@@ -3816,7 +3816,10 @@ write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
 
 &lt;ul&gt;
 &lt;li&gt;The quickest way to acquire this is to use the arrow dropdown next to add data and &amp;ldquo;Add Data from ArcGIS Online&amp;hellip;&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;You will need to sign in to an ArcGIS account in the upper right hand corner.&lt;/li&gt;
+&lt;li&gt;Search for &amp;ldquo;United States States&amp;rdquo;, and make sure the layer you add is a feature layer.&lt;/li&gt;
 &lt;li&gt;Select the lower 48 states from the layer that loads in, and then re-export the layer as &lt;i&gt;lower48.shp&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;If this fails for some reason, you can grab &lt;a href=&#34;https://www.census.gov/cgi-bin/geo/shapefiles/index.php&#34;&gt;state boundaries from TIGER&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

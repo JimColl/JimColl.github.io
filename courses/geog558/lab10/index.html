@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Lab 10: Spatial Interpolation Learning Objective When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze. Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.">
+  <meta name="description" content="Lab 10: Spatial Interpolation Learning Objective When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze. Most field data are collected at discrete points (e.g., rain gages, GPS point collection, address points, ect.). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/geog558/lab10/">
@@ -113,7 +113,7 @@
   <meta property="og:site_name" content="Jim Coll">
   <meta property="og:url" content="https://jimcoll.github.io/courses/geog558/lab10/">
   <meta property="og:title" content=" | Jim Coll">
-  <meta property="og:description" content="Lab 10: Spatial Interpolation Learning Objective When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze. Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="og:description" content="Lab 10: Spatial Interpolation Learning Objective When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze. Most field data are collected at discrete points (e.g., rain gages, GPS point collection, address points, ect.). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -428,10 +428,10 @@
 
 <h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze.  Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.</p>
+<p>When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze.  Most field data are collected at discrete points (e.g., rain gages, GPS point collection, address points, ect.). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.</p>
 
 <p>Scenario:
-You have been hired by KGS to perform an analysis of water level in the High Plains Aquafer in Kansas.  They have provided you with 2 shapefiles containing min, mean, and max water level depths from the surface for 1997 and 2017.  Your job is to perform a volume comparison.  You will need to interpolate a surface representing the water table elevation for each time period and determine the volume gained or lost over the 20-year period, create a map describing the status and change of the water table in Kansas, and a short report of your findings.</p>
+You have been hired by KGS to perform an analysis of water level in the High Plains Aquifer in Kansas.  They have provided you with 2 shapefiles containing min, mean, and max water level depths from the surface for 1997 and 2017.  Your job is to perform a volume comparison.  You will need to interpolate a surface representing the water table elevation for each time period and determine the volume gained or lost over the 20-year period, create a map describing the status and change of the water table in Kansas, and a short report of your findings.</p>
 
 <h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
@@ -445,10 +445,10 @@ What was your regression function?</p>
 What is the interpretation of your regression function?</p>
 
 <p>Question 3:<br />
-What was your highest prediction standard error (hint: right click on the GA layer and “Change output to predictied Standard Error”)?  How does this error compare with the distribution of the well heads?</p>
+What was your highest prediction standard error (hint: right click on the GA layer and “Change output to predicted Standard Error”)?  How does this error compare with the distribution of the well heads?</p>
 
 <p>Question 4:<br />
-Subtract the two 1997 surfaces.  What is the difference in volume between the two interpolations.  Given that we extract <a href="https://www.usgs.gov/news/how-much-water-does-kansas-use">~3,655,000 acre-feet of water a year</a>, how important is the interpolation method in determining the change in volume?</p>
+Subtract the two 1997 surfaces.  What is the difference in volume between the two interpolation methods.  Given that we extract <a href="https://www.usgs.gov/news/how-much-water-does-kansas-use">~3,655,000 acre-feet of water a year</a>, how important is the interpolation method in determining the change in volume?</p>
 
 <p>Question 5:<br />
 Pick one of the interpolations and submit your report below.  This might include some or all of the following elements.</p>
@@ -514,15 +514,14 @@ Pick one of the interpolations and submit your report below.  This might include
 
 <div class="alert alert-note">
   <div>
-    Interpolating surfaces can be one of the more processing intensive operations.  As an alternative if you are in a processing limited environment feel free to perform the lab using the &ldquo;smalldata&rdquo; folder in place of the full database.  I have subset the original assignment to the 6 counties that comprise the Kansas groundwater managment district 4.
+    Interpolating surfaces can be one of the more processing intensive operations.  As an alternative if you are in a processing limited environment feel free to perform the lab using the &ldquo;smalldata&rdquo; folder in place of the full database.  I have subset the original assignment to the 6 counties that comprise the Kansas groundwater management district 4.
   </div>
 </div>
 
 <p><strong>1)</strong> Getting started</p>
 
 <ul>
-<li>Unzip the folder into your OneDrive</li>
-<li>Open the packaged map and zoom to the Kansas Layers</li>
+<li>Add the data into ArcMap and examine it&rsquo;s properties.</li>
 <li>We will use the Geostatistical Analyst feature in ArcMap. There are many, many features of this tool that we will not explore here. You can use the ArcMap help system or Google “Using ArcGIS Geostatistical Analyst” online to explore this tool beyond what we will do here.</li>
 <li>If necessary, activate the Geostatistical Analyst (Customize | Extensions)</li>
 <li>Add the Geostatistical Analyst toolbar (Customize | Toolbars | Geostatistical Analyst)<br /></li>
@@ -531,17 +530,22 @@ Pick one of the interpolations and submit your report below.  This might include
 <p><strong>2)</strong> Interpolating a surface using <strong>IDW</strong></p>
 
 <ul>
-<li>Go to Geostatistical Analyst | Geostatistical Wizard</li>
+<li>Go to Geostatistical Analyst | Geostatistical Wizard
+
+<ul>
 <li>Highlight Inverse Distance Weighting</li>
 <li>Select your Source Data (A well shapefile)</li>
 <li>We want to model a water surface, so make your Data Field (I use avg depth)</li>
 <li>Click Next</li>
-<li>If a &ldquo;Handing Coincidental Samples&rdquo; prompt pops up, decide how you would like to handle this occurrence.  Since I prefer “worst case” scenarios, I choose &ldquo;Use Maximum&rdquo;.</li>
+<li>If a &ldquo;Handing Coincidental Samples&rdquo; prompt pops up, decide how you would like to handle this occurrence.  Since I prefer “worst case” scenarios, I choose &ldquo;Use Maximum&rdquo;.  Once you&rsquo;ve chosen, click next.</li>
 <li>This next window shows you how water levels will be modeled, but in a graphic form.  Take a look at the help file for the statistical wizard to determine how the various inputs affect the statistic performed.  ArcMap is nice enough to include a power optimization button under general properties.  Go ahead and click that button.  I also want to include more samples in my interpolation so change maximum neighbors to 25 and minimum neighbors to 7.</li>
-<li>The next page shows you the cross validation of your surface.  This means that they take a point out of the prediction and compare it to the surface it would otherwise have been created without using it.  Publications generally eschew printing verbatim the nuances of how they ran an interpolation tool in favor of the regression function.  Answer questions 1 and 2 below.  When you are done click finish.</li>
-<li>The grid that the geostatistical wizard spits out is a format specific to the interpolation maps. Export it as a raster by R-clicking on the layer and going to Data | Export to Raster…</li>
+<li>The next page shows you the cross validation of your surface.  This means that they take a point out of the prediction and compare it to the surface it would otherwise have been created without using it.  When presenting results, most publications generally eschew printing the nuances of how they ran an interpolation tool in favor of reporting the regression function.  Answer questions 1 and 2 below.  When you are done click finish.</li>
+</ul></li>
+<li>The grid that the geostatistical wizard spits out is a format specific to the interpolation tools and is not easily manipulated as you have grown used to. Export it as a raster by R-clicking on the layer and going to Data | Export to Raster…
+
+<ul>
 <li>Change the cell size to 500 and set the output raster to save it as IDWYYYY in your lab10 folder</li>
-<li>After your new raster is displayed, you may remove the IDW layer.</li>
+</ul></li>
 </ul>
 
 <p><strong>3)</strong> Interpolating a surface via <strong>Kriging</strong></p>
@@ -551,41 +555,44 @@ Pick one of the interpolations and submit your report below.  This might include
 </blockquote>
 
 <ul>
-<li>Go to Geostatistical Analyst | Geostatistical Wizard and choose Kriging / CoKriging</li>
+<li>Go to Geostatistical Analyst | Geostatistical Wizard and choose Kriging / CoKriging
+
+<ul>
 <li>Make sure your type of Kriging is set to Simple Kriging and Normal Score, and make sure the Output Type is Prediction</li>
 <li>Click Next</li>
 <li>This next window is unique to Normal scores, walking you through the normalization parameters.  ArcMap does all the heavy lifting for you so take note of the parameters, look at the QQ plot, and then click Next</li>
 <li>Again, the modeling window includes an “Optimize model” button, click that and then click Next</li>
-<li>This visualization in the next window again shows the graphical representation of the interpolated surface in a graphic form. Click on the inset map to move the cross hairs to different portions of the aquafer. The circle around the cross hairs shows which area the model will take into account for that location. Leave all on this window to the set defaults and click Next</li>
+<li>This visualization in the next window again shows the graphical representation of the interpolated surface in a graphic form. Click on the inset map to move the cross hairs to different portions of the aquifer. The circle around the cross hairs shows which area the model will take into account for that location. Leave all on this window to the set defaults and click Next</li>
 <li>This next window shows you the model and the Prediction Errors. You can save this validation result to a .dbf file (or a table in a shape file) that you can open in Excel, which may have a helpful feature, depending on your purposes.</li>
 <li>Click Finish</li>
+</ul></li>
 <li>Click OK on the Output Layer Information window and export the layer to a rater as above, using a name similar to KGYYYY</li>
 <li>Answer questions 3 below.<br /></li>
 </ul>
 
 <p><strong>4)</strong> <strong>Clip</strong> the rasters to the extent of the Aquifer</p>
 
-<ul>
-<li>Hint: clip tool… make sure you use the check box</li>
-</ul>
+<blockquote>
+<p>Hint: clip tool… make sure you use the check box</p>
+</blockquote>
 
 <p><strong>5)</strong> <strong>Calculate</strong> Water volume difference between the two interpolation methods</p>
 
 <ul>
 <li>Hint: raster calculator…</li>
 <li>If you don’t have an attribute table, you will need to do the following:</li>
-<li>Use Raster Calculator to turn the raster into an integer
+<li>Use Raster Calculator to first turn the raster into an integer while keeping some of our calulated presision.
 
 <ul>
-<li>Hint: Int(&ldquo;KI1997Diff.tif&rdquo; * 1000)</li>
+<li>Hint: <code>Int(&quot;KI1997Diff.tif&quot; * 1000)</code></li>
 </ul></li>
 <li>Use the <strong>Build Raster Attribute table</strong> tool to generate the attribute table</li>
-<li>Create a new field called Volume, make it a float</li>
+<li>Create a new field called Volume, make it a float.</li>
 <li>Calculate volume using <code>((Value/1000)/3.28084)*Count*500*500</code></li>
 <li>Answer question 4</li>
 </ul>
 
-<p><strong>6)</strong> Pick an interpolation method and interpolate 2017 data using the same methods and parameters as above.  Repeat steps 4 and 5 and answer question 5</p>
+<p><strong>6)</strong> Pick an interpolation method and interpolate 2017 data using the same methods and parameters as above.  Repeat steps 4 and 5 and answer question 5 on the sheet.</p>
 
           </div>
 

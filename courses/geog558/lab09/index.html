@@ -440,7 +440,7 @@
 
 <h1 id="learning-objective"><strong>Learning Objective</strong></h1>
 
-<p>In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions.  Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.  Next, we&rsquo;ll quantify the distribution of ad-hoc subsets of the data using point pattern analysis.</p>
+<p>In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions.  Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.  Next, we&rsquo;ll quantify the distribution of ad hoc subsets of the data using point pattern analysis.</p>
 
 <h1 id="what-you-need-to-submit"><strong>What you need to submit</strong></h1>
 
@@ -450,7 +450,7 @@
 Name:</p>
 
 <p><strong>Question 1</strong>:<br />
-Repeat steps 4 – 7 using the monthly_SDellipse layer to create the temporal layer. Export the animation as yournamemonthly_ttmov and be sure it runs properly. Upload the .avi file (just the monthly ellipses) on your Blackboard.</p>
+Repeat steps 4 – 7 using the monthly_SDellipse layer to create the temporal layer. Export the animation as yournamemonthly_ttmov and be sure it runs properly. Upload the .avi file (just the monthly ellipses) on Blackboard.</p>
 
 <p>What does this animation tell you about seasonal changes in tornado touchdown locations? Is there any obvious trend?</p>
 
@@ -650,7 +650,7 @@ Calculate the NNI for these two states in 2007 using both the point extent (do n
   <div>
     <p>ArcMap spatial statistics, while not particularly more computationally demanding than the average gis process, can be slow to run in performance limiting environments.  Feel free to tailor this lab to your own situation by downloading as much or as little of the database as you want.  Of course using the full database will provide you with a clearer picture and richer outputs, but all questions can be answered with the 2005-2007 data.  Because the database is provided as separate csv files, we need to merge them.  As is the case with most things in life, <em>there are a few ways we can do this, and the choice is yours.</em></p>
 
-<p>Starting with an empty folder with the csv&rsquo;s, you can&hellip;</p>
+<p>Starting with the folder of csv&rsquo;s files you have downloaded, you can&hellip;</p>
 
 <ul>
 <li>Copy and paste them together into a single file using notepad or excel (least grace, brute force)</li>
@@ -693,10 +693,10 @@ write.csv(df,&quot;combinedcsvs.csv&quot;, row.names=FALSE)
 </code></pre></li>
 </ul></li>
 
-<li><p>You can merge them in ArcMap.  The <strong>Merge</strong> tool takes shapefiles as an input, so you&rsquo;ll need to convert them all first (instructions below) and then merge them (inelegant and counterproductive).</p></li>
-
-<li><p>Obviously if you wanted the full database you could have just used the <a href="https://www.spc.noaa.gov/wcm/data/1950-2018_all_tornadoes.csv">1950-2018_all_tornadoes.csv</a> or the <a href="https://www.spc.noaa.gov/gis/svrgis/zipped/1950-2018-torn-initpoint.zip">shapefile on the landing page</a>, but now you know.</p></li>
+<li><p>You can merge them in ArcMap.  The <strong>Merge</strong> tool takes shapefiles as an input, so you&rsquo;d need to convert them to shapefiles first (instructions below) and then merge them (inelegant and counterproductive).</p></li>
 </ul>
+
+<p>Obviously if you wanted the full database you could have just used the <a href="https://www.spc.noaa.gov/wcm/data/1950-2018_all_tornadoes.csv">1950-2018_all_tornadoes.csv</a> or the <a href="https://www.spc.noaa.gov/gis/svrgis/zipped/1950-2018-torn-initpoint.zip">shapefile on the landing page</a>, but now you know.</p>
 
   </div>
 </div>
@@ -750,9 +750,9 @@ write.csv(df,&quot;combinedcsvs.csv&quot;, row.names=FALSE)
 <li>The quickest way to acquire this is to use the arrow dropdown next to add data and &ldquo;Add Data from ArcGIS Online&hellip;&rdquo;</li>
 <li>You will need to sign in to an ArcGIS account in the upper right hand corner.</li>
 <li>Search for &ldquo;United States States&rdquo;, and make sure the layer you add is a feature layer.</li>
-<li>Select the lower 48 states from the layer that loads in, and then re-export the layer as <i>lower48.shp</i>.</li>
-<li>If this fails for some reason, you can grab <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php">state boundaries from TIGER</a>.</li>
+<li>Select the lower 48 states (and DC) from the layer that loads in, and then re-export the layer as <i>lower48.shp</i>.</li>
 </ul></li>
+<li>If this fails for some reason, you can grab <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php">state boundaries from TIGER</a>.</li>
 </ul>
 
 <p><img src="/courses/geog558/media/Lab9New_ImportStateData_Arcmap.PNG" alt="" /></p>
@@ -798,7 +798,7 @@ write.csv(df,&quot;combinedcsvs.csv&quot;, row.names=FALSE)
 <li>set the Case Field to mo</li>
 <li>Click OK.</li>
 <li>Add a new field named <i>TA_MONTH</i> (Text type, 32 byte length)</li>
-<li>assign the date (use the expression: <code>[mo] &amp; “/1/04”</code> for VB Script)</li>
+<li>assign the date (use the expression: <code>[mo] &amp; “/1/05”</code> for VB Script)</li>
 </ul>
 
 <p><strong>4)</strong> Create a temporal layer from the Torn_yyyy_yyyy_mcy points</p>
@@ -884,12 +884,12 @@ write.csv(df,&quot;combinedcsvs.csv&quot;, row.names=FALSE)
 <p><strong>2)</strong> Using the <strong>Average Nearest Neighbor</strong> tool in the Spatial Statistics Tools | Analyzing Patterns, calculate the Nearest Neighbor Index for Kansas in 2005.</p>
 
 <ul>
-<li>Input feature class: <i>tt_KS_2004</i>, use Euclidean distance and check Generate Report</li>
+<li>Input feature class: <i>tt_KS_2005</i>, use Euclidean distance and check Generate Report</li>
 <li>To see the report, open the ‘NearestNeighbor_Result.html’ in the Results window</li>
 <li>Click OK and fill in the appropriate information in the table (question #2 on the answer sheet)</li>
 </ul>
 
-<p><strong>3)</strong> Calculate Nearest Indices for Washington State and Alabama in 2005</p>
+<p><strong>3)</strong> Calculate Nearest Indices for Washington (the state) and Alabama in 2005</p>
 
 <ul>
 <li>Repeat parts of step 1 and step 2 above for both Washington and Alabama</li>
@@ -923,13 +923,15 @@ write.csv(df,&quot;combinedcsvs.csv&quot;, row.names=FALSE)
 <li>Fill in the results in the table in question #5 on your answer sheet.</li>
 </ul>
 
-<p><strong>7)</strong> Calculate the Nearest Neighbor Indices for Kansas, Washington, and Alabama using each state’s respective area</p>
+<p><strong>7)</strong> Calculate the Nearest Neighbor Indices again, this time using using each region&rsquo;s respective area.</p>
 
 <ul>
 <li>Repeat the above steps for Nearest neighbor analysis.</li>
 <li>You can copy the value from the attribute table and paste it into the dialog box).</li>
-<li>Fill in the rest of the table in question #5 and answer questions 6 &amp; 7 on your answer sheet.</li>
+<li>Fill in the rest of the table in question #5</li>
 </ul>
+
+<p><strong>8)</strong> Using what you&rsquo;ve learned, answer questions 6 &amp; 7 on your answer sheet.</p>
 
 <p>Submit your final answer sheet to blackboard.</p>
 

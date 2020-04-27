@@ -7194,7 +7194,7 @@ This section will introduce you to basic terrain analysis in the raster data mod
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions.  Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.  Next, we&amp;rsquo;ll quantify the distribution of ad-hoc subsets of the data using point pattern analysis.&lt;/p&gt;
+&lt;p&gt;In this lab, we will use a tornado touchdown points database which spans from 1950 to 2018 to introduce you to some techniques of measuring geographic distributions.  Through the use of yearly and monthly mean centers and standard deviation ellipses, well explore how tornado touchdowns are distributed and then use the tracking analyst to visualize how these change over time.  Next, we&amp;rsquo;ll quantify the distribution of ad hoc subsets of the data using point pattern analysis.&lt;/p&gt;
 
 &lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
 
@@ -7204,7 +7204,7 @@ This section will introduce you to basic terrain analysis in the raster data mod
 Name:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Question 1&lt;/strong&gt;:&lt;br /&gt;
-Repeat steps 4 – 7 using the monthly_SDellipse layer to create the temporal layer. Export the animation as yournamemonthly_ttmov and be sure it runs properly. Upload the .avi file (just the monthly ellipses) on your Blackboard.&lt;/p&gt;
+Repeat steps 4 – 7 using the monthly_SDellipse layer to create the temporal layer. Export the animation as yournamemonthly_ttmov and be sure it runs properly. Upload the .avi file (just the monthly ellipses) on Blackboard.&lt;/p&gt;
 
 &lt;p&gt;What does this animation tell you about seasonal changes in tornado touchdown locations? Is there any obvious trend?&lt;/p&gt;
 
@@ -7404,7 +7404,7 @@ Calculate the NNI for these two states in 2007 using both the point extent (do n
   &lt;div&gt;
     &lt;p&gt;ArcMap spatial statistics, while not particularly more computationally demanding than the average gis process, can be slow to run in performance limiting environments.  Feel free to tailor this lab to your own situation by downloading as much or as little of the database as you want.  Of course using the full database will provide you with a clearer picture and richer outputs, but all questions can be answered with the 2005-2007 data.  Because the database is provided as separate csv files, we need to merge them.  As is the case with most things in life, &lt;em&gt;there are a few ways we can do this, and the choice is yours.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Starting with an empty folder with the csv&amp;rsquo;s, you can&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Starting with the folder of csv&amp;rsquo;s files you have downloaded, you can&amp;hellip;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Copy and paste them together into a single file using notepad or excel (least grace, brute force)&lt;/li&gt;
@@ -7447,10 +7447,10 @@ write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You can merge them in ArcMap.  The &lt;strong&gt;Merge&lt;/strong&gt; tool takes shapefiles as an input, so you&amp;rsquo;ll need to convert them all first (instructions below) and then merge them (inelegant and counterproductive).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Obviously if you wanted the full database you could have just used the &lt;a href=&#34;https://www.spc.noaa.gov/wcm/data/1950-2018_all_tornadoes.csv&#34;&gt;1950-2018_all_tornadoes.csv&lt;/a&gt; or the &lt;a href=&#34;https://www.spc.noaa.gov/gis/svrgis/zipped/1950-2018-torn-initpoint.zip&#34;&gt;shapefile on the landing page&lt;/a&gt;, but now you know.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You can merge them in ArcMap.  The &lt;strong&gt;Merge&lt;/strong&gt; tool takes shapefiles as an input, so you&amp;rsquo;d need to convert them to shapefiles first (instructions below) and then merge them (inelegant and counterproductive).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Obviously if you wanted the full database you could have just used the &lt;a href=&#34;https://www.spc.noaa.gov/wcm/data/1950-2018_all_tornadoes.csv&#34;&gt;1950-2018_all_tornadoes.csv&lt;/a&gt; or the &lt;a href=&#34;https://www.spc.noaa.gov/gis/svrgis/zipped/1950-2018-torn-initpoint.zip&#34;&gt;shapefile on the landing page&lt;/a&gt;, but now you know.&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
@@ -7504,9 +7504,9 @@ write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
 &lt;li&gt;The quickest way to acquire this is to use the arrow dropdown next to add data and &amp;ldquo;Add Data from ArcGIS Online&amp;hellip;&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;You will need to sign in to an ArcGIS account in the upper right hand corner.&lt;/li&gt;
 &lt;li&gt;Search for &amp;ldquo;United States States&amp;rdquo;, and make sure the layer you add is a feature layer.&lt;/li&gt;
-&lt;li&gt;Select the lower 48 states from the layer that loads in, and then re-export the layer as &lt;i&gt;lower48.shp&lt;/i&gt;.&lt;/li&gt;
-&lt;li&gt;If this fails for some reason, you can grab &lt;a href=&#34;https://www.census.gov/cgi-bin/geo/shapefiles/index.php&#34;&gt;state boundaries from TIGER&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Select the lower 48 states (and DC) from the layer that loads in, and then re-export the layer as &lt;i&gt;lower48.shp&lt;/i&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;If this fails for some reason, you can grab &lt;a href=&#34;https://www.census.gov/cgi-bin/geo/shapefiles/index.php&#34;&gt;state boundaries from TIGER&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog558/media/Lab9New_ImportStateData_Arcmap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -7552,7 +7552,7 @@ write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
 &lt;li&gt;set the Case Field to mo&lt;/li&gt;
 &lt;li&gt;Click OK.&lt;/li&gt;
 &lt;li&gt;Add a new field named &lt;i&gt;TA_MONTH&lt;/i&gt; (Text type, 32 byte length)&lt;/li&gt;
-&lt;li&gt;assign the date (use the expression: &lt;code&gt;[mo] &amp;amp; “/1/04”&lt;/code&gt; for VB Script)&lt;/li&gt;
+&lt;li&gt;assign the date (use the expression: &lt;code&gt;[mo] &amp;amp; “/1/05”&lt;/code&gt; for VB Script)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; Create a temporal layer from the Torn_yyyy_yyyy_mcy points&lt;/p&gt;
@@ -7638,12 +7638,12 @@ write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Using the &lt;strong&gt;Average Nearest Neighbor&lt;/strong&gt; tool in the Spatial Statistics Tools | Analyzing Patterns, calculate the Nearest Neighbor Index for Kansas in 2005.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Input feature class: &lt;i&gt;tt_KS_2004&lt;/i&gt;, use Euclidean distance and check Generate Report&lt;/li&gt;
+&lt;li&gt;Input feature class: &lt;i&gt;tt_KS_2005&lt;/i&gt;, use Euclidean distance and check Generate Report&lt;/li&gt;
 &lt;li&gt;To see the report, open the ‘NearestNeighbor_Result.html’ in the Results window&lt;/li&gt;
 &lt;li&gt;Click OK and fill in the appropriate information in the table (question #2 on the answer sheet)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Calculate Nearest Indices for Washington State and Alabama in 2005&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Calculate Nearest Indices for Washington (the state) and Alabama in 2005&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Repeat parts of step 1 and step 2 above for both Washington and Alabama&lt;/li&gt;
@@ -7677,13 +7677,15 @@ write.csv(df,&amp;quot;combinedcsvs.csv&amp;quot;, row.names=FALSE)
 &lt;li&gt;Fill in the results in the table in question #5 on your answer sheet.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;7)&lt;/strong&gt; Calculate the Nearest Neighbor Indices for Kansas, Washington, and Alabama using each state’s respective area&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7)&lt;/strong&gt; Calculate the Nearest Neighbor Indices again, this time using using each region&amp;rsquo;s respective area.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Repeat the above steps for Nearest neighbor analysis.&lt;/li&gt;
 &lt;li&gt;You can copy the value from the attribute table and paste it into the dialog box).&lt;/li&gt;
-&lt;li&gt;Fill in the rest of the table in question #5 and answer questions 6 &amp;amp; 7 on your answer sheet.&lt;/li&gt;
+&lt;li&gt;Fill in the rest of the table in question #5&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;8)&lt;/strong&gt; Using what you&amp;rsquo;ve learned, answer questions 6 &amp;amp; 7 on your answer sheet.&lt;/p&gt;
 
 &lt;p&gt;Submit your final answer sheet to blackboard.&lt;/p&gt;
 </description>
@@ -7994,10 +7996,10 @@ In areas of the United States where the population has expanded to rural and for
 
 &lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
 
-&lt;p&gt;When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze.  Most field data are collected at discrete points (e.g., rain gages, GPS point collection, quadrat vegetation measurements). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.&lt;/p&gt;
+&lt;p&gt;When we deal with spatial analysis, one of the problems we have is getting data we collect in the field into a form we can analyze.  Most field data are collected at discrete points (e.g., rain gages, GPS point collection, address points, ect.). There are several interpolation methods that allow us to take this point data and make it into a continuous surface. We will look at the Inverted Distance Weighting and Kriging methods in this lab.&lt;/p&gt;
 
 &lt;p&gt;Scenario:
-You have been hired by KGS to perform an analysis of water level in the High Plains Aquafer in Kansas.  They have provided you with 2 shapefiles containing min, mean, and max water level depths from the surface for 1997 and 2017.  Your job is to perform a volume comparison.  You will need to interpolate a surface representing the water table elevation for each time period and determine the volume gained or lost over the 20-year period, create a map describing the status and change of the water table in Kansas, and a short report of your findings.&lt;/p&gt;
+You have been hired by KGS to perform an analysis of water level in the High Plains Aquifer in Kansas.  They have provided you with 2 shapefiles containing min, mean, and max water level depths from the surface for 1997 and 2017.  Your job is to perform a volume comparison.  You will need to interpolate a surface representing the water table elevation for each time period and determine the volume gained or lost over the 20-year period, create a map describing the status and change of the water table in Kansas, and a short report of your findings.&lt;/p&gt;
 
 &lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
 
@@ -8011,10 +8013,10 @@ What was your regression function?&lt;/p&gt;
 What is the interpretation of your regression function?&lt;/p&gt;
 
 &lt;p&gt;Question 3:&lt;br /&gt;
-What was your highest prediction standard error (hint: right click on the GA layer and “Change output to predictied Standard Error”)?  How does this error compare with the distribution of the well heads?&lt;/p&gt;
+What was your highest prediction standard error (hint: right click on the GA layer and “Change output to predicted Standard Error”)?  How does this error compare with the distribution of the well heads?&lt;/p&gt;
 
 &lt;p&gt;Question 4:&lt;br /&gt;
-Subtract the two 1997 surfaces.  What is the difference in volume between the two interpolations.  Given that we extract &lt;a href=&#34;https://www.usgs.gov/news/how-much-water-does-kansas-use&#34;&gt;~3,655,000 acre-feet of water a year&lt;/a&gt;, how important is the interpolation method in determining the change in volume?&lt;/p&gt;
+Subtract the two 1997 surfaces.  What is the difference in volume between the two interpolation methods.  Given that we extract &lt;a href=&#34;https://www.usgs.gov/news/how-much-water-does-kansas-use&#34;&gt;~3,655,000 acre-feet of water a year&lt;/a&gt;, how important is the interpolation method in determining the change in volume?&lt;/p&gt;
 
 &lt;p&gt;Question 5:&lt;br /&gt;
 Pick one of the interpolations and submit your report below.  This might include some or all of the following elements.&lt;/p&gt;
@@ -8080,15 +8082,14 @@ Pick one of the interpolations and submit your report below.  This might include
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Interpolating surfaces can be one of the more processing intensive operations.  As an alternative if you are in a processing limited environment feel free to perform the lab using the &amp;ldquo;smalldata&amp;rdquo; folder in place of the full database.  I have subset the original assignment to the 6 counties that comprise the Kansas groundwater managment district 4.
+    Interpolating surfaces can be one of the more processing intensive operations.  As an alternative if you are in a processing limited environment feel free to perform the lab using the &amp;ldquo;smalldata&amp;rdquo; folder in place of the full database.  I have subset the original assignment to the 6 counties that comprise the Kansas groundwater management district 4.
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Getting started&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Unzip the folder into your OneDrive&lt;/li&gt;
-&lt;li&gt;Open the packaged map and zoom to the Kansas Layers&lt;/li&gt;
+&lt;li&gt;Add the data into ArcMap and examine it&amp;rsquo;s properties.&lt;/li&gt;
 &lt;li&gt;We will use the Geostatistical Analyst feature in ArcMap. There are many, many features of this tool that we will not explore here. You can use the ArcMap help system or Google “Using ArcGIS Geostatistical Analyst” online to explore this tool beyond what we will do here.&lt;/li&gt;
 &lt;li&gt;If necessary, activate the Geostatistical Analyst (Customize | Extensions)&lt;/li&gt;
 &lt;li&gt;Add the Geostatistical Analyst toolbar (Customize | Toolbars | Geostatistical Analyst)&lt;br /&gt;&lt;/li&gt;
@@ -8097,17 +8098,22 @@ Pick one of the interpolations and submit your report below.  This might include
 &lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; Interpolating a surface using &lt;strong&gt;IDW&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Go to Geostatistical Analyst | Geostatistical Wizard&lt;/li&gt;
+&lt;li&gt;Go to Geostatistical Analyst | Geostatistical Wizard
+
+&lt;ul&gt;
 &lt;li&gt;Highlight Inverse Distance Weighting&lt;/li&gt;
 &lt;li&gt;Select your Source Data (A well shapefile)&lt;/li&gt;
 &lt;li&gt;We want to model a water surface, so make your Data Field (I use avg depth)&lt;/li&gt;
 &lt;li&gt;Click Next&lt;/li&gt;
-&lt;li&gt;If a &amp;ldquo;Handing Coincidental Samples&amp;rdquo; prompt pops up, decide how you would like to handle this occurrence.  Since I prefer “worst case” scenarios, I choose &amp;ldquo;Use Maximum&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If a &amp;ldquo;Handing Coincidental Samples&amp;rdquo; prompt pops up, decide how you would like to handle this occurrence.  Since I prefer “worst case” scenarios, I choose &amp;ldquo;Use Maximum&amp;rdquo;.  Once you&amp;rsquo;ve chosen, click next.&lt;/li&gt;
 &lt;li&gt;This next window shows you how water levels will be modeled, but in a graphic form.  Take a look at the help file for the statistical wizard to determine how the various inputs affect the statistic performed.  ArcMap is nice enough to include a power optimization button under general properties.  Go ahead and click that button.  I also want to include more samples in my interpolation so change maximum neighbors to 25 and minimum neighbors to 7.&lt;/li&gt;
-&lt;li&gt;The next page shows you the cross validation of your surface.  This means that they take a point out of the prediction and compare it to the surface it would otherwise have been created without using it.  Publications generally eschew printing verbatim the nuances of how they ran an interpolation tool in favor of the regression function.  Answer questions 1 and 2 below.  When you are done click finish.&lt;/li&gt;
-&lt;li&gt;The grid that the geostatistical wizard spits out is a format specific to the interpolation maps. Export it as a raster by R-clicking on the layer and going to Data | Export to Raster…&lt;/li&gt;
+&lt;li&gt;The next page shows you the cross validation of your surface.  This means that they take a point out of the prediction and compare it to the surface it would otherwise have been created without using it.  When presenting results, most publications generally eschew printing the nuances of how they ran an interpolation tool in favor of reporting the regression function.  Answer questions 1 and 2 below.  When you are done click finish.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The grid that the geostatistical wizard spits out is a format specific to the interpolation tools and is not easily manipulated as you have grown used to. Export it as a raster by R-clicking on the layer and going to Data | Export to Raster…
+
+&lt;ul&gt;
 &lt;li&gt;Change the cell size to 500 and set the output raster to save it as IDWYYYY in your lab10 folder&lt;/li&gt;
-&lt;li&gt;After your new raster is displayed, you may remove the IDW layer.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; Interpolating a surface via &lt;strong&gt;Kriging&lt;/strong&gt;&lt;/p&gt;
@@ -8117,41 +8123,44 @@ Pick one of the interpolations and submit your report below.  This might include
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Go to Geostatistical Analyst | Geostatistical Wizard and choose Kriging / CoKriging&lt;/li&gt;
+&lt;li&gt;Go to Geostatistical Analyst | Geostatistical Wizard and choose Kriging / CoKriging
+
+&lt;ul&gt;
 &lt;li&gt;Make sure your type of Kriging is set to Simple Kriging and Normal Score, and make sure the Output Type is Prediction&lt;/li&gt;
 &lt;li&gt;Click Next&lt;/li&gt;
 &lt;li&gt;This next window is unique to Normal scores, walking you through the normalization parameters.  ArcMap does all the heavy lifting for you so take note of the parameters, look at the QQ plot, and then click Next&lt;/li&gt;
 &lt;li&gt;Again, the modeling window includes an “Optimize model” button, click that and then click Next&lt;/li&gt;
-&lt;li&gt;This visualization in the next window again shows the graphical representation of the interpolated surface in a graphic form. Click on the inset map to move the cross hairs to different portions of the aquafer. The circle around the cross hairs shows which area the model will take into account for that location. Leave all on this window to the set defaults and click Next&lt;/li&gt;
+&lt;li&gt;This visualization in the next window again shows the graphical representation of the interpolated surface in a graphic form. Click on the inset map to move the cross hairs to different portions of the aquifer. The circle around the cross hairs shows which area the model will take into account for that location. Leave all on this window to the set defaults and click Next&lt;/li&gt;
 &lt;li&gt;This next window shows you the model and the Prediction Errors. You can save this validation result to a .dbf file (or a table in a shape file) that you can open in Excel, which may have a helpful feature, depending on your purposes.&lt;/li&gt;
 &lt;li&gt;Click Finish&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Click OK on the Output Layer Information window and export the layer to a rater as above, using a name similar to KGYYYY&lt;/li&gt;
 &lt;li&gt;Answer questions 3 below.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; &lt;strong&gt;Clip&lt;/strong&gt; the rasters to the extent of the Aquifer&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Hint: clip tool… make sure you use the check box&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hint: clip tool… make sure you use the check box&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; &lt;strong&gt;Calculate&lt;/strong&gt; Water volume difference between the two interpolation methods&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Hint: raster calculator…&lt;/li&gt;
 &lt;li&gt;If you don’t have an attribute table, you will need to do the following:&lt;/li&gt;
-&lt;li&gt;Use Raster Calculator to turn the raster into an integer
+&lt;li&gt;Use Raster Calculator to first turn the raster into an integer while keeping some of our calulated presision.
 
 &lt;ul&gt;
-&lt;li&gt;Hint: Int(&amp;ldquo;KI1997Diff.tif&amp;rdquo; * 1000)&lt;/li&gt;
+&lt;li&gt;Hint: &lt;code&gt;Int(&amp;quot;KI1997Diff.tif&amp;quot; * 1000)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Use the &lt;strong&gt;Build Raster Attribute table&lt;/strong&gt; tool to generate the attribute table&lt;/li&gt;
-&lt;li&gt;Create a new field called Volume, make it a float&lt;/li&gt;
+&lt;li&gt;Create a new field called Volume, make it a float.&lt;/li&gt;
 &lt;li&gt;Calculate volume using &lt;code&gt;((Value/1000)/3.28084)*Count*500*500&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Answer question 4&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; Pick an interpolation method and interpolate 2017 data using the same methods and parameters as above.  Repeat steps 4 and 5 and answer question 5&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; Pick an interpolation method and interpolate 2017 data using the same methods and parameters as above.  Repeat steps 4 and 5 and answer question 5 on the sheet.&lt;/p&gt;
 </description>
     </item>
     

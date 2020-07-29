@@ -89,7 +89,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.5f8a892bbf54831e755facb704359ff8.css">
+  <link rel="stylesheet" href="/css/academic.min.4b7f23026d0679370dc79f3ff7783adf.css">
 
   
 
@@ -357,6 +357,21 @@
   </div>
   
   <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/firstgoogleearthmap/">Intro to Google Earth</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/foss_rs/">R - NDVI</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/gee_intro/">Introduction to GEE</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
     <a class="docs-toc-link" href="/courses/random"></a>
 
   </div>
@@ -388,6 +403,7 @@
 <ul>
 <li><a href="#adding-classes"><strong>Adding classes</strong></a></li>
 <li><a href="#make-it-your-own"><strong>Make it your own</strong></a></li>
+<li><a href="#website-width"><strong>Website width</strong></a></li>
 <li><a href="#adding-tabbed-content"><strong>Adding tabbed content</strong></a>
 <ul>
 <li><a href="#this-is-content-in-markdown">This is content in markdown</a></li>
@@ -607,6 +623,21 @@ paginate = 10  # Number of items per page in paginated lists.
 
 <hr />
 
+<h3 id="website-width"><strong>Website width</strong></h3>
+
+<p>The Academic theme follows the &ldquo;best&rdquo; practice of a mobile first design, and therefore scales pages to an otherwise anemic width.  This is functional, but I was unhappy with it.  Following tips on <a href="https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952">this post</a>, you can change the head of the file at <i>themes\academic\assets\sass\academic_docs.scss</i> to a larger max width.  A small bump is all you need to make it look prettier (960 is about 12 point font on a word document, 1440 is also a solid choice.</p>
+
+<pre><code>/*************************************************
+ *  Documentation layout
+ **************************************************/
+
+.docs-article-container {
+  max-width: 960px;
+}
+</code></pre>
+
+<hr />
+
 <h3 id="adding-tabbed-content"><strong>Adding tabbed content</strong></h3>
 
 <p>Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&ldquo;1&rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&rsquo;t break formatting on Chrome (other browsers untested).  The <code>&amp;nbsp;</code> in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page table of contents on the right hand side and so should be avoided if possible.</p>
@@ -676,7 +707,6 @@ Neat
 <p>Some links to style formatting, more for me than anything</p>
 
 <ul>
-<li><a href="https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952">https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952</a></li>
 <li><a href="https://github.com/gcushen/hugo-academic/issues/84">https://github.com/gcushen/hugo-academic/issues/84</a></li>
 </ul>
 

@@ -458,6 +458,21 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;hr /&gt;
 
+&lt;h3 id=&#34;website-width&#34;&gt;&lt;strong&gt;Website width&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The Academic theme follows the &amp;ldquo;best&amp;rdquo; practice of a mobile first design, and therefore scales pages to an otherwise anemic width.  This is functional, but I was unhappy with it.  Following tips on &lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;this post&lt;/a&gt;, you can change the head of the file at &lt;i&gt;themes\academic\assets\sass\academic_docs.scss&lt;/i&gt; to a larger max width.  A small bump is all you need to make it look prettier (960 is about 12 point font on a word document, 1440 is also a solid choice.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/*************************************************
+ *  Documentation layout
+ **************************************************/
+
+.docs-article-container {
+  max-width: 960px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
 &lt;h3 id=&#34;adding-tabbed-content&#34;&gt;&lt;strong&gt;Adding tabbed content&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&amp;ldquo;1&amp;rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&amp;rsquo;t break formatting on Chrome (other browsers untested).  The &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page table of contents on the right hand side and so should be avoided if possible.&lt;/p&gt;
@@ -527,7 +542,6 @@ Neat
 &lt;p&gt;Some links to style formatting, more for me than anything&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues/84&#34;&gt;https://github.com/gcushen/hugo-academic/issues/84&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -769,6 +783,438 @@ As part of my dissertation, I am interested in flying areas to determine what fa
 &lt;h1 id=&#34;ku-natural-history-museum-s-science-on-tap&#34;&gt;&lt;strong&gt;KU Natural History Museum’s Science on Tap&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://kansas-my.sharepoint.com/:p:/g/personal/j610c377_home_ku_edu/ET7tcX0YvdpHh7MolB5K9VsBZ9kGxGMvF83Vjvh3VoB_bg?e=k1nIWc&#34;&gt;A small presentation for KU Natural History Museum’s Science on Tap | Free State Brewing CO.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/firstgoogleearthmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/firstgoogleearthmap/</guid>
+      <description>
+
+&lt;h2 id=&#34;a-basic-map-in-google-maps&#34;&gt;&lt;strong&gt;A basic map in Google Maps:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Google Earth is a great platform to start your exploration of the GISciences, even if it&amp;rsquo;s not a tool you&amp;rsquo;ll use in &amp;ldquo;the real world&amp;rdquo;.  There are a number of ways to access Google Earth, but this tutorial will cover &lt;a href=&#34;https://www.google.com/earth/versions/&#34;&gt;Google Earth Pro on the Desktop&lt;/a&gt; (scroll to the bottom of the page)&lt;/p&gt;
+
+&lt;p&gt;Navigating around the world
+Spend some time practicing navigating around in the world, the mouse and scroll wheel&lt;/p&gt;
+
+&lt;p&gt;Making a map:
+Maps are complex pieces of work and often show more than just the satellite image of the world.  Here are a few pieces of data for you to start with&lt;/p&gt;
+
+&lt;p&gt;The&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/foss_rs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/foss_rs/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction-to-remote-sensing&#34;&gt;&lt;strong&gt;Introduction to Remote Sensing&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GPSSplash.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remote sensing is a course onto itself, but it’s worth introducing here as GIScience, GISystems, and remote sensing overlap more than they diverge.  Remote sensing, as opposed to in-situ measurement, is the measurement of an object from a distance, most often a great distance.&lt;/p&gt;
+
+&lt;h2 id=&#34;objectives&#34;&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;This lab should provide you with the bulk of the background knowledge needed to dive further into the field of remote sensing.  We&amp;rsquo;ll cover common terminology and technology, some basic applications, and cover how R can be used to perform common GIScience and remote sensing operations.&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-vocab&#34;&gt;&lt;strong&gt;Quick vocab&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;To start off, lets review some key vocabulary that often comes up when discussing remote sensing.  These definitions are important when discussing concepts such as distortion and illumination angles but will only crop up sporadically.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In physics, the &lt;strong&gt;nadir&lt;/strong&gt; direction for a given location is the local vertical direction pointing in the direction the force of gravity acts at that location.  In remote sensing this concept is, in essence, the point on a photo which is directly below the satellite.  It&amp;rsquo;s opposite direction, &lt;strong&gt;zenith&lt;/strong&gt;, refers to the direction directly opposed to gravity.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Julian days&lt;/strong&gt; are equivalent to Day of the Year, starting on January first of each year.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Epoch time&lt;/strong&gt;, also know as Unix time or POSIX time, is the number of seconds that have elapsed since January first, 1970 at midnight GMT/UTC, and is often used to indicate the timestamp of the data. (&lt;a href=&#34;https://www.epochconverter.com/&#34;&gt;handy web converter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Remote sensing data comes from &lt;strong&gt;instruments&lt;/strong&gt;, or sensors, which in turn are housed aboard &lt;strong&gt;platforms&lt;/strong&gt;, or satellites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;the-basics&#34;&gt;&lt;strong&gt;The basics&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;It’s difficult to learn about remote sensing without first recalling some basic physics.  First, take a second and recall how eyesight and vision works, using the conceptual diagram below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/placeholdereyesremotesensing.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remote sensing is the measurement of the electromagnetic spectrum.  Energy (not necessarily in the visible spectrum) from a source, strikes the object, and then travels to the eye.  We’ll break this down a little further.  There are several different flavors of remote sensing, but the two most common ones are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Active sensing&lt;/strong&gt;: A sensor or pair of instruments that both emit and receive measurements.  Common examples of active remote sensing include ground penetrating radar, sonar, and LIDAR.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Passive sensing&lt;/strong&gt;: A sensor which only receives measurements.  These are some of the most common forms of sensors, examples of which include: Your eyes, cameras, and most earth orbiting satellites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next we need to introduce the most common properties used to differentiate and classify different remote sensing platforms.  These properties are all in the context of scale and resolution.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Radiometric resolution&lt;/strong&gt;: Radiometric resolution is the number of brightness levels that can be detected by the sensor, also known as radiometric sensitivity, quantization, or simply the number of bits per pixel.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/RadiometricResolution.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spectral resolution&lt;/strong&gt;: Spectral resolution refers to the number and position of the sensor bands along the EM spectrum.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/SpectralResolution.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spatial resolution&lt;/strong&gt;: Spatial resolution is the ground distance of the pixel, and is typically reported in meters at nadir at the equator.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/tempSpatialResolution.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Temporal resolution&lt;/strong&gt;: Temporal resolution, or more directly refereed to as revisit time, is, as the name suggests, the time between a repeated observation of the same place on the globe.  Temporal resolution is the result of a number of factors, but the two largest are the swath width and the orbit.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Swath width&lt;/strong&gt; is the width of a single image, and can either be small or large,  The image below (gratefully pilfered from Figure 1 in &lt;a href=&#34;https://doi-org.www2.lib.ku.edu/10.1016/j.rse.2019.111254&#34;&gt;https://doi-org.www2.lib.ku.edu/10.1016/j.rse.2019.111254&lt;/a&gt;) shows the swath of a Landsat-8 OLI orbit (185 km wide, left) compared  and a Sentinel-2A MSI orbit (290 km wide, right).
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/Swathwidth.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Orbit&lt;/strong&gt; refers to the direction and nature of the travel path of satellites around a body.  There are a number of common orbital patterns satellites exhibit.  For more information, see &lt;a href=&#34;https://www.sciencelearn.org.nz/image_maps/13-satellites-and-orbits&#34;&gt;an example of the different orbits and satellites&lt;/a&gt;, and explore satellite orbits at this &lt;a href=&#34;https://maps.esri.com/rc/sat/index.html&#34;&gt;ESRI site&lt;/a&gt;.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/SatelliteOrbits.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Geostationary: The orbit of the sensor is such that it rotates at a speed which maintains the satellites position over the same spot on the earth.  Most commonly seen with communication and weather satellites.&lt;/li&gt;
+&lt;li&gt;Sun synchronous: The orbit of this satellite follows the sun.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;an-introduction-to-platforms&#34;&gt;&lt;strong&gt;An introduction to platforms&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;As you might have guessed by now, a proper understanding of remote sensing hinges on a thorough understanding of the data structure and lineage.  Here we’ll introduce two of my favorite platforms, MODIS, and Landsat&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/MODIS-Aqua.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;a href=&#34;https://modis.gsfc.nasa.gov/about/&#34;&gt;MODIS,(or Moderate Resolution Imaging Spectroradiometer)&lt;/a&gt; is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites.  These are passive remote sensing platforms, and so follow a sun synchronous orbit.  Terra&amp;rsquo;s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth&amp;rsquo;s surface every 1 to 2 days, acquiring data in 36 spectral bands.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/landsat_8_01.jpg&#34; alt=&#34;&#34; /&gt;
+The Landsat program is the longest-running enterprise for acquisition of satellite imagery of Earth. It is a joint NASA/USGS program. Back in July of 1972, the first satellite was launched, and eventually became known as Landsat 1.  The most recent satellite, Landsat 8, was launched on February 11, 2013, and is still currently operational. There are a few different sensors onboard, which are outlined below.  Landsat 1 through 5 carried the Landsat Multispectral Scanner (MSS). Landsat 4 and 5 carried both the MSS and Thematic Mapper &amp;trade; instruments. Landsat 7 uses the Enhanced Thematic Mapper Plus (ETM+) scanner. Landsat 8 uses two instruments, the Operational Land Imager (OLI) for optical bands and the Thermal Infrared Sensor (TIRS) for thermal bands. Handy charts for these instruments can be found on the &lt;a href=&#34;https://en.wikipedia.org/wiki/Landsat_program&#34;&gt;wikipedia page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-simple-application&#34;&gt;&lt;strong&gt;A simple application&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;There are a number of uses for remote sensing data, but one of the cornerstones of remote sensing is the normalized difference index.  If we take two numbers and subtract them, and divide that by the sum of those same two numbers, we end up with a number that can range from -1 to 1.  This normalization can tell us a lot about a process, and is performed for a wide variety of earth classification operations such as snow (NDSI), water (NDWI), and vegetative health (NDVI).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/genericNDVI.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The latter, NDVI, is an often performed analysis to give us a roughly quantitative analysis of the vegetative health of a system.  When sunlight strikes objects, some wavelengths of this spectrum are absorbed and other wavelengths are reflected. The pigment in plant leaves, chlorophyll, strongly absorbs visible light (from 0.4 to 0.7 µm) for use in photosynthesis, whereas the cell structure of the leaves strongly reflects near-infrared light (from 0.7 to 1.1 µm). The more leaves a plant has, the more these wavelengths of light are affected.  NDVI values are fairly relative (the difference between 0.5 to 0.6 is not generally quantifiable), but in general, anything above 0.2 is vegetation, and higher values are roughly equivalent to more vegetation.  If we look back at the landsat 8 sensor, we can see that those wavelengths are equivalent to bands 4 and 5.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/LandsatNDVI.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;lab-exercise&#34;&gt;&lt;strong&gt;Lab exercise&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s use our newfound knowledge to perform one of the most common operations one might want to take, a change detection study.  Let’s explore how NDVI changes by land cover type between summer and fall.  We&amp;rsquo;ll use landsat 8.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;You may notice a slightly unique naming convention in the code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# Pick an AOI
+xx &amp;lt;- list() 
+xx$AOI_center...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I like to create an empty list and stuff all cartographic variables into a single place for easy access when it comes time to create outputs.&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+  
+
+&lt;p&gt;Let&amp;rsquo;s lay out our workflow conceptually.  We&amp;rsquo;ll first establish an area over which we&amp;rsquo;ll perform the analysis.  Next, we&amp;rsquo;ll scrape an amazon web service to identify suitable data to use for our analysis, and grab land cover data to perform our analysis.  Afterwards, we&amp;rsquo;ll calculate NDVI and perform our zonal statistics using our land cover.  Finally, we&amp;rsquo;ll create a pretty image as our output image.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Last build: 7/30/20
+# install.packages(&amp;quot;devtools&amp;quot;)  # Will throw errors if RTools is not installed, you can ignore this for the remained of installation
+# install.packages(&amp;quot;geosphere&amp;quot;)  # For geodesic buffer function
+# install.packages(&amp;quot;leaflet&amp;quot;)  # For visualization
+# install.packages(&amp;quot;leafem&amp;quot;)  # For visualization
+# install.packages(&amp;quot;raster&amp;quot;) # for raster vis
+# library(devtools, quietly = TRUE)
+# devtools::install_github(&amp;quot;ropensci/FedData&amp;quot;)  # For easy NLCD download
+# devtools::install_github(c(&amp;quot;ropensci/getlandsat&amp;quot;))  # For easy landsat download
+
+library(raster, quietly = TRUE)  # vis
+library(dplyr, quietly = TRUE)  # Syntax sugar
+library(lubridate, quietly = TRUE)  # more syntax sugar
+library(rgeos, quietly = TRUE)  # second buffer function
+library(jsonlite, quietly = TRUE)  # API query
+library(httr, quietly = TRUE)  # web download
+library(leaflet, quietly = TRUE)  # vis
+library(leafem, quietly = TRUE)  # vis
+library(htmltools, quietly = TRUE)  # vis
+library(FedData, quietly = TRUE)  # Easy NLCD
+library(getlandsat, quietly = TRUE)  # Easy landsat
+
+## Helper functions
+
+## geocoding function using OSM Nominatim API -- details: http://wiki.openstreetmap.org/wiki/Nominatim
+## Inputs: a human readable address or colloquial name string
+## Outputs: success: a sf point with lat and long | Failure: an empty dataframe
+## modified from: D.Kisler @ https://datascienceplus.com/osm-nominatim-with-r-getting-locations-geo-coordinates-by-its-address/
+nominatim_osm &amp;lt;- function(address = NULL) {
+  # Construct a url request
+  d &amp;lt;- jsonlite::fromJSON( 
+    gsub(&#39;\\@addr\\@&#39;, gsub(&#39;\\s+&#39;, &#39;\\%20&#39;, address), &#39;http://nominatim.openstreetmap.org/search/@addr@?format=json&amp;amp;addressdetails=0&amp;amp;limit=1&#39;))
+  
+  # return parsed sf point
+  return(
+    sf::st_as_sf(d %&amp;gt;% select(&#39;lon&#39;,&#39;lat&#39;,&#39;display_name&#39;),
+                 coords=c(&amp;quot;lon&amp;quot;,&amp;quot;lat&amp;quot;), 
+                 crs=sf::st_crs(4326),
+                 remove=TRUE)
+  )
+}
+
+## geodesic buffer function -- details: http://wiki.openstreetmap.org/wiki/Nominatim
+## Inputs: a coordinate pair in EPSG:4326
+## Outputs: the equivelent UTM zone EPSG
+## all credit to Robin Lovelace, Jakub Nowosad, Jannes Muenchow @ https://geocompr.robinlovelace.net/reproj-geo-data.html
+lonlat2UTM = function(lonlat) {
+  utm = (floor((lonlat[1] + 180) / 6) %% 60) + 1
+  if(lonlat[2] &amp;gt; 0) {
+    utm + 32600
+  } else{
+    utm + 32700
+  }
+}
+
+# set a working directory
+setwd(&amp;quot;C:/Users/Cornholio/Desktop/coolclass&amp;quot;) # your own filepath here
+
+# Pick an AOI and (small) buffer distance
+xx &amp;lt;- list() 
+xx$AOI_center &amp;lt;- nominatim_osm(&amp;quot;Lawrence, KS&amp;quot;) 
+# xx$AOI_center &amp;lt;- sp::SpatialPoints(list(-95.23595,38.97194)) %&amp;gt;% sf::st_as_sfc() %&amp;gt;% sf::st_set_crs(4326) # or spesify a lon/lat point
+mybufferdist_m = 1200
+
+# Buffer AOI point
+# get UTM epsg
+aoiUTMEPSG &amp;lt;- lonlat2UTM(sf::st_coordinates(xx$AOI_center))
+# reproject
+xx$AOI_center_utm &amp;lt;- sf::st_transform(xx$AOI_center,aoiUTMEPSG)
+# buffer (gBuffer requires a spatial object, not an sf), return to sf, reattach crs
+xx$AOI_buffer_utm &amp;lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&amp;gt;%
+  sf::st_as_sfc() %&amp;gt;%
+  sf::st_set_crs(aoiUTMEPSG) 
+xx$AOI_buffer &amp;lt;- sf::st_transform(xx$AOI_buffer_utm, 4326) # reproject back to wgs84
+xx$processbounds &amp;lt;- sf::st_bbox(xx$AOI_buffer) 
+# st_bbox doesn&#39;t return a spatial object, so we&#39;ll correct for that here
+xx$AOI_bbox &amp;lt;- sf::st_bbox(xx$AOI_buffer) %&amp;gt;% sf::st_as_sfc() %&amp;gt;% sf::st_set_crs(4326)
+
+# discover path and row
+httr::GET(&#39;https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/WRS2_descending_0.zip&#39;, 
+          write_disk(paste0(getwd(), &amp;quot;/WRS2_descending_0.zip&amp;quot;)))
+unzip(paste0(getwd(), &amp;quot;/WRS2_descending_0.zip&amp;quot;), exdir = getwd())
+xx$pathrow &amp;lt;- sf::read_sf(paste0(getwd(), &amp;quot;/WRS2_descending.shp&amp;quot;))
+
+# That pathrow file covers the entire globe, let&#39;s make this a tiny bit gentler to visualize
+# and subset that to just the pathrows that intersect our AOI
+xx$pathrow_subset &amp;lt;- xx$pathrow[xx$AOI_bbox,]
+
+# explore geographic context
+leaflet() %&amp;gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
+  addPolygons(data=xx$AOI_buffer,color=&amp;quot;red&amp;quot;) %&amp;gt;%
+  addPolygons(data=xx$pathrow_subset,
+              color=&amp;quot;black&amp;quot;,
+              fill = FALSE,
+              label = mapply(function(x, y) {
+                HTML(sprintf(&amp;quot;&amp;lt;em&amp;gt;Path/row:&amp;lt;/em&amp;gt;%s-%s&amp;quot;, htmlEscape(x), htmlEscape(y)))},
+                xx$pathrow_subset$PATH, xx$pathrow_subset$ROW, SIMPLIFY = F),
+              labelOptions = lapply(1:nrow(xx$pathrow_subset), function(x) {
+                labelOptions(noHide = T)
+              })) %&amp;gt;% 
+  fitBounds(as.numeric(floor(xx$processbounds$xmin)), 
+            as.numeric(floor(xx$processbounds$ymin)), 
+            as.numeric(ceiling(xx$processbounds$xmax)), 
+            as.numeric(ceiling(xx$processbounds$ymax)))
+
+# Note: Perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row
+# We&#39;ll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than
+# one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section)
+
+# Find the scenes for your path and row
+summerdaterange &amp;lt;- interval(as.POSIXct(&amp;quot;2015-06-01 00:00:00&amp;quot;), 
+                            as.POSIXct(&amp;quot;2015-09-01 00:00:00&amp;quot;))   
+
+summerscene &amp;lt;- getlandsat::lsat_scenes() %&amp;gt;% 
+  filter(row == xx$pathrow_subset$ROW) %&amp;gt;%                # Filter for row...
+  filter(path == xx$pathrow_subset$PATH) %&amp;gt;%              # and path
+  filter(acquisitionDate %within% summerdaterange) %&amp;gt;%    # get our date
+  arrange(cloudCover) %&amp;gt;%                                 # put the least cloudy scene first
+  .[1,]                                                   # and peel it off
+
+summerscene
+# as we see, there is a suitable cloud free scene, let&#39;s look at it&#39;s formatting:
+summerscene$download_url 
+
+# In addition to making a handy scene scrapper, the getLandsat package is also a wrapper to download scenes by name
+xx$summer_band4 &amp;lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&amp;quot;_B4.TIF&amp;quot;)) %&amp;gt;%
+  raster::raster() 
+
+# Finally, let&#39;s mask it out to our buffer
+xx$summer_band4 &amp;lt;- xx$summer_band4 %&amp;gt;% 
+  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
+
+# and visualize
+leaflet() %&amp;gt;% 
+  addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
+  addRasterImage(xx$summer_band4, layerId = &amp;quot;values&amp;quot;) %&amp;gt;% 
+  addMouseCoordinates() %&amp;gt;%
+  addImageQuery(xx$summer_band4, type=&amp;quot;mousemove&amp;quot;, layerId = &amp;quot;values&amp;quot;)
+
+# Lets do the same for band 5
+xx$summer_band5 &amp;lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&amp;quot;_B5.TIF&amp;quot;)) %&amp;gt;%
+  raster::raster() 
+xx$summer_band5 &amp;lt;- xx$summer_band5 %&amp;gt;% 
+  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))  
+
+# Finally, our NDVI calculation
+xx$summer_ndvi &amp;lt;- overlay(xx$summer_band5, xx$summer_band4, fun = function(r1, r2) { return( (r1 - r2)/(r1 + r2)) })
+
+# and visualize
+leaflet() %&amp;gt;% 
+  addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
+  addRasterImage(xx$summer_ndvi, layerId = &amp;quot;values&amp;quot;) %&amp;gt;% 
+  addMouseCoordinates() %&amp;gt;%
+  addImageQuery(xx$summer_ndvi, type=&amp;quot;mousemove&amp;quot;, layerId = &amp;quot;values&amp;quot;)
+
+
+
+NLCD &amp;lt;- FedData::get_nlcd(template = sf::as_Spatial(xx$AOI_buffer_utm),
+                 year = 2016,
+                 dataset = &amp;quot;Land_Cover&amp;quot;,
+                 label = &amp;quot;AOI&amp;quot;)
+# backup, because MRLC service is down more often than it&#39;s up...
+# this may take a while because we&#39;re grabbing all of CONUS
+httr::GET(&#39;https://s3-us-west-2.amazonaws.com/mrlc/NLCD_2016_Land_Cover_L48_20190424.zip&#39;, 
+          write_disk(paste0(getwd(), &amp;quot;/NLCD_2016_Land_Cover_L48.zip&amp;quot;)))
+unzip(paste0(getwd(), &amp;quot;/NLCD_2016_Land_Cover_L48.zip&amp;quot;), exdir = getwd())
+
+raster::zonal(x, z, fun=&#39;mean&#39;, digits=0, na.rm=TRUE, ...) 
+
+
+
+
+
+
+
+
+
+
+lsat_image(urls[1])
+urls
+tifs &amp;lt;- grep(&amp;quot;\\.TIF$&amp;quot;, summerscene$Key, value = TRUE)
+
+download_url 
+
+# Explore format
+
+Finally, lets grab NLCD landcover data (note: 2016 is avalible but not added to FedData as of yet)
+# FedData::get_nlcd_tile(template=as.spaxx$AOI_bbox,
+# FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&amp;quot;Spatial&amp;quot;), CRSobj = &amp;quot;+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0&amp;quot;),
+#                        label=&#39;AOI&#39;,
+#                        year=2016,
+#                        dataset=&amp;quot;Land_Cover&amp;quot;,
+#                        # tileName=N01W01,
+#                        raw.dir=getwd(),
+#                        extraction.dir=getwd())
+sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&amp;quot;Spatial&amp;quot;), CRS(paste0(&amp;quot;+proj=utm +datum=NAD83 +zone=&amp;quot;,floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1)))
+FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&amp;quot;Spatial&amp;quot;), CRS(paste0(&amp;quot;+proj=utm +datum=NAD83 +zone=&amp;quot;,floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1))),
+                  label=&#39;AOI&#39;,
+                  year=2011,
+                  dataset=&amp;quot;Land_Cover&amp;quot;)
+
+vepPolygon &amp;lt;- polygon_from_extent(raster::extent(672800, 740000, 4102000, 4170000),
+                                  proj4string = &amp;quot;+proj=utm +datum=NAD83 +zone=12&amp;quot;)
+NLCD &amp;lt;- get_nlcd(template = vepPolygon,
+                 year = 2016,
+                 dataset = &amp;quot;Land_Cover&amp;quot;,
+                 label = &amp;quot;vepPolygon&amp;quot;)
+
+
+
+sf::as_Spatial(xx$AOI_buffer_utm)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/random/gee_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/random/gee_intro/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction-to-google-earth-engine&#34;&gt;&lt;strong&gt;Introduction to Google Earth Engine:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/GEEBoK.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-google-earth-engine&#34;&gt;&lt;strong&gt;What is Google Earth Engine&lt;/strong&gt;:&lt;/h2&gt;
+
+&lt;p&gt;Google Earth Engine (GEE) is a cloud-based data and analysis platform which combines more than 17 petabytes of geospatial data, analytic APIs, and a web based Integrated Development Environment in one package and runs on Google’s computational infrastructure, enabling interactive earth data analyses on scales not previously feasible.  This platform was first introduced to the public in 2013 as a means of performing an analysis of global forest cover change, published in Science (Hansen et al., 2013).  In this flagship application, the authors sought to quantify the spatial distribution and global state of forest loss and gain from 2000 to 2012 by blending more than 654,000 Landsat scenes across the 12 years of the analysis — the resultant analysis of 700 Terapixels of data took more than 1 million hours of computation and exported results in a comparatively trivial 4 days across the Google compute infrastructure.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/HansenImage.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Such analyses once used to sit behind such extreme barriers of entry that no one would have been able to produce, much less reproduce, these results.&lt;br /&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/Hr3F0s9oKwQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;accessing-gee&#34;&gt;&lt;strong&gt;Accessing GEE&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;To use GEE, you will need to request a user account at &lt;a href=&#34;https://signup.earthengine.google.com/#!/&#34;&gt;https://signup.earthengine.google.com/#!/&lt;/a&gt;.  Once approved, you have access to the datasets and the Google computation infrastructure.  This access takes the form of a REST API.  There are currently two means of doing so, one Python based, and the other JavaScript based.  The less popular of the two methods, the Python library, allows users to interact with Earth Engine using the Python programming language.  The Google Earth Engine API guide has a full walk through of how to install the needed libraries, and is available at &lt;a href=&#34;https://developers.google.com/earth-engine/python_install&#34;&gt;https://developers.google.com/earth-engine/python_install&lt;/a&gt;. The more popular means of accessing GEE is through the JavaScript library which is accessed through a web-based IDE, more commonly called the Code Editor, by pointing a browser at &lt;a href=&#34;https://code.earthengine.google.com/&#34;&gt;https://code.earthengine.google.com/&lt;/a&gt; and logging in with an authorized GEE account.  Although not specifically required, it is recommended that you use Google Chrome, and as this is the most popular means of accessing GEE the rest of this entry will be written using the JavaScript IDE.  Don’t worry if you are more familiar with Python, the transition to JavaScript is relatively painless and primers are available at &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction&lt;/a&gt;.  One of the first steps for those new to GEE is to explore the features of the JavaScript API.  In the upper right-hand corner of the code editor, click on help &amp;gt; Feature Tour to take a quick guided tour of the platform.&lt;/p&gt;
+
+&lt;h3 id=&#34;gee-operations&#34;&gt;&lt;strong&gt;GEE Operations&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;Broadly speaking there are 3 major types of operations one can perform in GEE: Methods, Algorithms, and Functions.  The general structure of these are exemplified in Figure 1. Methods require an object to act on and take inputs, as exemplified in Figure 1, line 24, where we query the SRTM dataset for all values greater than 2000. Algorithms are objects themselves and take a specific input to return an object, as exemplified in Figure 1, line 27 where we use the Terrain algorithm to create a hillshade image from SRTM.  Functions take an input and do something within the API, as exemplified in Figure 1, line 30, where we add the Hillshade layer to the map.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/GEEFigure1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;data-structures-objects&#34;&gt;&lt;strong&gt;Data Structures/Objects&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;Data objects in GEE are slightly different from more traditional desktop GIS software, but the concepts are very similar.  These differences are most pronounced with the data structures outlined below in Figure 2.  What GEE calls Images can be thought of as Rasters, and just as Rasters may have more than one band, so too may Images.  What GEE refers to as an ImageCollection are simply a collection of Images.  What GEE refers to as Features are analogous to features in a shapefile or geodatabase, so FeatureCollections are analogous to the larger shapefile or feature classes in a geodatabase.  These data structures also borrow concepts from Object Oriented Programming (OOP) in that Feature can be thought of as the parent of Image and likewise ImageCollections are children of FeatureCollections.  Therefore, many of the methods and operations available for Features and FeatureCollections are inherited by Images and ImageCollections.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/GEEFigure2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;asset-management&#34;&gt;&lt;strong&gt;Asset Management&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;GEE hosts more than 17 petabytes of publicly available data which can be redistributed.  However, users also have the option to upload their own data in popular GeoTIFF or shapefile formats for ingestion into the system as user assets.  Assets are limited to 10 GB in size, and are counted as part of your shared Google storage quota (spread across Gmail, Google Drive, ect.).  Once in the platform, they are treated the same as any other dataset in the platform and can be shared with other users.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-preparation&#34;&gt;&lt;strong&gt;Data Preparation&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;GEE handles many of the concerns typically associated with data preparation, such as storage, cataloging, and projecting the data appropriately.  GEE has ingested many of the most popular remote sensing data from various satellite platforms such as LANDSAT, MODIS, and Sentinel to name just a few.  The full collection can be browsed at &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/&lt;/a&gt;.  When ingested, the data is stored in its native projection and format to preserve data integrity, and the metadata necessary to effectively use them is also included in each image as properties.  Users may inspect, project, and resample the data as necessary, but because the GEE team takes care of these details when the data is ingested, the “time to science” is rapidly accelerated and users are free to spend that time on the analysis and presentation instead of the relatively canned portion of data preprocessing.  By using the Search Box at the top of the IDE, you can find relevant datasets and explore how they can be used in GEE.&lt;/p&gt;
+
+&lt;h3 id=&#34;mappers-and-reducers&#34;&gt;&lt;strong&gt;Mappers and Reducers&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;When working with data in GEE, there are two types of operations we can perform over the data, mapping and reducing.  Mapping applies a function to each image in a collection, so a stack of n elements results in a transformed stack of n elements, and is useful when we need to do something to every image (for instance, calculating NDVI over a timeseries of images).  Reducers on the other hand take one or more input features and return a reducer number of outputs.  These often take the form of conventional map algebra expressions.  These expressions can be as conceptually simple as pulling the maximum value of a stack of pixels in an ImageCollection to as complex as non-parametric trends of slope or regional reducers.&lt;/p&gt;
+
+&lt;h3 id=&#34;joins&#34;&gt;&lt;strong&gt;Joins&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;Joining data is a hallmark of geospatial analysis, and GEE provides several ways in which different datasets may be joined together based on a specified condition.  These conditions, or filters as they are called in GEE, can be spatial, tabular or temporal in nature.  GEE applies the conditional filter, and items in the input collections that match the conditions are saved in the output collection depending what output the join wants to keep.&lt;/p&gt;
+
+&lt;h3 id=&#34;image-classification&#34;&gt;&lt;strong&gt;Image Classification&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;GEE has several image classification methods built into the API.  These include unsupervised and supervised classifiers.  As of the time of this writing, these include: Cart, Naïve Bayes and Continuous Naïve Bayes, Decision Tree, Gmo Linear Regression and Max Ent, Ikpamir, Minimum Distance, Pegasos linear, and Polynomial, and Gaussian, Perceptron, Random Forest, Spectral Region, Scm, and Winnow. Additionally, if provided with training data, a confusion matrix can be calculated from that classification to present an accuracy assessment.&lt;/p&gt;
+
+&lt;h3 id=&#34;exporting-analyses&#34;&gt;&lt;strong&gt;Exporting analyses&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;Although it is often more efficient to perform your desired analysis within GEE, exporting your results for further specialized analysis or publication can come in several forms depending on the desired purposes.  This might include CSV files of time series, images, web map tiles, and videos.  In addition, a suite of standard JavaScript User Interface (UI) items are available within the IDE which enables users to rapidly design and prototype user interfaces to include items such as combo and check boxes, sliders, and legend elements.  These powerful features allow users to publish advanced and fully fleshed out web applications so that those who don’t have a GEE account can interact with or export analysis without looking at a single line of code.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-analysis&#34;&gt;&lt;strong&gt;Example analysis&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s use GEE to perform one of the most common&lt;/p&gt;
+
+&lt;p&gt;Example scripts
+ExploringLandsatImagery
+&lt;a href=&#34;https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61&#34;&gt;https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61&lt;/a&gt;
+ExploringLandcoverChangeWithLandsatImagery
+&lt;a href=&#34;https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff&#34;&gt;https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;homework&#34;&gt;&lt;strong&gt;Homework&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;p&gt;Exploring land cover/use change using Landsat 5 imagery available on GEE
+Decide one of your favorite places
+Select two images to show the changes
+Share your exploration (script) here&lt;/p&gt;
+
+&lt;h3 id=&#34;citations&#34;&gt;&lt;strong&gt;Citations&lt;/strong&gt;:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., &amp;amp; Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing Of Environment, 202, 18-27. doi: 10.1016/j.rse.2017.06.031&lt;/li&gt;
+&lt;li&gt;Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., … Townshend, J. R. G. (2013). High-Resolution Global Maps of 21st-Century Forest Cover Change. Science, 342(6160), 850–853. &lt;a href=&#34;https://doi.org/10.1126/science.1244693&#34;&gt;https://doi.org/10.1126/science.1244693&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Coll, J. M. and Li, X. (2020). Google Earth Engine. The Geographic Information Science &amp;amp; Technology Body of Knowledge (1st Quarter 2020 Edition), John P. Wilson (ed.). DOI: 10.22224/gistbok/2020.1.9&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -3183,58 +3629,81 @@ This exercise provides an introduction to using a Global Positioning System (GPS
 
 &lt;p&gt;Although the system is very sophisticated, and atomic clocks are used by the satellites, there are multiple sources and types of errors involved in finding your location. As the GPS signal passes through the charged particles of the ionosphere and then through the water vapor in the troposphere, this   causes the signal to slow a bit, and this creates the same kind of error as bad clocks. Also, if the satellites that are in your view at a particular moment are close together in the sky, the intersecting circles that define a position will cross at very shallow angles. That increases the error margin around a position. The kind of GPS receivers we will be using provide about 10 meter accuracy (which may be reduced to under 3m if differential corrections like WAAS are used), depending on the number of satellites available and the geometry of those satellites. If you want to learn more about GPS, I would recommend Garmin’s introduction (&lt;a href=&#34;http://www.garmin.com/aboutGPS/manual.html&#34;&gt;http://www.garmin.com/aboutGPS/manual.html&lt;/a&gt;) or Trimble’s tutorial (&lt;a href=&#34;http://www.trimble.com/gps/&#34;&gt;http://www.trimble.com/gps/&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;In this exercise we are going to collect the coordinates of some set of campus features, generate a few shapefiles of those features, and then use the shapefile to make a map.  There are 3 different options for accomplishing this.  You may use the lab provided GPS units, or your cell phone.  If you are on an android device, I strongly recommend the android specific instructions.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;In this exercise we are going to collect the coordinates of some set of campus features using either the GPS units or your phones, generate a few shapefiles of those features, and then use the shapefile to make a map.  Your grade for this lab is based on the successful submission of two maps to blackboard.&lt;/p&gt;
+
+&lt;h1 id=&#34;collecting-data&#34;&gt;&lt;strong&gt;Collecting data&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;The apps outlined in this lab are all free to use, although many have the option of upgrading to a paid version.  &lt;strong&gt;You do not need to pay for anything if you don&amp;rsquo;t want to.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have an Android phone, I highly recommend the android specific application, it is by far the most robust data collection application I&amp;rsquo;ve tested, and you will always have your phone on hand.  The Apple version will work for the objectives and purposes of this lab, but you will likely be underwhelmed by the capabilities.  The handheld units are also powerful options, but unless you go out and buy a GPS unit for yourself, you will likely never hold a GPS unit in your hands again.&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+  
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    If in the event you get confused as to what your looking at, spamming the back button should always take you to the main menus.
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;The apps for this lab are all free with the option of upgrading to the paid version.  You do not need to pay for anything if you don&amp;rsquo;t want to.&lt;/p&gt;
+&lt;p&gt;Note: Make sure your unit is charged before going out on your adventure!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Apps.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br /&gt;
+&lt;ul class=&#34;nav nav-tabs&#34;&gt;
+&lt;li class=&#34;active&#34;&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#home&#34;&gt;&amp;nbsp;&amp;nbsp;Platform agnostic app&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu1&#34;&gt;&amp;nbsp;&amp;nbsp;Android&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu3&#34;&gt;&amp;nbsp;&amp;nbsp;GARMIN eTrex 10&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu4&#34;&gt;&amp;nbsp;&amp;nbsp;GARMIN GPSMAP 60C&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV class=&#34;tab-content&#34; markdown=&#34;1&#34;&gt;
+&lt;DIV id=&#34;home&#34; class=&#34;tab-pane fade show active&#34; markdown=&#34;1&#34;&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Apps.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;apple-android&#34;&gt;&lt;strong&gt;Apple/Android&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;You are looking for the Fields Area Measure Free app.  There is a guided tutorial built right into the app, and your intuitive knowledge as digital generation should carry you the rest of the way.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/AppTutorial.png&#34; alt=&#34;&#34; /&gt;
-There are a few caviats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.&lt;/p&gt;
+There are a few caveats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.  Sorry apple :(
+&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;menu1&#34; class=&#34;tab-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;android&#34;&gt;&lt;strong&gt;Android&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.&lt;/p&gt;
+&lt;p&gt;If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.
+&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;menu3&#34; class=&#34;tab-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;handheld-units&#34;&gt;&lt;strong&gt;Handheld units&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;The lab also has some &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf&#34;&gt;users manual&lt;/a&gt;.  For future reference I will include some quickstart instructions below:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Note: Charge the unit with the provided usb cable before going out on your adventure!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/450px-Garmin_etrex_10_IMGP3874_smial_wp.jpg&#34; alt=&#34;&#34; /&gt;
+The lab has access to the eTrex &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/87768&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;https://static.garmin.com/pumac/EN-US-eTrex_10_20x_30x.htm&#34;&gt;users manual&lt;/a&gt;.  Instructions on how to accomplish some of the most common tasks are included below:&lt;/p&gt;
 
 &lt;h3 id=&#34;initial-setup-and-clearing-data&#34;&gt;Initial setup and clearing data&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;First, lets make sure the unit is set up properly.&lt;br /&gt;
+* From the main menu, go to setup | units and ensure distance is set to metric and elevation is in feet
+* from the setup menu, go to Position Format and make sure it&amp;rsquo;s set to hddd.ddddd°, Map Datum and Map Spheroid are both set to WGS 84
+* Finally, from setup go to reset and make sure that you delete all waypoints and clear the current track&lt;/p&gt;
 
-&lt;p&gt;Next, lets clear out the old data.&lt;/p&gt;
+&lt;h3 id=&#34;navigate&#34;&gt;Navigate&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Find | Waypoints | Menu | Delete… | All Symbols | Yes&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;To go to a point, from the main menu go to where to | coordinates, and enter your coordinates&lt;/p&gt;
 
-&lt;h3 id=&#34;collecting-data&#34;&gt;Collecting data&lt;/h3&gt;
+&lt;h3 id=&#34;collecting-data-1&#34;&gt;Collecting data&lt;/h3&gt;
 
 &lt;h4 id=&#34;collecting-a-point&#34;&gt;Collecting a point&lt;/h4&gt;
 
-&lt;p&gt;Points:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Press the Mark button. Click OK to save.&lt;/li&gt;
-&lt;li&gt;To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;From the main menu, go to Mark waypoint and click done&lt;/p&gt;
 
 &lt;h4 id=&#34;collecting-a-line-or-a-polygon&#34;&gt;Collecting a line or a polygon&lt;/h4&gt;
 
@@ -3254,7 +3723,85 @@ There are a few caviats to this app.  First, you may have to sit though an ad if
 &lt;li&gt;Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;downloading-your-data-and-creating-shapefiles&#34;&gt;Downloading your data and creating shapefiles&lt;/h4&gt;
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;menu4&#34; class=&#34;tab-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;handheld-units-1&#34;&gt;&lt;strong&gt;Handheld units&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/300px-Garmin_GPSMap_60CSx.jpg&#34; alt=&#34;&#34; /&gt;
+The lab also has some &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf&#34;&gt;users manual&lt;/a&gt;.  Instructions on how to accomplish some of the most common tasks are included below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: Charge the unit with the provided usb cable before going out on your adventure!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;initial-setup-and-clearing-data-1&#34;&gt;Initial setup and clearing data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next, lets clear out the old data.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find | Waypoints | Menu | Delete… | All Symbols | Yes&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;collecting-data-2&#34;&gt;Collecting data&lt;/h3&gt;
+
+&lt;h4 id=&#34;collecting-a-point-1&#34;&gt;Collecting a point&lt;/h4&gt;
+
+&lt;p&gt;Points:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Press the Mark button. Click OK to save.&lt;/li&gt;
+&lt;li&gt;To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;collecting-a-line-or-a-polygon-1&#34;&gt;Collecting a line or a polygon&lt;/h4&gt;
+
+&lt;p&gt;Lines:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Main Menu | Tracks&lt;/li&gt;
+&lt;li&gt;To begin line: Clear | Yes (clear track   log) | Track Log on&lt;/li&gt;
+&lt;li&gt;To end line: Track Log off | Save | Yes (save all tracks)&lt;/li&gt;
+&lt;li&gt;Make sure you clear the track log between tracks! (This keeps each line separate.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Polygons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the same steps as lines, except you need to make sure that your line ends where it began.&lt;/li&gt;
+&lt;li&gt;Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-your-data-onto-a-pc&#34;&gt;&lt;strong&gt;Getting your data onto a PC&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Each method of acquiring GPS data comes with it&amp;rsquo;s own headache of data massaging.&lt;/p&gt;
+
+&lt;p&gt;&lt;ul class=&#34;nav nav-tabs&#34;&gt;
+&lt;li class=&#34;active&#34;&gt;&lt;a data-toggle=&#34;tab1&#34; href=&#34;#gpx&#34;&gt;&amp;nbsp;&amp;nbsp;From GPX&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab1&#34; href=&#34;#app&#34;&gt;&amp;nbsp;&amp;nbsp;From KML&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;DIV class=&#34;tab1-content&#34; markdown=&#34;1&#34;&gt;
+&lt;DIV id=&#34;gpx&#34; class=&#34;tab1-pane fade show active&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;from-gpx&#34;&gt;From GPX&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Click the Start/Windows button, click the little down arrow in the bottom left corner, and then click dnrgps (under #-Programs).&lt;/li&gt;
@@ -3274,8 +3821,30 @@ Connect to Default GPS).&lt;/li&gt;
 &lt;li&gt;Select all of the waypoints that you want to use and then click Edit | Project Coordinates.&lt;/li&gt;
 &lt;li&gt;Click File | Save To | File…. Save your waypoints as an ESRI Shapefile (2D) with the name Lab05_waypoints. Then save your waypoints as a GPS Exchange Format (*.gpx) with a sensible naming convention (like GEOG358_Lab3Waypoints).&lt;/li&gt;
 &lt;li&gt;Downloading tracks is similar to downloading waypoints, but it can be a bit trickier. Click Track | Download. Select all the records (rows) that correspond to your track—this is where things can get confusing—and then click File | Save To | File…. Save your track as an ESRI Shapefile (2D) with a sensible name. If it asks for a Shape Type, select Line.&lt;/li&gt;
-&lt;li&gt;When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.&lt;/li&gt;
+&lt;li&gt;When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.
+&lt;/DIV&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;app&#34; class=&#34;tab1-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;frome-kml&#34;&gt;&lt;strong&gt;Frome KML&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;test&lt;br /&gt;
+&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;data-to-shapefile-format&#34;&gt;&lt;strong&gt;Data to shapefile format&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now we have data&lt;/p&gt;
+
+&lt;h4 id=&#34;downloading-your-data-and-creating-shapefiles&#34;&gt;Downloading your data and creating shapefiles&lt;/h4&gt;
+
+&lt;p&gt;gest&lt;/p&gt;
 
 &lt;h2 id=&#34;working-with-your-shapefiles-in-arcmap&#34;&gt;&lt;strong&gt;Working with your shapefiles in ArcMap&lt;/strong&gt;&lt;/h2&gt;
 

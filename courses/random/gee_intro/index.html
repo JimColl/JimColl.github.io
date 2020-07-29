@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="James Matthew Coll">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction to Google Earth Engine: What is Google Earth Engine: Google Earth Engine (GEE) is a cloud-based data and analysis platform which combines more than 17 petabytes of geospatial data, analytic APIs, and a web based Integrated Development Environment in one package and runs on Google’s computational infrastructure, enabling interactive earth data analyses on scales not previously feasible. This platform was first introduced to the public in 2013 as a means of performing an analysis of global forest cover change, published in Science (Hansen et al.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jimcoll.github.io/courses/random/gee_intro/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.4b7f23026d0679370dc79f3ff7783adf.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jimcoll.github.io/courses/random/gee_intro/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jim Coll">
+  <meta property="og:url" content="https://jimcoll.github.io/courses/random/gee_intro/">
+  <meta property="og:title" content=" | Jim Coll">
+  <meta property="og:description" content="Introduction to Google Earth Engine: What is Google Earth Engine: Google Earth Engine (GEE) is a cloud-based data and analysis platform which combines more than 17 petabytes of geospatial data, analytic APIs, and a web based Integrated Development Environment in one package and runs on Google’s computational infrastructure, enabling interactive earth data analyses on scales not previously feasible. This platform was first introduced to the public in 2013 as a means of performing an analysis of global forest cover change, published in Science (Hansen et al."><meta property="og:image" content="https://jimcoll.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://jimcoll.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Jim Coll</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jim Coll</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Main Website</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog558/"><span>GEOG 558</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/random/"><span>Random</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/">Links and other useful sites</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/website/">Website creation</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/foss/">Creating FOSS Tools</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/dronemapping/">Drone Mapping</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/firstgoogleearthmap/">Intro to Google Earth</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random/foss_rs/">R - NDVI</a>
+
+  </div>
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/courses/random/gee_intro/">Introduction to GEE</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/random"></a>
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introduction-to-google-earth-engine"><strong>Introduction to Google Earth Engine:</strong></a></li>
+<li><a href="#what-is-google-earth-engine"><strong>What is Google Earth Engine</strong>:</a>
+<ul>
+<li><a href="#accessing-gee"><strong>Accessing GEE</strong>:</a></li>
+<li><a href="#gee-operations"><strong>GEE Operations</strong>:</a></li>
+<li><a href="#data-structures-objects"><strong>Data Structures/Objects</strong>:</a></li>
+<li><a href="#asset-management"><strong>Asset Management</strong>:</a></li>
+<li><a href="#data-preparation"><strong>Data Preparation</strong>:</a></li>
+<li><a href="#mappers-and-reducers"><strong>Mappers and Reducers</strong>:</a></li>
+<li><a href="#joins"><strong>Joins</strong>:</a></li>
+<li><a href="#image-classification"><strong>Image Classification</strong>:</a></li>
+<li><a href="#exporting-analyses"><strong>Exporting analyses</strong>:</a></li>
+<li><a href="#example-analysis"><strong>Example analysis</strong>:</a></li>
+<li><a href="#homework"><strong>Homework</strong>:</a></li>
+<li><a href="#citations"><strong>Citations</strong>:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h2 id="introduction-to-google-earth-engine"><strong>Introduction to Google Earth Engine:</strong></h2>
+
+<p><img src="/courses/random/media/GEEBoK.png" alt="" /></p>
+
+<h2 id="what-is-google-earth-engine"><strong>What is Google Earth Engine</strong>:</h2>
+
+<p>Google Earth Engine (GEE) is a cloud-based data and analysis platform which combines more than 17 petabytes of geospatial data, analytic APIs, and a web based Integrated Development Environment in one package and runs on Google’s computational infrastructure, enabling interactive earth data analyses on scales not previously feasible.  This platform was first introduced to the public in 2013 as a means of performing an analysis of global forest cover change, published in Science (Hansen et al., 2013).  In this flagship application, the authors sought to quantify the spatial distribution and global state of forest loss and gain from 2000 to 2012 by blending more than 654,000 Landsat scenes across the 12 years of the analysis — the resultant analysis of 700 Terapixels of data took more than 1 million hours of computation and exported results in a comparatively trivial 4 days across the Google compute infrastructure.</p>
+
+<p><img src="/courses/random/media/HansenImage.png" alt="" /></p>
+
+<p>Such analyses once used to sit behind such extreme barriers of entry that no one would have been able to produce, much less reproduce, these results.<br />
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/Hr3F0s9oKwQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+
+<h3 id="accessing-gee"><strong>Accessing GEE</strong>:</h3>
+
+<p>To use GEE, you will need to request a user account at <a href="https://signup.earthengine.google.com/#!/">https://signup.earthengine.google.com/#!/</a>.  Once approved, you have access to the datasets and the Google computation infrastructure.  This access takes the form of a REST API.  There are currently two means of doing so, one Python based, and the other JavaScript based.  The less popular of the two methods, the Python library, allows users to interact with Earth Engine using the Python programming language.  The Google Earth Engine API guide has a full walk through of how to install the needed libraries, and is available at <a href="https://developers.google.com/earth-engine/python_install">https://developers.google.com/earth-engine/python_install</a>. The more popular means of accessing GEE is through the JavaScript library which is accessed through a web-based IDE, more commonly called the Code Editor, by pointing a browser at <a href="https://code.earthengine.google.com/">https://code.earthengine.google.com/</a> and logging in with an authorized GEE account.  Although not specifically required, it is recommended that you use Google Chrome, and as this is the most popular means of accessing GEE the rest of this entry will be written using the JavaScript IDE.  Don’t worry if you are more familiar with Python, the transition to JavaScript is relatively painless and primers are available at <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction</a>.  One of the first steps for those new to GEE is to explore the features of the JavaScript API.  In the upper right-hand corner of the code editor, click on help &gt; Feature Tour to take a quick guided tour of the platform.</p>
+
+<h3 id="gee-operations"><strong>GEE Operations</strong>:</h3>
+
+<p>Broadly speaking there are 3 major types of operations one can perform in GEE: Methods, Algorithms, and Functions.  The general structure of these are exemplified in Figure 1. Methods require an object to act on and take inputs, as exemplified in Figure 1, line 24, where we query the SRTM dataset for all values greater than 2000. Algorithms are objects themselves and take a specific input to return an object, as exemplified in Figure 1, line 27 where we use the Terrain algorithm to create a hillshade image from SRTM.  Functions take an input and do something within the API, as exemplified in Figure 1, line 30, where we add the Hillshade layer to the map.
+<img src="/courses/random/media/GEEFigure1.png" alt="" /></p>
+
+<h3 id="data-structures-objects"><strong>Data Structures/Objects</strong>:</h3>
+
+<p>Data objects in GEE are slightly different from more traditional desktop GIS software, but the concepts are very similar.  These differences are most pronounced with the data structures outlined below in Figure 2.  What GEE calls Images can be thought of as Rasters, and just as Rasters may have more than one band, so too may Images.  What GEE refers to as an ImageCollection are simply a collection of Images.  What GEE refers to as Features are analogous to features in a shapefile or geodatabase, so FeatureCollections are analogous to the larger shapefile or feature classes in a geodatabase.  These data structures also borrow concepts from Object Oriented Programming (OOP) in that Feature can be thought of as the parent of Image and likewise ImageCollections are children of FeatureCollections.  Therefore, many of the methods and operations available for Features and FeatureCollections are inherited by Images and ImageCollections.
+<img src="/courses/random/media/GEEFigure2.png" alt="" /></p>
+
+<h3 id="asset-management"><strong>Asset Management</strong>:</h3>
+
+<p>GEE hosts more than 17 petabytes of publicly available data which can be redistributed.  However, users also have the option to upload their own data in popular GeoTIFF or shapefile formats for ingestion into the system as user assets.  Assets are limited to 10 GB in size, and are counted as part of your shared Google storage quota (spread across Gmail, Google Drive, ect.).  Once in the platform, they are treated the same as any other dataset in the platform and can be shared with other users.</p>
+
+<h3 id="data-preparation"><strong>Data Preparation</strong>:</h3>
+
+<p>GEE handles many of the concerns typically associated with data preparation, such as storage, cataloging, and projecting the data appropriately.  GEE has ingested many of the most popular remote sensing data from various satellite platforms such as LANDSAT, MODIS, and Sentinel to name just a few.  The full collection can be browsed at <a href="https://developers.google.com/earth-engine/datasets/catalog/">https://developers.google.com/earth-engine/datasets/catalog/</a>.  When ingested, the data is stored in its native projection and format to preserve data integrity, and the metadata necessary to effectively use them is also included in each image as properties.  Users may inspect, project, and resample the data as necessary, but because the GEE team takes care of these details when the data is ingested, the “time to science” is rapidly accelerated and users are free to spend that time on the analysis and presentation instead of the relatively canned portion of data preprocessing.  By using the Search Box at the top of the IDE, you can find relevant datasets and explore how they can be used in GEE.</p>
+
+<h3 id="mappers-and-reducers"><strong>Mappers and Reducers</strong>:</h3>
+
+<p>When working with data in GEE, there are two types of operations we can perform over the data, mapping and reducing.  Mapping applies a function to each image in a collection, so a stack of n elements results in a transformed stack of n elements, and is useful when we need to do something to every image (for instance, calculating NDVI over a timeseries of images).  Reducers on the other hand take one or more input features and return a reducer number of outputs.  These often take the form of conventional map algebra expressions.  These expressions can be as conceptually simple as pulling the maximum value of a stack of pixels in an ImageCollection to as complex as non-parametric trends of slope or regional reducers.</p>
+
+<h3 id="joins"><strong>Joins</strong>:</h3>
+
+<p>Joining data is a hallmark of geospatial analysis, and GEE provides several ways in which different datasets may be joined together based on a specified condition.  These conditions, or filters as they are called in GEE, can be spatial, tabular or temporal in nature.  GEE applies the conditional filter, and items in the input collections that match the conditions are saved in the output collection depending what output the join wants to keep.</p>
+
+<h3 id="image-classification"><strong>Image Classification</strong>:</h3>
+
+<p>GEE has several image classification methods built into the API.  These include unsupervised and supervised classifiers.  As of the time of this writing, these include: Cart, Naïve Bayes and Continuous Naïve Bayes, Decision Tree, Gmo Linear Regression and Max Ent, Ikpamir, Minimum Distance, Pegasos linear, and Polynomial, and Gaussian, Perceptron, Random Forest, Spectral Region, Scm, and Winnow. Additionally, if provided with training data, a confusion matrix can be calculated from that classification to present an accuracy assessment.</p>
+
+<h3 id="exporting-analyses"><strong>Exporting analyses</strong>:</h3>
+
+<p>Although it is often more efficient to perform your desired analysis within GEE, exporting your results for further specialized analysis or publication can come in several forms depending on the desired purposes.  This might include CSV files of time series, images, web map tiles, and videos.  In addition, a suite of standard JavaScript User Interface (UI) items are available within the IDE which enables users to rapidly design and prototype user interfaces to include items such as combo and check boxes, sliders, and legend elements.  These powerful features allow users to publish advanced and fully fleshed out web applications so that those who don’t have a GEE account can interact with or export analysis without looking at a single line of code.</p>
+
+<h3 id="example-analysis"><strong>Example analysis</strong>:</h3>
+
+<p>Let&rsquo;s use GEE to perform one of the most common</p>
+
+<p>Example scripts
+ExploringLandsatImagery
+<a href="https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61">https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61</a>
+ExploringLandcoverChangeWithLandsatImagery
+<a href="https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff">https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff</a></p>
+
+<h3 id="homework"><strong>Homework</strong>:</h3>
+
+<p>Exploring land cover/use change using Landsat 5 imagery available on GEE
+Decide one of your favorite places
+Select two images to show the changes
+Share your exploration (script) here</p>
+
+<h3 id="citations"><strong>Citations</strong>:</h3>
+
+<ul>
+<li>Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., &amp; Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing Of Environment, 202, 18-27. doi: 10.1016/j.rse.2017.06.031</li>
+<li>Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., … Townshend, J. R. G. (2013). High-Resolution Global Maps of 21st-Century Forest Cover Change. Science, 342(6160), 850–853. <a href="https://doi.org/10.1126/science.1244693">https://doi.org/10.1126/science.1244693</a></li>
+<li>Coll, J. M. and Li, X. (2020). Google Earth Engine. The Geographic Information Science &amp; Technology Body of Knowledge (1st Quarter 2020 Edition), John P. Wilson (ed.). DOI: 10.22224/gistbok/2020.1.9</li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 0001</p>
+
+          
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

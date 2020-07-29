@@ -1698,58 +1698,81 @@ This exercise provides an introduction to using a Global Positioning System (GPS
 
 &lt;p&gt;Although the system is very sophisticated, and atomic clocks are used by the satellites, there are multiple sources and types of errors involved in finding your location. As the GPS signal passes through the charged particles of the ionosphere and then through the water vapor in the troposphere, this   causes the signal to slow a bit, and this creates the same kind of error as bad clocks. Also, if the satellites that are in your view at a particular moment are close together in the sky, the intersecting circles that define a position will cross at very shallow angles. That increases the error margin around a position. The kind of GPS receivers we will be using provide about 10 meter accuracy (which may be reduced to under 3m if differential corrections like WAAS are used), depending on the number of satellites available and the geometry of those satellites. If you want to learn more about GPS, I would recommend Garmin’s introduction (&lt;a href=&#34;http://www.garmin.com/aboutGPS/manual.html&#34;&gt;http://www.garmin.com/aboutGPS/manual.html&lt;/a&gt;) or Trimble’s tutorial (&lt;a href=&#34;http://www.trimble.com/gps/&#34;&gt;http://www.trimble.com/gps/&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;In this exercise we are going to collect the coordinates of some set of campus features, generate a few shapefiles of those features, and then use the shapefile to make a map.  There are 3 different options for accomplishing this.  You may use the lab provided GPS units, or your cell phone.  If you are on an android device, I strongly recommend the android specific instructions.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;In this exercise we are going to collect the coordinates of some set of campus features using either the GPS units or your phones, generate a few shapefiles of those features, and then use the shapefile to make a map.  Your grade for this lab is based on the successful submission of two maps to blackboard.&lt;/p&gt;
+
+&lt;h1 id=&#34;collecting-data&#34;&gt;&lt;strong&gt;Collecting data&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;The apps outlined in this lab are all free to use, although many have the option of upgrading to a paid version.  &lt;strong&gt;You do not need to pay for anything if you don&amp;rsquo;t want to.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have an Android phone, I highly recommend the android specific application, it is by far the most robust data collection application I&amp;rsquo;ve tested, and you will always have your phone on hand.  The Apple version will work for the objectives and purposes of this lab, but you will likely be underwhelmed by the capabilities.  The handheld units are also powerful options, but unless you go out and buy a GPS unit for yourself, you will likely never hold a GPS unit in your hands again.&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+  
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    If in the event you get confused as to what your looking at, spamming the back button should always take you to the main menus.
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;The apps for this lab are all free with the option of upgrading to the paid version.  You do not need to pay for anything if you don&amp;rsquo;t want to.&lt;/p&gt;
+&lt;p&gt;Note: Make sure your unit is charged before going out on your adventure!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Apps.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br /&gt;
+&lt;ul class=&#34;nav nav-tabs&#34;&gt;
+&lt;li class=&#34;active&#34;&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#home&#34;&gt;&amp;nbsp;&amp;nbsp;Platform agnostic app&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu1&#34;&gt;&amp;nbsp;&amp;nbsp;Android&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu3&#34;&gt;&amp;nbsp;&amp;nbsp;GARMIN eTrex 10&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab&#34; href=&#34;#menu4&#34;&gt;&amp;nbsp;&amp;nbsp;GARMIN GPSMAP 60C&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV class=&#34;tab-content&#34; markdown=&#34;1&#34;&gt;
+&lt;DIV id=&#34;home&#34; class=&#34;tab-pane fade show active&#34; markdown=&#34;1&#34;&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/Apps.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;apple-android&#34;&gt;&lt;strong&gt;Apple/Android&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;You are looking for the Fields Area Measure Free app.  There is a guided tutorial built right into the app, and your intuitive knowledge as digital generation should carry you the rest of the way.
 &lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/AppTutorial.png&#34; alt=&#34;&#34; /&gt;
-There are a few caviats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.&lt;/p&gt;
+There are a few caveats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.  Sorry apple :(
+&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;menu1&#34; class=&#34;tab-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;android&#34;&gt;&lt;strong&gt;Android&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.&lt;/p&gt;
+&lt;p&gt;If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.
+&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;menu3&#34; class=&#34;tab-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;handheld-units&#34;&gt;&lt;strong&gt;Handheld units&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;The lab also has some &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf&#34;&gt;users manual&lt;/a&gt;.  For future reference I will include some quickstart instructions below:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Note: Charge the unit with the provided usb cable before going out on your adventure!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/450px-Garmin_etrex_10_IMGP3874_smial_wp.jpg&#34; alt=&#34;&#34; /&gt;
+The lab has access to the eTrex &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/87768&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;https://static.garmin.com/pumac/EN-US-eTrex_10_20x_30x.htm&#34;&gt;users manual&lt;/a&gt;.  Instructions on how to accomplish some of the most common tasks are included below:&lt;/p&gt;
 
 &lt;h3 id=&#34;initial-setup-and-clearing-data&#34;&gt;Initial setup and clearing data&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;First, lets make sure the unit is set up properly.&lt;br /&gt;
+* From the main menu, go to setup | units and ensure distance is set to metric and elevation is in feet
+* from the setup menu, go to Position Format and make sure it&amp;rsquo;s set to hddd.ddddd°, Map Datum and Map Spheroid are both set to WGS 84
+* Finally, from setup go to reset and make sure that you delete all waypoints and clear the current track&lt;/p&gt;
 
-&lt;p&gt;Next, lets clear out the old data.&lt;/p&gt;
+&lt;h3 id=&#34;navigate&#34;&gt;Navigate&lt;/h3&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Find | Waypoints | Menu | Delete… | All Symbols | Yes&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;To go to a point, from the main menu go to where to | coordinates, and enter your coordinates&lt;/p&gt;
 
-&lt;h3 id=&#34;collecting-data&#34;&gt;Collecting data&lt;/h3&gt;
+&lt;h3 id=&#34;collecting-data-1&#34;&gt;Collecting data&lt;/h3&gt;
 
 &lt;h4 id=&#34;collecting-a-point&#34;&gt;Collecting a point&lt;/h4&gt;
 
-&lt;p&gt;Points:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Press the Mark button. Click OK to save.&lt;/li&gt;
-&lt;li&gt;To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;From the main menu, go to Mark waypoint and click done&lt;/p&gt;
 
 &lt;h4 id=&#34;collecting-a-line-or-a-polygon&#34;&gt;Collecting a line or a polygon&lt;/h4&gt;
 
@@ -1769,7 +1792,85 @@ There are a few caviats to this app.  First, you may have to sit though an ad if
 &lt;li&gt;Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;downloading-your-data-and-creating-shapefiles&#34;&gt;Downloading your data and creating shapefiles&lt;/h4&gt;
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;menu4&#34; class=&#34;tab-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;handheld-units-1&#34;&gt;&lt;strong&gt;Handheld units&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/300px-Garmin_GPSMap_60CSx.jpg&#34; alt=&#34;&#34; /&gt;
+The lab also has some &lt;a href=&#34;https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20&#34;&gt;handheld garmin units&lt;/a&gt;.  See the website for the &lt;a href=&#34;http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf&#34;&gt;users manual&lt;/a&gt;.  Instructions on how to accomplish some of the most common tasks are included below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: Charge the unit with the provided usb cable before going out on your adventure!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;initial-setup-and-clearing-data-1&#34;&gt;Initial setup and clearing data&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next, lets clear out the old data.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find | Waypoints | Menu | Delete… | All Symbols | Yes&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;collecting-data-2&#34;&gt;Collecting data&lt;/h3&gt;
+
+&lt;h4 id=&#34;collecting-a-point-1&#34;&gt;Collecting a point&lt;/h4&gt;
+
+&lt;p&gt;Points:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Press the Mark button. Click OK to save.&lt;/li&gt;
+&lt;li&gt;To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;collecting-a-line-or-a-polygon-1&#34;&gt;Collecting a line or a polygon&lt;/h4&gt;
+
+&lt;p&gt;Lines:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Main Menu | Tracks&lt;/li&gt;
+&lt;li&gt;To begin line: Clear | Yes (clear track   log) | Track Log on&lt;/li&gt;
+&lt;li&gt;To end line: Track Log off | Save | Yes (save all tracks)&lt;/li&gt;
+&lt;li&gt;Make sure you clear the track log between tracks! (This keeps each line separate.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Polygons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the same steps as lines, except you need to make sure that your line ends where it began.&lt;/li&gt;
+&lt;li&gt;Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-your-data-onto-a-pc&#34;&gt;&lt;strong&gt;Getting your data onto a PC&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Each method of acquiring GPS data comes with it&amp;rsquo;s own headache of data massaging.&lt;/p&gt;
+
+&lt;p&gt;&lt;ul class=&#34;nav nav-tabs&#34;&gt;
+&lt;li class=&#34;active&#34;&gt;&lt;a data-toggle=&#34;tab1&#34; href=&#34;#gpx&#34;&gt;&amp;nbsp;&amp;nbsp;From GPX&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a data-toggle=&#34;tab1&#34; href=&#34;#app&#34;&gt;&amp;nbsp;&amp;nbsp;From KML&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;DIV class=&#34;tab1-content&#34; markdown=&#34;1&#34;&gt;
+&lt;DIV id=&#34;gpx&#34; class=&#34;tab1-pane fade show active&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;from-gpx&#34;&gt;From GPX&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Click the Start/Windows button, click the little down arrow in the bottom left corner, and then click dnrgps (under #-Programs).&lt;/li&gt;
@@ -1789,8 +1890,30 @@ Connect to Default GPS).&lt;/li&gt;
 &lt;li&gt;Select all of the waypoints that you want to use and then click Edit | Project Coordinates.&lt;/li&gt;
 &lt;li&gt;Click File | Save To | File…. Save your waypoints as an ESRI Shapefile (2D) with the name Lab05_waypoints. Then save your waypoints as a GPS Exchange Format (*.gpx) with a sensible naming convention (like GEOG358_Lab3Waypoints).&lt;/li&gt;
 &lt;li&gt;Downloading tracks is similar to downloading waypoints, but it can be a bit trickier. Click Track | Download. Select all the records (rows) that correspond to your track—this is where things can get confusing—and then click File | Save To | File…. Save your track as an ESRI Shapefile (2D) with a sensible name. If it asks for a Shape Type, select Line.&lt;/li&gt;
-&lt;li&gt;When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.&lt;/li&gt;
+&lt;li&gt;When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.
+&lt;/DIV&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;DIV id=&#34;app&#34; class=&#34;tab1-pane fade&#34; markdown=&#34;1&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;frome-kml&#34;&gt;&lt;strong&gt;Frome KML&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;test&lt;br /&gt;
+&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/DIV&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;data-to-shapefile-format&#34;&gt;&lt;strong&gt;Data to shapefile format&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now we have data&lt;/p&gt;
+
+&lt;h4 id=&#34;downloading-your-data-and-creating-shapefiles&#34;&gt;Downloading your data and creating shapefiles&lt;/h4&gt;
+
+&lt;p&gt;gest&lt;/p&gt;
 
 &lt;h2 id=&#34;working-with-your-shapefiles-in-arcmap&#34;&gt;&lt;strong&gt;Working with your shapefiles in ArcMap&lt;/strong&gt;&lt;/h2&gt;
 

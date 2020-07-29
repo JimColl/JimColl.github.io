@@ -1,0 +1,199 @@
+# Last build: 7/30/20
+# install.packages("devtools")  # Will throw errors if RTools is not installed, you can ignore this for the remained of installation
+# install.packages("geosphere")  # For geodesic buffer function
+# install.packages("leaflet")  # For visualization
+# install.packages("leafem")  # For visualization
+# library(devtools, quietly = TRUE)
+# devtools::install_github("ropensci/FedData")  # For easy NLCD download
+# devtools::install_github(c("ropensci/getlandsat"))  # For easy landsat download
+
+library(dplyr, quietly = TRUE)  # Syntax sugar
+library(lubridate, quietly = TRUE)  # more syntax sugar
+library(geosphere, quietly = TRUE)  # Buffer function
+library(rgeos, quietly = TRUE)  # second buffer function
+# library(rgdal)
+# library(raster)
+# library(rgeos)
+library(jsonlite, quietly = TRUE)  # API query
+library(httr, quietly = TRUE)  # web download
+library(leaflet, quietly = TRUE)  # vis
+library(leafem, quietly = TRUE)  # vis
+library(htmltools, quietly = TRUE)  # vis
+library(FedData, quietly = TRUE)  # Easy NLCD
+library(getlandsat, quietly = TRUE)  # Easy landsat
+
+## Helper functions
+
+## geocoding function using OSM Nominatim API -- details: http://wiki.openstreetmap.org/wiki/Nominatim
+## Inputs: a human readable address or colloquial name string
+## Outputs: success: a sf point with lat and long | Failure: an empty dataframe
+## modified from: D.Kisler @ https://datascienceplus.com/osm-nominatim-with-r-getting-locations-geo-coordinates-by-its-address/
+nominatim_osm <- function(address = NULL) {
+  # Construct a url request
+  d <- jsonlite::fromJSON( 
+    gsub('\\@addr\\@', gsub('\\s+', '\\%20', address), 'http://nominatim.openstreetmap.org/search/@addr@?format=json&addressdetails=0&limit=1'))
+  
+  # return parsed sf point
+  return(
+    sf::st_as_sf(d %>% select('lon','lat','display_name'),
+                 coords=c("lon","lat"), 
+                 crs=sf::st_crs(4326),
+                 remove=TRUE)
+  )
+}
+
+## geodesic buffer function -- details: http://wiki.openstreetmap.org/wiki/Nominatim
+## Inputs: a point and distance (in meters) to buffer
+## Outputs: success: | no error checking
+## credit to: Valentin @ https://stackoverflow.com/questions/25411251/buffer-geospatial-points-in-r-with-gbuffer
+geo_buffer <- function(point, distance_Meters) {
+  # Construct equidistant points defining circle ("buffer vertex points")
+  buff.XY <- geosphere::destPoint(p = sf::as_Spatial(point), 
+                                  b = seq(from = 0, to = 360, by = 5), 
+                                  d = distance_Meters)
+  
+  # Convert points to polygon and return
+  return(
+    sf::st_sfc(sf::st_polygon(list(buff.XY))) %>%
+      sf::st_set_crs(4326)
+  )
+}
+
+# set a working directory
+setwd("C:/Users/Cornholio/Desktop/coolclass") # your own filepath here
+
+# Pick an AOI and (small) buffer distance
+xx <- list() 
+xx$AOI_center <- nominatim_osm("Lawrence, KS") 
+# xx$AOI_center <- sp::SpatialPoints(-95.23595,38.97194) %>% sf::st_as_sfc() %>% sf::st_set_crs(4326)# or spesify a lon/lat point
+mybufferdist_m = 1200
+xx$AOI_buffer <- geo_buffer(xx$AOI_center[1,], mybufferdist_m)
+xx$processbounds <- sf::st_bbox(xx$AOI_buffer) 
+# st_bbox doesn't return a spatial object, so we'll correct for that here
+xx$AOI_bbox <- sf::st_bbox(xx$AOI_buffer) %>% sf::st_as_sfc() %>% sf::st_set_crs(4326)
+
+# discover path and row
+httr::GET('https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/WRS2_descending_0.zip', 
+          write_disk(paste0(getwd(), "/WRS2_descending_0.zip")))
+unzip(paste0(getwd(), "/WRS2_descending_0.zip"), exdir = getwd())
+xx$pathrow <- sf::read_sf(paste0(getwd(), "/WRS2_descending.shp"))
+
+# That pathrow file covers the entire globe, let's make this a tiny bit gentler to visualize
+# and subset that to just the pathrows that intersect our AOI
+xx$pathrow_subset <- xx$pathrow[xx$AOI_bbox,]
+
+# explore geographic context
+leaflet() %>%
+  addProviderTiles(providers$Stamen.TonerLite, group = "Base Map") %>%
+  addPolygons(data=xx$AOI_buffer,color="red") %>%
+  addPolygons(data=xx$pathrow_subset,
+              color="black",
+              fill = FALSE,
+              label = mapply(function(x, y) {
+                HTML(sprintf("<em>Path/row:</em>%s-%s", htmlEscape(x), htmlEscape(y)))},
+                xx$pathrow_subset$PATH, xx$pathrow_subset$ROW, SIMPLIFY = F),
+              labelOptions = lapply(1:nrow(xx$pathrow_subset), function(x) {
+                labelOptions(noHide = T)
+              })) %>% 
+  fitBounds(as.numeric(floor(xx$processbounds$xmin)), 
+            as.numeric(floor(xx$processbounds$ymin)), 
+            as.numeric(ceiling(xx$processbounds$xmax)), 
+            as.numeric(ceiling(xx$processbounds$ymax)))
+
+# Aside: was geodesic buffering necessary?  Let's test using a "relative" simplification!
+# @ https://planetcalc.com/7721/  --  WGS 84 defines ellipsoid parameters as:
+a = 6378137.0        # Semi-major axis in meters
+b = 6356752.314245   # Semi-minor axis in meters
+l = sf::st_coordinates(xx$AOI_center)[2]
+radius_globe_meters <-
+  sqrt((((((a^2)*cos(l))^2)+(((b^2)*sin(l))^2)))/((((a*cos(l))^2)+((b*sin(l))^2))))
+radius_degrees <- mybufferdist_m/radius_globe_meters
+# xx$AOI_badbuffer <- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center)),width = radius_degrees) %>% 
+#   sf::st_as_sfc() %>%
+#   sf::st_set_crs(4326)
+
+# all credit to https://geocompr.robinlovelace.net/reproj-geo-data.html
+lonlat2UTM = function(lonlat) {
+  utm = (floor((lonlat[1] + 180) / 6) %% 60) + 1
+  if(lonlat[2] > 0) {
+    utm + 32600
+  } else{
+    utm + 32700
+  }
+}
+aoiUTMEPSG <- lonlat2UTM(sf::st_coordinates(xx$AOI_center))
+xx$AOI_center_utm <- sf::st_transform(xx$AOI_center,newEPSG)                                    
+                                    
+xx$AOI_badbuffer <- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %>% 
+  sf::st_as_sfc() %>%
+  sf::st_set_crs(aoiUTMEPSG) 
+xx$AOI_badbuffer <- sf::st_transform(xx$AOI_badbuffer,4326)
+                                    
+# and check visually
+leaflet() %>%
+  addProviderTiles(providers$Stamen.TonerLite, group = "Base Map") %>%
+  addPolygons(data=xx$AOI_buffer,color="red") %>%
+  addPolygons(data=xx$AOI_badbuffer,color="green") 
+# Conclusion: it's too late for me to be futzing around with this....  Any ideas?
+
+
+
+lonlat2UTM = function(lonlat) {
+  utm = (floor((lonlat[1] + 180) / 6) %% 60) + 1
+  if(lonlat[2] > 0) {
+    utm + 32600
+  } else{
+    utm + 32700
+  }
+}
+newEPSG <- lonlat2UTM(sf::st_coordinates(xx$AOI_center))
+
+
+# Note: Perhaps a bit overkill, all we needed to do here is ensure that our AOI is completey enclosed within a single path/row
+# We'll cover mosaicing (stiching togehter multiple scenes at once) later in the course, but for now if you end up inside more than
+# one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section)
+
+# Find the scenes for your path and row
+summerdaterange <- interval(as.POSIXct("2015-06-01 00:00:00"), 
+                            as.POSIXct("2015-09-01 00:00:00"))   
+
+summerscene <- lsat_scenes() %>% 
+  filter(row == xx$pathrow_subset$ROW) %>%                # Filter for row...
+  filter(path == xx$pathrow_subset$PATH) %>%              # and path
+  filter(acquisitionDate %within% summerdaterange) %>%    # get our date
+  arrange(cloudCover) %>% 
+  .[1,]
+
+
+summerscene$download_url 
+
+# Download a scene
+tifs <- grep("\\.TIF$", summerscene$Key, value = TRUE)
+
+download_url 
+
+# Explore format
+
+Finally, lets grab NLCD landcover data (note: 2016 is avalible but not added to FedData as of yet)
+# FedData::get_nlcd_tile(template=as.spaxx$AOI_bbox,
+# FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),"Spatial"), CRSobj = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"),
+#                        label='AOI',
+#                        year=2016,
+#                        dataset="Land_Cover",
+#                        # tileName=N01W01,
+#                        raw.dir=getwd(),
+#                        extraction.dir=getwd())
+sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),"Spatial"), CRS(paste0("+proj=utm +datum=NAD83 +zone=",floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1)))
+FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),"Spatial"), CRS(paste0("+proj=utm +datum=NAD83 +zone=",floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1))),
+                  label='AOI',
+                  year=2011,
+                  dataset="Land_Cover")
+
+vepPolygon <- polygon_from_extent(raster::extent(672800, 740000, 4102000, 4170000),
+                                  proj4string = "+proj=utm +datum=NAD83 +zone=12")
+NLCD <- get_nlcd(template = vepPolygon,
+                 year = 2016,
+                 dataset = "Land_Cover",
+                 label = "VEPIIN")
+
+

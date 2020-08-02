@@ -418,9 +418,7 @@
 </ul></li>
 <li><a href="#collecting-data"><strong>Collecting data</strong></a>
 <ul>
-<li><a href="#apple-android"><strong>Apple/Android</strong></a></li>
-<li><a href="#android"><strong>Android</strong></a></li>
-<li><a href="#handheld-units"><strong>Handheld units</strong></a>
+<li>
 <ul>
 <li><a href="#initial-setup-and-clearing-data">Initial setup and clearing data</a></li>
 <li><a href="#navigate">Navigate</a></li>
@@ -429,14 +427,21 @@
 <li><a href="#collecting-a-point">Collecting a point</a></li>
 <li><a href="#collecting-a-line-or-a-polygon">Collecting a line or a polygon</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#handheld-units-1"><strong>Handheld units</strong></a>
-<ul>
 <li><a href="#initial-setup-and-clearing-data-1">Initial setup and clearing data</a></li>
+<li><a href="#navigate-1">Navigate</a></li>
+<li><a href="#final-notes">Final notes</a></li>
+<li><a href="#initial-setup-and-clearing-data-2">Initial setup and clearing data</a></li>
+<li><a href="#navigate-2">Navigate</a></li>
 <li><a href="#collecting-data-2">Collecting data</a>
 <ul>
 <li><a href="#collecting-a-point-1">Collecting a point</a></li>
 <li><a href="#collecting-a-line-or-a-polygon-1">Collecting a line or a polygon</a></li>
+</ul></li>
+<li><a href="#initial-setup-and-clearing-data-3">Initial setup and clearing data</a></li>
+<li><a href="#collecting-data-3">Collecting data</a>
+<ul>
+<li><a href="#collecting-a-point-2">Collecting a point</a></li>
+<li><a href="#collecting-a-line-or-a-polygon-2">Collecting a line or a polygon</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#getting-your-data-onto-a-pc"><strong>Getting your data onto a PC</strong></a>
@@ -444,14 +449,6 @@
 <li>
 <ul>
 <li><a href="#from-gpx">From GPX</a></li>
-<li><a href="#frome-kml"><strong>Frome KML</strong></a></li>
-</ul></li>
-</ul></li>
-<li><a href="#data-to-shapefile-format"><strong>Data to shapefile format</strong></a>
-<ul>
-<li>
-<ul>
-<li><a href="#downloading-your-data-and-creating-shapefiles">Downloading your data and creating shapefiles</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#working-with-your-shapefiles-in-arcmap"><strong>Working with your shapefiles in ArcMap</strong></a></li>
@@ -482,7 +479,7 @@
 <h1 id="lab-03-using-gps-for-field-data-collection"><strong>Lab 03: Using GPS for Field Data Collection</strong></h1>
 
 <p>Introduction
-This exercise provides an introduction to using a Global Positioning System (GPS) receiver to obtain coordinates and create a point shapefile. GPS is a system consisting of a network of satellites that orbit ~11,000 nautical miles from the earth in six different orbital paths. They are continuously monitored by ground stations located worldwide. The satellites transmit signals that can be detected with a GPS receiver. Using the receiver, you can determine your location with great precision through the trilateration (not triangulation!) of signals from at least 3 satellites, based on measurements of distance using the travel time of radio signals (which travel at the speed of light) from the satellites.</p>
+This exercise provides an introduction to using a Global Positioning System (GPS) receiver to obtain coordinates and create a point shapefile. GPS is a system consisting of a network of satellites that orbit ~11,000 nautical miles from the earth in six different orbital paths. They are continuously monitored by ground stations located worldwide. The satellites transmit signals that can be detected with a GPS receiver. Using the receiver, you can determine your location with great precision through the trilateration (not triangulation!) of signals from at least 3 satellites, getting a distance from the difference between time measurements.</p>
 
 <p>Although the system is very sophisticated, and atomic clocks are used by the satellites, there are multiple sources and types of errors involved in finding your location. As the GPS signal passes through the charged particles of the ionosphere and then through the water vapor in the troposphere, this   causes the signal to slow a bit, and this creates the same kind of error as bad clocks. Also, if the satellites that are in your view at a particular moment are close together in the sky, the intersecting circles that define a position will cross at very shallow angles. That increases the error margin around a position. The kind of GPS receivers we will be using provide about 10 meter accuracy (which may be reduced to under 3m if differential corrections like WAAS are used), depending on the number of satellites available and the geometry of those satellites. If you want to learn more about GPS, I would recommend Garmin’s introduction (<a href="http://www.garmin.com/aboutGPS/manual.html">http://www.garmin.com/aboutGPS/manual.html</a>) or Trimble’s tutorial (<a href="http://www.trimble.com/gps/">http://www.trimble.com/gps/</a>).</p>
 
@@ -492,17 +489,14 @@ This exercise provides an introduction to using a Global Positioning System (GPS
 
 <h1 id="collecting-data"><strong>Collecting data</strong></h1>
 
-<div class="alert alert-note">
-  <div>
-    <p>The apps outlined in this lab are all free to use, although many have the option of upgrading to a paid version.  <strong>You do not need to pay for anything if you don&rsquo;t want to.</strong></p>
-
-<p>If you have an Android phone, I highly recommend the android specific application, it is by far the most robust data collection application I&rsquo;ve tested, and you will always have your phone on hand.  The Apple version will work for the objectives and purposes of this lab, but you will likely be underwhelmed by the capabilities.  The handheld units are also powerful options, but unless you go out and buy a GPS unit for yourself, you will likely never hold a GPS unit in your hands again.</p>
-
-  </div>
-</div>
-  
-
+<p>If you have an Android phone, I highly recommend the android specific application, it is by far the most robust data collection application I&rsquo;ve tested, and you will always have your phone on hand.  The Apple version will work for the objectives and purposes of this lab, but you will likely be underwhelmed by the capabilities.  The handheld units are also powerful options, but unless you go out and buy a GPS unit for yourself, you will likely never hold a GPS unit in your hands again.<br />
 <div class="alert alert-warning">
+  <div>
+    The apps outlined in this lab are all free to use, although many have the option of upgrading to a paid version.  <strong>You do not need to pay for anything if you don&rsquo;t want to.</strong>
+  </div>
+</div></p>
+
+<div class="alert alert-note">
   <div>
     If in the event you get confused as to what your looking at, spamming the back button should always take you to the main menus.
   </div>
@@ -512,113 +506,103 @@ This exercise provides an introduction to using a Global Positioning System (GPS
 <p>Note: Make sure your unit is charged before going out on your adventure!</p>
 </blockquote>
 
-<p><br><br />
-<ul class="nav nav-tabs">
-<li class="active"><a data-toggle="tab" href="#home">&nbsp;&nbsp;Platform agnostic app&nbsp;&nbsp;</a></li>
-<li><a data-toggle="tab" href="#menu1">&nbsp;&nbsp;Android&nbsp;&nbsp;</a></li>
-<li><a data-toggle="tab" href="#menu3">&nbsp;&nbsp;GARMIN eTrex 10&nbsp;&nbsp;</a></li>
-<li><a data-toggle="tab" href="#menu4">&nbsp;&nbsp;GARMIN GPSMAP 60C&nbsp;&nbsp;</a></li>
-</ul></p>
+<p><br></p>
 
-<p><DIV class="tab-content" markdown="1">
-<DIV id="home" class="tab-pane fade show active" markdown="1">
-<img src="/courses/geog358/media/Apps.png" alt="" /></p>
-
-<h2 id="apple-android"><strong>Apple/Android</strong></h2>
-
-<p>You are looking for the Fields Area Measure Free app.  There is a guided tutorial built right into the app, and your intuitive knowledge as digital generation should carry you the rest of the way.
-<img src="/courses/geog358/media/AppTutorial.png" alt="" />
-There are a few caveats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.  Sorry apple :(
-</DIV></p>
-
-<p><DIV id="menu1" class="tab-pane fade" markdown="1"></p>
-
-<h2 id="android"><strong>Android</strong></h2>
-
-<p>If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.
-</DIV></p>
-
-<p><DIV id="menu3" class="tab-pane fade" markdown="1"></p>
-
-<h2 id="handheld-units"><strong>Handheld units</strong></h2>
-
-<p><img src="/courses/geog358/media/450px-Garmin_etrex_10_IMGP3874_smial_wp.jpg" alt="" />
-The lab has access to the eTrex <a href="https://buy.garmin.com/en-US/US/p/87768">handheld garmin units</a>.  See the website for the <a href="https://static.garmin.com/pumac/EN-US-eTrex_10_20x_30x.htm">users manual</a>.  Instructions on how to accomplish some of the most common tasks are included below:</p>
+<p><ul class="nav nav-tabs" id="myTab1" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="android-tab" data-toggle="tab" href="#android" role="tab" aria-controls="android" aria-selected="true">Android</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="apple-tab" data-toggle="tab" href="#apple" role="tab" aria-controls="apple" aria-selected="false">Apple or Android</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="Garminetrex10-tab" data-toggle="tab" href="#Garminetrex10" role="tab" aria-controls="Garminetrex10" aria-selected="false">Garmin etrex 10</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="GarminGPSMap60CS-tab" data-toggle="tab" href="#GarminGPSMap60CS" role="tab" aria-controls="GarminGPSMap60CS" aria-selected="false">Garmin GPSMap 60CS</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTab1Content" markdown="1">
+  <div class="tab-pane fade show active" id="android" role="tabpanel" aria-labelledby="android-tab">
+<img src="/courses/geog358/media/AppsAndroid.png" alt="" />
+If you are on an android device there are a few more options available to you.  The one you will need for this lab is called Locus GIS.  The advantages of this app (Locus) over the cross platform one is several-fold.  Perhaps most critically, the app allows you to export databases of features at once without going through a paywall.  This app also seems to forgo ads when collecting data.  The forms to add data are also more robust, allowing you to add attributes and pictures to the feature.  I also feel the interface is easier to use.</p>
 
 <h3 id="initial-setup-and-clearing-data">Initial setup and clearing data</h3>
 
-<p>First, lets make sure the unit is set up properly.<br />
-* From the main menu, go to setup | units and ensure distance is set to metric and elevation is in feet
-* from the setup menu, go to Position Format and make sure it&rsquo;s set to hddd.ddddd°, Map Datum and Map Spheroid are both set to WGS 84
-* Finally, from setup go to reset and make sure that you delete all waypoints and clear the current track</p>
+<ul>
+<li>LOCUS separates data by projects, so to start a new project, go to the menu and create a new project.  Make sure your new project coordinate system is set to 4326.
+<img src="/courses/geog358/media/Screenshot_2020-07-29-07-13-41.png" alt="" /></li>
+</ul>
 
 <h3 id="navigate">Navigate</h3>
 
-<p>To go to a point, from the main menu go to where to | coordinates, and enter your coordinates</p>
+<ul>
+<li>To go to a particular point, first add the point using the plus button, and manually enter the coordinates.  After the point has been added, you can click on it, and at the top of the application, one of the options will be to navigate to the point using Google Maps.</li>
+</ul>
 
 <h3 id="collecting-data-1">Collecting data</h3>
 
+<blockquote>
+<p>Locus allows you to record points based on GPS, but also has a rich digital editor that allows you to draw GIS data.  We&rsquo;ll only cover recording data here, but feel free to explore!</p>
+</blockquote>
+
 <h4 id="collecting-a-point">Collecting a point</h4>
 
-<p>From the main menu, go to Mark waypoint and click done</p>
+<p>To create points, you need to first create a point file and fill out the fields as necessary.  These can be edited in app.
+<img src="/courses/geog358/media/Screenshot_2020-07-29-07-15-24.png" alt="" /></p>
 
 <h4 id="collecting-a-line-or-a-polygon">Collecting a line or a polygon</h4>
 
-<p>Lines:</p>
-
-<ul>
-<li>Go to Main Menu | Tracks</li>
-<li>To begin line: Clear | Yes (clear track   log) | Track Log on</li>
-<li>To end line: Track Log off | Save | Yes (save all tracks)</li>
-<li>Make sure you clear the track log between tracks! (This keeps each line separate.)</li>
-</ul>
-
-<p>Polygons:</p>
-
-<ul>
-<li>Use the same steps as lines, except you need to make sure that your line ends where it began.</li>
-<li>Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.</li>
-</ul>
-
-<p></DIV></p>
-
-<p><DIV id="menu4" class="tab-pane fade" markdown="1"></p>
-
-<h2 id="handheld-units-1"><strong>Handheld units</strong></h2>
-
-<p><img src="/courses/geog358/media/300px-Garmin_GPSMap_60CSx.jpg" alt="" />
-The lab also has some <a href="https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20">handheld garmin units</a>.  See the website for the <a href="http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf">users manual</a>.  Instructions on how to accomplish some of the most common tasks are included below:</p>
-
-<blockquote>
-<p>Note: Charge the unit with the provided usb cable before going out on your adventure!</p>
-</blockquote>
+<p>You likewise need to create new files for lines and polygons.  To draw a line, start recording and stop or pause recording when you want to stop.
+  </div>
+  <div class="tab-pane fade" id="apple" role="tabpanel" aria-labelledby="apple-tab">
+<img src="/courses/geog358/media/Apps.png" alt="" />
+You are looking for the Fields Area Measure Free app.  There is a guided tutorial built right into the app, and your intuitive knowledge as digital generation should carry you the rest of the way.
+<img src="/courses/geog358/media/AppTutorial.png" alt="" /></p>
 
 <h3 id="initial-setup-and-clearing-data-1">Initial setup and clearing data</h3>
 
 <ul>
-<li>Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:<br /></li>
-<li>Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric<br /></li>
-<li>Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.<br />
-<br /></li>
+<li>Click the menu button (upper left corner), and go to saved measures.  Click the three buttons next to the entries to delete them.</li>
+<li>To set the units, go to settings, and make sure the measurement system is set to metric</li>
 </ul>
 
-<p>Next, lets clear out the old data.</p>
+<h3 id="navigate-1">Navigate</h3>
 
 <ul>
-<li>Find | Waypoints | Menu | Delete… | All Symbols | Yes<br /></li>
-<li>Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes<br /></li>
+<li>To go to a particular point, first add the point using the plus button, and manually enter the coordinates.  After the point has been added, you can click on it, and at the top of the application, one of the options will be to navigate to the point using Google Maps.</li>
+</ul>
+
+<h3 id="final-notes">Final notes</h3>
+
+<p>There are a few caveats to this app.  First, you may have to sit though an ad if you drop more than a few features in a session.  Finally, the exporting of the data must be done individually (feature by feature), making the unpaid version of this unworkable for larger projects.  Sorry apple :(
+  </div>
+  <div class="tab-pane fade" id="Garminetrex10" role="tabpanel" aria-labelledby="Garminetrex10-tab">
+<img src="/courses/geog358/media/450px-Garmin_etrex_10_IMGP3874_smial_wp.jpg" alt="" />
+The lab has access to the <a href="https://buy.garmin.com/en-US/US/p/87768">eTrex handheld garmin units</a>.  See the website for the <a href="https://static.garmin.com/pumac/EN-US-eTrex_10_20x_30x.htm">users manual</a>.  Instructions on how to accomplish some of the most common tasks are included below:</p>
+
+<h3 id="initial-setup-and-clearing-data-2">Initial setup and clearing data</h3>
+
+<p>First, lets make sure the unit is set up properly.</p>
+
+<ul>
+<li>From the main menu, go to setup | units and ensure distance is set to metric and elevation is in feet</li>
+<li>from the setup menu, go to Position Format and make sure it&rsquo;s set to hddd.ddddd°, Map Datum and Map Spheroid are both set to WGS 84</li>
+<li>Finally, from setup go to reset and make sure that you delete all waypoints and clear the current track</li>
+</ul>
+
+<h3 id="navigate-2">Navigate</h3>
+
+<ul>
+<li>To go to a point, from the main menu go to where to | coordinates, and enter your coordinates, or choose a previously dropped waypoint.</li>
+<li>When done, the map will pop up, directing you to your chosen destination.</li>
 </ul>
 
 <h3 id="collecting-data-2">Collecting data</h3>
 
 <h4 id="collecting-a-point-1">Collecting a point</h4>
 
-<p>Points:</p>
-
-<ul>
-<li>Press the Mark button. Click OK to save.</li>
-<li>To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.</li>
-</ul>
+<p>From the main menu, go to Mark waypoint and click done</p>
 
 <h4 id="collecting-a-line-or-a-polygon-1">Collecting a line or a polygon</h4>
 
@@ -635,28 +619,85 @@ The lab also has some <a href="https://buy.garmin.com/en-US/US/p/8480/pn/010-003
 
 <ul>
 <li>Use the same steps as lines, except you need to make sure that your line ends where it began.</li>
-<li>Some locations may initially be difficult to collect due to interference from buildings, depending on satellite geometry. If this occurs, move on and try again in a little while.
+</ul>
+
+<p></div>
+  <div class="tab-pane fade" id="GarminGPSMap60CS" role="tabpanel" aria-labelledby="GarminGPSMap60CS-tab">
+<img src="/courses/geog358/media/300px-Garmin_GPSMap_60CSx.jpg" alt="" />
+The lab also has <a href="https://buy.garmin.com/en-US/US/p/8480/pn/010-00322-20">Garmin GPSMap 60CS handheld units</a>.  See the website for the <a href="http://static.garmin.com/pumac/GPSMAP60C_OwnersManual.pdf">users manual</a>.  Instructions on how to accomplish some of the most common tasks are included below:</p>
+
+<blockquote>
+<p>Note: Charge the unit with the provided usb cable before going out on your adventure!</p>
+</blockquote>
+
+<h3 id="initial-setup-and-clearing-data-3">Initial setup and clearing data</h3>
+
+<ul>
+<li>Make sure the GPS unit is configured to collect coordinates in decimal degrees and distance is in meters:<br /></li>
+<li>Main Menu (press Menu twice) | Setup | Units | Position format = hddd.ddddd° | Distance/Speed = Metric<br /></li>
+<li>Even though the map datum will be set to WGS 84, this will correlate fine with the NAD projection of our data later on.<br />
 <br /></li>
 </ul>
 
-<p></DIV></p>
+<p>Next, lets clear out the old data.</p>
 
-<p></DIV></p>
+<ul>
+<li>Find | Waypoints | Menu | Delete… | All Symbols | Yes<br /></li>
+<li>Main Menu | Tracks | Clear | Yes | Menu | Delete All Saved | Yes<br /></li>
+</ul>
 
-<hr />
+<h3 id="collecting-data-3">Collecting data</h3>
 
-<p><br></p>
+<h4 id="collecting-a-point-2">Collecting a point</h4>
+
+<p>Points:</p>
+
+<ul>
+<li>Press the Mark button. Click OK to save.</li>
+<li>To view a list of all of the waypoints you have taken, use the Find button (it leads to Waypoints menu) next to the Mark button.</li>
+</ul>
+
+<h4 id="collecting-a-line-or-a-polygon-2">Collecting a line or a polygon</h4>
+
+<p>Lines:</p>
+
+<ul>
+<li>Go to Main Menu | Tracks</li>
+<li>To begin line: Clear | Yes (clear track   log) | Track Log on</li>
+<li>To end line: Track Log off | Save | Yes (save all tracks)</li>
+<li>Make sure you clear the track log between tracks! (This keeps each line separate.)</li>
+</ul>
+
+<p>Polygons:</p>
+
+<ul>
+<li>Use the same steps as lines, except you need to make sure that your line ends where it began.
+</div>
+</div>
+<br></li>
+</ul>
 
 <h2 id="getting-your-data-onto-a-pc"><strong>Getting your data onto a PC</strong></h2>
 
-<p>Each method of acquiring GPS data comes with it&rsquo;s own headache of data massaging.</p>
+<p>Each method of acquiring GPS data can come with it&rsquo;s own headache of data massaging.  Our goal is getting the data into shapefile format, and although the LOCUS GIS app will let you export data in that form, none of the other methods play quite as nicely.  There are two common means of exporting GPS data, via gpx format (both handhelds do this), or via kml.</p>
 
-<p><ul class="nav nav-tabs">
-<li class="active"><a data-toggle="tab1" href="#gpx">&nbsp;&nbsp;From GPX&nbsp;&nbsp;</a></li>
-<li><a data-toggle="tab1" href="#app">&nbsp;&nbsp;From KML&nbsp;&nbsp;</a></li>
+<p><ul class="nav nav-tabs" id="myTab2" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="shp-tab" data-toggle="tab" href="#shp" role="tab" aria-controls="shp" aria-selected="true">From LOCUS</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="gpx-tab" data-toggle="tab" href="#gpx" role="tab" aria-controls="profile" aria-selected="false">From Handhelds</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="kml-tab" data-toggle="tab" href="#kml" role="tab" aria-controls="kml" aria-selected="false">From KML</a>
+  </li>
 </ul>
-<DIV class="tab1-content" markdown="1">
-<DIV id="gpx" class="tab1-pane fade show active" markdown="1"></p>
+<div class="tab-content" id="myTab2Content">
+  <div class="tab-pane fade show active" id="shp" role="tabpanel" aria-labelledby="shp-tab">
+As mentioned, LOCUS makes this process painless, from your project simply click the 3 more buttons and then Export as SHP.<br />
+<img src="/courses/geog358/media/Screenshot_2020-07-29-07-19-41.png" alt="" /><br />
+  </div>
+  <div class="tab-pane fade" id="gpx" role="tabpanel" aria-labelledby="gpx-tab"></p>
 
 <h4 id="from-gpx">From GPX</h4>
 
@@ -672,36 +713,35 @@ The lab also has some <a href="https://buy.garmin.com/en-US/US/p/8480/pn/010-003
 <li>Connect the GPS unit to the computer using the provided USB cable. Turn the unit on, press the Page button until you reach the Satellite screen, press the Menu button and select Use with GPS off (this helps save the battery).</li>
 <li>If the application doesn’t find your GPS unit automatically, select GPS | Find GPS (or
 Connect to Default GPS).</li>
+</ul>
+
+<p><img src="/courses/geog358/media/DNRGPS_1.PNG" alt="" /></p>
+
+<ul>
 <li>Download your point features by clicking the Waypoint menu and selecting Download.</li>
+</ul>
+
+<p><img src="/courses/geog358/media/DNRGPS_2.PNG" alt="" /></p>
+
+<ul>
 <li>Look at the table of waypoints. If you see any unwanted waypoints in the table, select them and click the red X on the left side of the screen.</li>
 <li>Let’s project our data before we go any further. Click File | Set Projection. On the Projection tab, set the POSC Code to 26915, the datum to NAD83, and the projection to UTM zone 15N. Click OK.</li>
 <li>Select all of the waypoints that you want to use and then click Edit | Project Coordinates.</li>
 <li>Click File | Save To | File…. Save your waypoints as an ESRI Shapefile (2D) with the name Lab05_waypoints. Then save your waypoints as a GPS Exchange Format (*.gpx) with a sensible naming convention (like GEOG358_Lab3Waypoints).</li>
-<li>Downloading tracks is similar to downloading waypoints, but it can be a bit trickier. Click Track | Download. Select all the records (rows) that correspond to your track—this is where things can get confusing—and then click File | Save To | File…. Save your track as an ESRI Shapefile (2D) with a sensible name. If it asks for a Shape Type, select Line.</li>
-<li>When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.
-</DIV></li>
 </ul>
 
-<p><DIV id="app" class="tab1-pane fade" markdown="1"></p>
+<p><img src="/courses/geog358/media/DNRGPS_Final.PNG" alt="" /></p>
 
-<h4 id="frome-kml"><strong>Frome KML</strong></h4>
-
-<p>test<br />
-</DIV></p>
-
-<p></DIV></p>
-
-<hr />
-
-<p><br></p>
-
-<h2 id="data-to-shapefile-format"><strong>Data to shapefile format</strong></h2>
-
-<p>Now we have data</p>
-
-<h4 id="downloading-your-data-and-creating-shapefiles">Downloading your data and creating shapefiles</h4>
-
-<p>gest</p>
+<ul>
+<li>Downloading tracks is similar to downloading waypoints, but it can be a bit trickier. Click Track | Download. Select all the records (rows) that correspond to your track—this is where things can get confusing—and then click File | Save To | File…. Save your track as an ESRI Shapefile (2D) with a sensible name. If it asks for a Shape Type, select Line.</li>
+<li>When you’re done creating your shapefiles, close the DNR GPS application, turn the GPS unit off, and disconnect the unit from your computer.<br />
+</div>
+<div class="tab-pane fade" id="kml" role="tabpanel" aria-labelledby="kml-tab">
+The Fields Area Measure app (and several other phone based apps), may allow you to only export data in a KML format.  Although ArcGIS does not natively support KML (if you navigate to where the file is supposed to be in the catalog, you wont find it.  However, by searching for KML in the search box, you will find the KML to Layer tool, which will convert the file into a layer in ArcMap (which can then be exported to a shapefile if you so desire.
+<img src="/courses/geog358/media/KML_to_Layer.png" alt="" /><br />
+</div>
+</div></li>
+</ul>
 
 <h2 id="working-with-your-shapefiles-in-arcmap"><strong>Working with your shapefiles in ArcMap</strong></h2>
 
@@ -722,9 +762,14 @@ Connect to Default GPS).</li>
 <li>In Windows Explorer, double-click the file you just created. (If you don’t see it, look for KMZ File under the Type column.)</li>
 <li>Google Earth should open and zoom to the location where your points are. Are your points where they’re supposed to be?</li>
 <li>Find a cool view angle and zoom level</li>
-<li>Google Earth lets you export these as a neat map with the appropriate map elements.  Fill in the pertinent data, save it, and upload it to Blackboard.
-<img src="/courses/geog358/media/GoogleEarthExport.PNG" alt="" /></li>
+<li>Google Earth lets you export these as a neat map with the appropriate map elements.  Fill in the pertinent data, save it, and upload it to Blackboard.</li>
 </ul>
+
+<blockquote>
+<p>need extra instructions?  Check out <a href="https://jimcoll.github.io/courses/random/firstgoogleearthmap/">https://jimcoll.github.io/courses/random/firstgoogleearthmap/</a></p>
+</blockquote>
+
+<p><img src="/courses/geog358/media/GoogleEarthExport.PNG" alt="" /></p>
 
 <h3 id="common-errors"><strong>Common errors:</strong></h3>
 

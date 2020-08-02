@@ -449,15 +449,127 @@ As part of my dissertation, I am interested in flying areas to determine what fa
 
 &lt;h2 id=&#34;a-basic-map-in-google-maps&#34;&gt;&lt;strong&gt;A basic map in Google Maps:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Google Earth is a great platform to start your exploration of the GISciences, even if it&amp;rsquo;s not a tool you&amp;rsquo;ll use in &amp;ldquo;the real world&amp;rdquo;.  There are a number of ways to access Google Earth, but this tutorial will cover &lt;a href=&#34;https://www.google.com/earth/versions/&#34;&gt;Google Earth Pro on the Desktop&lt;/a&gt; (scroll to the bottom of the page)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthSplashed.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Navigating around the world
-Spend some time practicing navigating around in the world, the mouse and scroll wheel&lt;/p&gt;
+&lt;p&gt;Google Earth is a great platform to start your exploration of the GISciences, even if it&amp;rsquo;s not a tool you&amp;rsquo;ll use often in &amp;ldquo;the real world&amp;rdquo;.  There are a number of ways to access Google Earth, but this tutorial will cover &lt;a href=&#34;https://www.google.com/earth/versions/&#34;&gt;Google Earth Pro on the Desktop&lt;/a&gt; (scroll to the bottom of the page)&lt;/p&gt;
 
-&lt;p&gt;Making a map:
-Maps are complex pieces of work and often show more than just the satellite image of the world.  Here are a few pieces of data for you to start with&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;The&lt;/p&gt;
+&lt;p&gt;The objective of this exersice is to familurize yourself with the numerous tools Google Earth has to offer.  By the end of this tutorial, you should feel comfortable&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;navigating around the world, and reorienting yourself if you get lost.&lt;/li&gt;
+&lt;li&gt;adding data and exploring it&amp;rsquo;s format&lt;/li&gt;
+&lt;li&gt;symbolizing features&lt;/li&gt;
+&lt;li&gt;creating a map, adding common map elements, and exporting an image&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;navigating-around-the-world&#34;&gt;&lt;strong&gt;Navigating around the world&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;most of this section is gratefully pilfered from the &lt;a href=&#34;https://support.google.com/earth/answer/&#34;&gt;official Google Earth help page&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Open Google Earth and spend some time practicing navigating around in the world.&lt;/p&gt;
+
+&lt;h3 id=&#34;change-your-point-of-view&#34;&gt;Change your point of view&lt;/h3&gt;
+
+&lt;p&gt;Use a mouse to change your perspective and explore different areas.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To pan in any direction: Left-click and hold. Then, drag the cursor until you see the view you want.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;To return to the default view (reorient yourself so north is up and the camera angle is pointed straight down) - Click the map and press r.&lt;/li&gt;
+&lt;li&gt;You can zoom in and out to see more or less of a map area. Use the scroll wheel on your mouse or mouse touchpad to zoom in and out.&lt;/li&gt;
+&lt;li&gt;The map controls on the upper right hand side of the map can also be used to pivot, pan, and zoom using just the mouse.&lt;/li&gt;
+&lt;li&gt;Finally, there is a search bar on the toolbar on the left that works just like the search bar on Google Maps.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthNavigate.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;explore-options&#34;&gt;Explore options&lt;/h3&gt;
+
+&lt;p&gt;There are a number of options to explore in Google Earth, particularly under view and tools.  For now, the only one you should turn on is the overlay map, which creates a small inset which shows where we are in relation to the rest of the globe.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthViewOptions.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;tilt-to-view-hills-mountains&#34;&gt;Tilt to view hills &amp;amp; mountains&lt;/h3&gt;
+
+&lt;p&gt;Google earth can be used to view elevation, &lt;strong&gt;make sure you turn on Terrain under Layers on the left first&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Windows &amp;amp; Linux&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Press Shift + Left-click. Then, drag in any direction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;on Mac&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Press and hold the scroll button. Then, move the mouse forward or backward.&lt;/li&gt;
+&lt;li&gt;Press Shift and scroll forward or backward to tilt up and down.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthTerrain.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;google-earth-flight-simulator&#34;&gt;Google Earth Flight Simulator&lt;/h3&gt;
+
+&lt;p&gt;Google Earth has a build in flight simulator, and you can use either the keyboard and mouse, or a joystick!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the menu: Click Tools and then Enter Flight Simulator&lt;/li&gt;
+&lt;li&gt;In the next screen, you can choose the plane you use, and your starting point&lt;/li&gt;
+&lt;li&gt;The Heads up display has the following elements:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthHUD.PNG&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Speed: current speed in knots&lt;/li&gt;
+&lt;li&gt;Heading: direction the aircraft is pointed&lt;/li&gt;
+&lt;li&gt;Bank angle: angle you’re using to slowly turn the plane in a new direction&lt;/li&gt;
+&lt;li&gt;Vertical speed: rate of ascent or descent in feet per minute&lt;/li&gt;
+&lt;li&gt;Exit flight simulator feature: click this button to exit the flight simulator&lt;/li&gt;
+&lt;li&gt;Throttle: level of the engine’s power&lt;/li&gt;
+&lt;li&gt;Rudder: angle of the vertical axis of the plane&lt;/li&gt;
+&lt;li&gt;Aileron: angle of the plane when you roll or bank it&lt;/li&gt;
+&lt;li&gt;Elevator: angle and lift of the plane’s wings&lt;/li&gt;
+&lt;li&gt;Flap and gear indicators: where the flaps and gears are set&lt;/li&gt;
+&lt;li&gt;Pitch angle: angle between where the airplane is pointed and the horizon in degrees&lt;/li&gt;
+&lt;li&gt;Altitude: how many feet above sea level the plane is flying&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;past-imagery&#34;&gt;past imagery&lt;/h3&gt;
+
+&lt;p&gt;Google is one of if not the leading collector of earth observations, and that includes past satellite and aerial imagery.  To view past images, scroll in close enough until the clock on the lower left of the map appears, and click on it.  You can also use the slider at the top right of the map to page through imagery.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthHistorical.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;street-view&#34;&gt;Street view&lt;/h3&gt;
+
+&lt;p&gt;Google earth also has a pegman you can drop to see street view imagery.&lt;br /&gt;
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthStreetView.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;loading-in-data&#34;&gt;Loading in data&lt;/h3&gt;
+
+&lt;p&gt;Google Earth can load in GIS data, and it&amp;rsquo;s native format is KML/KMZ.  &lt;a href=&#34;https://kansas-my.sharepoint.com/:f:/g/personal/j610c377_home_ku_edu/EqW2a0MFdhFGkXUS06HO_FsBWDg-YpO1VjPGE_5-Gk1mXQ?e=djpiox&#34;&gt;Here&lt;/a&gt; is some data we&amp;rsquo;ll use to create our map.  Download it, and then add it to the map using file &amp;gt; open.  Finally, turn off all layers except terrain.  Wehn finished, your screen should look like so.
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthLoadData.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;formatting-and-symbolizing&#34;&gt;Formatting and symbolizing&lt;/h3&gt;
+
+&lt;p&gt;There are several means of symbolizing features in Google Earth.  We can do so feature by feature, or in groups.  If you right click on a feature and go to properties, you can change how it&amp;rsquo;s symbolized.  If you change the properties for a folder, you apply that symbology to every feature within that folder.  For now, clock on the Route1_Merge file and go to style.  Lets change these bus routes to red, and the width to 2.  Afterwards, right click on the folder for the bike routes, and change those properties to green and 1.5 width.  When done, your map should look like so:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/FirstCarto.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The LFK_POI folder has several sub-folders.  These folders are separated into the following categories:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Living: all dorms on the Haskell and KU campuses&lt;/li&gt;
+&lt;li&gt;LivingE: Dorms with a dining hall inside&lt;/li&gt;
+&lt;li&gt;Dining: dining halls and other places around campus to eat&lt;/li&gt;
+&lt;li&gt;GIS Buildings where GIS instruction occurs&lt;/li&gt;
+&lt;li&gt;Busstops: these are bus stops&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you open the properties on these, you can change the symbol used to show these features by clicking on the icon.  Change these icons to something you feel is appropriate.  When done, zoom into a part of campus you feel frames a nice area, your map may look like so:
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/GoogleEarthSymbolMap.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;making-a-map&#34;&gt;Making a map:&lt;/h3&gt;
+
+&lt;p&gt;Finally, let&amp;rsquo;s export our map for viewing.  Go to File &amp;gt; Save &amp;gt; Save Image&amp;hellip;  This adds common map elements including Titleblocks and Legend, as well as a north arrow.  Fill out the pertinent information, including a relevant title, your name, and the data source (this data comes from Douglas County GIS).  Finally, under Map Options at the top, you have the option of toning down the intensity of the base map.  When done, export your map and submit it.  Congratulations, you just made your first map!
+&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/MyFirstMap.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -530,11 +642,45 @@ Maps are complex pieces of work and often show more than just the satellite imag
 
 &lt;p&gt;As you might have guessed by now, a proper understanding of remote sensing hinges on a thorough understanding of the data structure and lineage.  Here we’ll introduce two of my favorite platforms, MODIS, and Landsat&lt;/p&gt;
 
+&lt;h3 id=&#34;modis&#34;&gt;&lt;strong&gt;MODIS&lt;/strong&gt;&lt;/h3&gt;
+
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/MODIS-Aqua.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;a href=&#34;https://modis.gsfc.nasa.gov/about/&#34;&gt;MODIS,(or Moderate Resolution Imaging Spectroradiometer)&lt;/a&gt; is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites.  These are passive remote sensing platforms, and so follow a sun synchronous orbit.  Terra&amp;rsquo;s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth&amp;rsquo;s surface every 1 to 2 days, acquiring data in 36 spectral bands.&lt;/p&gt;
+&lt;a href=&#34;https://modis.gsfc.nasa.gov/about/&#34;&gt;MODIS,(Moderate Resolution Imaging Spectroradiometer)&lt;/a&gt; is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites.  These are passive remote sensing platforms, and so follow a sun synchronous orbit.  Terra&amp;rsquo;s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth&amp;rsquo;s surface every 1 to 2 days, acquiring data in 36 spectral bands.&lt;/p&gt;
+
+&lt;h3 id=&#34;landsat&#34;&gt;&lt;strong&gt;LANDSAT&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/landsat_8_01.jpg&#34; alt=&#34;&#34; /&gt;
 The Landsat program is the longest-running enterprise for acquisition of satellite imagery of Earth. It is a joint NASA/USGS program. Back in July of 1972, the first satellite was launched, and eventually became known as Landsat 1.  The most recent satellite, Landsat 8, was launched on February 11, 2013, and is still currently operational. There are a few different sensors onboard, which are outlined below.  Landsat 1 through 5 carried the Landsat Multispectral Scanner (MSS). Landsat 4 and 5 carried both the MSS and Thematic Mapper &amp;trade; instruments. Landsat 7 uses the Enhanced Thematic Mapper Plus (ETM+) scanner. Landsat 8 uses two instruments, the Operational Land Imager (OLI) for optical bands and the Thermal Infrared Sensor (TIRS) for thermal bands. Handy charts for these instruments can be found on the &lt;a href=&#34;https://en.wikipedia.org/wiki/Landsat_program&#34;&gt;wikipedia page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;landsat-distro&#34;&gt;&lt;strong&gt;LANDSAT distro&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;wrs2.gif
+&lt;a href=&#34;https://www.usgs.gov/land-resources/nli/landsat/landsat-shapefiles-and-kml-files&#34;&gt;https://www.usgs.gov/land-resources/nli/landsat/landsat-shapefiles-and-kml-files&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;landsat-1&#34;&gt;&lt;strong&gt;LANDSAT&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;The Landsat Collection 1 Level-1 product identifier includes the Collection processing levels, processing date, collection number, and collection iter category:&lt;/p&gt;
+
+&lt;p&gt;LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX&lt;/p&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+
+&lt;p&gt;L = Landsat
+X = Sensor (“C”=OLI/TIRS combined, “O”=OLI-only, “T”=TIRS-only, “E”=ETM+, “T”=“TM, “M”=MSS)
+SS = Satellite (”07”=Landsat 7, “08”=Landsat 8)
+LLL = Processing correction level (L1TP/L1GT/L1GS)
+PPP = WRS path
+RRR = WRS row
+YYYYMMDD = Acquisition year, month, day
+yyyymmdd - Processing year, month, day
+CC = Collection number (01, 02, …)
+TX = Collection category (“RT”=Real-Time, “T1”=Tier 1, “T2”=Tier 2)
+Example:  LC08_L1GT_029030_20151209_20160131_01_RT&lt;/p&gt;
+
+&lt;p&gt;Means: Landsat 8; OLI/TIRS combined; processing correction level L1GT; path 029; row 030; acquired December 9, 2015; processed January 31, 2016; Collection 1; Real-Time&lt;/p&gt;
+
+&lt;p&gt;Schematic-of-Landsat-7-data-collection-in-SLC-On-a-and-SLC-Off-b-mode-and-a.png
+&lt;a href=&#34;https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran&#34;&gt;https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;a-simple-application&#34;&gt;&lt;strong&gt;A simple application&lt;/strong&gt;&lt;/h2&gt;
 
@@ -542,13 +688,84 @@ The Landsat program is the longest-running enterprise for acquisition of satelli
 
 &lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/genericNDVI.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The latter, NDVI, is an often performed analysis to give us a roughly quantitative analysis of the vegetative health of a system.  When sunlight strikes objects, some wavelengths of this spectrum are absorbed and other wavelengths are reflected. The pigment in plant leaves, chlorophyll, strongly absorbs visible light (from 0.4 to 0.7 µm) for use in photosynthesis, whereas the cell structure of the leaves strongly reflects near-infrared light (from 0.7 to 1.1 µm). The more leaves a plant has, the more these wavelengths of light are affected.  NDVI values are fairly relative (the difference between 0.5 to 0.6 is not generally quantifiable), but in general, anything above 0.2 is vegetation, and higher values are roughly equivalent to more vegetation.  If we look back at the landsat 8 sensor, we can see that those wavelengths are equivalent to bands 4 and 5.&lt;/p&gt;
+&lt;p&gt;The latter, NDVI, is an often performed analysis to give us a roughly quantitative analysis of the vegetative health of a system.  When sunlight strikes objects, some wavelengths of this spectrum are absorbed and other wavelengths are reflected. The pigment in plant leaves, chlorophyll, strongly absorbs visible light (from 0.4 to 0.7 µm) for use in photosynthesis, whereas the cell structure of the leaves strongly reflects near-infrared light (from 0.7 to 1.1 µm). The more leaves a plant has, the more these wavelengths of light are affected.  NDVI values are fairly relative (the difference between 0.5 to 0.6 is not generally quantifiable), but in general, anything above 0.2 is vegetation, and higher values are roughly equivalent to more vegetation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/LandsatNDVI.PNG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/NDVITrees.jpg&#34; alt=&#34;&#34; /&gt;
+Image from &lt;a href=&#34;https://eos.com/ndvi/&#34;&gt;https://eos.com/ndvi/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;lab-exercise&#34;&gt;&lt;strong&gt;Lab exercise&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Let&amp;rsquo;s use our newfound knowledge to perform one of the most common operations one might want to take, a change detection study.  Let’s explore how NDVI changes by land cover type between summer and fall.  We&amp;rsquo;ll use landsat 8.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s use our newfound knowledge to perform one of the most common operations one might want to take, a change detection study.  Let’s explore how NDVI changes by land cover type between summer and fall.  We&amp;rsquo;ll use landsat 8.  If we look back at the landsat 8 OLS sensor (copied below), we can see that those wavelengths are equivalent to bands 4 and 5.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Band number&lt;/th&gt;
+&lt;th&gt;Spectral resolution&lt;/th&gt;
+&lt;th&gt;Spatial Resolution&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Band 1&lt;/td&gt;
+&lt;td&gt;Visible (0.43 - 0.45 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 2&lt;/td&gt;
+&lt;td&gt;Visible (0.450 - 0.51 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 3&lt;/td&gt;
+&lt;td&gt;Visible (0.53 - 0.59 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 4&lt;/td&gt;
+&lt;td&gt;Red (0.64 - 0.67 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 5&lt;/td&gt;
+&lt;td&gt;Near-Infrared (0.85 - 0.88 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 6&lt;/td&gt;
+&lt;td&gt;SWIR 1(1.57 - 1.65 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 7&lt;/td&gt;
+&lt;td&gt;SWIR 2 (2.11 - 2.29 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 8&lt;/td&gt;
+&lt;td&gt;Panchromatic (PAN) (0.50 - 0.68 µm)&lt;/td&gt;
+&lt;td&gt;15 m&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Band 9&lt;/td&gt;
+&lt;td&gt;Near-Infrared (0.85 - 0.88 µm)&lt;/td&gt;
+&lt;td&gt;30 m&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Let&amp;rsquo;s lay out our workflow conceptually.  We&amp;rsquo;ll first establish an area over which we&amp;rsquo;ll perform the analysis.  Next, we&amp;rsquo;ll scrape an amazon web service to identify suitable data to use for our analysis, and grab land cover data to perform our analysis.  Afterwards, we&amp;rsquo;ll calculate NDVI and perform our zonal statistics using our land cover.  Finally, we&amp;rsquo;ll create a pretty image as our output image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/Workflows.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -559,13 +776,13 @@ xx &amp;lt;- list()
 xx$AOI_center...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;I like to create an empty list and stuff all cartographic variables into a single place for easy access when it comes time to create outputs.&lt;/p&gt;
+&lt;p&gt;I like to create an empty list and stuff all cartographic variables into a single place for easy access when it comes time to create outputs.  This also makes it easer to create web apps (the global file then only has to return the list), but that will be a topic for a later date.&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
   
 
-&lt;p&gt;Let&amp;rsquo;s lay out our workflow conceptually.  We&amp;rsquo;ll first establish an area over which we&amp;rsquo;ll perform the analysis.  Next, we&amp;rsquo;ll scrape an amazon web service to identify suitable data to use for our analysis, and grab land cover data to perform our analysis.  Afterwards, we&amp;rsquo;ll calculate NDVI and perform our zonal statistics using our land cover.  Finally, we&amp;rsquo;ll create a pretty image as our output image.&lt;/p&gt;
+&lt;h3 id=&#34;first-let-s-load-in-the-requisite-packages&#34;&gt;First, let&amp;rsquo;s load in the requisite packages&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;# Last build: 7/30/20
 # install.packages(&amp;quot;devtools&amp;quot;)  # Will throw errors if RTools is not installed, you can ignore this for the remained of installation
@@ -588,8 +805,13 @@ library(leafem, quietly = TRUE)  # vis
 library(htmltools, quietly = TRUE)  # vis
 library(FedData, quietly = TRUE)  # Easy NLCD
 library(getlandsat, quietly = TRUE)  # Easy landsat
+&lt;/code&gt;&lt;/pre&gt;
 
-## Helper functions
+&lt;h3 id=&#34;define-a-few-helper-functions&#34;&gt;Define a few helper functions&lt;/h3&gt;
+
+&lt;p&gt;We&amp;rsquo;ll use a few helper functions to help us accomplish this task, one to plot a point in the world for use as the centroid of our AOI, and another to generate the approprite utm epsg for that point.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;## Helper functions
 
 ## geocoding function using OSM Nominatim API -- details: http://wiki.openstreetmap.org/wiki/Nominatim
 ## Inputs: a human readable address or colloquial name string
@@ -621,8 +843,13 @@ lonlat2UTM = function(lonlat) {
     utm + 32700
   }
 }
+&lt;/code&gt;&lt;/pre&gt;
 
-# set a working directory
+&lt;h3 id=&#34;define-our-aoi-and-a-small-processing-area&#34;&gt;Define our AOI and a small processing area&lt;/h3&gt;
+
+&lt;p&gt;First, let&amp;rsquo;s define our AOI and a small buffer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# set a working directory
 setwd(&amp;quot;C:/Users/Cornholio/Desktop/coolclass&amp;quot;) # your own filepath here
 
 # Pick an AOI and (small) buffer distance
@@ -640,12 +867,27 @@ xx$AOI_center_utm &amp;lt;- sf::st_transform(xx$AOI_center,aoiUTMEPSG)
 xx$AOI_buffer_utm &amp;lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&amp;gt;%
   sf::st_as_sfc() %&amp;gt;%
   sf::st_set_crs(aoiUTMEPSG) 
+  
+xx$AOI_buffer_utm &amp;lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&amp;gt;%
+  sf::st_as_sfc()
+sf::st_crs(xx$AOI_buffer_utm) = aoiUTMEPSG
+  
 xx$AOI_buffer &amp;lt;- sf::st_transform(xx$AOI_buffer_utm, 4326) # reproject back to wgs84
 xx$processbounds &amp;lt;- sf::st_bbox(xx$AOI_buffer) 
 # st_bbox doesn&#39;t return a spatial object, so we&#39;ll correct for that here
 xx$AOI_bbox &amp;lt;- sf::st_bbox(xx$AOI_buffer) %&amp;gt;% sf::st_as_sfc() %&amp;gt;% sf::st_set_crs(4326)
 
-# discover path and row
+# Finally, let&#39;s make sure everything plots as expected
+leaflet() %&amp;gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
+  addPolygons(data=xx$AOI_buffer,color=&amp;quot;red&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;discover-approprite-scenes-for-processing&#34;&gt;Discover approprite scenes for processing&lt;/h3&gt;
+
+&lt;p&gt;We next need to identify scenes for use.  Landsat distriburts scenes by path and row &lt;strong&gt;more here&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# discover path and row
 httr::GET(&#39;https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/WRS2_descending_0.zip&#39;, 
           write_disk(paste0(getwd(), &amp;quot;/WRS2_descending_0.zip&amp;quot;)))
 unzip(paste0(getwd(), &amp;quot;/WRS2_descending_0.zip&amp;quot;), exdir = getwd())
@@ -672,12 +914,15 @@ leaflet() %&amp;gt;%
             as.numeric(floor(xx$processbounds$ymin)), 
             as.numeric(ceiling(xx$processbounds$xmax)), 
             as.numeric(ceiling(xx$processbounds$ymax)))
+&lt;/code&gt;&lt;/pre&gt;
 
-# Note: Perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row
-# We&#39;ll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than
-# one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section)
+&lt;h3 id=&#34;discover-approprite-scenes-for-processing-part-2&#34;&gt;Discover approprite scenes for processing &lt;strong&gt;part 2&lt;/strong&gt;&lt;/h3&gt;
 
-# Find the scenes for your path and row
+&lt;p&gt;That visualization was perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row.  We&amp;rsquo;ll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section).&lt;/p&gt;
+
+&lt;p&gt;Having identified our path and row, let&amp;rsquo;s now explore the landsat catalog&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Find the scenes for your path and row
 summerdaterange &amp;lt;- interval(as.POSIXct(&amp;quot;2015-06-01 00:00:00&amp;quot;), 
                             as.POSIXct(&amp;quot;2015-09-01 00:00:00&amp;quot;))   
 
@@ -690,15 +935,12 @@ summerscene &amp;lt;- getlandsat::lsat_scenes() %&amp;gt;%
 
 summerscene
 # as we see, there is a suitable cloud free scene, let&#39;s look at it&#39;s formatting:
-summerscene$download_url 
+
 
 # In addition to making a handy scene scrapper, the getLandsat package is also a wrapper to download scenes by name
-xx$summer_band4 &amp;lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&amp;quot;_B4.TIF&amp;quot;)) %&amp;gt;%
-  raster::raster() 
-
-# Finally, let&#39;s mask it out to our buffer
-xx$summer_band4 &amp;lt;- xx$summer_band4 %&amp;gt;% 
-  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
+summer_band4_path &amp;lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&amp;quot;_B4.TIF&amp;quot;)) 
+summer_band4 &amp;lt;- raster::raster(summer_band4_path)
+xx$summer_band4 &amp;lt;- raster::mask(summer_band4,sf::as_Spatial(xx$AOI_buffer_utm)) 
 
 # and visualize
 leaflet() %&amp;gt;% 
@@ -708,78 +950,83 @@ leaflet() %&amp;gt;%
   addImageQuery(xx$summer_band4, type=&amp;quot;mousemove&amp;quot;, layerId = &amp;quot;values&amp;quot;)
 
 # Lets do the same for band 5
-xx$summer_band5 &amp;lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&amp;quot;_B5.TIF&amp;quot;)) %&amp;gt;%
-  raster::raster() 
-xx$summer_band5 &amp;lt;- xx$summer_band5 %&amp;gt;% 
-  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))  
+summer_band5_path &amp;lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&amp;quot;_B5.TIF&amp;quot;)) 
+summer_band5 &amp;lt;- raster::raster(summer_band5_path)
+xx$summer_band5 &amp;lt;- raster::mask(summer_band5,sf::as_Spatial(xx$AOI_buffer_utm)) 
+&lt;/code&gt;&lt;/pre&gt;
 
-# Finally, our NDVI calculation
-xx$summer_ndvi &amp;lt;- overlay(xx$summer_band5, xx$summer_band4, fun = function(r1, r2) { return( (r1 - r2)/(r1 + r2)) })
+&lt;h3 id=&#34;creating-ndvi-values&#34;&gt;Creating NDVI values&lt;/h3&gt;
+
+&lt;p&gt;Now, let&amp;rsquo;s perform our local operation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;summer_ndvi &amp;lt;- raster::overlay(xx$summer_band5, xx$summer_band4, fun = function(r1, r2) { return( (r1 - r2)/(r1 + r2)) })
 
 # and visualize
 leaflet() %&amp;gt;% 
   addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
-  addRasterImage(xx$summer_ndvi, layerId = &amp;quot;values&amp;quot;) %&amp;gt;% 
+  addRasterImage(summer_ndvi, layerId = &amp;quot;values&amp;quot;) %&amp;gt;% 
   addMouseCoordinates() %&amp;gt;%
-  addImageQuery(xx$summer_ndvi, type=&amp;quot;mousemove&amp;quot;, layerId = &amp;quot;values&amp;quot;)
+  addImageQuery(summer_ndvi, type=&amp;quot;mousemove&amp;quot;, layerId = &amp;quot;values&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;h3 id=&#34;grabbing-land-cover&#34;&gt;Grabbing land cover&lt;/h3&gt;
 
+&lt;p&gt;Now that we have NDVI, we need a land cover dataset.  &lt;strong&gt;more here about NLCD&lt;/strong&gt;&lt;/p&gt;
 
-NLCD &amp;lt;- FedData::get_nlcd(template = sf::as_Spatial(xx$AOI_buffer_utm),
-                 year = 2016,
-                 dataset = &amp;quot;Land_Cover&amp;quot;,
-                 label = &amp;quot;AOI&amp;quot;)
+&lt;pre&gt;&lt;code&gt;NLCD &amp;lt;- FedData::get_nlcd(template = sf::as_Spatial(xx$AOI_buffer_utm),
+                          year = 2016,
+                          dataset = &amp;quot;Land_Cover&amp;quot;,
+                          label = &amp;quot;AOI&amp;quot;)
+# --------------------------------------------------------------------------------------------
 # backup, because MRLC service is down more often than it&#39;s up...
 # this may take a while because we&#39;re grabbing all of CONUS
 httr::GET(&#39;https://s3-us-west-2.amazonaws.com/mrlc/NLCD_2016_Land_Cover_L48_20190424.zip&#39;, 
           write_disk(paste0(getwd(), &amp;quot;/NLCD_2016_Land_Cover_L48.zip&amp;quot;)))
 unzip(paste0(getwd(), &amp;quot;/NLCD_2016_Land_Cover_L48.zip&amp;quot;), exdir = getwd())
+NLCD &amp;lt;- raster::raster(paste0(getwd(),&#39;/NLCD_2016_Land_Cover_L48_20190424.img&#39;))
+# --------------------------------------------------------------------------------------------
+landcover_utm &amp;lt;- NLCD %&amp;gt;%
+  raster::projectRaster(crs = raster::crs(xx$summer_band4)) %&amp;gt;%
+  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
 
-raster::zonal(x, z, fun=&#39;mean&#39;, digits=0, na.rm=TRUE, ...) 
+landcover_utm &amp;lt;- NLCD %&amp;gt;%
+  raster::projectRaster(crs = raster::crs(xx$summer_band4)) %&amp;gt;%
+  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
+# Finally, we&#39;ll (visualize) write the raster to disk, garbage collect, and reload the layer as that was a fairly
+# expensive set of computations we just performed
+# Land cover color pallete values
+xx$NLCD.pal &amp;lt;- c(&amp;quot;#5475A8&amp;quot;,&amp;quot;#FFFFFF&amp;quot;,&amp;quot;#E8D1D1&amp;quot;,&amp;quot;#E29E8C&amp;quot;,&amp;quot;#FF0000&amp;quot;,&amp;quot;#B50000&amp;quot;,&amp;quot;#D2CDC0&amp;quot;,&amp;quot;#85C77E&amp;quot;,&amp;quot;#38814E&amp;quot;,&amp;quot;#D4E7B0&amp;quot;,&amp;quot;#AF963C&amp;quot;,&amp;quot;#DCCA8F&amp;quot;,&amp;quot;#FDE9AA&amp;quot;,&amp;quot;#D1D182&amp;quot;,&amp;quot;#A3CC51&amp;quot;,&amp;quot;#82BA9E&amp;quot;,&amp;quot;#FBF65D&amp;quot;,&amp;quot;#CA9146&amp;quot;,&amp;quot;#C8E6F8&amp;quot;,&amp;quot;#64B3D5&amp;quot;)
+xx$NLCD.val &amp;lt;- as.numeric(c(11,12,21,22,23,24,31,41,42,43,51,52,71,72,73,74,81,82,90,95))
+xx$NLCD.text &amp;lt;- c(&amp;quot;Open Water&amp;quot;,&amp;quot;Perennial Ice/Snow&amp;quot;,&amp;quot;Developed, Open Space&amp;quot;,&amp;quot;Developed, Low Intensity&amp;quot;,&amp;quot;Developed, Medium Intensity&amp;quot;,&amp;quot;Developed, High Intensity&amp;quot;,&amp;quot;Barren Land&amp;quot;,&amp;quot;Deciduous Forest&amp;quot;,&amp;quot;Evergreen Forest&amp;quot;,&amp;quot;Mixed Forest&amp;quot;,
+                  &amp;quot;Dwarf Scrub&amp;quot;,&amp;quot;Shrub/Scrub&amp;quot;,&amp;quot;Grassland/Herbaceous&amp;quot;,&amp;quot;Sedge/Herbaceous&amp;quot;,&amp;quot;Lichens&amp;quot;,&amp;quot;Moss&amp;quot;,&amp;quot;Pasture/Hay&amp;quot;,&amp;quot;Cultivated Crops&amp;quot;,&amp;quot;Woody Wetlands&amp;quot;,&amp;quot;Emergent Herbaceous Wetlands&amp;quot;)
+xx$NLCD.vis &amp;lt;- colorFactor(palette = xx$NLCD.pal,
+                           domain = xx$NLCD.val)
 
+leaflet() %&amp;gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
+  addRasterImage(NLCD,colors=xx$NLCD.vis) %&amp;gt;%
+  addLegend(&amp;quot;bottomright&amp;quot;,
+            title = &amp;quot;National Land Cover Data&amp;quot;, 
+            colors = xx$NLCD.pal,
+            labels = xx$NLCD.text)
 
-
-
-
-
-
-
-
-
-lsat_image(urls[1])
-urls
-tifs &amp;lt;- grep(&amp;quot;\\.TIF$&amp;quot;, summerscene$Key, value = TRUE)
-
-download_url 
-
-# Explore format
-
-Finally, lets grab NLCD landcover data (note: 2016 is avalible but not added to FedData as of yet)
-# FedData::get_nlcd_tile(template=as.spaxx$AOI_bbox,
-# FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&amp;quot;Spatial&amp;quot;), CRSobj = &amp;quot;+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0&amp;quot;),
-#                        label=&#39;AOI&#39;,
-#                        year=2016,
-#                        dataset=&amp;quot;Land_Cover&amp;quot;,
-#                        # tileName=N01W01,
-#                        raw.dir=getwd(),
-#                        extraction.dir=getwd())
-sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&amp;quot;Spatial&amp;quot;), CRS(paste0(&amp;quot;+proj=utm +datum=NAD83 +zone=&amp;quot;,floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1)))
-FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&amp;quot;Spatial&amp;quot;), CRS(paste0(&amp;quot;+proj=utm +datum=NAD83 +zone=&amp;quot;,floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1))),
-                  label=&#39;AOI&#39;,
-                  year=2011,
-                  dataset=&amp;quot;Land_Cover&amp;quot;)
-
-vepPolygon &amp;lt;- polygon_from_extent(raster::extent(672800, 740000, 4102000, 4170000),
-                                  proj4string = &amp;quot;+proj=utm +datum=NAD83 +zone=12&amp;quot;)
-NLCD &amp;lt;- get_nlcd(template = vepPolygon,
-                 year = 2016,
-                 dataset = &amp;quot;Land_Cover&amp;quot;,
-                 label = &amp;quot;vepPolygon&amp;quot;)
-
-
-
-sf::as_Spatial(xx$AOI_buffer_utm)
+raster::writeRaster(landcover_utm,paste0(getwd(),&amp;quot;/AOI_LC.tif&amp;quot;))
+gc()
+xx$landcover &amp;lt;- raster::raster(paste0(getwd(),&amp;quot;/AOI_LC.tif&amp;quot;))
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;zonal-statistics&#34;&gt;zonal statistics&lt;/h3&gt;
+
+&lt;p&gt;We now have all the pieces we need to generate the desired statistics, our last step is to perform the zonal statistics&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;xx$summer_ndvi &amp;lt;- raster::resample(summer_ndvi,xx$landcover,method=&amp;quot;bilinear&amp;quot;)
+xx$zonalstats &amp;lt;- raster::zonal(xx$summer_ndvi, xx$landcover, fun=&#39;mean&#39;, digits=0, na.rm=TRUE) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;finishing-up&#34;&gt;Finishing up&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;add here&lt;/strong&gt;
+&lt;a href=&#34;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_32DAY_NDVI&#34;&gt;https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_32DAY_NDVI&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -845,15 +1092,138 @@ sf::as_Spatial(xx$AOI_buffer_utm)
 
 &lt;p&gt;Although it is often more efficient to perform your desired analysis within GEE, exporting your results for further specialized analysis or publication can come in several forms depending on the desired purposes.  This might include CSV files of time series, images, web map tiles, and videos.  In addition, a suite of standard JavaScript User Interface (UI) items are available within the IDE which enables users to rapidly design and prototype user interfaces to include items such as combo and check boxes, sliders, and legend elements.  These powerful features allow users to publish advanced and fully fleshed out web applications so that those who don’t have a GEE account can interact with or export analysis without looking at a single line of code.&lt;/p&gt;
 
+&lt;h3 id=&#34;javascript&#34;&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;:&lt;/h3&gt;
+
 &lt;h3 id=&#34;example-analysis&#34;&gt;&lt;strong&gt;Example analysis&lt;/strong&gt;:&lt;/h3&gt;
 
 &lt;p&gt;Let&amp;rsquo;s use GEE to perform one of the most common&lt;/p&gt;
 
-&lt;p&gt;Example scripts
-ExploringLandsatImagery
-&lt;a href=&#34;https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61&#34;&gt;https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61&lt;/a&gt;
-ExploringLandcoverChangeWithLandsatImagery
-&lt;a href=&#34;https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff&#34;&gt;https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-JavaScript&#34;&gt;// Get an image using its ID
+var image = ee.Image(&#39;LANDSAT/LT5_L1T/LT50260332010180EDC00&#39;); //an image covering KC
+print(image)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;exploring-properties&#34;&gt;exploring properties&amp;rsquo;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-JavaScript&#34;&gt;// Examine image properties/metadata
+// Get information about the bands as a list.
+var bandNames = image.bandNames();
+print(&#39;Band names: &#39;, bandNames); // ee.List of band names
+
+// Get projection information from band 1.
+var b1proj = image.select(&#39;B1&#39;).projection();
+print(&#39;Band 1 projection: &#39;, b1proj); // ee.Projection object
+
+// Get scale (in meters) information from band 1.
+var b1scale = image.select(&#39;B1&#39;).projection().nominalScale();
+print(&#39;Band 1 scale: &#39;, b1scale); // ee.Number
+
+// Note that different bands can have different projections and scale.
+var b8scale = image.select(&#39;B6&#39;).projection().nominalScale();
+print(&#39;Band 6 scale: &#39;, b8scale); // ee.Number
+
+// Get a list of all metadata properties.
+var properties = image.propertyNames();
+print(&#39;Metadata properties: &#39;, properties); // ee.List of metadata properties
+
+// Get a specific metadata property.
+var cloudiness = image.get(&#39;CLOUD_COVER&#39;);
+print(&#39;CLOUD_COVER: &#39;, cloudiness); // ee.Number
+
+// Get the timestamp and convert it to a date.
+var date = ee.Date(image.get(&#39;system:time_start&#39;));
+print(&#39;Timestamp: &#39;, date); // ee.Date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;// Display the image
+//set map center and zoom level
+Map.setCenter(-95,39,8);
+//add the image to the map
+Map.addLayer(image,{&#39;bands&#39;:[&#39;B3&#39;,&#39;B2&#39;,&#39;B1&#39;]},&#39;Kansas City in natural color&#39;);
+Map.addLayer(image,{&#39;bands&#39;:[&#39;B4&#39;,&#39;B3&#39;,&#39;B2&#39;]},&#39;Kansas City in false color composite&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;//import or use Landsat image collection&lt;br /&gt;
+//&lt;/p&gt;
+
+&lt;p&gt;var  lt5= ee.ImageCollection(&amp;ldquo;LANDSAT/LT5_L1T&amp;rdquo;);
+//print(&amp;lsquo;Landsat 5 collection&amp;rsquo;, lt5);&lt;/p&gt;
+
+&lt;p&gt;//
+//Metadata about the collection
+//
+// Get the number of images.
+var count = lt5.size();
+print(&amp;lsquo;Count: &amp;lsquo;, count);&lt;/p&gt;
+
+&lt;p&gt;// Get the date range of images in the collection.
+var dates = ee.List(lt5.get(&amp;lsquo;date_range&amp;rsquo;));
+var dateRange = ee.DateRange(dates.get(0), dates.get(1));
+print(&amp;lsquo;Date range: &amp;lsquo;, dateRange);&lt;/p&gt;
+
+&lt;p&gt;// Get statistics for a property of the images in the collection.
+var sunStats = lt5.aggregate_stats(&amp;lsquo;CLOUD COVER&amp;rsquo;);
+print(&amp;lsquo;CLOUD COVER statistics: &amp;lsquo;, sunStats);&lt;/p&gt;
+
+&lt;p&gt;//filter images by time, location, and properties
+//&lt;/p&gt;
+
+&lt;p&gt;// Load Landsat 5 data, filter by date and bounds.
+var ic1990s = lt5
+  .filterDate(&amp;lsquo;1990-01-01&amp;rsquo;, &amp;lsquo;1990-12-31&amp;rsquo;)
+  .filterBounds(p69_135)
+  //.filterMetadata(&amp;lsquo;CLOUD_COVER&amp;rsquo;,&amp;lsquo;less_than&amp;rsquo;,10);
+print(ic1990s)&lt;/p&gt;
+
+&lt;p&gt;// Get the number of images.
+var count = ic1990s.size();
+print(&amp;lsquo;Count: &amp;lsquo;, count);&lt;/p&gt;
+
+&lt;p&gt;// Get the date range of images in the collection.
+var dates = ee.List(ic1990s.get(&amp;lsquo;date_range&amp;rsquo;));
+var dateRange = ee.DateRange(dates.get(0), dates.get(1));
+print(&amp;lsquo;Date range: &amp;lsquo;, dateRange);&lt;/p&gt;
+
+&lt;p&gt;// Get statistics for a property of the images in the collection.
+var sunStats = ic1990s.aggregate_stats(&amp;lsquo;CLOUD_COVER&amp;rsquo;);
+print(&amp;lsquo;CLOUD COVER statistics: &amp;lsquo;, sunStats);&lt;/p&gt;
+
+&lt;p&gt;ic1990s=ic1990s.filterMetadata(&amp;lsquo;CLOUD_COVER&amp;rsquo;,&amp;lsquo;less_than&amp;rsquo;,10);
+print(ic1990s);&lt;/p&gt;
+
+&lt;p&gt;//Access individual images in the collection
+//
+var i1990 = ee.Image(ic1990s.first());&lt;/p&gt;
+
+&lt;p&gt;// Convert the collection to a list and get the number of images.
+var secondImage = ic1990s.toList(5).get(1);
+//print(ic1990s.toList(5));
+print(&amp;lsquo;Second image: &amp;lsquo;, secondImage);&lt;/p&gt;
+
+&lt;p&gt;// Sort by a cloud cover property, get the least cloudy image.
+var leastCloud = ee.Image(ic1990s.sort(&amp;lsquo;CLOUD_COVER&amp;rsquo;).first());
+print(&amp;lsquo;Least cloudy image: &amp;lsquo;, leastCloud);&lt;/p&gt;
+
+&lt;p&gt;// Limit the collection to the 10 most recent images.
+var mostRecent = ee.Image(ic1990s.sort(&amp;lsquo;system:time_start&amp;rsquo;, false).first());
+print(&amp;lsquo;Most recent image: &amp;lsquo;, mostRecent);&lt;/p&gt;
+
+&lt;p&gt;//add the data the map
+Map.centerObject(p69_135,12);
+//Map.addLayer(image);
+Map.addLayer(i1990,{&amp;lsquo;bands&amp;rsquo;:[&amp;lsquo;B4&amp;rsquo;,&amp;lsquo;B3&amp;rsquo;,&amp;lsquo;B2&amp;rsquo;]},&amp;lsquo;1990s&amp;rsquo;);&lt;/p&gt;
+
+&lt;p&gt;// Load Landsat 5 data, filter by date and bounds.
+var ic2010s = ee.ImageCollection(&amp;ldquo;LANDSAT/LT5_L1T&amp;rdquo;)
+  .filterDate(&amp;lsquo;2010-01-01&amp;rsquo;, &amp;lsquo;2010-12-31&amp;rsquo;)
+  .filterBounds(p69_135)
+  .filterMetadata(&amp;lsquo;CLOUD_COVER&amp;rsquo;,&amp;lsquo;less_than&amp;rsquo;,10);
+print(ic2010s)&lt;/p&gt;
+
+&lt;p&gt;var i2010 = ee.Image(ic2010s.first());&lt;/p&gt;
+
+&lt;p&gt;//add the image
+Map.addLayer(i2010,{&amp;lsquo;bands&amp;rsquo;:[&amp;lsquo;B4&amp;rsquo;,&amp;lsquo;B3&amp;rsquo;,&amp;lsquo;B2&amp;rsquo;]},&amp;lsquo;2010s&amp;rsquo;);&lt;/p&gt;
 
 &lt;h3 id=&#34;homework&#34;&gt;&lt;strong&gt;Homework&lt;/strong&gt;:&lt;/h3&gt;
 

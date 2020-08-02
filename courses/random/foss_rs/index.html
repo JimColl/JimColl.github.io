@@ -387,9 +387,28 @@ Objectives This lab should provide you with the bulk of the background knowledge
 <li><a href="#objectives"><strong>Objectives</strong></a></li>
 <li><a href="#quick-vocab"><strong>Quick vocab</strong></a></li>
 <li><a href="#the-basics"><strong>The basics</strong></a></li>
-<li><a href="#an-introduction-to-platforms"><strong>An introduction to platforms</strong></a></li>
+<li><a href="#an-introduction-to-platforms"><strong>An introduction to platforms</strong></a>
+<ul>
+<li><a href="#modis"><strong>MODIS</strong></a></li>
+<li><a href="#landsat"><strong>LANDSAT</strong></a>
+<ul>
+<li><a href="#landsat-distro"><strong>LANDSAT distro</strong></a></li>
+<li><a href="#landsat-1"><strong>LANDSAT</strong></a></li>
+</ul></li>
+</ul></li>
 <li><a href="#a-simple-application"><strong>A simple application</strong></a></li>
-<li><a href="#lab-exercise"><strong>Lab exercise</strong></a></li>
+<li><a href="#lab-exercise"><strong>Lab exercise</strong></a>
+<ul>
+<li><a href="#first-let-s-load-in-the-requisite-packages">First, let&rsquo;s load in the requisite packages</a></li>
+<li><a href="#define-a-few-helper-functions">Define a few helper functions</a></li>
+<li><a href="#define-our-aoi-and-a-small-processing-area">Define our AOI and a small processing area</a></li>
+<li><a href="#discover-approprite-scenes-for-processing">Discover approprite scenes for processing</a></li>
+<li><a href="#discover-approprite-scenes-for-processing-part-2">Discover approprite scenes for processing <strong>part 2</strong></a></li>
+<li><a href="#creating-ndvi-values">Creating NDVI values</a></li>
+<li><a href="#grabbing-land-cover">Grabbing land cover</a></li>
+<li><a href="#zonal-statistics">zonal statistics</a></li>
+<li><a href="#finishing-up">Finishing up</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -470,11 +489,45 @@ Objectives This lab should provide you with the bulk of the background knowledge
 
 <p>As you might have guessed by now, a proper understanding of remote sensing hinges on a thorough understanding of the data structure and lineage.  Here we’ll introduce two of my favorite platforms, MODIS, and Landsat</p>
 
+<h3 id="modis"><strong>MODIS</strong></h3>
+
 <p><img src="/courses/random/media/MODIS-Aqua.jpg" alt="" />
-<a href="https://modis.gsfc.nasa.gov/about/">MODIS,(or Moderate Resolution Imaging Spectroradiometer)</a> is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites.  These are passive remote sensing platforms, and so follow a sun synchronous orbit.  Terra&rsquo;s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth&rsquo;s surface every 1 to 2 days, acquiring data in 36 spectral bands.</p>
+<a href="https://modis.gsfc.nasa.gov/about/">MODIS,(Moderate Resolution Imaging Spectroradiometer)</a> is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites.  These are passive remote sensing platforms, and so follow a sun synchronous orbit.  Terra&rsquo;s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth&rsquo;s surface every 1 to 2 days, acquiring data in 36 spectral bands.</p>
+
+<h3 id="landsat"><strong>LANDSAT</strong></h3>
 
 <p><img src="/courses/random/media/landsat_8_01.jpg" alt="" />
 The Landsat program is the longest-running enterprise for acquisition of satellite imagery of Earth. It is a joint NASA/USGS program. Back in July of 1972, the first satellite was launched, and eventually became known as Landsat 1.  The most recent satellite, Landsat 8, was launched on February 11, 2013, and is still currently operational. There are a few different sensors onboard, which are outlined below.  Landsat 1 through 5 carried the Landsat Multispectral Scanner (MSS). Landsat 4 and 5 carried both the MSS and Thematic Mapper &trade; instruments. Landsat 7 uses the Enhanced Thematic Mapper Plus (ETM+) scanner. Landsat 8 uses two instruments, the Operational Land Imager (OLI) for optical bands and the Thermal Infrared Sensor (TIRS) for thermal bands. Handy charts for these instruments can be found on the <a href="https://en.wikipedia.org/wiki/Landsat_program">wikipedia page</a>.</p>
+
+<h4 id="landsat-distro"><strong>LANDSAT distro</strong></h4>
+
+<p>wrs2.gif
+<a href="https://www.usgs.gov/land-resources/nli/landsat/landsat-shapefiles-and-kml-files">https://www.usgs.gov/land-resources/nli/landsat/landsat-shapefiles-and-kml-files</a></p>
+
+<h4 id="landsat-1"><strong>LANDSAT</strong></h4>
+
+<p>The Landsat Collection 1 Level-1 product identifier includes the Collection processing levels, processing date, collection number, and collection iter category:</p>
+
+<p>LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX</p>
+
+<p>Where:</p>
+
+<p>L = Landsat
+X = Sensor (“C”=OLI/TIRS combined, “O”=OLI-only, “T”=TIRS-only, “E”=ETM+, “T”=“TM, “M”=MSS)
+SS = Satellite (”07”=Landsat 7, “08”=Landsat 8)
+LLL = Processing correction level (L1TP/L1GT/L1GS)
+PPP = WRS path
+RRR = WRS row
+YYYYMMDD = Acquisition year, month, day
+yyyymmdd - Processing year, month, day
+CC = Collection number (01, 02, …)
+TX = Collection category (“RT”=Real-Time, “T1”=Tier 1, “T2”=Tier 2)
+Example:  LC08_L1GT_029030_20151209_20160131_01_RT</p>
+
+<p>Means: Landsat 8; OLI/TIRS combined; processing correction level L1GT; path 029; row 030; acquired December 9, 2015; processed January 31, 2016; Collection 1; Real-Time</p>
+
+<p>Schematic-of-Landsat-7-data-collection-in-SLC-On-a-and-SLC-Off-b-mode-and-a.png
+<a href="https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran">https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran</a></p>
 
 <h2 id="a-simple-application"><strong>A simple application</strong></h2>
 
@@ -482,13 +535,84 @@ The Landsat program is the longest-running enterprise for acquisition of satelli
 
 <p><img src="/courses/random/media/genericNDVI.PNG" alt="" /></p>
 
-<p>The latter, NDVI, is an often performed analysis to give us a roughly quantitative analysis of the vegetative health of a system.  When sunlight strikes objects, some wavelengths of this spectrum are absorbed and other wavelengths are reflected. The pigment in plant leaves, chlorophyll, strongly absorbs visible light (from 0.4 to 0.7 µm) for use in photosynthesis, whereas the cell structure of the leaves strongly reflects near-infrared light (from 0.7 to 1.1 µm). The more leaves a plant has, the more these wavelengths of light are affected.  NDVI values are fairly relative (the difference between 0.5 to 0.6 is not generally quantifiable), but in general, anything above 0.2 is vegetation, and higher values are roughly equivalent to more vegetation.  If we look back at the landsat 8 sensor, we can see that those wavelengths are equivalent to bands 4 and 5.</p>
+<p>The latter, NDVI, is an often performed analysis to give us a roughly quantitative analysis of the vegetative health of a system.  When sunlight strikes objects, some wavelengths of this spectrum are absorbed and other wavelengths are reflected. The pigment in plant leaves, chlorophyll, strongly absorbs visible light (from 0.4 to 0.7 µm) for use in photosynthesis, whereas the cell structure of the leaves strongly reflects near-infrared light (from 0.7 to 1.1 µm). The more leaves a plant has, the more these wavelengths of light are affected.  NDVI values are fairly relative (the difference between 0.5 to 0.6 is not generally quantifiable), but in general, anything above 0.2 is vegetation, and higher values are roughly equivalent to more vegetation.</p>
 
-<p><img src="/courses/random/media/LandsatNDVI.PNG" alt="" /></p>
+<p><img src="/courses/random/media/NDVITrees.jpg" alt="" />
+Image from <a href="https://eos.com/ndvi/">https://eos.com/ndvi/</a></p>
 
 <h2 id="lab-exercise"><strong>Lab exercise</strong></h2>
 
-<p>Let&rsquo;s use our newfound knowledge to perform one of the most common operations one might want to take, a change detection study.  Let’s explore how NDVI changes by land cover type between summer and fall.  We&rsquo;ll use landsat 8.</p>
+<p>Let&rsquo;s use our newfound knowledge to perform one of the most common operations one might want to take, a change detection study.  Let’s explore how NDVI changes by land cover type between summer and fall.  We&rsquo;ll use landsat 8.  If we look back at the landsat 8 OLS sensor (copied below), we can see that those wavelengths are equivalent to bands 4 and 5.</p>
+
+<table>
+<thead>
+<tr>
+<th>Band number</th>
+<th>Spectral resolution</th>
+<th>Spatial Resolution</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Band 1</td>
+<td>Visible (0.43 - 0.45 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 2</td>
+<td>Visible (0.450 - 0.51 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 3</td>
+<td>Visible (0.53 - 0.59 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 4</td>
+<td>Red (0.64 - 0.67 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 5</td>
+<td>Near-Infrared (0.85 - 0.88 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 6</td>
+<td>SWIR 1(1.57 - 1.65 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 7</td>
+<td>SWIR 2 (2.11 - 2.29 µm)</td>
+<td>30 m</td>
+</tr>
+
+<tr>
+<td>Band 8</td>
+<td>Panchromatic (PAN) (0.50 - 0.68 µm)</td>
+<td>15 m</td>
+</tr>
+
+<tr>
+<td>Band 9</td>
+<td>Near-Infrared (0.85 - 0.88 µm)</td>
+<td>30 m</td>
+</tr>
+</tbody>
+</table>
+
+<p>Let&rsquo;s lay out our workflow conceptually.  We&rsquo;ll first establish an area over which we&rsquo;ll perform the analysis.  Next, we&rsquo;ll scrape an amazon web service to identify suitable data to use for our analysis, and grab land cover data to perform our analysis.  Afterwards, we&rsquo;ll calculate NDVI and perform our zonal statistics using our land cover.  Finally, we&rsquo;ll create a pretty image as our output image.</p>
+
+<p><img src="/courses/random/media/Workflows.png" alt="" /></p>
 
 <div class="alert alert-note">
   <div>
@@ -499,13 +623,13 @@ xx &lt;- list()
 xx$AOI_center...
 </code></pre>
 
-<p>I like to create an empty list and stuff all cartographic variables into a single place for easy access when it comes time to create outputs.</p>
+<p>I like to create an empty list and stuff all cartographic variables into a single place for easy access when it comes time to create outputs.  This also makes it easer to create web apps (the global file then only has to return the list), but that will be a topic for a later date.</p>
 
   </div>
 </div>
   
 
-<p>Let&rsquo;s lay out our workflow conceptually.  We&rsquo;ll first establish an area over which we&rsquo;ll perform the analysis.  Next, we&rsquo;ll scrape an amazon web service to identify suitable data to use for our analysis, and grab land cover data to perform our analysis.  Afterwards, we&rsquo;ll calculate NDVI and perform our zonal statistics using our land cover.  Finally, we&rsquo;ll create a pretty image as our output image.</p>
+<h3 id="first-let-s-load-in-the-requisite-packages">First, let&rsquo;s load in the requisite packages</h3>
 
 <pre><code># Last build: 7/30/20
 # install.packages(&quot;devtools&quot;)  # Will throw errors if RTools is not installed, you can ignore this for the remained of installation
@@ -528,8 +652,13 @@ library(leafem, quietly = TRUE)  # vis
 library(htmltools, quietly = TRUE)  # vis
 library(FedData, quietly = TRUE)  # Easy NLCD
 library(getlandsat, quietly = TRUE)  # Easy landsat
+</code></pre>
 
-## Helper functions
+<h3 id="define-a-few-helper-functions">Define a few helper functions</h3>
+
+<p>We&rsquo;ll use a few helper functions to help us accomplish this task, one to plot a point in the world for use as the centroid of our AOI, and another to generate the approprite utm epsg for that point.</p>
+
+<pre><code>## Helper functions
 
 ## geocoding function using OSM Nominatim API -- details: http://wiki.openstreetmap.org/wiki/Nominatim
 ## Inputs: a human readable address or colloquial name string
@@ -561,8 +690,13 @@ lonlat2UTM = function(lonlat) {
     utm + 32700
   }
 }
+</code></pre>
 
-# set a working directory
+<h3 id="define-our-aoi-and-a-small-processing-area">Define our AOI and a small processing area</h3>
+
+<p>First, let&rsquo;s define our AOI and a small buffer</p>
+
+<pre><code># set a working directory
 setwd(&quot;C:/Users/Cornholio/Desktop/coolclass&quot;) # your own filepath here
 
 # Pick an AOI and (small) buffer distance
@@ -580,12 +714,27 @@ xx$AOI_center_utm &lt;- sf::st_transform(xx$AOI_center,aoiUTMEPSG)
 xx$AOI_buffer_utm &lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&gt;%
   sf::st_as_sfc() %&gt;%
   sf::st_set_crs(aoiUTMEPSG) 
+  
+xx$AOI_buffer_utm &lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&gt;%
+  sf::st_as_sfc()
+sf::st_crs(xx$AOI_buffer_utm) = aoiUTMEPSG
+  
 xx$AOI_buffer &lt;- sf::st_transform(xx$AOI_buffer_utm, 4326) # reproject back to wgs84
 xx$processbounds &lt;- sf::st_bbox(xx$AOI_buffer) 
 # st_bbox doesn't return a spatial object, so we'll correct for that here
 xx$AOI_bbox &lt;- sf::st_bbox(xx$AOI_buffer) %&gt;% sf::st_as_sfc() %&gt;% sf::st_set_crs(4326)
 
-# discover path and row
+# Finally, let's make sure everything plots as expected
+leaflet() %&gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &quot;Base Map&quot;) %&gt;%
+  addPolygons(data=xx$AOI_buffer,color=&quot;red&quot;)
+</code></pre>
+
+<h3 id="discover-approprite-scenes-for-processing">Discover approprite scenes for processing</h3>
+
+<p>We next need to identify scenes for use.  Landsat distriburts scenes by path and row <strong>more here</strong></p>
+
+<pre><code># discover path and row
 httr::GET('https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/WRS2_descending_0.zip', 
           write_disk(paste0(getwd(), &quot;/WRS2_descending_0.zip&quot;)))
 unzip(paste0(getwd(), &quot;/WRS2_descending_0.zip&quot;), exdir = getwd())
@@ -612,12 +761,15 @@ leaflet() %&gt;%
             as.numeric(floor(xx$processbounds$ymin)), 
             as.numeric(ceiling(xx$processbounds$xmax)), 
             as.numeric(ceiling(xx$processbounds$ymax)))
+</code></pre>
 
-# Note: Perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row
-# We'll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than
-# one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section)
+<h3 id="discover-approprite-scenes-for-processing-part-2">Discover approprite scenes for processing <strong>part 2</strong></h3>
 
-# Find the scenes for your path and row
+<p>That visualization was perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row.  We&rsquo;ll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section).</p>
+
+<p>Having identified our path and row, let&rsquo;s now explore the landsat catalog</p>
+
+<pre><code># Find the scenes for your path and row
 summerdaterange &lt;- interval(as.POSIXct(&quot;2015-06-01 00:00:00&quot;), 
                             as.POSIXct(&quot;2015-09-01 00:00:00&quot;))   
 
@@ -630,15 +782,12 @@ summerscene &lt;- getlandsat::lsat_scenes() %&gt;%
 
 summerscene
 # as we see, there is a suitable cloud free scene, let's look at it's formatting:
-summerscene$download_url 
+
 
 # In addition to making a handy scene scrapper, the getLandsat package is also a wrapper to download scenes by name
-xx$summer_band4 &lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&quot;_B4.TIF&quot;)) %&gt;%
-  raster::raster() 
-
-# Finally, let's mask it out to our buffer
-xx$summer_band4 &lt;- xx$summer_band4 %&gt;% 
-  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
+summer_band4_path &lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&quot;_B4.TIF&quot;)) 
+summer_band4 &lt;- raster::raster(summer_band4_path)
+xx$summer_band4 &lt;- raster::mask(summer_band4,sf::as_Spatial(xx$AOI_buffer_utm)) 
 
 # and visualize
 leaflet() %&gt;% 
@@ -648,78 +797,83 @@ leaflet() %&gt;%
   addImageQuery(xx$summer_band4, type=&quot;mousemove&quot;, layerId = &quot;values&quot;)
 
 # Lets do the same for band 5
-xx$summer_band5 &lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&quot;_B5.TIF&quot;)) %&gt;%
-  raster::raster() 
-xx$summer_band5 &lt;- xx$summer_band5 %&gt;% 
-  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))  
+summer_band5_path &lt;- getlandsat::lsat_image(paste0(summerscene$entityId,&quot;_B5.TIF&quot;)) 
+summer_band5 &lt;- raster::raster(summer_band5_path)
+xx$summer_band5 &lt;- raster::mask(summer_band5,sf::as_Spatial(xx$AOI_buffer_utm)) 
+</code></pre>
 
-# Finally, our NDVI calculation
-xx$summer_ndvi &lt;- overlay(xx$summer_band5, xx$summer_band4, fun = function(r1, r2) { return( (r1 - r2)/(r1 + r2)) })
+<h3 id="creating-ndvi-values">Creating NDVI values</h3>
+
+<p>Now, let&rsquo;s perform our local operation</p>
+
+<pre><code>summer_ndvi &lt;- raster::overlay(xx$summer_band5, xx$summer_band4, fun = function(r1, r2) { return( (r1 - r2)/(r1 + r2)) })
 
 # and visualize
 leaflet() %&gt;% 
   addProviderTiles(providers$Stamen.TonerLite, group = &quot;Base Map&quot;) %&gt;%
-  addRasterImage(xx$summer_ndvi, layerId = &quot;values&quot;) %&gt;% 
+  addRasterImage(summer_ndvi, layerId = &quot;values&quot;) %&gt;% 
   addMouseCoordinates() %&gt;%
-  addImageQuery(xx$summer_ndvi, type=&quot;mousemove&quot;, layerId = &quot;values&quot;)
+  addImageQuery(summer_ndvi, type=&quot;mousemove&quot;, layerId = &quot;values&quot;)
+</code></pre>
 
+<h3 id="grabbing-land-cover">Grabbing land cover</h3>
 
+<p>Now that we have NDVI, we need a land cover dataset.  <strong>more here about NLCD</strong></p>
 
-NLCD &lt;- FedData::get_nlcd(template = sf::as_Spatial(xx$AOI_buffer_utm),
-                 year = 2016,
-                 dataset = &quot;Land_Cover&quot;,
-                 label = &quot;AOI&quot;)
+<pre><code>NLCD &lt;- FedData::get_nlcd(template = sf::as_Spatial(xx$AOI_buffer_utm),
+                          year = 2016,
+                          dataset = &quot;Land_Cover&quot;,
+                          label = &quot;AOI&quot;)
+# --------------------------------------------------------------------------------------------
 # backup, because MRLC service is down more often than it's up...
 # this may take a while because we're grabbing all of CONUS
 httr::GET('https://s3-us-west-2.amazonaws.com/mrlc/NLCD_2016_Land_Cover_L48_20190424.zip', 
           write_disk(paste0(getwd(), &quot;/NLCD_2016_Land_Cover_L48.zip&quot;)))
 unzip(paste0(getwd(), &quot;/NLCD_2016_Land_Cover_L48.zip&quot;), exdir = getwd())
+NLCD &lt;- raster::raster(paste0(getwd(),'/NLCD_2016_Land_Cover_L48_20190424.img'))
+# --------------------------------------------------------------------------------------------
+landcover_utm &lt;- NLCD %&gt;%
+  raster::projectRaster(crs = raster::crs(xx$summer_band4)) %&gt;%
+  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
 
-raster::zonal(x, z, fun='mean', digits=0, na.rm=TRUE, ...) 
+landcover_utm &lt;- NLCD %&gt;%
+  raster::projectRaster(crs = raster::crs(xx$summer_band4)) %&gt;%
+  raster::mask(sf::as_Spatial(xx$AOI_buffer_utm))
+# Finally, we'll (visualize) write the raster to disk, garbage collect, and reload the layer as that was a fairly
+# expensive set of computations we just performed
+# Land cover color pallete values
+xx$NLCD.pal &lt;- c(&quot;#5475A8&quot;,&quot;#FFFFFF&quot;,&quot;#E8D1D1&quot;,&quot;#E29E8C&quot;,&quot;#FF0000&quot;,&quot;#B50000&quot;,&quot;#D2CDC0&quot;,&quot;#85C77E&quot;,&quot;#38814E&quot;,&quot;#D4E7B0&quot;,&quot;#AF963C&quot;,&quot;#DCCA8F&quot;,&quot;#FDE9AA&quot;,&quot;#D1D182&quot;,&quot;#A3CC51&quot;,&quot;#82BA9E&quot;,&quot;#FBF65D&quot;,&quot;#CA9146&quot;,&quot;#C8E6F8&quot;,&quot;#64B3D5&quot;)
+xx$NLCD.val &lt;- as.numeric(c(11,12,21,22,23,24,31,41,42,43,51,52,71,72,73,74,81,82,90,95))
+xx$NLCD.text &lt;- c(&quot;Open Water&quot;,&quot;Perennial Ice/Snow&quot;,&quot;Developed, Open Space&quot;,&quot;Developed, Low Intensity&quot;,&quot;Developed, Medium Intensity&quot;,&quot;Developed, High Intensity&quot;,&quot;Barren Land&quot;,&quot;Deciduous Forest&quot;,&quot;Evergreen Forest&quot;,&quot;Mixed Forest&quot;,
+                  &quot;Dwarf Scrub&quot;,&quot;Shrub/Scrub&quot;,&quot;Grassland/Herbaceous&quot;,&quot;Sedge/Herbaceous&quot;,&quot;Lichens&quot;,&quot;Moss&quot;,&quot;Pasture/Hay&quot;,&quot;Cultivated Crops&quot;,&quot;Woody Wetlands&quot;,&quot;Emergent Herbaceous Wetlands&quot;)
+xx$NLCD.vis &lt;- colorFactor(palette = xx$NLCD.pal,
+                           domain = xx$NLCD.val)
 
+leaflet() %&gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &quot;Base Map&quot;) %&gt;%
+  addRasterImage(NLCD,colors=xx$NLCD.vis) %&gt;%
+  addLegend(&quot;bottomright&quot;,
+            title = &quot;National Land Cover Data&quot;, 
+            colors = xx$NLCD.pal,
+            labels = xx$NLCD.text)
 
-
-
-
-
-
-
-
-
-lsat_image(urls[1])
-urls
-tifs &lt;- grep(&quot;\\.TIF$&quot;, summerscene$Key, value = TRUE)
-
-download_url 
-
-# Explore format
-
-Finally, lets grab NLCD landcover data (note: 2016 is avalible but not added to FedData as of yet)
-# FedData::get_nlcd_tile(template=as.spaxx$AOI_bbox,
-# FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&quot;Spatial&quot;), CRSobj = &quot;+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0&quot;),
-#                        label='AOI',
-#                        year=2016,
-#                        dataset=&quot;Land_Cover&quot;,
-#                        # tileName=N01W01,
-#                        raw.dir=getwd(),
-#                        extraction.dir=getwd())
-sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&quot;Spatial&quot;), CRS(paste0(&quot;+proj=utm +datum=NAD83 +zone=&quot;,floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1)))
-FedData::get_nlcd(template=sp::spTransform(as(sf::st_as_sfc(xx$AOI_bbox),&quot;Spatial&quot;), CRS(paste0(&quot;+proj=utm +datum=NAD83 +zone=&quot;,floor((sf::st_coordinates(xx$AOI_center)[1]+180)/6)+1))),
-                  label='AOI',
-                  year=2011,
-                  dataset=&quot;Land_Cover&quot;)
-
-vepPolygon &lt;- polygon_from_extent(raster::extent(672800, 740000, 4102000, 4170000),
-                                  proj4string = &quot;+proj=utm +datum=NAD83 +zone=12&quot;)
-NLCD &lt;- get_nlcd(template = vepPolygon,
-                 year = 2016,
-                 dataset = &quot;Land_Cover&quot;,
-                 label = &quot;vepPolygon&quot;)
-
-
-
-sf::as_Spatial(xx$AOI_buffer_utm)
+raster::writeRaster(landcover_utm,paste0(getwd(),&quot;/AOI_LC.tif&quot;))
+gc()
+xx$landcover &lt;- raster::raster(paste0(getwd(),&quot;/AOI_LC.tif&quot;))
 </code></pre>
+
+<h3 id="zonal-statistics">zonal statistics</h3>
+
+<p>We now have all the pieces we need to generate the desired statistics, our last step is to perform the zonal statistics</p>
+
+<pre><code>xx$summer_ndvi &lt;- raster::resample(summer_ndvi,xx$landcover,method=&quot;bilinear&quot;)
+xx$zonalstats &lt;- raster::zonal(xx$summer_ndvi, xx$landcover, fun='mean', digits=0, na.rm=TRUE) 
+</code></pre>
+
+<h3 id="finishing-up">Finishing up</h3>
+
+<p><strong>add here</strong>
+<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_32DAY_NDVI">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1_32DAY_NDVI</a></p>
 
           </div>
 

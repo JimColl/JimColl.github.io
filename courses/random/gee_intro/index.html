@@ -393,7 +393,11 @@
 <li><a href="#joins"><strong>Joins</strong>:</a></li>
 <li><a href="#image-classification"><strong>Image Classification</strong>:</a></li>
 <li><a href="#exporting-analyses"><strong>Exporting analyses</strong>:</a></li>
-<li><a href="#example-analysis"><strong>Example analysis</strong>:</a></li>
+<li><a href="#javascript"><strong>JavaScript</strong>:</a></li>
+<li><a href="#example-analysis"><strong>Example analysis</strong>:</a>
+<ul>
+<li><a href="#exploring-properties">exploring properties&rsquo;</a></li>
+</ul></li>
 <li><a href="#homework"><strong>Homework</strong>:</a></li>
 <li><a href="#citations"><strong>Citations</strong>:</a></li>
 </ul></li>
@@ -470,15 +474,138 @@
 
 <p>Although it is often more efficient to perform your desired analysis within GEE, exporting your results for further specialized analysis or publication can come in several forms depending on the desired purposes.  This might include CSV files of time series, images, web map tiles, and videos.  In addition, a suite of standard JavaScript User Interface (UI) items are available within the IDE which enables users to rapidly design and prototype user interfaces to include items such as combo and check boxes, sliders, and legend elements.  These powerful features allow users to publish advanced and fully fleshed out web applications so that those who don’t have a GEE account can interact with or export analysis without looking at a single line of code.</p>
 
+<h3 id="javascript"><strong>JavaScript</strong>:</h3>
+
 <h3 id="example-analysis"><strong>Example analysis</strong>:</h3>
 
 <p>Let&rsquo;s use GEE to perform one of the most common</p>
 
-<p>Example scripts
-ExploringLandsatImagery
-<a href="https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61">https://code.earthengine.google.com/a32638380b40c7818f8fac0fb1955f61</a>
-ExploringLandcoverChangeWithLandsatImagery
-<a href="https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff">https://code.earthengine.google.com/601497b431ec43b6c59fd8e3c1a287ff</a></p>
+<pre><code class="language-JavaScript">// Get an image using its ID
+var image = ee.Image('LANDSAT/LT5_L1T/LT50260332010180EDC00'); //an image covering KC
+print(image)
+</code></pre>
+
+<h4 id="exploring-properties">exploring properties&rsquo;</h4>
+
+<pre><code class="language-JavaScript">// Examine image properties/metadata
+// Get information about the bands as a list.
+var bandNames = image.bandNames();
+print('Band names: ', bandNames); // ee.List of band names
+
+// Get projection information from band 1.
+var b1proj = image.select('B1').projection();
+print('Band 1 projection: ', b1proj); // ee.Projection object
+
+// Get scale (in meters) information from band 1.
+var b1scale = image.select('B1').projection().nominalScale();
+print('Band 1 scale: ', b1scale); // ee.Number
+
+// Note that different bands can have different projections and scale.
+var b8scale = image.select('B6').projection().nominalScale();
+print('Band 6 scale: ', b8scale); // ee.Number
+
+// Get a list of all metadata properties.
+var properties = image.propertyNames();
+print('Metadata properties: ', properties); // ee.List of metadata properties
+
+// Get a specific metadata property.
+var cloudiness = image.get('CLOUD_COVER');
+print('CLOUD_COVER: ', cloudiness); // ee.Number
+
+// Get the timestamp and convert it to a date.
+var date = ee.Date(image.get('system:time_start'));
+print('Timestamp: ', date); // ee.Date
+</code></pre>
+
+<pre><code>// Display the image
+//set map center and zoom level
+Map.setCenter(-95,39,8);
+//add the image to the map
+Map.addLayer(image,{'bands':['B3','B2','B1']},'Kansas City in natural color');
+Map.addLayer(image,{'bands':['B4','B3','B2']},'Kansas City in false color composite');
+</code></pre>
+
+<p>//import or use Landsat image collection<br />
+//</p>
+
+<p>var  lt5= ee.ImageCollection(&ldquo;LANDSAT/LT5_L1T&rdquo;);
+//print(&lsquo;Landsat 5 collection&rsquo;, lt5);</p>
+
+<p>//
+//Metadata about the collection
+//
+// Get the number of images.
+var count = lt5.size();
+print(&lsquo;Count: &lsquo;, count);</p>
+
+<p>// Get the date range of images in the collection.
+var dates = ee.List(lt5.get(&lsquo;date_range&rsquo;));
+var dateRange = ee.DateRange(dates.get(0), dates.get(1));
+print(&lsquo;Date range: &lsquo;, dateRange);</p>
+
+<p>// Get statistics for a property of the images in the collection.
+var sunStats = lt5.aggregate_stats(&lsquo;CLOUD COVER&rsquo;);
+print(&lsquo;CLOUD COVER statistics: &lsquo;, sunStats);</p>
+
+<p>//filter images by time, location, and properties
+//</p>
+
+<p>// Load Landsat 5 data, filter by date and bounds.
+var ic1990s = lt5
+  .filterDate(&lsquo;1990-01-01&rsquo;, &lsquo;1990-12-31&rsquo;)
+  .filterBounds(p69_135)
+  //.filterMetadata(&lsquo;CLOUD_COVER&rsquo;,&lsquo;less_than&rsquo;,10);
+print(ic1990s)</p>
+
+<p>// Get the number of images.
+var count = ic1990s.size();
+print(&lsquo;Count: &lsquo;, count);</p>
+
+<p>// Get the date range of images in the collection.
+var dates = ee.List(ic1990s.get(&lsquo;date_range&rsquo;));
+var dateRange = ee.DateRange(dates.get(0), dates.get(1));
+print(&lsquo;Date range: &lsquo;, dateRange);</p>
+
+<p>// Get statistics for a property of the images in the collection.
+var sunStats = ic1990s.aggregate_stats(&lsquo;CLOUD_COVER&rsquo;);
+print(&lsquo;CLOUD COVER statistics: &lsquo;, sunStats);</p>
+
+<p>ic1990s=ic1990s.filterMetadata(&lsquo;CLOUD_COVER&rsquo;,&lsquo;less_than&rsquo;,10);
+print(ic1990s);</p>
+
+<p>//Access individual images in the collection
+//
+var i1990 = ee.Image(ic1990s.first());</p>
+
+<p>// Convert the collection to a list and get the number of images.
+var secondImage = ic1990s.toList(5).get(1);
+//print(ic1990s.toList(5));
+print(&lsquo;Second image: &lsquo;, secondImage);</p>
+
+<p>// Sort by a cloud cover property, get the least cloudy image.
+var leastCloud = ee.Image(ic1990s.sort(&lsquo;CLOUD_COVER&rsquo;).first());
+print(&lsquo;Least cloudy image: &lsquo;, leastCloud);</p>
+
+<p>// Limit the collection to the 10 most recent images.
+var mostRecent = ee.Image(ic1990s.sort(&lsquo;system:time_start&rsquo;, false).first());
+print(&lsquo;Most recent image: &lsquo;, mostRecent);</p>
+
+<p>//add the data the map
+Map.centerObject(p69_135,12);
+//Map.addLayer(image);
+Map.addLayer(i1990,{&lsquo;bands&rsquo;:[&lsquo;B4&rsquo;,&lsquo;B3&rsquo;,&lsquo;B2&rsquo;]},&lsquo;1990s&rsquo;);</p>
+
+<p>// Load Landsat 5 data, filter by date and bounds.
+var ic2010s = ee.ImageCollection(&ldquo;LANDSAT/LT5_L1T&rdquo;)
+  .filterDate(&lsquo;2010-01-01&rsquo;, &lsquo;2010-12-31&rsquo;)
+  .filterBounds(p69_135)
+  .filterMetadata(&lsquo;CLOUD_COVER&rsquo;,&lsquo;less_than&rsquo;,10);
+print(ic2010s)</p>
+
+<p>var i2010 = ee.Image(ic2010s.first());</p>
+
+<p>//add the image
+Map.addLayer(i2010,{&lsquo;bands&rsquo;:[&lsquo;B4&rsquo;,&lsquo;B3&rsquo;,&lsquo;B2&rsquo;]},&lsquo;2010s&rsquo;);</p>
 
 <h3 id="homework"><strong>Homework</strong>:</h3>
 

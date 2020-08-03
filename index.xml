@@ -986,7 +986,7 @@ As part of my dissertation, I am interested in flying areas to determine what fa
 
 &lt;h2 id=&#34;an-introduction-to-platforms&#34;&gt;&lt;strong&gt;An introduction to platforms&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;As you might have guessed by now, a proper understanding of remote sensing hinges on a thorough understanding of the data structure and lineage.  Here we’ll introduce two of my favorite platforms, MODIS, and Landsat&lt;/p&gt;
+&lt;p&gt;As you might have guessed by now, a proper understanding of remote sensing hinges on a thorough understanding of the data structure and lineage.  The &lt;a href=&#34;https://developers.google.com/earth-engine/datasets/&#34;&gt;Google Earth Engine Dataset catalog&lt;/a&gt; has an excellent overview of platforms and datasets avalible for end users, but here we’ll introduce two of my favorite platforms, MODIS, and Landsat&lt;/p&gt;
 
 &lt;h3 id=&#34;modis&#34;&gt;&lt;strong&gt;MODIS&lt;/strong&gt;&lt;/h3&gt;
 
@@ -1000,12 +1000,13 @@ The Landsat program is the longest-running enterprise for acquisition of satelli
 
 &lt;h4 id=&#34;landsat-distro&#34;&gt;&lt;strong&gt;LANDSAT distro&lt;/strong&gt;&lt;/h4&gt;
 
-&lt;p&gt;wrs2.gif
+&lt;p&gt;Landsat is distributed in tiles (called scenes) that are identified by their path and row.  Although these designations are somewhat arbitrary (in that they provide little geographic context, what does path 34 row 58 tell you?), they are a consistent means of identifying and disseminating tiles.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/wrs2.gif&#34; alt=&#34;&#34; /&gt;
 &lt;a href=&#34;https://www.usgs.gov/land-resources/nli/landsat/landsat-shapefiles-and-kml-files&#34;&gt;https://www.usgs.gov/land-resources/nli/landsat/landsat-shapefiles-and-kml-files&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;landsat-1&#34;&gt;&lt;strong&gt;LANDSAT&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;landsat-names&#34;&gt;&lt;strong&gt;LANDSAT names&lt;/strong&gt;&lt;/h4&gt;
 
-&lt;p&gt;The Landsat Collection 1 Level-1 product identifier includes the Collection processing levels, processing date, collection number, and collection iter category:&lt;/p&gt;
+&lt;p&gt;With so much data being collected, you can imagine that a naming convention can get pretty convoluted, and if you don&amp;rsquo;t work with this data commonly, you&amp;rsquo;ll need to look up this information each time you need it.  However, it&amp;rsquo;s worthwhile to introduce it here.  Landsat collection 1 Level-1 products are all identified using the following naming convention.&lt;/p&gt;
 
 &lt;p&gt;LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX&lt;/p&gt;
 
@@ -1020,13 +1021,16 @@ RRR = WRS row
 YYYYMMDD = Acquisition year, month, day
 yyyymmdd - Processing year, month, day
 CC = Collection number (01, 02, …)
-TX = Collection category (“RT”=Real-Time, “T1”=Tier 1, “T2”=Tier 2)
-Example:  LC08_L1GT_029030_20151209_20160131_01_RT&lt;/p&gt;
+TX = Collection category (“RT”=Real-Time, “T1”=Tier 1, “T2”=Tier 2)&lt;/p&gt;
 
-&lt;p&gt;Means: Landsat 8; OLI/TIRS combined; processing correction level L1GT; path 029; row 030; acquired December 9, 2015; processed January 31, 2016; Collection 1; Real-Time&lt;/p&gt;
+&lt;p&gt;Example:  LC08_L1GT_029030_20151209_20160131_01_RT
+Means: Landsat 8; OLI/TIRS combined; processing correction level L1GT; path 029; row 030; acquired December 9, 2015; processed January 31, 2016; Collection 1; Real-Time&lt;/p&gt;
 
-&lt;p&gt;Schematic-of-Landsat-7-data-collection-in-SLC-On-a-and-SLC-Off-b-mode-and-a.png
-&lt;a href=&#34;https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran&#34;&gt;https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;landsat-anomalies&#34;&gt;&lt;strong&gt;LANDSAT anomalies&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;There are quirks to every remote sensing product, but landsat 7 has one of the most unique.  Unlike other platforms, such as the Hubble space telescope, these remote sensing platforms do not have the benefit of maintenance after being placed in orbit.  So, in June of 2003, when the landsat 7 scan line corrector (slc) module failed, data from half of the collected data was no longer viable.  This scan line correcter is responsible for adjusting the position of the sensor as it scanned the earth.  The result is a charicteristic striping of the data.  There have been numerous efforts to correct for this failure, but for now, just know that most landsat 7 data will look rather zebra-esque.
+&lt;img src=&#34;https://jimcoll.github.io/courses/random/media/Schematic-of-Landsat-7-data-collection-in-SLC-On-a-and-SLC-Off-b-mode-and-a.png&#34; alt=&#34;&#34; /&gt;
+Image from &lt;a href=&#34;https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran&#34;&gt;https://www.researchgate.net/publication/236864661_Validating_gap-filling_of_Landsat_ETM_satellite_images_in_the_Golestan_Province_Iran&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;a-simple-application&#34;&gt;&lt;strong&gt;A simple application&lt;/strong&gt;&lt;/h2&gt;
 

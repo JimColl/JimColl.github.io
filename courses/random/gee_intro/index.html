@@ -517,95 +517,97 @@ var date = ee.Date(image.get('system:time_start'));
 print('Timestamp: ', date); // ee.Date
 </code></pre>
 
-<pre><code>// Display the image
+<pre><code class="language-JavaScript">// Display the image
 //set map center and zoom level
 Map.setCenter(-95,39,8);
 //add the image to the map
 Map.addLayer(image,{'bands':['B3','B2','B1']},'Kansas City in natural color');
 Map.addLayer(image,{'bands':['B4','B3','B2']},'Kansas City in false color composite');
-</code></pre>
 
-<p>//import or use Landsat image collection<br />
-//</p>
+//import or use Landsat image collection  
+//
 
-<p>var  lt5= ee.ImageCollection(&ldquo;LANDSAT/LT5_L1T&rdquo;);
-//print(&lsquo;Landsat 5 collection&rsquo;, lt5);</p>
+var  lt5= ee.ImageCollection(&quot;LANDSAT/LT5_L1T&quot;);
+//print('Landsat 5 collection', lt5);
 
-<p>//
+
+//
 //Metadata about the collection
 //
 // Get the number of images.
 var count = lt5.size();
-print(&lsquo;Count: &lsquo;, count);</p>
+print('Count: ', count);
 
-<p>// Get the date range of images in the collection.
-var dates = ee.List(lt5.get(&lsquo;date_range&rsquo;));
+// Get the date range of images in the collection.
+var dates = ee.List(lt5.get('date_range'));
 var dateRange = ee.DateRange(dates.get(0), dates.get(1));
-print(&lsquo;Date range: &lsquo;, dateRange);</p>
+print('Date range: ', dateRange);
 
-<p>// Get statistics for a property of the images in the collection.
-var sunStats = lt5.aggregate_stats(&lsquo;CLOUD COVER&rsquo;);
-print(&lsquo;CLOUD COVER statistics: &lsquo;, sunStats);</p>
+// Get statistics for a property of the images in the collection.
+var sunStats = lt5.aggregate_stats('CLOUD COVER');
+print('CLOUD COVER statistics: ', sunStats);
 
-<p>//filter images by time, location, and properties
-//</p>
-
-<p>// Load Landsat 5 data, filter by date and bounds.
-var ic1990s = lt5
-  .filterDate(&lsquo;1990-01-01&rsquo;, &lsquo;1990-12-31&rsquo;)
-  .filterBounds(p69_135)
-  //.filterMetadata(&lsquo;CLOUD_COVER&rsquo;,&lsquo;less_than&rsquo;,10);
-print(ic1990s)</p>
-
-<p>// Get the number of images.
-var count = ic1990s.size();
-print(&lsquo;Count: &lsquo;, count);</p>
-
-<p>// Get the date range of images in the collection.
-var dates = ee.List(ic1990s.get(&lsquo;date_range&rsquo;));
-var dateRange = ee.DateRange(dates.get(0), dates.get(1));
-print(&lsquo;Date range: &lsquo;, dateRange);</p>
-
-<p>// Get statistics for a property of the images in the collection.
-var sunStats = ic1990s.aggregate_stats(&lsquo;CLOUD_COVER&rsquo;);
-print(&lsquo;CLOUD COVER statistics: &lsquo;, sunStats);</p>
-
-<p>ic1990s=ic1990s.filterMetadata(&lsquo;CLOUD_COVER&rsquo;,&lsquo;less_than&rsquo;,10);
-print(ic1990s);</p>
-
-<p>//Access individual images in the collection
+//filter images by time, location, and properties
 //
-var i1990 = ee.Image(ic1990s.first());</p>
 
-<p>// Convert the collection to a list and get the number of images.
+// Load Landsat 5 data, filter by date and bounds.
+var ic1990s = lt5
+  .filterDate('1990-01-01', '1990-12-31')
+  .filterBounds(p69_135)
+  //.filterMetadata('CLOUD_COVER','less_than',10);
+print(ic1990s)
+
+// Get the number of images.
+var count = ic1990s.size();
+print('Count: ', count);
+
+// Get the date range of images in the collection.
+var dates = ee.List(ic1990s.get('date_range'));
+var dateRange = ee.DateRange(dates.get(0), dates.get(1));
+print('Date range: ', dateRange);
+
+// Get statistics for a property of the images in the collection.
+var sunStats = ic1990s.aggregate_stats('CLOUD_COVER');
+print('CLOUD COVER statistics: ', sunStats);
+
+ic1990s=ic1990s.filterMetadata('CLOUD_COVER','less_than',10);
+print(ic1990s);
+
+//Access individual images in the collection
+//
+var i1990 = ee.Image(ic1990s.first());
+
+// Convert the collection to a list and get the number of images.
 var secondImage = ic1990s.toList(5).get(1);
 //print(ic1990s.toList(5));
-print(&lsquo;Second image: &lsquo;, secondImage);</p>
+print('Second image: ', secondImage);
 
-<p>// Sort by a cloud cover property, get the least cloudy image.
-var leastCloud = ee.Image(ic1990s.sort(&lsquo;CLOUD_COVER&rsquo;).first());
-print(&lsquo;Least cloudy image: &lsquo;, leastCloud);</p>
+// Sort by a cloud cover property, get the least cloudy image.
+var leastCloud = ee.Image(ic1990s.sort('CLOUD_COVER').first());
+print('Least cloudy image: ', leastCloud);
 
-<p>// Limit the collection to the 10 most recent images.
-var mostRecent = ee.Image(ic1990s.sort(&lsquo;system:time_start&rsquo;, false).first());
-print(&lsquo;Most recent image: &lsquo;, mostRecent);</p>
+// Limit the collection to the 10 most recent images.
+var mostRecent = ee.Image(ic1990s.sort('system:time_start', false).first());
+print('Most recent image: ', mostRecent);
 
-<p>//add the data the map
+
+//add the data the map
 Map.centerObject(p69_135,12);
 //Map.addLayer(image);
-Map.addLayer(i1990,{&lsquo;bands&rsquo;:[&lsquo;B4&rsquo;,&lsquo;B3&rsquo;,&lsquo;B2&rsquo;]},&lsquo;1990s&rsquo;);</p>
+Map.addLayer(i1990,{'bands':['B4','B3','B2']},'1990s');
 
-<p>// Load Landsat 5 data, filter by date and bounds.
-var ic2010s = ee.ImageCollection(&ldquo;LANDSAT/LT5_L1T&rdquo;)
-  .filterDate(&lsquo;2010-01-01&rsquo;, &lsquo;2010-12-31&rsquo;)
+// Load Landsat 5 data, filter by date and bounds.
+var ic2010s = ee.ImageCollection(&quot;LANDSAT/LT5_L1T&quot;)
+  .filterDate('2010-01-01', '2010-12-31')
   .filterBounds(p69_135)
-  .filterMetadata(&lsquo;CLOUD_COVER&rsquo;,&lsquo;less_than&rsquo;,10);
-print(ic2010s)</p>
+  .filterMetadata('CLOUD_COVER','less_than',10);
+print(ic2010s)
 
-<p>var i2010 = ee.Image(ic2010s.first());</p>
+var i2010 = ee.Image(ic2010s.first());
 
-<p>//add the image
-Map.addLayer(i2010,{&lsquo;bands&rsquo;:[&lsquo;B4&rsquo;,&lsquo;B3&rsquo;,&lsquo;B2&rsquo;]},&lsquo;2010s&rsquo;);</p>
+//add the image
+Map.addLayer(i2010,{'bands':['B4','B3','B2']},'2010s');
+</code></pre>
 
 <h3 id="homework"><strong>Homework</strong>:</h3>
 

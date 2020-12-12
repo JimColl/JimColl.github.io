@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jim Coll</title>
+    <link>https://jimcoll.github.io/courses/geog111/</link>
+      <atom:link href="https://jimcoll.github.io/courses/geog111/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jim Coll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>https://jimcoll.github.io/img/icon-192.png</url>
+      <title>Jim Coll</title>
+      <link>https://jimcoll.github.io/courses/geog111/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://jimcoll.github.io/courses/geog111/classoutline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog111/classoutline/</guid>
+      <description>
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    This is a living document.  Changes will be announced in class.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;course-description&#34;&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;This course provides an introduction to computer based analysis of spatial data.  Topics covered include the fundamentals of geospatial thought, basic principles of collecting, storing, analyzing, and displaying spatial data, and cursory treatment of analysis and decision making.  Emphasis is on problem solving activities using common spatial analytical techniques using typical applications as examples. The student will gain extensive hands on experience with state of the art GIS software in the lab. This course introduces the concepts and components of a geographic information system (GIS). It also teaches the essential skills of operating a functional GIS through the use of the ArcGIS software suite. By completing this course, students will understand the operational processes of spatial data acquisition, editing in ArcGIS Desktop with QA/QC, metadata development, geodatabase design, spatial query and display, spatial analysis and modeling, preliminary GIS application development, cartographic mapping and dynamic visualization, and GIS implementation basics. Students will also be exposed to Google Earth and common Free and  Open Source Software (FOSS) tools, as well as the basic concepts of remote sensing and Global Positioning System (GPS). GIS technology has broad applications in natural and social sciences, humanities, environmental studies, engineering, and management. Examples include wildlife habitat study, urban and regional planning, contagious disease monitoring, agriculture and forestry, environmental quality assessment, emergency management, transportation planning, consumer and competitor analysis, and many more. This course will introduce a few selected use cases of GIS application in different disciplines.  Finally, this class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;Undergraduate certificate in GIS&lt;/a&gt;.  I obviously recommend it, particularly if you intend to pursue GIS as a career path/toolset in any capacity .&lt;br/&gt;
+Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
+
+&lt;h2 id=&#34;student-responsibilities&#34;&gt;&lt;strong&gt;Student Responsibilities:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;It is student’s responsibility to attend the lectures, do the readings, and finish lab assignments. All students should be prepared to participate in class discussion and answer questions when called upon.  All students are expected to complete labs and exams on time. Labs are due at the beginning of the lab period one week after they are assigned, unless otherwise noted. Detailed lab rules will be given by the teaching assistant in the first lab.&lt;/p&gt;
+
+&lt;h2 id=&#34;expectations&#34;&gt;&lt;strong&gt;Expectations:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Attend every Class/lab and &lt;strong&gt;ask questions!&lt;/strong&gt; At times, the ArcGIS software can be very unforgiving, and GIS can seem like a foreign language. The last thing I want is for you to walk out of this class without understanding the material. I expect and hope that this will be a rewarding experience for everyone. We are available to answer questions and otherwise offer assistance during the office hours indicated above or by appointment.  Additionally, if you have any questions, feel free to drop me an e-mail or use the slack channel (The link will be passed around on the signup sheet at the beginning of the year). I try to be diligent about responding to emails and by using slack you are likely to get a very rapid response&lt;/p&gt;
+
+&lt;h2 id=&#34;computers&#34;&gt;&lt;strong&gt;Computers:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The computers in the lab are not cheap to replace. Please do your part to lengthen their lives by not spilling coffee/soda/liquids of any kind on the computer or any of its parts. You do NOT need to go out and purchase a computer for this class, although I do recommend having a personal computer with ArcGIS installed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Computer recommendations:&lt;/strong&gt;&lt;br /&gt;
+ArcGIS is a demanding program, and a lower grade computer is not recommended.  If you are looking to purchase a computer, I offer these general guidelines. You should aim for a 64-bit computer (x64), and aside from that I like to prioritize CPU &amp;amp; RAM &amp;gt; video &amp;amp; hard drive speed &amp;gt; hard drive space (External hard drives are really cheap, and as long as the computer has a USB port you are good to go).  For the last few years I&amp;rsquo;ve deferred to the pre-built pc choices on &lt;a href=&#34;https://buildmypc.net/&#34;&gt;https://buildmypc.net/&lt;/a&gt; or &lt;a href=&#34;https://pcpartpicker.com/&#34;&gt;https://pcpartpicker.com/&lt;/a&gt;.  In general, I tend to stay away from the &amp;ldquo;gaming&amp;rdquo; laptops.  For those prices, you can build a much more powerful desktop and get a lot more mileage out of it, but that&amp;rsquo;s just me.  If you want to go that route however virtually all will meet your school related needs.&lt;br/&gt;
+&lt;a href=&#34;https://pcpartpicker.com/user/JColl/saved/#view=zddq3C&#34;&gt;My “Ideal” build (This is excessive, visualization grade)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;&lt;strong&gt;Resources:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The lab is open for students whenever there is no scheduled class (see the calendar posted on the lab door. Additionally, ArcMap is available in the GIS lab on the second floor of Watson Library, and on the Architecture and Engineering computers if you have access to those. A signup sheet will also be passed around at the beginning of the semester for those who wish to install ArcGIS on your own personal computers.&lt;/p&gt;
+
+&lt;h2 id=&#34;academic-integrity&#34;&gt;&lt;strong&gt;Academic Integrity:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Simply put, cheating and/or plagiarism &lt;strong&gt;is not tolerated&lt;/strong&gt;. Feel free to discuss the labs with your classmates, but all work you turn in should be your own, and it&amp;rsquo;s &lt;em&gt;insert year here&lt;/em&gt;, how hard is it to give someone credit for their work?  I use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for my citation needs, as a KU student you have access to Endnote through &lt;a href=&#34;https://technology.ku.edu/software/microsoft-office&#34;&gt;Office 365&lt;/a&gt;, and in a pinch &lt;a href=&#34;http://www.citethisforme.com/us/citation-generator&#34;&gt;Cite This for Me&lt;/a&gt; will also push you across the finish line but you really should try to be more efficient with your time.&lt;/p&gt;
+
+&lt;h2 id=&#34;disabilities&#34;&gt;&lt;strong&gt;Disabilities:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Anyone who has a disability that may prevent full demonstration of academic ability should contact me as soon as possible to ensure accommodations can be made to allow for full educational benefit.&lt;/p&gt;
+
+&lt;h2 id=&#34;about-the-labs&#34;&gt;&lt;strong&gt;About the Labs:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!&lt;/p&gt;
+
+&lt;h2 id=&#34;cartography-primers&#34;&gt;&lt;strong&gt;Cartography primers:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.icsm.gov.au/mapping/cartographic.html&#34;&gt;http://www.icsm.gov.au/mapping/cartographic.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&#34;&gt;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3&#34;&gt;http://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;course-evaluation&#34;&gt;&lt;strong&gt;Course Evaluation:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Course grade will be evaluated based on two exams, pre-class review questions, ~ten lab exercises, and a final project. The exams will include materials from the textbooks, lecture slides, handouts, and labs. A breakdown of grade weights is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exams (17.5% * 2)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Pre-class review 5%&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Labs 40%&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Final Project 20%&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Final grade will be on a straight scale, not on a curve. If you all do well, you will all get an A. Let’s not find out what the alternative is. Letter grades will be determined based on the standard grading scale. Each student will complete a final project. The project will be presented to the class during the last two weeks of class. Details on the final project can be found in the final project handout. Letter grades will be determined based on the following grading scale:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;A+&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;A&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;A-&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;B+&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;B&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;B-&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;C+&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;C&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;C-&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;D+&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;D&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;D-&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;F&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;100 - 97&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;96 - 93&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;92 - 90&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;89 - 87&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;86 - 83&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;82 - 80&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;79 - 77&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;76 - 73&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;72 - 70&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;69 - 67&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;66 - 63&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;62 - 60&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;exams&#34;&gt;&lt;strong&gt;Exams&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Mid-term exam will cover the materials from the first half of the class, and the final exam will focus on the second half. The final exam is not comprehensive, but since we will be building on concepts throughout the semester, materials from the first half of the semester will inevitably be part of the final exam.  Either exam may include a practical portion.  This practical portion will consist of instructions to prepare some sort of short analysis or demonstration of practical knowledge related to the use of ArcGIS.  These will be posted either a week before the exam and due on the date of the exam, or posted the day of the exam and due a week after.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 0 - Intro to GIS</title>
+      <link>https://jimcoll.github.io/courses/geog111/lab00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jimcoll.github.io/courses/geog111/lab00/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://jimcoll.github.io/courses/geog358/media/1blz4my4czl01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;learning-objective&#34;&gt;&lt;strong&gt;Learning Objective&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    This lab is here more for me as we walk through how to open and manipulate the interface, the meaning of icons, and how to navigate the world without getting lost.  The questions here are more to remind me to talk about things while we explore.  The instructions are not meant to be followed.  You should use this page more as an opportunity to learn how the labs will be laid out, how the sections are formatted, and how to navigate the site.  I&amp;rsquo;ll update this to a real lab at a later date.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This lab will walk though how to open and manipulate the ESRI suite of tools and applications, common access patters, opening and manipulating windows, site layout, and how to submit things for the class.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-you-need-to-submit&#34;&gt;&lt;strong&gt;What you need to submit&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hint: Copy and paste the questions below into a word document and submit them on blackboard&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Lab 0: Answer Sheet&lt;/strong&gt;&lt;br /&gt;
+Name:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1&lt;/strong&gt;: What is the function of each of the following buttons? (Use your mouse &amp;amp; the tool tips if you are unsure)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2&lt;/strong&gt;: What is the file size for Greenvalley.mxd?  ______ KB&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3&lt;/strong&gt;: How many features are contained in parks_polygon feature class?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4&lt;/strong&gt;: What is the projection used in the coordinate system (PCS) for the Hydrology feature dataset?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 5&lt;/strong&gt;: What is the datum used in the coordinate system for the Hydrology feature dataset?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 6&lt;/strong&gt;: What is the linear unit of measure for this feature dataset?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 7&lt;/strong&gt;: What is the spatial extent (listed under Domain) of this feature dataset?&lt;br /&gt;
+Xmin:&lt;br /&gt;
+Ymin:&lt;br /&gt;
+Xmax:&lt;br /&gt;
+Ymax:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 8&lt;/strong&gt;: Which is the only feature dataset without coordinate system information?&lt;/p&gt;
+
+&lt;h1 id=&#34;materials&#34;&gt;&lt;strong&gt;Materials&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Data Name&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;BaseData&lt;/td&gt;
+    &lt;td class=&#34;tg-btxf&#34;&gt;Data we downloaded as part of lab 1&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Links on these pages are green, and most of the time it should be obvious that something is a link.  So how many of you missed the fact that the materials was a link?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;part-1-the-esri-suite-of-tools&#34;&gt;&lt;strong&gt;Part 1: The ESRI suite of tools&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;ArcCatalog&lt;/strong&gt; is an application for managing spatial data. The interface is similar to Windows Explorer and is used to copy, move, and delete data. In addition, ArcCatalog is used to obtain information about spatial data such as projection parameters, feature type (point, line, polygon), and attributes.  Never use.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ArcAdministrator&lt;/strong&gt; is where you control all the software, including extensions and licensing.  Rarely used.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ArcScene&lt;/strong&gt; is a stand alone program for small scale GIS areas, and where you want to more explicitly show off 3D surfaces.  Rarely used.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ArcGlobe&lt;/strong&gt; is ESRI&amp;rsquo;s attempt at a Google Earth substitute.  Rarely used.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ArcMap&lt;/strong&gt; is the primary means of performing GIS.  Use often.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ArcPro&lt;/strong&gt; is the web enabled variant of ArcMap.  Because modern problems require modern solutions.  Use as you see fit.&lt;/p&gt;
+
+&lt;p&gt;The creation of metadata is an integral part of a GIS. Metadata is basically “data about data.” Information contained in metadata includes, but is not limited to, the creation and modification date, projection information, extent, source, and reliability. ArcCatalog offers several style sheets for the creation of metadata including the Federal Government Data Committee (FGDC) style. The FGDC coordinates the National Spatial Data Infrastructure (NSDI), which is designed to facilitate the sharing of geographic data. More information about FGDC can be found at &lt;a href=&#34;http://www.fgdc.gov/index.html&#34;&gt;http://www.fgdc.gov/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-starting-arccatalog-and-organizing-data&#34;&gt;&lt;strong&gt;1) Starting ArcCatalog and Organizing Data&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First you need to create a personal folder on the D: drive. This is where you will store your data for the semester. On the desktop, you should see a folder in the upper left-hand corner with your name on it. Open it, and then create a new folder called G358.&lt;/li&gt;
+&lt;li&gt;Start ArcCatalog by opening the #-Programs folder on the desktop and then double-clicking ArcCatalog 10.5.&lt;/li&gt;
+&lt;li&gt;In ArcCatalog, you will firstly need to connect to a folder. Click on the ‘Connect to Folder’ icon .    And then navigate to the data you downloaded&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Be sure that the G358 folder is highlighted before clicking OK.&lt;/li&gt;
+&lt;li&gt;In the Catalog Tree (the leftmost panel of the window), click the plus sign next to the connection you just made. Now right-click on Lab01 and select Copy.&lt;/li&gt;
+&lt;li&gt;Click the Connect to Folder icon again and create a connection to your personal lab folder.&lt;/li&gt;
+&lt;li&gt;In the Catalog Tree, find the connection to your lab folder, right-click the folder, and then select Paste. Now you have a copy of the lab data in your own folder.&lt;/li&gt;
+&lt;li&gt;Click the plus sign next to your Lab00 folder.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-getting-familiar-with-the-layout-of-arccatalog&#34;&gt;&lt;strong&gt;2) Getting Familiar with the layout of ArcCatalog&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the Catalog Tree, click the plus sign next to Lab01 in your folder (see figure on next page).&lt;/li&gt;
+&lt;li&gt;The contents of this folder are listed in the Catalog Display window:&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A database file (GreenValleyDB.mdb)¬ – a data format used by ArcGIS based on a relational database that contains geographic information&lt;/li&gt;
+&lt;li&gt;A map document (Greenvalley.mxd) – a page layout for spatial data and contains annotations and graphic elements. The map document can either be printed or saved in a graphic format (.jpg, .tif, .eps)&lt;/li&gt;
+&lt;li&gt;A layer file (Water Use.lyr) – contains symbology settings for water use in Greenvalley. These settings tell ArcMap how to display the data and can also be a shortcut to the original data stored elsewhere on the hard drive&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Review the following page in order to familiarize yourself with the layout of ArcCatalog.&lt;/li&gt;
+&lt;li&gt;You will want to refer to this outline throughout the lab if you get confused.&lt;/li&gt;
+&lt;li&gt;ArcCatalog is similar in structure to Windows Explorer &amp;ndash; on the left hand side is a view of the Catalog &amp;ldquo;tree&amp;rdquo; showing how the data is organized. The right hand side provides options for exploring the contents of the data shown in the Catalog tree.&lt;/li&gt;
+&lt;li&gt;Outside of the areas for exploring the catalog folders and their contents, there are several menus and toolbars associated with ArcCatalog. We will explore a number of these in this lab, however we will not examine all of them. Throughout the lab, it will be helpful if you spend a bit of time exploring these on your own as they become active.&lt;/li&gt;
+&lt;li&gt;To find out what a particular button does, hold your mouse cursor over the button for several seconds. A note will appear telling you the function associated with the button.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;3-exploring-the-geographic-data-map-documents-and-layers&#34;&gt;&lt;strong&gt;3) Exploring the geographic data, map documents and layers&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Change the settings of Details view: The default settings for the Details view in the Catalog Contents window only show the Name and Type of feature. We want to obtain more information about the files we are using before continuing.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Select Customize | ArcCatalog Options… and navigate to the Contents tab.  Place check marks beside Size and Modified. Also, place a check mark beside # of Features under the metadata list box.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Click Apply and then click OK.&lt;/li&gt;
+&lt;li&gt;Complete questions 1 – 3 on the assignment sheet.&lt;/li&gt;
+&lt;li&gt;In order to preview the map document, single-click the Map document     (Greenvalley.mxd) in the Catalog Tree and select the Preview tab to view a thumbnail of page layout. Notice that there is only one option available from the Preview: drop-down menu (Geography). This is because we can only view the spatial information contained within the map document.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;To preview a layer, single-click the layer file   (Water Use.lyr)   in the Catalog Tree to preview this file. The Preview: option defaults to Geography.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Change this drop-down menu to Table. A table is displayed in the Catalog Display window showing the attributes for the original data associated with the layer.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Click the Contents tab and click on the geodatabase file named GreenvalleyDB.mdb&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;To explore the geodatabase, click the plus sign next to the file GreenvalleyDB.mdb in the Catalog Tree. The contents of this geodatabase are now displayed in the Catalog Tree.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;The Hydrology, Parks, Public Buildings, etc… are called Feature Datasets and are simply a collection of Feature Classes (Points, Lines, Polygons) that share the same spatial reference.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Explore feature datasets and feature classes.&lt;/li&gt;
+&lt;li&gt;Click the plus sign next to Hydrology and note the content is a single Feature Class (in this case, a polygon) called flood_polygon. A thumbnail is displayed in
+the Catalog Display window.&lt;/li&gt;
+&lt;li&gt;Answer question 4 on the answer sheet.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Click the Preview tab to view the geographic information stored in the flood_polygon class. Switch to the Table option to see the attributes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Return to the Contents tab.&lt;/li&gt;
+&lt;li&gt;In the Catalog Tree, select Public Utility. Notice that this Feature Dataset contains three Feature Classes (a point, line and polygon feature class). Click the plus sign for this Feature Dataset.&lt;/li&gt;
+&lt;li&gt;Select the Preview tab and view the Geography and Table for each of these feature classes.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;4-finding-coordinate-system-information&#34;&gt;&lt;strong&gt;4) Finding coordinate system information&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Information regarding the projection and its parameters (coordinate system, datum, spheroid, etc…) can be obtained for each Feature Dataset.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Right-click on the Hydrology Feature dataset and select Properties… from the drop-down menu.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Scroll through this information to become familiar with some of the parameters that are stored within this Feature Dataset.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Answer 5 – 9 on the assignment sheet.&lt;/li&gt;
+&lt;li&gt;Close the Properties window.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;5-exploring-and-editing-metadata&#34;&gt;&lt;strong&gt;5) Exploring and editing metadata&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;•   ArcCatalog can also be used to create and search metadata.  Under the Transportation feature dataset, single-click the streets_arc feature class.
+•   Select the Description tab to view the feature class metadata.
+•   To edit information, click the Edit button under the Description tab.&lt;/p&gt;
+
+&lt;p&gt;•   Under each item, information can be added about the features contained within this feature class including tags, summary, description, etc. This can be used to identify the contents of the feature class, to locate the file, to find out who created it, and so on.
+        Under the Tags section, add the following text:
+o   Street, street name
+          Under the Summary section, add the following text:
+o   To store the street center lines of Greenvalley
+•   Click Save once you have made these changes. These changes should now be viewable under the Description tab&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Complete Question 10 on the assignment sheet&lt;/li&gt;
+&lt;li&gt;Connecting to other sources of data
+Up to this point we’ve been accessing data that is stored on the lab computers. Now we’re going to use the Internet to access data from other sources.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;•   First we’re going to connect to the Kansas Data Access and Support Center (KansasGIS.org), a great service run by our friends over at the Kansas Geological Survey. Their data are stored on servers that run on ArcGIS Server. We can access these data in ArcCatalog by using an ArcGIS Server connection.
+•   In the Catalog Tree, about halfway down you’ll see GIS Servers. Click the plus sign next to it.
+•   Double-click Add ArcGIS Server.
+•   Make sure the radio button is set to Use GIS services. Click Next.
+•   In the Server URL field, type: &lt;a href=&#34;http://services.kansasgis.org/arcgis/services&#34;&gt;http://services.kansasgis.org/arcgis/services&lt;/a&gt;
+•   Click Finish.
+•   Click the plus sign next to arcgis on services.kansasgis.org (user).
+•   Click the minus sign next to DASC_Boundaries.
+•   Click the plus sign next to KDOR.
+•   Click the first CountyOrkaStatus.
+•   Click the Full Extent button (the little globe near the top of the screen).
+•   Click the Identify button (the blue circle with an &amp;ldquo;i&amp;rdquo; in it).
+•   Click different counties to see their attributes.
+•   Scroll through the Identify Results window.
+•   Answer question 11 on the assignment sheet.&lt;/p&gt;
+
+&lt;p&gt;Now we’re going to connect to a different server at a different organization through a
+different process. (It’s different, see?) This time we’re connecting to the servers at the
+National Oceanic and Atmospheric Administration, a government agency that runs the
+National Weather Service and other related services. Instead of using an ArcGIS Server
+connection, though, we’re going to use WMS (Web Map Service). According to Wikipedia,
+WMS is a “standard protocol for serving georeferenced map images over the Internet that are generated by a map server using data from a GIS database.” Unlike ArcGIS Server, WMS is an open source protocol, which means it’s not connected to any proprietary software.
+•   In the Catalog Tree, double-click Add WMS Server.
+•   In the URL field, type: &lt;a href=&#34;http://maps.ngdc.noaa.gov/arcgis/services/hot_springs/MapServer/WMSServer?&#34;&gt;http://maps.ngdc.noaa.gov/arcgis/services/hot_springs/MapServer/WMSServer?&lt;/a&gt;
+•   Click OK.
+•   Click the plus sign next to hot_springs on maps.ngdc.noaa.gov.
+•   Click the plus sign next to Thermal Springs in the United States.
+•   Click the plus sign next to Layers.
+•   Click Hot Springs.
+•   Click the Full Extent button (the little globe).
+•   Answer question 12 (last question!) on the assignment sheet.
+ 
+Name:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;This final step contains detailed instructions for turning your work in. We will do this frequently throughout the semester so be sure to pay attention to the process.
+•   Scroll so that your screen looks like the following (so that it displays the changes you made in metadata).
+•   This also should bring the ArcCatalog to be captured to the foreground on your computer screen or make the ArcCatalog active window.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;•   Locate the PrtScrn key (Print Screen) on your keyboard (see sample keyboard for a guide).&lt;/p&gt;
+
+&lt;p&gt;•   Press the Alt + PrtScrn key – this key is used to capture (or take a picture of) your screen.
+•   For the process described below, you can use the other image editor rather than Paint as you wish.
+•   Now open Paint by going to Start | All Programs | Accessories | Paint
+•   On the Paint toolbar, click the Paste button under the Home tab – this will paste a picture of your screen into Paint
+•   Now choose Save As…
+•   Navigate to your folder&lt;br /&gt;
+•   Under File Name: enter lab01yourname.png (i.e.: lab01Bruce.png)
+•   From the Save as Type drop down box, select PNG
+•   Close Paint and exit from ArcCatalog
+•   To upload the file, simply launch Microsoft Internet Explorer (or Firefox if available) and log into Blackboard.
+•   Click on Assignments | Lab 01 | Submit Lab 01
+•   Fill in any appropriate information, and click Browse… to browse, find, and upload your .PNG file from your personal workspace. Finally, click Submit.
+•   I will now be able to view your .PNG through the Blackboard webpage.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;What is the 2010 population for Douglas County?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The dots signify hot springs on American soil. Where in the U.S. do hot springs seem to be concentrated?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

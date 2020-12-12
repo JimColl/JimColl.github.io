@@ -3,6 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jimcoll.github.io/courses/geog104/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jimcoll.github.io/courses/geog111/</loc>
+  </url>
+  
+  <url>
     <loc>https://jimcoll.github.io/courses/geog358/</loc>
   </url>
   
@@ -12,6 +20,10 @@
   
   <url>
     <loc>https://jimcoll.github.io/courses/random/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jimcoll.github.io/courses/geog111/classoutline/</loc>
   </url>
   
   <url>
@@ -52,6 +64,10 @@
   
   <url>
     <loc>https://jimcoll.github.io/courses/geog358/installgis/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jimcoll.github.io/courses/geog111/lab00/</loc>
   </url>
   
   <url>

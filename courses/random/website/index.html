@@ -234,6 +234,50 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/courses/geog104/"><span>GEOG 104</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog111/"><span>GEOG 111</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
         </li>
 
@@ -468,7 +512,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <h2 id="create-the-website-url-repository"><strong>Create the website url repository:</strong></h2>
 
-<p>It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&rsquo;t use github the right way, and I don&rsquo;t really have a reason to use another github repository to keep the site files, as you&rsquo;ll see below I just keep them on OneDrive and kept on my local hard drive.</p>
+<p>It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&rsquo;t use github the right way, and I don&rsquo;t really have a reason to use a seperate github repository to keep the site files, instead opting to keep them on my local hard drive.</p>
 
 <h2 id="create-a-website-folder"><strong>Create a website folder:</strong></h2>
 
@@ -484,7 +528,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the <a hre
 
 <h2 id="updating-your-website"><strong>Updating your website:</strong></h2>
 
-<p>When you want to <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">&ldquo;manage your content&rdquo;</a>, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type <code>.\hugo server --disableFastRender</code>.  You can then open a browser and go to <a href="http://localhost:1313/">http://localhost:1313/</a>.  At this point, any changes made to your site will automagically change.  When you are happy with your changes, you generate your site from within PowerShell with the <code>.\hugo</code> command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&hellip;</p>
+<p>When you want to <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">&ldquo;manage your content&rdquo;</a>, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type <code>.\hugo server --disableFastRender</code>.  You can then open a browser and go to <a href="http://localhost:1313/">http://localhost:1313/</a>.  At this point, when you make and save changes to your files, HUGO will rebuild your site automagically, and your changes should appear instantly on the browser.  When you are happy with your changes, you generate your site from within PowerShell with the <code>.\hugo</code> command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&hellip;</p>
 
 <ol>
 <li>Stage Changed files<br /></li>
@@ -603,6 +647,8 @@ paginate = 10  # Number of items per page in paginated lists.
   url = &quot;/courses/dronemapping&quot;
 </code></pre>
 
+<p>Note that you will also have to set up these links in the AAFU theme as well, these menues are for the academic theme.</p>
+
 <hr />
 
 <h3 id="make-it-your-own"><strong>Make it your own</strong></h3>
@@ -640,7 +686,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 <h3 id="adding-tabbed-content"><strong>Adding tabbed content</strong></h3>
 
-<p>Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&ldquo;1&rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&rsquo;t break formatting on Chrome (other browsers untested).  The <code>&amp;nbsp;</code> in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page table of contents on the right hand side and so should be avoided if possible.</p>
+<p>Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&ldquo;1&rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&rsquo;t break formatting on Chrome (other browsers untested).  The <code>&amp;nbsp;</code> in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page generated table of contents on the right hand side and so should be avoided.</p>
 
 <pre><code>&lt;ul class=&quot;nav nav-tabs&quot;&gt;
 &lt;li class=&quot;active&quot;&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#home&quot;&gt;&amp;nbsp;&amp;nbsp;Home&amp;nbsp;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;

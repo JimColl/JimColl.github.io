@@ -226,6 +226,50 @@ Objectives This lab should provide you with the bulk of the background knowledge
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/courses/geog104/"><span>GEOG 104</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog111/"><span>GEOG 111</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/courses/geog358/"><span>GEOG 358</span></a>
         </li>
 
@@ -403,8 +447,8 @@ Objectives This lab should provide you with the bulk of the background knowledge
 <li><a href="#first-let-s-load-in-the-requisite-packages">First, let&rsquo;s load in the requisite packages</a></li>
 <li><a href="#define-a-few-helper-functions">Define a few helper functions</a></li>
 <li><a href="#define-our-aoi-and-a-small-processing-area">Define our AOI and a small processing area</a></li>
-<li><a href="#discover-approprite-scenes-for-processing">Discover approprite scenes for processing</a></li>
-<li><a href="#discover-approprite-scenes-for-processing-part-2">Discover approprite scenes for processing <strong>part 2</strong></a></li>
+<li><a href="#discover-appropriate-scenes-for-processing">Discover appropriate scenes for processing</a></li>
+<li><a href="#discover-appropriate-scenes-for-processing-part-2">Discover appropriate scenes for processing <strong>part 2</strong></a></li>
 <li><a href="#creating-ndvi-values">Creating NDVI values</a></li>
 <li><a href="#grabbing-land-cover">Grabbing land cover</a></li>
 <li><a href="#zonal-statistics">zonal statistics</a></li>
@@ -735,7 +779,44 @@ leaflet() %&gt;%
   addPolygons(data=xx$AOI_buffer,color=&quot;red&quot;)
 </code></pre>
 
-<h3 id="discover-approprite-scenes-for-processing">Discover approprite scenes for processing</h3>
+<pre><code># Aside: was geodesic buffering necessary?  Let's test using a &quot;relative&quot; simplification!
+# @ https://planetcalc.com/7721/  --  WGS 84 defines ellipsoid parameters as:
+a = 6378137.0        # Semi-major axis in meters
+b = 6356752.314245   # Semi-minor axis in meters
+l = sf::st_coordinates(xx$AOI_center)[2]
+radius_globe_meters &lt;-
+  sqrt((((((a^2)*cos(l))^2)+(((b^2)*sin(l))^2)))/((((a*cos(l))^2)+((b*sin(l))^2))))
+radius_degrees &lt;- mybufferdist_m/radius_globe_meters
+# xx$AOI_badbuffer &lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center)),width = radius_degrees) %&gt;% 
+#   sf::st_as_sfc() %&gt;%
+#   sf::st_set_crs(4326)
+
+# all credit to https://geocompr.robinlovelace.net/reproj-geo-data.html
+lonlat2UTM = function(lonlat) {
+  utm = (floor((lonlat[1] + 180) / 6) %% 60) + 1
+  if(lonlat[2] &gt; 0) {
+    utm + 32600
+  } else{
+    utm + 32700
+  }
+}
+aoiUTMEPSG &lt;- lonlat2UTM(sf::st_coordinates(xx$AOI_center))
+xx$AOI_center_utm &lt;- sf::st_transform(xx$AOI_center,newEPSG)                                    
+
+xx$AOI_badbuffer &lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&gt;% 
+  sf::st_as_sfc() %&gt;%
+  sf::st_set_crs(aoiUTMEPSG) 
+xx$AOI_badbuffer &lt;- sf::st_transform(xx$AOI_badbuffer,4326)
+
+# and check visually
+leaflet() %&gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &quot;Base Map&quot;) %&gt;%
+  addPolygons(data=xx$AOI_buffer,color=&quot;red&quot;) %&gt;%
+  addPolygons(data=xx$AOI_badbuffer,color=&quot;green&quot;) 
+# Conclusion: it's too late for me to be futzing around with this....  Any ideas?
+</code></pre>
+
+<h3 id="discover-appropriate-scenes-for-processing">Discover appropriate scenes for processing</h3>
 
 <p>We next need to identify scenes for use.  Landsat distriburts scenes by path and row <strong>more here</strong></p>
 
@@ -768,7 +849,7 @@ leaflet() %&gt;%
             as.numeric(ceiling(xx$processbounds$ymax)))
 </code></pre>
 
-<h3 id="discover-approprite-scenes-for-processing-part-2">Discover approprite scenes for processing <strong>part 2</strong></h3>
+<h3 id="discover-appropriate-scenes-for-processing-part-2">Discover appropriate scenes for processing <strong>part 2</strong></h3>
 
 <p>That visualization was perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row.  We&rsquo;ll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section).</p>
 

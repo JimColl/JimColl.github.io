@@ -59,7 +59,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;create-the-website-url-repository&#34;&gt;&lt;strong&gt;Create the website url repository:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use another github repository to keep the site files, as you&amp;rsquo;ll see below I just keep them on OneDrive and kept on my local hard drive.&lt;/p&gt;
+&lt;p&gt;It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use a seperate github repository to keep the site files, instead opting to keep them on my local hard drive.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-a-website-folder&#34;&gt;&lt;strong&gt;Create a website folder:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -75,7 +75,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;updating-your-website&#34;&gt;&lt;strong&gt;Updating your website:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type &lt;code&gt;.\hugo server --disableFastRender&lt;/code&gt;.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, any changes made to your site will automagically change.  When you are happy with your changes, you generate your site from within PowerShell with the &lt;code&gt;.\hugo&lt;/code&gt; command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&amp;hellip;&lt;/p&gt;
+&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type &lt;code&gt;.\hugo server --disableFastRender&lt;/code&gt;.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, when you make and save changes to your files, HUGO will rebuild your site automagically, and your changes should appear instantly on the browser.  When you are happy with your changes, you generate your site from within PowerShell with the &lt;code&gt;.\hugo&lt;/code&gt; command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&amp;hellip;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Stage Changed files&lt;br /&gt;&lt;/li&gt;
@@ -194,6 +194,8 @@ paginate = 10  # Number of items per page in paginated lists.
   url = &amp;quot;/courses/dronemapping&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;Note that you will also have to set up these links in the AAFU theme as well, these menues are for the academic theme.&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&#34;make-it-your-own&#34;&gt;&lt;strong&gt;Make it your own&lt;/strong&gt;&lt;/h3&gt;
@@ -231,7 +233,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;h3 id=&#34;adding-tabbed-content&#34;&gt;&lt;strong&gt;Adding tabbed content&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&amp;ldquo;1&amp;rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&amp;rsquo;t break formatting on Chrome (other browsers untested).  The &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page table of contents on the right hand side and so should be avoided if possible.&lt;/p&gt;
+&lt;p&gt;Below is a code snipit that shows how to lay out material within a tabbed content box.  Of note, in order to mix markdown into html elements, we need to append markdown=&amp;ldquo;1&amp;rdquo; to each div element, and DIV needs to be capitalized in order for this to render properly.  I prefer removing indentations here, it makes writing the raw content easier and doesn&amp;rsquo;t break formatting on Chrome (other browsers untested).  The &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; in the headers are added for spacing.  Unfortunately, having headers above level 4 within tabbed boxes breaks the page generated table of contents on the right hand side and so should be avoided.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;ul class=&amp;quot;nav nav-tabs&amp;quot;&amp;gt;
 &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;&amp;lt;a data-toggle=&amp;quot;tab&amp;quot; href=&amp;quot;#home&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;Home&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
@@ -887,7 +889,44 @@ leaflet() %&amp;gt;%
   addPolygons(data=xx$AOI_buffer,color=&amp;quot;red&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;discover-approprite-scenes-for-processing&#34;&gt;Discover approprite scenes for processing&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# Aside: was geodesic buffering necessary?  Let&#39;s test using a &amp;quot;relative&amp;quot; simplification!
+# @ https://planetcalc.com/7721/  --  WGS 84 defines ellipsoid parameters as:
+a = 6378137.0        # Semi-major axis in meters
+b = 6356752.314245   # Semi-minor axis in meters
+l = sf::st_coordinates(xx$AOI_center)[2]
+radius_globe_meters &amp;lt;-
+  sqrt((((((a^2)*cos(l))^2)+(((b^2)*sin(l))^2)))/((((a*cos(l))^2)+((b*sin(l))^2))))
+radius_degrees &amp;lt;- mybufferdist_m/radius_globe_meters
+# xx$AOI_badbuffer &amp;lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center)),width = radius_degrees) %&amp;gt;% 
+#   sf::st_as_sfc() %&amp;gt;%
+#   sf::st_set_crs(4326)
+
+# all credit to https://geocompr.robinlovelace.net/reproj-geo-data.html
+lonlat2UTM = function(lonlat) {
+  utm = (floor((lonlat[1] + 180) / 6) %% 60) + 1
+  if(lonlat[2] &amp;gt; 0) {
+    utm + 32600
+  } else{
+    utm + 32700
+  }
+}
+aoiUTMEPSG &amp;lt;- lonlat2UTM(sf::st_coordinates(xx$AOI_center))
+xx$AOI_center_utm &amp;lt;- sf::st_transform(xx$AOI_center,newEPSG)                                    
+
+xx$AOI_badbuffer &amp;lt;- rgeos::gBuffer(sp::SpatialPoints(sf::st_coordinates(xx$AOI_center_utm)),width = mybufferdist_m) %&amp;gt;% 
+  sf::st_as_sfc() %&amp;gt;%
+  sf::st_set_crs(aoiUTMEPSG) 
+xx$AOI_badbuffer &amp;lt;- sf::st_transform(xx$AOI_badbuffer,4326)
+
+# and check visually
+leaflet() %&amp;gt;%
+  addProviderTiles(providers$Stamen.TonerLite, group = &amp;quot;Base Map&amp;quot;) %&amp;gt;%
+  addPolygons(data=xx$AOI_buffer,color=&amp;quot;red&amp;quot;) %&amp;gt;%
+  addPolygons(data=xx$AOI_badbuffer,color=&amp;quot;green&amp;quot;) 
+# Conclusion: it&#39;s too late for me to be futzing around with this....  Any ideas?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;discover-appropriate-scenes-for-processing&#34;&gt;Discover appropriate scenes for processing&lt;/h3&gt;
 
 &lt;p&gt;We next need to identify scenes for use.  Landsat distriburts scenes by path and row &lt;strong&gt;more here&lt;/strong&gt;&lt;/p&gt;
 
@@ -920,7 +959,7 @@ leaflet() %&amp;gt;%
             as.numeric(ceiling(xx$processbounds$ymax)))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;discover-approprite-scenes-for-processing-part-2&#34;&gt;Discover approprite scenes for processing &lt;strong&gt;part 2&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;discover-appropriate-scenes-for-processing-part-2&#34;&gt;Discover appropriate scenes for processing &lt;strong&gt;part 2&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;That visualization was perhaps a bit overkill, all we needed to do here is ensure that our AOI is completely enclosed within a single path/row.  We&amp;rsquo;ll cover mosaicking (stitching together multiple scenes at once) later in the course, but for now if you end up inside more than one, adjust your point until you fall squarely within a single tile (or entirely in a crossover section).&lt;/p&gt;
 

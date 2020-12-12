@@ -226,6 +226,50 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/courses/geog104/"><span>GEOG 104</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/geog111/"><span>GEOG 111</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link  active" href="/courses/geog358/"><span>GEOG 358</span></a>
         </li>
 
@@ -588,8 +632,9 @@ If you are a student at KU,  IT offers <a href="https://technology.ku.edu/servic
 <DIV id="native" class="tab-pane fade show active" markdown="1">
 The installation of QGIS is far less involved than it&rsquo;s ESRI counterparts.  The QGIS website has <a href="https://qgis.org/en/site/forusers/download.html">downloads separated by operating system here</a>, simply select your operating system.  New users are recommended to install the standalone installer of the latest release.  All you need to do to get started is to download and run the executable.
 </DIV>
-<DIV id="virtual" class="tab-pane fade" markdown="1">
-See the <a href="https://live.osgeo.org/en/quickstart/virtualization_quickstart.html">OSGeo quickstart docs</a> for a more verbose but slightly outdated set of instructions should this not do it for you.</p>
+<DIV id="virtual" class="tab-pane fade" markdown="1"></p>
+
+<p>See the <a href="https://live.osgeo.org/en/quickstart/virtualization_quickstart.html">OSGeo quickstart docs</a> for a more verbose but slightly outdated set of instructions should this not do it for you.</p>
 
 <p><strong>A. Installing VirtualBox</strong>
 <ol>
@@ -599,7 +644,7 @@ See the <a href="https://live.osgeo.org/en/quickstart/virtualization_quickstart.
 
 <p><strong>B. Installing OSGeoLive</strong><br />
 <ol start="3">
-<li>Download and unzip the latest version of <a href="https://sourceforge.net/projects/osgeo-live/files/">OSGeoLive</a>, you want the .amd64.vmdk.7z version.  Save that unzipped folder in your VirtualBox VMs folder.
+<li>Download and unzip the latest version of <a href="https://sourceforge.net/projects/osgeo-live/files/">OSGeoLive</a>, you probably want the .amd64.vmdk.7z version.  Save that unzipped folder in your VirtualBox VMs folder.
 <li>In Oracle VM, Click on Tools, New.
 <li>Name your new machine (I call mine FOSSGIS).
 <li>You can leave the Machine Folder dialog on VirtualBox VMs.
@@ -619,7 +664,34 @@ See the <a href="https://live.osgeo.org/en/quickstart/virtualization_quickstart.
 <li>If you&rsquo;re on a smaller keyboard you likely don&rsquo;t have a right-ctrl key, change the host bind key to something else (I use right alt.  File&gt;Preferences&gt;Input
 </ol></p>
 
+<p><strong>D. Updating for the future</strong>
+<ol start="16">
+<li>While the above steps will serve you through the intro and intermediate classes, I also use this method almost exclusivly for my python needs.  Python <i>can</i> be a wonderful tool, but installation and update woes, along with less flexible graphical execution options means it often loses out to R when new geospatial programmers are looking for their first launch point.  With this linux (ubuntu) installation, we bypass virtually all these issues (see note below).  However, to get the most out of this way of accessing python, we need to set up a few things.  Therefore, after setting up your virtual machiene for the first time, I suggest you open up a terminal and run the following:<br />
+</ol></p>
+
+<pre><code>sudo apt-get update -y				# updates all sorts of goodies
+sudo apt install snapd				# Installs snapd, used to install programs
+sudo snap install --classic notepadqq		# Installs a better text editor (almost notepad++)
+sudo apt install python3-pip			# Installs pip3 for python
+sudo apt-get install proj-bin			# Installs and updates proj library 
+pip3 install pysimplegui			# Adds gui library for python scripts!
+pip3 install seaborn --upgrade			# My favorite python plotting library, because matpltlib syntax is disgusting
+pip3 install jupyterlab				# for notebook support
+
+# Only run if you want to get geopandas to run
+pip3 install setuptools==39.0.1
+pip3 install pyproj==2.6.1
+pip3 install pandas==0.23.3
+pip3 install geopandas==0.5.1
+</code></pre>
+
 <p><img src="/courses/geog358/media/FOSSGIS2.PNG" alt="" /></p>
+
+<div class="alert alert-note">
+  <div>
+    When I say all, I mean all but the arcpy library :/   ESRI provides a <a href="https://enterprise.arcgis.com/en/server/latest/administer/linux/linux-python.htm">tiny bit of help in this direction</a>, but it seems as though their objective is to force you into the always on licenceing of the new melenium.  For what it&rsquo;s worth, I don&rsquo;t think I&rsquo;ve encoutered anything written in arcpy that wasin&rsquo;t more straghtforward to implement yourself, but of course yur milage will vary.
+  </div>
+</div>
 
 <p></DIV>
 </DIV></p>

@@ -425,7 +425,7 @@ The installation of QGIS is far less involved than it&amp;rsquo;s ESRI counterpa
 
 &lt;p&gt;&lt;strong&gt;D. Updating for the future&lt;/strong&gt;
 &lt;ol start=&#34;16&#34;&gt;
-&lt;li&gt;While the above steps will serve you through the intro and intermediate classes, I also use this method almost exclusivly for my python needs.  Python &lt;i&gt;can&lt;/i&gt; be a wonderful tool, but installation and update woes, along with less flexible graphical execution options means it often loses out to R when new geospatial programmers are looking for their first launch point.  With this linux (ubuntu) installation, we bypass virtually all these issues (see note below).  However, to get the most out of this way of accessing python, we need to set up a few things.  Therefore, after setting up your virtual machiene for the first time, I suggest you open up a terminal and run the following:&lt;br /&gt;
+&lt;li&gt;While the above steps will serve you through the intro and intermediate classes, I also use this method almost exclusively for my python needs.  Python &lt;i&gt;can&lt;/i&gt; be a wonderful tool, but installation and update woes, along with less flexible graphical execution options means it often loses out to R when new geospatial programmers are looking for their first launch point.  With this linux (ubuntu) installation, we bypass virtually all these issues (see note below).  However, to get the most out of this way of accessing python, we need to set up a few things.  Therefore, after setting up your virtual machine for the first time, I suggest you open up a terminal and run the following:&lt;br /&gt;
 &lt;/ol&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get update -y				# updates all sorts of goodies
@@ -448,7 +448,7 @@ pip3 install geopandas==0.5.1
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    When I say all, I mean all but the arcpy library :/   ESRI provides a &lt;a href=&#34;https://enterprise.arcgis.com/en/server/latest/administer/linux/linux-python.htm&#34;&gt;tiny bit of help in this direction&lt;/a&gt;, but it seems as though their objective is to force you into the always on licenceing of the new melenium.  For what it&amp;rsquo;s worth, I don&amp;rsquo;t think I&amp;rsquo;ve encoutered anything written in arcpy that wasin&amp;rsquo;t more straghtforward to implement yourself, but of course yur milage will vary.
+    When I say all, I mean all but the arcpy library :/   ESRI provides a &lt;a href=&#34;https://enterprise.arcgis.com/en/server/latest/administer/linux/linux-python.htm&#34;&gt;tiny bit of help in this direction&lt;/a&gt;, but it seems as though their objective is to force you into the always on licensing of the new millennium.  For what it&amp;rsquo;s worth, I don&amp;rsquo;t think I&amp;rsquo;ve encountered anything written in arcpy that wasn&amp;rsquo;t more straightforward to implement yourself, but of course your mileage will vary.
   &lt;/div&gt;
 &lt;/div&gt;
 

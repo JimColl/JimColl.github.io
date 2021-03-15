@@ -36,7 +36,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&amp;rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.&lt;/p&gt;
+&lt;p&gt;The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing (Google Drive simply doesn&amp;rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hosting on github page&lt;/a&gt;, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  &lt;strong&gt;I also recommend following the &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34;&gt;Academic theme instructions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
@@ -51,23 +51,23 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;create-a-github-account&#34;&gt;&lt;strong&gt;Create a github account:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to test that limit.&lt;/p&gt;
+&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to test that limit.&lt;/p&gt;
 
-&lt;h2 id=&#34;install-git-for-windows&#34;&gt;&lt;strong&gt;Install git for windows:&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;if-on-windows-install-git-for-windows&#34;&gt;&lt;strong&gt;(if on windows) Install git for windows:&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Follow download and installation instructions at &lt;a href=&#34;https://gitforwindows.org/&#34;&gt;https://gitforwindows.org/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-the-website-url-repository&#34;&gt;&lt;strong&gt;Create the website url repository:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use a seperate github repository to keep the site files, instead opting to keep them on my local hard drive.&lt;/p&gt;
+&lt;p&gt;It is possible to buy a domain to customize your url, but in my case I’m cheap, and &lt;em&gt;jimcoll.github.io&lt;/em&gt; is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use a separate github repository to keep the site files, instead opting to keep them on my local hard drive.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-a-website-folder&#34;&gt;&lt;strong&gt;Create a website folder:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Next we need to create a folder where our website will live.  This folder ideally shouldn’t be moved after you’ve created it, so place it somewhere useful (read: not the desktop).  I gave into our digital overlords and moved most of my footprint to the cloud (OneDrive), so on my root folder I created a folder called myWebsite.  Then I like to right click on the folder and select the “Always keep it on this device”.&lt;/p&gt;
+&lt;p&gt;Next we need to create a folder where our website will live.  This folder ideally shouldn’t be moved after you’ve created it, so place it somewhere useful (read: not the desktop).  I gave into our digital overlords and moved most of my footprint to the cloud (OneDrive), so on my root folder I created a folder called myWebsite.  Then right click on the folder and select the “Always keep it on this device”.&lt;/p&gt;
 
 &lt;h2 id=&#34;installing-hugo&#34;&gt;&lt;strong&gt;Installing HUGO:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Next you need to install HUGO in the website directory.  Download the appropriate windows install from the HUGO releases (&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;).  Unzip the file and place the hugo.exe file into your myWebsite folder.&lt;/p&gt;
+&lt;p&gt;Next you need to install HUGO in the website directory.  Download the appropriate windows install from &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;the HUGO releases&lt;/a&gt;.  Unzip the file and place the hugo.exe file in your myWebsite folder.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-the-website&#34;&gt;&lt;strong&gt;Create the website:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -75,7 +75,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;updating-your-website&#34;&gt;&lt;strong&gt;Updating your website:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type &lt;code&gt;.\hugo server --disableFastRender&lt;/code&gt;.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, when you make and save changes to your files, HUGO will rebuild your site automagically, and your changes should appear instantly on the browser.  When you are happy with your changes, you generate your site from within PowerShell with the &lt;code&gt;.\hugo&lt;/code&gt; command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&amp;hellip;&lt;/p&gt;
+&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type &lt;code&gt;.\hugo server --disableFastRender&lt;/code&gt;.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, when you make and save changes to your files, HUGO will rebuild your site automagically and changes appear instantly on the browser.  When you are happy with the edits you&amp;rsquo;ve made, you next need to generate your site.  Again, from the myWebsite folder, open up PowerShell and generate the files with the &lt;code&gt;.\hugo&lt;/code&gt; command.  This repopulates the &lt;em&gt;myWebsite\public&lt;/em&gt; folder.  The last step is to push your new changes up to the repository, which you can do by right clicking on the &lt;em&gt;public&lt;/em&gt; folder and selecting &amp;ldquo;Git GUI Here&amp;rdquo;, then&amp;hellip;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Stage Changed files&lt;br /&gt;&lt;/li&gt;
@@ -90,7 +90,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every feature you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config/_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config/_default/config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
+&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every feature you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config_default\config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Configuration of Academic
 # Documentation: https://sourcethemes.com/academic/
@@ -218,7 +218,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;h3 id=&#34;website-width&#34;&gt;&lt;strong&gt;Website width&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;The Academic theme follows the &amp;ldquo;best&amp;rdquo; practice of a mobile first design, and therefore scales pages to an otherwise anemic width.  This is functional, but I was unhappy with it.  Following tips on &lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;this post&lt;/a&gt;, you can change the head of the file at &lt;i&gt;themes\academic\assets\sass\academic_docs.scss&lt;/i&gt; to a larger max width.  A small bump is all you need to make it look prettier (960 is about 12 point font on a word document, 1440 is also a solid choice.&lt;/p&gt;
+&lt;p&gt;The Academic theme follows the &amp;ldquo;best&amp;rdquo; practice of a mobile first design, and therefore scales pages to an otherwise anemic width.  This is functional, but I was unhappy with it.  Following tips on &lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;this post&lt;/a&gt;, you can change the head of the file at &lt;i&gt;themes\academic\assets\sass\academic_docs.scss&lt;/i&gt; to a larger max width.  A small bump is all you need to make it look prettier (960 is about 12 point font on a word document, 1440 is also a solid choice).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;/*************************************************
  *  Documentation layout

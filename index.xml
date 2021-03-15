@@ -21,6 +21,8 @@
 
 &lt;h2 id=&#34;course-description&#34;&gt;&lt;strong&gt;Course Description:&lt;/strong&gt;&lt;/h2&gt;
 
+&lt;p&gt;This course is an introduction to geospatial technologies. It focuses on the conceptual and hands on experiences of geospatial technologies that transform data about location, people, environments, and events in the reality to digital representations in computer and perform geospatial analysis to address real-world problems. Overall, it contains three main components: geospatial reference systems and GPS, remote sensing, and geographic information systems (GIS) and spatial analysis. Students will learn how to acquire and develop geospatial data as the sources for mapping, the skills of analyzing and interpreting spatial information, and how geo-visualization and spatial analysis can be used in addressing real-world problems. A substantial component of this course is comprised of lab applications with free and commercial software. Students must have access to a computer and the Internet in order to complete the weekly readings, hands-on applications, and lab assignments.  the course will teach students about basic geospatial technologies in use today (unclassified), the rudimentary challenges of operating from space or from altitude to terra, and preview the general application and analysis processes used in GEOINT collection and analysis careers, such as with the NGA – then I’m solidly on board.  My only input on the course description would be to add to the last sentence “…addressing real-world problems in the Intelligence Community.”&lt;/p&gt;
+
 &lt;p&gt;This course provides an introduction to computer based analysis of spatial data.  Topics covered include the fundamentals of geospatial thought, basic principles of collecting, storing, analyzing, and displaying spatial data, and cursory treatment of analysis and decision making.  Emphasis is on problem solving activities using common spatial analytical techniques using typical applications as examples. The student will gain extensive hands on experience with state of the art GIS software in the lab. This course introduces the concepts and components of a geographic information system (GIS). It also teaches the essential skills of operating a functional GIS through the use of the ArcGIS software suite. By completing this course, students will understand the operational processes of spatial data acquisition, editing in ArcGIS Desktop with QA/QC, metadata development, geodatabase design, spatial query and display, spatial analysis and modeling, preliminary GIS application development, cartographic mapping and dynamic visualization, and GIS implementation basics. Students will also be exposed to Google Earth and common Free and  Open Source Software (FOSS) tools, as well as the basic concepts of remote sensing and Global Positioning System (GPS). GIS technology has broad applications in natural and social sciences, humanities, environmental studies, engineering, and management. Examples include wildlife habitat study, urban and regional planning, contagious disease monitoring, agriculture and forestry, environmental quality assessment, emergency management, transportation planning, consumer and competitor analysis, and many more. This course will introduce a few selected use cases of GIS application in different disciplines.  Finally, this class counts towards the &lt;a href=&#34;https://catalog.ku.edu/liberal-arts-sciences/geography/geographic-information-science-ucert/&#34;&gt;Undergraduate certificate in GIS&lt;/a&gt;.  I obviously recommend it, particularly if you intend to pursue GIS as a career path/toolset in any capacity .&lt;br/&gt;
 Satisfies: Lab and Field Experiences (LFE), Natural Science (N)&lt;/p&gt;
 
@@ -55,14 +57,6 @@ ArcGIS is a demanding program, and a lower grade computer is not recommended.  I
 &lt;h2 id=&#34;about-the-labs&#34;&gt;&lt;strong&gt;About the Labs:&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;This is not a cartography course; however, the final product of the majority of the labs is a map (or maps) of some sort. The grade you receive on the maps will be based primarily on the results of the relevant analysis, not cartographic technique (there is a whole class dedicated to this; GEOG 211). That said, some level of cartographic knowledge will be useful to effectively communicate with maps, and will be stressed in critiques of your submissions. As the semester wears on we expect improvements and may begin taking points off for excessively bad cartographic technique. Please refer to the cartography resources linked below for some basic guidelines or ask for feedback.  In addition, each lab will specify the steps to follow with regards to what to submit for grading and how to do so. Please don’t make assumptions. Follow these instructions carefully; failure to submit the correct files or submission of files in an incorrect fashion will result in drastic loss of points. Don’t turn a potential A into an F due to failure to follow directions!&lt;/p&gt;
-
-&lt;h2 id=&#34;cartography-primers&#34;&gt;&lt;strong&gt;Cartography primers:&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.icsm.gov.au/mapping/cartographic.html&#34;&gt;http://www.icsm.gov.au/mapping/cartographic.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&#34;&gt;https://frew.eri.ucsb.edu/private/ESM263/week/2/ESM-263-2017-02-Cartography_Basics.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3&#34;&gt;http://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;h2 id=&#34;course-evaluation&#34;&gt;&lt;strong&gt;Course Evaluation:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -395,7 +389,7 @@ determined based on the following grading scale:&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing of resources (Google Drive simply doesn&amp;rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.&lt;/p&gt;
+&lt;p&gt;The creation of this website was spurred by a desire to streamline my digital footprint and more easily facilitate sharing (Google Drive simply doesn&amp;rsquo;t cut it here, and OneDrive is a whole different beast).  However, building a website of your own is not as straightforward or accessible as it otherwise could be.  Somehow among the vast sea of ways to design and host a website, I found workable solution in the form of the HUGO.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;, a variation of the GO programming language, is touted as “The world’s fastest framework for building websites”.  The HUGO documentation, particularly the &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hosting on github page&lt;/a&gt;, is a great place to start and is the “correct” way to go about creating a site.  Below I will walk through how I managed to get it to work, your mileage may vary.  &lt;strong&gt;I also recommend following the &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34;&gt;Academic theme instructions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
@@ -410,23 +404,23 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;create-a-github-account&#34;&gt;&lt;strong&gt;Create a github account:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github Username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to test that limit.&lt;/p&gt;
+&lt;p&gt;Create a &lt;a href=&#34;https://github.com/&#34;&gt;Github account&lt;/a&gt;.  I suppose in an ideal world your website name would be the same as your github username, but these can mismatch.  I believe a free user account is restricted to one web page per account, and I haven’t bothered to test that limit.&lt;/p&gt;
 
-&lt;h2 id=&#34;install-git-for-windows&#34;&gt;&lt;strong&gt;Install git for windows:&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;if-on-windows-install-git-for-windows&#34;&gt;&lt;strong&gt;(if on windows) Install git for windows:&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Follow download and installation instructions at &lt;a href=&#34;https://gitforwindows.org/&#34;&gt;https://gitforwindows.org/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-the-website-url-repository&#34;&gt;&lt;strong&gt;Create the website url repository:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;It is possible to buy a domain so that you can customize your url, but in my case I’m cheap, and jimcoll.github.io is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use a seperate github repository to keep the site files, instead opting to keep them on my local hard drive.&lt;/p&gt;
+&lt;p&gt;It is possible to buy a domain to customize your url, but in my case I’m cheap, and &lt;em&gt;jimcoll.github.io&lt;/em&gt; is perfectly fine with me.  Note that here I deviate from the HUGO docs.  I don&amp;rsquo;t use github the right way, and I don&amp;rsquo;t really have a reason to use a separate github repository to keep the site files, instead opting to keep them on my local hard drive.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-a-website-folder&#34;&gt;&lt;strong&gt;Create a website folder:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Next we need to create a folder where our website will live.  This folder ideally shouldn’t be moved after you’ve created it, so place it somewhere useful (read: not the desktop).  I gave into our digital overlords and moved most of my footprint to the cloud (OneDrive), so on my root folder I created a folder called myWebsite.  Then I like to right click on the folder and select the “Always keep it on this device”.&lt;/p&gt;
+&lt;p&gt;Next we need to create a folder where our website will live.  This folder ideally shouldn’t be moved after you’ve created it, so place it somewhere useful (read: not the desktop).  I gave into our digital overlords and moved most of my footprint to the cloud (OneDrive), so on my root folder I created a folder called myWebsite.  Then right click on the folder and select the “Always keep it on this device”.&lt;/p&gt;
 
 &lt;h2 id=&#34;installing-hugo&#34;&gt;&lt;strong&gt;Installing HUGO:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Next you need to install HUGO in the website directory.  Download the appropriate windows install from the HUGO releases (&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;).  Unzip the file and place the hugo.exe file into your myWebsite folder.&lt;/p&gt;
+&lt;p&gt;Next you need to install HUGO in the website directory.  Download the appropriate windows install from &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;the HUGO releases&lt;/a&gt;.  Unzip the file and place the hugo.exe file in your myWebsite folder.&lt;/p&gt;
 
 &lt;h2 id=&#34;create-the-website&#34;&gt;&lt;strong&gt;Create the website:&lt;/strong&gt;&lt;/h2&gt;
 
@@ -434,7 +428,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;updating-your-website&#34;&gt;&lt;strong&gt;Updating your website:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type &lt;code&gt;.\hugo server --disableFastRender&lt;/code&gt;.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, when you make and save changes to your files, HUGO will rebuild your site automagically, and your changes should appear instantly on the browser.  When you are happy with your changes, you generate your site from within PowerShell with the &lt;code&gt;.\hugo&lt;/code&gt; command.  This repopulates the public folder.  The last step is to push your new changes up to the repository, which you can do by right clicking in the public folder and selecting Git GUI Here, then&amp;hellip;&lt;/p&gt;
+&lt;p&gt;When you want to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&amp;ldquo;manage your content&amp;rdquo;&lt;/a&gt;, it’s easiest to test it locally first.  Shift-right click in the myWebsite folder and “Open PowerShell window here”.  Then, type &lt;code&gt;.\hugo server --disableFastRender&lt;/code&gt;.  You can then open a browser and go to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;.  At this point, when you make and save changes to your files, HUGO will rebuild your site automagically and changes appear instantly on the browser.  When you are happy with the edits you&amp;rsquo;ve made, you next need to generate your site.  Again, from the myWebsite folder, open up PowerShell and generate the files with the &lt;code&gt;.\hugo&lt;/code&gt; command.  This repopulates the &lt;em&gt;myWebsite\public&lt;/em&gt; folder.  The last step is to push your new changes up to the repository, which you can do by right clicking on the &lt;em&gt;public&lt;/em&gt; folder and selecting &amp;ldquo;Git GUI Here&amp;rdquo;, then&amp;hellip;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Stage Changed files&lt;br /&gt;&lt;/li&gt;
@@ -449,7 +443,7 @@ Your site doesn’t have to look like mine, feel free to pick any off the &lt;a 
 
 &lt;h2 id=&#34;how-this-site-was-created&#34;&gt;&lt;strong&gt;How this site was created:&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every feature you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config/_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config/_default/config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
+&lt;p&gt;This site is a smashup of the &lt;a href=&#34;https://github.com/darshanbaral/aafu&#34;&gt;aafu&lt;/a&gt; and Academic themes.  Although the Academic theme has just about every feature you might need, I fell in love with the AAFU theme and the accordion effect and was too enthralled not to try and integrate.  To do this, you need to understand a little about how HUGO creates a website.  HUGO uses a tiered folder system to generate the site, and will look in folders following a defined &lt;a href=&#34;https://gohugo.io/templates/lookup-order/&#34;&gt;lookup order&lt;/a&gt;.  Therefore, we need to overwrite the academic home page theme with the aafu theme.  To do this, I first install the Academic theme, and then replace the partials folder with the aafu theme.  The last step is to reconfigure the &lt;i&gt;config_default/&lt;/i&gt; folder with the aafu theme markdown files.  Most of these are straightforward, but within the &lt;i&gt;config_default\config.toml&lt;/i&gt;, we need to set the theme order as follows.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# Configuration of Academic
 # Documentation: https://sourcethemes.com/academic/
@@ -577,7 +571,7 @@ paginate = 10  # Number of items per page in paginated lists.
 
 &lt;h3 id=&#34;website-width&#34;&gt;&lt;strong&gt;Website width&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;The Academic theme follows the &amp;ldquo;best&amp;rdquo; practice of a mobile first design, and therefore scales pages to an otherwise anemic width.  This is functional, but I was unhappy with it.  Following tips on &lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;this post&lt;/a&gt;, you can change the head of the file at &lt;i&gt;themes\academic\assets\sass\academic_docs.scss&lt;/i&gt; to a larger max width.  A small bump is all you need to make it look prettier (960 is about 12 point font on a word document, 1440 is also a solid choice.&lt;/p&gt;
+&lt;p&gt;The Academic theme follows the &amp;ldquo;best&amp;rdquo; practice of a mobile first design, and therefore scales pages to an otherwise anemic width.  This is functional, but I was unhappy with it.  Following tips on &lt;a href=&#34;https://discourse.gohugo.io/t/how-can-i-increase-the-width-of-huco-academic-content/14952&#34;&gt;this post&lt;/a&gt;, you can change the head of the file at &lt;i&gt;themes\academic\assets\sass\academic_docs.scss&lt;/i&gt; to a larger max width.  A small bump is all you need to make it look prettier (960 is about 12 point font on a word document, 1440 is also a solid choice).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;/*************************************************
  *  Documentation layout
@@ -1944,7 +1938,7 @@ The installation of QGIS is far less involved than it&amp;rsquo;s ESRI counterpa
 
 &lt;p&gt;&lt;strong&gt;D. Updating for the future&lt;/strong&gt;
 &lt;ol start=&#34;16&#34;&gt;
-&lt;li&gt;While the above steps will serve you through the intro and intermediate classes, I also use this method almost exclusivly for my python needs.  Python &lt;i&gt;can&lt;/i&gt; be a wonderful tool, but installation and update woes, along with less flexible graphical execution options means it often loses out to R when new geospatial programmers are looking for their first launch point.  With this linux (ubuntu) installation, we bypass virtually all these issues (see note below).  However, to get the most out of this way of accessing python, we need to set up a few things.  Therefore, after setting up your virtual machiene for the first time, I suggest you open up a terminal and run the following:&lt;br /&gt;
+&lt;li&gt;While the above steps will serve you through the intro and intermediate classes, I also use this method almost exclusively for my python needs.  Python &lt;i&gt;can&lt;/i&gt; be a wonderful tool, but installation and update woes, along with less flexible graphical execution options means it often loses out to R when new geospatial programmers are looking for their first launch point.  With this linux (ubuntu) installation, we bypass virtually all these issues (see note below).  However, to get the most out of this way of accessing python, we need to set up a few things.  Therefore, after setting up your virtual machine for the first time, I suggest you open up a terminal and run the following:&lt;br /&gt;
 &lt;/ol&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get update -y				# updates all sorts of goodies
@@ -1967,7 +1961,7 @@ pip3 install geopandas==0.5.1
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    When I say all, I mean all but the arcpy library :/   ESRI provides a &lt;a href=&#34;https://enterprise.arcgis.com/en/server/latest/administer/linux/linux-python.htm&#34;&gt;tiny bit of help in this direction&lt;/a&gt;, but it seems as though their objective is to force you into the always on licenceing of the new melenium.  For what it&amp;rsquo;s worth, I don&amp;rsquo;t think I&amp;rsquo;ve encoutered anything written in arcpy that wasin&amp;rsquo;t more straghtforward to implement yourself, but of course yur milage will vary.
+    When I say all, I mean all but the arcpy library :/   ESRI provides a &lt;a href=&#34;https://enterprise.arcgis.com/en/server/latest/administer/linux/linux-python.htm&#34;&gt;tiny bit of help in this direction&lt;/a&gt;, but it seems as though their objective is to force you into the always on licensing of the new millennium.  For what it&amp;rsquo;s worth, I don&amp;rsquo;t think I&amp;rsquo;ve encountered anything written in arcpy that wasn&amp;rsquo;t more straightforward to implement yourself, but of course your mileage will vary.
   &lt;/div&gt;
 &lt;/div&gt;
 

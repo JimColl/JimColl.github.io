@@ -27,61 +27,66 @@
 	<script src="libs/jstree/jstree.js"></script>
 	<script src="build/potree/potree.js"></script>
 	<script src="libs/plasio/js/laslaz.js"></script>
-
+	
 	<!-- INCLUDE ADDITIONAL DEPENDENCIES HERE -->
 	<!-- INCLUDE SETTINGS HERE -->
-
+	
 	<div class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
 		<div id="potree_render_area" style="background-image: url('build/potree/resources/images/background.jpg');"></div>
 		<div id="potree_sidebar_container"> </div>
 	</div>
-
+	
 	<script type="module">
 
 	import * as THREE from 'https://unpkg.com/three@0.119.0/build/three.module.js';
+	
 		window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
-
+		
 		viewer.setEDLEnabled(true);
 		viewer.setFOV(60);
-		viewer.setPointBudget(2_000_000);
+		viewer.setPointBudget(1_000_000);
 		viewer.loadSettingsFromURL();
+		
+		viewer.setDescription("Point cloud courtesy of <a target='_blank' href='https://www.sigeom.ch/'>sigeom sa</a>");
+		
+		viewer.loadGUI().then( () => {
 
-		viewer.setDescription("Loading Entwine-generated EPT format");
+			console.log("gui loaded task");
 
-		viewer.loadGUI(() => {
 			viewer.setLanguage('en');
-			$("#menu_appearance").next().show();
+			$("#menu_tools").next().show();
+			$("#menu_scene").next().show();
+			viewer.toggleSidebar();
+			viewer.profileWindow.show();
+			viewer.profileWindowController.setProfile(viewer.scene.profiles[0]);
 		});
 
-        var path = "pointclouds/lion_takanawa_ept_bin/ept.json";
-		var name = "lion";
-
-		var getQueryParam = function(name) {
-			name = name.replace(/[\[\]]/g, "\\$&");
-			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-				results = regex.exec(window.location.href);
-			if (!results || !results[2]) return null;
-			return decodeURIComponent(results[2].replace(/\+/g, " "));
+		{ // PROFILE
+			let profile = new Potree.Profile();
+			profile.name = "Elevation Profile";
+			profile.setWidth(6)
+			profile.addMarker(new THREE.Vector3(589997.02, 231327.75, 755.73));
+			profile.addMarker(new THREE.Vector3(589579.65, 231323.51, 775.78));
+			profile.addMarker(new THREE.Vector3(589500.87, 231356.23, 782.91));
+			
+			viewer.scene.addProfile(profile);
 		}
-
-        var r = getQueryParam('r');
-        if (r) {
-			name = r;
-            var http = 'http';
-            if (r.substr(0, http.length) == http) path = name;
-            else path = "pointclouds/" + name + "/ept.json";
-        }
-
-		Potree.loadPointCloud(path, name, function(e){
-			viewer.scene.addPointCloud(e.pointcloud);
-
+		
+		// POINTCLOUD
+		Potree.loadPointCloud("pointclouds/vol_total/cloud.js", "sigeom.sa", function(e){
+			let scene = viewer.scene;
+			scene.addPointCloud(e.pointcloud);
+			
 			let material = e.pointcloud.material;
 			material.size = 1;
 			material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
-
-			viewer.fitToScreen(0.5);
+			
+			scene.view.position.set(589974.341, 231698.397, 986.146);
+			scene.view.lookAt(new THREE.Vector3(589851.587, 231428.213, 715.634));
 		});
+
 	</script>
+	
+	
   </body>
 </html>
-
